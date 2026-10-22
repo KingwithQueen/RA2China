@@ -269,3 +269,6 @@ set_source_files_properties(src/gameplay/ground_tube_state.c src/gameplay/ground
 
 target_sources(ra2 PRIVATE src/gameplay/ground_tube_progress.c src/gameplay/ground_internal_next.c src/gameplay/ground_passage_finish.c src/runtime/ground_progress_bridge.c)
 set_source_files_properties(src/gameplay/ground_tube_progress.c src/gameplay/ground_internal_next.c src/gameplay/ground_passage_finish.c src/runtime/ground_progress_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_tube_travel.c src/gameplay/ground_template_next.c src/gameplay/ground_passage_neighbor.c src/runtime/ground_travel_bridge.c)
+set_source_files_properties(src/gameplay/ground_tube_travel.c src/gameplay/ground_template_next.c src/gameplay/ground_passage_neighbor.c src/runtime/ground_travel_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

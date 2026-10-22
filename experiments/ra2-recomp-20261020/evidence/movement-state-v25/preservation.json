@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "counts": {
+    "v9": 536,
+    "v10": 637,
+    "v11": 727,
+    "v12": 829,
+    "v13": 1002,
+    "v14": 1124,
+    "v15": 1247,
+    "v16": 1371,
+    "v17": 1497,
+    "v18": 1630,
+    "v19": 1767,
+    "v20": 1902,
+    "v21": 2041,
+    "v22": 2202,
+    "v23": 2373,
+    "v24": 2543,
+    "v25-baseline": 2543,
+    "travel-verified": 2687,
+    "internal-verified": 2688,
+    "passage-verified": 2690,
+    "H_originals": 20
+  },
+  "game_save_old_engine_preserved": true,
+  "unsupported_guards": 37,
+  "existing_connected_tail_targets_preserved": true
+}

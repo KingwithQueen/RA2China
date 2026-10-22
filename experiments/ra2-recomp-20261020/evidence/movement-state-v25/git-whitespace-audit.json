@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "staged_files": 297,
+  "staged_bytes": 37045835,
+  "scope_verified": true,
+  "binary_assets_excluded": true,
+  "new_source_and_docs_whitespace_clean": true,
+  "inherited_files_preserved": [
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/dynamic-far-base.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/dynamic-trucka.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/large-target.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/partial-ring-2.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/partial-ring-3.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-skirmish-stationary-infantry.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-skirmish-unarmed-ring.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-skirmish-zero-close.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-zero-road.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-zero-speed.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/rules-zero-track.ini",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/slope-damaged.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/fixtures/slope-healthy.MAP",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/ground_services_probe.c",
+    "experiments/ra2-recomp-20261020/evidence/movement-state-v25/native_probe_host.h",
+    "experiments/ra2-recomp-20261020/run_scenes_v25.py"
+  ]
+}

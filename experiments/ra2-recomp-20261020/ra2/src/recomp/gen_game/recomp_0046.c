@@ -1,3 +1,4 @@
+#include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
 #include "ground_connection_numeric_bridge.h"
@@ -24080,6 +24081,7 @@ L_006FAA30:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_006FAE76; /* 0x006FAA60: jne 0x6fae76 */
 L_006FAA66:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_travel_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAB6A;
     edx = MEM32(esi); /* 0x006FAA66: mov edx, dword ptr [esi] */
     eax = esp + 0x74; /* 0x006FAA68: lea eax, [esp + 0x74] */
     PUSH32(esp, eax); /* 0x006FAA6C: push eax */
@@ -24188,6 +24190,7 @@ L_006FAA66:
       if (_dv && !(_dv == -1 && _dividend == INT64_MIN)) { eax = (uint32_t)((int32_t)(_dividend / _dv)); edx = (uint32_t)((int32_t)(_dividend % _dv)); }
       else { eax = 0; edx = 0; } }
     MEM32(esp + 0x24) = eax; /* 0x006FAB66: mov dword ptr [esp + 0x24], eax */
+L_006FAB6A:
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     uint32_t tube_resume_1=ra2_ground_tube_state_bridge(1);
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -24324,6 +24327,7 @@ L_006FABAA:
     RECOMP_FLAGS_IN();
     eax = MEM32(eax); /* 0x006FAC6E: mov eax, dword ptr [eax] */
 L_006FAC70:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_travel_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAD1C;
     ecx = esi + 0x88; /* 0x006FAC70: lea ecx, [esi + 0x88] */
     eax = (int32_t)(int16_t)LO16(eax); /* 0x006FAC76: movsx eax, ax */
     edx = MEM32(ecx); /* 0x006FAC79: mov edx, dword ptr [ecx] */
@@ -24393,6 +24397,7 @@ L_006FAD00:
     edx = MEM32(esp + 0x50); /* 0x006FAD10: mov edx, dword ptr [esp + 0x50] */
     eax = MEM32(esp + 0x54); /* 0x006FAD14: mov eax, dword ptr [esp + 0x54] */
     ecx = MEM32(esp + 0x58); /* 0x006FAD18: mov ecx, dword ptr [esp + 0x58] */
+L_006FAD1C:
     _flag_a = (uint32_t)(ebx); _flag_b = (uint32_t)(0x80000001u);
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_progress_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebx = ebx & 0x80000001u; /* 0x006FAD1C: and ebx, 0x80000001 */
@@ -24443,6 +24448,7 @@ L_006FAD45:
     ebp = POP32_VAL(esp); /* 0x006FAD73: pop ebp */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x006FAD74: ret  */
 L_006FAD75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_travel_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAE1D;
     ecx = (int32_t)(int8_t)MEM8(esi + 0x575); /* 0x006FAD75: movsx ecx, byte ptr [esi + 0x575] */
     edx = esi + 0x88; /* 0x006FAD7C: lea edx, [esi + 0x88] */
     ebp = MEM32(ebp + ecx * 4 + 0x30); /* 0x006FAD82: mov ebp, dword ptr [ebp + ecx*4 + 0x30] */
@@ -24506,6 +24512,7 @@ L_006FAE01:
     eax = MEM32(esp + 0x5C); /* 0x006FAE11: mov eax, dword ptr [esp + 0x5c] */
     ecx = MEM32(esp + 0x60); /* 0x006FAE15: mov ecx, dword ptr [esp + 0x60] */
     edx = MEM32(esp + 0x64); /* 0x006FAE19: mov edx, dword ptr [esp + 0x64] */
+L_006FAE1D:
     _flag_a = (uint32_t)(ebp); _flag_b = (uint32_t)(0x80000001u);
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_progress_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = ebp & 0x80000001u; /* 0x006FAE1D: and ebp, 0x80000001 */
@@ -66970,6 +66977,7 @@ L_007031E3:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x007031EF: ret 0x14 */
 L_007031F2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t neighbor_resume=ra2_ground_passage_neighbor_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(!neighbor_resume) return; goto L_0070323E;
     edi = MEM32(esp + 0x80); /* 0x007031F2: mov edi, dword ptr [esp + 0x80] */
     ecx = ebx; /* 0x007031F9: mov ecx, ebx */
     esi = edi + (-0x4); /* 0x007031FB: lea esi, [edi - 4] */

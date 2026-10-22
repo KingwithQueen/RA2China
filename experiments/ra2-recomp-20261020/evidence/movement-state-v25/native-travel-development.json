@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "production_integrated_only_after_native_pass": true,
+  "notes": [
+    {
+      "phase": 0,
+      "case": 0,
+      "kind": "probe-return-detection",
+      "finding": "Fragment return address was reset before ABI classification; corrected harness classification."
+    },
+    {
+      "phase": 1,
+      "case": 0,
+      "kind": "unused-buffer-store",
+      "finding": "Original saves only X/Y in the current-position scratch; preserve untouched Z slot."
+    },
+    {
+      "phase": 1,
+      "case": 24,
+      "kind": "conversion-control",
+      "finding": "Table quantization and axis conversion use the independent original conversion control word; new horizontal routine handles all four modes."
+    },
+    {
+      "phase": 2,
+      "case": 0,
+      "kind": "shared-local",
+      "finding": "Regular path stores Y into frame+0x30; remaining path uses frame+0x28. These offsets belong to distinct live temporaries."
+    },
+    {
+      "phase": 3,
+      "case": 0,
+      "kind": "template-output",
+      "finding": "Transform receives frame+0xAC after the first argument push, not frame+0xA8."
+    },
+    {
+      "phase": 3,
+      "case": 1,
+      "kind": "probe-object-layout",
+      "finding": "Test drive must be a byte buffer; uint32 array pointer arithmetic placed owner at the wrong byte offset. Harness corrected and all phases rerun."
+    }
+  ],
+  "final_identity": "experiments\\ra2-recomp-20261020\\evidence\\movement-state-v25\\native-travel-identity.json",
+  "unresolved_native_differences": false
+}

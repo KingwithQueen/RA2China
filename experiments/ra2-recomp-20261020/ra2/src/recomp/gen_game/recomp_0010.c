@@ -1,3 +1,4 @@
+#include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
 #include "ground_internal_bridge.h"
@@ -35201,6 +35202,7 @@ L_004A1794:
 L_004A179B:
     MEM32(esp + 0x98) = ecx; /* 0x004A179B: mov dword ptr [esp + 0x98], ecx */
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -40518,6 +40520,7 @@ L_004A1794:
 L_004A179B:
     MEM32(esp + 0x98) = ecx; /* 0x004A179B: mov dword ptr [esp + 0x98], ecx */
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -45539,6 +45542,7 @@ L_004A1794:
 L_004A179B:
     MEM32(esp + 0x98) = ecx; /* 0x004A179B: mov dword ptr [esp + 0x98], ecx */
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -50009,6 +50013,7 @@ L_004A1794:
 L_004A179B:
     MEM32(esp + 0x98) = ecx; /* 0x004A179B: mov dword ptr [esp + 0x98], ecx */
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -54212,6 +54217,7 @@ L_004A1794:
 L_004A179B:
     MEM32(esp + 0x98) = ecx; /* 0x004A179B: mov dword ptr [esp + 0x98], ecx */
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -58146,6 +58152,7 @@ void sub_004A17A2(void) {
     RECOMP_ENTER(0x004A17A2u);
 
 L_004A17A2:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17D5;
     eax = MEM32(ebp + 0x5C); /* 0x004A17A2: mov eax, dword ptr [ebp + 0x5c] */
 L_004A17A5:
     edx = eax + eax * 2; /* 0x004A17A5: lea edx, [eax + eax*2] */
@@ -70228,6 +70235,7 @@ L_004A32D3:
 L_004A33BC:
     MEM8(ecx + 0x57B) = (uint8_t)(1); /* 0x004A33BC: mov byte ptr [ecx + 0x57b], 1 */
 L_004A33C3:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t template_resume_1=ra2_ground_template_next_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(!template_resume_1) return; goto L_004A3433;
     ecx = MEM32(ebp + 0xC); /* 0x004A33C3: mov ecx, dword ptr [ebp + 0xc] */
     edx = MEM32(ecx); /* 0x004A33C6: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x27C)); /* 0x004A33C8: call dword ptr [edx + 0x27c] */
@@ -73744,6 +73752,7 @@ L_004A32D3:
 L_004A33BC:
     MEM8(ecx + 0x57B) = (uint8_t)(1); /* 0x004A33BC: mov byte ptr [ecx + 0x57b], 1 */
 L_004A33C3:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t template_resume_1=ra2_ground_template_next_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(!template_resume_1) return; goto L_004A3433;
     ecx = MEM32(ebp + 0xC); /* 0x004A33C3: mov ecx, dword ptr [ebp + 0xc] */
     edx = MEM32(ecx); /* 0x004A33C6: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x27C)); /* 0x004A33C8: call dword ptr [edx + 0x27c] */
