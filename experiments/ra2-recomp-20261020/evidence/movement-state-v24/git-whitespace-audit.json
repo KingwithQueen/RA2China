@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "new_source_and_docs_whitespace_clean": true,
+  "inherited_files": [
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/dynamic-far-base.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/dynamic-far-base.MAP",
+      "sha256": "b1c4af2043e733a7e0cf48767330c01cd9364ab57d7495b6fadaf6735e8d82ce",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/dynamic-trucka.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/dynamic-trucka.MAP",
+      "sha256": "a5be9d267a9f4d8590a56318cf17e5c7499091580b38a4156f06d24022ab12cb",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/large-target.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/large-target.MAP",
+      "sha256": "6122b4b1eab8600f9e865498319c13ddb99ad0d65933b437dc15af55338d4c04",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/partial-ring-2.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/partial-ring-2.MAP",
+      "sha256": "02761ca13ba2422ac545325c77db1518854abecc916f029e26f3c25f3b929903",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/partial-ring-3.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/partial-ring-3.MAP",
+      "sha256": "c77c982682f4659d05381bb19348bdbb2617f15849131ba1cd280157674e5216",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-skirmish-stationary-infantry.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-skirmish-stationary-infantry.ini",
+      "sha256": "955341c4358507253c11dc837819c5e106e624bfa63fb0c458ca1ea26a4de1c7",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-skirmish-unarmed-ring.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-skirmish-unarmed-ring.ini",
+      "sha256": "63902b2aed55fdf0733a80833261278e4a7689e97af8b6f2634aa362b0d6ea9f",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-skirmish-zero-close.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-skirmish-zero-close.ini",
+      "sha256": "d67a6064f982a752274bb4878c63e9c1b45742e7e758a50cb435b9b313392be0",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-zero-road.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-zero-road.ini",
+      "sha256": "8cef98518323869c94aa3ebc866e99c809d1066a8bb37b72070fb920b683bf95",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-zero-speed.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-zero-speed.ini",
+      "sha256": "8880d25b5b5550e162e88c7117012d61f03bcf916a2524f1662dee9a9f87dd26",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/rules-zero-track.ini",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/rules-zero-track.ini",
+      "sha256": "01c21149b7bafcb158f6a89fb09d1e2c1add1e4bd085f634b7c79c92ba832825",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/slope-damaged.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/slope-damaged.MAP",
+      "sha256": "de27b5f16482fac4a9fcb46364243b8d8229fd677b2331c7a45a524381a33561",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/fixtures/slope-healthy.MAP",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/fixtures/slope-healthy.MAP",
+      "sha256": "c166fc17beced9bfe159274ac132029705e6c54c91703c235a3b6f29d4937f58",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/ground_services_probe.c",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/ground_services_probe.c",
+      "sha256": "40a19e20a2a77feb70a088454972b645484aae4ab827db8e6a4961f21352d44d",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v24/native_probe_host.h",
+      "previous_path": "experiments/ra2-recomp-20261020/evidence/movement-state-v23/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211",
+      "reason": "byte-identical prior verified fixture or probe source"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/run_scenes_v24.py",
+      "previous_path": "experiments/ra2-recomp-20261020/run_scenes_v23.py",
+      "sha256": "ccde4ce89d7b88e60636fea1dec2274fec0b744c22775473a3f281b3787351b2",
+      "reason": "prior runner changed only evidence stage identifier"
+    }
+  ],
+  "scope": "Keep previously accepted fixture/probe bytes unchanged; inherited formatting is not normalized after frame acceptance."
+}

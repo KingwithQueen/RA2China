@@ -1,3 +1,4 @@
+#include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
 #include "ground_connection_numeric_bridge.h"
 #include "ground_allied_bridge.h"
@@ -24224,6 +24225,7 @@ L_006FAB76:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_006FAE76; /* 0x006FABA4: jne 0x6fae76 */
 L_006FABAA:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_progress_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAC70;
     ecx = ebx; /* 0x006FABAA: mov ecx, ebx */
     ebp = MEM32(edi + 0x4); /* 0x006FABAC: mov ebp, dword ptr [edi + 4] */
     edx = MEM32(edi + 0x8); /* 0x006FABAF: mov edx, dword ptr [edi + 8] */
@@ -24321,6 +24323,7 @@ L_006FABAA:
     RECOMP_CALL(sub_00423EF0); /* 0x006FAC69: call 0x423ef0 */
     RECOMP_FLAGS_IN();
     eax = MEM32(eax); /* 0x006FAC6E: mov eax, dword ptr [eax] */
+L_006FAC70:
     ecx = esi + 0x88; /* 0x006FAC70: lea ecx, [esi + 0x88] */
     eax = (int32_t)(int16_t)LO16(eax); /* 0x006FAC76: movsx eax, ax */
     edx = MEM32(ecx); /* 0x006FAC79: mov edx, dword ptr [ecx] */
@@ -24391,6 +24394,7 @@ L_006FAD00:
     eax = MEM32(esp + 0x54); /* 0x006FAD14: mov eax, dword ptr [esp + 0x54] */
     ecx = MEM32(esp + 0x58); /* 0x006FAD18: mov ecx, dword ptr [esp + 0x58] */
     _flag_a = (uint32_t)(ebx); _flag_b = (uint32_t)(0x80000001u);
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_progress_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebx = ebx & 0x80000001u; /* 0x006FAD1C: and ebx, 0x80000001 */
     _cf = 0;
     _flag_k = FK_TEST;
@@ -24503,6 +24507,7 @@ L_006FAE01:
     ecx = MEM32(esp + 0x60); /* 0x006FAE15: mov ecx, dword ptr [esp + 0x60] */
     edx = MEM32(esp + 0x64); /* 0x006FAE19: mov edx, dword ptr [esp + 0x64] */
     _flag_a = (uint32_t)(ebp); _flag_b = (uint32_t)(0x80000001u);
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_progress_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = ebp & 0x80000001u; /* 0x006FAE1D: and ebp, 0x80000001 */
     _cf = 0;
     _flag_k = FK_TEST;
@@ -68311,6 +68316,7 @@ L_00703A95:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x00703AA4: jmp 0x7038ef */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -69473,6 +69479,7 @@ L_00703A95:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x00703AA4: jmp 0x7038ef */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -70144,6 +70151,7 @@ L_00703A93:
     RECOMP_BACKEDGE();
     goto L_00703A61; /* 0x00703A93: jmp 0x703a61 */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -70387,6 +70395,7 @@ L_00703940:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x0070394C: ret 0x14 */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -70629,6 +70638,7 @@ L_00703940:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x0070394C: ret 0x14 */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -70868,6 +70878,7 @@ L_00703940:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x0070394C: ret 0x14 */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();
@@ -71101,6 +71112,7 @@ L_00703940:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x0070394C: ret 0x14 */
 L_00703AA9:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_finish_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* 已核实的占格判定由可读 C 完成；旧标签保留给原始段内入口。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     ra2_ground_collision_finish_bridge();

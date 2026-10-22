@@ -266,3 +266,6 @@ set_source_files_properties(src/gameplay/ground_connection_numeric.c src/runtime
 
 target_sources(ra2 PRIVATE src/gameplay/ground_tube_state.c src/gameplay/ground_handoff.c src/gameplay/ground_surface_class.c src/runtime/ground_tube_state_bridge.c)
 set_source_files_properties(src/gameplay/ground_tube_state.c src/gameplay/ground_handoff.c src/gameplay/ground_surface_class.c src/runtime/ground_tube_state_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_tube_progress.c src/gameplay/ground_internal_next.c src/gameplay/ground_passage_finish.c src/runtime/ground_progress_bridge.c)
+set_source_files_properties(src/gameplay/ground_tube_progress.c src/gameplay/ground_internal_next.c src/gameplay/ground_passage_finish.c src/runtime/ground_progress_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

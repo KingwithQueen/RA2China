@@ -1,3 +1,4 @@
+#include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
 #include "ground_internal_bridge.h"
 #include "ground_remainder_bridge.h"
@@ -34986,6 +34987,9 @@ L_004A1663:
 L_004A1665:
     MEM8(esp + 0x13) = (uint8_t)(1); /* 0x004A1665: mov byte ptr [esp + 0x13], 1 */
 L_004A166A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_0=ra2_ground_internal_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_0==0x004A1FDC) goto L_004A1FDC;
+    goto L_004A16A6;
     /* 普通入口由可读路径推进处理；保留下方旧标签，兼容从段内进入的原版共享尾部。 */
     { uint32_t next; RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
       next = ra2_ground_consume_sample_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -40300,6 +40304,9 @@ L_004A1663:
 L_004A1665:
     MEM8(esp + 0x13) = (uint8_t)(1); /* 0x004A1665: mov byte ptr [esp + 0x13], 1 */
 L_004A166A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_0=ra2_ground_internal_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_0==0x004A1FDC) goto L_004A1FDC;
+    goto L_004A16A6;
     /* 普通入口由可读路径推进处理；保留下方旧标签，兼容从段内进入的原版共享尾部。 */
     { uint32_t next; RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
       next = ra2_ground_consume_sample_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -45318,6 +45325,9 @@ L_004A1663:
 L_004A1665:
     MEM8(esp + 0x13) = (uint8_t)(1); /* 0x004A1665: mov byte ptr [esp + 0x13], 1 */
 L_004A166A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_0=ra2_ground_internal_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_0==0x004A1FDC) goto L_004A1FDC;
+    goto L_004A16A6;
     /* 普通入口由可读路径推进处理；保留下方旧标签，兼容从段内进入的原版共享尾部。 */
     { uint32_t next; RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
       next = ra2_ground_consume_sample_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -49785,6 +49795,9 @@ L_004A1663:
 L_004A1665:
     MEM8(esp + 0x13) = (uint8_t)(1); /* 0x004A1665: mov byte ptr [esp + 0x13], 1 */
 L_004A166A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_0=ra2_ground_internal_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_0==0x004A1FDC) goto L_004A1FDC;
+    goto L_004A16A6;
     /* 普通入口由可读路径推进处理；保留下方旧标签，兼容从段内进入的原版共享尾部。 */
     { uint32_t next; RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
       next = ra2_ground_consume_sample_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -53985,6 +53998,9 @@ void sub_004A166A(void) {
     RECOMP_ENTER(0x004A166Au);
 
 L_004A166A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_0=ra2_ground_internal_next_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_0==0x004A1FDC) goto L_004A1FDC;
+    goto L_004A16A6;
     /* 普通入口由可读路径推进处理；保留下方旧标签，兼容从段内进入的原版共享尾部。 */
     { uint32_t next; RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
       next = ra2_ground_consume_sample_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -70062,6 +70078,9 @@ L_004A329F:
     RECOMP_CALL(sub_00476920); /* 0x004A32AF: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A32B4:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_1=ra2_ground_internal_next_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_1==0x004A3A44) goto L_004A3A44;
+    goto L_004A33C3;
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     uint32_t shared_prepare_resume = ra2_ground_prepare_shared_bridge(1);
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
@@ -73576,6 +73595,9 @@ void sub_004A32B4(void) {
     RECOMP_ENTER(0x004A32B4u);
 
 L_004A32B4:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t next_resume_1=ra2_ground_internal_next_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(next_resume_1==0x004A3A44) goto L_004A3A44;
+    goto L_004A33C3;
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
     uint32_t shared_prepare_resume = ra2_ground_prepare_shared_bridge(1);
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
