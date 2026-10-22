@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "two_run_local_rewrite": 1,
+  "reverse_anchor_search": 1,
+  "collision_segment_rewrite": 1,
+  "search_completion_tails": 16,
+  "early_return_tails": 16,
+  "empty_root_cleanup_tails": 16,
+  "internal_tail_labels_preserved": true,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "primary_427370_flow_readable": true,
+  "raw_cell_lookup_and_owner_passage_services_retained": true,
+  "whole_search_readable": false
+}

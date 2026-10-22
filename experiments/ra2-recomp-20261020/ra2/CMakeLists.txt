@@ -242,3 +242,6 @@ set_source_files_properties(src/gameplay/ground_region_search.c src/runtime/grou
 
 target_sources(ra2 PRIVATE src/gameplay/ground_path_optimize.c)
 set_source_files_properties(src/gameplay/ground_path_optimize.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_path_local.c src/gameplay/ground_path_completion.c src/runtime/ground_path_local_bridge.c)
+set_source_files_properties(src/gameplay/ground_path_local.c src/gameplay/ground_path_completion.c src/runtime/ground_path_local_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

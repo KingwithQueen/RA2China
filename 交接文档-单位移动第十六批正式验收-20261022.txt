@@ -1,0 +1,20 @@
+单位移动第十六批正式验收交接（2026-10-22）
+
+正式代次16 / 验证轮次17：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v17\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：c2d76b8f30c83a52fb6785367d641c89e69afe94bc76cb849e9e81d04cb371c0
+两段局部转弯改写428CF0、反向锚点429570、碰撞段改写4296F0及搜索完成/失败外壳已整理为命名C17。
+28场景15798帧，另默认规则预算901帧严格一致；56组片段/数值检查通过，新增40960例。
+三个部分各自通过默认901帧、三格包围101帧、默认预算901帧后保存回退点。
+入口：gameplay/ground_path_local.h/.c、ground_path_completion.h/.c；旧布局：runtime/ground_path_local_bridge.h/.c。
+转弯保留遇阻/段尾后额外查格、起点威胁采样和桥面高度；锚点保留-2跳过和首次折返后重新增长即停。
+段改写保留两次顺序尝试、每次重置威胁累计、段尾最多3个高威胁格，失败不改方向，成功剩余槽-2。
+搜索退出统一接管16处展开尾部；保留无效/已到达免恢复、空根清理、两项计数相等限制、重建→平滑→后处理→恢复顺序。
+地图格查询、对象通行和威胁值服务仍由原实现提供。完整寻路、移动和全游戏等价尚未完成。
+预算27..37帧10..0，第38帧清空目标，保持停止至240；默认规则下通过正常服务显式构造真实AI车辆圈。
+精确4C3895未单独挂钩，未测未干预随机对局频率。
+报告：D:\Program\红色警戒2\docs\单位移动第十六批-局部碰撞与搜索退出-20261022.txt
+旧基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v17\baseline；回退：parts/turn-verified、segment-verified、completion-verified。
+完整源码与程序：final-source；清单source-manifest.json、末检final-check.json。
+下一步：Advance插值、Prepare共享入口及底层通行/威胁服务，继续默认遭遇战与预算耗尽逐帧验证。
+本轮按授权验收后本地提交，不推送；父提交d032599。旧基线、回退及原始输入保留。

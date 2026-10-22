@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "counts": {
+    "v9": 536,
+    "v10": 637,
+    "v11": 727,
+    "v12": 829,
+    "v13": 1002,
+    "v14": 1124,
+    "v15": 1247,
+    "v16": 1371,
+    "v17-baseline": 1371,
+    "turn-verified": 1468,
+    "segment-verified": 1469,
+    "completion-verified": 1470,
+    "H_originals": 20
+  },
+  "game_save_old_engine_preserved": true,
+  "unsupported_guards": 37,
+  "completion_repair_archive_verified": true
+}

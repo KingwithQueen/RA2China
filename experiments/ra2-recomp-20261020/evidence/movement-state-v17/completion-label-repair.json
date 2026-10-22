@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "reason": "Preserve generator RECOMP_ITAIL continuation labels after return when replacing completion tails.",
+  "failed_source_sha256": "2d136b87dba870a3712da007718ef210cef2ffd0d08451523a13a0ec948faef7",
+  "failed_build_log_sha256": "a781b84e459928fbaed02ac629f24450c53619199e726acf203c69377b7918ac",
+  "repaired_source_sha256": "b9a53dafa0f19b804ac9e9437b3be4f3021c1793f32dd1a593bfc6ce46f2858c",
+  "internal_tail_labels_preserved": true,
+  "undefined_goto_labels": 0,
+  "failed_candidate_never_promoted": true
+}

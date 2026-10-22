@@ -1,0 +1,537 @@
+{
+  "production_exe_sha256": "c2d76b8f30c83a52fb6785367d641c89e69afe94bc76cb849e9e81d04cb371c0",
+  "fixture_exe_sha256": "b60a19b67f209d1ca40442c2e4f02073ff8125a55b9635c5f16a85c7b2d1ec8f",
+  "fixture_source_sha256": "298c78cd3b9f5bf6130e744b2b02f493c18dbb9593036d56cc81389a13a3eb4b",
+  "changed_object": "movement_fixture.c.obj",
+  "object_count": 132,
+  "objects": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\host.c.obj",
+      "sha256": "ba63914e8c60b7fc3e9cc679480f5521255cb8f284d3c82df19fe9ad0bdec0e5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\recovery_checks.c.obj",
+      "sha256": "91642e23a1ee7ae4cd4b0362ef8bff0ec77e291c37576a3dac11d17331dc9cd9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\state_trace.c.obj",
+      "sha256": "852ada4b35dcdb66c1965acfd06061a7a5ae3b7b6eb8a655d781401e17afaa8c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v17\\truck_actor_movement_fixture.obj",
+      "sha256": "b75f64e40681f2b0d37bf2dba404de19fb187f7be8545b50c65cfa0d9306c83f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\x87_precision.c.obj",
+      "sha256": "f20b590a1c4e533769300772680e1b0d4c6be412ee6a5a075b91fa699e562c9b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\movement_bridge.c.obj",
+      "sha256": "2aa1f7a7f48cdfa11a31173cb79805a76606b2c67e2b0840825483394971bbe2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_bridge.c.obj",
+      "sha256": "0b8df46bb6eef27979649963cad89cc1da8b5cbcc8147003fcd4cbfb42c56307"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path.c.obj",
+      "sha256": "b57eea1deb8bf54e02ed9a1d79a5bcd5f1b11a6de28edfb5aef253c6b4843f14"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_advance.c.obj",
+      "sha256": "19c7da7d0465e4adf39cc7f43b44645334f75e6a738e1d02c8f3647fdfd4dbf1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_continuation.c.obj",
+      "sha256": "117e090e85582409b22c09a9dee2f01139f57cce1fc2f2ac7919d185ad52d777"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_continuation_bridge.c.obj",
+      "sha256": "6df4d27581ad8cbe8fae157ab37dad22d97fc00124b9257e18c1772fa6681e13"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_advance_bridge.c.obj",
+      "sha256": "6510cb9a4ca2b2632421e9e81aaea1d5aac7a4a6b7b81b11e9d513c2777570c8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_drive.c.obj",
+      "sha256": "3d9768609a26490d64c327216c332b1e446c0e22c4924da28bf46ac762fb29d6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_drive_bridge.c.obj",
+      "sha256": "99c1c45762595854b2e3d26394571b7cd2a1992c6dfe581f423c9763d953ded4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_collision_bridge.c.obj",
+      "sha256": "f01ee1f99f01851e759f9c462172ba4856d2bf3bb4a05bcd9b4df13ef465c725"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_collision.c.obj",
+      "sha256": "40e6a02b24686544ae4e990daaf5a70359591dadd385636d38a06a8100db3d1f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_entry.c.obj",
+      "sha256": "bef687ee4d2df548ab124de8f29e227b1cc1bd7f506e5804b114ff7fa0b3a47c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_objects.c.obj",
+      "sha256": "a8813f59e10cd995d1a64ba4770e71a090b7150640027dab22fb2c23056b4b43"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_allied.c.obj",
+      "sha256": "7e1bd2605b134fb2558e6113e74a962d3a751122ca53bcb1097679921ba771f0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_allied_bridge.c.obj",
+      "sha256": "2f2686acb564d49dffe7c7634c5066c8f79a1672c07098d192528353b141f412"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_objects_bridge.c.obj",
+      "sha256": "d60d51e331856a7c888e08f35eacb32bd5665e2f642aec9f7b1882fbd322c871"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_entry_bridge.c.obj",
+      "sha256": "31deaf0544536311316ad4afb31e6d3819979124eafb2d6a40ee47cb92fdc733"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_terrain.c.obj",
+      "sha256": "ed3eeeaf18b0985d932828ba8c33b3814bee776c89df47df35aa930eb14f0d3e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_arrival.c.obj",
+      "sha256": "6997dd3b5c298054da91b7c8556c4723ba15a4b13852173383721976a467f5f8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_prepare.c.obj",
+      "sha256": "bd5f92c38ec28ce832c482c9ba98a0b29ba4bb1dfc8606af7accaa43ff75dc86"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_segment.c.obj",
+      "sha256": "2f268da616e35919040aeb67b8ee5354128aa5a3d9b51b724cf9f3225d28306a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_wait.c.obj",
+      "sha256": "cf057f9e0d6315c09c066c0b3cb317f1a2eac262e693890974060d7d3a022752"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_reaction.c.obj",
+      "sha256": "16c254137d4186d754f3259cf92dedeee6f5993c40eba1e56474b001276b2894"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_special.c.obj",
+      "sha256": "16de30b44db090adc7082ba9536d3922019b2b6554f2d548f243a35d12a762f6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_template.c.obj",
+      "sha256": "37deda7e9acba6da953f887ff304d4b11ca9d2c2520dec48e077eea37e7fb58b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_followup.c.obj",
+      "sha256": "87da3b265a12c062cab24af5d4aa7ee9cf5d4480ba86654e89714187411444a0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_turn.c.obj",
+      "sha256": "406723a035baa6b46c307d8fd8d5fe810adfe7236177739355ea329529795884"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_followup_bridge.c.obj",
+      "sha256": "ebc5d30bdb29a056515dd1061ca0c3520bc172534cf169f7568e3773801900fc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_obstacle.c.obj",
+      "sha256": "0b5133b92f262475ca6f2257bff3986acc206624800dcf5db84f1d39070f0eb3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_recovery.c.obj",
+      "sha256": "c44238e8501c2d040c1006ed3fc7c15515b400a2e84cfceea7ad70ed0ff01335"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_barrier.c.obj",
+      "sha256": "24496dee4c48928f71ddf0b53bef83556f8d30d50ed00e2a4241f2ef0e51e22a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_barrier_bridge.c.obj",
+      "sha256": "93d245ea306faec55c0f5524cd806a0baac5f245f05bdfea72a8fa7d4bb240e9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_recovery_bridge.c.obj",
+      "sha256": "bba0710d189f63f0b55e07e41fb8a48ae07749a5215faa9ea1b09a514d7c5da0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_prepare_bridge.c.obj",
+      "sha256": "46e58355f3fd914ee21fb0de4d179e809797c0cf8f0dce2ff64d106966de1dda"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_arrival_bridge.c.obj",
+      "sha256": "8235b0e94dc5dd282b1a36f7ae99c10d200846487b8b0201a557df9d319a7ebf"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\compat\\x87_arithmetic.c.obj",
+      "sha256": "4d64b86e7e42b569de13f7591063b08fb70afc81285cde573ed4acad410b0015"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\unit_movement.c.obj",
+      "sha256": "18a188189bdb4e9e5c3ae12472311d8940f018d2c6b5335cfecaaf6a5e63ad86"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\input.c.obj",
+      "sha256": "6cd38e69b116633b68fe34df140ba7180df5253c713e72725de7c6cfc75aa3c5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\mods.c.obj",
+      "sha256": "c97064410b16b12c4d424e13f837cfd9c7cc9910418af78200d8edd21429e9a7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\oracle.c.obj",
+      "sha256": "c81e867a08cbdcbec251b65f4ede33b8412bedd087e7dfe58225a9eb420db024"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\present.c.obj",
+      "sha256": "8d969655f4dd23a009b8f8a2c7049e7120926dd3d913375ec3a4a50064d1462f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\hdvox.c.obj",
+      "sha256": "1474a922b1222108c9afbd6d5708ca5061a2c03605a2e4e29bef310e8703373c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\queuefive.c.obj",
+      "sha256": "f91e9250ed3d49652b40890552872b9e2a7e25768bd22bab4697ee8218fb7242"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\native32\\native32.c.obj",
+      "sha256": "1a695d1b1c79d769a1b8e063564b9655d7bbbed94ace0faf457e3121ed9346ed"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\image_loader.c.obj",
+      "sha256": "66cc07770346ffd1b82c7e52446cc24d4dfad1b99b9cc37e06115b430e67c3bb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\recomp_trace.c.obj",
+      "sha256": "38c392f1878abd5af47a1332bcc43a2140c8c41d64c73f7f23125c61c688ee37"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0000.c.obj",
+      "sha256": "651fc2587a60cb4b1601d713419a078867b988803e168093d4086897033061b4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0001.c.obj",
+      "sha256": "45507cc227bddbec47590fa4fb8d390b21f80595e02651dd6f3329036e1dd825"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0002.c.obj",
+      "sha256": "9db5737a3772753a32ba7a87adbba2b5ba275b7452858bff336df401b460a3a8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0003.c.obj",
+      "sha256": "6af914e33dc06f938f93c26deed8bee29977c532c9364e94befbd5f7bcd05d95"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0004.c.obj",
+      "sha256": "054a3eeed24fc0b968f2060e92026962225c8d68f244f81edfa018a2ebbe63ac"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0005.c.obj",
+      "sha256": "0c8f6c3f5e852928f811349f21e261e600dc43e16fcffb389a7782124ba10b52"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0006.c.obj",
+      "sha256": "078d72f6cb7770ca171ecd57d1b50d5aded90b31fe4953f9e01ca2d0ee924b31"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0007.c.obj",
+      "sha256": "e3024a31e80d17e17e64284f9c459803b2f625916363d5faa8a7881f222e7ac0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0008.c.obj",
+      "sha256": "003548b02c350d5c4304f274bcf4794076014a0d3dc73b82921c4509e3a22af7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0009.c.obj",
+      "sha256": "454ca64b6fccdbe1536d7f62ec7054e3a2f0a57299d71ab881f783982d23e2ff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0010.c.obj",
+      "sha256": "c07b2f91abf2b9fbc16826c06be9c2b08f7440ffadb70001f634c26bcfdc2082"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0011.c.obj",
+      "sha256": "a47968bd9d5350e328fd61b9965841575a8229aee92b98e24f603a49b81b4c55"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0012.c.obj",
+      "sha256": "cbce47e90d5ed64762781fe00bcb20c73643fdaefba97a0ef74e87f2479e9fb7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0013.c.obj",
+      "sha256": "4172f4af5f1a4c1cee4a6738d7fcfc2a4b3abe5f9f713d73ecaf014ca9c14bcb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0014.c.obj",
+      "sha256": "a6860d6ad64a4c7a2064bd27e10a3909baa6b87f90191741ecdc9380be08150e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0015.c.obj",
+      "sha256": "b95d781c7d9f6b00ccc5ea8ce0d54ce42f1dcc2c91836c65a5548ab2337f4980"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0016.c.obj",
+      "sha256": "8dc1a37fdce22a8d4d7d86905245b1a44d2d6db707ba67c42aed17309858c724"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0017.c.obj",
+      "sha256": "88c72707829e2816500ba6f62d91aa1bcc625559742a21af8a199a56c2d09a85"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0018.c.obj",
+      "sha256": "c299cf9212427ffc126ba4823ee57964bf9fcd4c71eadf7dbfa9f385c12877c2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0019.c.obj",
+      "sha256": "a53b2f73e561b17bebf9235d445ee826e09714c9e3f12d0dddb082febd418dcc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0020.c.obj",
+      "sha256": "caec9c3e23a63f2ee18a8575463b14828710e58355b3b2f44a508acd17684ca6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0021.c.obj",
+      "sha256": "f5dc3977ad2b77607cdb6e7b13b021fcbb6fac87d58bc411e0e44d87d7a8d678"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0022.c.obj",
+      "sha256": "37cdb91efe018f20ea99fd6dbd5275c0adf908f86f6bfcc3cafbf089a0126f79"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0023.c.obj",
+      "sha256": "490933945af4faf94cfbaffd44e2fa1085e824a0c4a8ef746eaf37fb292e6ec6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0024.c.obj",
+      "sha256": "d2db4d5e1f22cc29c272b76bbf0420ecb7261434aa34cb9b9198f61f96abe49e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0025.c.obj",
+      "sha256": "597a693ff634c48cdc45846c8698261ecd8b2a48fb400f42a967fc748e852690"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0026.c.obj",
+      "sha256": "cc0b22a965d723c01b703391bb9df3c211ebabfb53772a000f32c6a3a77aafbd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0027.c.obj",
+      "sha256": "00412d0c48fde6122f75e08d61b9190e19772b66fb3e18e6d1d06257d699af78"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0028.c.obj",
+      "sha256": "f40533993923870d73766ef8ceceefde2abc8ca7b045f7cf0af79067c9b7a9b0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0029.c.obj",
+      "sha256": "2b9495a1c6a9f1cc78a595a1a9b8b3a0afc6e1cff9578203b3b1a8547c837b8d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0030.c.obj",
+      "sha256": "d4ae9cf3da00aa718cc13f4601644d614a6debf6b3939af97d512e4b23b69acd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0031.c.obj",
+      "sha256": "704f974f09025744bffefecd80602130873f911f7f743c02a44d9b60a72cfb99"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0032.c.obj",
+      "sha256": "ccf454cde13959093749820d29434085e35e5d8b0844586be36176d17f6f3078"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0033.c.obj",
+      "sha256": "d2d94be772c34cfdc4577936493c04b7f1cbaa27a65cfe191f4047f5d7097fde"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0034.c.obj",
+      "sha256": "e18d2097a0bbd67f77b2f47ebfc72f360660509f8070eecfb78831a725782f0a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0035.c.obj",
+      "sha256": "b943b1aeb9a2791eafb6f963aeb68a412448cd8dcd629df1c0db37f6f688261b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0036.c.obj",
+      "sha256": "b87130dbd43652a2c6a8a86672f9495ef00f0ecf656b92eb62b7c71a7af86bfe"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0037.c.obj",
+      "sha256": "a94fde82def3864dc918816306da3347d9b65c0bd8cef46ae747d3e919291936"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0038.c.obj",
+      "sha256": "75d8d903be95aeaa1de7be5d5f6639b459e852ddf26726172482e5a1418c35d3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0039.c.obj",
+      "sha256": "249d648491a8b564c76dcfe13a1c5d3d82445243b3d930763731b79693c58dba"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0040.c.obj",
+      "sha256": "b06acc4fc013641d4d405f1ebba23c1daf89ad839b10c164ccdc36f650b162b6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0041.c.obj",
+      "sha256": "d719da0e6502b1321cf248b47154c2c0377e3986bba21833088abc9272e43e67"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0042.c.obj",
+      "sha256": "3409c9282f2fdcdd03a73b6908d5bfa5e6f8b5c6fd4f35e0820dfc680ca51245"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0043.c.obj",
+      "sha256": "5278f2538704c44f244790976b30046d456f7a52d75b1a902aa55e36e50fec41"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0044.c.obj",
+      "sha256": "cf7cb4489cf58c988c624be86c38c496f6c13517ec130b4c373f6a18561f101c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0045.c.obj",
+      "sha256": "943e932f86fe2f34d9ca7af378c7a6f6d298408440474625b8599315fb2e1a85"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0046.c.obj",
+      "sha256": "494491adc16c5e19ca89afb59b48033e34bc99b1c260756cae762c2867488230"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0047.c.obj",
+      "sha256": "4aab5d66c406cb8b0c38755c40a78381fbe011a05655ed1a7b914b578d730198"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0048.c.obj",
+      "sha256": "3a90366e24f07492926afa71d6b026cdf21b87a1d0ac0a2f24c3eee9f58fcb2e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0049.c.obj",
+      "sha256": "84aa3d239ab4af21a161985914342ed20e0b4f9fceb7ceba2d16301575b9c483"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0050.c.obj",
+      "sha256": "f71cc1783135bac6886a8c23e06ac635cf6b5aabed83aa313da0c63782b248e2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0051.c.obj",
+      "sha256": "2d719a8d2c93890892ff7211d269d305f69a58ab3a4674e6c99f285492114809"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0052.c.obj",
+      "sha256": "82341fe1deebeba486ceeb1644679a3e3bc82821a063e07e7d1d1811886deda8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0053.c.obj",
+      "sha256": "ff53b6fa0f70e0e889fe7d9bfc2ba34737c434e8b65ceeeb7a4de7041dfae4ae"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0054.c.obj",
+      "sha256": "8efb111aaabcbebcecbe116d2087cde79fecf654f5d61d5282e64d732314e02e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0055.c.obj",
+      "sha256": "99a31e88fda72a2aa03efddcb3584cd15145e940bb9d5ad9f85a1e5a5c845e97"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0056.c.obj",
+      "sha256": "e83cebb58baf73fede4ad985d31d3fd2c4dd43084f44774f9e40b32d960d2390"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0057.c.obj",
+      "sha256": "fc17e117f70de7a41d63dccf3f58e17bc1e457621d6df1a079ee99f36fa78d35"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_dispatch.c.obj",
+      "sha256": "16404439d7fd06f84a2d97dc95f1ecba84c76b7611c36db64e32afc7ec219d59"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_cost.c.obj",
+      "sha256": "ab6854d04128267a7843eda82f297d148643d1950bbcad5d8c1ecbeb25b092d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\walk_movement.c.obj",
+      "sha256": "d03fd9ddf1c67956bd2c7df5e9c307281866e49882344acf08ffa0298e5f5c49"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\walk_movement_bridge.c.obj",
+      "sha256": "d635e036e73b7d58b2893094de3b5c64d6be04ad3d8def7bcf8ec28dc3b44888"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_cache.c.obj",
+      "sha256": "bd177dbac8c811bfc03791b4ad1473b39a630fc75211c651afd294847ce07f06"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_heap.c.obj",
+      "sha256": "43437cbc739f221e51b4b90e54a4883cee2279c5da70258113859fd63dc0c433"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_heap_bridge.c.obj",
+      "sha256": "dcb55284f5f9f09d89522da2272f32b096c76859292189642eea916f45472975"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_nodes.c.obj",
+      "sha256": "20bc363563754483d04337b1c77eecd221abbe7f245476e747aed45cc3b52be2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_nodes_bridge.c.obj",
+      "sha256": "8e6c245322e9d98c0c72fa409c51a34d6486b6a739b00a43ec82c0f2493b26d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_distance.c.obj",
+      "sha256": "d091c88200d50c0588cc6e1c57f0769023df677a7034b5057759c4000f295f53"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_distance_bridge.c.obj",
+      "sha256": "b7ed16474e4397f96cdbb56c90b4270a93404c8f68234be32ff26b864fa1c639"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_search.c.obj",
+      "sha256": "29de48ad801f38afceeaa1332b2b98aa8f3979d15b492e9f06c1f2e6c793d922"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_search_bridge.c.obj",
+      "sha256": "5c22d8e84c7efdb8e13bd2d1f8687523a6b9de332435d2b28cf77d1ac617763c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_prepare.c.obj",
+      "sha256": "0ece93f2c0a6a87a12324bb5ff5262cf4799bdfa5b9697946c56021c2df7d4e6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_region_route.c.obj",
+      "sha256": "5d646bb066722a350da65aedd94469dc70115058b9b7c023ea34bcf45457ad14"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_rebuild.c.obj",
+      "sha256": "13b80efa2480c57ad58114d8bfc948285ad829f5dd9411f78cd27d5d4e19ca9d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_lifecycle_bridge.c.obj",
+      "sha256": "2010b14d21575e2b0edee177d22451e33e83657d3f29cc5b25c4b2a4300913a5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_region_search.c.obj",
+      "sha256": "fe00bf0fe4e4945e977048d397f8f2a1d5d6a4864ad3e9a0b7d245cb5e8761f2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_routing_bridge.c.obj",
+      "sha256": "2dbb421b8254ba0e69fd5829d80fb791c42866a0eaffd94fbe2cb86a3c22a89c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_optimize.c.obj",
+      "sha256": "e52d51a9bd79c52cca513bc0420a154567aed43a0b6d20fc33d5a7b521ad435f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_local.c.obj",
+      "sha256": "000332634ee4ee4f3ad016de339ae1c27038704ea5db789b278649f02cfa3ece"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_completion.c.obj",
+      "sha256": "dbcb28826a84518d3725c039fcc4d2681e4ca812c98d7cc1fa98788090c4d879"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_local_bridge.c.obj",
+      "sha256": "ef8fdded830396bcdd8dc5f29558e58251cb127cfab5697672de230fed7bf725"
+    }
+  ]
+}
