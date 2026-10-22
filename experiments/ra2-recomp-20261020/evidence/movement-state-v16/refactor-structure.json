@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "complete_region_search": 1,
+  "same_region_shortcut_readable": true,
+  "path_smoothing_orchestration": 1,
+  "path_postprocessing_orchestration": 1,
+  "legacy_region_publication_fragments": 4,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "collision_aware_turn_rewrite_service_retained": "428CF0",
+  "anchor_service_retained": "429570",
+  "collision_aware_segment_rewrite_service_retained": "4296F0",
+  "completion_failure_shell_still_generated": true
+}

@@ -236,3 +236,9 @@ set_source_files_properties(src/gameplay/ground_path_search.c src/runtime/ground
 
 target_sources(ra2 PRIVATE src/gameplay/ground_path_prepare.c src/gameplay/ground_region_route.c src/gameplay/ground_path_rebuild.c src/runtime/ground_path_lifecycle_bridge.c)
 set_source_files_properties(src/gameplay/ground_path_prepare.c src/gameplay/ground_region_route.c src/gameplay/ground_path_rebuild.c src/runtime/ground_path_lifecycle_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_region_search.c src/runtime/ground_path_routing_bridge.c)
+set_source_files_properties(src/gameplay/ground_region_search.c src/runtime/ground_path_routing_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_path_optimize.c)
+set_source_files_properties(src/gameplay/ground_path_optimize.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
