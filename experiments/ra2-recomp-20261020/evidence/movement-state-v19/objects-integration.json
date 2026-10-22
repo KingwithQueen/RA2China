@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "part": "objects",
+  "entries": {
+    "sub_004717B0": 1,
+    "sub_004717E0": 1,
+    "sub_00471830": 1,
+    "sub_0047A130": 1,
+    "sub_005D47D0": 1,
+    "WaveClass__virtual_108": 1
+  },
+  "all_existing_labels_retained": true
+}

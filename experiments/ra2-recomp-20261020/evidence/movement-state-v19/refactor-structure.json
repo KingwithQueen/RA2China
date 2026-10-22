@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "two_run_local_rewrite": 1,
+  "reverse_anchor_search": 1,
+  "collision_segment_rewrite": 1,
+  "search_completion_tails": 16,
+  "early_return_tails": 16,
+  "empty_root_cleanup_tails": 16,
+  "internal_tail_labels_preserved": true,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "primary_427370_flow_readable": true,
+  "advance_interpolation_entries": 10,
+  "prepare_shared_success_entries": 2,
+  "cell_lookup_services": 3,
+  "threat_read_service": 1,
+  "owner_passage_classifier_retained": true,
+  "advance_sampling_entries": [
+    3,
+    9,
+    10
+  ],
+  "prepare_exit_entries": [
+    10,
+    6,
+    8,
+    4
+  ],
+  "object_and_height_services": 6,
+  "whole_search_readable": false
+}

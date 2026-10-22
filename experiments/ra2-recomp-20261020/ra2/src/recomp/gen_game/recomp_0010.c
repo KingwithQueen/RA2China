@@ -1,3 +1,4 @@
+#include "ground_dispatch_bridge.h"
 #include "ground_services_bridge.h"
 #include "ground_continuation_bridge.h"
 #include "ground_advance_bridge.h"
@@ -34857,6 +34858,12 @@ L_004A15E4:
 L_004A15EA:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A15EA: ret 4 */
 L_004A15ED:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_0=ra2_ground_sampling_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_0==0x4A22F9) goto L_004A22F9;
+    if (sampling_resume_0==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     _flag_a = (uint32_t)((edi | 0xFFFFFFFFu)); _flag_b = (uint32_t)((edi | 0xFFFFFFFFu));
     edi = edi | 0xFFFFFFFFu; /* 0x004A15ED: or edi, 0xffffffff */
     _cf = 0;
@@ -36592,6 +36599,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -36610,6 +36622,11 @@ L_004A1F9B:
     RECOMP_BACKEDGE();
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -40120,6 +40137,12 @@ L_004A15E4:
 L_004A15EA:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A15EA: ret 4 */
 L_004A15ED:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_0=ra2_ground_sampling_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_0==0x4A22F9) goto L_004A22F9;
+    if (sampling_resume_0==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     _flag_a = (uint32_t)((edi | 0xFFFFFFFFu)); _flag_b = (uint32_t)((edi | 0xFFFFFFFFu));
     edi = edi | 0xFFFFFFFFu; /* 0x004A15ED: or edi, 0xffffffff */
     _cf = 0;
@@ -41855,6 +41878,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -41873,6 +41901,11 @@ L_004A1F9B:
     RECOMP_BACKEDGE();
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -45087,6 +45120,12 @@ L_004A15E4:
 L_004A15EA:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A15EA: ret 4 */
 L_004A15ED:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_0=ra2_ground_sampling_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_0==0x4A22F9) goto L_004A22F9;
+    if (sampling_resume_0==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     _flag_a = (uint32_t)((edi | 0xFFFFFFFFu)); _flag_b = (uint32_t)((edi | 0xFFFFFFFFu));
     edi = edi | 0xFFFFFFFFu; /* 0x004A15ED: or edi, 0xffffffff */
     _cf = 0;
@@ -46822,6 +46861,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -46840,6 +46884,11 @@ L_004A1F9B:
     RECOMP_BACKEDGE();
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -51255,6 +51304,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -51273,6 +51327,11 @@ L_004A1F9B:
     RECOMP_BACKEDGE();
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -55421,6 +55480,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -55439,6 +55503,11 @@ L_004A1F9B:
     RECOMP_BACKEDGE();
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -59323,6 +59392,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -59340,6 +59414,11 @@ L_004A1F98:
 L_004A1F9B:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -61840,6 +61919,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -61857,6 +61941,11 @@ L_004A1F98:
 L_004A1F9B:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -64015,6 +64104,11 @@ L_004A1F88:
     RECOMP_CALL(sub_00476920); /* 0x004A1F88: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
@@ -64032,6 +64126,11 @@ L_004A1F98:
 L_004A1F9B:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_G, _cf)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
 L_004A1FA5:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -65260,6 +65359,11 @@ void sub_004A1F8D(void) {
     RECOMP_ENTER(0x004A1F8Du);
 
 L_004A1F8D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_1=ra2_ground_sampling_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_1==0x4A166A) goto L_004A166A;
+    goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -65272,6 +65376,11 @@ L_004A1F8D:
     MEM32(ebp + 0x5C) = ecx; /* 0x004A1F98: mov dword ptr [ebp + 0x5c], ecx */
     if (CMP_G(_flag_a, _flag_b)) goto L_004A166A; /* 0x004A1F9B: jg 0x4a166a */
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     edi = 0; /* 0x004A1FA5: xor edi, edi */
@@ -65351,6 +65460,8 @@ L_004A2347:
     esi = MEM32(eax); /* 0x004A2375: mov esi, dword ptr [eax] */
     ebx = MEM32(eax + 0x4); /* 0x004A2377: mov ebx, dword ptr [eax + 4] */
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
+L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
     ecx = esp + 0x8C; /* 0x004A2385: lea ecx, [esp + 0x8c] */
@@ -65700,6 +65811,11 @@ void sub_004A1FA1(void) {
     RECOMP_ENTER(0x004A1FA1u);
 
 L_004A1FA1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t sampling_resume_2=ra2_ground_sampling_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (sampling_resume_2==0x4A263A) goto L_004A263A;
+    goto L_004A237D;
     eax = MEM32(esp + 0x3C); /* 0x004A1FA1: mov eax, dword ptr [esp + 0x3c] */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     edi = 0; /* 0x004A1FA5: xor edi, edi */
@@ -65779,6 +65895,8 @@ L_004A2347:
     esi = MEM32(eax); /* 0x004A2375: mov esi, dword ptr [eax] */
     ebx = MEM32(eax + 0x4); /* 0x004A2377: mov ebx, dword ptr [eax + 4] */
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
+L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
     ecx = esp + 0x8C; /* 0x004A2385: lea ecx, [esp + 0x8c] */
@@ -70766,6 +70884,7 @@ L_004A39CA:
     PUSH32(esp, eax); /* 0x004A3A04: push eax */
     RECOMP_CALL(sub_004C3000); /* 0x004A3A05: call 0x4c3000 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3A0A: mov ecx, dword ptr [ebp + 0xc] */
     /* test ecx, ecx */ /* 0x004A3A0D: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -70789,6 +70908,7 @@ L_004A3A11:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A21: ret 0xc */
 L_004A3A24:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* test LO8(eax), LO8(eax) */ /* 0x004A3A24: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
     _cf = 0;
@@ -70813,6 +70933,7 @@ L_004A3A38:
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
 L_004A3A44:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -70827,6 +70948,7 @@ L_004A3A44:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A4D: ret 0xc */
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -71115,6 +71237,7 @@ L_004A3C5D:
     RECOMP_BACKEDGE();
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -72868,6 +72991,7 @@ L_004A2F6E:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A2F77: ret 0xc */
 L_004A3A44:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -74224,6 +74348,7 @@ L_004A39CA:
     PUSH32(esp, eax); /* 0x004A3A04: push eax */
     RECOMP_CALL(sub_004C3000); /* 0x004A3A05: call 0x4c3000 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3A0A: mov ecx, dword ptr [ebp + 0xc] */
     /* test ecx, ecx */ /* 0x004A3A0D: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -74247,6 +74372,7 @@ L_004A3A11:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A21: ret 0xc */
 L_004A3A24:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* test LO8(eax), LO8(eax) */ /* 0x004A3A24: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
     _cf = 0;
@@ -74271,6 +74397,7 @@ L_004A3A38:
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
 L_004A3A44:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -74285,6 +74412,7 @@ L_004A3A44:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A4D: ret 0xc */
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -74571,6 +74699,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -76311,6 +76440,7 @@ L_004A39CA:
     PUSH32(esp, eax); /* 0x004A3A04: push eax */
     RECOMP_CALL(sub_004C3000); /* 0x004A3A05: call 0x4c3000 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3A0A: mov ecx, dword ptr [ebp + 0xc] */
     /* test ecx, ecx */ /* 0x004A3A0D: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -76334,6 +76464,7 @@ L_004A3A11:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A21: ret 0xc */
 L_004A3A24:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* test LO8(eax), LO8(eax) */ /* 0x004A3A24: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
     _cf = 0;
@@ -76370,6 +76501,7 @@ L_004A3A35:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A4D: ret 0xc */
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -76656,6 +76788,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -76899,6 +77032,7 @@ L_004A39CA:
     PUSH32(esp, eax); /* 0x004A3A04: push eax */
     RECOMP_CALL(sub_004C3000); /* 0x004A3A05: call 0x4c3000 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3A0A: mov ecx, dword ptr [ebp + 0xc] */
     /* test ecx, ecx */ /* 0x004A3A0D: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -76922,6 +77056,7 @@ L_004A3A11:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A21: ret 0xc */
 L_004A3A24:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* test LO8(eax), LO8(eax) */ /* 0x004A3A24: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
     _cf = 0;
@@ -76958,6 +77093,7 @@ L_004A3A35:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A4D: ret 0xc */
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -77244,6 +77380,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -77342,6 +77479,7 @@ L_004A39CA:
     PUSH32(esp, eax); /* 0x004A3A04: push eax */
     RECOMP_CALL(sub_004C3000); /* 0x004A3A05: call 0x4c3000 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3A0A: mov ecx, dword ptr [ebp + 0xc] */
     /* test ecx, ecx */ /* 0x004A3A0D: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -77365,6 +77503,7 @@ L_004A3A11:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A21: ret 0xc */
 L_004A3A24:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     /* test LO8(eax), LO8(eax) */ /* 0x004A3A24: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
     _cf = 0;
@@ -77401,6 +77540,7 @@ L_004A3A35:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3A4D: ret 0xc */
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -77478,6 +77618,7 @@ void sub_004A3A44(void) {
     RECOMP_ENTER(0x004A3A44u);
 
 L_004A3A44:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -77508,6 +77649,7 @@ void sub_004A3A50(void) {
     RECOMP_ENTER(0x004A3A50u);
 
 L_004A3A50:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(0x839848); /* 0x004A3A50: mov ecx, dword ptr [0x839848] */
     esi = MEM32(0xA40D2C); /* 0x004A3A56: mov esi, dword ptr [0xa40d2c] */
     fp_push(*(double*)ADDR(ecx + 0x13C8)); /* 0x004A3A5C: fld qword ptr [ecx + 0x13c8] */
@@ -77810,6 +77952,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -77948,6 +78091,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -78064,6 +78208,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */
@@ -78180,6 +78325,7 @@ L_004A3C5D:
     MEM32(ebx + 0x8) = eax; /* 0x004A3C6D: mov dword ptr [ebx + 8], eax */
     goto L_004A322A; /* 0x004A3C70: jmp 0x4a322a */
 L_004A3C75:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A3C75: mov ecx, dword ptr [ebp + 0xc] */
     edi = POP32_VAL(esp); /* 0x004A3C78: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3C79: pop esi */

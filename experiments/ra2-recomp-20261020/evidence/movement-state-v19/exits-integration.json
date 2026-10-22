@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "part": "exits",
+  "entries": {
+    "after_rebuild": 5,
+    "004A3A24": 5,
+    "004A3A50": 6,
+    "004A3C75": 8,
+    "004A3A44": 4
+  },
+  "all_existing_labels_retained": true
+}
