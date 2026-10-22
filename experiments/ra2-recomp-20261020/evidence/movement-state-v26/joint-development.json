@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "production_integrated_after_native_pass": true,
+  "correction": "Native 70323E..703331 comparison showed that base Foot classification reloads direction from frame+0x80 after callbacks; corrected before production integration.",
+  "native_joint_identity": "experiments\\ra2-recomp-20261020\\evidence\\movement-state-v26\\native-joint-identity.json",
+  "new_cases": 262144,
+  "unresolved_native_difference": false
+}

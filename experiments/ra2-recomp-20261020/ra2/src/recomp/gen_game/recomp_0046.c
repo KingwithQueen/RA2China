@@ -1,3 +1,4 @@
+#include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
@@ -67042,6 +67043,7 @@ L_0070322F:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x0070323B: ret 0x14 */
 L_0070323E:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t entry_resume=ra2_ground_passage_entry_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(!entry_resume) return; goto L_00703331;
     esi = MEM32(esp + 0x88); /* 0x0070323E: mov esi, dword ptr [esp + 0x88] */
     eax = MEM32(ebp); /* 0x00703245: mov eax, dword ptr [ebp] */
     ecx = esp + 0x11; /* 0x00703248: lea ecx, [esp + 0x11] */

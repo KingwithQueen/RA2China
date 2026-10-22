@@ -272,3 +272,6 @@ set_source_files_properties(src/gameplay/ground_tube_progress.c src/gameplay/gro
 
 target_sources(ra2 PRIVATE src/gameplay/ground_tube_travel.c src/gameplay/ground_template_next.c src/gameplay/ground_passage_neighbor.c src/runtime/ground_travel_bridge.c)
 set_source_files_properties(src/gameplay/ground_tube_travel.c src/gameplay/ground_template_next.c src/gameplay/ground_passage_neighbor.c src/runtime/ground_travel_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_template_entry.c src/gameplay/ground_passage_entry.c src/gameplay/ground_return_plan.c src/runtime/ground_joint_bridge.c)
+set_source_files_properties(src/gameplay/ground_template_entry.c src/gameplay/ground_passage_entry.c src/gameplay/ground_return_plan.c src/runtime/ground_joint_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

@@ -1,0 +1,11 @@
+单位移动第二十五批正式验收交接（2026-10-22）
+正式代次25 / 验证轮次26：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v26\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：6f539c31d0029d807673022e595a6300caad6b2a1e5291be55934e49a2dd6bab
+本批：ground_template_entry的Advance样本和Prepare通行准备；ground_passage_entry对象入口；ground_return_plan共享返回，适配ground_joint_bridge。4A17D5六处、4A3486两处、70323E入口；落位/失败和Prepare完成返回复用。
+三部分各6场景3406帧，全部279项输入及程序独立回退；最终35场景19505帧，另预算901、七个隧道观察3707、四个内部观察4054帧；89组检查，本批262144例。
+新增双向非直线隧道含六段斜向，实际偏离直线并到达原端点。内部观察六点全部直接命中，包含sample>0接续；正式/观察、原版/C完整状态及有序记录一致。
+报告：D:\Program\红色警戒2\docs\单位移动第二十五批-内部模板与通行入口及共享返回-20261022.txt
+baseline、parts/template-verified、passage-verified、returns-verified保留；final-source/source-manifest及final-check绑定168个C源、279项输入，空操作刷新0。
+默认预算27..37帧10..0、38帧停止，是正常服务构造的真实AI/敌车；未经干预随机频率和4C3895独立挂钩仍未测。完整模块和全游戏等价未完成，37个保护保留。
+下一步其余模板/对象链与共享出口，补弯曲高差、弯曲出口占用和未覆盖重叠入口。保留全部旧基线/回退。本地提交，不推送。父提交21dcfd4。

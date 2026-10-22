@@ -1,3 +1,4 @@
+#include "ground_joint_bridge.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,12 +34,9 @@ static uint32_t call(uint32_t address, uint32_t object, const uint32_t *args, un
 }
 static uint32_t method(uint32_t object, uint32_t slot, const uint32_t *args, unsigned count)
 { return call(MEM32(MEM32(object) + slot), object, args, count); }
-static void return_frame(uint32_t f, uint32_t result, int prepare)
-{
-    g_eax = result; g_edi = MEM32(f); g_esi = MEM32(f + 4); g_ebp = MEM32(f + 8); g_ebx = MEM32(f + 12);
-    g_flag_k = FK_ADD; g_flag_a = f + 16; g_flag_b = prepare ? 0x4C : 0xE4;
-    g_flag_cf = f + (prepare ? 0x5C : 0xF4) < f + 16; g_esp = f + (prepare ? 0x6C : 0xFC);
-}
+static void return_frame(uint32_t f,uint32_t result,int prepare)
+{ ra2_ground_return_frame(f,prepare?RA2_FRAME_PREPARE:RA2_FRAME_ADVANCE,result); }
+
 static int valid(Ra2WorldPoint a, Ra2WorldPoint b)
 { return a.x != b.x || a.y != b.y || a.z != b.z; }
 static void clear_at(RemainderContext *c, uint32_t a, int force)

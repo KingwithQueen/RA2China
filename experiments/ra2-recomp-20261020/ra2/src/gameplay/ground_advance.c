@@ -1,10 +1,12 @@
+#include "ground_template_entry.h"
 #include <string.h>
 #include "ground_advance.h"
 
 static Ra2AdvanceCell cell_of(Ra2WorldPoint position)
 {
     /* 原版先向零取整，再保留低 16 位，负坐标不能改成向下取整。 */
-    uint16_t x = (uint16_t)(position.x / 256), y = (uint16_t)(position.y / 256);
+    uint32_t packed = ra2_ground_sample_cell(position.x,position.y);
+    uint16_t x = (uint16_t)packed, y = (uint16_t)(packed >> 16);
     Ra2AdvanceCell cell;
     memcpy(&cell.x, &x, sizeof(x)); memcpy(&cell.y, &y, sizeof(y));
     return cell;

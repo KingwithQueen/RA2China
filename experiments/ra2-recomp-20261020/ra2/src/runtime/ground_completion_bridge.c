@@ -1,3 +1,4 @@
+#include "ground_joint_bridge.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -82,9 +83,7 @@ uint32_t ra2_ground_prepare_finish_bridge(unsigned entry)
         stop, clear_path, start_retry, finish_timer, prepare_again };
     g_esp = c.frame - 0x100;
     uint32_t result = ra2_ground_prepare_finish((Ra2PrepareFinishEntry)entry, MEM8(c.frame + 0x64) != 0, &s);
-    uint32_t f = c.frame;
-    g_eax = result; g_edi = MEM32(f); g_esi = MEM32(f + 4); g_ebp = MEM32(f + 8); g_ebx = MEM32(f + 12);
-    g_esp = f + 0x6C; g_flag_k = FK_ADD; g_flag_a = f + 16; g_flag_b = 0x4C; g_flag_cf = f + 0x5C < f + 16;
+    ra2_ground_return_frame(c.frame,RA2_FRAME_PREPARE,result);
     return 0;
 }
 

@@ -1,3 +1,4 @@
+#include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
 #include "ground_tube_state_bridge.h"
@@ -35234,6 +35235,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -40552,6 +40554,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -45574,6 +45577,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -50045,6 +50049,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -54249,6 +54254,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -58184,6 +58190,7 @@ L_004A17D0:
 L_004A17D2:
     edi = MEM32(eax + 0x4); /* 0x004A17D2: mov edi, dword ptr [eax + 4] */
 L_004A17D5:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A17FE;
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x004A17D5: xor eax, eax */
     _cf = 0;
@@ -70378,6 +70385,7 @@ L_004A3466:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3483: ret 0xc */
 L_004A3486:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A3502;
     eax = MEM32(esp + 0x38); /* 0x004A3486: mov eax, dword ptr [esp + 0x38] */
     ecx = esp + 0x14; /* 0x004A348A: lea ecx, [esp + 0x14] */
     edx = ((int32_t)eax < 0) ? 0xFFFFFFFFu : 0; /* 0x004A348E: cdq  */
@@ -70436,6 +70444,7 @@ L_004A3486:
     edx = MEM32(ecx); /* 0x004A34FA: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x11C)); /* 0x004A34FC: call dword ptr [edx + 0x11c] */
     RECOMP_FLAGS_IN();
+L_004A3502:
     /* cmp MEM32(esp + 0x18), 7 */ /* 0x004A3502: cmp dword ptr [esp + 0x18], 7 */
     _flag_a = (uint32_t)(MEM32(esp + 0x18)); _flag_b = (uint32_t)(7);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -73895,6 +73904,7 @@ L_004A3466:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3483: ret 0xc */
 L_004A3486:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_entry_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A3502;
     eax = MEM32(esp + 0x38); /* 0x004A3486: mov eax, dword ptr [esp + 0x38] */
     ecx = esp + 0x14; /* 0x004A348A: lea ecx, [esp + 0x14] */
     edx = ((int32_t)eax < 0) ? 0xFFFFFFFFu : 0; /* 0x004A348E: cdq  */
@@ -73953,6 +73963,7 @@ L_004A3486:
     edx = MEM32(ecx); /* 0x004A34FA: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x11C)); /* 0x004A34FC: call dword ptr [edx + 0x11c] */
     RECOMP_FLAGS_IN();
+L_004A3502:
     /* cmp MEM32(esp + 0x18), 7 */ /* 0x004A3502: cmp dword ptr [esp + 0x18], 7 */
     _flag_a = (uint32_t)(MEM32(esp + 0x18)); _flag_b = (uint32_t)(7);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);

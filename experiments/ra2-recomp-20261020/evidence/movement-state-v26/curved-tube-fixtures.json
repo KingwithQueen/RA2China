@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "forward": [
+    2,
+    1,
+    1,
+    2,
+    3,
+    3,
+    2,
+    1,
+    3,
+    2
+  ],
+  "reverse": [
+    6,
+    7,
+    5,
+    6,
+    7,
+    7,
+    6,
+    5,
+    5,
+    6
+  ],
+  "endpoints_unchanged": true,
+  "diagonal_segments": 6,
+  "raw_runtime_writes": false,
+  "fixtures": [
+    {
+      "path": "evidence/movement-state-v26/fixtures/tube-curved-east.MAP",
+      "sha256": "4f0a40d15da275b4a4ef22864e6f32e9fd2aa359220177077fec9c06880f76b7",
+      "source_sha256": "f532c5a367a4b902f6bb731867d8f8f231966784c25cc5c0c84260099b32cb26"
+    },
+    {
+      "path": "evidence/movement-state-v26/fixtures/tube-curved-west.MAP",
+      "sha256": "dbde577f12ec98bdc9fc245d574f0e765a960a43767a35c05fd5e3fae07d2807",
+      "source_sha256": "34c0052d7086cfab3eca4f951b5267e2a8e8346f463a1474120ef7bbc74a1a85"
+    }
+  ],
+  "offset_initializer": "4916D0",
+  "route_waypoints": [
+    [
+      68,
+      114
+    ],
+    [
+      69,
+      114
+    ],
+    [
+      70,
+      113
+    ],
+    [
+      71,
+      112
+    ],
+    [
+      72,
+      112
+    ],
+    [
+      73,
+      113
+    ],
+    [
+      74,
+      114
+    ],
+    [
+      75,
+      114
+    ],
+    [
+      76,
+      113
+    ],
+    [
+      77,
+      114
+    ],
+    [
+      78,
+      114
+    ]
+  ]
+}

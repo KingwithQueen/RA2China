@@ -1,3 +1,4 @@
+#include "ground_template_entry.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -157,7 +158,7 @@ static Ra2WorldPoint transform_sample(void *opaque, Ra2PathSample *value, int pr
     MEM32(c->frame+0x30)=(uint32_t)value->direction;
     Ra2WorldPoint result=read_point(engine_call(0x4A4740,c->drive,args,3));
     value->direction=(int32_t)MEM32(c->frame+0x30);
-    uint32_t packed=(uint16_t)(result.x/256)|((uint32_t)(uint16_t)(result.y/256)<<16);
+    uint32_t packed=ra2_ground_sample_cell(result.x,result.y);
     MEM32(c->frame+(previous ? 0x98 : 0x68))=packed;
     return result;
 }

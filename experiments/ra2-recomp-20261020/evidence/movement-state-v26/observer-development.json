@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "old_observer_executable_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+  "final_observer_executable_sha256": "7fbb0918b8e55bef867e6c1bc790c36c0de876093f0c60a27b4837e66b2b5579",
+  "production_executable_sha256": "6f539c31d0029d807673022e595a6300caad6b2a1e5291be55934e49a2dd6bab",
+  "observer_only_failures": [
+    {
+      "tag": "w-tube-hook-east",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "180a34c47fd126a3a6f52ecfaa099f78c04f6b9130875e12f636faf5141128a4",
+      "equal_state_frames": 501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 868,
+        "generated_c": 846
+      }
+    },
+    {
+      "tag": "w-tube-hook-west",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "887339f8bbdc2021b77a2855150176c9bea24999db7636a815e74d2fdcf5c6de",
+      "equal_state_frames": 501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 868,
+        "generated_c": 846
+      }
+    },
+    {
+      "tag": "w-tube-hook-blocked",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "4ffc6c1f2641c9a644b274294e187257f7164435c53be63bc19dc5ff83eab3f0",
+      "equal_state_frames": 501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 1495,
+        "generated_c": 1473
+      }
+    },
+    {
+      "tag": "w-tube-hook-uphill",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "43854b75250ee1e427d7bfe737e14da0050fe98bd3bbfdf4f76586776098174a",
+      "equal_state_frames": 501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 874,
+        "generated_c": 849
+      }
+    },
+    {
+      "tag": "w-tube-hook-downhill",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "e54fcb802b310563bc24eec47a934a6a05d72e3a8c197038b08da738d001c91f",
+      "equal_state_frames": 501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 901,
+        "generated_c": 876
+      }
+    },
+    {
+      "tag": "w-tube-hook-curved-east",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "807ee1cc9a29e996b1f51d6d66b8124400fff561d290fd47752ad630e0a790ae",
+      "equal_state_frames": 601,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 1009,
+        "generated_c": 987
+      }
+    },
+    {
+      "tag": "w-tube-hook-curved-west",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "d321cae19e87eff537bb731a0f341c2fb3db3e3610f97f5796cb6dd90fecc26c",
+      "equal_state_frames": 601,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 988,
+        "generated_c": 966
+      }
+    },
+    {
+      "tag": "w-internal-default",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "4b213fc53e2633c7a029b34cdaeff10347b6681b96192dc9def0907aaedb1b79",
+      "equal_state_frames": 901,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 3167,
+        "generated_c": 3114
+      }
+    },
+    {
+      "tag": "w-internal-tc1",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "3a74db4e8888b54f21d24897d87cc9c9466edd932869dbebf8a3c9095213fbf7",
+      "equal_state_frames": 401,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 621,
+        "generated_c": 416
+      }
+    },
+    {
+      "tag": "w-internal-long",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "b191f39c4a98eed9ad3ea2f26911ea6cac99226a8df49fa49b3e0d0453505cf7",
+      "equal_state_frames": 1501,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 3569,
+        "generated_c": 3401
+      }
+    },
+    {
+      "tag": "w-internal-repeat-failure",
+      "exe_sha256": "9a16ae3fe6293b432ee7a470206ca2ddbafd95cccd1859dc46c7c8f3403a3a98",
+      "comparison_sha256": "aae0983e52439cee129c2aded8be08dcd9f3e4f9f76854413c2c79973aa0b8c4",
+      "equal_state_frames": 1251,
+      "command_difference": {
+        "path": "commands.length",
+        "original": 9714,
+        "generated_c": 6770
+      }
+    }
+  ],
+  "observer_correction": "Added matching observations at existing high-level check_placement and segment_classify_cell services, which bypass overlapping generated entry fragments. No movement code, state recorder or public comparator changes for this correction.",
+  "startup_failures": [
+    {
+      "tag": "z-tube-production-curved-east",
+      "comparison_sha256": "92881c6a842ee83dbc50856bce71e691ad1b8d8855be4f7829a229c73076a361",
+      "simulation_comparison_present": false,
+      "generated_game_directory_characters": 128,
+      "accepted_tag": "z-ce"
+    },
+    {
+      "tag": "z-tube-production-curved-west",
+      "comparison_sha256": "b5a124e252b5c2f5a9023f0924efddac6961db03814127c4608e48ee7f54ccd9",
+      "simulation_comparison_present": false,
+      "generated_game_directory_characters": 128,
+      "accepted_tag": "z-cw"
+    },
+    {
+      "tag": "z2-tube-production-curved-east",
+      "comparison_sha256": "92881c6a842ee83dbc50856bce71e691ad1b8d8855be4f7829a229c73076a361",
+      "simulation_comparison_present": false,
+      "generated_game_directory_characters": 129,
+      "accepted_tag": "z-ce"
+    },
+    {
+      "tag": "z2-tube-production-curved-west",
+      "comparison_sha256": "b5a124e252b5c2f5a9023f0924efddac6961db03814127c4608e48ee7f54ccd9",
+      "simulation_comparison_present": false,
+      "generated_game_directory_characters": 129,
+      "accepted_tag": "z-cw"
+    }
+  ],
+  "startup_resolution": "The identical production executable and map passed with shorter test labels. Long-label generated game directories had 128/129 characters, while original mode directories were three characters shorter. The specific internal path buffer has not been independently isolated; no claim of fixing general long-path support.",
+  "all_raw_runs_and_initial_program_retained": true,
+  "acceptance_evidence": [
+    "connection-real-scenes.json",
+    "internal-real-scenes.json",
+    "strict-acceptance.json",
+    "budget-real-scenes.json"
+  ]
+}
