@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "scope": "Unchanged runtime inputs omitted by prior snapshot path selection; hashes match the pre-existing surface checkpoint content receipt. Old archives are not modified; all inputs are included in this final archive.",
+  "inputs": [
+    {
+      "path": "pcrecomp/runtime/recomp32/recomp_trace.c",
+      "sha256": "2f6305b061fa7706ff282c357b27d0af2d14b035ced273cb91500a23db50bf89"
+    },
+    {
+      "path": "pcrecomp/runtime/recomp32/recomp_types.h",
+      "sha256": "cd2f536e3fd1ccaa6c566e54157555a1b9f7990fbb2b7887d1ffeba431a0e8b9"
+    },
+    {
+      "path": "pcrecomp/runtime/recomp32/crash_report.h",
+      "sha256": "2d4ec9ce50291605212c36d9e06e83a2cbe667a591eca8df9d04aa38abfb802e"
+    },
+    {
+      "path": "pcrecomp/runtime/recomp32/recomp_trace.h",
+      "sha256": "59ab96b00d79f572cbadb7ef41844a7651fc3d77ade05bed510201a4695916a2"
+    },
+    {
+      "path": "pcrecomp/runtime/recomp32/image_loader.c",
+      "sha256": "eeb51ea6b51def7df02dd69b55f28201071d36bd0cfde6dda113471b2374498c"
+    },
+    {
+      "path": "pcrecomp/runtime/recomp32/image_loader.h",
+      "sha256": "c041ddc4ed0e2be120b41d981afab93d7188d40eb220035c72187a63cb43475b"
+    },
+    {
+      "path": "pcrecomp/runtime/native32/native32.c",
+      "sha256": "3aa341a934ee3f77a3e2456f4efeacb70c367d33aa1085694d24c28882be19db"
+    }
+  ]
+}

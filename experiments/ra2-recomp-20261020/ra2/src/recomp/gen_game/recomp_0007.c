@@ -1,3 +1,4 @@
+#include "ground_tube_state_bridge.h"
 #include "ground_remainder_bridge.h"
 #include "ground_dispatch_bridge.h"
 /* Functions named by name_lift.py */
@@ -47443,46 +47444,9 @@ L_00479C7E:
  *   called from 7 places
  */
 void sub_00479CC0(void) {
-    int _fpu_cmp = 0;
-    uint32_t _cf = 0;
-    int _df = 1;
-    uint32_t _flag_k = FK_NONE;
-    uint32_t _flag_a = 0, _flag_b = 0;
-    uint32_t _itail_tgt = 0;
-    RECOMP_REGS_LOCALS
+    uint32_t _flag_k=FK_NONE,_flag_a=0,_flag_b=0,_cf=0;
     RECOMP_ENTER(0x00479CC0u);
-
-L_00479CC0:
-    SET_LO16(eax, MEM16(ecx + 0x116)); /* 0x00479CC0: mov ax, word ptr [ecx + 0x116] */
-    /* test LO16(eax), LO16(eax) */ /* 0x00479CC7: test ax, ax */
-    _flag_a = (uint32_t)(LO16(eax)) << 16; _flag_b = (uint32_t)(LO16(eax)) << 16;
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 16);
-    if (TEST_S(_flag_a, _flag_b)) goto L_00479CE8; /* 0x00479CCA: jl 0x479ce8 */
-L_00479CCC:
-    edx = MEM32(0x8661D8); /* 0x00479CCC: mov edx, dword ptr [0x8661d8] */
-    eax = (int32_t)(int16_t)LO16(eax); /* 0x00479CD2: movsx eax, ax */
-    /* cmp eax, edx */ /* 0x00479CD5: cmp eax, edx */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(edx);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_GE(_flag_a, _flag_b)) goto L_00479CE8; /* 0x00479CD7: jge 0x479ce8 */
-L_00479CD9:
-    /* cmp MEM32(ecx + 0xEC), 0xAu */ /* 0x00479CD9: cmp dword ptr [ecx + 0xec], 0xa */
-    _flag_a = (uint32_t)(MEM32(ecx + 0xEC)); _flag_b = (uint32_t)(0xAu);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_NE(_flag_a, _flag_b)) goto L_00479CE8; /* 0x00479CE0: jne 0x479ce8 */
-L_00479CE2:
-    eax = 1; /* 0x00479CE2: mov eax, 1 */
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00479CE7: ret  */
-L_00479CE8:
-    _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
-    eax = 0; /* 0x00479CE8: xor eax, eax */
-    _cf = 0;
-    _flag_k = FK_TEST;
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00479CEA: ret  */
-    RECOMP_REGS_OUT();
+    ra2_ground_surface_class_bridge(0);
 }
 
 /* sub_00479CF0 (0x00479CF0)
@@ -48260,170 +48224,18 @@ L_0047A244:
  *   called from 7 places
  */
 void sub_0047A270(void) {
-    int _fpu_cmp = 0;
-    uint32_t _cf = 0;
-    int _df = 1;
-    uint32_t _flag_k = FK_NONE;
-    uint32_t _flag_a = 0, _flag_b = 0;
-    uint32_t _itail_tgt = 0;
-    RECOMP_REGS_LOCALS
+    uint32_t _flag_k=FK_NONE,_flag_a=0,_flag_b=0,_cf=0;
     RECOMP_ENTER(0x0047A270u);
-
-L_0047A270:
-    eax = MEM32(ecx + 0x38); /* 0x0047A270: mov eax, dword ptr [ecx + 0x38] */
-    ecx = MEM32(0xA52580); /* 0x0047A273: mov ecx, dword ptr [0xa52580] */
-    /* cmp eax, ecx */ /* 0x0047A279: cmp eax, ecx */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(ecx);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_L(_flag_a, _flag_b)) goto L_0047A28A; /* 0x0047A27B: jl 0x47a28a */
-L_0047A27D:
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(0xEu);
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    ecx = ecx + 0xEu; /* 0x0047A27D: add ecx, 0xe */
-    _flag_k = FK_ADD;
-    /* cmp eax, ecx */ /* 0x0047A280: cmp eax, ecx */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(ecx);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_GE(_flag_a, _flag_b)) goto L_0047A28A; /* 0x0047A282: jge 0x47a28a */
-L_0047A284:
-    eax = 1; /* 0x0047A284: mov eax, 1 */
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x0047A289: ret  */
-L_0047A28A:
-    _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
-    eax = 0; /* 0x0047A28A: xor eax, eax */
-    _cf = 0;
-    _flag_k = FK_TEST;
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x0047A28C: ret  */
-    RECOMP_REGS_OUT();
+    ra2_ground_surface_class_bridge(1);
 }
 
 /* sub_0047A290 (0x0047A290)
  *   called from 1 place
  */
 void sub_0047A290(void) {
-    int _fpu_cmp = 0;
-    uint32_t _cf = 0;
-    int _df = 1;
-    uint32_t _flag_k = FK_NONE;
-    uint32_t _flag_a = 0, _flag_b = 0;
-    uint32_t _itail_tgt = 0;
-    RECOMP_REGS_LOCALS
+    uint32_t _flag_k=FK_NONE,_flag_a=0,_flag_b=0,_cf=0;
     RECOMP_ENTER(0x0047A290u);
-
-L_0047A290:
-    _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0x18u);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    esp = esp - 0x18u; /* 0x0047A290: sub esp, 0x18 */
-    _flag_k = FK_CMP;
-    PUSH32(esp, ebp); /* 0x0047A293: push ebp */
-    PUSH32(esp, esi); /* 0x0047A294: push esi */
-    PUSH32(esp, edi); /* 0x0047A295: push edi */
-    edi = ecx; /* 0x0047A296: mov edi, ecx */
-    eax = 0x80u; /* 0x0047A298: mov eax, 0x80 */
-    ecx = eax; /* 0x0047A29D: mov ecx, eax */
-    MEM32(esp + 0xC) = eax; /* 0x0047A29F: mov dword ptr [esp + 0xc], eax */
-    eax = esp + 0xC; /* 0x0047A2A3: lea eax, [esp + 0xc] */
-    MEM32(esp + 0x10) = ecx; /* 0x0047A2A7: mov dword ptr [esp + 0x10], ecx */
-    PUSH32(esp, eax); /* 0x0047A2AB: push eax */
-    ecx = edi; /* 0x0047A2AC: mov ecx, edi */
-    RECOMP_CALL(sub_004706C0); /* 0x0047A2AE: call 0x4706c0 */
-    RECOMP_FLAGS_IN();
-    ebp = eax; /* 0x0047A2B3: mov ebp, eax */
-    SET_LO8(eax, MEM8(0xA40958)); /* 0x0047A2B5: mov al, byte ptr [0xa40958] */
-    /* test LO8(eax), LO8(eax) */ /* 0x0047A2BA: test al, al */
-    _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 24);
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0047A2DB; /* 0x0047A2BC: je 0x47a2db */
-L_0047A2BE:
-    esi = MEM32(edi + 0xE4); /* 0x0047A2BE: mov esi, dword ptr [edi + 0xe4] */
-    /* test esi, esi */ /* 0x0047A2C4: test esi, esi */
-    _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0047A2DB; /* 0x0047A2C6: je 0x47a2db */
-L_0047A2C8:
-    edx = MEM32(esi); /* 0x0047A2C8: mov edx, dword ptr [esi] */
-    ecx = esi; /* 0x0047A2CA: mov ecx, esi */
-    RECOMP_ICALL(MEM32(edx + 0x2C)); /* 0x0047A2CC: call dword ptr [edx + 0x2c] */
-    RECOMP_FLAGS_IN();
-    /* cmp eax, 6 */ /* 0x0047A2CF: cmp eax, 6 */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(6);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_EQ(_flag_a, _flag_b)) goto L_0047A30B; /* 0x0047A2D2: je 0x47a30b */
-L_0047A2D4:
-    esi = MEM32(esi + 0x30); /* 0x0047A2D4: mov esi, dword ptr [esi + 0x30] */
-    /* test esi, esi */ /* 0x0047A2D7: test esi, esi */
-    _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    RECOMP_BACKEDGE();
-    if (TEST_NZ(_flag_a, _flag_b)) goto L_0047A2C8; /* 0x0047A2D9: jne 0x47a2c8 */
-L_0047A2DB:
-    PUSH32(esp, 0); /* 0x0047A2DB: push 0 */
-    eax = esp + 0x10; /* 0x0047A2DD: lea eax, [esp + 0x10] */
-    PUSH32(esp, 0); /* 0x0047A2E1: push 0 */
-    PUSH32(esp, eax); /* 0x0047A2E3: push eax */
-    ecx = edi; /* 0x0047A2E4: mov ecx, edi */
-    MEM32(esp + 0x18) = 0; /* 0x0047A2E6: mov dword ptr [esp + 0x18], 0 */
-    MEM32(esp + 0x1C) = 0; /* 0x0047A2EE: mov dword ptr [esp + 0x1c], 0 */
-    RECOMP_CALL(sub_00471660); /* 0x0047A2F6: call 0x471660 */
-    RECOMP_FLAGS_IN();
-    /* test eax, eax */ /* 0x0047A2FB: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0047A302; /* 0x0047A2FD: je 0x47a302 */
-L_0047A2FF:
-    _flag_a = (uint32_t)(ebp); _flag_b = (uint32_t)(0x55u);
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    ebp = ebp + 0x55u; /* 0x0047A2FF: add ebp, 0x55 */
-    _flag_k = FK_ADD;
-L_0047A302:
-    edi = POP32_VAL(esp); /* 0x0047A302: pop edi */
-    eax = ebp; /* 0x0047A303: mov eax, ebp */
-    esi = POP32_VAL(esp); /* 0x0047A305: pop esi */
-    ebp = POP32_VAL(esp); /* 0x0047A306: pop ebp */
-    _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0x18u);
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    esp = esp + 0x18u; /* 0x0047A307: add esp, 0x18 */
-    _flag_k = FK_ADD;
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x0047A30A: ret  */
-L_0047A30B:
-    /* test esi, esi */ /* 0x0047A30B: test esi, esi */
-    _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    RECOMP_BACKEDGE();
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0047A2DB; /* 0x0047A30D: je 0x47a2db */
-L_0047A30F:
-    ecx = MEM32(esi + 0x418); /* 0x0047A30F: mov ecx, dword ptr [esi + 0x418] */
-    edx = esp + 0x18; /* 0x0047A315: lea edx, [esp + 0x18] */
-    PUSH32(esp, edx); /* 0x0047A319: push edx */
-    eax = MEM32(ecx); /* 0x0047A31A: mov eax, dword ptr [ecx] */
-    RECOMP_ICALL(MEM32(eax + 0x7C)); /* 0x0047A31C: call dword ptr [eax + 0x7c] */
-    RECOMP_FLAGS_IN();
-    ecx = MEM32(eax); /* 0x0047A31F: mov ecx, dword ptr [eax] */
-    edi = POP32_VAL(esp); /* 0x0047A321: pop edi */
-    MEM32(esp + 0x8) = ecx; /* 0x0047A322: mov dword ptr [esp + 8], ecx */
-    esi = POP32_VAL(esp); /* 0x0047A326: pop esi */
-    edx = MEM32(eax + 0x4); /* 0x0047A327: mov edx, dword ptr [eax + 4] */
-    MEM32(esp + 0x8) = edx; /* 0x0047A32A: mov dword ptr [esp + 8], edx */
-    _flag_a = (uint32_t)(ebp); _flag_b = (uint32_t)(MEM32(eax + 0x8));
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    ebp = ebp + MEM32(eax + 0x8); /* 0x0047A32E: add ebp, dword ptr [eax + 8] */
-    _flag_k = FK_ADD;
-    eax = ebp; /* 0x0047A331: mov eax, ebp */
-    ebp = POP32_VAL(esp); /* 0x0047A333: pop ebp */
-    _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0x18u);
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    esp = esp + 0x18u; /* 0x0047A334: add esp, 0x18 */
-    _flag_k = FK_ADD;
-    RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x0047A337: ret  */
-    RECOMP_REGS_OUT();
+    ra2_ground_surface_class_bridge(2);
 }
 
 /* sub_0047A340 (0x0047A340)

@@ -1,3 +1,4 @@
+#include "ground_tube_state_bridge.h"
 #include "ground_internal_bridge.h"
 #include "ground_remainder_bridge.h"
 #include "ground_completion_bridge.h"
@@ -36620,6 +36621,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -37402,6 +37408,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -41924,6 +41935,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -42706,6 +42722,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -46932,6 +46953,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -47714,6 +47740,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -51389,6 +51420,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -52171,6 +52207,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -55579,6 +55620,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -56337,6 +56383,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -59503,6 +59554,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -59572,6 +59628,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -62037,6 +62098,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -62106,6 +62172,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -64229,6 +64300,11 @@ L_004A1F8D:
     goto L_004A1FA1;
     ecx = MEM32(ebp + 0x5C); /* 0x004A1F8D: mov ecx, dword ptr [ebp + 0x5c] */
 L_004A1F90:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_2=ra2_ground_internal_handoff_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_2==0x004A166A) goto L_004A166A;
+    goto L_004A1FA1;
     eax = MEM32(esp + 0x3C); /* 0x004A1F90: mov eax, dword ptr [esp + 0x3c] */
 L_004A1F94:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
@@ -64298,6 +64374,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
@@ -65544,6 +65625,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
@@ -65986,6 +66072,11 @@ L_004A230E:
     goto L_004A237D;
     eax = (int32_t)(int8_t)MEM8(eax); /* 0x004A230E: movsx eax, byte ptr [eax] */
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
@@ -67565,6 +67656,11 @@ void sub_004A2311(void) {
     RECOMP_ENTER(0x004A2311u);
 
 L_004A2311:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_1=ra2_ground_internal_handoff_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (handoff_resume_1==0x004A263A) goto L_004A263A;
+    goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
@@ -67611,6 +67707,8 @@ L_004A2347:
     esi = MEM32(eax); /* 0x004A2375: mov esi, dword ptr [eax] */
     ebx = MEM32(eax + 0x4); /* 0x004A2377: mov ebx, dword ptr [eax + 4] */
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
+L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
     ecx = esp + 0x8C; /* 0x004A2385: lea ecx, [esp + 0x8c] */
@@ -69907,6 +70005,10 @@ L_004A323F:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A3254: ret 0xc */
 L_004A3257:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t handoff_resume_0=ra2_ground_internal_handoff_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_004A32B4;
     eax = MEM32(esi + 0x140); /* 0x004A3257: mov eax, dword ptr [esi + 0x140] */
     /* test HI8(eax), 1 */ /* 0x004A325D: test ah, 1 */
     _flag_a = (uint32_t)(HI8(eax)) << 24; _flag_b = (uint32_t)(1) << 24;

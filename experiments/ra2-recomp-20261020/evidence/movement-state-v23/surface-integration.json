@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "entries": {
+    "sub_00479CC0": 1,
+    "sub_0047A270": 1,
+    "sub_0047A290": 1
+  },
+  "existing_tail_targets_preserved": true
+}

@@ -263,3 +263,6 @@ set_source_files_properties(src/gameplay/ground_sampling_shared.c src/gameplay/g
 
 target_sources(ra2 PRIVATE src/gameplay/ground_connection_numeric.c src/runtime/ground_connection_numeric_bridge.c)
 set_source_files_properties(src/gameplay/ground_connection_numeric.c src/runtime/ground_connection_numeric_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_tube_state.c src/gameplay/ground_handoff.c src/gameplay/ground_surface_class.c src/runtime/ground_tube_state_bridge.c)
+set_source_files_properties(src/gameplay/ground_tube_state.c src/gameplay/ground_handoff.c src/gameplay/ground_surface_class.c src/runtime/ground_tube_state_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

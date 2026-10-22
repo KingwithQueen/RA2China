@@ -1,3 +1,4 @@
+#include "ground_tube_state_bridge.h"
 #include "ground_connection_numeric_bridge.h"
 #include "ground_allied_bridge.h"
 #include "ground_objects_bridge.h"
@@ -24059,6 +24060,11 @@ L_006FAA30:
     PUSH32(esp, esi); /* 0x006FAA41: push esi */
     esi = ecx; /* 0x006FAA42: mov esi, ecx */
     PUSH32(esp, edi); /* 0x006FAA44: push edi */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t tube_resume_2=ra2_ground_tube_state_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (tube_resume_2==0x006FAE76) goto L_006FAE76;
+    goto L_006FAA66;
     eax = (int32_t)(int8_t)MEM8(esi + 0x574); /* 0x006FAA45: movsx eax, byte ptr [esi + 0x574] */
     ecx = (int32_t)(int8_t)MEM8(esi + 0x575); /* 0x006FAA4C: movsx ecx, byte ptr [esi + 0x575] */
     eax = MEM32(edx + eax * 4); /* 0x006FAA53: mov eax, dword ptr [edx + eax*4] */
@@ -24181,6 +24187,12 @@ L_006FAA66:
       if (_dv && !(_dv == -1 && _dividend == INT64_MIN)) { eax = (uint32_t)((int32_t)(_dividend / _dv)); edx = (uint32_t)((int32_t)(_dividend % _dv)); }
       else { eax = 0; edx = 0; } }
     MEM32(esp + 0x24) = eax; /* 0x006FAB66: mov dword ptr [esp + 0x24], eax */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t tube_resume_1=ra2_ground_tube_state_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (tube_resume_1==0x006FAE76) goto L_006FAE76;
+    if (tube_resume_1==0x006FABAA) goto L_006FABAA;
+    goto L_006FAD75;
     eax = MEM32(esp + 0x28); /* 0x006FAB6A: mov eax, dword ptr [esp + 0x28] */
     /* cmp eax, ecx */ /* 0x006FAB6E: cmp eax, ecx */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(ecx);
@@ -24539,6 +24551,7 @@ L_006FAE46:
     ebp = POP32_VAL(esp); /* 0x006FAE74: pop ebp */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x006FAE75: ret  */
 L_006FAE76:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_tube_state_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = esi + 0x88; /* 0x006FAE76: lea edi, [esi + 0x88] */
     edx = edi; /* 0x006FAE7C: mov edx, edi */
     eax = MEM32(edx); /* 0x006FAE7E: mov eax, dword ptr [edx] */
