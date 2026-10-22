@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "part": "landing",
+  "entries": {
+    "004A1388": 3,
+    "004A22F9": 4,
+    "004A263A": 13
+  },
+  "existing_tail_targets_preserved": true
+}

@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "scope": "native original fragments and production C bridges; real simulation gates recorded separately",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executable": {
+    "path": "evidence/movement-state-v21/remainder_probe.exe",
+    "sha256": "0864d53c0dfc3c4c435eeb4eec968d28ed84a386f09e7f1af2242c2f117a7df5"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v21/remainder_probe.c",
+      "sha256": "a368edf19e72355d64152ab2e3512e22b47c7b2dfe21efaf9fb9d57edffa6f2f"
+    },
+    {
+      "path": "evidence/movement-state-v21/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-remainder-probe-v21.ps1",
+      "sha256": "5900ff1defeda858d95ea6ee16ff97e184d93546f27a367a2ef7778110853e94"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_landing.c",
+      "sha256": "51b06ae9e75972cf51d2b5cfebbfd06716336bd901236f2f870825f737daa992"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_landing.h",
+      "sha256": "0c3c38b4ee5499e84342d1c6821652d7a58f8a916733ee74604b86f16f6a2aff"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_failure.c",
+      "sha256": "9477c5129bc29bf766c81c7088229e0cdddd406215b9cb68db1b3660de6d908f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_failure.h",
+      "sha256": "32d171ea0773be406dff4a5e8de6d5f648df6111ed110a6d7b97da491e9ea19b"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_slope.c",
+      "sha256": "36db1b29604bc2491d439ff76f3ad4a285547a7e37e2ee49906775517a4562ad"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_slope.h",
+      "sha256": "31922372d60b0499f7c71be35c1d098e30a7a6b01f11b585a4f41e7ab3f1c71d"
+    },
+    {
+      "path": "ra2/src/gameplay/unit_movement.c",
+      "sha256": "1065aa87eff9f7d922cda5697ee779d19bb9bfd472588950267e46eb2687a190"
+    },
+    {
+      "path": "ra2/src/gameplay/unit_movement.h",
+      "sha256": "b10b2b9e4511f55bdf3bef67f26648596c89c333c0b512dae55470012067abc7"
+    },
+    {
+      "path": "ra2/src/runtime/ground_remainder_bridge.c",
+      "sha256": "5117d26b239d30fd3f57e7f5e05b3298ba3744ca897023ece08088a6a8174218"
+    },
+    {
+      "path": "ra2/src/runtime/ground_remainder_bridge.h",
+      "sha256": "5ca4bc13df7031dad04d8dd6d0488f503d82f7220c4f9fb80c32b528606cec86"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    }
+  ],
+  "results": {
+    "advance-landing-probe": {
+      "passed": true,
+      "cases": 32768,
+      "phase": 0,
+      "ordered_callback_values": 68826,
+      "original_stack_cleanup_verified": true
+    },
+    "prepare-failure-tails-probe": {
+      "passed": true,
+      "cases": 32768,
+      "phase": 1,
+      "ordered_callback_values": 136273,
+      "original_stack_cleanup_verified": true
+    },
+    "slope-height-probe": {
+      "passed": true,
+      "cases": 131072,
+      "phase": 2,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "slope_precision_modes": 3,
+  "slope_rounding_modes": 4,
+  "slope_shapes": 20,
+  "partial_cache_flags_tested": 8,
+  "total_cases": 196608,
+  "callback_owner_replacement_tested": true
+}

@@ -254,3 +254,6 @@ set_source_files_properties(src/gameplay/ground_sampling.c src/gameplay/ground_p
 
 target_sources(ra2 PRIVATE src/gameplay/ground_completion.c src/gameplay/ground_passage.c src/runtime/ground_completion_bridge.c)
 set_source_files_properties(src/gameplay/ground_completion.c src/gameplay/ground_passage.c src/runtime/ground_completion_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_landing.c src/gameplay/ground_failure.c src/gameplay/ground_slope.c src/runtime/ground_remainder_bridge.c)
+set_source_files_properties(src/gameplay/ground_landing.c src/gameplay/ground_failure.c src/gameplay/ground_slope.c src/runtime/ground_remainder_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
