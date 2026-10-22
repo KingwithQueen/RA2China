@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "part": "cleanup",
+  "entries": {
+    "004A322E": 2,
+    "004A44B3": 10,
+    "004A4450": 7,
+    "004A4522": 9,
+    "004A4502": 14,
+    "004A44D1": 8,
+    "004A322A": 2,
+    "recursive_clear_path": 7
+  },
+  "all_existing_labels_retained": true
+}

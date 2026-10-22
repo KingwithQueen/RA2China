@@ -1,3 +1,13 @@
+第十九批当前状态（2026-10-22，优先于下文历史描述）
+
+到达收尾：ground_completion.c的ra2_ground_arrival_adjustment处理回绕距离/x87余量；ground_arrival.c处理落位、目标判定与任务停止。回调后必须重读drive.owner。
+目标清理与递归：ground_completion.h/.c的Ra2PrepareFinishEntry命名8种出口；分别清路段/驱动/路径、取消目标、停止或重启计时后递归。旧布局和调用顺序在ground_completion_bridge.c。
+基础通行：ground_passage.h/.c。ra2_ground_base_can_enter负责移动器委派；ra2_ground_classify_transition判断坡道、桥层及高度差，按需更新level/changing_layer。
+地形高度入口ra2_ground_height_at按完整世界坐标选格并调用坡面服务；4706C0坡面初始化/浮点核心仍待整理。
+28场景15798帧+默认预算901帧、66组回归，本批新增163840例。修改规则另建候选并重新逐帧比较。
+下一步Advance剩余碰撞/落位、Prepare其余失败收尾及坡面高度核心；完整游戏等价尚未完成。
+报告：D:\Program\红色警戒2\docs\单位移动第十九批-到达收尾与目标清理及基础通行高度服务-20261022.txt
+
 第十八批当前状态（2026-10-22，优先于下文历史描述）
 
 余量与选表：ground_sampling.h/.c。余量>7继续整步，等于7走尾部；0号的(0,0)不是结束。

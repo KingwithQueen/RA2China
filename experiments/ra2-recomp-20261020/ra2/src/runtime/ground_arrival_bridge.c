@@ -79,6 +79,7 @@ static uint32_t engine_call(ArrivalContext *context, uint32_t address, uint32_t 
     g_cur_func = caller;
     uint32_t result = g_eax;
     read_state(context);
+    context->owner = MEM32(context->drive + 0x0C);
     return result;
 }
 

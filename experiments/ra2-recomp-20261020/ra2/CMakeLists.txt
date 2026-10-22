@@ -251,3 +251,6 @@ set_source_files_properties(src/gameplay/ground_interpolation.c src/gameplay/gro
 
 target_sources(ra2 PRIVATE src/gameplay/ground_sampling.c src/gameplay/ground_prepare_exit.c src/gameplay/ground_object_services.c src/runtime/ground_dispatch_bridge.c)
 set_source_files_properties(src/gameplay/ground_sampling.c src/gameplay/ground_prepare_exit.c src/gameplay/ground_object_services.c src/runtime/ground_dispatch_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_completion.c src/gameplay/ground_passage.c src/runtime/ground_completion_bridge.c)
+set_source_files_properties(src/gameplay/ground_completion.c src/gameplay/ground_passage.c src/runtime/ground_completion_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

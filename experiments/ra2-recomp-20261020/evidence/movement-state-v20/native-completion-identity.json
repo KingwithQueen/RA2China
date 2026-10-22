@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "scope": "native original fragments and production C bridges; real simulation gates recorded separately",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executables": [
+    {
+      "path": "evidence/movement-state-v20/arrival_complete_probe.exe",
+      "sha256": "ca7fe3c761f4a08b9127b98d06a450b0ab4a02fd42bd2b266f394f877f29e8c2"
+    },
+    {
+      "path": "evidence/movement-state-v20/completion_services_probe.exe",
+      "sha256": "b6850d322c478bff331ffab9d1fbb7406375f1055fb862232472f4833b0bd94e"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v20/arrival_complete_probe.c",
+      "sha256": "dd42ea6998833f535513676c4739468c512cde7a3354c17623c84e3309e22447"
+    },
+    {
+      "path": "evidence/movement-state-v20/completion_services_probe.c",
+      "sha256": "0d254260c453d7762460c4e9613e0e41f7a225cdae979be3c54ec4058865df40"
+    },
+    {
+      "path": "evidence/movement-state-v20/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_completion.c",
+      "sha256": "d0938beb34928ffe3de9c977d56c95a2eeb1fab69df3f1f21431846ff7a31d91"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_completion.h",
+      "sha256": "b44b48fb5b84325eb40e89cbf6fcabb51bc54fd23cfa5b6fac929e38d5357926"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage.c",
+      "sha256": "348f9ed169e12121f84927c3a66786e005caa4da2aee2a128b88880d68a935ba"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage.h",
+      "sha256": "737faddfee77e9de8e77e5a7b8550fa145e0834fa51093e780f4cc78c73c2100"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_cell_services.c",
+      "sha256": "2e025c942389a9332b75af22499fa4cf43f822ba8a1d5348b98b4599b3b5c192"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_cell_services.h",
+      "sha256": "0ad8682e6dccbc38787adb57b38fd7e2977858b14c23f5c436a13ab6e6e52ff4"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_arrival.c",
+      "sha256": "aaadb06a4872ddffc2b82bfa5a2be2517b754ad7303b33fa1a1265214e42fb40"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_arrival.h",
+      "sha256": "9c9469d911f6435c717f88265470af0913ac61c0ab590f828fdcf7f639196bc8"
+    },
+    {
+      "path": "ra2/src/gameplay/unit_movement.c",
+      "sha256": "1065aa87eff9f7d922cda5697ee779d19bb9bfd472588950267e46eb2687a190"
+    },
+    {
+      "path": "ra2/src/gameplay/unit_movement.h",
+      "sha256": "b10b2b9e4511f55bdf3bef67f26648596c89c333c0b512dae55470012067abc7"
+    },
+    {
+      "path": "ra2/src/runtime/ground_completion_bridge.c",
+      "sha256": "ffa450ad888954f59d714f2ad39d3b1088d2540b2ff7108bf394d66efbeb35e0"
+    },
+    {
+      "path": "ra2/src/runtime/ground_completion_bridge.h",
+      "sha256": "9a373e61f1fa6108fe8dd4a2a8fb8f74cecf9d2ac8ff91027e17097346732826"
+    },
+    {
+      "path": "ra2/src/runtime/ground_arrival_bridge.c",
+      "sha256": "8e1fdf025f114eed98eba1deb4cd875f9067a9099e5f21e62100ef9e58405bed"
+    },
+    {
+      "path": "ra2/src/runtime/ground_arrival_bridge.h",
+      "sha256": "cec1d444b2cee16fc619b6f99deaf4b30286243a159155b4b029d76a79a97eb0"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    }
+  ],
+  "results": {
+    "advance-arrival-completion-probe": {
+      "passed": true,
+      "cases": 65536,
+      "continued": 9588,
+      "returned": 55948,
+      "original_stack_cleanup_verified": true
+    },
+    "prepare-target-cleanup-probe": {
+      "passed": true,
+      "cases": 32768,
+      "phase": 0,
+      "ordered_callback_values": 149595,
+      "original_stack_cleanup_verified": true
+    },
+    "base-passage-probe": {
+      "passed": true,
+      "cases": 32768,
+      "phase": 1,
+      "ordered_callback_values": 17476,
+      "original_stack_cleanup_verified": true
+    },
+    "ground-height-entry-probe": {
+      "passed": true,
+      "cases": 32768,
+      "phase": 2,
+      "ordered_callback_values": 131072,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "arrival_precision_modes": 3,
+  "arrival_rounding_modes": 4,
+  "callback_owner_replacement_tested": true,
+  "total_cases": 163840,
+  "retained_height_core": "4706C0 slope plane initialization and arithmetic retained; 55A280 world lookup and delegation replaced"
+}
