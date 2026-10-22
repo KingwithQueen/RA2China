@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "failed_candidate_never_promoted": true,
+  "undefined_goto_labels": 0,
+  "failed_source_sha256": "0aeb7887abe7a5c6acdd1f9a2f4d92a4ea70c19eed5ad41ee396621bb08c39a2",
+  "failed_build_log_sha256": "a7c1a93263137ef547682e86527442c9b6d244353b7b8268952077f4088ad189",
+  "repaired_source_sha256": "720bd345b35f5b32a1ff97780a641c39a49ce4d0b5059face8b9205182732fb7",
+  "repaired_source_before_newline_preservation_sha256": "c23a2f8b593fa0a7966cc1c49a0ffb6aa96e4b57242f155846277d9c7a2ec8b7"
+}

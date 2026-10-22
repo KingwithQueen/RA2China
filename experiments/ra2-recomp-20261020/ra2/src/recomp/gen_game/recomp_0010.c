@@ -1,3 +1,4 @@
+#include "ground_services_bridge.h"
 #include "ground_continuation_bridge.h"
 #include "ground_advance_bridge.h"
 #include "ground_followup_bridge.h"
@@ -37430,6 +37431,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -42692,6 +42694,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -47658,6 +47661,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -52090,6 +52094,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -56233,6 +56238,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -59450,6 +59456,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -61966,6 +61973,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -64140,6 +64148,7 @@ L_004A2377:
 L_004A237A:
     edx = MEM32(eax + 0x8); /* 0x004A237A: mov edx, dword ptr [eax + 8] */
 L_004A237D:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_interpolation_bridge(); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = esp + 0x34; /* 0x004A237D: lea eax, [esp + 0x34] */
 L_004A2381:
     MEM32(esp + 0x64) = edx; /* 0x004A2381: mov dword ptr [esp + 0x64], edx */
@@ -69667,14 +69676,15 @@ L_004A329F:
     RECOMP_CALL(sub_00476920); /* 0x004A32AF: call 0x476920 */
     RECOMP_FLAGS_IN();
 L_004A32B4:
-    eax = MEM32(ebp + 0xC); /* 0x004A32B4: mov eax, dword ptr [ebp + 0xc] */
-    MEM32(eax + 0x53C) = 0xAu; /* 0x004A32B7: mov dword ptr [eax + 0x53c], 0xa */
-    ecx = MEM32(ebp + 0xC); /* 0x004A32C1: mov ecx, dword ptr [ebp + 0xc] */
-    ebx = MEM32(ecx + 0x4D0); /* 0x004A32C4: mov ebx, dword ptr [ecx + 0x4d0] */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t shared_prepare_resume = ra2_ground_prepare_shared_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (!shared_prepare_resume) return;
+    goto L_004A3550;
 L_004A32CA:
     /* 可读 C：路径下一格、高度层、桥面标志、闸门许可及转向等待。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
-    uint32_t segment_prepare_resume = ra2_ground_prepare_segment_bridge();
+    uint32_t segment_prepare_resume = ra2_ground_prepare_shared_bridge(0);
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
     if (!segment_prepare_resume) return;
     goto L_004A3550;
@@ -73127,13 +73137,14 @@ void sub_004A32B4(void) {
     RECOMP_ENTER(0x004A32B4u);
 
 L_004A32B4:
-    eax = MEM32(ebp + 0xC); /* 0x004A32B4: mov eax, dword ptr [ebp + 0xc] */
-    MEM32(eax + 0x53C) = 0xAu; /* 0x004A32B7: mov dword ptr [eax + 0x53c], 0xa */
-    ecx = MEM32(ebp + 0xC); /* 0x004A32C1: mov ecx, dword ptr [ebp + 0xc] */
-    ebx = MEM32(ecx + 0x4D0); /* 0x004A32C4: mov ebx, dword ptr [ecx + 0x4d0] */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t shared_prepare_resume = ra2_ground_prepare_shared_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (!shared_prepare_resume) return;
+    goto L_004A3550;
     /* 可读 C：路径下一格、高度层、桥面标志、闸门许可及转向等待。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
-    uint32_t segment_prepare_resume = ra2_ground_prepare_segment_bridge();
+    uint32_t segment_prepare_resume = ra2_ground_prepare_shared_bridge(0);
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
     if (!segment_prepare_resume) return;
     goto L_004A3550;

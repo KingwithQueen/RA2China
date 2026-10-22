@@ -1,0 +1,19 @@
+单位移动第十七批正式验收交接（2026-10-22）
+正式代次17 / 验证轮次18：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v18\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：9c8f066ac4a44ad6da3b94ca9a25c70720c224f67da01542ee1f09090528ed27
+Advance插值尾部4A237D..4A2633的8处展开副本、Prepare重建成功4A32B4的2处共享入口，及548000/548070/5480B0/54E3A0格子和威胁服务已接入可读C17。
+28场景15798帧，另默认规则预算901帧严格一致；59组检查通过，新增53248例机器码对照。
+三部分各自完成默认901帧、三格包围101帧、预算901帧验收并保存回退点。
+阅读与修改：gameplay/ground_interpolation.h/.c、ground_prepare_shared.h/.c、ground_cell_services.h/.c。
+旧布局与调用适配：runtime/ground_services_bridge.h/.c。插值保留四次格子查询、向零取格、原浮点舍入和桥面/占格更新顺序。
+Prepare共享成功入口先恢复10次预算，再读取当前队首；已有队列入口沿用缓存值。
+格子查询保留备用格坐标副作用；世界坐标入口使用地图容量，格坐标入口固定262144；内部存在性入口不增加原版没有的范围检查。
+威胁用实际格坐标而非请求坐标，4x4块、每行130项，负值除法向零。
+完整Prepare/Advance内部状态机和对象CanEnterCell分类仍未全部整理；完整移动、寻路及全游戏等价尚未完成。
+预算27..37帧10..0，第38帧目标清空并停止至240；默认规则正常对象服务构造真实AI车辆圈。精确4C3895未单独挂钩，未测随机对局发生频率。
+报告：D:\Program\红色警戒2\docs\单位移动第十七批-插值与共享入口及格子威胁服务-20261022.txt
+旧基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v18\baseline；回退：parts/interpolation-verified、prepare-verified、services-verified。
+完整源码与程序：final-source；source-manifest.json和final-check.json。Prepare未通过编译的标签候选和日志归档于investigations/prepare-label-before-fix。
+下一步：Advance余量/采样选择与Prepare剩余共享出口，继续对象通行分类和地形/区域服务；保持逐帧和预算验收。
+本轮按授权完成后本地提交，不推送；父提交4b68703。旧基线、回退及原始输入保留。
