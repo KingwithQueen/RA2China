@@ -1,3 +1,4 @@
+#include "ground_joint_bridge.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -142,5 +143,5 @@ void ra2_ground_passage_finish_bridge(void)
     Ra2PassageFinishState state={(int32_t)g_edi,MEM8(c.frame+0x88),MEM8(c.frame+0x12),MEM8(c.frame+0x13),(int32_t)MEM32(c.frame+0x18)};
     Ra2PassageFinishServices services={&c,finish_query};g_esp=c.frame-0x100;
     uint32_t result=(uint32_t)ra2_ground_finish_passage(state,&services);
-    g_eax=result;g_edi=MEM32(c.frame);g_esi=MEM32(c.frame+4);g_ebp=MEM32(c.frame+8);g_ebx=MEM32(c.frame+12);g_esp=c.frame+0x90;
+    ra2_ground_return_frame(c.frame, RA2_FRAME_PASSAGE, result);
 }

@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "routes": [
+    {
+      "scene": "j-default",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 0,
+      "host_return": "6450C163",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e82ddfdd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-default",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 26,
+      "host_return": "6450C8B7",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e8d9d7dd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C163",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e82ddfdd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 603,
+      "host_return": "6450C8B7",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e8d9d7dd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 5,
+      "host_return": "6450C163",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e82ddfdd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 61,
+      "host_return": "6450C8B7",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e8d9d7dd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C163",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e82ddfdd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 423,
+      "host_return": "6450C8B7",
+      "host_function_start": "6450BE30",
+      "host_call_bytes": "e8d9d7dd00",
+      "host_call_target": "652EA090",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    }
+  ],
+  "static_parent_entries": {
+    "16": [
+      {
+        "function": "sub_004A1000",
+        "original_entry": "004A1000"
+      },
+      {
+        "function": "sub_004A12F1",
+        "original_entry": "004A12F1"
+      },
+      {
+        "function": "sub_004A134F",
+        "original_entry": "004A134F"
+      },
+      {
+        "function": "sub_004A161D",
+        "original_entry": "004A161D"
+      },
+      {
+        "function": "sub_004A166A",
+        "original_entry": "004A166A"
+      },
+      {
+        "function": "sub_004A17A2",
+        "original_entry": "004A17A2"
+      }
+    ],
+    "17": [
+      {
+        "function": "sub_004A2670",
+        "original_entry": "004A2670"
+      },
+      {
+        "function": "sub_004A32B4",
+        "original_entry": "004A32B4"
+      }
+    ],
+    "18": [
+      {
+        "function": "UnitClass__virtual_101",
+        "original_entry": "00703040"
+      }
+    ],
+    "19": [
+      {
+        "function": "UnitClass__virtual_101",
+        "original_entry": "00703040"
+      },
+      {
+        "function": "sub_0070346B",
+        "original_entry": "0070346B"
+      },
+      {
+        "function": "sub_0070372C",
+        "original_entry": "0070372C"
+      },
+      {
+        "function": "sub_007038EF",
+        "original_entry": "007038EF"
+      }
+    ]
+  },
+  "method": "Real _ReturnAddress in the adapter; link-map enclosing generated function; five-byte E8 CALL verified against observer PE bytes. Mutable g_cur_func marker is not used.",
+  "nonprimary_overlapping_adapter_naturally_observed": false,
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v27/connection-fixture-probe.exe",
+      "sha256": "18d7ff2b5ae9252f286c4f0fed5d6a3d87b9c8e4087c5512aeb3fa7976870c17"
+    },
+    {
+      "path": "evidence/movement-state-v27/connection-fixture.map",
+      "sha256": "d5d4b9ae3eb40a9bd40f0ad34b8ee3f5d374af6c96894e6582acbcba0dd695fb"
+    },
+    {
+      "path": "audit_overlap_callers_v27.py",
+      "sha256": "ae245277ae62c4b21cdcccad4e30e964fc695d9bd861b61f51840764db21496f"
+    },
+    {
+      "path": "evidence/movement-state-v27/connection_overlap_bridge.c",
+      "sha256": "daf5c9ce0a38f3857c8a1990d520f9edb8e58e0e6305f60c113a06e4adebf7df"
+    }
+  ]
+}

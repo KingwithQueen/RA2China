@@ -1,4 +1,5 @@
 #include "ground_template_entry.h"
+#include "ground_template_transition.h"
 #include <string.h>
 #include "ground_advance.h"
 
@@ -32,8 +33,11 @@ int ra2_ground_advance_sample(const Ra2AdvanceServices *s)
     Ra2PathSample sample = s->sample(c, index, 0);
     Ra2WorldPoint position = s->transform_sample(c, &sample, 0);
     position.z = 0;
-    Ra2AdvanceCell next = cell_of(position), old = cell_of(s->raw_position(c));
-    int crosses_cell = next.x != old.x || next.y != old.y;
+    Ra2WorldPoint raw_position = s->raw_position(c);
+    Ra2TemplateCells cells = ra2_ground_template_cells(ra2_ground_sample_adjusted(position.x),
+        ra2_ground_sample_adjusted(position.y), raw_position.x, raw_position.y);
+    Ra2AdvanceCell next = cell_of(position);
+    int crosses_cell = !cells.same_cell;
     if (crosses_cell)
     {
         s->act(c, RA2_ADVANCE_LEAVE_CELL, 0, 0);

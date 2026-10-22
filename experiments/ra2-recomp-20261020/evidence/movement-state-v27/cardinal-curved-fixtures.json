@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "forward": [
+    2,
+    2,
+    0,
+    2,
+    2,
+    4,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "reverse": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    0,
+    6,
+    6,
+    4,
+    6,
+    6
+  ],
+  "height_levels": [
+    4,
+    6
+  ],
+  "duration": 12,
+  "fixtures": [
+    {
+      "path": "evidence/movement-state-v27/fixtures/tube-cardinal-elevated-east.MAP",
+      "sha256": "8d443a5265adf9e784da6be801372e01520f31ac7603372f8a7feb5fa3255475",
+      "source_sha256": "b3e193e35fb19ce6df22d9dcc513fa1f0a90a52856287edf24ad6abe2c2b2a20"
+    },
+    {
+      "path": "evidence/movement-state-v27/fixtures/tube-cardinal-elevated-west.MAP",
+      "sha256": "273f297372e27bb9e06050fe0c910223686f6befa77c8a4f7b5e4dc6f68e2739",
+      "source_sha256": "e8cf6ae38bf36d5034bc0c2ab370793bab25bd4759ec7cc21524ad7ff2d341b7"
+    }
+  ],
+  "raw_runtime_writes": false
+}

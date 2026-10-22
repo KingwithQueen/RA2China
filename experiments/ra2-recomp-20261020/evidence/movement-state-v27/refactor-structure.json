@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "production_c_sources": 171,
+  "compile_inputs": 285,
+  "template_entries": [
+    6,
+    2
+  ],
+  "object_chain_entries": [
+    1,
+    4
+  ],
+  "passage_return_entries": [
+    2,
+    8,
+    7,
+    7,
+    7
+  ],
+  "advance_primary_uses_same_cell_helper": true,
+  "passage_finish_uses_same_return_helper": true,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "existing_tail_targets_preserved": true,
+  "whole_object_passage_classifier_readable": false,
+  "full_original_equivalence_verified": false
+}

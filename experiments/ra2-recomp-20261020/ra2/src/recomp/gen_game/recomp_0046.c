@@ -1,3 +1,4 @@
+#include "ground_overlap_bridge.h"
 #include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
@@ -66913,6 +66914,7 @@ L_007031A3:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00703B5A; /* 0x007031AB: je 0x703b5a */
 L_007031B1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x007031B1: pop edi */
     esi = POP32_VAL(esp); /* 0x007031B2: pop esi */
     ebp = POP32_VAL(esp); /* 0x007031B3: pop ebp */
@@ -67351,6 +67353,7 @@ L_0070342D:
 L_00703432:
     MEM32(esp + 0x8C) = edi; /* 0x00703432: mov dword ptr [esp + 0x8c], edi */
 L_00703439:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t chain_resume_0=ra2_ground_object_chain_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(chain_resume_0==0x70346B) goto L_0070346B; goto L_00703905;
     SET_LO8(eax, MEM8(esp + 0x11)); /* 0x00703439: mov al, byte ptr [esp + 0x11] */
     MEM8(esp + 0x88) = (uint8_t)(0); /* 0x0070343D: mov byte ptr [esp + 0x88], 0 */
     /* test LO8(eax), LO8(eax) */ /* 0x00703445: test al, al */
@@ -68077,6 +68080,7 @@ L_007038E0:
 L_007038EB:
     ebp = MEM32(esp + 0x14); /* 0x007038EB: mov ebp, dword ptr [esp + 0x14] */
 L_007038EF:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t chain_resume_1=ra2_ground_object_chain_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(chain_resume_1==0x70346B) goto L_0070346B; goto L_00703905;
     esi = MEM32(esi + 0x30); /* 0x007038EF: mov esi, dword ptr [esi + 0x30] */
     ebx = MEM32(esp + 0x7C); /* 0x007038F2: mov ebx, dword ptr [esp + 0x7c] */
     edi = MEM32(esp + 0x8C); /* 0x007038F6: mov edi, dword ptr [esp + 0x8c] */
@@ -68425,6 +68429,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -68436,6 +68441,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -68477,6 +68483,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -68490,6 +68497,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -68517,6 +68525,7 @@ void sub_007031B1(void) {
     RECOMP_ENTER(0x007031B1u);
 
 L_007031B1:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x007031B1: pop edi */
     esi = POP32_VAL(esp); /* 0x007031B2: pop esi */
     ebp = POP32_VAL(esp); /* 0x007031B3: pop ebp */
@@ -69240,6 +69249,7 @@ L_007038E0:
 L_007038EB:
     ebp = MEM32(esp + 0x14); /* 0x007038EB: mov ebp, dword ptr [esp + 0x14] */
 L_007038EF:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t chain_resume_1=ra2_ground_object_chain_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(chain_resume_1==0x70346B) goto L_0070346B; goto L_00703905;
     esi = MEM32(esi + 0x30); /* 0x007038EF: mov esi, dword ptr [esi + 0x30] */
     ebx = MEM32(esp + 0x7C); /* 0x007038F2: mov ebx, dword ptr [esp + 0x7c] */
     edi = MEM32(esp + 0x8C); /* 0x007038F6: mov edi, dword ptr [esp + 0x8c] */
@@ -69588,6 +69598,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -69599,6 +69610,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -69640,6 +69652,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -69653,6 +69666,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -69924,6 +69938,7 @@ L_007038E0:
 L_007038EB:
     ebp = MEM32(esp + 0x14); /* 0x007038EB: mov ebp, dword ptr [esp + 0x14] */
 L_007038EF:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t chain_resume_1=ra2_ground_object_chain_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(chain_resume_1==0x70346B) goto L_0070346B; goto L_00703905;
     esi = MEM32(esi + 0x30); /* 0x007038EF: mov esi, dword ptr [esi + 0x30] */
     ebx = MEM32(esp + 0x7C); /* 0x007038F2: mov ebx, dword ptr [esp + 0x7c] */
     edi = MEM32(esp + 0x8C); /* 0x007038F6: mov edi, dword ptr [esp + 0x8c] */
@@ -70260,6 +70275,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -70271,6 +70287,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -70312,6 +70329,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -70325,6 +70343,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -70504,6 +70523,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -70515,6 +70535,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -70556,6 +70577,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -70569,6 +70591,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -70597,6 +70620,7 @@ void sub_007038EF(void) {
     RECOMP_ENTER(0x007038EFu);
 
 L_007038EF:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t chain_resume_1=ra2_ground_object_chain_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(chain_resume_1==0x70346B) goto L_0070346B; goto L_00703905;
     esi = MEM32(esi + 0x30); /* 0x007038EF: mov esi, dword ptr [esi + 0x30] */
     ebx = MEM32(esp + 0x7C); /* 0x007038F2: mov ebx, dword ptr [esp + 0x7c] */
     edi = MEM32(esp + 0x8C); /* 0x007038F6: mov edi, dword ptr [esp + 0x8c] */
@@ -70747,6 +70771,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -70758,6 +70783,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -70799,6 +70825,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -70812,6 +70839,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -70987,6 +71015,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -70998,6 +71027,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -71039,6 +71069,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -71052,6 +71083,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -71221,6 +71253,7 @@ L_00703B3B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703B69; /* 0x00703B58: jne 0x703b69 */
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */
@@ -71232,6 +71265,7 @@ L_00703B5A:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 24; { RECOMP_REGS_OUT(); return; } /* 0x00703B66: ret 0x14 */
 L_00703B69:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = 5; /* 0x00703B69: mov edi, 5 */
     eax = edi; /* 0x00703B6E: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703B70: pop edi */
@@ -71273,6 +71307,7 @@ L_00703B8F:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00703BBC; /* 0x00703BA6: jne 0x703bbc */
 L_00703BA8:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703BA8: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BA9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703BAA: pop ebp */
@@ -71286,6 +71321,7 @@ L_00703BA8:
 L_00703BB7:
     edi = 2; /* 0x00703BB7: mov edi, 2 */
 L_00703BBC:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = edi; /* 0x00703BBC: mov eax, edi */
     edi = POP32_VAL(esp); /* 0x00703BBE: pop edi */
     esi = POP32_VAL(esp); /* 0x00703BBF: pop esi */
@@ -71397,6 +71433,7 @@ void sub_00703B5A(void) {
     RECOMP_ENTER(0x00703B5Au);
 
 L_00703B5A:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_passage_return_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703B5A: pop edi */
     esi = POP32_VAL(esp); /* 0x00703B5B: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703B5C: pop ebp */

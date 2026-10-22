@@ -1,0 +1,11 @@
+单位移动第二十六批正式验收交接（2026-10-22）
+正式代次26 / 验证轮次27：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v27\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：a6fabc9ded972b1309143fc8f55dec0db56714691cfcc55aa8a8ea14d58e2c16
+本批：ground_template_transition的格子比较/类型放行，ground_object_chain的分类链初始化/继续，ground_overlap_bridge接续及31个共享出口。Advance主业务和主通行收尾复用相同助手。
+三部分各6场景3406帧保存完整回退；最终40场景22510帧，另预算901、十二个隧道观察6712、四个内部观察4054帧；93组检查，本批262144例。
+新增弯曲高差四场景及出口占用，各601帧；4→7上行、6→4下行完成穿越，4→6上行及7→4下行保留原版异常。十处内部边界原版/C完整记录一致。对象链适配从00703040主入口自然执行；其他重叠副本只有片段验证，非主入口自然调用尚未观察到。
+报告：D:\Program\红色警戒2\docs\单位移动第二十六批-内部接续与对象分类链及共享出口-20261022.txt
+baseline、parts/template-verified、passage-verified、returns-verified保留；final-source及final-check绑定171个C源、285项输入和最终程序，空操作刷新0。
+默认预算仍为正常服务构造的真实AI/敌车，27..37帧10..0、第38帧停止。未经干预随机频率及4C3895独立挂钩仍未测。完整模块/全游戏等价未完成，37个保护保留。
+下一步其余内部分类/模板及非主重叠入口合法来源，补弯曲高差与出口占用组合、不同曲率和桥层对象链。保留全部旧基线/回退。本地提交，不推送。父提交5138263。

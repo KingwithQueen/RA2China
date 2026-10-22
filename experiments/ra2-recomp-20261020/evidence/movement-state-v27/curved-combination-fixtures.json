@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "recipes": [
+    {
+      "path": "evidence/movement-state-v27/fixtures/tube-curved-elevated-east.MAP",
+      "sha256": "9d627788964db44be384a6bd85defe51a4c11c2a63e4269139ca588d33e32d48",
+      "height_source_sha256": "b3e193e35fb19ce6df22d9dcc513fa1f0a90a52856287edf24ad6abe2c2b2a20",
+      "route_source_sha256": "4f0a40d15da275b4a4ef22864e6f32e9fd2aa359220177077fec9c06880f76b7",
+      "entrance_exit_levels": [
+        4,
+        6
+      ],
+      "unchanged_outside_tube_section": true
+    },
+    {
+      "path": "evidence/movement-state-v27/fixtures/tube-curved-elevated-west.MAP",
+      "sha256": "6a5f6c99f3a0f9c6227dc2b657bf0e9492d72efb546d2b4b96511044cb401737",
+      "height_source_sha256": "e8cf6ae38bf36d5034bc0c2ab370793bab25bd4759ec7cc21524ad7ff2d341b7",
+      "route_source_sha256": "dbde577f12ec98bdc9fc245d574f0e765a960a43767a35c05fd5e3fae07d2807",
+      "entrance_exit_levels": [
+        4,
+        6
+      ],
+      "unchanged_outside_tube_section": true
+    }
+  ],
+  "raw_runtime_writes": false,
+  "scope": "Legal IsoMapPack5 heights 4/6 combined with the accepted six-diagonal TubeClass route. Exit blockers use normal engine constructors/placement at frame217 on the curved east fixture, radius2; acceptance requires actual occupied-exit observations, not configuration alone."
+}

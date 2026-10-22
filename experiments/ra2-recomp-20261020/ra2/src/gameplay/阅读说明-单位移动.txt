@@ -1,3 +1,9 @@
+第二十六批当前状态（2026-10-22，优先于历史描述）
+ground_template_transition：目标/当前位置格子比较与类型放行；ground_object_chain：分类链选择与继续；ground_overlap_bridge：布局/接续，31个出口和主收尾复用共享返回。Advance主流程也复用格子比较。
+三部分各6场景3406帧。最终40场景22510帧，另预算901、隧道观察6712、内部观察4054帧；93组检查，本批262144例。弯曲高差/出口占用对照通过，其中两例保留原版异常，十个内部边界直接命中。
+对象链适配从主入口自然执行；非主重叠副本仍仅有片段验证，尚未完成全部副本统一与全模块/全游戏等价。
+报告：D:\Program\红色警戒2\docs\单位移动第二十六批-内部接续与对象分类链及共享出口-20261022.txt
+
 第二十五批当前状态（2026-10-22，优先于历史描述）
 ground_template_entry：样本坐标准备与下一格通行准备；ground_passage_entry：委托/桥层占用/可见性/Foot分类入口；ground_return_plan：共享帧恢复，旧地址在ground_joint_bridge。
 主流程ground_entry/ground_segment/ground_advance与重叠入口仍并存；修改行为需检查主入口。完整副本统一尚未完成。

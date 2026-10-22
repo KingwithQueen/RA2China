@@ -1,3 +1,4 @@
+#include "ground_overlap_bridge.h"
 #include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
 #include "ground_progress_bridge.h"
@@ -35279,6 +35280,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -40598,6 +40600,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -45621,6 +45624,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -50093,6 +50097,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -54298,6 +54303,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -58234,6 +58240,7 @@ L_004A17FC:
     eax = eax + edx; /* 0x004A17FC: add eax, edx */
     _flag_k = FK_ADD;
 L_004A17FE:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t cells_resume=ra2_ground_template_transition_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(cells_resume==0x4A1AB0) goto L_004A1AB0; goto L_004A186C;
     edx = ecx + 0x88; /* 0x004A17FE: lea edx, [ecx + 0x88] */
 L_004A1804:
     ebx = eax; /* 0x004A1804: mov ebx, eax */
@@ -70445,6 +70452,7 @@ L_004A3486:
     RECOMP_ICALL(MEM32(edx + 0x11C)); /* 0x004A34FC: call dword ptr [edx + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A3502:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_transition_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A3550;
     /* cmp MEM32(esp + 0x18), 7 */ /* 0x004A3502: cmp dword ptr [esp + 0x18], 7 */
     _flag_a = (uint32_t)(MEM32(esp + 0x18)); _flag_b = (uint32_t)(7);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -73964,6 +73972,7 @@ L_004A3486:
     RECOMP_ICALL(MEM32(edx + 0x11C)); /* 0x004A34FC: call dword ptr [edx + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A3502:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_transition_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A3550;
     /* cmp MEM32(esp + 0x18), 7 */ /* 0x004A3502: cmp dword ptr [esp + 0x18], 7 */
     _flag_a = (uint32_t)(MEM32(esp + 0x18)); _flag_b = (uint32_t)(7);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);

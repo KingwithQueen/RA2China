@@ -275,3 +275,6 @@ set_source_files_properties(src/gameplay/ground_tube_travel.c src/gameplay/groun
 
 target_sources(ra2 PRIVATE src/gameplay/ground_template_entry.c src/gameplay/ground_passage_entry.c src/gameplay/ground_return_plan.c src/runtime/ground_joint_bridge.c)
 set_source_files_properties(src/gameplay/ground_template_entry.c src/gameplay/ground_passage_entry.c src/gameplay/ground_return_plan.c src/runtime/ground_joint_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_template_transition.c src/gameplay/ground_object_chain.c src/runtime/ground_overlap_bridge.c)
+set_source_files_properties(src/gameplay/ground_template_transition.c src/gameplay/ground_object_chain.c src/runtime/ground_overlap_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
