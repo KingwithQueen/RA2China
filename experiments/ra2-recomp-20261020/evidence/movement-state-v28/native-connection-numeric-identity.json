@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "total_cases": 1601904,
+  "results": {
+    "passed": true,
+    "cases": 1601904,
+    "precision_modes": 3,
+    "rounding_modes": 4,
+    "axes": 2,
+    "west_frame_42_regression": true,
+    "original_stack_cleanup_verified": true
+  },
+  "scope": "Native original coordinate fragments and complete 6FACA0..6FAD00 and 6FADA5..6FAE01 angle/table/axis chain versus pure C numeric services; all 65536 signed 16-bit facings and 12 control modes. Production bridge wiring additionally verified in real scenes.",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executable": {
+    "path": "evidence/movement-state-v28/connection_numeric_probe.exe",
+    "sha256": "7a9ef8a1171334e1ac8b80fc1c74f5f0c38d9820249313d8f165f14fa9fc392c"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v28/connection_numeric_probe.c",
+      "sha256": "a0a729d0968a7d30bbbda642bc0f4be26e571bad3af2da1a8f0a7694a20e89d3"
+    },
+    {
+      "path": "evidence/movement-state-v28/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-connection-numeric-probe-v28.ps1",
+      "sha256": "0576bc9e2e8987014c26d375688b65f8a66f2b77ca30c62d7165ebe481c2409c"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_connection_trig.h",
+      "sha256": "f3cd1b3f3c1b0af13ed5f1da5e70475076b5133e49f1818e9bf31d0322186b3c"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_connection_numeric.c",
+      "sha256": "88cc49c41a2b4e2ac48456f0ad1e02b3f1e7679a1c0dca3439cdb474e98026b3"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_connection_numeric.h",
+      "sha256": "a840e280e9cd244dbc8a51374bec4777e63fa63f18ae28388689d868e5934680"
+    },
+    {
+      "path": "ra2/src/runtime/ground_connection_numeric_bridge.c",
+      "sha256": "cf26ac39e6f4ce87628abdf4801f458c1cc409c2837d6166dce0c28cafeda155"
+    },
+    {
+      "path": "ra2/src/runtime/ground_connection_numeric_bridge.h",
+      "sha256": "69e78747001512adf7c6229fe722179edf0355984223a6739838e9767382ef3e"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    }
+  ]
+}

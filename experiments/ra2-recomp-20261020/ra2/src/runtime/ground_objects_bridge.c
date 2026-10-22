@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "recomp_types.h"
 #include "ground_objects.h"
+#include "ground_object_kind.h"
 #include "ground_objects_bridge.h"
 #include "state_trace.h"
 
@@ -98,6 +99,7 @@ uint32_t ra2_ground_object_branch_bridge(unsigned entry)
     g_esp=c.frame-0x100;
     Ra2ObjectPassageOutcome outcome;
     if(entry==0) outcome=ra2_ground_filter_object(&services);
+    else if(entry==4) outcome=ra2_ground_filter_object_kind(&services);
     else if(entry==1) outcome=ra2_ground_filter_building((int32_t)MEM32(c.frame+0x80),&services);
     else if(entry==2) outcome=ra2_ground_classify_enemy(&state,&services);
     else outcome=ra2_ground_classify_stationary_ally(&state,&services);

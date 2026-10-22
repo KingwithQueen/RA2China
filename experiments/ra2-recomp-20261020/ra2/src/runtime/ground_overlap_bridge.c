@@ -119,3 +119,54 @@ void ra2_ground_passage_return_bridge(unsigned entry)
     uint32_t result = entry == 0 ? 0 : entry == 1 ? 7 : entry == 2 ? 5 : entry == 3 ? 2 : g_edi;
     ra2_ground_return_frame(g_esp, RA2_FRAME_PASSAGE, result);
 }
+
+typedef struct LayerContext
+{
+    uint32_t drive, previous, next;
+} LayerContext;
+
+static int32_t layer_level(void *opaque, unsigned next)
+{
+    LayerContext *context = opaque;
+    int32_t level = (int8_t)MEM8((next ? context->next : context->previous) + 0x11B);
+    if (!next) g_eax = (uint32_t)level;
+    else
+    {
+        g_ecx = (uint32_t)level;
+        g_flag_k = FK_CMP;
+        g_flag_a = (uint32_t)level;
+        g_flag_b = g_eax - 4u;
+        g_flag_cf = g_flag_a < g_flag_b;
+        g_eax = 0x100u;
+    }
+    return level;
+}
+
+static uint32_t layer_flags(void *opaque, unsigned next)
+{
+    LayerContext *context = opaque;
+    uint32_t flags = MEM32((next ? context->next : context->previous) + 0x140);
+    g_flag_k = FK_TEST;
+    g_flag_a = flags;
+    g_flag_b = 0x100u;
+    g_flag_cf = 0;
+    return flags;
+}
+
+static void layer_set(void *opaque, unsigned upper)
+{
+    LayerContext *context = opaque;
+    uint32_t unit = MEM32(context->drive + 0xC);
+    MEM8(unit + 0x79) = (uint8_t)upper;
+    if (upper) g_edx = unit;
+    else g_eax = unit;
+}
+
+uint32_t ra2_ground_template_layer_bridge(void)
+{
+    LayerContext context = {g_ebp, g_esi, g_ebx};
+    Ra2TemplateLayerServices services = {&context, layer_level, layer_flags, layer_set};
+    MEM32(g_esp + 0x40) = context.next;
+    ra2_ground_template_layer(&services);
+    return 0x4A18EF;
+}

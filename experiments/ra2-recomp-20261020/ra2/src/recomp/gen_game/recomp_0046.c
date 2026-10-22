@@ -67442,6 +67442,14 @@ L_007034AA:
 L_007034B8:
     edi = MEM32(esp + 0x8C); /* 0x007034B8: mov edi, dword ptr [esp + 0x8c] */
 L_007034BF:
+    /* 可读 C：已跳过自身/关联对象后的类别过滤接续。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t object_kind_resume_v28 = ra2_ground_object_branch_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (object_kind_resume_v28 == 0x7031B1) goto L_007031B1;
+    if (object_kind_resume_v28 == 0x7038FD) goto L_007038FD;
+    if (object_kind_resume_v28 == 0x703536) goto L_00703536;
+    goto L_00703693;
     SET_LO8(eax, MEM8(esi + 0x14)); /* 0x007034BF: mov al, byte ptr [esi + 0x14] */
     ecx = ebp; /* 0x007034C2: mov ecx, ebp */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(1) << 24;
@@ -68123,6 +68131,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -68613,6 +68624,14 @@ L_007034AA:
 L_007034B8:
     edi = MEM32(esp + 0x8C); /* 0x007034B8: mov edi, dword ptr [esp + 0x8c] */
 L_007034BF:
+    /* 可读 C：已跳过自身/关联对象后的类别过滤接续。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t object_kind_resume_v28 = ra2_ground_object_branch_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if (object_kind_resume_v28 == 0x7031B1) goto L_007031B1;
+    if (object_kind_resume_v28 == 0x7038FD) goto L_007038FD;
+    if (object_kind_resume_v28 == 0x703536) goto L_00703536;
+    goto L_00703693;
     SET_LO8(eax, MEM8(esi + 0x14)); /* 0x007034BF: mov al, byte ptr [esi + 0x14] */
     ecx = ebp; /* 0x007034C2: mov ecx, ebp */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(1) << 24;
@@ -69292,6 +69311,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -69979,6 +70001,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -70413,6 +70438,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -70661,6 +70689,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -70905,6 +70936,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */
@@ -71143,6 +71177,9 @@ L_00703911:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703AA9; /* 0x0070393A: je 0x703aa9 */
 L_00703940:
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_passage_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x00703940: pop edi */
     esi = POP32_VAL(esp); /* 0x00703941: pop esi */
     ebp = POP32_VAL(esp); /* 0x00703942: pop ebp */

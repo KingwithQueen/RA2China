@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "total_cases": 196608,
+  "results": {
+    "template-layer-probe": {
+      "passed": true,
+      "phase": 4,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true
+    },
+    "object-kind-probe": {
+      "passed": true,
+      "phase": 4,
+      "object_cases": 65536,
+      "outcomes": [
+        4149,
+        0,
+        0,
+        12340,
+        4118,
+        44929,
+        0
+      ],
+      "calls_live_state_verified": true
+    },
+    "remaining-exits-probe": {
+      "passed": true,
+      "phase": 5,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "shared_native_exit_entries": 27,
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "live_flags_checked_for_layer_and_exits": true,
+  "mutable_ordered_category_callbacks": true,
+  "stack_nonvolatile_and_eax_verified": true,
+  "probe_executables": [
+    {
+      "path": "evidence/movement-state-v28/overlap_probe.exe",
+      "sha256": "dd140b7822b4bdcc3053a2444c32ec2e5b555ce51d2ed726ab165429f1892fa1"
+    },
+    {
+      "path": "evidence/movement-state-v28/objects_probe.exe",
+      "sha256": "e550fd8fad6c7845e7a619e66039adfb5a71286015c2224b82bdb4d038a93b46"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "record_round28_receipt_v28.py",
+      "sha256": "45effc6f620024fc1f621ffba24c2b060423a9e9499dd908927504fdcce44bcb"
+    },
+    {
+      "path": "extend_probe_v28.py",
+      "sha256": "8c4cc9fcff58d6b88de61767457348d714940b7b7f785e5d189bc2ef0141bcc3"
+    },
+    {
+      "path": "extend_exit_probe_v28.py",
+      "sha256": "c07b3abc41ad6507a3cb870543bbf6ab96e10628e7cf0891742df4f55fa457c4"
+    },
+    {
+      "path": "integrate_template_v28.py",
+      "sha256": "743db923808bfff7a0194af72e267a1df18b72d87cca0e2f256bc19d392c7714"
+    },
+    {
+      "path": "extend_objects_probe_v28.py",
+      "sha256": "a6eff032e2c849c40142f0421e436b75ab3f64b41808c5e08d3f31805edee69e"
+    },
+    {
+      "path": "audit_recipe_replay_v28.py",
+      "sha256": "9df2ee9275224ddaa5ed4f52cdd31dd8c5e02f91016780efe5a56fb5194b8b3f"
+    },
+    {
+      "path": "extend_observer_v28.py",
+      "sha256": "e22a16b1e0bd1f0c06edc150435de8f644d51c3828ac62503f20cc5be0cfb8cb"
+    },
+    {
+      "path": "extend_chain_observer_v28.py",
+      "sha256": "99845f124bcc255f675db592523fefb85488afb62b1f064704a8df2017b83cec"
+    },
+    {
+      "path": "integrate_objects_v28.py",
+      "sha256": "30862d778e6f4708d46c73df7ec83ee7e4efc7755e10f2d202b52bc363751f8d"
+    },
+    {
+      "path": "integrate_returns_v28.py",
+      "sha256": "d9cbc174942ba65cee0567389d144e50c5fe03302405f21ba359292d90de799d"
+    },
+    {
+      "path": "build-overlap-probe-v28.ps1",
+      "sha256": "13431dcb98e2b1c493585728e4ebfba7ab223225fdd1772fbaf52218268d673b"
+    },
+    {
+      "path": "build-objects-probe-v28.ps1",
+      "sha256": "8b15f7d6664f76be6bd146fc4a3ba617d8efccbe5671e517e32ae833e337cac2"
+    },
+    {
+      "path": "evidence/movement-state-v28/overlap_probe.c",
+      "sha256": "4ad34346146c0370aa713958ebbaf9365350257a5e2a015b29c4dc26088bcf7c"
+    },
+    {
+      "path": "evidence/movement-state-v28/objects_probe.c",
+      "sha256": "4750c8684dd0926814ef17b17d385fbf55b63a4b9c21451f2604213030d31acf"
+    },
+    {
+      "path": "evidence/movement-state-v28/remaining_return_cases.h",
+      "sha256": "bea92f01beba37ee5340d5ea98c34a27750eff3b6f6eec88bf1ea4ad1d037d07"
+    },
+    {
+      "path": "evidence/movement-state-v28/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_transition.c",
+      "sha256": "c7e0c531ddb1e8504551ef14431f6d7ad9627551a8b7f5309a7a7cedc98e78bf"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_transition.h",
+      "sha256": "5631b1026b8f88a4e549a71278dad827091bee9deabe6eea8cd23e589234b811"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.c",
+      "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.h",
+      "sha256": "8347d8c313a8f31dd2f286246658da4a844e97e14947a89b4b4bb41c389d3701"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "95773a2f4dc6db3499e30861a7a3512ad4e1cbd4d5b4aee85eacfedf7ddad130"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.h",
+      "sha256": "d47b5d5f5072dc5f69a80b1e6166211c6ee61113323109ad6d99a909496944c5"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_kind.h",
+      "sha256": "513f24a8ecf75461c0f73d22a4166fbaffcd68bf0d118f90b123006914af69e8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.c",
+      "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.h",
+      "sha256": "19c822a81038d87a1976b59341fbd6b9f67b5d42ddd484a65ca54767cba7dcc8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.c",
+      "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.h",
+      "sha256": "c8dca091773955136c64315006bbb905ee7cb2040f9c1b17767d6c62b99a7f83"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_chain.c",
+      "sha256": "1c2477bfb421ad3cc1dc778cf6d4f46f31591f41e7eff92e7464f769ba663c76"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_chain.h",
+      "sha256": "8e7447dfe7ea8760685e445b7a21baf88eb98ee42783039d2b2bc827f33a8ffe"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "2116a666c7083ef29d34e5a1a232b9b2391b98d3a00c6c0a16d571720f8b31e0"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.h",
+      "sha256": "e47a3ba48ed5b00c0b2b992a045811167cc96b4ee00ac385db693b097196321a"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "ef551d7f61e5f81c67e05a7905c508092f60e9a001a2f6826b2e196f01846e6b"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.h",
+      "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "7a8ba8792e5cce04561793032ba8f481106c8b0de7a12e64387b89f580f800fa"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.h",
+      "sha256": "b997a4f2fab454127c7852a44719cca5fc238d7c13a9bdff809549d00c61f2aa"
+    }
+  ]
+}

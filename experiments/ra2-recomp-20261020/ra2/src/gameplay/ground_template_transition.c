@@ -39,3 +39,20 @@ void ra2_ground_template_gate(const Ra2TemplateGateServices *services)
         services->clear_classification(context);
     }
 }
+
+void ra2_ground_template_layer(const Ra2TemplateLayerServices *services)
+{
+    void *context = services->context;
+    int32_t previous_level = services->level(context, 0);
+    int32_t next_level = services->level(context, 1);
+    if ((uint32_t)next_level == (uint32_t)previous_level - 4u
+        && (services->flags(context, 1) & 0x100u))
+    {
+        services->set_layer(context, 1);
+    }
+    if (!(services->flags(context, 1) & 0x100u)
+        && (services->flags(context, 0) & 0x100u))
+    {
+        services->set_layer(context, 0);
+    }
+}

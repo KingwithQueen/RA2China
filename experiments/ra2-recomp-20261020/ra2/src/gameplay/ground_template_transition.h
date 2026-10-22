@@ -25,3 +25,14 @@ typedef struct Ra2TemplateGateServices
 /* 可忽略障碍的单位允许直接前进；碾压类只在没有地表覆盖物时放行。
    类型回调可能改写共享分类，第二个判断必须重新读取。 */
 void ra2_ground_template_gate(const Ra2TemplateGateServices *services);
+
+typedef struct Ra2TemplateLayerServices
+{
+    void *context;
+    int32_t (*level)(void *, unsigned next);
+    uint32_t (*flags)(void *, unsigned next);
+    void (*set_layer)(void *, unsigned upper);
+} Ra2TemplateLayerServices;
+
+/* 跨格落点可进入或离开桥层；第二次查询下一格标志的顺序不能改变。 */
+void ra2_ground_template_layer(const Ra2TemplateLayerServices *services);

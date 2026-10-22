@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "routes": [
+    {
+      "scene": "j-default",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 0,
+      "host_return": "6450C353",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e89de0dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-default",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 26,
+      "host_return": "6450CAA7",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e849d9dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C353",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e89de0dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 603,
+      "host_return": "6450CAA7",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e849d9dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 5,
+      "host_return": "6450C353",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e89de0dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 61,
+      "host_return": "6450CAA7",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e849d9dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C353",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e89de0dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 423,
+      "host_return": "6450CAA7",
+      "host_function_start": "6450C020",
+      "host_call_bytes": "e849d9dd00",
+      "host_call_target": "652EA3F0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    }
+  ],
+  "static_parent_entries": {
+    "16": [
+      {
+        "function": "sub_004A1000",
+        "original_entry": "004A1000"
+      },
+      {
+        "function": "sub_004A12F1",
+        "original_entry": "004A12F1"
+      },
+      {
+        "function": "sub_004A134F",
+        "original_entry": "004A134F"
+      },
+      {
+        "function": "sub_004A161D",
+        "original_entry": "004A161D"
+      },
+      {
+        "function": "sub_004A166A",
+        "original_entry": "004A166A"
+      },
+      {
+        "function": "sub_004A17A2",
+        "original_entry": "004A17A2"
+      }
+    ],
+    "17": [
+      {
+        "function": "sub_004A2670",
+        "original_entry": "004A2670"
+      },
+      {
+        "function": "sub_004A32B4",
+        "original_entry": "004A32B4"
+      }
+    ],
+    "18": [
+      {
+        "function": "UnitClass__virtual_101",
+        "original_entry": "00703040"
+      }
+    ],
+    "19": [
+      {
+        "function": "UnitClass__virtual_101",
+        "original_entry": "00703040"
+      },
+      {
+        "function": "sub_0070346B",
+        "original_entry": "0070346B"
+      },
+      {
+        "function": "sub_0070372C",
+        "original_entry": "0070372C"
+      },
+      {
+        "function": "sub_007038EF",
+        "original_entry": "007038EF"
+      }
+    ]
+  },
+  "method": "Real _ReturnAddress in the adapter; link-map enclosing generated function; five-byte E8 CALL verified against observer PE bytes. Mutable g_cur_func marker is not used.",
+  "nonprimary_overlapping_adapter_naturally_observed": false,
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v28/connection-fixture-probe.exe",
+      "sha256": "9ce72164ad948560ec741b680d29134535d2ed345d5a1a96d8de6088d8d9b9b7"
+    },
+    {
+      "path": "evidence/movement-state-v28/connection-fixture.map",
+      "sha256": "10540406d586ba3ade822aab316f3e26a079381b3b042b7eb359225cd8af6154"
+    },
+    {
+      "path": "audit_overlap_callers_v28.py",
+      "sha256": "4294859f0ab674e5b5ccf910030bc9b8941a82f95258bf6bce15013b087f7cc8"
+    },
+    {
+      "path": "evidence/movement-state-v28/connection_overlap_bridge.c",
+      "sha256": "08a8ea88319ac6e96de975d45bf2e49888c7ea97df3e6c9c266bdc2be1670a88"
+    }
+  ]
+}

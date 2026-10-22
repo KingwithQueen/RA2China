@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "attempts": [
+    {
+      "name": "template-probe-build-attempt01",
+      "kind": "probe-only compilation failure",
+      "cause": "The new probe used a nonexistent flag-packing helper name. Corrected to recomp_eflags; no production source change was needed.",
+      "retained_log": "investigations/template-probe-build-attempt01.log",
+      "retained_log_sha256": "d5fc6ef996d730b02693278b3d60b022e2c231d3d7ce69e718fc05ed87818ba9",
+      "resolved_by": "template-layer-probe-verified-01.json"
+    },
+    {
+      "name": "restricted-native-launch",
+      "kind": "environment launch failure before any game frames",
+      "observed_error": "无效的系统 DLL 重定位",
+      "cause": "The restricted execution environment could not load the fixed-base x86 probe. The authorized native comparison was run through the normal elevated execution mechanism.",
+      "runtime_difference": false,
+      "no_failed_trace_existed": true,
+      "resolved_by": "native-gates.json"
+    },
+    {
+      "name": "object-integration-attempt01",
+      "kind": "integration preflight failure",
+      "cause": "Expected four category-only labels, but the current generated file contains two. The already edited C/header files and recipe were preserved, restored from template-verified, then reapplied with the actual two-copy count.",
+      "retained_directory": "investigations/object-integration-attempt01",
+      "runtime_difference": false,
+      "resolved_by": "parts/passage-verified/validation.json"
+    }
+  ],
+  "all_failed_attempts_distinct_from_acceptance": true
+}

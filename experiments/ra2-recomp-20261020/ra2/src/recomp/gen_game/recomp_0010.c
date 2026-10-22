@@ -35401,6 +35401,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -40721,6 +40724,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -45745,6 +45751,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -50218,6 +50227,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -54424,6 +54436,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -58361,6 +58376,9 @@ L_004A18A4:
 L_004A18A9:
     ebx = eax; /* 0x004A18A9: mov ebx, eax */
 L_004A18AB:
+    /* 可读 C：跨格模板的桥层切换，保留内部入口。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A18EF;
     eax = (int32_t)(int8_t)MEM8(esi + 0x11B); /* 0x004A18AB: movsx eax, byte ptr [esi + 0x11b] */
 L_004A18B2:
     ecx = (int32_t)(int8_t)MEM8(ebx + 0x11B); /* 0x004A18B2: movsx ecx, byte ptr [ebx + 0x11b] */
@@ -68480,6 +68498,10 @@ L_004A276F:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A2784; /* 0x004A2776: je 0x4a2784 */
 L_004A2778:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2778: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2779: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A277A: pop ebp */
@@ -68750,6 +68772,10 @@ L_004A2916:
     eax = MEM32(ebp); /* 0x004A291F: mov eax, dword ptr [ebp] */
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A2922: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2928: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2929: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A292A: pop ebp */
@@ -68916,6 +68942,10 @@ L_004A2A45:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A2EAC; /* 0x004A2A4D: jne 0x4a2eac */
 L_004A2A53:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2A53: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2A54: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2A55: pop ebp */
@@ -68945,6 +68975,10 @@ L_004A2A5F:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A2A45; /* 0x004A2A75: je 0x4a2a45 */
 L_004A2A77:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2A77: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2A78: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2A79: pop ebp */
@@ -69349,6 +69383,10 @@ L_004A2D62:
     PUSH32(esp, ebx); /* 0x004A2D66: push ebx */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A2D67: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2D6D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2D6E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2D6F: pop ebp */
@@ -69377,6 +69415,10 @@ L_004A2D79:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A44; /* 0x004A2D8E: je 0x4a3a44 */
 L_004A2D94:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2D94: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2D95: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2D96: pop ebp */
@@ -69646,6 +69688,10 @@ L_004A2F52:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A2E6E; /* 0x004A2F68: je 0x4a2e6e */
 L_004A2F6E:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2F6E: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2F6F: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2F70: pop ebp */
@@ -70028,6 +70074,10 @@ L_004A323F:
     PUSH32(esp, 0); /* 0x004A3243: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A3245: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A324B: pop edi */
     esi = POP32_VAL(esp); /* 0x004A324C: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A324D: pop ebp */
@@ -70260,6 +70310,10 @@ L_004A33C3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A33DE; /* 0x004A33D0: jne 0x4a33de */
 L_004A33D2:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A33D2: pop edi */
     esi = POP32_VAL(esp); /* 0x004A33D3: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A33D4: pop ebp */
@@ -70314,6 +70368,10 @@ L_004A33DE:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3433; /* 0x004A3425: jne 0x4a3433 */
 L_004A3427:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3427: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3428: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3429: pop ebp */
@@ -70381,6 +70439,10 @@ L_004A3466:
     PUSH32(esp, eax); /* 0x004A3476: push eax */
     RECOMP_ICALL(MEM32(ecx + 0x4C)); /* 0x004A3477: call dword ptr [ecx + 0x4c] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A347A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A347B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A347C: pop ebp */
@@ -70988,6 +71050,10 @@ L_004A3883:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3600; /* 0x004A3898: je 0x4a3600 */
 L_004A389E:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A389E: pop edi */
     esi = POP32_VAL(esp); /* 0x004A389F: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A38A0: pop ebp */
@@ -71102,6 +71168,10 @@ L_004A3962:
     MEM32(edx + 0x4D0) = esi; /* 0x004A3970: mov dword ptr [edx + 0x4d0], esi */
     RECOMP_CALL(sub_004A2670); /* 0x004A3976: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A397B: pop edi */
     esi = POP32_VAL(esp); /* 0x004A397C: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A397D: pop ebp */
@@ -71252,6 +71322,10 @@ L_004A3A38:
     RECOMP_FLAGS_IN();
 L_004A3A44:
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -71376,6 +71450,10 @@ L_004A3AD7:
     ecx = ebp; /* 0x004A3B03: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A3B05: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3B0A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3B0B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3B0C: pop ebp */
@@ -72118,6 +72196,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -72328,6 +72410,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -72352,6 +72438,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -72576,6 +72666,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -72678,6 +72772,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -72736,6 +72834,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -72762,6 +72864,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -72818,6 +72924,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -72879,6 +72989,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -73049,6 +73163,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -73088,6 +73206,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -73323,6 +73445,10 @@ L_004A2F52:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A2E6E; /* 0x004A2F68: je 0x4a2e6e */
 L_004A2F6E:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2F6E: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2F6F: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A2F70: pop ebp */
@@ -73335,6 +73461,10 @@ L_004A2F6E:
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A2F77: ret 0xc */
 L_004A3A44:
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -73499,6 +73629,10 @@ L_004A323F:
     PUSH32(esp, 0); /* 0x004A3243: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A3245: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A324B: pop edi */
     esi = POP32_VAL(esp); /* 0x004A324C: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A324D: pop ebp */
@@ -73525,6 +73659,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -73568,6 +73706,10 @@ L_004A323F:
     PUSH32(esp, 0); /* 0x004A3243: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A3245: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A324B: pop edi */
     esi = POP32_VAL(esp); /* 0x004A324C: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A324D: pop ebp */
@@ -73594,6 +73736,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -73780,6 +73926,10 @@ L_004A33C3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A33DE; /* 0x004A33D0: jne 0x4a33de */
 L_004A33D2:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A33D2: pop edi */
     esi = POP32_VAL(esp); /* 0x004A33D3: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A33D4: pop ebp */
@@ -73834,6 +73984,10 @@ L_004A33DE:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3433; /* 0x004A3425: jne 0x4a3433 */
 L_004A3427:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3427: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3428: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3429: pop ebp */
@@ -73901,6 +74055,10 @@ L_004A3466:
     PUSH32(esp, eax); /* 0x004A3476: push eax */
     RECOMP_ICALL(MEM32(ecx + 0x4C)); /* 0x004A3477: call dword ptr [ecx + 0x4c] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A347A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A347B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A347C: pop ebp */
@@ -74508,6 +74666,10 @@ L_004A3883:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3600; /* 0x004A3898: je 0x4a3600 */
 L_004A389E:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A389E: pop edi */
     esi = POP32_VAL(esp); /* 0x004A389F: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A38A0: pop ebp */
@@ -74622,6 +74784,10 @@ L_004A3962:
     MEM32(edx + 0x4D0) = esi; /* 0x004A3970: mov dword ptr [edx + 0x4d0], esi */
     RECOMP_CALL(sub_004A2670); /* 0x004A3976: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A397B: pop edi */
     esi = POP32_VAL(esp); /* 0x004A397C: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A397D: pop ebp */
@@ -74770,6 +74936,10 @@ L_004A3A38:
     RECOMP_FLAGS_IN();
 L_004A3A44:
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -74894,6 +75064,10 @@ L_004A3AD7:
     ecx = ebp; /* 0x004A3B03: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A3B05: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3B0A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3B0B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3B0C: pop ebp */
@@ -75634,6 +75808,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -75844,6 +76022,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -75868,6 +76050,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -76092,6 +76278,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -76194,6 +76384,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -76252,6 +76446,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -76278,6 +76476,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -76334,6 +76536,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -76395,6 +76601,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -76565,6 +76775,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -76604,6 +76818,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -76886,6 +77104,10 @@ L_004A3A35:
     PUSH32(esp, 0); /* 0x004A3A3C: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -77010,6 +77232,10 @@ L_004A3AD7:
     ecx = ebp; /* 0x004A3B03: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A3B05: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3B0A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3B0B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3B0C: pop ebp */
@@ -77218,6 +77444,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -77487,6 +77717,10 @@ L_004A3A35:
     PUSH32(esp, 0); /* 0x004A3A3C: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -77611,6 +77845,10 @@ L_004A3AD7:
     ecx = ebp; /* 0x004A3B03: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A3B05: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3B0A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3B0B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3B0C: pop ebp */
@@ -77819,6 +78057,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -77942,6 +78184,10 @@ L_004A3A35:
     PUSH32(esp, 0); /* 0x004A3A3C: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -78005,6 +78251,10 @@ L_004A3A38:
     PUSH32(esp, 0); /* 0x004A3A3C: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x410)); /* 0x004A3A3E: call dword ptr [eax + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -78036,6 +78286,10 @@ void sub_004A3A44(void) {
 
 L_004A3A44:
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_exit_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3A44: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3A45: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3A46: pop ebp */
@@ -78192,6 +78446,10 @@ L_004A3AD7:
     ecx = ebp; /* 0x004A3B03: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A3B05: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A3B0A: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3B0B: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A3B0C: pop ebp */
@@ -78400,6 +78658,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -78546,6 +78808,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -78669,6 +78935,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -78793,6 +79063,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -79360,6 +79634,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -79568,6 +79846,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -79592,6 +79874,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -79816,6 +80102,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -79918,6 +80208,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -79976,6 +80270,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -80002,6 +80300,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -80058,6 +80360,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -80118,6 +80424,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -80288,6 +80598,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -80327,6 +80641,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -80901,6 +81219,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -81109,6 +81431,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -81133,6 +81459,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -81357,6 +81687,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -81459,6 +81793,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -81517,6 +81855,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -81543,6 +81885,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -81599,6 +81945,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -81659,6 +82009,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -81829,6 +82183,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -81868,6 +82226,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -82308,6 +82670,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -82516,6 +82882,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -82540,6 +82910,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -82764,6 +83138,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -82866,6 +83244,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -82924,6 +83306,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -82950,6 +83336,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -83006,6 +83396,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -83066,6 +83460,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -83236,6 +83634,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -83275,6 +83677,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -83657,6 +84063,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -83865,6 +84275,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -83889,6 +84303,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -84113,6 +84531,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -84215,6 +84637,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -84273,6 +84699,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -84299,6 +84729,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -84355,6 +84789,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -84415,6 +84853,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -84585,6 +85027,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -84624,6 +85070,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -84716,6 +85166,10 @@ L_004A403D:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A413D; /* 0x004A4047: jne 0x4a413d */
 L_004A404D:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A404D: pop edi */
     esi = POP32_VAL(esp); /* 0x004A404E: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A404F: pop ebp */
@@ -84924,6 +85378,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -84948,6 +85406,10 @@ L_004A41CC:
     ecx = ebp; /* 0x004A41D8: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41DA: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41DF: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41E0: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41E1: pop ebp */
@@ -85172,6 +85634,10 @@ L_004A4369:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A4174; /* 0x004A437F: je 0x4a4174 */
 L_004A4385:
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)) | 1u);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4385: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4386: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4387: pop ebp */
@@ -85274,6 +85740,10 @@ L_004A4429:
     ecx = ebp; /* 0x004A443F: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4441: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4446: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4447: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4448: pop ebp */
@@ -85332,6 +85802,10 @@ L_004A449B:
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
     RECOMP_ICALL(MEM32(edx + 0x410)); /* 0x004A44A1: call dword ptr [edx + 0x410] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44A7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44A8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44A9: pop ebp */
@@ -85358,6 +85832,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -85414,6 +85892,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -85474,6 +85956,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -85644,6 +86130,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -85683,6 +86173,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -85747,6 +86241,10 @@ L_004A41AE:
     ecx = ebp; /* 0x004A41B6: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A41B8: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A41BD: pop edi */
     esi = POP32_VAL(esp); /* 0x004A41BE: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A41BF: pop ebp */
@@ -85888,6 +86386,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -85927,6 +86429,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -85969,6 +86475,10 @@ L_004A44B3:
     eax = MEM32(ecx); /* 0x004A44BF: mov eax, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A44C1: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A44C7: pop edi */
     esi = POP32_VAL(esp); /* 0x004A44C8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A44C9: pop ebp */
@@ -86035,6 +86545,10 @@ L_004A44E2:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -86095,6 +86609,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -86136,6 +86654,10 @@ L_004A4502:
     ecx = ebp; /* 0x004A4511: mov ecx, ebp */
     RECOMP_CALL(sub_004A2670); /* 0x004A4513: call 0x4a2670 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4518: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4519: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A451A: pop ebp */
@@ -86212,6 +86734,10 @@ L_004A456E:
     edx = MEM32(ecx); /* 0x004A457A: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x414)); /* 0x004A457C: call dword ptr [edx + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, g_eax);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4582: pop edi */
     esi = POP32_VAL(esp); /* 0x004A4583: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A4584: pop ebp */
@@ -86384,6 +86910,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -86423,6 +86953,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -86593,6 +87127,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -86632,6 +87170,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */
@@ -86793,6 +87335,10 @@ L_004A46BD:
     ecx = ebp; /* 0x004A46C4: mov ecx, ebp */
     RECOMP_CALL(sub_004A0BC0); /* 0x004A46C6: call 0x4a0bc0 */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A46CB: pop edi */
     esi = POP32_VAL(esp); /* 0x004A46CC: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A46CD: pop ebp */
@@ -86832,6 +87378,10 @@ L_004A46FE:
     edx = MEM32(ecx); /* 0x004A4711: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x4C8)); /* 0x004A4713: call dword ptr [edx + 0x4c8] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：Prepare 共享出口，保留 EAX 高位及原栈布局。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    ra2_ground_return_frame(g_esp, RA2_FRAME_PREPARE, (g_eax & UINT32_C(0xFFFFFF00)));
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A4719: pop edi */
     esi = POP32_VAL(esp); /* 0x004A471A: pop esi */
     ebp = POP32_VAL(esp); /* 0x004A471B: pop ebp */

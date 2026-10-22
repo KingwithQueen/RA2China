@@ -13,6 +13,33 @@ static Ra2AdvanceCell cell_of(Ra2WorldPoint position)
     return cell;
 }
 
+typedef struct AdvanceLayerContext
+{
+    const Ra2AdvanceServices *services;
+    uint32_t cells[2];
+} AdvanceLayerContext;
+
+static int32_t layer_level(void *opaque, unsigned next)
+{
+    AdvanceLayerContext *context = opaque;
+    const Ra2AdvanceServices *services = context->services;
+    return services->query(services->context, RA2_ADVANCE_CELL_LEVEL, context->cells[next]);
+}
+
+static uint32_t layer_flags(void *opaque, unsigned next)
+{
+    AdvanceLayerContext *context = opaque;
+    const Ra2AdvanceServices *services = context->services;
+    return services->query(services->context, RA2_ADVANCE_CELL_HAS_BRIDGE, context->cells[next]) ? 0x100u : 0;
+}
+
+static void layer_set(void *opaque, unsigned upper)
+{
+    AdvanceLayerContext *context = opaque;
+    const Ra2AdvanceServices *services = context->services;
+    services->act(services->context, RA2_ADVANCE_SET_BRIDGE_LAYER, 0, (int32_t)upper);
+}
+
 int ra2_ground_advance_sample(const Ra2AdvanceServices *s)
 {
     void *c = s->context;
@@ -44,13 +71,9 @@ int ra2_ground_advance_sample(const Ra2AdvanceServices *s)
         s->place(c, position, 1);
         uint32_t previous_cell = s->find_cell(c, previous);
         uint32_t next_cell = s->find_cell(c, next);
-        int32_t previous_level = s->query(c, RA2_ADVANCE_CELL_LEVEL, previous_cell);
-        int32_t next_level = s->query(c, RA2_ADVANCE_CELL_LEVEL, next_cell);
-        if (next_level == previous_level - 4 && s->query(c, RA2_ADVANCE_CELL_HAS_BRIDGE, next_cell))
-            s->act(c, RA2_ADVANCE_SET_BRIDGE_LAYER, 0, 1);
-        if (!s->query(c, RA2_ADVANCE_CELL_HAS_BRIDGE, next_cell)
-            && s->query(c, RA2_ADVANCE_CELL_HAS_BRIDGE, previous_cell))
-            s->act(c, RA2_ADVANCE_SET_BRIDGE_LAYER, 0, 0);
+        AdvanceLayerContext layer_context = {s, {previous_cell, next_cell}};
+        Ra2TemplateLayerServices layer_services = {&layer_context, layer_level, layer_flags, layer_set};
+        ra2_ground_template_layer(&layer_services);
 
         if (s->query(c, RA2_ADVANCE_IS_TRAIN, 0) && !s->query(c, RA2_ADVANCE_TRAIN_FLAG_5B8, 0))
         {

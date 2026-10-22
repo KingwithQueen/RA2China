@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "production_c_sources": 171,
+  "compile_inputs": 286,
+  "template_layer_entries": 6,
+  "object_kind_entries": 2,
+  "shared_exit_entries": 27,
+  "shared_exit_copies": 140,
+  "existing_tail_targets_preserved": true,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "byte_styles_preserved": true,
+  "whole_object_passage_classifier_readable": false,
+  "full_original_equivalence_verified": false
+}

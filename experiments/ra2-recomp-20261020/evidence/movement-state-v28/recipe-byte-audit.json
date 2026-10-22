@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "isolated_recipe_replay": true,
+  "exact_source_outputs": [
+    {
+      "path": "evidence/movement-state-v28/overlap_probe.c",
+      "sha256": "4ad34346146c0370aa713958ebbaf9365350257a5e2a015b29c4dc26088bcf7c"
+    },
+    {
+      "path": "evidence/movement-state-v28/objects_probe.c",
+      "sha256": "4750c8684dd0926814ef17b17d385fbf55b63a4b9c21451f2604213030d31acf"
+    },
+    {
+      "path": "evidence/movement-state-v28/connection_observer.c",
+      "sha256": "54b9361710c8eba7795141e4e478ce55943122e2912df174bc5f3aba1c864456"
+    },
+    {
+      "path": "make_connection_fixture_v28.py",
+      "sha256": "78274496af2067ee85f83230fb6dadabc6d95e208a68ffe1dbcdec079360c236"
+    },
+    {
+      "path": "run_lifecycle_part_v28.py",
+      "sha256": "23aa522557123decbcd9b77c4068f3d285f6b084b623837f4b2e1c96a2ad990e"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v27/overlap_probe.c",
+      "sha256": "97bc5456edc5377783351c66d5bd8bef460f9fc484b8fceb8c014f2c3e162ca2"
+    },
+    {
+      "path": "evidence/movement-state-v27/objects_probe.c",
+      "sha256": "03df7ff97dbb31dd4aa32557d58cb7339b3f9f9db17b15dd62b178ee6cf0d130"
+    },
+    {
+      "path": "evidence/movement-state-v27/connection_observer.c",
+      "sha256": "3f244915550994e113929722feb237888e3584e928de7a58ce00344d9e876391"
+    },
+    {
+      "path": "make_connection_fixture_v27.py",
+      "sha256": "fca69a1c4f10cd2144683702c311688f14638e6d99664db248e8b06d7935132a"
+    },
+    {
+      "path": "run_lifecycle_part_v27.py",
+      "sha256": "f76d5150ad8b77ee63ea53caae83972c6ba3682b6bd98976cc3ed78f5651100b"
+    },
+    {
+      "path": "extend_probe_v28.py",
+      "sha256": "8c4cc9fcff58d6b88de61767457348d714940b7b7f785e5d189bc2ef0141bcc3"
+    },
+    {
+      "path": "extend_objects_probe_v28.py",
+      "sha256": "a6eff032e2c849c40142f0421e436b75ab3f64b41808c5e08d3f31805edee69e"
+    },
+    {
+      "path": "extend_exit_probe_v28.py",
+      "sha256": "c07b3abc41ad6507a3cb870543bbf6ab96e10628e7cf0891742df4f55fa457c4"
+    },
+    {
+      "path": "extend_observer_v28.py",
+      "sha256": "e22a16b1e0bd1f0c06edc150435de8f644d51c3828ac62503f20cc5be0cfb8cb"
+    },
+    {
+      "path": "extend_chain_observer_v28.py",
+      "sha256": "99845f124bcc255f675db592523fefb85488afb62b1f064704a8df2017b83cec"
+    }
+  ],
+  "original_formal_sources_unchanged": true,
+  "compiled_production_unchanged": true
+}

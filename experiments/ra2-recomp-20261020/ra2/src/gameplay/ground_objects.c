@@ -1,4 +1,5 @@
 #include "ground_objects.h"
+#include "ground_object_kind.h"
 #include "ground_collision.h"
 
 Ra2ObjectPassageOutcome ra2_ground_filter_object(const Ra2ObjectPassageServices *s)
@@ -6,6 +7,12 @@ Ra2ObjectPassageOutcome ra2_ground_filter_object(const Ra2ObjectPassageServices 
     void *c=s->context;
     if(s->query(c,RA2_OBJECT_IS_OWNER)) return RA2_OBJECT_CLEAR_OCCUPATION;
     if(s->query(c,RA2_OBJECT_RELATED_CELL_MATCHES)) return RA2_OBJECT_CLEAR;
+    return ra2_ground_filter_object_kind(s);
+}
+
+Ra2ObjectPassageOutcome ra2_ground_filter_object_kind(const Ra2ObjectPassageServices *s)
+{
+    void *c = s->context;
     if(s->query(c,RA2_OBJECT_OWNER_ACCEPTS_LINK) && s->query(c,RA2_OBJECT_KIND)==6
         && !s->query(c,RA2_OBJECT_BUILDING_OCCUPIES_CELL)) return RA2_OBJECT_SKIP;
     if(s->query(c,RA2_OBJECT_OWNER_PAIR_FLAG_BB0) && s->query(c,RA2_OBJECT_KIND)==1
