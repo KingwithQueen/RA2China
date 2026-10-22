@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "final-congestion-01",
+      "frames": 811,
+      "all_four_moved_and_stopped": true,
+      "objects": [
+        {
+          "id": 1032240,
+          "unique_positions": 58,
+          "path_queue_nonempty_frames": 52,
+          "active_path_frames": 55,
+          "final_position": [
+            18048,
+            29824,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032241,
+          "unique_positions": 43,
+          "path_queue_nonempty_frames": 20,
+          "active_path_frames": 41,
+          "final_position": [
+            17792,
+            30592,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032242,
+          "unique_positions": 47,
+          "path_queue_nonempty_frames": 53,
+          "active_path_frames": 44,
+          "final_position": [
+            17792,
+            29824,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032243,
+          "unique_positions": 91,
+          "path_queue_nonempty_frames": 81,
+          "active_path_frames": 88,
+          "final_position": [
+            17536,
+            30080,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        }
+      ],
+      "identical_vehicle_centers_frames": 0,
+      "building_position": [
+        18048,
+        30080,
+        416
+      ],
+      "building_command_executed": true,
+      "building_target_vehicles_remained_outside_center": true,
+      "passed": true
+    },
+    {
+      "tag": "final-congestion-02",
+      "frames": 811,
+      "all_four_moved_and_stopped": true,
+      "objects": [
+        {
+          "id": 1032240,
+          "unique_positions": 58,
+          "path_queue_nonempty_frames": 52,
+          "active_path_frames": 55,
+          "final_position": [
+            18048,
+            29824,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032241,
+          "unique_positions": 43,
+          "path_queue_nonempty_frames": 20,
+          "active_path_frames": 41,
+          "final_position": [
+            17792,
+            30592,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032242,
+          "unique_positions": 47,
+          "path_queue_nonempty_frames": 53,
+          "active_path_frames": 44,
+          "final_position": [
+            17792,
+            29824,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        },
+        {
+          "id": 1032243,
+          "unique_positions": 91,
+          "path_queue_nonempty_frames": 81,
+          "active_path_frames": 88,
+          "final_position": [
+            17536,
+            30080,
+            416
+          ],
+          "final_mission": [
+            13,
+            -1,
+            -1
+          ]
+        }
+      ],
+      "identical_vehicle_centers_frames": 0,
+      "building_position": [
+        18048,
+        30080,
+        416
+      ],
+      "building_command_executed": true,
+      "building_target_vehicles_remained_outside_center": true,
+      "passed": true
+    }
+  ]
+}

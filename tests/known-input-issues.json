@@ -1,0 +1,10 @@
+[
+  {
+    "name": "MOVIES01.MIX",
+    "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc",
+    "expected_error": "MIX SHA-1 body checksum mismatch",
+    "stored_body_sha1": "84721ce911b7d83390693b3f17de2e19b8ddabd4",
+    "actual_body_sha1": "bb09f198e76b614d3d9dbb3d46693d0584f8e3e9",
+    "reason": "Pre-existing input checksum mismatch, independently confirmed. Strict reader must reject this exact file. Original input is preserved. This does not establish whether the contained movies are playable."
+  }
+]

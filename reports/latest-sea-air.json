@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "directory": "D:\\Program\\红色警戒2\\reports\\naval-air-20261020",
+  "validation": "D:\\Program\\红色警戒2\\reports\\naval-air-20261020\\final\\validation.json",
+  "delivery": "D:\\Program\\红色警戒2\\reports\\naval-air-20261020\\delivery.json",
+  "simulation": 11,
+  "replay": "RA2RPL13",
+  "previous_validation": "D:\\Program\\红色警戒2\\reports\\campaign-20261020\\validation.json"
+}

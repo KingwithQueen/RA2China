@@ -1,0 +1,23 @@
+{
+  "pre_fix_sha256": "cd78228acf5f8f85338aa885d8926a9ffaab893546e87f9807c2c2b0f566af31",
+  "post_fix_sha256": "f40ca4c47e788636e149545112da046a9463f71498797699438a8835e33377b4",
+  "same_first_difference": {
+    "frame": 28,
+    "path": "state.objects[id=1032262].position[0]",
+    "original": 17343,
+    "generated_c": 17344
+  },
+  "class_vtable": "0x7A3540",
+  "object_class": "Infantry",
+  "control_window": [
+    0,
+    120
+  ],
+  "control": {
+    "original_121_state_records_unchanged": true,
+    "generated-c_121_state_records_unchanged": true
+  },
+  "passed": false,
+  "preexisting_infantry_difference_confirmed": true,
+  "budget_exhaustion_verified": false
+}

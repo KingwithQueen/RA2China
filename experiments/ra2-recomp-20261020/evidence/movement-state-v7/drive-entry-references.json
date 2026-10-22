@@ -1,0 +1,53 @@
+{
+  "0x4a2670": {
+    "direct_call_candidates": [
+      {
+        "at": "0x4a0734",
+        "function": "sub_004A05F0",
+        "entry": "0x4a05f0"
+      },
+      {
+        "at": "0x4a0b70",
+        "function": "sub_004A0890",
+        "entry": "0x4a0890"
+      },
+      {
+        "at": "0x4a3976",
+        "function": "sub_004A3600",
+        "entry": "0x4a3600"
+      },
+      {
+        "at": "0x4a3b05",
+        "function": "sub_004A3A98",
+        "entry": "0x4a3a98"
+      },
+      {
+        "at": "0x4a41b8",
+        "function": "sub_004A4174",
+        "entry": "0x4a4174"
+      },
+      {
+        "at": "0x4a41da",
+        "function": "sub_004A4174",
+        "entry": "0x4a4174"
+      },
+      {
+        "at": "0x4a4441",
+        "function": "sub_004A4174",
+        "entry": "0x4a4174"
+      },
+      {
+        "at": "0x4a4513",
+        "function": "sub_004A4502",
+        "entry": "0x4a4502"
+      }
+    ],
+    "absolute_pointer_candidates": []
+  },
+  "0x4a05f0": {
+    "direct_call_candidates": [],
+    "absolute_pointer_candidates": [
+      "0x7a050c"
+    ]
+  }
+}

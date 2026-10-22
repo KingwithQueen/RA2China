@@ -1,0 +1,488 @@
+{
+  "date": "2026-10-21 Asia/Shanghai",
+  "stage": "第2247帧修复和单位移动首批可读C",
+  "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+  "exe_sha256": "3c905c50b33124ed62f99aec7baed14da8a7186e2cd91526ae9ffc0ec29e31fc",
+  "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "seed": 12345,
+  "repaired_difference": {
+    "frame_before_difference": 2246,
+    "first_state_difference": 2247,
+    "original_call": "0x004C9B83",
+    "operands": {
+      "base_speed": 10,
+      "factor_bits": "3FECCCCCCCCCCCCC",
+      "factor_decimal": "0.8999999999999999",
+      "control_word": "0x0E7F"
+    },
+    "original_extended_value_exact": "5066549580791807/562949953421312",
+    "generated_double_value_exact": "9",
+    "original_truncated": 8,
+    "old_c_truncated": 9,
+    "progress_next_frame": {
+      "original": 4,
+      "old_c": 5
+    },
+    "position_x_next_frame": {
+      "original": 32045,
+      "old_c": 32044
+    },
+    "raw_probe_records": {
+      "original": {
+        "kind": "speed_calculation",
+        "frame": 2246,
+        "id": 1032341,
+        "base_speed": 10,
+        "factor_bits": "ccccccccccccec3f",
+        "value_bits": "00f8ffffffffff8f0240",
+        "format": 80
+      },
+      "generated-c": {
+        "kind": "speed_calculation",
+        "frame": 2246,
+        "id": 1032341,
+        "base_speed": 10,
+        "factor_bits": "ccccccccccccec3f",
+        "value_bits": "0000000000002240",
+        "format": 64
+      }
+    },
+    "ruled_out": "0x004A202B arrival adjustment is not executed at frame 2246"
+  },
+  "readable_modules": {
+    "speed": {
+      "function": "ra2_ground_scale_speed",
+      "original": "0x004C9B79..0x004C9B83",
+      "purpose": "基础速度乘当前系数后取整数进度"
+    },
+    "fraction": {
+      "function": "ra2_ground_progress_fraction",
+      "original": "0x004A23F0..0x004A241F",
+      "lifted_tail_copies": 12
+    },
+    "interpolation": {
+      "function": "ra2_ground_interpolate_position",
+      "original": "0x007220C0",
+      "typed_points": true
+    },
+    "transform": {
+      "function": "ra2_ground_transform_path_sample",
+      "original": "0x004A4740",
+      "preserves_output_z_in_bridge": true
+    },
+    "arrival": {
+      "function": "ra2_ground_arrival_progress_adjustment",
+      "original": "0x004A2015..0x004A202B",
+      "lifted_tail_copies": 6
+    }
+  },
+  "module_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\unit_movement.c",
+  "abi_bridge": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\movement_bridge.c",
+  "numeric_compatibility": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\compat\\x87_arithmetic.c",
+  "numeric_cpu_probe": {
+    "passed": true,
+    "scale": 115380,
+    "arrival": 49932,
+    "fraction": 204,
+    "interpolated_axes": 360000,
+    "arithmetic": 360000,
+    "precision_modes": 3,
+    "rounding_modes": 4
+  },
+  "original_function_and_abi_probe": {
+    "passed": true,
+    "original_interpolations": 120000,
+    "original_transforms": 24576,
+    "abi_cases": 27648,
+    "conversion_control": 3711
+  },
+  "parts": {
+    "speed-fixed": {
+      "report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\speed-fixed\\comparison.json",
+      "exe_sha256": "28d7cdfda317062655d85d37bf5823d9c05e36fe2f5860bcb83b964b65b8cc94",
+      "passed": true,
+      "frame_range_inclusive": [
+        2190,
+        2350
+      ]
+    },
+    "fraction": {
+      "report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\fraction\\comparison.json",
+      "exe_sha256": "a24bea7e04c7871520c7d98fd85564c5d336b70189fd37250d618b48b2ef4c71",
+      "passed": true,
+      "frame_range_inclusive": [
+        2190,
+        2350
+      ]
+    },
+    "interpolation": {
+      "report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\interpolation\\comparison.json",
+      "exe_sha256": "6f8d871cd6b61db8b05836aa64ab29b84e9f667c2000edb5221ed3496a43f783",
+      "passed": true,
+      "frame_range_inclusive": [
+        2190,
+        2350
+      ]
+    },
+    "transform": {
+      "report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\transform\\comparison.json",
+      "exe_sha256": "a502b97889f68fd50056d39b9851bb359e78f15b393d386b2ceaefbde762c9c3",
+      "passed": true,
+      "frame_range_inclusive": [
+        2190,
+        2350
+      ]
+    },
+    "arrival": {
+      "report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\arrival\\comparison.json",
+      "exe_sha256": "592f8b2103a59bc22c1727f961fcb0d7cc48d0c2ca77ba50a9805ee357c821aa",
+      "passed": true,
+      "frame_range_inclusive": [
+        2190,
+        2350
+      ]
+    }
+  },
+  "final_runs": {
+    "idle-final-long": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\idle-final-long\\comparison.json",
+    "move-turn-stop-final-02": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\move-turn-stop-final-02\\comparison.json",
+    "move-turn-stop-final-03": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\move-turn-stop-final-03\\comparison.json",
+    "move-turn-control-no-stop": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\move-turn-control-no-stop\\comparison.json"
+  },
+  "idle_frame_range_inclusive": [
+    2190,
+    3000
+  ],
+  "idle_frames": 811,
+  "controlled_frame_range_inclusive": [
+    2190,
+    2600
+  ],
+  "controlled_frames": 411,
+  "initial_techno_objects": 66,
+  "repeatability": {
+    "original": {
+      "passed": true,
+      "frames": 411,
+      "trace_sha256": "1ab16eb14c0354ca90ac1bec5e36f26691ae4e1653a5163861e236faac8a8e18",
+      "byte_identical": true
+    },
+    "generated-c": {
+      "passed": true,
+      "frames": 411,
+      "trace_sha256": "1ab16eb14c0354ca90ac1bec5e36f26691ae4e1653a5163861e236faac8a8e18",
+      "byte_identical": true
+    }
+  },
+  "stop_effect_counterfactual": {
+    "original": {
+      "matched_before_stop_frame": 2270,
+      "stop_command_frame": 2270,
+      "settled_frame": 2301,
+      "stop_position": [
+        18048,
+        28800,
+        416
+      ],
+      "without_stop_final_position": [
+        17280,
+        27776,
+        416
+      ],
+      "counterfactual_changes_result": true
+    },
+    "generated-c": {
+      "matched_before_stop_frame": 2270,
+      "stop_command_frame": 2270,
+      "settled_frame": 2301,
+      "stop_position": [
+        18048,
+        28800,
+        416
+      ],
+      "without_stop_final_position": [
+        17280,
+        27776,
+        416
+      ],
+      "counterfactual_changes_result": true
+    }
+  },
+  "old_stop_observer_expectation": {
+    "archived_report": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\runs\\move-turn-stop-final-01\\comparison.json",
+    "all_411_states_equal": true,
+    "why_report_failed": "required current mission 13 at a boundary; native queued 13 then transitioned directly to Guard 5",
+    "new_acceptance": "Stop event executed, queued after execution, stable final position and idle mission; checked against no-Stop control"
+  },
+  "coverage": {
+    "input_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+    "regions": [
+      {
+        "address": "0x540676",
+        "length": 48,
+        "role": "真实模拟帧递增"
+      },
+      {
+        "address": "0x53d890",
+        "length": 144,
+        "role": "对象逻辑更新边界"
+      },
+      {
+        "address": "0x40ffd0",
+        "length": 37,
+        "role": "对象编号赋值"
+      },
+      {
+        "address": "0x663170",
+        "length": 14,
+        "role": "场景编号递增"
+      },
+      {
+        "address": "0x6c11e1",
+        "length": 83,
+        "role": "Techno 全局列表"
+      },
+      {
+        "address": "0x638790",
+        "length": 168,
+        "role": "模拟 RNG 构造"
+      },
+      {
+        "address": "0x638840",
+        "length": 81,
+        "role": "模拟 RNG 推进"
+      },
+      {
+        "address": "0x4b89d0",
+        "length": 84,
+        "role": "方向字段与填充范围"
+      },
+      {
+        "address": "0x4b6170",
+        "length": 125,
+        "role": "MEGAMISSION 构造"
+      },
+      {
+        "address": "0x6b54a0",
+        "length": 102,
+        "role": "对象和地图格稳定目标编码"
+      },
+      {
+        "address": "0x4b6ab8",
+        "length": 356,
+        "role": "MEGAMISSION 执行与生命字段"
+      },
+      {
+        "address": "0x4c61a0",
+        "length": 366,
+        "role": "原版事件入队片段"
+      },
+      {
+        "address": "0x4a23f0",
+        "length": 60,
+        "role": "发生差异的整数乘系数和单精度存储"
+      },
+      {
+        "address": "0x7220c0",
+        "length": 114,
+        "role": "三维向量插值"
+      },
+      {
+        "address": "0x4c9b10",
+        "length": 166,
+        "role": "后续差异可继续调查的移动速度入口"
+      }
+    ],
+    "move_coefficient_bits": "3fc2492492492492",
+    "frame_counter": "0x00A40D2C",
+    "boundary": "0x0053D890 entry",
+    "object_key": "AbstractClass +0x10, sorted; owner normalized to HouseClass vector index",
+    "fields": {
+      "health": "ObjectClass +0x6C",
+      "position": "ObjectClass +0x88/+0x8C/+0x90",
+      "mission": "MissionClass +0x98/+0x9C/+0xA0",
+      "facings": "Techno +0x2C8/+0x2E0/+0x2F8; 16/16/32/32/16 bit fields",
+      "rng": "Scenario +0x218 flag, +0x21C/+0x220 indices, +0x224 250 uint32 words",
+      "house_24c": "raw scalar at +0x24C; full resource semantics not claimed"
+    },
+    "excluded_proven_padding": {
+      "rng": "+1..+3",
+      "facing": "+2..+3, +6..+7, timer +0xC, +0x16..+0x17",
+      "x87_control": "reserved bits, compared mask 0x1F3F"
+    },
+    "not_yet_covered": [
+      "all object targets",
+      "production queues",
+      "full resource accounting",
+      "selection/attack/production commands",
+      "original CRC coverage",
+      "whole game state",
+      "all x87 operations"
+    ],
+    "unsupported_instruction_failure_guards_retained": 37
+  },
+  "unsupported_failure_guards_retained": 37,
+  "auxiliary": {
+    "exe_sha256": "3c905c50b33124ed62f99aec7baed14da8a7186e2cd91526ae9ffc0ec29e31fc",
+    "results": [
+      {
+        "case": "menu-original",
+        "exit_code": 0,
+        "passed": true,
+        "diagnostics_disabled": true
+      },
+      {
+        "case": "menu-c",
+        "exit_code": 0,
+        "passed": true,
+        "diagnostics_disabled": true
+      },
+      {
+        "case": "invalid-id-c",
+        "exit_code": 7,
+        "passed": true,
+        "diagnostics_disabled": false
+      }
+    ],
+    "passed": true
+  },
+  "preservation": {
+    "input_directory": "H:\\开发\\运行版本\\原版1.006",
+    "inputs": [
+      {
+        "name": "BINKW32.DLL",
+        "expected_sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f",
+        "actual_sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f",
+        "unchanged": true
+      },
+      {
+        "name": "Blowfish.dll",
+        "expected_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992",
+        "actual_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992",
+        "unchanged": true
+      },
+      {
+        "name": "Blowfish.tlb",
+        "expected_sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa",
+        "actual_sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa",
+        "unchanged": true
+      },
+      {
+        "name": "Conquer.dat",
+        "expected_sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b",
+        "actual_sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b",
+        "unchanged": true
+      },
+      {
+        "name": "ddraw.dll",
+        "expected_sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9",
+        "actual_sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9",
+        "unchanged": true
+      },
+      {
+        "name": "ddraw.ini",
+        "expected_sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522",
+        "actual_sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522",
+        "unchanged": true
+      },
+      {
+        "name": "game.exe",
+        "expected_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+        "actual_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+        "unchanged": true
+      },
+      {
+        "name": "LANGUAGE.MIX",
+        "expected_sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192",
+        "actual_sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192",
+        "unchanged": true
+      },
+      {
+        "name": "MAPS01.MIX",
+        "expected_sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74",
+        "actual_sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74",
+        "unchanged": true
+      },
+      {
+        "name": "MAPS02.MIX",
+        "expected_sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f",
+        "actual_sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f",
+        "unchanged": true
+      },
+      {
+        "name": "MOVIES01.MIX",
+        "expected_sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc",
+        "actual_sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc",
+        "unchanged": true
+      },
+      {
+        "name": "movies02.mix",
+        "expected_sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643",
+        "actual_sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643",
+        "unchanged": true
+      },
+      {
+        "name": "MULTI.MIX",
+        "expected_sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc",
+        "actual_sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.exe",
+        "expected_sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73",
+        "actual_sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73",
+        "unchanged": true
+      },
+      {
+        "name": "RA2.INI",
+        "expected_sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5",
+        "actual_sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.lcf",
+        "expected_sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece",
+        "actual_sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece",
+        "unchanged": true
+      },
+      {
+        "name": "ra2.mix",
+        "expected_sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914",
+        "actual_sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.tlb",
+        "expected_sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4",
+        "actual_sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4",
+        "unchanged": true
+      },
+      {
+        "name": "SAVE0029.SAV",
+        "expected_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "actual_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "unchanged": true
+      },
+      {
+        "name": "THEME.MIX",
+        "expected_sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c",
+        "actual_sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c",
+        "unchanged": true
+      }
+    ],
+    "all_20_original_inputs_unchanged": true,
+    "old_engine_sha256": "05d7221ffacdddb2a300aee2c51b61d1fa1d269a5336a08e0c68b023f51bdd27",
+    "old_engine_unchanged": true,
+    "whole_H_directory_claimed_unchanged": false
+  },
+  "shared_host": true,
+  "full_original_equivalence_verified": false,
+  "complete_readable_movement_state_machine": false,
+  "new_mod_rules_added": false,
+  "next_observed_difference": null,
+  "source_snapshot": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\final-source",
+  "source_manifest": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\source-manifest.json",
+  "rollback_exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-readable-v1\\baseline\\ra2\\build-original-c\\ra2.exe",
+  "new_commits": false,
+  "pushed": false
+}

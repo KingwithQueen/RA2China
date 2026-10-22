@@ -1,0 +1,66 @@
+{
+  "exe_sha256": "734138bb0a3b1638745a3e61adb9f59953e3e48ddca2129d1a4ef585407b0bfa",
+  "results": [
+    {
+      "tag": "i-ring2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "i-ring3",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "i-tc0",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "i-tc1",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "i-tc2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "i-large",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "i-ur2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "i-ur3",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "i-long",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1501
+    },
+    {
+      "tag": "i-second-failure",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 651
+    }
+  ],
+  "passed": true
+}

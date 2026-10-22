@@ -1,0 +1,66 @@
+{
+  "exe_sha256": "2e19f68cf45123d97c94460478e81edd00bfbd1ba81dc11bd2ee16548602a638",
+  "results": [
+    {
+      "tag": "schema8-standard-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "schema8-congestion-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "schema8-restricted-rock",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "schema8-restricted-clear",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "schema8-wall",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1001
+    },
+    {
+      "tag": "schema8-gate",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 701
+    },
+    {
+      "tag": "schema8-truck",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "schema8-budget-natural",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "schema8-budget-entry",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 101
+    },
+    {
+      "tag": "schema8-cloaked-corridor",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    }
+  ],
+  "passed": true
+}

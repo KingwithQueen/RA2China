@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source_files": 829,
+  "legacy_budget_scene_fields_scoped": true,
+  "normal_pathfinding_exhaustion_verified": true,
+  "production_executable_unchanged": true,
+  "finalizer_archived": true
+}

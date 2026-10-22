@@ -1,0 +1,12 @@
+BasedOnStyle: Microsoft
+ColumnLimit: 160
+IndentWidth: 4
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortBlocksOnASingleLine: Never
+AllowShortLoopsOnASingleLine: true
+SortIncludes: Never
+ReflowComments: Never
+PointerAlignment: Right
+LineEnding: LF

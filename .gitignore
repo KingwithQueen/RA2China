@@ -1,0 +1,60 @@
+/build/
+/out/
+*.user
+*.suo
+
+# Local compiler caches and editor/Python state
+**/__pycache__/
+*.py[cod]
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.tmp
+.vs/
+.vscode/
+
+# Recoverable local cleanup archives and preserved upstream Git metadata
+/.local-archives/
+/.local-vcs/
+
+# Large local validation runs and original retail assets stay on this machine.
+/reports/**
+!/reports/latest-*.json
+/experiments/ra2-recomp-20261020/temp/
+/experiments/ra2-recomp-20261020/python_lib/
+/experiments/ra2-recomp-20261020/ra2/build*/
+/experiments/ra2-recomp-20261020/ra2/work/
+/experiments/ra2-recomp-20261020/ra2/game/
+/experiments/ra2-recomp-20261020/ra2/original/
+
+# Keep compact evidence, probe sources and scenario recipes in Git; retain
+# full source/EXE rollback copies, traces and recordings locally.
+/experiments/ra2-recomp-20261020/evidence/**
+!/experiments/ra2-recomp-20261020/evidence/*/
+!/experiments/ra2-recomp-20261020/evidence/*/*.json
+!/experiments/ra2-recomp-20261020/evidence/*/*.c
+!/experiments/ra2-recomp-20261020/evidence/*/*.h
+!/experiments/ra2-recomp-20261020/evidence/*/*.asm
+!/experiments/ra2-recomp-20261020/evidence/*/fixtures/
+!/experiments/ra2-recomp-20261020/evidence/*/fixtures/*.MAP
+!/experiments/ra2-recomp-20261020/evidence/*/fixtures/*.ini
+/experiments/ra2-recomp-20261020/evidence/*/runs/
+/experiments/ra2-recomp-20261020/evidence/*/baseline/
+/experiments/ra2-recomp-20261020/evidence/*/final-source/
+/experiments/ra2-recomp-20261020/evidence/*/parts/
+/experiments/ra2-recomp-20261020/evidence/*/investigations/
+
+*.exe
+*.dll
+*.mix
+*.MIX
+*.sav
+*.SAV
+*.mp4
+*.mkv
+*.avi
+*.log
+Thumbs.db
+Desktop.ini

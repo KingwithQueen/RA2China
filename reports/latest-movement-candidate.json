@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "status": "promoted",
+  "formal_baseline_generation": 14,
+  "verification_round": 15,
+  "executable": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+  "exe_sha256": "441208d733980106559f1d7033a43c7bdeb43e53df7a4b7bd81d2b5ca2d621d2",
+  "validation": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v15\\validation.json",
+  "full_original_equivalence_verified": false,
+  "report": "D:\\Program\\红色警戒2\\docs\\单位移动第十四批-搜索准备与路线重建-20261022.txt"
+}

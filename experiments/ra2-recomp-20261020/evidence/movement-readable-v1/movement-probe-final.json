@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scale": 115380,
+  "arrival": 49932,
+  "fraction": 204,
+  "interpolated_axes": 360000,
+  "arithmetic": 360000,
+  "precision_modes": 3,
+  "rounding_modes": 4
+}

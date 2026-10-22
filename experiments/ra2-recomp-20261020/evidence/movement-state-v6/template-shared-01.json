@@ -1,0 +1,4 @@
+prepare mismatch phase=2 case=0 fixture=a2a929fd state=1 abi=0 resume=0/0 calls=3/3 cw=7f/7f
+  operation=26/26 v=80000000,7fffffff,0/80000000,7fffffff,0
+  operation=36/36 v=1,0,0/1,0,0
+  operation=38/38 v=0,0,0/0,0,0

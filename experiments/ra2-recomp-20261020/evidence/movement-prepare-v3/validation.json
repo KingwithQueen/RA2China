@@ -1,0 +1,4033 @@
+{
+  "passed": true,
+  "executable": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+  "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+  "seed": 12345,
+  "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "save_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+  "state_schema": 6,
+  "frame_range_inclusive": [
+    2190,
+    3000
+  ],
+  "frames_per_run": 811,
+  "modules": {
+    "prepare_entry": "0x4A2690..0x4A285E",
+    "retry_path": "0x4A285E..0x4A2A83",
+    "failure_recovery": "0x4A2DFD..0x4A2F7A; shared 0x4A2EAC",
+    "overlay_barrier": "0x703331..0x703439",
+    "gate_barrier": "0x703536..0x7035AC"
+  },
+  "parts": {
+    "prepare-entry": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "14746c979befa1df05256a786d6ce5482e326b17248b89f327b8043802671fe9",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": false,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              28800,
+              416
+            ],
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              80,
+              114
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2230,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              67,
+              108
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2230,
+            "event_frame": 2230,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2270,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2270,
+            "event_frame": 2270,
+            "id": 1032240,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "retry-local-com": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "99ec1c28e66bba79e448a3e74e42f403329e7608f21f2034dd5ba9c8e8720613",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "failure-recovery": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "07fd2e6965014ce23285754129aa27d80fcb3d475cc232f7483669a80a99241f",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "overlay-barrier": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "e988681d36523506e383e3b909bb60dfdb1d69151600a82edcaf27b526602fb9",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "final-congestion-01": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    }
+  },
+  "final_runs": {
+    "final-idle": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "ff2bfcee1f5eef3c6816a9c48f427433d2fc6083beab987f7e11ddb9c469950a"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "ff2bfcee1f5eef3c6816a9c48f427433d2fc6083beab987f7e11ddb9c469950a"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [],
+        "commands": [],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        }
+      },
+      "passed": true
+    },
+    "final-standard-01": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": false,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              28800,
+              416
+            ],
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              80,
+              114
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2230,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              67,
+              108
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2230,
+            "event_frame": 2230,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2270,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2270,
+            "event_frame": 2270,
+            "id": 1032240,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "final-standard-02": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": false,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              28800,
+              416
+            ],
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              80,
+              114
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2230,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              67,
+              108
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2230,
+            "event_frame": 2230,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2270,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2270,
+            "event_frame": 2270,
+            "id": 1032240,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "final-congestion-01": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "final-congestion-02": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032241,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032243,
+            "mission": 2,
+            "cell": [
+              70,
+              118
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032241,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032243,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2350,
+            "id": 1032242,
+            "mission": 2,
+            "cell": [
+              70,
+              117
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "execute",
+            "frame": 2350,
+            "event_frame": 2350,
+            "id": 1032242,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032241,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032242,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "submit",
+            "frame": 2500,
+            "id": 1032243,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032240,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032241,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032242,
+            "mission": 13
+          },
+          {
+            "kind": "execute",
+            "frame": 2500,
+            "event_frame": 2500,
+            "id": 1032243,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        },
+        "completed_stop_verified": true
+      },
+      "passed": true
+    },
+    "final-water-target": {
+      "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+      "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+      "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+      "seed": 12345,
+      "runs": [
+        {
+          "mode": "original",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "7dc7f97a5a93007daca32fc409d657c8092f15fd207ef0e8ca2a5671d8358737"
+        },
+        {
+          "mode": "generated-c",
+          "exit_code": 0,
+          "passed": true,
+          "failures": [],
+          "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+          "save_is_private_copy": true,
+          "state_sha256": "7dc7f97a5a93007daca32fc409d657c8092f15fd207ef0e8ca2a5671d8358737"
+        }
+      ],
+      "shared_host": true,
+      "whole_game_equivalence_verified": false,
+      "comparison": {
+        "passed": true,
+        "first": 2190,
+        "last": 3000,
+        "frames_compared": 811,
+        "equal_frames": 811,
+        "consecutive_equal_frames": 811,
+        "first_difference": null,
+        "differing_frames": [],
+        "rng_equal_all_frames": true,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": false,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17280,
+              29312,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "commands": [
+          {
+            "kind": "submit",
+            "frame": 2192,
+            "id": 1032240,
+            "mission": 2,
+            "cell": [
+              54,
+              107
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2192,
+            "event_frame": 2192,
+            "id": 1032240,
+            "mission": 2
+          },
+          {
+            "kind": "submit",
+            "frame": 2800,
+            "id": 1032240,
+            "mission": 13,
+            "cell": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "execute",
+            "frame": 2800,
+            "event_frame": 2800,
+            "id": 1032240,
+            "mission": 13
+          }
+        ],
+        "command_difference": null,
+        "object_count_first": 66,
+        "negative_control": {
+          "passed": true,
+          "injected": "position x +1",
+          "located": {
+            "path": "state.objects[id=1032152].position[0]",
+            "original": 22656,
+            "generated_c": 22657
+          },
+          "missing_frame_rejected": true
+        }
+      },
+      "passed": true
+    }
+  },
+  "repeatability": {
+    "standard/original": {
+      "byte_identical": true,
+      "frames": 811,
+      "sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+    },
+    "standard/generated-c": {
+      "byte_identical": true,
+      "frames": 811,
+      "sha256": "6ae43535928f41e42ad5fa381ea12393572f5ad26c4697c09860c50b7cf15228"
+    },
+    "congestion/original": {
+      "byte_identical": true,
+      "frames": 811,
+      "sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+    },
+    "congestion/generated-c": {
+      "byte_identical": true,
+      "frames": 811,
+      "sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de"
+    }
+  },
+  "native_probes": {
+    "prepare-probe-delay-boundary-final.json": {
+      "passed": true,
+      "entry_cases": 65536,
+      "retry_cases": 65536,
+      "state_calls_abi_cw_verified": true,
+      "entry_outcomes": [
+        64191,
+        291,
+        1054
+      ],
+      "retry_outcomes": [
+        47356,
+        1763,
+        16312,
+        105
+      ]
+    },
+    "recovery_probe-final.json": {
+      "passed": true,
+      "failure_budget_cases": 65536,
+      "shared_finish_cases": 65536,
+      "state_calls_abi_verified": true
+    },
+    "barrier_probe-final.json": {
+      "passed": true,
+      "overlay_cases": 65536,
+      "gate_cases": 65536,
+      "blocked": [
+        8608,
+        4107
+      ],
+      "continued": [
+        56928,
+        61429
+      ],
+      "query_order_and_abi_verified": true
+    }
+  },
+  "new_native_case_count": 393216,
+  "unchanged_module_regressions": {
+    "path_fragment_probe-regression.json": {
+      "passed": true,
+      "original_fragment_cases": 6048,
+      "registers_and_flags_verified": true
+    },
+    "drive_process_probe-regression.json": {
+      "passed": true,
+      "native_process_fixtures": 32768,
+      "service_call_order_and_state_verified": true
+    },
+    "collision_probe-regression.json": {
+      "passed": true,
+      "native_occupation_cases": 131072,
+      "native_bridge_layer_cases": 8192,
+      "query_order_and_abi_verified": true
+    },
+    "arrival_probe-regression.json": {
+      "passed": true,
+      "native_arrival_cases": 65536,
+      "continued": 3937,
+      "returned": 61599,
+      "state_calls_abi_verified": true
+    },
+    "movement-probe-regression.json": {
+      "passed": true,
+      "scale": 115380,
+      "arrival": 49932,
+      "fraction": 204,
+      "interpolated_axes": 360000,
+      "arithmetic": 360000,
+      "precision_modes": 3,
+      "rounding_modes": 4
+    },
+    "original-movement-probe-regression.json": {
+      "passed": true,
+      "original_interpolations": 120000,
+      "original_transforms": 24576,
+      "abi_cases": 27648,
+      "conversion_control": 3711
+    }
+  },
+  "unchanged_module_source_hashes_verified": true,
+  "auxiliary": {
+    "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+    "results": [
+      {
+        "case": "menu-original",
+        "exit_code": 0,
+        "passed": true,
+        "diagnostics_disabled": true
+      },
+      {
+        "case": "menu-c",
+        "exit_code": 0,
+        "passed": true,
+        "diagnostics_disabled": true
+      },
+      {
+        "case": "invalid-id-c",
+        "exit_code": 7,
+        "passed": true,
+        "diagnostics_disabled": false
+      }
+    ],
+    "passed": true
+  },
+  "scenario_effects": {
+    "passed": true,
+    "results": [
+      {
+        "tag": "final-congestion-01",
+        "frames": 811,
+        "units": [
+          {
+            "id": 1032152,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032153,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032154,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032155,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032156,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032240,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2350,
+                0
+              ],
+              [
+                2351,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2351,
+              2352
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032241,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032242,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2350,
+                0
+              ],
+              [
+                2351,
+                0
+              ],
+              [
+                2363,
+                8
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2351,
+              2352,
+              2364
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032243,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2268,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2269
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032257,
+            "timer_states": [
+              [
+                108,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032258,
+            "timer_states": [
+              [
+                84,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032259,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032260,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032261,
+            "timer_states": [
+              [
+                26,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032341,
+            "timer_states": [
+              [
+                2106,
+                0
+              ],
+              [
+                2357,
+                0
+              ],
+              [
+                2490,
+                0
+              ],
+              [
+                2685,
+                0
+              ],
+              [
+                2924,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2358,
+              2491,
+              2686,
+              2925
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          }
+        ],
+        "retry_timer_changes_observed": true,
+        "failure_budget_changes_observed": false,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "tag": "final-congestion-02",
+        "frames": 811,
+        "units": [
+          {
+            "id": 1032152,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032153,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032154,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032155,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032156,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032240,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2350,
+                0
+              ],
+              [
+                2351,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2351,
+              2352
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032241,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032242,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2350,
+                0
+              ],
+              [
+                2351,
+                0
+              ],
+              [
+                2363,
+                8
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2351,
+              2352,
+              2364
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032243,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ],
+              [
+                2268,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194,
+              2269
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032257,
+            "timer_states": [
+              [
+                108,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032258,
+            "timer_states": [
+              [
+                84,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032259,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032260,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032261,
+            "timer_states": [
+              [
+                26,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032341,
+            "timer_states": [
+              [
+                2106,
+                0
+              ],
+              [
+                2357,
+                0
+              ],
+              [
+                2490,
+                0
+              ],
+              [
+                2685,
+                0
+              ],
+              [
+                2924,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2358,
+              2491,
+              2686,
+              2925
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          }
+        ],
+        "retry_timer_changes_observed": true,
+        "failure_budget_changes_observed": false,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              18048,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032241,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              30592,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032242,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17792,
+              29824,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          },
+          {
+            "id": 1032243,
+            "all_fields_equal": true,
+            "movement_observed": true,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17536,
+              30080,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "tag": "final-water-target",
+        "frames": 811,
+        "units": [
+          {
+            "id": 1032152,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032153,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032154,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032155,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032156,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032240,
+            "timer_states": [
+              [
+                0,
+                0
+              ],
+              [
+                2192,
+                0
+              ],
+              [
+                2193,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2193,
+              2194
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032241,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032242,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032243,
+            "timer_states": [
+              [
+                0,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032257,
+            "timer_states": [
+              [
+                108,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032258,
+            "timer_states": [
+              [
+                84,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032259,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032260,
+            "timer_states": [
+              [
+                172,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032261,
+            "timer_states": [
+              [
+                26,
+                0
+              ]
+            ],
+            "timer_changed_frames": [],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          },
+          {
+            "id": 1032341,
+            "timer_states": [
+              [
+                2106,
+                0
+              ],
+              [
+                2361,
+                0
+              ],
+              [
+                2494,
+                0
+              ],
+              [
+                2689,
+                0
+              ],
+              [
+                2928,
+                0
+              ]
+            ],
+            "timer_changed_frames": [
+              2362,
+              2495,
+              2690,
+              2929
+            ],
+            "failure_budgets": [
+              10
+            ],
+            "failure_budget_changed_frames": []
+          }
+        ],
+        "retry_timer_changes_observed": true,
+        "failure_budget_changes_observed": false,
+        "controlled_objects": [
+          {
+            "id": 1032240,
+            "all_fields_equal": true,
+            "movement_observed": false,
+            "stop_queued": true,
+            "stop_entered": true,
+            "stop_executed": true,
+            "stop_queued_after_execution": true,
+            "stop_completed": true,
+            "final_position": [
+              17280,
+              29312,
+              416
+            ],
+            "final_mission": [
+              13,
+              -1,
+              -1
+            ],
+            "last_ten_positions_stationary": true
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "water_target_selection": {
+    "catalog": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\cell-catalog\\original\\cells.json",
+    "source_frame": 2190,
+    "object_id": 1032240,
+    "origin_cell": [
+      67,
+      114
+    ],
+    "target_cell": [
+      54,
+      107
+    ],
+    "manhattan_cell_distance": 20,
+    "all_25_neighbor_cells_land_2_without_bridge": true,
+    "land_2_water_evidence": "原版 Process 水面尾迹使用 Cell+0xEC==2；本轮未改变地形或可通行条件。"
+  },
+  "water_vs_standard_initial_prefix": {
+    "original": {
+      "same_initial_states_through_frame": 2192,
+      "standard_move_observed": true,
+      "water_move_observed": false
+    },
+    "generated-c": {
+      "same_initial_states_through_frame": 2192,
+      "standard_move_observed": true,
+      "water_move_observed": false
+    }
+  },
+  "failure_budget_changes_seen_in_real_scene": false,
+  "cell_catalog": {
+    "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+    "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+    "input_exe_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+    "seed": 12345,
+    "runs": [
+      {
+        "mode": "original",
+        "exit_code": 0,
+        "passed": true,
+        "failures": [],
+        "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "save_is_private_copy": true,
+        "state_sha256": "0054eb0c8cf1ff1ce85015abbb8407658f5ffda3781c483a477801203f91b441"
+      },
+      {
+        "mode": "generated-c",
+        "exit_code": 0,
+        "passed": true,
+        "failures": [],
+        "save_before_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "save_after_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "save_is_private_copy": true,
+        "state_sha256": "0054eb0c8cf1ff1ce85015abbb8407658f5ffda3781c483a477801203f91b441"
+      }
+    ],
+    "shared_host": true,
+    "whole_game_equivalence_verified": false,
+    "comparison": {
+      "passed": true,
+      "first": 2190,
+      "last": 2191,
+      "frames_compared": 2,
+      "equal_frames": 2,
+      "consecutive_equal_frames": 2,
+      "first_difference": null,
+      "differing_frames": [],
+      "rng_equal_all_frames": true,
+      "controlled_objects": [],
+      "commands": [],
+      "command_difference": null,
+      "object_count_first": 66,
+      "negative_control": {
+        "passed": true,
+        "injected": "position x +1",
+        "located": {
+          "path": "state.objects[id=1032152].position[0]",
+          "original": 22656,
+          "generated_c": 22657
+        },
+        "missing_frame_rejected": true
+      }
+    },
+    "cell_catalog_equal": true,
+    "passed": true
+  },
+  "com_binding_evidence": {
+    "private_bindings": {
+      "final-idle/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-idle\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-idle/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-idle\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-standard-01/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-standard-01\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-standard-01/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-standard-01\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-standard-02/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-standard-02\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-standard-02/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-standard-02\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-congestion-01/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-congestion-01\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-congestion-01/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-congestion-01\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-congestion-02/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-congestion-02\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-congestion-02/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-congestion-02\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-water-target/original": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-water-target\\original\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      },
+      "final-water-target/generated-c": {
+        "successful_private_factory_calls": 13,
+        "requested_server": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\runs\\final-water-target\\generated-c\\game\\Blowfish.dll",
+        "server_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+      }
+    },
+    "registered_server_read_only": {
+      "key": "CLSID\\{1440AD10-6AA8-11D1-B6F9-00A024DDAFD1}\\InprocServer32",
+      "server": "V:\\SteamLibrary\\steamapps\\common\\Command & Conquer Red Alert II\\blowfish.dll",
+      "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+    },
+    "private_input_dll_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992",
+    "observed_com_error_hresult": "0x80004003",
+    "failed_attempts_retained": [
+      "retry-path",
+      "retry-path-rerun",
+      "startup-diagnostics"
+    ],
+    "c_states_before_after_binding_byte_identical": true,
+    "c_trace_sha256": "fe920f80bdc835e58f563b8820b5d94ce98d2051a4abbbd911d55bbdf4dae2de",
+    "registry_written": false,
+    "dll_modified": false,
+    "ole_run_diagnostic_shim_removed": true
+  },
+  "preservation": {
+    "passed": true,
+    "inputs": [
+      {
+        "name": "BINKW32.DLL",
+        "bytes": 286208,
+        "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f",
+        "actual_sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f",
+        "unchanged": true
+      },
+      {
+        "name": "Blowfish.dll",
+        "bytes": 225331,
+        "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992",
+        "actual_sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992",
+        "unchanged": true
+      },
+      {
+        "name": "Blowfish.tlb",
+        "bytes": 2348,
+        "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa",
+        "actual_sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa",
+        "unchanged": true
+      },
+      {
+        "name": "Conquer.dat",
+        "bytes": 50,
+        "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b",
+        "actual_sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b",
+        "unchanged": true
+      },
+      {
+        "name": "ddraw.dll",
+        "bytes": 411648,
+        "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9",
+        "actual_sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9",
+        "unchanged": true
+      },
+      {
+        "name": "ddraw.ini",
+        "bytes": 16253,
+        "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522",
+        "actual_sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522",
+        "unchanged": true
+      },
+      {
+        "name": "game.exe",
+        "bytes": 4485392,
+        "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+        "actual_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+        "unchanged": true
+      },
+      {
+        "name": "LANGUAGE.MIX",
+        "bytes": 52913656,
+        "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192",
+        "actual_sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192",
+        "unchanged": true
+      },
+      {
+        "name": "MAPS01.MIX",
+        "bytes": 3823604,
+        "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74",
+        "actual_sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74",
+        "unchanged": true
+      },
+      {
+        "name": "MAPS02.MIX",
+        "bytes": 3170324,
+        "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f",
+        "actual_sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f",
+        "unchanged": true
+      },
+      {
+        "name": "MOVIES01.MIX",
+        "bytes": 357481664,
+        "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc",
+        "actual_sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc",
+        "unchanged": true
+      },
+      {
+        "name": "movies02.mix",
+        "bytes": 304170688,
+        "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643",
+        "actual_sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643",
+        "unchanged": true
+      },
+      {
+        "name": "MULTI.MIX",
+        "bytes": 18666588,
+        "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc",
+        "actual_sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.exe",
+        "bytes": 129024,
+        "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73",
+        "actual_sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73",
+        "unchanged": true
+      },
+      {
+        "name": "RA2.INI",
+        "bytes": 1643,
+        "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5",
+        "actual_sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.lcf",
+        "bytes": 165,
+        "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece",
+        "actual_sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece",
+        "unchanged": true
+      },
+      {
+        "name": "ra2.mix",
+        "bytes": 281888480,
+        "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914",
+        "actual_sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914",
+        "unchanged": true
+      },
+      {
+        "name": "Ra2.tlb",
+        "bytes": 30896,
+        "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4",
+        "actual_sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4",
+        "unchanged": true
+      },
+      {
+        "name": "SAVE0029.SAV",
+        "bytes": 977531,
+        "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "actual_sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b",
+        "unchanged": true
+      },
+      {
+        "name": "THEME.MIX",
+        "bytes": 76862662,
+        "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c",
+        "actual_sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c",
+        "unchanged": true
+      }
+    ],
+    "all_20_original_inputs_unchanged": true,
+    "old_engine_unchanged": true,
+    "old_engine_sha256": "05d7221ffacdddb2a300aee2c51b61d1fa1d269a5336a08e0c68b023f51bdd27",
+    "unsupported_guards": 37,
+    "previous_source_snapshot_unchanged": true,
+    "component_snapshots": {
+      "prepare-entry-verified": {
+        "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\parts\\prepare-entry-verified",
+        "files": 64,
+        "exe_sha256": "14746c979befa1df05256a786d6ce5482e326b17248b89f327b8043802671fe9"
+      },
+      "retry-path-verified": {
+        "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\parts\\retry-path-verified",
+        "files": 64,
+        "exe_sha256": "99ec1c28e66bba79e448a3e74e42f403329e7608f21f2034dd5ba9c8e8720613"
+      },
+      "failure-recovery-verified": {
+        "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\parts\\failure-recovery-verified",
+        "files": 68,
+        "exe_sha256": "07fd2e6965014ce23285754129aa27d80fcb3d475cc232f7483669a80a99241f"
+      },
+      "overlay-barrier-verified": {
+        "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\parts\\overlay-barrier-verified",
+        "files": 72,
+        "exe_sha256": "e988681d36523506e383e3b909bb60dfdb1d69151600a82edcaf27b526602fb9"
+      },
+      "gate-barrier-verified": {
+        "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\parts\\gate-barrier-verified",
+        "files": 72,
+        "exe_sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581"
+      }
+    }
+  },
+  "source_manifest": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\source-manifest.json",
+  "source_snapshot": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-prepare-v3\\final-source",
+  "limitations": [
+    "原始机器码和 C 使用同一宿主；不是独立原版进程全流程对照",
+    "原版片段探针使用受控世界服务，真实场景未触发失败预算耗尽；耗尽分支由机器码探针覆盖",
+    "墙/闸门有机器码输入对照及整合回归，尚未补齐专用墙/门实景场景",
+    "PrepareSegment 的障碍观察、新段选择、转向和递归重试，以及 AdvanceSegment 和 CanEnterCell 其余逻辑仍需整理",
+    "路径搜索服务本身仍为生成 C；全局目标、生产队列、完整资源、战役、联网同步及渲染未全面验收"
+  ],
+  "whole_prepare_function_readable": false,
+  "whole_ground_movement_readable": false,
+  "whole_game_equivalence_verified": false,
+  "default_gameplay_changed": false,
+  "new_mod_rules_added": false,
+  "committed": false,
+  "pushed": false
+}

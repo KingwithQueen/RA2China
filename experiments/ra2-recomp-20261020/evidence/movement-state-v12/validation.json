@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "formal_baseline_generation": 11,
+  "verification_round": 12,
+  "exe_sha256": "2d2ae4f94d96fb6a8226db4f594a6188c310af67390e20d7269251e933898fd0",
+  "state_schema": 12,
+  "paired_scenes": 28,
+  "paired_frames": 15798,
+  "independent_default_budget_scenes": 1,
+  "independent_default_budget_frames": 901,
+  "probes": 42,
+  "new_numeric_cases": 3932160,
+  "source_content_verified": true,
+  "diagnostics_removed": true,
+  "strict_ordered_audit_passed": true,
+  "frame_comparison_passed": true,
+  "default_rules_full_budget_exhaustion_verified": true,
+  "budget_scope": "Unmodified default rules in the original skirmish map, with an explicitly created and initially ordered real AI TRUCKA plus 16 real enemy TRUCKA blockers. Natural subsequent search/recovery; no explicit search or direct state/budget/path writes. Not an untouched random match.",
+  "source_files": 829,
+  "preservation": {
+    "passed": true,
+    "counts": {
+      "v9": 536,
+      "v10": 637,
+      "v11": 727,
+      "v12-baseline": 727,
+      "walk-verified": 734,
+      "path-cache-verified": 738,
+      "allied-collision-verified": 540,
+      "terrain-tail-verified": 540,
+      "H_originals": 20
+    },
+    "game_save_old_engine_preserved": true,
+    "unsupported_guards": 37
+  },
+  "unsupported_guards": 37,
+  "full_original_equivalence_verified": false,
+  "whole_ground_movement_readable": false,
+  "whole_infantry_process_readable": false,
+  "whole_search_heap_and_cache_storage_readable": false,
+  "report": "D:\\Program\\红色警戒2\\docs\\单位移动第十一批-步兵步进与路径评分缓存-20261022.txt",
+  "handoff": "D:\\Program\\红色警戒2\\交接文档-单位移动第十一批正式验收-20261022.txt"
+}

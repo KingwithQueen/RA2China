@@ -1,0 +1,78 @@
+{
+  "exe_sha256": "441208d733980106559f1d7033a43c7bdeb43e53df7a4b7bd81d2b5ca2d621d2",
+  "results": [
+    {
+      "tag": "g-ring2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "g-ring3",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "g-tc0",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "g-tc1",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "g-tc2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "g-large",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "g-ur2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "g-ur3",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "g-long",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1501
+    },
+    {
+      "tag": "g-second-failure",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 651
+    },
+    {
+      "tag": "g-repeat-failure",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1251
+    },
+    {
+      "tag": "g-zero-road",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    }
+  ],
+  "passed": true
+}

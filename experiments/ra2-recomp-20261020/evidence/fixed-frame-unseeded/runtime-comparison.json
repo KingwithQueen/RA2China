@@ -1,0 +1,37 @@
+{
+  "exe_sha256": "58175ce2b62ecd72abc8f63b98b0246405abcc54af264bcbba035ec6c1d62168",
+  "results": [
+    {
+      "case": "save-load-frozen-world",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 B7 F0",
+        "in game, 5 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 65,
+      "elapsed_pair_seconds": 77.34
+    },
+    {
+      "case": "save-load-frozen-world",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 B7 F0",
+        "in game, 5 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 65,
+      "elapsed_pair_seconds": 77.34
+    }
+  ],
+  "all_cases_passed": true,
+  "pixel_identity_verified": false,
+  "whole_game_equivalence_verified": false,
+  "original_inputs_directory_used_at_runtime": false
+}

@@ -1,0 +1,34 @@
+{
+  "old_baselines_overwritten": false,
+  "attempts": [
+    {
+      "artifact": "wait-probe-shared-01.json",
+      "result": "failed",
+      "reason": "共享清段入口必须保留传入 ESI；初版适配层误设为 -1。",
+      "resolution": "修正共享入口寄存器续接；wait-probe-shared-02.json 及最终隔离重建探针通过。"
+    },
+    {
+      "artifact": "runs/part-wait-congestion/comparison.json",
+      "result": "strict acceptance failed; 411 paired states equal",
+      "reason": "试验给四车发移动命令，只给一车发停止命令，却要求所有受控车完成停止。",
+      "resolution": "正式拥堵矩阵对四车发停止命令；两个代码节点分别通过，最终 811 帧一致。"
+    },
+    {
+      "artifact": "regression-run-final.log",
+      "result": "probe reports passed; environment initialization emitted command length noise",
+      "resolution": "改成每组编译使用独立 PowerShell 进程，regression-run-isolated.log 与 20 项 verified.json 为正式结果。"
+    },
+    {
+      "artifact": "runs/final-rapid-traffic/comparison.json",
+      "result": "601 paired frames passed; wait branch not triggered",
+      "resolution": "保留为未命中场景；加入原版 CAWASH07 的下一图实际触发等待。"
+    },
+    {
+      "artifact": "runs/final-rapid-obstructed/comparison.json",
+      "result": "601 paired frames passed; map-only zero-delay settings did not take effect",
+      "resolution": "有效等待仍为 60；使用独立完整 RULES.INI 的 final-zero-delay 实景确认实际等待变为 0，601 帧一致。"
+    }
+  ],
+  "natural_budget_exhaustion_verified": false,
+  "controlled_budget_entry_counted_as_natural": false
+}

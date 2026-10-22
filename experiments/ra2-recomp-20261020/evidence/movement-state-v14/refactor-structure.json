@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "complete_neighbor_loops": 2,
+  "legacy_region_decisions": 3,
+  "node_squared_distance_entries": 1,
+  "readable_modules": [
+    "ground_path_distance",
+    "ground_path_search"
+  ],
+  "original_approximate_distance_retained": true,
+  "state_trace_unchanged": true,
+  "service_order_and_shared_fields_preserved": true,
+  "complete_path_reconstruction_still_generated": true
+}

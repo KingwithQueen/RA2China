@@ -1,0 +1,60 @@
+{
+  "exe_sha256": "3b7752256e157109e9f07f376a32c1794d6f18d1bf88c165d3585e59efd324a8",
+  "results": [
+    {
+      "tag": "e-ring2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "e-ring3",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "e-tc0",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "e-tc1",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "e-tc2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 401
+    },
+    {
+      "tag": "e-large",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "e-ur2",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 351
+    },
+    {
+      "tag": "e-ur3",
+      "exit_code": 1,
+      "passed": false,
+      "frames": 0
+    },
+    {
+      "tag": "e-wr2",
+      "exit_code": 1,
+      "passed": false,
+      "frames": 0
+    }
+  ],
+  "passed": false
+}

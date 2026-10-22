@@ -1,0 +1,83 @@
+# Build output
+build/
+build-game/
+# Native Linux builds (build-linux.sh)
+build-linux/
+build-linux-game/
+# Native macOS builds (build-macos.sh)
+build-macos/
+build-macos-game/
+# xwin's download cache, made wherever it is run (setup.sh)
+.xwin-cache/
+out/
+cmake-build-*/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.lnk
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# --- Retail game files: NOT redistributed (REPO_RULES section 3) ---
+# Command & Conquer: Red Alert 2 / Yuri's Revenge (c) 2000-2001 Westwood Studios / EA.
+# Bring your own copy; Setup.cmd copies it into game/.
+game/
+# setup.sh links game to the CrossOver bottle's install, and git sees a link
+# as a file, which game/ does not match.
+/game
+original/
+*.exe
+*.EXE
+*.dll
+*.DLL
+*.mix
+*.MIX
+*.mmx
+*.yro
+*.iso
+*.zip
+
+# Upstream-generated Yuri output and analysis stay local. The parent project's
+# recovered 1.006 C is explicitly included at the end of this file.
+src/recomp/gen/
+src/recomp/gen_game/
+work/
+analysis/
+
+# Recordings and logs of runs
+*.mp4
+*.log
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Made by Setup.cmd
+* (recomp).cmd
+# Made by setup.sh (macOS, Linux)
+* (recomp).command
+* (recomp).sh
+build-trace/
+
+# LAN game frames (tools/lan/*.args)
+lan-frames/
+
+# Mods you add (mods/README.md): third-party content, never committed
+mods/yr/
+mods/ra2/
+mods-test/
+
+# This local parent project retains its 1.006 C recovery and adapter edits.
+# Retail assets and every full rollback archive remain excluded above/in parent.
+!src/recomp/gen_game/
+!src/recomp/gen_game/**

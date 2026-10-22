@@ -1,0 +1,331 @@
+{
+  "passed": true,
+  "wall": {
+    "real_wall_queries": 27,
+    "attack_observed": true,
+    "goal_reached": true
+  },
+  "gate": {
+    "real_gate_queries": 4,
+    "opening_task_observed": true,
+    "passable_observed": true,
+    "closed_again_observed": true,
+    "tank_crossed_and_reached_goal": true
+  },
+  "budget": {
+    "real_world_recovery_entry_verified": true,
+    "entry_calls": 11,
+    "countdown": [
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 5,
+        "id": 1022579,
+        "before": 10,
+        "after": 9,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 6,
+        "id": 1022579,
+        "before": 9,
+        "after": 8,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 7,
+        "id": 1022579,
+        "before": 8,
+        "after": 7,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 8,
+        "id": 1022579,
+        "before": 7,
+        "after": 6,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 9,
+        "id": 1022579,
+        "before": 6,
+        "after": 5,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 10,
+        "id": 1022579,
+        "before": 5,
+        "after": 4,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 11,
+        "id": 1022579,
+        "before": 4,
+        "after": 3,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 12,
+        "id": 1022579,
+        "before": 3,
+        "after": 2,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 13,
+        "id": 1022579,
+        "before": 2,
+        "after": 1,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 14,
+        "id": 1022579,
+        "before": 1,
+        "after": 0,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 15,
+        "id": 1022579,
+        "before": 0,
+        "after": 0,
+        "result": 0
+      }
+    ],
+    "normal_pathfinding_exhaustion_verified": false,
+    "natural_test_constraints": {
+      "kind": "fixture-constraints",
+      "frame": 7,
+      "id": 1022579,
+      "accepted_before": 1,
+      "accepted_after": 1,
+      "close_enough": 0,
+      "explicit_rebuild_result": 0,
+      "path_head": -1
+    },
+    "natural_test_failure_budget_values": [
+      10
+    ],
+    "natural_test_failed_rebuild_observed": true,
+    "limitation": "原版当前场景寻路失败时先清除行进目标；受控入口对照不能冒充自然寻路触发。"
+  },
+  "truck_speed": {
+    "frame": 27,
+    "unit_speed_bits": "47e17a14ae47d13f",
+    "previous_first_difference_fixed": true,
+    "goal_reached_after_runtime_wall_placement": true
+  },
+  "traffic_wait": {
+    "entries": 7,
+    "start_and_continue_observed": true
+  },
+  "temporary_obstacle": {
+    "tag": "schema8-congestion-01",
+    "entries": [
+      {
+        "kind": "movement-audit",
+        "frame": 2268,
+        "stage": 11,
+        "id": 1032243,
+        "cell": [
+          0,
+          0
+        ],
+        "value": 6,
+        "auxiliary": 5
+      }
+    ],
+    "primary_special_branch_really_entered": true
+  },
+  "terrain": {
+    "schema8-restricted-clear": {
+      "queries": 33,
+      "movement_restricted_to": 0
+    },
+    "schema8-restricted-rock": {
+      "queries": 33,
+      "movement_restricted_to": 3
+    }
+  },
+  "cloaked_obstacle": {
+    "tag": "schema8-cloaked-corridor",
+    "reveal": [
+      {
+        "kind": "movement-audit",
+        "frame": 197,
+        "stage": 12,
+        "id": 1022579,
+        "cell": [
+          0,
+          0
+        ],
+        "value": 1,
+        "auxiliary": 0
+      }
+    ],
+    "before_cloak_state": 2,
+    "after_cloak_states": [
+      [
+        198,
+        3
+      ],
+      [
+        199,
+        3
+      ],
+      [
+        200,
+        3
+      ],
+      [
+        201,
+        3
+      ],
+      [
+        202,
+        3
+      ],
+      [
+        203,
+        3
+      ],
+      [
+        204,
+        3
+      ],
+      [
+        205,
+        3
+      ],
+      [
+        206,
+        0
+      ],
+      [
+        207,
+        0
+      ],
+      [
+        208,
+        0
+      ],
+      [
+        209,
+        0
+      ],
+      [
+        210,
+        0
+      ],
+      [
+        211,
+        0
+      ],
+      [
+        212,
+        0
+      ],
+      [
+        213,
+        0
+      ],
+      [
+        214,
+        0
+      ],
+      [
+        215,
+        0
+      ],
+      [
+        216,
+        0
+      ],
+      [
+        217,
+        0
+      ],
+      [
+        218,
+        0
+      ],
+      [
+        219,
+        0
+      ],
+      [
+        220,
+        0
+      ]
+    ],
+    "original_ini_cloak_ability_fixture": true,
+    "stock_truck_has_cloak": false,
+    "real_world_cloak_and_reveal_verified": true
+  },
+  "template_state": {
+    "schema8-standard-01": {
+      "selection_entries": 13,
+      "segment_commit_entries": 13,
+      "selectors": [
+        17,
+        18,
+        45,
+        54,
+        63
+      ]
+    },
+    "schema8-congestion-01": {
+      "selection_entries": 24,
+      "segment_commit_entries": 23,
+      "selectors": [
+        0,
+        9,
+        18,
+        27,
+        28,
+        45,
+        53,
+        54,
+        56,
+        62,
+        63
+      ]
+    },
+    "schema8-cloaked-corridor": {
+      "selection_entries": 3,
+      "segment_commit_entries": 3,
+      "selectors": [
+        0,
+        36
+      ]
+    }
+  },
+  "zero_delay": {
+    "tag": "final-zero-delay",
+    "wait_entries": 7,
+    "zero_duration_really_observed": true,
+    "independent_complete_rules_ini": true
+  },
+  "chrono_trigger": {
+    "tag": "final-chrono-team-03",
+    "new_unit_ids": [],
+    "new_unit_frames_by_vtable": {},
+    "reinforcement_spawn_observed": false,
+    "prepare_with_different_active_locomotor_entries": 0,
+    "natural_budget_entries": 0
+  },
+  "budget_conditions": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\budget-conditions.json"
+}

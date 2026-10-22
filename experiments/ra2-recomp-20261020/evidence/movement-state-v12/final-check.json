@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source_files": 829,
+  "source_archive_matches_live": true,
+  "formal_pointers_match": true,
+  "old_baselines_preserved": true,
+  "exe_sha256": "2d2ae4f94d96fb6a8226db4f594a6188c310af67390e20d7269251e933898fd0",
+  "report_sha256": "4d9a75b80db3b430950822ba3042c25911a233ecb15968694e479c6aa79f81d0",
+  "handoff_sha256": "f79c3b6b60f5ff1eae98bb8fbc1a3bcb6684df726a6b3b25934e4d9a52aa9263",
+  "reading_guide_sha256": "2574716e548c7f45d64d0e492f304cf5a86ea7c7c4a2d4253aeb81340b9313be",
+  "main_previous_sha256": "1743e45d316962def53fba4422aa6fd0d2396fabba798f80a194c64e15a0ca89",
+  "main_current_sha256": "977e2aa8dc82d8b151b5ef0065b3bb920f4d860f65984f906a99e931b94a4c09"
+}

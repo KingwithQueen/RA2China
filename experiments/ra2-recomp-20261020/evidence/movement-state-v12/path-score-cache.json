@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scoring_entry": "42786C..42787A",
+  "priority_entry": "427E75..427E7E",
+  "generation_entries": [
+    "4277BD",
+    "4277F2"
+  ],
+  "cache_compare_entries": [
+    "4277C6..4277D4",
+    "4277FB..427809"
+  ],
+  "scoring_copies": 6,
+  "generation_copies": 10,
+  "cache_compare_copies": 10,
+  "readable_files": [
+    "ra2/src/gameplay/ground_path_cost.h",
+    "ra2/src/gameplay/ground_path_cost.c",
+    "ra2/src/gameplay/ground_path_cache.h",
+    "ra2/src/gameplay/ground_path_cache.c"
+  ],
+  "old_accumulation_preserved": true,
+  "step_cases": 786432,
+  "cache_cases": 786432,
+  "priority_cases": 786432,
+  "original_distance_approximation_preserved": true,
+  "whole_search_heap_and_cache_storage_readable": false,
+  "finite_nonnegative_scope": true
+}

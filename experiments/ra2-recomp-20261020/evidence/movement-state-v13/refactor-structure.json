@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "retired_raw_operations": {
+    "0042792C": 0,
+    "0042795E": 0,
+    "004279C6": 0,
+    "00427AB1": 0,
+    "00427B4A": 0,
+    "00427BE0": 0,
+    "00427C4D": 0,
+    "00427D46": 0,
+    "00427D8A": 0,
+    "00427E99": 0,
+    "00427EF7": 0
+  },
+  "heap_integration": {
+    "full_offer_copies": 7,
+    "full_take_copies": 11,
+    "internal_continuations": 3
+  },
+  "node_cache_integration": {
+    "stamp-read-1": 5,
+    "stamp-read-0": 5,
+    "cost-read-1": 5,
+    "cost-read-0": 5,
+    "visited-read-004278DB": 7,
+    "visited-read-004278F0": 7,
+    "publish": 9,
+    "publish-cost-tail": 1,
+    "node-initializer": 1
+  },
+  "comparator_and_trace_unchanged": true,
+  "whole_search_loop_readable": false
+}

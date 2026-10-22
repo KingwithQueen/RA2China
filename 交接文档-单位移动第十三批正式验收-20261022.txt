@@ -1,0 +1,19 @@
+单位移动第十三批正式验收交接（2026-10-22）
+
+完整九邻格展开/取出循环、区域豁免规则及节点坐标距离算术已整理为命名 C。
+正式代次13 / 验证轮次14：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v14\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：fb33d2fb448b87116d20f0cf5efe1da73c590de33688912bc198b29f147c76da
+28场景/15798帧，另默认规则预算自然耗尽场景901帧严格一致；46组原版片段/数值检查通过。
+新增270336例：距离262144例，完整循环8192例（四个引擎服务使用确定性替身，真实场景另外对照）。
+第2247帧、默认步兵第28帧及三格包围第52帧旧修正保持通过。
+默认预算第27..37帧按10..0自然消耗，第38帧清空目标；构造真实车辆圈、默认规则，未直接写预算/路径/目标。
+业务入口：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\ground_path_search.h；ground_path_search.c；ground_path_distance.h/.c。
+旧布局适配：runtime/ground_path_search_bridge.h/.c；ground_path_distance_bridge.h/.c。
+详细说明：D:\Program\红色警戒2\docs\单位移动第十三批-完整邻格搜索与节点距离-20261022.txt
+完整源码/程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v14\final-source；清单source-manifest.json，差异source-changes.patch，末检final-check.json。
+前正式基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v14\baseline\ra2\build-original-c\ra2.exe，SHA-256 e1d8e97c5706794f8de58d37ad726a1855ccf075947c403c9aeb7204b35dbff5。
+本轮回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v14\parts\distance-verified；D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v14\parts\search-verified。
+重启中断记录和资源硬链接上限失败记录均保留；playtest.py后备副本方案已通过重跑。
+下一步：搜索入口准备、区域路线构造与最终路径重建，然后Advance插值、Prepare共享入口；继续逐块原版对照。
+近似距离服务仍保留原版；完整寻路、完整单位移动、全游戏等价尚未完成。暂不提交或推送。

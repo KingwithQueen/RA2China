@@ -1,0 +1,234 @@
+{
+  "exe_sha256": "670f5820181caa89f948ac1a68d975e7df16eef3a74e66666ea0a2926d977963",
+  "results": [
+    {
+      "case": "menu-idle",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2"
+      ],
+      "seconds_limit": 40,
+      "elapsed_pair_seconds": 46.85
+    },
+    {
+      "case": "menu-idle",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2"
+      ],
+      "seconds_limit": 40,
+      "elapsed_pair_seconds": 46.91
+    },
+    {
+      "case": "menu-exit",
+      "mode": "original",
+      "exit_code": 0,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 120"
+      ],
+      "seconds_limit": 60,
+      "elapsed_pair_seconds": 26.29
+    },
+    {
+      "case": "menu-exit",
+      "mode": "generated-c",
+      "exit_code": 0,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 120"
+      ],
+      "seconds_limit": 60,
+      "elapsed_pair_seconds": 26.42
+    },
+    {
+      "case": "skirmish-start",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 102",
+        "in game, 19 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 180,
+      "elapsed_pair_seconds": 206.74
+    },
+    {
+      "case": "skirmish-start",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 102",
+        "in game, 18 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 180,
+      "elapsed_pair_seconds": 206.89
+    },
+    {
+      "case": "skirmish-build",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 102",
+        "in game, 24 distinct frames",
+        "640x480",
+        "produce x3",
+        "place x10"
+      ],
+      "seconds_limit": 230,
+      "elapsed_pair_seconds": 254.96
+    },
+    {
+      "case": "skirmish-build",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": false,
+      "failures": [
+        "the human player was defeated"
+      ],
+      "observed": [
+        "dialogs E2 100 102 108",
+        "in game, 24 distinct frames",
+        "human defeated",
+        "640x480",
+        "produce x3",
+        "place x10"
+      ],
+      "seconds_limit": 230,
+      "elapsed_pair_seconds": 255.09
+    },
+    {
+      "case": "campaign-allied",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 94",
+        "in game, 31 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 300,
+      "elapsed_pair_seconds": 340.42
+    },
+    {
+      "case": "campaign-allied",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 94",
+        "in game, 31 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 300,
+      "elapsed_pair_seconds": 340.42
+    },
+    {
+      "case": "campaign-soviet",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 94",
+        "in game, 31 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 300,
+      "elapsed_pair_seconds": 349.38
+    },
+    {
+      "case": "campaign-soviet",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 94",
+        "in game, 31 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 300,
+      "elapsed_pair_seconds": 349.38
+    },
+    {
+      "case": "save-load-paused",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": false,
+      "failures": [
+        "picture stopped (4 frames)"
+      ],
+      "observed": [
+        "dialogs E2 100 B7 F0 B5",
+        "in game, 4 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 120,
+      "elapsed_pair_seconds": 136.06
+    },
+    {
+      "case": "save-load-paused",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": false,
+      "failures": [
+        "never in game"
+      ],
+      "observed": [
+        "dialogs E2 100 B7 F0 CE"
+      ],
+      "seconds_limit": 120,
+      "elapsed_pair_seconds": 136.94
+    },
+    {
+      "case": "save-load-isolated-paused",
+      "mode": "original",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 B7 F0 B5",
+        "in game, 4 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 70,
+      "elapsed_pair_seconds": 78.52
+    },
+    {
+      "case": "save-load-isolated-paused",
+      "mode": "generated-c",
+      "exit_code": 4,
+      "passed": true,
+      "failures": [],
+      "observed": [
+        "dialogs E2 100 B7 F0 B5",
+        "in game, 5 distinct frames",
+        "1024x768"
+      ],
+      "seconds_limit": 70,
+      "elapsed_pair_seconds": 78.52
+    }
+  ],
+  "all_cases_passed": false,
+  "pixel_identity_verified": false,
+  "whole_game_equivalence_verified": false,
+  "original_inputs_directory_used_at_runtime": false
+}

@@ -1,0 +1,52 @@
+原版 1.006 单位移动第六批：临时/隐形障碍和路径模板状态（2026-10-21）
+
+本批完成
+增加 ground_special.c/.h 与 ground_template.c/.h 两组可读纯 C17 核心，原版内存布局、寄存器和世界调用仍在 runtime 适配层。
+最终程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：2e19f68cf45123d97c94460478e81edd00bfbd1ba81dc11bd2ee16548602a638
+11 组正式实景共 5,831 对帧全部一致，完整 RNG 与有序命令/分支记录一致。新增 6 个入口共 393,216 组原版机器码片段对照，26 项新旧探针全部通过。
+范围限于本批列出的代码、状态字段和场景。整个移动模块可读化与全游戏等价均尚未完成。
+
+可读代码与 MOD 阅读入口
+ground_special：临时障碍的火车例外、计时器重置/递归、距离/高度/Tunnel 分流、单元格通知；隐形障碍的揭露、保留计时器重试、停止。
+ground_template：方向归一化、碾压强制直行、模板首字节回退、标志分流；路段候选发布、24 项方向队列推进、启动与失败清理。
+覆盖 4A36ED..4A39C8、4A3F8B..4A4015、4A45B7..4A4725，并接入 3F9F/3FA1/45D0 共享入口。
+模板数据和未知标志保留原版含义；没有以推测名称替换尚未查明的字段。修改障碍策略先读 ground_special，修改方向/路段提交先读 ground_template。
+阅读说明：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\阅读说明-单位移动.txt
+
+验证与实际命中
+固定存档移动/转向/停止 811 帧，四车拥堵 811 帧；实际临时障碍分支 1 次、等待 7 次。
+Clear/Rock 两个限制地形场景各 301 帧；墙体 1001 帧，实际攻击墙并到达；闸门 701 帧，实际开闸、通过、关闭。
+卡车运行中建墙 301 帧，第 27 帧速度位仍为原版 47e17a14ae47d13f。
+自然失败压力 301 帧；受控预算恢复入口 101 帧，10→9→…→0，另一次零预算停止。两者分开记录。
+隐形走廊 601 帧：敌方 TRUCKA 通过原版地图 INI 获得 Cloakable，第 197 帧触发揭露，隐形状态 2→3→0 和全部移动状态一致。此为 MOD 能力实景，不是默认卡车能力。
+完整独立 RULES.INI 的零等待场景 601 帧，真实等待时长为 0；原始规则文件未改。
+模板实景：标准场景选择/提交各 13 次，拥堵选择 24/提交 23 次，隐形场景各 3 次。每个候选发布都有对应分支记录参与比较。
+探针验证状态、世界调用及顺序、返回 AL、ABI、活跃栈局部和浮点控制字；新模块均以 /W4 /WX /std:c17 编译。
+诊断关闭时原版/C 菜单退出正常；错误单位编号按预期退出 7。比较器的坐标 +1 和缺帧反例均检测成功。
+
+预算自然触发条件的推进
+新增精确身份记录，比较当前 locomotor 是否就是正在执行的 Drive，而不只是比较 vtable 类型。
+四个真实失败场景均显示 active_is_caller=true、caller_goal_valid=false，失败后目标已清空，预算 10 不变；没有自然扣预算入口。
+原版路径失败经 Unit StopMoving 清当前移动器目标的调用链仍成立。包装是需要进一步调查的例外方向，但必须先证明包装期间旧 Drive 仍执行 Prepare。
+本机原版 RTTI/GUID 确认 Teleport 接口 7AD1A8、IPiggyback 7AD184、Begin 6E1960、End 6E19B0、包装指针 base+48；未套用尤复地址。
+固定存档矿车 1032341 实际进入 Teleport：标准场景 388 帧、拥堵场景 387 帧；均多次恢复 Drive。两个场景均没有当前移动器不同却执行旧 Drive Prepare 的记录。
+Teleport Process 主体静态未见直接调用 Drive Process/Prepare，也未见读取包装指针；这不是对所有辅助函数和回调的不可达证明。
+援军触发器首个地图因小写 TaskForce 键导致原版/C 同时在 6C01A6 失败，保留失败记录。修正大小写后的两次 601 帧对照均通过，但没有产生援军，不计为援军覆盖；后续仍需核对触发器激活/动作参数。
+自然预算耗尽仍未验证，不能写成已经找到合法触发条件或已证整个分支不可达。
+详细条件与逐次失败证据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\budget-conditions.json
+
+保留和回退
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\baseline：第五批 217 项正式源及程序、旧报告入口，已重新核对 SHA-256。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\parts\special-template-verified：共享入口补全后的 schema 7 节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\parts\special-template-schema8-verified：包含精确身份/隐形观测的当前节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\final-source：本批源、程序、工具、探针和试验地图；source-manifest.json 给出指纹，source-changes.patch 以第五批为基准。
+20 项 H: 原始输入、原版 EXE/存档、旧手写引擎及 37 处未实现保护均核对保持。所有中间失败记录均保留。无提交、无推送。
+汇总：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\validation.json
+效果断言：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\effects.json
+回退核验：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v6\preservation.json
+
+待续
+优先 4A3C9B..4A3F8B 速度与第二路径准备、4A4015..4A45B7 转弯模板与后续碰撞，再继续路径推进和 CanEnterCell 对象扫描。
+继续调查包装/替换瞬间、间接服务及区划变化是否能合法保留目标而返回失败。显式预算入口只用于回归，不作为自然触发证据。
+暂时不要提交或推送。不要覆盖基线、旧报告或 H: 原始资源。

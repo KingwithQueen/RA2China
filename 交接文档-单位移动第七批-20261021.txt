@@ -1,0 +1,61 @@
+原版 1.006 单位移动第七批：速度准备、第二路径与转弯碰撞（2026-10-21）
+
+本批完成
+ground_followup.c/.h、ground_turn.c/.h 两组可读纯 C17 核心，以及独立 runtime/ground_followup_bridge.c/.h 适配层。
+覆盖 4A3C9B..4A3F8B、4A4015..4A45B7，接回第六批模板选择和路段提交；通过常规入口可读地执行 PrepareSegment 后半段。
+整个 PrepareSegment、AdvanceSegment、CanEnterCell 和全游戏等价仍未全部完成，未知字段和其它共享/恢复入口继续审计。
+最终程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：8d84594096407e3442a6e66c0d1baa64c34996256b1a9fef97cb0d24f98f6b0f
+15 组正式场景 8,235 对帧全部一致，完整 RNG、对象状态及有序命令/分支一致。29 项新旧探针通过，新增 196,608 组原版片段输入。
+
+可读行为与 MOD 入口
+ground_followup.c：地形基础上限、上下坡、零系数回退、ConditionYellow 以下 0.75 减速、按模板状态写 Drive 或单位速度。
+保留存回 double 与寄存器中未再次舍入值的差异，使用已有整数表示的数值兼容层；全部新文件以 /W4 /WX /std:c17 编译。
+同文件第二函数：候选格准备、第二方向检查、512 距离回退、火车模式补建、所有者消失及复核停止。
+ground_turn.c：第二候选格、8 类通行码、火车/碾压特例、开闸、重试、隐形揭露、停止、丢弃候选和一次消耗两个方向。
+世界服务前后同步候选点、队列及 Drive；递归返回后不再访问已消失所有者。3,537 组原版片段输入覆盖该边界。
+阅读说明：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\阅读说明-单位移动.txt
+
+真实验证
+固定存档移动/转向/停止 811 帧，四车拥堵 811 帧；Clear/Rock 限制地形各 301 帧。
+墙体 1001 帧、闸门 701 帧、卡车动态建墙 301 帧，旧第 27 帧速度位保持 47e17a14ae47d13f。
+自然失败压力 301 帧、受控预算入口 101 帧；隐形走廊 601 帧、第 197 帧揭露；完整规则零等待 601 帧。
+新增满血/受损坦克坡地各 601 帧，实际高度 416→520→416，回到起点并完成停止。
+满血系数出现 1.0 和 1.2000000476837158；受损系数为 0.75 和 0.9000000357627869，生命 400/100。
+新增超时空援军 601 帧，动作参数引用选择器改为 1 后原版真正创建单位 1022584，观察 Teleport/Drive 切换。
+新增包装期间发令、落地后再发令并封墙的预算场景 601 帧，真实创建 8 段墙、实际移动，两路逐帧相等。
+转弯实景命中通行 0 和 2；八类通行码均在原版片段输入中覆盖，不能把其它六类写成已自然命中。
+state schema 9：stage 16 速度入口，17 第二方向准备，18 二次补建失败，19 转弯分类；保留原有所有者身份记录。
+比较器检查实际出生帧和存在区间；坐标 +1 与缺帧反例检测通过。关闭诊断正常退出；错误编号保护退出 7。
+
+预算自然耗尽调查
+四个自然失败场景仍显示 active_is_caller=true，失败后调用者目标无效、预算保持 10。
+已补齐真实援军包装生命周期及其后移动/墙体阻挡，仍未见旧 Drive 在别的当前移动器期间执行 Prepare，没有自然扣预算入口。
+2AC 可达性复核读取目标 x/y 格、桥标志和区划，不读取目标 z；单独目标高度差不能解释两次复核不一致。
+本机静态候选：Prepare 的 8 处直接 CALL 都位于 Drive 函数族；Process 只有 Drive 表槽 7A050C 的静态指针候选。未证明全部间接流。
+后续可追踪入格触发器/世界服务在同一旧 Drive 调用栈中替换移动器，再返回旧 Prepare 的瞬间。这是待验证假设，尚不是已查明的触发条件。
+第二补建失败的 stage 18 真实命中情况以 effects.json/budget-conditions.json 为准，零命中只算片段验证。
+受控入口 10→0 及额外零预算停止仍单列，不冒充自然耗尽。
+
+保留的未通过记录与限制
+旧援军动作选择器 0 没有创建单位；修正为 1 才真实出现，历史地图和记录均保留。
+中间节点带 Stop 的封墙调查 601 对帧一致，但末任务仍是 [13,2,-1]，严格停止门槛未满足；不计正式停止通过。
+原比较器假定单位第 0 帧存在，已修正后处理并保留异常日志。该调查从原始完整轨迹补做比较，没有伪造游戏结果。
+较长目录下 C 路出现 ra2.csf 初始化失败，原版正常；正式 c- 短目录完成对照。观察到路径相关性，根因未定位，也没有宣称启动兼容已修复。
+验证限于列出的输入、字段和场景，没有宣称全游戏等价或全部移动状态可读。
+
+基线、回退和复现
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\baseline：第六批 286 项正式源及程序、旧报告入口，全部指纹核对。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\parts\speed-followup-verified-02：第一部分 811 帧通过后的配套源码/程序；早期无 -02 的不完整快照另存，不作为回退节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\parts\turn-collision-verified：转弯碰撞首轮通过节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\parts\final-owner-guard-verified：最终所有者边界保护节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\final-source：正式源、程序、工具和探针；source-manifest.json、source-changes.patch 给出指纹与差异。
+20 项 H: 原始输入、原版 EXE/存档、旧手写引擎和 37 处失败保护均核对保留。没有提交、推送或修改原始资源。
+汇总：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\validation.json
+效果：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\effects.json
+预算：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v7\budget-conditions.json
+
+下一步
+继续 AdvanceSegment 和 CanEnterCell 剩余状态/对象扫描，审计 PrepareSegment 的共享/恢复入口。
+追踪入格/世界服务期间的移动器替换，并寻找真正失败后仍保留有效目标的合法场景；不得写预算或伪造寻路失败来制造自然覆盖。
+启动长目录问题保持单列；未定位之前继续使用保留证据的短目录进行对照。保留既有基线和回退，不提交或推送。

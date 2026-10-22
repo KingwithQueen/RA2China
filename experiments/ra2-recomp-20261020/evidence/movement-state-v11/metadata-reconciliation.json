@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "reason": "Replace pre-expanded-scene budget conclusions with this round verified evidence; original preliminary JSON preserved.",
+  "archived_source_files": 727,
+  "budget_conditions_sha256": "3f8a690a857b0bc8e25899b45a76a2e6b9894c50c39d140a9a15902660db5692",
+  "formal_executable_sha256": "f40ca4c47e788636e149545112da046a9463f71498797699438a8835e33377b4",
+  "compiled_sources_unchanged": true
+}

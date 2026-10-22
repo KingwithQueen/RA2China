@@ -1,0 +1,432 @@
+[
+  {
+    "path": "audit_movement_scenarios.py",
+    "sha256": "1d025e647b127b0b9a58de293f831f161383908099bc221eb862664f27f712e5",
+    "bytes": 2888
+  },
+  {
+    "path": "audit_prepare_scenarios.py",
+    "sha256": "cfcc99172fab60cb3264d41d700ddf7099510da198cb5adf6a80144d3d08c1c1",
+    "bytes": 2328
+  },
+  {
+    "path": "build-faithful.ps1",
+    "sha256": "cd56664e9d461c0c7af07b7fb6be22b030dd4a6ff1719d2f35dbf75198e60730",
+    "bytes": 1418
+  },
+  {
+    "path": "build-movement-probe.ps1",
+    "sha256": "88d97d13ce49a9461c96a17a973fd83843d24bdf618b1e1ee7deaace5f1734b9",
+    "bytes": 1374
+  },
+  {
+    "path": "build-prepare-probes.ps1",
+    "sha256": "9fb52f57894ed5d6f4082154d3eedb5a4378872c1e79f6bf123fc98db279398a",
+    "bytes": 1789
+  },
+  {
+    "path": "build-state-probes.ps1",
+    "sha256": "1e457bf3b7d7c1a32cfc876aa42a3eb6d93aaa92ccd468816b9fdab1d5c3c626",
+    "bytes": 2091
+  },
+  {
+    "path": "continue-readable-parts.ps1",
+    "sha256": "158478153734f5e73907f14ed50afdc07610efc99d57d654a411fba85f63b8f6",
+    "bytes": 1077
+  },
+  {
+    "path": "debug_original_startup.py",
+    "sha256": "9655b662f30049b4782cdda6b83dd15ae3efc478db971a97d76986b6325ec767",
+    "bytes": 4106
+  },
+  {
+    "path": "evidence/movement-prepare-v3/barrier_probe.c",
+    "sha256": "15cb19fee7230705542511d510dc0d4071c1604de771e5789c97399e7f4fafa4",
+    "bytes": 10800
+  },
+  {
+    "path": "evidence/movement-prepare-v3/native_probe_host.h",
+    "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211",
+    "bytes": 3999
+  },
+  {
+    "path": "evidence/movement-prepare-v3/prepare_probe.c",
+    "sha256": "ed3de30ba522f9be1732d0aaaec6747d5f5f2ad3179d49a059e867df9abe9120",
+    "bytes": 14646
+  },
+  {
+    "path": "evidence/movement-prepare-v3/recovery_probe.c",
+    "sha256": "966d6a227253629486b699ef254c60b8bd0228ba94c3834375393e20accbbdb6",
+    "bytes": 9968
+  },
+  {
+    "path": "evidence/movement-readable-v1/movement_probe.c",
+    "sha256": "933bba59170fa048dba7ba28d98404658fe39da1f7780cf9be340cced3d0e7cb",
+    "bytes": 7774
+  },
+  {
+    "path": "evidence/movement-readable-v1/original_movement_probe.c",
+    "sha256": "214de2bf3922f8a120ef0101d006599713ae035700c9c4117df003cacd008b45",
+    "bytes": 13323
+  },
+  {
+    "path": "evidence/movement-state-v2/arrival_probe.c",
+    "sha256": "9eb07d740c83efd25e60d6f717721f9122296b90fb2ada5247efbfa937a5f94f",
+    "bytes": 11341
+  },
+  {
+    "path": "evidence/movement-state-v2/collision_probe.c",
+    "sha256": "29b20af42855d0e47f7a7529c41945b7401bfe9455f07d45543dfe6fbd236e26",
+    "bytes": 8521
+  },
+  {
+    "path": "evidence/movement-state-v2/drive_process_probe.c",
+    "sha256": "e2747f22dff27161d65076bc1e9668014d5642d6c7eb1341b4a04dd4c0224ad1",
+    "bytes": 13476
+  },
+  {
+    "path": "evidence/movement-state-v2/native_probe_host.h",
+    "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211",
+    "bytes": 3999
+  },
+  {
+    "path": "evidence/movement-state-v2/path_fragment_probe.c",
+    "sha256": "69deb10aece50ab10cdb3e3c38eb568099036d7e97a79ea4edeea60c2060a256",
+    "bytes": 4515
+  },
+  {
+    "path": "extract_readable_movement.py",
+    "sha256": "942a7ccc017ac3c19ffaeefbaa26b9a9e7ffcf193b8d0961eeac37e1e8b3dbb8",
+    "bytes": 3852
+  },
+  {
+    "path": "finalize_movement_prepare.py",
+    "sha256": "059b18b7df4b26eeb4675c00f58f846802e13ab423d3a0db843ee1b34a7026ad",
+    "bytes": 24480
+  },
+  {
+    "path": "finalize_movement_state.py",
+    "sha256": "3283be6ccd718ed836bb99b39721b101b196bb65e35d675d32f2182ab685d4ed",
+    "bytes": 19651
+  },
+  {
+    "path": "finalize_readable_movement.py",
+    "sha256": "3a147eda8c80105e46f6e2be1614321ec6713848e1750ec4ed9f011935f090f7",
+    "bytes": 20222
+  },
+  {
+    "path": "integrate-ground-arrival.py",
+    "sha256": "9c78940cde52d21a28324f7d73897e88e35024d13220e19386b6c22abf394e49",
+    "bytes": 1470
+  },
+  {
+    "path": "integrate_ground_barrier.py",
+    "sha256": "9bd2496c74fd2c01665e6765db76a7a2bf1fb1e55abe49553fbd9ccdf32f8c29",
+    "bytes": 2106
+  },
+  {
+    "path": "integrate_ground_prepare.py",
+    "sha256": "e2ac8b33a32f2dacce195a2d45dc8bb334e830e9357ea372ddff3b76c3450e4a",
+    "bytes": 3686
+  },
+  {
+    "path": "prepare_movement_v3.py",
+    "sha256": "e47a391def62bd4e52a97a951fcda34bc20c1fe9f24c4d83b56acfdef021c4c0",
+    "bytes": 2041
+  },
+  {
+    "path": "preserve_movement_part.py",
+    "sha256": "c0315807af1f8fb248aecfdf0de9cd0aae32ffaec1610cc1258d133b8db16c85",
+    "bytes": 2306
+  },
+  {
+    "path": "ra2/CMakeLists.txt",
+    "sha256": "d4090113db1981a17f8275cea91e303482a03b2f58645d48c3ddd233e5c68b59",
+    "bytes": 8440
+  },
+  {
+    "path": "ra2/build-original-c/ra2.exe",
+    "sha256": "3a3024ced1d2315662d7534b096054ba1bcbd4e92f64bb44021b31ca12eb0581",
+    "bytes": 104193024
+  },
+  {
+    "path": "ra2/run_lift.py",
+    "sha256": "447771b26e201bd0440cdf67b67f14db4a1b80937365a64d2c6ef0510b6158dc",
+    "bytes": 42605
+  },
+  {
+    "path": "ra2/src/compat/x87_arithmetic.c",
+    "sha256": "50b7056b26bc8aabd8ffc314384c762d8dd19dd63436bef608230c818b9aa4f0",
+    "bytes": 10096
+  },
+  {
+    "path": "ra2/src/compat/x87_arithmetic.h",
+    "sha256": "00d07342fd6c56829240f925854b99b5ad97094c0af300a328dfdbcaf79c7c80",
+    "bytes": 795
+  },
+  {
+    "path": "ra2/src/gameplay/ground_arrival.c",
+    "sha256": "aaadb06a4872ddffc2b82bfa5a2be2517b754ad7303b33fa1a1265214e42fb40",
+    "bytes": 2939
+  },
+  {
+    "path": "ra2/src/gameplay/ground_arrival.h",
+    "sha256": "9c9469d911f6435c717f88265470af0913ac61c0ab590f828fdcf7f639196bc8",
+    "bytes": 1353
+  },
+  {
+    "path": "ra2/src/gameplay/ground_barrier.c",
+    "sha256": "2f6a65bdccd80f46835931b36aa48922137c539604a4036151b289dd05e33d2c",
+    "bytes": 2631
+  },
+  {
+    "path": "ra2/src/gameplay/ground_barrier.h",
+    "sha256": "eb4f381a76da2cdfafdc0d97a3ddd8df9cf9990f2d829f7d14e8449b12fc7712",
+    "bytes": 1405
+  },
+  {
+    "path": "ra2/src/gameplay/ground_collision.c",
+    "sha256": "4b5bed603d96a2cd2be5033a225804b1715b26f6ca53b653151e9c82d9334a67",
+    "bytes": 2008
+  },
+  {
+    "path": "ra2/src/gameplay/ground_collision.h",
+    "sha256": "7cdae1249df6a0c4b784788019a5510b4355c405a94d8de096217c51ad3c9147",
+    "bytes": 1335
+  },
+  {
+    "path": "ra2/src/gameplay/ground_drive.c",
+    "sha256": "279b5ae6f84f480f8c1cea9aecf981ecafc7f97457b1bf328ca4a9adbb3794d8",
+    "bytes": 5838
+  },
+  {
+    "path": "ra2/src/gameplay/ground_drive.h",
+    "sha256": "acf1dfb34592db8ca7842bd0873592f10b0ab9cdd9167643e6e0566e2d96f26b",
+    "bytes": 2007
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path.c",
+    "sha256": "045c0ee92d424a4c51df7c0fb56349f4bb0634a9f24a472c301482dca6625933",
+    "bytes": 769
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path.h",
+    "sha256": "ab40420b8104c46fce37ae0f41045fadc0a0fa88d6eb9a729c180d8f2ee8b402",
+    "bytes": 654
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare.c",
+    "sha256": "fc18507bec1b1afd964bf2c8cde3378a965ca19290af5ac0b40fab4d80fef2d0",
+    "bytes": 5284
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare.h",
+    "sha256": "39a682467238d87bfc98d6986b45a6e68a24166f115b3c2b98aa9ce30b27f412",
+    "bytes": 2461
+  },
+  {
+    "path": "ra2/src/gameplay/ground_recovery.c",
+    "sha256": "950653d9d3ef913d0005c14b2ef50e161a9f33d7babdfc486630908212d154e6",
+    "bytes": 1925
+  },
+  {
+    "path": "ra2/src/gameplay/ground_recovery.h",
+    "sha256": "800135f67a375ad830b06ba0a77b3bc0ee4bbee696ee67e263d85006cd0747b0",
+    "bytes": 1209
+  },
+  {
+    "path": "ra2/src/gameplay/unit_movement.c",
+    "sha256": "d38a6e40968e8a2bf523602533a8c4008f9305a96f4413a6762ed0092e987757",
+    "bytes": 3946
+  },
+  {
+    "path": "ra2/src/gameplay/unit_movement.h",
+    "sha256": "4814d6d485e8bee8b55887328d8172886564f78c5d8989d4dd6ac90998eeb9c7",
+    "bytes": 1740
+  },
+  {
+    "path": "ra2/src/gameplay/阅读说明-单位移动.txt",
+    "sha256": "be3d3f10e0176e7b646271ca6361e2eff73b606ecebca28e1fcc2e274b2785a7",
+    "bytes": 10144
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+    "sha256": "4939b2a69ef2ae48740ef78b18e60b7f031e8e57892bcfc17c0d44391b54b6e6",
+    "bytes": 14764180
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0011.c",
+    "sha256": "b09baed811bfca284d5dba2e1cfde1fd1fccf3d69b3a32cf4b1f3cd958653b01",
+    "bytes": 3853237
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0012.c",
+    "sha256": "ab15b047501d872d4088ac2e38205ad18f6dde99af0e09e1e1cbc50ea3b526ee",
+    "bytes": 3650606
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0021.c",
+    "sha256": "d640b4939e329bcde0b96b2f68cf9f8b80fb11ead047bcb95d8a6c36c20a5a9a",
+    "bytes": 2230586
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+    "sha256": "c25343ebbe4792cd18d8f0b2ead5756ae9e9cefe79e6a555eb4ec99aad95ae97",
+    "bytes": 6284653
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0048.c",
+    "sha256": "5862912f2dbf89b9eea88ec1059156f1517d3a8cef530efc0b3e3d80edb95727",
+    "bytes": 1758068
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_target.h",
+    "sha256": "d162aa20e04d68ab17abbc1b5447d21171696ee8fb0ae51fc77b15147d844487",
+    "bytes": 708
+  },
+  {
+    "path": "ra2/src/runtime/ground_arrival_bridge.c",
+    "sha256": "dce0dc8bc3382221f6cd66d31c1495cda7f2387d524d040cfcd79b531fc100d7",
+    "bytes": 6666
+  },
+  {
+    "path": "ra2/src/runtime/ground_arrival_bridge.h",
+    "sha256": "cec1d444b2cee16fc619b6f99deaf4b30286243a159155b4b029d76a79a97eb0",
+    "bytes": 155
+  },
+  {
+    "path": "ra2/src/runtime/ground_barrier_bridge.c",
+    "sha256": "49325f95eac988cd1f3d5e23a5a57f5d122374713bd60d5e81a284bfba463426",
+    "bytes": 5306
+  },
+  {
+    "path": "ra2/src/runtime/ground_barrier_bridge.h",
+    "sha256": "c75da5bdbb80e9ba5cb7cf34227841cbeb1021f56c42443e774804f2e11a6316",
+    "bytes": 115
+  },
+  {
+    "path": "ra2/src/runtime/ground_collision_bridge.c",
+    "sha256": "e44955f02fb9540a3cfa71a88653bed7fa5d3d42221b0a5e01b0ff8e0791cbf3",
+    "bytes": 3245
+  },
+  {
+    "path": "ra2/src/runtime/ground_collision_bridge.h",
+    "sha256": "07707a955651ee2aad538439a9102ecb05fbe49ce22db3c862d2f1fe13f8871e",
+    "bytes": 60
+  },
+  {
+    "path": "ra2/src/runtime/ground_drive_bridge.c",
+    "sha256": "bf5ed35d1c1c9d46d70113b4f380b862423c875c606addcf51ab34df4871d995",
+    "bytes": 10621
+  },
+  {
+    "path": "ra2/src/runtime/ground_drive_bridge.h",
+    "sha256": "927ce51ad9cc3d62b019a529d9a8482f550688c406fb4a654802e28931c89ebe",
+    "bytes": 57
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_bridge.c",
+    "sha256": "cfde0382a8a3120a9ff27a48e7f753d8ce7ee585fec2f9bb8d236a02a4dc69ec",
+    "bytes": 1257
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_bridge.h",
+    "sha256": "51b57255b02dc969a7da08d52cf9bebba751673d979965851d3db6dbae146d40",
+    "bytes": 83
+  },
+  {
+    "path": "ra2/src/runtime/ground_prepare_bridge.c",
+    "sha256": "0671da6b4a596fb4e992839854d034ddf636c1f730c990e3578527999704e52d",
+    "bytes": 9649
+  },
+  {
+    "path": "ra2/src/runtime/ground_prepare_bridge.h",
+    "sha256": "5ff876c061c2da2fdba9bf140ef91910ce9e05a597dae7fa7fb177330cbe481f",
+    "bytes": 127
+  },
+  {
+    "path": "ra2/src/runtime/ground_recovery_bridge.c",
+    "sha256": "d62c2a2716ad68572588b1534681d62a726689edbbb9c20343bd9fc77f1ca331",
+    "bytes": 5662
+  },
+  {
+    "path": "ra2/src/runtime/ground_recovery_bridge.h",
+    "sha256": "0debacf7aceb5c30a0ca708bd6ddb3697b8db8f89b04e5939d0425dfe94a3349",
+    "bytes": 68
+  },
+  {
+    "path": "ra2/src/runtime/host.c",
+    "sha256": "d0307a47a3f3e9ddbd4c9b41e266d748b0cda68d51e4297186f243372c3f4fc9",
+    "bytes": 68339
+  },
+  {
+    "path": "ra2/src/runtime/movement_bridge.c",
+    "sha256": "6f4e2fd54cc689dcc8466d6dfba4a60ad89a3ef643551a94524a08bded69c284",
+    "bytes": 2729
+  },
+  {
+    "path": "ra2/src/runtime/movement_bridge.h",
+    "sha256": "62c6c641000535f0aa826c88ca3b9236e475d5de2823454a621678c917ecfdfe",
+    "bytes": 193
+  },
+  {
+    "path": "ra2/src/runtime/recovery_checks.c",
+    "sha256": "c608af38ab5b1781f11f1148c0b228091bc1d97a602ab5d4d25014188c83afaa",
+    "bytes": 2567
+  },
+  {
+    "path": "ra2/src/runtime/state_trace.c",
+    "sha256": "6ac334d31cb0a125a20c595399f591b67344151ff27e4214178b071743ec0c6e",
+    "bytes": 22913
+  },
+  {
+    "path": "ra2/src/runtime/state_trace.h",
+    "sha256": "60f9e34c5584a65fb206f6f024a66b5571dd68f231bde5658e9ac2f0ca4e9329",
+    "bytes": 553
+  },
+  {
+    "path": "ra2/src/runtime/x87_precision.c",
+    "sha256": "654af647c9d889d6cad8266eddeab526df43945c8a26ba74df316fabcd81d393",
+    "bytes": 4159
+  },
+  {
+    "path": "ra2/src/runtime/x87_precision.h",
+    "sha256": "fe985b5abda5084307b5c196236a9ea304cc16f11156b1305ae43c825e62a587",
+    "bytes": 237
+  },
+  {
+    "path": "run_movement_auxiliary.py",
+    "sha256": "76a6b71e0e5ebf052af34e24372d33327db216dc895f731b23e974adfd748120",
+    "bytes": 557
+  },
+  {
+    "path": "run_movement_state_auxiliary.py",
+    "sha256": "bc53c3ee51b1af3d80b89834c53439bbd74ce0734066634658663ccfa6a28e55",
+    "bytes": 560
+  },
+  {
+    "path": "run_prepare_auxiliary.py",
+    "sha256": "104fc4ec32a23b0d7383703f82c998bb2704b321aeba40d26c37fa428ad49700",
+    "bytes": 549
+  },
+  {
+    "path": "run_state_auxiliary.py",
+    "sha256": "bfba0a20dab1ed0a1bbfc0a88a38f45f4702267adcd3d469c05c32eeca868db6",
+    "bytes": 2581
+  },
+  {
+    "path": "run_state_comparison.py",
+    "sha256": "df719ca6d611ea8d9e94aa7e6eb118ddea98b5219d5483da575c6a10768cb76e",
+    "bytes": 12041
+  },
+  {
+    "path": "select_blocked_route.py",
+    "sha256": "771132ae14c7ef0218aecb41cb3406279ac743104af94a49c4cdfdf64eaad8d0",
+    "bytes": 1485
+  },
+  {
+    "path": "snapshot_prepare_part.py",
+    "sha256": "fb00ade6f213e4396afce0618b55983c034efa18e5702a8fb2fae1e89e6751f8",
+    "bytes": 567
+  }
+]

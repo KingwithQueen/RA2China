@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "exe": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\ra2.exe",
+  "exe_sha256": "2e19f68cf45123d97c94460478e81edd00bfbd1ba81dc11bd2ee16548602a638",
+  "state_schema": 8,
+  "paired_scenes": 11,
+  "paired_frames": 5831,
+  "scenarios": {
+    "schema8-standard-01": {
+      "passed": true,
+      "paired_frames": 811,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-standard-01\\comparison.json"
+    },
+    "schema8-congestion-01": {
+      "passed": true,
+      "paired_frames": 811,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-congestion-01\\comparison.json"
+    },
+    "schema8-restricted-rock": {
+      "passed": true,
+      "paired_frames": 301,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-restricted-rock\\comparison.json"
+    },
+    "schema8-restricted-clear": {
+      "passed": true,
+      "paired_frames": 301,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-restricted-clear\\comparison.json"
+    },
+    "schema8-wall": {
+      "passed": true,
+      "paired_frames": 1001,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-wall\\comparison.json"
+    },
+    "schema8-gate": {
+      "passed": true,
+      "paired_frames": 701,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-gate\\comparison.json"
+    },
+    "schema8-truck": {
+      "passed": true,
+      "paired_frames": 301,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-truck\\comparison.json"
+    },
+    "schema8-budget-natural": {
+      "passed": true,
+      "paired_frames": 301,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-budget-natural\\comparison.json"
+    },
+    "schema8-budget-entry": {
+      "passed": true,
+      "paired_frames": 101,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-budget-entry\\comparison.json"
+    },
+    "schema8-cloaked-corridor": {
+      "passed": true,
+      "paired_frames": 601,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\schema8-cloaked-corridor\\comparison.json"
+    },
+    "final-zero-delay": {
+      "passed": true,
+      "paired_frames": 601,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\final-zero-delay\\comparison.json"
+    }
+  },
+  "additional_investigation_scenes": {
+    "final-chrono-team-02": {
+      "passed": true,
+      "paired_frames": 601,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\final-chrono-team-02\\comparison.json",
+      "reinforcement_spawn_verified": false
+    },
+    "final-chrono-team-03": {
+      "passed": true,
+      "paired_frames": 601,
+      "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v6\\runs\\final-chrono-team-03\\comparison.json",
+      "reinforcement_spawn_verified": false
+    }
+  },
+  "additional_investigation_frames": 1202,
+  "probes": {
+    "arrival_probe-verified-02.json": {
+      "passed": true,
+      "native_arrival_cases": 65536,
+      "continued": 3937,
+      "returned": 61599,
+      "state_calls_abi_verified": true
+    },
+    "barrier_probe-verified-02.json": {
+      "passed": true,
+      "overlay_cases": 65536,
+      "gate_cases": 65536,
+      "blocked": [
+        8608,
+        4107
+      ],
+      "continued": [
+        56928,
+        61429
+      ],
+      "query_order_and_abi_verified": true
+    },
+    "collision_probe-verified-02.json": {
+      "passed": true,
+      "native_occupation_cases": 131072,
+      "native_bridge_layer_cases": 8192,
+      "query_order_and_abi_verified": true
+    },
+    "drive_process_probe-verified-02.json": {
+      "passed": true,
+      "native_process_fixtures": 32768,
+      "service_call_order_and_state_verified": true
+    },
+    "movement_probe-verified-02.json": {
+      "passed": true,
+      "scale": 115380,
+      "arrival": 49932,
+      "fraction": 204,
+      "interpolated_axes": 360000,
+      "arithmetic": 360000,
+      "precision_modes": 3,
+      "rounding_modes": 4
+    },
+    "obstacle_probe-verified-02.json": {
+      "passed": true,
+      "failed_rebuild_cases": 65536,
+      "rebuilt_cases": 65536,
+      "state_calls_abi_cw_verified": true
+    },
+    "original_movement_probe-verified-02.json": {
+      "passed": true,
+      "original_interpolations": 120000,
+      "original_transforms": 24576,
+      "abi_cases": 27648,
+      "conversion_control": 3711
+    },
+    "path_fragment_probe-verified-02.json": {
+      "passed": true,
+      "original_fragment_cases": 6048,
+      "registers_and_flags_verified": true
+    },
+    "prepare_probe-verified-02.json": {
+      "passed": true,
+      "entry_cases": 65536,
+      "retry_cases": 65536,
+      "state_calls_abi_cw_verified": true,
+      "entry_outcomes": [
+        64191,
+        291,
+        1054
+      ],
+      "retry_outcomes": [
+        47356,
+        1763,
+        16312,
+        105
+      ]
+    },
+    "reaction_probe-0-verified-02.json": {
+      "phase": 0,
+      "passed": true,
+      "reaction_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "reaction_probe-1-verified-02.json": {
+      "phase": 1,
+      "passed": true,
+      "reaction_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "reaction_probe-2-verified-02.json": {
+      "phase": 2,
+      "passed": true,
+      "reaction_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "reaction_probe-3-verified-02.json": {
+      "phase": 3,
+      "passed": true,
+      "reaction_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "recovery_probe-verified-02.json": {
+      "passed": true,
+      "failure_budget_cases": 65536,
+      "shared_finish_cases": 65536,
+      "state_calls_abi_verified": true
+    },
+    "segment_probe-verified-02.json": {
+      "passed": true,
+      "segment_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "special_probe-0-verified-02.json": {
+      "phase": 0,
+      "passed": true,
+      "special_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "speed_ramp_probe-verified-02.json": {
+      "passed": true,
+      "acceleration_cases": 120000,
+      "deceleration_cases": 120000,
+      "bit_exact": true
+    },
+    "template_probe-0-verified-02.json": {
+      "phase": 0,
+      "passed": true,
+      "template_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "template_probe-1-verified-02.json": {
+      "phase": 1,
+      "passed": true,
+      "template_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "template_probe-2-verified-02.json": {
+      "phase": 2,
+      "passed": true,
+      "template_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "template_probe-3-verified-02.json": {
+      "phase": 3,
+      "passed": true,
+      "template_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "template_probe-4-verified-02.json": {
+      "phase": 4,
+      "passed": true,
+      "template_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "terrain_probe-verified-02.json": {
+      "passed": true,
+      "native_cases": 524288,
+      "allowed": 266679,
+      "blocked": 257609,
+      "abi_verified": true
+    },
+    "wait_probe-0-verified-02.json": {
+      "phase": 0,
+      "passed": true,
+      "fragment_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "wait_probe-1-verified-02.json": {
+      "phase": 1,
+      "passed": true,
+      "fragment_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    },
+    "wait_probe-2-verified-02.json": {
+      "phase": 2,
+      "passed": true,
+      "fragment_cases": 65536,
+      "live_stack_locals_verified": true,
+      "state_calls_abi_cw_verified": true
+    }
+  },
+  "new_native_fragment_cases": 393216,
+  "effects_passed": true,
+  "preservation_passed": true,
+  "auxiliary_passed": true,
+  "source_files": 286,
+  "full_original_equivalence_verified": false,
+  "whole_prepare_function_readable": false,
+  "whole_ground_movement_readable": false,
+  "normal_budget_exhaustion_verified": false,
+  "controlled_real_world_budget_entry_verified": true,
+  "committed": false,
+  "pushed": false,
+  "report": "D:\\Program\\红色警戒2\\docs\\单位移动第六批-临时隐形障碍与路径模板-20261021.txt",
+  "handoff": "D:\\Program\\红色警戒2\\交接文档-单位移动第六批-20261021.txt"
+}

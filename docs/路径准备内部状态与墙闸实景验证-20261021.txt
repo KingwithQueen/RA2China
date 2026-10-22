@@ -1,0 +1,43 @@
+原版 1.006 单位移动第四批：路径准备内部状态与墙闸实景（2026-10-21）
+
+一、结论
+整理了障碍观察的成功/失败双入口、新路段坐标与高度/桥面/闸门/转向状态，并修复卡车第 27 帧速度最低位差异。
+所有列明的最终比较均在同一 EXE 上完成：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：a91b434a273fe2e621b6fdfa500e6eecd0f4c33f1c7cc41e2f48e7e3a1f7ce0d
+最终 10 次双路逐帧场景共 6,460 对状态一致；移动与四车拥堵各重复两次，两种模式内部各自字节相同。
+新增原版片段输入对照 196,608 组（障碍观察 131,072、新段准备 65,536），新增加减速 x87 数值对照 240,000 组，旧模块探针全部回归通过。
+
+二、代码阅读和修改入口
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\ground_obstacle.c
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\ground_segment.c
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\unit_movement.c
+前两者用具名状态与世界服务表达原版分支，保持调用顺序和目标/计时器副作用。未知虚函数仍保留已核实的偏移名称。
+原版对象读写与续接栈放在 runtime/ground_prepare_bridge.c，未把尚未恢复的整个搜索器改写成猜测算法。
+
+三、专用实景
+墙体：原版建图流程放置 8 格 NAWALL，原版碰撞分支实际命中，坦克攻击阻挡墙后到达目标；1001 帧一致。
+闸门：原版 GAGATE_A 与墙体走廊，记录开闸任务 24、动画 0/1 允许通行、坦克穿过及闸门再次关闭；701 帧一致。
+卡车：第 30 帧由原版 new/OverlayClass 构造流程建墙；第 27 帧原差异消失，301 帧一致。
+预算入口：对真实游戏对象显式进入原版 4A2DFD / 对应 C 恢复入口，不替换世界服务；10→9→…→0，再验证 0→0 的停止和清理，101 帧一致。
+
+四、预算自然触发尚未覆盖
+不能把上一项写成普通寻路自然触发。已尝试默认墙围、车辆围堵、先接受路线再调用原版构造器建墙/建敌方车辆、显式原版重寻路、CloseEnough=0 压力图。
+最终压力图确认目标前后可达性查询都为真，真实路径重建返回 0、队列头为 -1，但原版同时经 4C371A→4C4B60→49FEF0 清空行进目标，因此未进入预算扣减。
+实际预算仍为 10，完整轨迹与未通过/未触发记录均保留；这只说明本轮场景的行为，尚未证明该分支在所有原版状态下都不可达。
+汇编依据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\native-failed-path-calls-stop.asm
+预算常态入口条件应继续追踪，不通过写计数、禁用停止或伪造寻路返回值制造“通过”。
+
+五、逐帧范围和限制
+固定存档 SAVE0029.SAV、seed=12345，原版/C 共用相同宿主，2190..3000 每次 811 帧；专用地图由原版引擎从第 0 帧建立。
+状态格式 7 比较对象位置、生命、任务、朝向、有效路径队列、路段/采样/速度、两种重试计时器、预算、准备标志、桥面切换、闸门通行和完整 RNG 等已定位字段。
+没有宣称整个 PrepareSegment、AdvanceSegment、CanEnterCell 或全游戏源码均已整理完毕；渲染、联网、所有生产/战斗资源状态和全部战役仍未验收。
+下一处整理起点为 0x4A3550..0x4A4725 的内部阻挡、等待与递归重试，然后继续路径推进及碰撞余下分支。
+
+六、回退与保留
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\baseline 保留 v3 程序、86 项源文件/工具及原报告入口。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\parts 保存障碍观察、新段准备、速度修正/恢复验收节点。
+D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\final-source 保存本批聚焦源码、工具、测试图与程序；source-manifest.json 记录指纹，source-changes.patch 记录差异。
+20 项 H: 原始输入、旧手写引擎、v3 发布源和 37 处未支持指令失败保护核验未变。没有提交、推送或访问远程仓库。
+汇总：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\validation.json
+效果断言：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\effects.json
+保留核验：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v4\preservation.json

@@ -1,0 +1,60 @@
+{
+  "exe_sha256": "0d5f804baf593cbea38764a63b7d96cf9bb67e950583cafa23ca7ae87425add1",
+  "results": [
+    {
+      "tag": "standard-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "congestion-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "restricted-rock",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "restricted-clear",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "wall",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1001
+    },
+    {
+      "tag": "gate",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 701
+    },
+    {
+      "tag": "truck",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "budget-natural",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "budget-entry",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 101
+    }
+  ],
+  "passed": true
+}

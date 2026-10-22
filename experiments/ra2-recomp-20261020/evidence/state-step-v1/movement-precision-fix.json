@@ -1,0 +1,12 @@
+{
+  "address": "0x004A241F",
+  "sequence": [
+    "0x004A23F0",
+    "0x004A2404",
+    "0x004A241F"
+  ],
+  "copies_in_shared_tail_lifts": 12,
+  "before_sha256": "d2786184dc924c358f0d93c6f3213db555ca492c0195dc1393b6092f84078da2",
+  "after_sha256": "b5d46c62b27ef0893eb40143e7873d9e60ee8ea77ae97297e6ad38f6b50d58be",
+  "scope": "only this fild int32 / fmul float64 / fstp float32 sequence; not all x87 arithmetic"
+}

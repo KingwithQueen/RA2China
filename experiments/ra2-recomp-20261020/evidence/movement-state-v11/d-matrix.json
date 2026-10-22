@@ -1,0 +1,96 @@
+{
+  "exe_sha256": "f40ca4c47e788636e149545112da046a9463f71498797699438a8835e33377b4",
+  "results": [
+    {
+      "tag": "d-standard-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "d-congestion-01",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 811
+    },
+    {
+      "tag": "d-restricted-rock",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "d-restricted-clear",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "d-wall",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 1001
+    },
+    {
+      "tag": "d-gate",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 701
+    },
+    {
+      "tag": "d-truck",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "d-budget-natural",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 301
+    },
+    {
+      "tag": "d-budget-entry",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 101
+    },
+    {
+      "tag": "d-cloaked-corridor",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "d-slope-healthy",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "d-slope-damaged",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "d-chrono-team-reference",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "d-zero-delay",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "d-chrono-seam-budget",
+      "exit_code": 0,
+      "passed": true,
+      "frames": 601
+    }
+  ],
+  "passed": true
+}

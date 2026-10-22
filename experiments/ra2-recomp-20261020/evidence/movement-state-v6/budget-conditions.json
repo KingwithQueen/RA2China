@@ -1,0 +1,290 @@
+{
+  "passed": true,
+  "original_returns": [
+    "0x4c307c",
+    "0x4c36e9",
+    "0x4c38a6",
+    "0x4c38c3"
+  ],
+  "original_unit_stop_slot": "0x4c4b60",
+  "original_unit_accept_slot": "0x4c2ef0",
+  "necessary_conditions": [
+    "队列头为 -1；短重试计时器允许重建。",
+    "原版 4C3000 返回 false，且所有者仍存在。",
+    "随后对 Drive.destination 的 2AC 查询返回 true，目标仍不是无效点。",
+    "未被近距离任务停止分支提前返回；进入 4A2A83 的失败障碍观察。",
+    "观察未被近距离友方对象停止分支提前返回，最终进入 4A2DFD。",
+    "正预算每次只扣 1；从 10 起连续十次到 0，另一次失败才执行零预算停止。"
+  ],
+  "ordinary_drive_failure_analysis": {
+    "main_search_failure": "4C36EC..4C371A 调用所有者 48C；Unit 的该槽为 4C4B60，调用当前 locomotor 的 StopMoving。当前 locomotor 就是本 Drive 时，49FF97..49FFB0 清空目标。",
+    "early_rejection": "4C3069 的提前失败不会清空目标，但失败原因是 2AC 拒绝格中心。对相同非负目标格、稳定区划和相同 Unit 而言，随后 2AC 仍拒绝，先返回而不扣预算。",
+    "assumptions": [
+      "有效目标格坐标非负",
+      "两次可达性查询之间区划和 Unit 身份稳定",
+      "所有者当前 locomotor 就是正在准备的 Drive"
+    ],
+    "conclusion": "在上述范围内，普通路径失败不能自然扣预算；这是带前提的控制流结论，不是整个游戏分支不可达证明。"
+  },
+  "unresolved": [
+    "仍未找到合法玩法中同时重建失败、保留调用者目标且通过后续可达性复核的自然耗尽场景。",
+    "移动器包装确实存在；已观察的包装期没有命中旧 Drive 准备函数。仍需排查间接服务、替换瞬间或区划变化。",
+    "不能从当前有限场景推导整个游戏的失败预算分支不可达。"
+  ],
+  "natural_exhaustion_verified": false,
+  "controlled_entry_is_natural": false,
+  "real_scene_evidence": [
+    {
+      "tag": "schema8-budget-natural",
+      "failed_rebuilds": [
+        {
+          "kind": "movement-audit",
+          "frame": 19,
+          "stage": 6,
+          "id": 1022579,
+          "cell": [
+            0,
+            0
+          ],
+          "value": 0,
+          "auxiliary": -1,
+          "active_is_caller": true,
+          "caller_goal_valid": false,
+          "active_ground_drive": true,
+          "active_goal_valid": false
+        }
+      ],
+      "failure_budget_values": [
+        10
+      ],
+      "natural_budget_entries": 0
+    },
+    {
+      "tag": "schema8-restricted-clear",
+      "failed_rebuilds": [
+        {
+          "kind": "movement-audit",
+          "frame": 6,
+          "stage": 6,
+          "id": 1022579,
+          "cell": [
+            0,
+            0
+          ],
+          "value": 0,
+          "auxiliary": -1,
+          "active_is_caller": true,
+          "caller_goal_valid": false,
+          "active_ground_drive": true,
+          "active_goal_valid": false
+        }
+      ],
+      "failure_budget_values": [
+        10
+      ],
+      "natural_budget_entries": 0
+    },
+    {
+      "tag": "schema8-restricted-rock",
+      "failed_rebuilds": [
+        {
+          "kind": "movement-audit",
+          "frame": 6,
+          "stage": 6,
+          "id": 1022579,
+          "cell": [
+            0,
+            0
+          ],
+          "value": 0,
+          "auxiliary": -1,
+          "active_is_caller": true,
+          "caller_goal_valid": false,
+          "active_ground_drive": true,
+          "active_goal_valid": false
+        }
+      ],
+      "failure_budget_values": [
+        10
+      ],
+      "natural_budget_entries": 0
+    },
+    {
+      "tag": "schema8-cloaked-corridor",
+      "failed_rebuilds": [
+        {
+          "kind": "movement-audit",
+          "frame": 197,
+          "stage": 6,
+          "id": 1022579,
+          "cell": [
+            0,
+            0
+          ],
+          "value": 0,
+          "auxiliary": -1,
+          "active_is_caller": true,
+          "caller_goal_valid": false,
+          "active_ground_drive": true,
+          "active_goal_valid": false
+        }
+      ],
+      "failure_budget_values": [
+        10
+      ],
+      "natural_budget_entries": 0
+    }
+  ],
+  "locomotor_investigation": {
+    "original_1006_locally_verified": true,
+    "ground_drive_interface_vtable": "0x7A04CC",
+    "teleport_interface_vtable": "0x7AD1A8",
+    "teleport_piggyback_vtable": "0x7AD184",
+    "teleport_guid_address": "0x7A1FD0",
+    "begin_piggyback": "0x6E1960",
+    "end_piggyback": "0x6E19B0",
+    "wrapped_interface_member": "base+0x48",
+    "process": "0x6E0E10..0x6E16EF",
+    "real_save": {
+      "schema8-standard-01": {
+        "unit": 1032341,
+        "frames_by_vtable": {
+          "0x7a04cc": 423,
+          "0x7ad1a8": 388
+        },
+        "transitions": [
+          {
+            "frame": 2190,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2318,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2361,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2417,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2494,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2574,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2689,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2775,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2928,
+            "vtable": "0x7a04cc"
+          }
+        ],
+        "prepare_with_different_active_locomotor_entries": 0
+      },
+      "schema8-congestion-01": {
+        "unit": 1032341,
+        "frames_by_vtable": {
+          "0x7a04cc": 424,
+          "0x7ad1a8": 387
+        },
+        "transitions": [
+          {
+            "frame": 2190,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2318,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2358,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2414,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2491,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2571,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2686,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2772,
+            "vtable": "0x7ad1a8"
+          },
+          {
+            "frame": 2925,
+            "vtable": "0x7a04cc"
+          },
+          {
+            "frame": 2999,
+            "vtable": "0x7ad1a8"
+          }
+        ],
+        "prepare_with_different_active_locomotor_entries": 0
+      }
+    },
+    "static_findings": [
+      "Teleport Process 主体未见直接调用 Drive Process/Prepare，未见间接 +0x40 调用，也未见读取包装成员 interface+0x44。",
+      "这只缩小包装期仍执行旧 Drive 的假设；没有排除全部回调及辅助函数。",
+      "原版 StopMoving 清当前 Teleport 的目标，理论上与旧 Drive 目标不同；必须先证明旧 Drive 此时真的执行，不能仅凭有包装就断言触发。"
+    ],
+    "evidence": [
+      "locomotor-layout.json",
+      "teleport-process.asm",
+      "teleport-stop.asm",
+      "teleport-begin-end.asm"
+    ],
+    "public_header_leads_only": [
+      "https://raw.githubusercontent.com/Ares-Developers/YRpp/master/TeleportLocomotionClass.h",
+      "https://raw.githubusercontent.com/Ares-Developers/YRpp/master/GeneralDefinitions.h"
+    ],
+    "yuri_addresses_or_layout_transplanted": false,
+    "chrono_trigger": {
+      "tag": "final-chrono-team-03",
+      "new_unit_ids": [],
+      "new_unit_frames_by_vtable": {},
+      "reinforcement_spawn_observed": false,
+      "prepare_with_different_active_locomotor_entries": 0,
+      "natural_budget_entries": 0
+    }
+  },
+  "fixture_attempts": {
+    "malformed_lowercase_team": "final-chrono-team: both modes fail to load; null TaskForce at 0x6C01A6; retained",
+    "canonical_key_without_tag": "final-chrono-team-02: both modes pass 601 frames; no reinforcement spawned",
+    "canonical_key_with_tag": "final-chrono-team-03: inspect effects.chrono_trigger for actual branch coverage"
+  },
+  "all_natural_scenes_no_budget_entry": [
+    "schema8-standard-01",
+    "schema8-congestion-01",
+    "schema8-restricted-rock",
+    "schema8-restricted-clear",
+    "schema8-wall",
+    "schema8-gate",
+    "schema8-truck",
+    "schema8-budget-natural",
+    "schema8-cloaked-corridor",
+    "final-zero-delay",
+    "final-chrono-team-02",
+    "final-chrono-team-03"
+  ]
+}

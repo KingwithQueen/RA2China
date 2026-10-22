@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "wall": {
+    "real_wall_queries": 27,
+    "attack_observed": true,
+    "goal_reached": true
+  },
+  "gate": {
+    "real_gate_queries": 4,
+    "opening_task_observed": true,
+    "passable_observed": true,
+    "closed_again_observed": true,
+    "tank_crossed_and_reached_goal": true
+  },
+  "budget": {
+    "real_world_recovery_entry_verified": true,
+    "entry_calls": 11,
+    "countdown": [
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 5,
+        "id": 1022579,
+        "before": 10,
+        "after": 9,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 6,
+        "id": 1022579,
+        "before": 9,
+        "after": 8,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 7,
+        "id": 1022579,
+        "before": 8,
+        "after": 7,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 8,
+        "id": 1022579,
+        "before": 7,
+        "after": 6,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 9,
+        "id": 1022579,
+        "before": 6,
+        "after": 5,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 10,
+        "id": 1022579,
+        "before": 5,
+        "after": 4,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 11,
+        "id": 1022579,
+        "before": 4,
+        "after": 3,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 12,
+        "id": 1022579,
+        "before": 3,
+        "after": 2,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 13,
+        "id": 1022579,
+        "before": 2,
+        "after": 1,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 14,
+        "id": 1022579,
+        "before": 1,
+        "after": 0,
+        "result": 0
+      },
+      {
+        "kind": "fixture-budget-entry",
+        "frame": 15,
+        "id": 1022579,
+        "before": 0,
+        "after": 0,
+        "result": 0
+      }
+    ],
+    "normal_pathfinding_exhaustion_verified": false,
+    "natural_test_constraints": {
+      "kind": "fixture-constraints",
+      "frame": 7,
+      "id": 1022579,
+      "accepted_before": 1,
+      "accepted_after": 1,
+      "close_enough": 0,
+      "explicit_rebuild_result": 0,
+      "path_head": -1
+    },
+    "natural_test_failure_budget_values": [
+      10
+    ],
+    "natural_test_failed_rebuild_observed": true,
+    "limitation": "原版当前场景寻路失败时先清除行进目标；受控入口对照不能冒充自然寻路触发。"
+  },
+  "truck_speed": {
+    "frame": 27,
+    "unit_speed_bits": "47e17a14ae47d13f",
+    "previous_first_difference_fixed": true,
+    "goal_reached_after_runtime_wall_placement": true
+  },
+  "traffic_wait": {
+    "native_entries": 7,
+    "start_and_continue_observed": true,
+    "frames": [
+      2363,
+      2364,
+      2365,
+      2366,
+      2367,
+      2368,
+      2369
+    ],
+    "passage_counts": {
+      "0": 24,
+      "6": 1,
+      "2": 7
+    }
+  },
+  "terrain": {
+    "final-restricted-clear": {
+      "queries": 33,
+      "movement_restricted_to": 0
+    },
+    "final-restricted-rock": {
+      "queries": 33,
+      "movement_restricted_to": 3
+    }
+  },
+  "reaction": {
+    "wall_attack_and_goal_verified": true,
+    "hard_blocked_recursive_and_zero_budget_probed": true,
+    "all_reaction_branches_naturally_observed": false
+  },
+  "budget_conditions": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v5\\budget-conditions.json",
+  "final-rapid-traffic": {
+    "comparison_passed": true,
+    "frames": 601,
+    "wait_entries": 0,
+    "wait_branch_covered": false
+  },
+  "final-rapid-obstructed": {
+    "comparison_passed": true,
+    "frames": 601,
+    "wait_entries": 7,
+    "wait_branch_covered": true,
+    "map_only_zero_delay_override_effective": false
+  },
+  "final-zero-delay": {
+    "comparison_passed": true,
+    "frames": 601,
+    "wait_entries": 7,
+    "wait_branch_covered": true,
+    "zero_wait_duration_observed": true,
+    "independent_full_rules_ini_used": true
+  }
+}

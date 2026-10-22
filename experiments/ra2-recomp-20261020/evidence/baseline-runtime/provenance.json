@@ -1,0 +1,17 @@
+{
+  "date_utc": "2026-10-20T13:40:05.6775601Z",
+  "ra2_repo": "https://github.com/sp00nznet/redalert2-recomp",
+  "ra2_commit": "c3b58b1810b70d2a16b0a79bbad517749c400b34",
+  "tools_repo": "https://github.com/sp00nznet/pcrecomp",
+  "tools_commit": "10f2680ce47b3effdf6964e620c912d210b736f1",
+  "python": "E:\\Program Files\\Python\\python.exe",
+  "dependencies": {
+    "unicorn": "2.1.4",
+    "pefile": "2024.8.26",
+    "capstone": "5.0.6"
+  },
+  "original_directory": "H:\\开发\\运行版本\\原版1.006",
+  "original_writable": false,
+  "product_unchanged": true,
+  "modernizations_disabled": true
+}

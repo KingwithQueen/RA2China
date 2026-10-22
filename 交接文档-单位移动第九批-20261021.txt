@@ -1,0 +1,72 @@
+原版 1.006 单位移动第九批：转弯接续与对象碰撞（2026-10-21）
+
+一、本批结果
+
+已整理并接入纯 C17 的 ground_continuation.h/.c、ground_objects.h/.c；各有独立 runtime 适配层。
+接续部分对应 4A1B60..4A1F8D；对象部分对应 70346B..703536、7035AC..703693、70394F..703A95。
+可读流程包括后继模板选择、候选通行、速度保存恢复、接续后队列左移，以及对象过滤、建筑例外、敌方碾压/武器条件和静止友方处理。
+新核心/适配文件按 /W4 /WX /std:c17 /utf-8 编译；玩法核心不直接访问旧对象地址，未知字段保守命名。
+未修改原版资源或正式规则，没有提交、推送、重置或清理旧证据。
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：734138bb0a3b1638745a3e61adb9f59953e3e48ddca2129d1a4ef585407b0bfa
+阅读入口：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\src\gameplay\阅读说明-单位移动.txt
+
+二、逐帧和片段验收
+
+最终 25 场景共 13,345 个连续模拟帧：已记录的对象状态、RNG、命令、有序分支全部一致，schema 11，seed 12345。
+保留原 15 场景 8235 帧及第八批 8 场景 2958 帧，新增长路线 1501 帧与二次失败 651 帧。
+固定 SAVE0029.SAV 的 2190..3000 窗口继续通过，包含第 2247 帧；移动/转弯/停止、拥堵、墙体、闸门、坡地、隐形和超时空场景均重跑。
+每场原版与 C 使用独立存档副本，并检查存档前后指纹；比较器的位移差异和缺帧反例均能被拒绝。
+36 组原版片段/回归通过；新增接续 65536 组、对象四阶段各 65536 组，共 327680 组输入。
+片段对照包括服务调用顺序、活跃状态/临时量及相关浮点环境；接续片段覆盖八种通行分类。
+实景 stage 21 仅命中 5 次，通行码 0 四次、1 一次；不是八种接续碰撞都已自然覆盖。
+命中：i-wall 第 677 帧、i-slope-healthy 第 33 帧、i-slope-damaged 第 40 帧、i-tc0/i-tc2 第 223 帧。
+对象 stage 24 共 903 次入口；不能把入口次数当成所有内部例外均已自然命中。
+诊断关闭启动、保护退出等附加检查通过：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\auxiliary-final-02\validation.json。
+
+三、二次补建失败：本批新增实景证据
+
+i-long 和 i-second-failure 使用相同独立地图与第 5 帧卡车移动命令：从 67,114 向 100,114 行驶。
+短路线的队列过去往往在接近目标、距离不大于 512 时耗尽，因此不会进入正常二次补建请求。
+长路线在第 398 帧自然只剩方向 [2]；第 399 帧第二方向为 -1，剩余距离 2560，大于 512，stage 23 正常请求二次补建。
+i-long 无新障碍，补建成功，继续走完；i-second-failure 在第 398 帧围入半径两格的 16 辆真实敌方卡车。
+障碍由原版构造/放置服务创建；当前目的地可达性前后均为 1；没有额外调用寻路、注入路径队列、改预算或伪造碰撞返回值。
+第 399 帧自然命中 stage 18：二次补建失败，同一活动 Drive，调用者/活动 Drive 目标都已无效；第 400 帧可见目标清零和空队列。
+失败实景两路完整 651 帧一致。参照长路线两路 1501 帧一致。
+失败预算始终为 10，stage 3 为 0；二次补建失败验收为 true，预算自然耗尽仍为 false。
+旧一格压力试验包含显式重建，不算自然耗尽证明；本批两/三格包围及上述新失败试验不额外调用重建。
+预算分支需要失败后仍保留目标并通过后续可达性复核，当前真实失败清空目标；继续关注旧 Drive 栈中的移动器替换/世界回调。
+这是待验证条件，不是整个游戏预算分支不可达的证明。本机动作范围 1..117，动作 128 不能用来证明合法 TeleportAll 触发。
+候选服务 705160 的静态片段未见直接写方向队列；不能把它命名成“截断队列”，其世界服务回调仍须按实际状态重新查询。
+
+四、保留的调查与比较边界
+
+h-fail 的游戏状态和 RNG 651 帧相等，但新增 stage 24 原始 flags14 高位不同（31/7），严格有序观测比较失败。
+只记录此扫描实际检查的 mask 0x05 后，用最终程序重新运行全部 25 场景通过；没有放宽对象状态、命令顺序或 RNG 的比较。
+未证明未使用高位不同的具体原因；h-fail 的失败轨迹和首轮程序保留，不把它列为正式通过。
+schema 11 新增 stage 21 接续分类、22 候选返回后第二方向、23 正常二次请求、24 对象过滤；均保留原版与 C 的观测。
+隐形窄弯使用相同地图规则给卡车启用合法隐形属性，不是声称原版卡车默认隐形。
+长目录 ra2.csf 初始化兼容问题仍未修复，沿用短标签完成验证。既有失败试验继续保留。
+全 Advance、CanEnterCell、完整移动和全游戏等价仍为 false；已通过的是上述范围与固定输入窗口。
+
+五、基线、回退、验收文件
+
+第八批 449 项正式代码/工具/程序与 D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v8\final-source、D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\baseline 逐项哈希核对。
+转弯接续独立节点（453 项，固定存档 811 帧通过）：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\parts\turn-continuation-verified。
+对象碰撞最终节点（457 项，二次失败实景通过）：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\parts\object-collision-verified。
+最终配套源、工具与程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\final-source；清单 source-manifest.json，差异 source-changes.patch。
+H: 原始 20 项输入、game.exe、SAVE0029.SAV、旧手写引擎及 37 处未支持保护保持原指纹。
+第八批正式 EXE SHA-256：e16033580b82aed1fea031052703407d5b39dfe305b271c36cf6501ce0056ae9；本批 baseline 内保留完整可回退程序。
+正式汇总：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\validation.json
+效果统计：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\effects.json
+预算条件：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\budget-conditions.json
+保全核对：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v9\preservation.json
+正式入口：D:\Program\红色警戒2\reports\latest-recovery.json、D:\Program\红色警戒2\reports\latest-state-comparison.json。
+
+六、下一批从这里继续
+
+1. 优先整理移动友方对象的朝向/距离几何 703693..70394F 和后续地形/层级碰撞尾部，注意原版浮点舍入与再次读取状态。
+2. 完善 Advance 前部 4A1000..4A16A6 及接续后的 4A1F8D 以后插值/放置尾部；保留既有跨格和接续模块。
+3. 审计 Prepare 共享/恢复入口，继续核实未命名建筑标志，不套用其它游戏版本的 INI 键。
+4. 二次失败已完成实景覆盖；以该合法场景为新参照，继续调查目标保留、可达性复核与旧 Drive 回调中的移动器替换，直到实际观察到预算自然扣减/耗尽。
+5. 每部分继续原版片段与实景逐帧对照，保留当前全部基线、失败证据和完整回退；暂时不提交或推送。

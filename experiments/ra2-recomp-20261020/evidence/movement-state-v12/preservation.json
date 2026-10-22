@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "counts": {
+    "v9": 536,
+    "v10": 637,
+    "v11": 727,
+    "v12-baseline": 727,
+    "walk-verified": 734,
+    "path-cache-verified": 738,
+    "allied-collision-verified": 540,
+    "terrain-tail-verified": 540,
+    "H_originals": 20
+  },
+  "game_save_old_engine_preserved": true,
+  "unsupported_guards": 37
+}

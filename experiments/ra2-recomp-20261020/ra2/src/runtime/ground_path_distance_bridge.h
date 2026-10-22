@@ -1,0 +1,5 @@
+#ifndef RA2_GROUND_PATH_DISTANCE_BRIDGE_H
+#define RA2_GROUND_PATH_DISTANCE_BRIDGE_H
+void ra2_path_node_distance_bridge(void);
+void ra2_path_connection_distance_bridge(void);
+#endif
