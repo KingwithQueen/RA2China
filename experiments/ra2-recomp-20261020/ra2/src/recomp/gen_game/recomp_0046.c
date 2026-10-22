@@ -1,3 +1,4 @@
+#include "ground_connection_numeric_bridge.h"
 #include "ground_allied_bridge.h"
 #include "ground_objects_bridge.h"
 #include "ground_entry_bridge.h"
@@ -24327,10 +24328,12 @@ L_006FABAA:
     _flag_k = FK_CMP;
     MEM32(esp + 0x28) = eax; /* 0x006FAC98: mov dword ptr [esp + 0x28], eax */
     MEM32(esp + 0x30) = ecx; /* 0x006FAC9C: mov dword ptr [esp + 0x30], ecx */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(7); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FACB2;
     fp_push((double)(int32_t)MEM32(esp + 0x28)); /* 0x006FACA0: fild dword ptr [esp + 0x28] */
     MEM32(esp + 0x18) = ecx; /* 0x006FACA4: mov dword ptr [esp + 0x18], ecx */
     _st[0] *= *(double*)ADDR(0x79B620); /* 0x006FACA8: fmul qword ptr [0x79b620] */
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x40) = _v; } /* 0x006FACAE: fstp qword ptr [esp + 0x40] */
+L_006FACB2:
     fp_push((double)(int32_t)MEM32(esp + 0x18)); /* 0x006FACB2: fild dword ptr [esp + 0x18] */
     ebp = MEM32(esp + 0x44); /* 0x006FACB6: mov ebp, dword ptr [esp + 0x44] */
     ecx = MEM32(esp + 0x40); /* 0x006FACBA: mov ecx, dword ptr [esp + 0x40] */
@@ -24339,18 +24342,23 @@ L_006FABAA:
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x20) = _v; } /* 0x006FACC0: fstp qword ptr [esp + 0x20] */
     fp_push((double)(int32_t)MEM32(esp + 0x80)); /* 0x006FACC4: fild dword ptr [esp + 0x80] */
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x30) = _v; } /* 0x006FACCB: fstp qword ptr [esp + 0x30] */
-    RECOMP_CALL(sub_004BA480); /* 0x006FACCF: call 0x4ba480 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    /* original table call replaced locally */ //    RECOMP_CALL(sub_004BA480); /* 0x006FACCF: call 0x4ba480 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(5); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FACE1;
     _st[0] *= *(double*)ADDR(esp + 0x20); /* 0x006FACD4: fmul qword ptr [esp + 0x20] */
     _st[0] = *(double*)ADDR(esp + 0x30) - _st[0]; /* 0x006FACD8: fsubr qword ptr [esp + 0x30] */
     RECOMP_CALL(sub_0077F110); /* 0x006FACDC: call 0x77f110 */
     RECOMP_FLAGS_IN();
+L_006FACE1:
     edx = MEM32(esp + 0x48); /* 0x006FACE1: mov edx, dword ptr [esp + 0x48] */
     PUSH32(esp, ebp); /* 0x006FACE5: push ebp */
     PUSH32(esp, edx); /* 0x006FACE6: push edx */
     MEM32(esp + 0x38) = eax; /* 0x006FACE7: mov dword ptr [esp + 0x38], eax */
-    RECOMP_CALL(sub_004BA4D0); /* 0x006FACEB: call 0x4ba4d0 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    /* original table call replaced locally */ //    RECOMP_CALL(sub_004BA4D0); /* 0x006FACEB: call 0x4ba4d0 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(6); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAD00;
     _st[0] *= *(double*)ADDR(esp + 0x28); /* 0x006FACF0: fmul qword ptr [esp + 0x28] */
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0x10u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
@@ -24359,6 +24367,7 @@ L_006FABAA:
     _st[0] = _st[0] + (double)(int32_t)MEM32(esp + 0x74); /* 0x006FACF7: fiadd dword ptr [esp + 0x74] */
     RECOMP_CALL(sub_0077F110); /* 0x006FACFB: call 0x77f110 */
     RECOMP_FLAGS_IN();
+L_006FAD00:
     ecx = MEM32(esp + 0x28); /* 0x006FAD00: mov ecx, dword ptr [esp + 0x28] */
     PUSH32(esp, edi); /* 0x006FAD04: push edi */
     PUSH32(esp, ecx); /* 0x006FAD05: push ecx */
@@ -24432,9 +24441,11 @@ L_006FAD75:
     edx = edx - 0x3FFFu; /* 0x006FAD9B: sub edx, 0x3fff */
     _flag_k = FK_CMP;
     MEM32(esp + 0x30) = edx; /* 0x006FADA1: mov dword ptr [esp + 0x30], edx */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(2); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FADB3;
     fp_push((double)(int32_t)MEM32(esp + 0x30)); /* 0x006FADA5: fild dword ptr [esp + 0x30] */
     _st[0] *= *(double*)ADDR(0x79B620); /* 0x006FADA9: fmul qword ptr [0x79b620] */
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x40) = _v; } /* 0x006FADAF: fstp qword ptr [esp + 0x40] */
+L_006FADB3:
     fp_push((double)(int32_t)MEM32(esp + 0x18)); /* 0x006FADB3: fild dword ptr [esp + 0x18] */
     ebx = MEM32(esp + 0x44); /* 0x006FADB7: mov ebx, dword ptr [esp + 0x44] */
     eax = MEM32(esp + 0x40); /* 0x006FADBB: mov eax, dword ptr [esp + 0x40] */
@@ -24443,18 +24454,23 @@ L_006FAD75:
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x30) = _v; } /* 0x006FADC1: fstp qword ptr [esp + 0x30] */
     fp_push((double)(int32_t)MEM32(esp + 0x80)); /* 0x006FADC5: fild dword ptr [esp + 0x80] */
     { double _v = fp_pop(); *(double*)ADDR(esp + 0x38) = _v; } /* 0x006FADCC: fstp qword ptr [esp + 0x38] */
-    RECOMP_CALL(sub_004BA480); /* 0x006FADD0: call 0x4ba480 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(3); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    /* original table call replaced locally */ //    RECOMP_CALL(sub_004BA480); /* 0x006FADD0: call 0x4ba480 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(0); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FADE2;
     _st[0] *= *(double*)ADDR(esp + 0x30); /* 0x006FADD5: fmul qword ptr [esp + 0x30] */
     _st[0] = *(double*)ADDR(esp + 0x38) - _st[0]; /* 0x006FADD9: fsubr qword ptr [esp + 0x38] */
     RECOMP_CALL(sub_0077F110); /* 0x006FADDD: call 0x77f110 */
     RECOMP_FLAGS_IN();
+L_006FADE2:
     ecx = MEM32(esp + 0x48); /* 0x006FADE2: mov ecx, dword ptr [esp + 0x48] */
     PUSH32(esp, ebx); /* 0x006FADE6: push ebx */
     PUSH32(esp, ecx); /* 0x006FADE7: push ecx */
     MEM32(esp + 0x40) = eax; /* 0x006FADE8: mov dword ptr [esp + 0x40], eax */
-    RECOMP_CALL(sub_004BA4D0); /* 0x006FADEC: call 0x4ba4d0 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(4); RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    /* original table call replaced locally */ //    RECOMP_CALL(sub_004BA4D0); /* 0x006FADEC: call 0x4ba4d0 */
     RECOMP_FLAGS_IN();
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_connection_numeric_bridge(1); RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_006FAE01;
     _st[0] *= *(double*)ADDR(esp + 0x38); /* 0x006FADF1: fmul qword ptr [esp + 0x38] */
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0x10u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
@@ -24463,6 +24479,7 @@ L_006FAD75:
     _st[0] = _st[0] + (double)(int32_t)MEM32(esp + 0x74); /* 0x006FADF8: fiadd dword ptr [esp + 0x74] */
     RECOMP_CALL(sub_0077F110); /* 0x006FADFC: call 0x77f110 */
     RECOMP_FLAGS_IN();
+L_006FAE01:
     edx = MEM32(esp + 0x30); /* 0x006FAE01: mov edx, dword ptr [esp + 0x30] */
     PUSH32(esp, edi); /* 0x006FAE05: push edi */
     PUSH32(esp, edx); /* 0x006FAE06: push edx */

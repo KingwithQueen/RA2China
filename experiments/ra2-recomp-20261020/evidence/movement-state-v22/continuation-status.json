@@ -1,0 +1,32 @@
+{
+  "status": "formal generation 21 validated and archived; local-only delivery",
+  "formal_baseline_preserved": "baseline/ra2/build-original-c/ra2.exe",
+  "candidate_sha256": "2e2c9b88d5bf1a8f0da2742f95e1df24aa1a66a7eff4b5de091290ab4ba6af37",
+  "parts": [
+    "sampling-verified",
+    "prepare-verified",
+    "numeric-verified",
+    "connection-verified"
+  ],
+  "native_groups": 72,
+  "new_native_cases": 1732976,
+  "west_501_frame_scene": "z-tube-production-west",
+  "final_matrix_tags": [
+    "t-",
+    "u-"
+  ],
+  "connection_observer_tags": [
+    "w-tube-hook-east",
+    "w-tube-hook-west"
+  ],
+  "default_budget_tag": "v-default-budget",
+  "next_steps": [
+    "Continue remaining tube state machine, Advance/Prepare fragments, terrain/object classification; preserve this baseline and compare frames before promotion."
+  ],
+  "formal_pointers_not_promoted_yet": false,
+  "completed_production_scene_tags": [
+    "z-tube-production-east",
+    "z-tube-production-west"
+  ],
+  "independent_connection_proof": "connection-real-scenes.json"
+}

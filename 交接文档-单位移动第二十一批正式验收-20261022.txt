@@ -1,0 +1,13 @@
+单位移动第二十一批正式验收交接（2026-10-22）
+正式代次21 / 验证轮次22：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v22\validation.json
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：2e2c9b88d5bf1a8f0da2742f95e1df24aa1a66a7eff4b5de091290ab4ba6af37
+Advance共享采样15F0/230E共3/11处，Prepare内部重建39C8/39CA共4/5处和3216清理1处已整理成业务C，布局集中在ground_internal_bridge。
+合法双向隧道已独立实景命中：第40帧连接开始及落位完成。反向第42/59帧Y差异已按原x87舍入及角度量化修复；新增ground_connection_numeric及其桥接，保留最初失败轨迹。
+最终30场景16800帧，另默认预算901帧、独立连接观察1002帧；72组检查，本批1732976例机器码对照。四部分各有默认/三格/预算逐帧门禁及完整回退点。
+报告：D:\Program\红色警戒2\docs\单位移动第二十一批-共享采样与内部重建及隧道实景-20261022.txt
+旧基线baseline；回退parts/sampling-verified、prepare-verified、numeric-verified、connection-verified；最终final-source、清单及final-check.json。
+默认预算27..37帧10..0，第38帧清空停止；正常服务构造真实对象，未测随机对局频率，4C3895未单独挂钩。
+独立观察与正式程序的状态及既有事件一致。不同保存指针等其他少见分支未补实景；不能扩大为全分支覆盖。
+下一步隧道6FAA30其余状态机、Advance/Prepare剩余内部接续，然后其余地形/对象服务；完整游戏等价未完成，37个保护保留。
+本地提交，不推送；父提交d3207de。既有基线、回退、H盘输入和旧C引擎保留。
