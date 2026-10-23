@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "allied_cases": 65536,
+  "moving_tail_cases": 65536,
+  "outcomes": [
+    0,
+    0,
+    0,
+    0,
+    65536
+  ],
+  "native_math_services": true,
+  "calls_live_state_control_verified": true
+}

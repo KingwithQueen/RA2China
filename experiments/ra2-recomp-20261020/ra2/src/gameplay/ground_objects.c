@@ -86,8 +86,7 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_kind(Ra2ObjectPassageState *st
 }
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_terrain(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
-    if(!s->query(s->context,RA2_OBJECT_TERRAIN_WEAPON_ALLOWED)) return RA2_OBJECT_BLOCKED;
-    raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
+    return ra2_ground_classify_enemy_warhead(state,(unsigned)s->query(s->context,RA2_OBJECT_TERRAIN_WEAPON_ALLOWED));
 }
 Ra2ObjectPassageOutcome ra2_ground_classify_stationary_ally(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
@@ -98,5 +97,11 @@ Ra2ObjectPassageOutcome ra2_ground_classify_stationary_ally(Ra2ObjectPassageStat
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_building(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
     if(s->query(s->context,RA2_OBJECT_BUILDING_FLAG_1350)) return RA2_OBJECT_BLOCKED;
+    raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
+}
+
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_warhead(Ra2ObjectPassageState *state,unsigned flag)
+{
+    if(!flag)return RA2_OBJECT_BLOCKED;
     raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
 }

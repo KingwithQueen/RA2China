@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_files": 5980,
+  "source_archive_matches_live": true,
+  "formal_pointers_match": true,
+  "old_baselines_preserved": true,
+  "exe_sha256": "4db5d31b232480adb2f7aa7142e71add8d3721bf4b75c9b21bdf17c882487c73",
+  "report_sha256": "0d373dfe9e83dc7ce6de7864f92938249c826f3a064ffa8162d1c6b81968d3fb",
+  "handoff_sha256": "0d373dfe9e83dc7ce6de7864f92938249c826f3a064ffa8162d1c6b81968d3fb"
+}

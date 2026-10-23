@@ -1,3 +1,4 @@
+extern void ra2_ground_advance_mark_return_bridge(void);
 extern void ra2_ground_advance_place_return_bridge(void);
 extern void ra2_ground_prepare_invalidate_return_bridge(void);
 extern void ra2_ground_prepare_owner_stop_return_bridge(void);
@@ -37772,6 +37773,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -37965,6 +37969,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -43129,6 +43136,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -43322,6 +43332,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -48190,6 +48203,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -48383,6 +48399,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -52700,6 +52719,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -52893,6 +52915,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -56919,6 +56944,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -57112,6 +57140,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -60198,6 +60229,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -60391,6 +60425,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -62770,6 +62807,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -62963,6 +63003,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -65000,6 +65043,9 @@ L_004A24E8:
 L_004A24EC:
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -65193,6 +65239,9 @@ L_004A25E1:
 L_004A25E4:
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
 L_004A25EB:
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
@@ -66153,6 +66202,9 @@ L_004A24DC:
     MEM32(esp + 0x18) = ecx; /* 0x004A24E8: mov dword ptr [esp + 0x18], ecx */
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -66289,6 +66341,9 @@ L_004A25E1:
     eax = MEM32(ebp + 0xC); /* 0x004A25E1: mov eax, dword ptr [ebp + 0xc] */
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
     ecx = ebp; /* 0x004A25ED: mov ecx, ebp */
@@ -66619,6 +66674,9 @@ L_004A24DC:
     MEM32(esp + 0x18) = ecx; /* 0x004A24E8: mov dword ptr [esp + 0x18], ecx */
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -66755,6 +66813,9 @@ L_004A25E1:
     eax = MEM32(ebp + 0xC); /* 0x004A25E1: mov eax, dword ptr [ebp + 0xc] */
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
     ecx = ebp; /* 0x004A25ED: mov ecx, ebp */
@@ -67828,6 +67889,9 @@ L_004A24DC:
     MEM32(esp + 0x18) = ecx; /* 0x004A24E8: mov dword ptr [esp + 0x18], ecx */
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -67964,6 +68028,9 @@ L_004A25E1:
     eax = MEM32(ebp + 0xC); /* 0x004A25E1: mov eax, dword ptr [ebp + 0xc] */
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
     ecx = ebp; /* 0x004A25ED: mov ecx, ebp */
@@ -68247,6 +68314,9 @@ L_004A24DC:
     MEM32(esp + 0x18) = ecx; /* 0x004A24E8: mov dword ptr [esp + 0x18], ecx */
     MEM32(esp + 0x1C) = edx; /* 0x004A24EC: mov dword ptr [esp + 0x1c], edx */
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
     /* 共享地图查询使用入口坐标，服务后重读owner。 */
@@ -68383,6 +68453,9 @@ L_004A25E1:
     eax = MEM32(ebp + 0xC); /* 0x004A25E1: mov eax, dword ptr [ebp + 0xc] */
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
     ecx = ebp; /* 0x004A25ED: mov ecx, ebp */
@@ -68462,6 +68535,9 @@ void sub_004A24F0(void) {
     RECOMP_ENTER(0x004A24F0u);
 
 L_004A24F0:
+    /* 入口先写目标高度，再查询地图；保留原生段内跳转。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v37;
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -68474,6 +68550,7 @@ L_004A24F0:
     ecx = MEM32(ebp + 0xC); /* 0x004A251B: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
+destination_resume_v37:
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -68593,6 +68670,9 @@ L_004A25E1:
     eax = MEM32(ebp + 0xC); /* 0x004A25E1: mov eax, dword ptr [ebp + 0xc] */
     MEM8(eax + 0x79) = (uint8_t)(0); /* 0x004A25E4: mov byte ptr [eax + 0x79], 0 */
 L_004A25E8:
+    /* 进入服务允许改写保存槽；完成后按原顺序出栈。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_mark_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A25E8: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A25EB: push 1 */
     ecx = ebp; /* 0x004A25ED: mov ecx, ebp */

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "phase": 4,
+  "object_cases": 65536,
+  "outcomes": [
+    4149,
+    0,
+    0,
+    12340,
+    4118,
+    44929,
+    0
+  ],
+  "calls_live_state_verified": true
+}

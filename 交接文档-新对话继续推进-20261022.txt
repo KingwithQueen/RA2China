@@ -1,3 +1,9 @@
+最新接续：第三十六批已验收，正式36 / 验证37。
+先读：D:\Program\红色警戒2\交接文档-单位移动第三十六批正式验收-20261024.txt
+程序SHA-256：4db5d31b232480adb2f7aa7142e71add8d3721bf4b75c9b21bdf17c882487c73
+只读核对：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v37.py
+以下历史保留。
+
 最新接续：第三十五批已验收，正式35 / 验证36。
 先读：D:\Program\红色警戒2\交接文档-单位移动第三十五批正式验收-20261023.txt
 程序SHA-256：5854f94bac6bdee0bd6d0b1ea6caf0eca005ae1b8a957c86affd5804e7b6a303

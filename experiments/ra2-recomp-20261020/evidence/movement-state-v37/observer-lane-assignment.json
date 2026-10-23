@@ -1,0 +1,15 @@
+{
+  "delegated_jobs": [
+    "combined-scenes"
+  ],
+  "free_bridge_jobs": false,
+  "free_core_jobs": [
+    "combined-scenes"
+  ],
+  "required_before_delegation": [
+    "core-scenes-complete.json",
+    "alias-occupied-natural-scenes.json"
+  ],
+  "max_scene_lanes": 2,
+  "max_game_processes": 4
+}

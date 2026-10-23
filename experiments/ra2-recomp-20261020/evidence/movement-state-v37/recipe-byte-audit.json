@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "production_sources_replayed": 7,
+  "production_sources_changed": 6,
+  "probe_sources_replayed": 3,
+  "probe_sources_changed": 2,
+  "observer_sources_replayed": 1,
+  "candidate_maps_replayed": 2,
+  "byte_identical": true,
+  "inputs": [
+    {
+      "path": "audit_recipe_replay_v37.py",
+      "sha256": "784a2f996b14eca54cb0fba1cf6908a072628195203d30e7568765d075279abb"
+    },
+    {
+      "path": "integrate_template_v37.py",
+      "sha256": "1c8fcb50fa642c6b8e83fd686229aebdfbe434ada0bd7421eaf6b753c2a66a32"
+    },
+    {
+      "path": "extend_register_probe_v37.py",
+      "sha256": "fe7e1d4b2d17714ffa275498b512bde92ea5f199fe9be24612aa9a266d09ada0"
+    },
+    {
+      "path": "integrate_objects_v37.py",
+      "sha256": "b92d0993cb591e9dedbf2477f4b4218ce3c8317eb4eeffa9c42c5d25ca97d4c5"
+    },
+    {
+      "path": "extend_objects_probe_v37.py",
+      "sha256": "135b4ee80ed70eed207ee159a40d3febf82ef30bb27567180cd3c9d7612681be"
+    },
+    {
+      "path": "integrate_returns_v37.py",
+      "sha256": "8d2974033f5c8e28ba421726a73adc23fdd702c2be046fc966043e20563b436b"
+    },
+    {
+      "path": "extend_exit_probe_v37.py",
+      "sha256": "dd9941bf8f41528992b2e37d9f5dc183dc5da70d1f274306e5d708b0964631ed"
+    },
+    {
+      "path": "extend_observer_v37.py",
+      "sha256": "e2153fec94a67211c4176fc08d8a40bb15a84dc45111384435b7ea3739638de9"
+    },
+    {
+      "path": "make_bridge_lane_release_v37.py",
+      "sha256": "ff6e21e0d02c26b7ca321ee5af1fe56132bb3e0202dc0ed07185c6b527ac20c3"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "03172b4e576d8983f70944d64d9b809fe8276d0846b2cf91b5fdcb2edbbb15bf"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "945a8735085a005529af01e3ecb66f7837e463d42e87f896774072ea276acc06"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "dfeda867073baf37f72ca44a38deb21e626ca5e52245038c23fac9064de48795"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_enemy_kind.h",
+      "sha256": "c5bc813d02a963d0b4d4f87decb746f0e1702e3c21389d7fc9fa8cddb6f0d34b"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "269de06554e5ab92f2a92d7aa733a60eaabf2fba0c5c32e36fb0a18a65455b88"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "c40511c9e06b4bd98cda26825785b5882ee073f8f4964d6b91a5758f85998740"
+    },
+    {
+      "path": "evidence/movement-state-v37/tube_state_probe.c",
+      "sha256": "be26f4267df1d5f940c574265da3d0360fe040c6f23733514b2b735ed9d2362b"
+    },
+    {
+      "path": "evidence/movement-state-v37/objects_probe.c",
+      "sha256": "87bcc7ba7aff38b88284f5801bd84794bf62673b26110c23f6a34c3e36e70b9a"
+    },
+    {
+      "path": "evidence/movement-state-v37/overlap_probe.c",
+      "sha256": "79b39006ada0993970cfef687b4c41f8924b7818bc293d2c0aeac8fa946fd2a9"
+    },
+    {
+      "path": "evidence/movement-state-v37/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    },
+    {
+      "path": "evidence/movement-state-v37/fixtures/bridge-lane-release-north.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6"
+    },
+    {
+      "path": "evidence/movement-state-v37/fixtures/bridge-lane-release-south.MAP",
+      "sha256": "0920fb78f92c49da611e3c40ec64081b03a4ef8d418d84d9b1df9ecca49419da"
+    }
+  ]
+}

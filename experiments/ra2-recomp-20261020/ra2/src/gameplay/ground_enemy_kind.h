@@ -5,3 +5,5 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_kind(Ra2ObjectPassageState *st
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_terrain(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *services);
 
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_building(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *services);
+
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_warhead(Ra2ObjectPassageState *state,unsigned flag);

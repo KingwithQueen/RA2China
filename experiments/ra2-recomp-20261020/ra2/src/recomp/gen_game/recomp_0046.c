@@ -68340,6 +68340,11 @@ L_00703A45:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A4D: je 0x703b5a */
 L_00703A53:
+    /* 弹头已载入，直接检查原通行字节，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t warhead_resume_v37=ra2_ground_object_branch_bridge(11);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(warhead_resume_v37==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     SET_LO8(ecx, MEM8(eax + 0x146)); /* 0x00703A53: mov cl, byte ptr [eax + 0x146] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A59: test cl, cl */
     _flag_a = (uint32_t)(LO8(ecx)) << 24; _flag_b = (uint32_t)(LO8(ecx)) << 24;
@@ -69563,6 +69568,11 @@ L_00703A45:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A4D: je 0x703b5a */
 L_00703A53:
+    /* 弹头已载入，直接检查原通行字节，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t warhead_resume_v37=ra2_ground_object_branch_bridge(11);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(warhead_resume_v37==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     SET_LO8(ecx, MEM8(eax + 0x146)); /* 0x00703A53: mov cl, byte ptr [eax + 0x146] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A59: test cl, cl */
     _flag_a = (uint32_t)(LO8(ecx)) << 24; _flag_b = (uint32_t)(LO8(ecx)) << 24;
@@ -70289,6 +70299,11 @@ L_00703A45:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A4D: je 0x703b5a */
 L_00703A53:
+    /* 弹头已载入，直接检查原通行字节，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t warhead_resume_v37=ra2_ground_object_branch_bridge(11);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(warhead_resume_v37==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     SET_LO8(ecx, MEM8(eax + 0x146)); /* 0x00703A53: mov cl, byte ptr [eax + 0x146] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A59: test cl, cl */
     _flag_a = (uint32_t)(LO8(ecx)) << 24; _flag_b = (uint32_t)(LO8(ecx)) << 24;

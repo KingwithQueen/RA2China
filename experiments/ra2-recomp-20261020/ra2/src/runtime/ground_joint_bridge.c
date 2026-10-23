@@ -154,7 +154,7 @@ uint32_t ra2_ground_template_destination_bridge(unsigned alternate)
 {
     uint32_t frame=g_esp,drive=g_ebp,offset=alternate?0x24u:0x74u;
     uint32_t x,y,z;
-    if(alternate==2){x=g_ecx;y=g_edx;z=g_ebx;}
+    if(alternate>=2){x=g_ecx;y=g_edx;z=g_ebx;if(alternate==3)MEM32(frame+0x20)=z;}
     else
     {
         x=MEM32(frame+offset);y=MEM32(frame+offset+4);z=MEM32(frame+offset+8);
@@ -232,4 +232,12 @@ void ra2_ground_advance_place_return_bridge(void)
     MEM8(current_owner+0x74)=old_flag;
     ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,current_owner&UINT32_C(0xFFFFFF00));
     g_edi=saved_edi;g_esi=saved_esi;g_ebp=saved_ebp;
+}
+
+void ra2_ground_advance_mark_return_bridge(void)
+{
+    uint32_t frame=g_esp,unit=MEM32(g_ebp+0xC),argument=1;
+    g_ebp=unit;g_edx=MEM32(unit);
+    uint32_t result=method(unit,0x11C,&argument,1);
+    ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,result&UINT32_C(0xFFFFFF00));
 }

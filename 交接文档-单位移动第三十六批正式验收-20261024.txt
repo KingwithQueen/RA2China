@@ -1,0 +1,37 @@
+单位移动第三十六批正式验收（2026-10-24）
+正式代次36 / 验证轮次37
+父提交：8f085a069f1efb3d1a84fa1495ba3b0679e89479
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：4db5d31b232480adb2f7aa7142e71add8d3721bf4b75c9b21bdf17c882487c73
+证据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v37
+
+第三十五批8f085a0、程序5854f94bac6bdee0bd6d0b1ea6caf0eca005ae1b8a957c86affd5804e7b6a303、5645项封存和干净工作区先核对通过。完整baseline、旧程序和三部分回退保留。
+内部模板：4A24F0十三处使用入口ECX/EDX/EBX，先写局部高度，再共享地图服务；新独立C副本使用一个局部C接续标签，不增加原生入口、分派或保护。65536例覆盖符号边界、服务内观察高度及回调修改owner/局部坐标。
+具体对象：703A53三处检查已载入弹头146字节，复用纯C通行分类，不重选武器或查询kind。65536例覆盖256种字节值及INT32通行边界，零服务调用。
+共享出口：4A25E8十三处进入服务（11C，参数1）及Advance出栈；65536例让回调替换owner、改变保存槽与EAX，核对返回高字节、栈清理和非易失寄存器。
+六项生产源改动，七项相关源、三项探针和观察器从基线独立重放；旧原生标签、指令注解、尾部、37处保护和292项编译输入保持。
+每部分六场3406帧，默认901、短包围101、独立AI预算901、双向隧道各501及出口占用501；状态、RNG和有序事件逐帧相同。回退：
+template-verified : 2004fcd1b13057e208af6208b575e3d62ad845e23cbd1235f6a83efa687bebd3
+passage-verified : 3663c7e0c5be5a64769e39eb16e393c40bd671eb35cb5a5ebc0d871f6d0b0802
+returns-verified : 4db5d31b232480adb2f7aa7142e71add8d3721bf4b75c9b21bdf17c882487c73
+
+最终123组原版片段门禁通过，含旧120组重跑和本轮196608例。69场生产47439帧：原67场45637帧及新两场1802帧。探针、独立观察和短检查不重复计入生产。
+独立默认预算901、内部4054、连接及高差占用9116、桥观察25场22525帧；入口观察3604+5406帧单列。
+总并发最多两路、四个游戏进程，编译与探针构建串行；171个C源、292项内容输入，最终构建刷新0，与returns回退相同。公共比较器、schema12和CPU/FPU方式保持，0010 LF、0046 CRLF保持。
+69份既有地图/规则逐字节继承，新两份地图仅普通副本和正常命令时序。
+
+新增桥组合：主车与E2只在第5帧一次对向移动；两辆普通占位车先到出口。北向第210帧、南向第226帧向60列主车道占位车发出正常离开命令，61列相邻车在北300/南316帧收到离开命令。命令时间不当作实际离开：首车实际在北253/南269帧开始移动，晚于主车北250/南266帧跨出口；跨出当帧两占位车仍保持等待位置。两车实际运动见bridge-lane-release-motion.json。验证桥层416交会中的关系/几何查询、实际占位查询、出口等待、绕行、部分放行期间主车与先离开占位车同时移动；跨出口和到达结果独立记录，不用最终到达替代过程。没有写路径、对象链、运动或桥层。
+结果：{'north': {'relationship_queries': 1, 'geometry_queries': 1, 'query_samples': [{'frame': 108, 'stage': 25, 'vehicle': [15605, 16885, 416], 'infantry': [15547, 17335, 416], 'vehicle_previous': [15594, 16874, 416], 'infantry_previous': [15552, 17344, 416]}, {'frame': 108, 'stage': 26, 'vehicle': [15605, 16885, 416], 'infantry': [15547, 17335, 416], 'vehicle_previous': [15594, 16874, 416], 'infantry_previous': [15552, 17344, 416]}], 'blocker_queries': 17, 'blocker_query_frames': [188, 188, 188, 188, 188, 189, 190, 191, 192, 193, 194, 194], 'longest_near_exit_wait_frames': 6, 'wait_range': [195, 200], 'blocker_departed': True, 'vehicle_moved_after_release': True, 'normal_move_reissued_frame': None, 'motion': {'1023362': {'final_position': [15488, 19328, 416], 'health': 200, 'reached_goal_cell': True}, '1023367': {'final_position': [15424, 15808, 416], 'health': 125, 'reached_goal_cell': True}}, 'first_release_frame': 210, 'second_release_frame': 300, 'partial_clearance_dynamic_frames': [253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264], 'partial_clearance_dynamic_frame_count': 47, 'main_move_submissions': 1, 'blockers_stood_until_first_release': True, 'detour_frames': [212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223], 'detour_frame_count': 21, 'crossed_exit_frame': 250, 'crossed_before_full_clear': True, 'arrived_before_release_frame': None, 'main_move_reissued': False, 'first_motion_after_wait_before_release': 201}, 'south': {'relationship_queries': 1, 'geometry_queries': 1, 'query_samples': [{'frame': 98, 'stage': 25, 'vehicle': [15488, 17539, 416], 'infantry': [15805, 16988, 416], 'vehicle_previous': [15488, 17551, 416], 'infantry_previous': [15805, 16979, 416]}, {'frame': 98, 'stage': 26, 'vehicle': [15488, 17539, 416], 'infantry': [15805, 16988, 416], 'vehicle_previous': [15488, 17551, 416], 'infantry_previous': [15805, 16979, 416]}], 'blocker_queries': 39, 'blocker_query_frames': [98, 120, 185, 185, 185, 185, 185, 185, 185, 191, 191, 191], 'longest_near_exit_wait_frames': 12, 'wait_range': [205, 216], 'blocker_departed': True, 'vehicle_moved_after_release': True, 'normal_move_reissued_frame': None, 'motion': {'1023362': {'final_position': [15488, 14976, 416], 'health': 200, 'reached_goal_cell': True}, '1023367': {'final_position': [15808, 18624, 416], 'health': 125, 'reached_goal_cell': True}}, 'first_release_frame': 226, 'second_release_frame': 316, 'partial_clearance_dynamic_frames': [269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280], 'partial_clearance_dynamic_frame_count': 47, 'main_move_submissions': 1, 'blockers_stood_until_first_release': True, 'detour_frames': [228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239], 'detour_frame_count': 21, 'crossed_exit_frame': 266, 'crossed_before_full_clear': True, 'arrived_before_release_frame': None, 'main_move_reissued': False, 'first_motion_after_wait_before_release': 217}}
+原错峰放行、持占用到600帧绕行、300/320清空与重发、友敌混类交通、移动步兵、高差出口占用全部重跑。
+
+29个非主C副本和三个主入口继续核查；86条原生入边逐字节核对。六场新组合观察覆盖全部29候选，4A24F0同时配置南北场景，三个主入口都有正控。没有观察到非主C副本合法自然首次调用；不是所有候选每方向穷尽，任意计算目标、运行时指针和未跑场景仍待核。原生内部跳转命中不能当成独立C首次调用。
+原版4→6上行停滞和7→4下行到-193异常保留；4→7和6→4成功组单列。曲线长组实际每场601帧，不更改原场景以适应文字。
+游戏首帧前失败0、公共路径检查拒绝0。v34不达标试验、v35旧拒绝和v36模板初次编译失败原地保留并核对；本轮实际预帧失败另见investigations（如有）。
+基线：v9..v36旧封存、5645项本轮baseline、三部分回退逐项核对；H盘允许列表20项、D盘原游戏、SAV和旧手写引擎哈希保持。本轮无清理，v35获准删除的2428个可再生obj继续不存在，旧清理清单/记录保留。
+
+沿用第三十五批的历史工程估算，本轮没有重新计算百分比。当前地面移动与寻路专题约76%（68%–82%），余量约18%–32%；若目标是完整可读且独立的C17游戏引擎，约22%（15%–27%），仍余约73%–85%。这是带权重的工程判断，不是测得的行为覆盖率。
+剩余：本轮已整理4A24F0、703A53、4A25E8；仍有其他载入坐标、目标选择、格切换及桥层写回，更多对象/移动器/碾压毁桥和递归服务组合，以及29个非主C副本自然来源待核。原8–15批仅是上批规划区间，不是本轮重新估时。
+完成组数、生成行数和批次数不是完成率。完整移动、对象分类和全游戏等价仍未完成。
+完成后只本地提交，不推送。下批先只读运行verify_final_movement_v37.py，再保存新回退；不要原地重跑封存写入脚本。
+
+最终源封存：5980项。当前身份以validation.json/source-manifest.json为准。下一轮必须保留内容构建、独立观察器重建、结构/配方、原版片段和生产逐帧门禁，不能仅替换脚本后缀。

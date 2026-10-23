@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "meeting-north",
+      "path": "evidence/movement-state-v37/fixtures/bridge-infantry-meeting-north.MAP",
+      "sha256": "8af9f57d2981ec4438788a74efb8eb77e194866ea0a99aa86570443108f00cd4",
+      "meeting": true,
+      "orders": [
+        "5:1023362:2:60:72",
+        "5:1023367:2:60:61",
+        "1:1023364:2:60:75"
+      ],
+      "actor_ids": [
+        1023362,
+        1023367
+      ],
+      "vehicle_id": 1023362,
+      "infantry_id": 1023367,
+      "goals": {
+        "1023362": [
+          60,
+          72
+        ],
+        "1023367": [
+          60,
+          61
+        ]
+      },
+      "source": "evidence/movement-state-v36/fixtures/bridge-mixed-north.MAP"
+    },
+    {
+      "name": "following-north",
+      "path": "evidence/movement-state-v37/fixtures/bridge-infantry-following-north.MAP",
+      "sha256": "c5139b52d3d5367122cf87b2669cf8422699e6638cb4c4bc11fc24f94e4dbaa6",
+      "meeting": false,
+      "orders": [
+        "5:1023362:2:60:72",
+        "5:1023367:2:60:72",
+        "1:1023364:2:60:75"
+      ],
+      "actor_ids": [
+        1023362,
+        1023367
+      ],
+      "vehicle_id": 1023362,
+      "infantry_id": 1023367,
+      "goals": {
+        "1023362": [
+          60,
+          72
+        ],
+        "1023367": [
+          60,
+          72
+        ]
+      },
+      "source": "evidence/movement-state-v36/fixtures/bridge-mixed-north.MAP"
+    },
+    {
+      "name": "meeting-south",
+      "path": "evidence/movement-state-v37/fixtures/bridge-infantry-meeting-south.MAP",
+      "sha256": "61dfe3b03625b7a652184e40967f48563a9be2d5a84b5ecae09b0dca04b7548d",
+      "meeting": true,
+      "orders": [
+        "5:1023362:2:60:61",
+        "5:1023367:2:60:72",
+        "1:1023364:2:60:75"
+      ],
+      "actor_ids": [
+        1023362,
+        1023367
+      ],
+      "vehicle_id": 1023362,
+      "infantry_id": 1023367,
+      "goals": {
+        "1023362": [
+          60,
+          61
+        ],
+        "1023367": [
+          60,
+          72
+        ]
+      },
+      "source": "evidence/movement-state-v36/fixtures/bridge-mixed-south.MAP"
+    },
+    {
+      "name": "following-south",
+      "path": "evidence/movement-state-v37/fixtures/bridge-infantry-following-south.MAP",
+      "sha256": "5d4b4dc86192700fa82fb42cf6b19ef90bb9509e1e60bfd7f43660ea7d53299e",
+      "meeting": false,
+      "orders": [
+        "5:1023362:2:60:61",
+        "5:1023367:2:60:61",
+        "1:1023364:2:60:75"
+      ],
+      "actor_ids": [
+        1023362,
+        1023367
+      ],
+      "vehicle_id": 1023362,
+      "infantry_id": 1023367,
+      "goals": {
+        "1023362": [
+          60,
+          61
+        ],
+        "1023367": [
+          60,
+          61
+        ]
+      },
+      "source": "evidence/movement-state-v36/fixtures/bridge-mixed-south.MAP"
+    }
+  ],
+  "ordinary_player_orders": true,
+  "raw_state_writes": false
+}
