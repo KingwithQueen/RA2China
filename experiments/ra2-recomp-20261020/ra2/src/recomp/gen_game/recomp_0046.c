@@ -68311,6 +68311,11 @@ L_00703A1E:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_00703A61; /* 0x00703A21: jne 0x703a61 */
 L_00703A23:
+    /* 地形对象已确认，武器选择与弹头门槛保留原服务顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t terrain_resume_v35=ra2_ground_object_branch_bridge(9);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(terrain_resume_v35==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x00703A23: mov eax, dword ptr [ebp] */
     PUSH32(esp, esi); /* 0x00703A26: push esi */
     ecx = ebp; /* 0x00703A27: mov ecx, ebp */
@@ -69524,6 +69529,11 @@ L_00703A1E:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_00703A61; /* 0x00703A21: jne 0x703a61 */
 L_00703A23:
+    /* 地形对象已确认，武器选择与弹头门槛保留原服务顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t terrain_resume_v35=ra2_ground_object_branch_bridge(9);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(terrain_resume_v35==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x00703A23: mov eax, dword ptr [ebp] */
     PUSH32(esp, esi); /* 0x00703A26: push esi */
     ecx = ebp; /* 0x00703A27: mov ecx, ebp */
@@ -70240,6 +70250,11 @@ L_00703A1E:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_00703A61; /* 0x00703A21: jne 0x703a61 */
 L_00703A23:
+    /* 地形对象已确认，武器选择与弹头门槛保留原服务顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t terrain_resume_v35=ra2_ground_object_branch_bridge(9);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(terrain_resume_v35==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x00703A23: mov eax, dword ptr [ebp] */
     PUSH32(esp, esi); /* 0x00703A26: push esi */
     ecx = ebp; /* 0x00703A27: mov ecx, ebp */

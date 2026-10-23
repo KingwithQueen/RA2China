@@ -200,3 +200,18 @@ void ra2_ground_prepare_owner_stop_return_bridge(void)
     uint32_t result=method(unit,0x410,args,2);
     ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result&UINT32_C(0xFFFFFF00));
 }
+
+void ra2_ground_prepare_invalidate_return_bridge(void)
+{
+    uint32_t drive=g_ebp,unit=MEM32(drive+0xC);
+    g_eax=unit;g_ecx=(g_ecx&UINT32_C(0xFFFFFF00))|MEM8(unit+0x7D);
+    if(g_ecx&255u)
+    {
+        uint32_t out=g_esi;
+        g_ecx=MEM32(0x852998);MEM32(out)=g_ecx;
+        g_edx=MEM32(0x85299C);MEM32(out+4)=g_edx;
+        g_eax=MEM32(0x8529A0);MEM32(out+8)=g_eax;
+        MEM8(drive+0x63)=0;
+    }
+    ra2_ground_prepare_service_return_bridge(0);
+}

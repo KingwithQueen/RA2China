@@ -102,6 +102,12 @@ uint32_t ra2_ground_tube_state_bridge(unsigned entry)
 }
 static void select_table(void *opaque,int32_t index){TubeContext *c=opaque;c->table=MEM32(0x7A00A0+(uint32_t)index*16);}
 static Ra2PathSample sample(void *opaque,int32_t index){TubeContext *c=opaque;Ra2PathSample p;memcpy(&p,(void *)(uintptr_t)ADDR(c->table+(uint32_t)index*12),12);return p;}
+static void retain_loaded_table(void *opaque,int32_t table){(void)opaque;(void)table;}
+static Ra2PathSample loaded_sample(void *opaque,int32_t index)
+{
+    TubeContext *c=opaque;(void)index;Ra2PathSample value;
+    memcpy(&value,(void *)(uintptr_t)ADDR(c->table+c->vector*4u),sizeof(value));return value;
+}
 uint32_t ra2_ground_internal_handoff_bridge(unsigned entry)
 {
     TubeContext c={0};c.frame=g_esp;c.drive=g_ebp;c.cell=g_esi;
@@ -115,7 +121,8 @@ uint32_t ra2_ground_internal_handoff_bridge(unsigned entry)
     if(entry==2)
     {int32_t index=(int32_t)(g_ecx+1u);MEM32(c.drive+0x5C)=(uint32_t)index;g_ecx=(uint32_t)index;g_eax=MEM32(c.frame+0x3C);return (int32_t)MEM32(c.frame+0x3C)>7?0x4A166A:0x4A1FA1;}
     Ra2SamplingServices services={&c,NULL,select_table,sample};Ra2SamplingChoice choice={0};
-    int32_t index=entry==3?(int32_t)g_edx:(int32_t)MEM32(c.drive+0x5C);Ra2SamplingPhase phase=ra2_ground_choose_selected_remainder((int32_t)g_eax,index,(int32_t)g_edi,&choice,&services);
+    if(entry==4){c.table=g_eax;c.vector=g_ecx;services.select_table=retain_loaded_table;services.sample_at=loaded_sample;}
+    int32_t index=entry>=3?(int32_t)g_edx:(int32_t)MEM32(c.drive+0x5C);Ra2SamplingPhase phase=ra2_ground_choose_selected_remainder((int32_t)g_eax,index,(int32_t)g_edi,&choice,&services);
     MEM32(c.frame+0x8C)=(uint32_t)choice.sample.x;MEM32(c.frame+0x90)=(uint32_t)choice.sample.y;
     g_eax=(uint32_t)choice.sample.y;g_esi=(uint32_t)choice.sample.x;g_edx=(uint32_t)index;
     if(phase==RA2_SAMPLING_DONE)return 0x4A263A;

@@ -80,9 +80,14 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_kind(Ra2ObjectPassageState *st
     void *c=s->context;
     int32_t kind=s->query(c,RA2_OBJECT_KIND);
     if(kind==6 && s->query(c,RA2_OBJECT_BUILDING_FLAG_1350)) return RA2_OBJECT_BLOCKED;
-    if(kind==36 && !s->query(c,RA2_OBJECT_TERRAIN_WEAPON_ALLOWED)) return RA2_OBJECT_BLOCKED;
+    if(kind==36) return ra2_ground_classify_enemy_terrain(state,s);
     raise_passage(state,RA2_CELL_DESTROYABLE);
     return RA2_OBJECT_SCANNED;
+}
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_terrain(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
+{
+    if(!s->query(s->context,RA2_OBJECT_TERRAIN_WEAPON_ALLOWED)) return RA2_OBJECT_BLOCKED;
+    raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
 }
 Ra2ObjectPassageOutcome ra2_ground_classify_stationary_ally(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {

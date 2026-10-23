@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "job": "tall-scenes",
+  "runner": "run_tall_equivalence_v35.py",
+  "runner_sha256": "00c0eb73dd6cc199fdab32d5e40659add70ac31059904db669a3b843e69acaf3",
+  "two_lanes_max": true
+}

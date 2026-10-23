@@ -1,0 +1,10 @@
+{
+  "deleted_bytes": 29649646,
+  "user_approved_exact_allowlist": true,
+  "blocked": false,
+  "deleted_files": 2428,
+  "passed": true,
+  "method": "SHA256-checked ordinary literal-file deletion without force or recursion",
+  "protected_archives_preserved": true,
+  "prior_automatic_rejections": 3
+}

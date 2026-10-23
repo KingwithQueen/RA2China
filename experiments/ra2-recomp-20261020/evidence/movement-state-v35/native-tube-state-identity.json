@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "scope": "Original native 6FAE76 full exit including epilogue; 6FAA45/6FAB6A waypoint switches; 4A3257/4A2311/4A1F90 continuations; 479CC0/47A270/47A290 full classification services. Continuation stops and callback substitutions verify fragment behavior, not a complete real game.",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executable": {
+    "path": "evidence/movement-state-v35/tube_state_probe.exe",
+    "sha256": "b799883a7ec7f0c611cbac1d56d14ee6d43ff92bd577ee5ca893c30b6336ef4f"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v35/tube_state_probe.c",
+      "sha256": "be26f4267df1d5f940c574265da3d0360fe040c6f23733514b2b735ed9d2362b"
+    },
+    {
+      "path": "evidence/movement-state-v35/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-tube-state-probe-v35.ps1",
+      "sha256": "66c34607cd35e8869aabb394cbec43e2667f86b03ef4757e764fe7f618f6b7ac"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_state.c",
+      "sha256": "733be28778e6c8d3fc92d5ddb1dbb3c0453e5fc8bddb17fa219ae20a661fbe67"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_state.h",
+      "sha256": "ec1de9ed28a27371a2fda8befa73b9e4c52f0e18a3c39235902c509163512ca7"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_handoff.c",
+      "sha256": "7087546be99bf3dc633bba846a16e9a9d22dfeb1287dfacc363627d9be53c931"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_handoff.h",
+      "sha256": "49e24ad0c7aafb739456932e90acabfe1d2cc025d91d69e02761a39bb9805a95"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_surface_class.c",
+      "sha256": "58a3efba27027b4f462fcad7ac63e336e3316b5d75e6d94fbea517ac11ae0b67"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_surface_class.h",
+      "sha256": "fee1f9361a97ed20541cc24ff729f6039d3eb61e000b096f144fb1032679cada"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.c",
+      "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.h",
+      "sha256": "6394efba5d2f05ab5ce4ca00850cbc5f4555a9f6aaf6d95d98079d7859b81c64"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.h",
+      "sha256": "f434ba1975b4157035a9920018bf93c56db3083b60f52dfe32e4bf8d2f30ee6a"
+    }
+  ],
+  "results": {
+    "tube-exit-probe": {
+      "passed": true,
+      "phase": 0,
+      "cases": 32768,
+      "ordered_callback_values": 2610602,
+      "original_stack_cleanup_verified": true
+    },
+    "movement-handoff-probe": {
+      "passed": true,
+      "phase": 1,
+      "cases": 32768,
+      "ordered_callback_values": 65538,
+      "original_stack_cleanup_verified": true
+    },
+    "surface-class-probe": {
+      "passed": true,
+      "phase": 2,
+      "cases": 32768,
+      "ordered_callback_values": 146738,
+      "original_stack_cleanup_verified": true
+    },
+    "tube-waypoint-probe": {
+      "passed": true,
+      "phase": 3,
+      "cases": 32768,
+      "ordered_callback_values": 46080,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "total_cases": 131072,
+  "callback_order_and_values_verified": true,
+  "registers_and_stack_verified": true,
+  "mutable_snapshot_and_callbacks_verified": true,
+  "signed_wrap_and_thresholds_verified": true
+}

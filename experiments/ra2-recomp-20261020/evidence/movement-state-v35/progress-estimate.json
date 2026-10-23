@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "cleanup_completed": true,
+  "cleanup_deleted_files": 2428,
+  "historical_only": true,
+  "reestimated_this_round": false,
+  "previous_estimate": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v34\\progress-estimate.json",
+  "remaining_destination_copies_from_generation31": 0,
+  "loaded_sample_copies_connected": 8,
+  "terrain_weapon_copies_connected": 3,
+  "invalidate_service_copies_connected": 11,
+  "bridge_meeting_occupied_scenes": 2,
+  "nonprimary_natural_entry_proved": false,
+  "remaining": [
+    "Other internal template and register-sourced continuations.",
+    "More object, building, terrain, locomotor, crushing and bridge destruction combinations.",
+    "Other service, recursive and callback-writeback exits.",
+    "Legal natural sources for 28 nonprimary C aliases, including arbitrary computed targets and unrun routes.",
+    "Alternate saved-segment pointer; wider height, occupancy and traffic combinations.",
+    "Whole-game readable recovery, guards, campaigns, synchronization and performance."
+  ],
+  "inputs": [
+    {
+      "path": "record_remaining_v35.py",
+      "sha256": "e75bc1cfc5d2751e8c6a58a3516454fe4ee3d2929b272bf0053cd7e730c7e793"
+    },
+    {
+      "path": "evidence/movement-state-v35/new-fragment-contract.json",
+      "sha256": "39b98e0b1faa53e9474c34e14689614549d927f6fd88626596346c39216375aa"
+    },
+    {
+      "path": "evidence/movement-state-v35/bridge-occupied-real-scenes.json",
+      "sha256": "d383a3dfed7200ca8e0301b85233ea4a70e34e9391f9447400bf3abfa694a50f"
+    },
+    {
+      "path": "evidence/movement-state-v35/alias-natural-scenes.json",
+      "sha256": "4abcd826a56afc691d16ec9becb8bf081faab13cca08bea633144fdc153465e7"
+    },
+    {
+      "path": "evidence/movement-state-v35/bridge-detour-real-scenes.json",
+      "sha256": "02666bbb03fbbf2d7cac5b411bce9c8a041435b55eeeb1db1841558bce46ed79"
+    }
+  ]
+}

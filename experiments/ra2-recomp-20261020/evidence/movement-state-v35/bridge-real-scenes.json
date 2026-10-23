@@ -1,0 +1,918 @@
+{
+  "passed": true,
+  "production_scenes": 4,
+  "production_frames": 3604,
+  "independent_scenes": 4,
+  "independent_frames": 3604,
+  "production_executable_sha256": "1ad182016315f10abe0446f84ce2e1792a3e1474f0dc97e3762780d82d9e2ef1",
+  "observer_executable_sha256": "8aabb381aae3bc24b398b078fd4222cc379db4eba49aa7423f56e91c1df8bf24",
+  "scenes": {
+    "north": {
+      "passed": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "ordered_hits_sha256": "9fb31a79960248d8e45e09916243533bc2f012e6e50f0d301b04603b53a7e671",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 6,
+          "lower_full_chains": 0,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 158,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            15488,
+            18560,
+            416
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        },
+        "generated-c": {
+          "ordered_hits_sha256": "9fb31a79960248d8e45e09916243533bc2f012e6e50f0d301b04603b53a7e671",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 6,
+          "lower_full_chains": 0,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 158,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            15488,
+            18560,
+            416
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        }
+      }
+    },
+    "south": {
+      "passed": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "ordered_hits_sha256": "10681ba208ff2deaf3722c78774140b210025cc996471ce9816fd2893bef18af",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 6,
+          "lower_full_chains": 0,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 158,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            15488,
+            15744,
+            416
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        },
+        "generated-c": {
+          "ordered_hits_sha256": "10681ba208ff2deaf3722c78774140b210025cc996471ce9816fd2893bef18af",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 6,
+          "lower_full_chains": 0,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023366
+                ],
+                [
+                  1023366,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 158,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            15488,
+            15744,
+            416
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        }
+      }
+    },
+    "lower-west": {
+      "passed": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "ordered_hits_sha256": "83389d54fa811cd3eecc6e85528da4b779cb7aeecc846cb4b14617ed2bc26a18",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [
+            {
+              "frame": 135,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                0
+              ]
+            }
+          ],
+          "upper_full_chains": 0,
+          "lower_full_chains": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 0,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            16512,
+            17024,
+            0
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        },
+        "generated-c": {
+          "ordered_hits_sha256": "83389d54fa811cd3eecc6e85528da4b779cb7aeecc846cb4b14617ed2bc26a18",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [
+            {
+              "frame": 135,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                0
+              ]
+            }
+          ],
+          "upper_full_chains": 0,
+          "lower_full_chains": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 0,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            16512,
+            17024,
+            0
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        }
+      }
+    },
+    "lower-east": {
+      "passed": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "ordered_hits_sha256": "5ce96024874f2a62a4cb39fe2947f0b61febb534f78f253aa422c9275650ce0c",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 0,
+          "lower_full_chains": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 0,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            14208,
+            17024,
+            0
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        },
+        "generated-c": {
+          "ordered_hits_sha256": "5ce96024874f2a62a4cb39fe2947f0b61febb534f78f253aa422c9275650ce0c",
+          "full_chains": 6,
+          "additional_noncooccupied_chains": [],
+          "upper_full_chains": 0,
+          "lower_full_chains": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": false,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023364
+                ],
+                [
+                  1023364,
+                  1023363
+                ],
+                [
+                  1023363,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "upper_drive_frames": 0,
+          "other_layer_positions_unchanged": true,
+          "final_position": [
+            14208,
+            17024,
+            0
+          ],
+          "final_destination": [
+            0,
+            0,
+            0
+          ],
+          "reached_goal": true
+        }
+      }
+    }
+  },
+  "full_chains": {
+    "upper": 12,
+    "lower": 12
+  },
+  "completed_crossings": 4,
+  "actual_ordered_three_object_traversal_verified": true,
+  "other_layer_excluded": true,
+  "private_saves": true,
+  "resolver_probes": [
+    {
+      "scene": "h3-north",
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "00703040": 5,
+        "004A12F1": 0,
+        "004A134F": 0,
+        "004A161D": 0,
+        "004A166A": 0,
+        "004A17A2": 0
+      },
+      "primary_record_limit": 5
+    },
+    {
+      "scene": "h3-south",
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "00703040": 5,
+        "004A32B4": 0,
+        "0070346B": 0,
+        "0070372C": 0,
+        "007038EF": 0
+      },
+      "primary_record_limit": 5
+    },
+    {
+      "scene": "h3-lower-west",
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "00703040": 5,
+        "004A32B4": 0,
+        "0070346B": 0,
+        "0070372C": 0,
+        "007038EF": 0
+      },
+      "primary_record_limit": 5
+    },
+    {
+      "scene": "h3-lower-east",
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "00703040": 5,
+        "004A32B4": 0,
+        "0070346B": 0,
+        "0070372C": 0,
+        "007038EF": 0
+      },
+      "primary_record_limit": 5
+    }
+  ],
+  "nonprimary_natural_entry_proved": false,
+  "scope": "Legal original bridge overlays and map-object placement; both layers contain three infantry. Ordinary moves naturally select and traverse real chains. Native 703473 observer records each actual nonowner visit. The existing host logs each target first five indirect resolutions. Configured nine aliases produce no first-call record; primary entries are positive controls. Complete counters are unavailable because fixed-frame completion uses ExitProcess. No absence claim outside these runs.",
+  "inputs": [
+    {
+      "path": "make_bridge_scenes_v35.py",
+      "sha256": "ddfe39187a1c1c81b0915001088efd36ced95caa3b00ac02ee0c401b7e51e8f3"
+    },
+    {
+      "path": "run_bridge_scenes_v35.py",
+      "sha256": "520494cdad14f76f98cd5a1dbb007348a4851ce5b81ba2d6f17e450e38782291"
+    },
+    {
+      "path": "extend_observer_v35_chain.py",
+      "sha256": "a50e87060795e01a67e0016093236f3ff5eaf2793fd250a845982542f7dd2138"
+    },
+    {
+      "path": "run_connection_v35.py",
+      "sha256": "72219de4e7f805400eab0ff6e0971d83d1038d9e5c7e0db66e013a5ce1ca805e"
+    },
+    {
+      "path": "ra2/src/runtime/host.c",
+      "sha256": "d0307a47a3f3e9ddbd4c9b41e266d748b0cda68d51e4297186f243372c3f4fc9"
+    },
+    {
+      "path": "audit_bridge_scenes_v35.py",
+      "sha256": "92850d19a6b5e74adb32d78db78da6b9a7a48481ea00ace972d1f6b763bd34ad"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-chain-north.MAP",
+      "sha256": "fed7d7a05d5ac5f983c7c6cfcb0665de9a81224f865563fa0b7b670bbf2667c0"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-chain-south.MAP",
+      "sha256": "3b8a9a4fceda6a44cc9f98fefd5679a9247629a7d4eaea52b9c050bc2efea25c"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-chain-lower-west.MAP",
+      "sha256": "be20a5a0c68f05ba732441db419e3f2fc110d779c95335ae58df80eeabc24b34"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-chain-lower-east.MAP",
+      "sha256": "59b7fd7dbf2981f88e401f67f7ed7e5d8fd52f2cdb9c1b004d3cc1d954aabfbc"
+    }
+  ]
+}

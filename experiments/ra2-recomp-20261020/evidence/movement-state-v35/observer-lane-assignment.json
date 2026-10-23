@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "delegated_jobs": [
+    "tall-scenes",
+    "combined-scenes",
+    "bridge-observer"
+  ],
+  "owner": "continue_freed_lane_v35.py",
+  "prerequisite": "core-scenes-complete.json",
+  "max_lanes": 2,
+  "max_game_processes": 4,
+  "free_bridge_jobs": [
+    "combined-scenes",
+    "bridge-observer"
+  ],
+  "owners": {
+    "tall-scenes": "continue_freed_lane_v35.py",
+    "combined-scenes": "complete_freed_bridge_v35.py",
+    "bridge-observer": "complete_freed_bridge_v35.py"
+  },
+  "policy": "Core runs tube scenes; freed bridge runs combined and bridge-observer, then waits for tall scenes on the freed core lane. Never create a third scene lane."
+}

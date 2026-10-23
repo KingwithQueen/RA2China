@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "total_cases": 196608,
+  "results": {
+    "register-sample": {
+      "passed": true,
+      "phase": 4,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true
+    },
+    "enemy-weapon": {
+      "passed": true,
+      "phase": 8,
+      "object_cases": 65536,
+      "outcomes": [
+        0,
+        0,
+        33393,
+        0,
+        0,
+        0,
+        32143
+      ],
+      "calls_live_state_verified": true
+    },
+    "owner-stop": {
+      "passed": true,
+      "phase": 15,
+      "cases": 65536,
+      "ordered_callback_values": 393216,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    }
+  },
+  "register_index_differs_from_cache": true,
+  "weapon_callback_mutates_train_property": true,
+  "incoming_stop_owner_differs_from_drive_owner": true,
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "inputs": [
+    {
+      "path": "record_round34_receipt_v35.py",
+      "sha256": "63c70e5b973d9ded063a884ca0efc08989f29f4ea8b745f3c036442a834d9041"
+    },
+    {
+      "path": "integrate_template_v35.py",
+      "sha256": "e21ed76af1f244ce4b4d4eb4267c9f452e4d558e2f19e9cfef70901c51844854"
+    },
+    {
+      "path": "integrate_objects_v35.py",
+      "sha256": "bdaf6119adf55a40dc966b2d36bb8d020029c150e8686aa9aa20422ee840cd08"
+    },
+    {
+      "path": "integrate_returns_v35.py",
+      "sha256": "ba21fce962a72f164ada8a4389a1cd51cf2670a6b34d3526b3a6cb487a00c4b4"
+    },
+    {
+      "path": "extend_register_probe_v35.py",
+      "sha256": "88884e16d0718912598f781ade337482395836377df5e0417adc8aee0f87ab76"
+    },
+    {
+      "path": "extend_objects_probe_v35.py",
+      "sha256": "2e838b04b261382bb19c2191f14bc0468560e1567e58f299811839ced9e2d939"
+    },
+    {
+      "path": "extend_exit_probe_v35.py",
+      "sha256": "43944fb93ee84debce165635270a7c520fd72f72fbe6ac3875e90bfeaf0acc14"
+    },
+    {
+      "path": "audit_recipe_replay_v35.py",
+      "sha256": "4dedc48eefecc4335d2cd1aca8032ec7dbb026e1527e719e4f9be3070d3dae14"
+    },
+    {
+      "path": "evidence/movement-state-v35/tube_state_probe.c",
+      "sha256": "be26f4267df1d5f940c574265da3d0360fe040c6f23733514b2b735ed9d2362b"
+    },
+    {
+      "path": "evidence/movement-state-v35/objects_probe.c",
+      "sha256": "42f648ee4f5f0223f3487239b6f0583553de5d60e0a48ef0c526153e928bbe39"
+    },
+    {
+      "path": "evidence/movement-state-v35/overlap_probe.c",
+      "sha256": "d0c89110465ecf3a53c497d528d2f09af7f93abe406a91a9f87ba331c5d5d702"
+    },
+    {
+      "path": "evidence/movement-state-v35/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "5d9788e6ee77c87052a3ed499091dd4bd346ee2baa1211d9799bb7e1e24d71a9"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "fae93721749f6d3ee8a7093b82070764d37b24e72da33dc6a559636ccc252b70"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "39c68f1f0059142fc118eb9f61f1c10db1fb41f911560b51e027ccb8ea659441"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_enemy_contact.h",
+      "sha256": "9d5b8c224f7da804001199264e7c584f8e8d78f67b03126510847c56cec8b721"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "51704c620d78cb8f0ed982aa3c6236bbf00e26c288cca1e25105b96a0e4d1b90"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "69af0e1849ad1bd011d10f8c529bdbbfff7509dcc44ca8077546ab9030ab6519"
+    }
+  ],
+  "probe_executables": [
+    {
+      "path": "evidence/movement-state-v35/tube_state_probe.exe",
+      "sha256": "b799883a7ec7f0c611cbac1d56d14ee6d43ff92bd577ee5ca893c30b6336ef4f"
+    },
+    {
+      "path": "evidence/movement-state-v35/objects_probe.exe",
+      "sha256": "9d1e494ba8f351d252cded0f0715843c81b4bce5a8848c899e5441e85ef40add"
+    },
+    {
+      "path": "evidence/movement-state-v35/overlap_probe.exe",
+      "sha256": "798a94f4caee0d99e43a496e005e75b979f2d2316d022093cafc37b3022e2383"
+    }
+  ]
+}

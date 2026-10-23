@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "production_sources_replayed": 7,
+  "probe_sources_replayed": 3,
+  "observer_sources_replayed": 1,
+  "candidate_maps_replayed": 4,
+  "byte_identical": true,
+  "inputs": [
+    {
+      "path": "audit_recipe_replay_v35.py",
+      "sha256": "4dedc48eefecc4335d2cd1aca8032ec7dbb026e1527e719e4f9be3070d3dae14"
+    },
+    {
+      "path": "integrate_template_v35.py",
+      "sha256": "e21ed76af1f244ce4b4d4eb4267c9f452e4d558e2f19e9cfef70901c51844854"
+    },
+    {
+      "path": "extend_register_probe_v35.py",
+      "sha256": "88884e16d0718912598f781ade337482395836377df5e0417adc8aee0f87ab76"
+    },
+    {
+      "path": "integrate_objects_v35.py",
+      "sha256": "bdaf6119adf55a40dc966b2d36bb8d020029c150e8686aa9aa20422ee840cd08"
+    },
+    {
+      "path": "extend_objects_probe_v35.py",
+      "sha256": "2e838b04b261382bb19c2191f14bc0468560e1567e58f299811839ced9e2d939"
+    },
+    {
+      "path": "integrate_returns_v35.py",
+      "sha256": "ba21fce962a72f164ada8a4389a1cd51cf2670a6b34d3526b3a6cb487a00c4b4"
+    },
+    {
+      "path": "extend_exit_probe_v35.py",
+      "sha256": "43944fb93ee84debce165635270a7c520fd72f72fbe6ac3875e90bfeaf0acc14"
+    },
+    {
+      "path": "extend_observer_v35.py",
+      "sha256": "3b94c076b36d1fb1967518d4312feaa966aa0d113557964b3276736b071b05b9"
+    },
+    {
+      "path": "make_bridge_occupied_v35.py",
+      "sha256": "8270b5bc1b9a5ba04b726ef20c172a5c71ce9b075e138d27ece1e9ce77c32c72"
+    },
+    {
+      "path": "make_bridge_detour_v35.py",
+      "sha256": "d72b8efe9a96be976c2d65fa9ad7715730a2f45e371d72383ace1570a1853d3d"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "5d9788e6ee77c87052a3ed499091dd4bd346ee2baa1211d9799bb7e1e24d71a9"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "fae93721749f6d3ee8a7093b82070764d37b24e72da33dc6a559636ccc252b70"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "39c68f1f0059142fc118eb9f61f1c10db1fb41f911560b51e027ccb8ea659441"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_enemy_kind.h",
+      "sha256": "88956681f429e5afb7140a0fe77812270b2eacabfaefbd0c1936c214ce2b09c7"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "51704c620d78cb8f0ed982aa3c6236bbf00e26c288cca1e25105b96a0e4d1b90"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "69af0e1849ad1bd011d10f8c529bdbbfff7509dcc44ca8077546ab9030ab6519"
+    },
+    {
+      "path": "evidence/movement-state-v35/tube_state_probe.c",
+      "sha256": "be26f4267df1d5f940c574265da3d0360fe040c6f23733514b2b735ed9d2362b"
+    },
+    {
+      "path": "evidence/movement-state-v35/objects_probe.c",
+      "sha256": "42f648ee4f5f0223f3487239b6f0583553de5d60e0a48ef0c526153e928bbe39"
+    },
+    {
+      "path": "evidence/movement-state-v35/overlap_probe.c",
+      "sha256": "d0c89110465ecf3a53c497d528d2f09af7f93abe406a91a9f87ba331c5d5d702"
+    },
+    {
+      "path": "evidence/movement-state-v35/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-occupied-north.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-occupied-south.MAP",
+      "sha256": "0920fb78f92c49da611e3c40ec64081b03a4ef8d418d84d9b1df9ecca49419da"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-detour-north.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6"
+    },
+    {
+      "path": "evidence/movement-state-v35/fixtures/bridge-detour-south.MAP",
+      "sha256": "0920fb78f92c49da611e3c40ec64081b03a4ef8d418d84d9b1df9ecca49419da"
+    }
+  ]
+}

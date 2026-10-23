@@ -1,3 +1,4 @@
+extern void ra2_ground_prepare_invalidate_return_bridge(void);
 extern void ra2_ground_prepare_owner_stop_return_bridge(void);
 extern void ra2_ground_prepare_following_return_bridge(unsigned entry);
 extern void ra2_ground_prepare_stop_return_bridge(unsigned entry);
@@ -37460,6 +37461,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -42806,6 +42812,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -47856,6 +47867,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -52355,6 +52371,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -56563,6 +56584,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -59831,6 +59857,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -62392,6 +62423,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -64611,6 +64647,11 @@ L_004A2317:
 L_004A231A:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
 L_004A2320:
+    /* 已载入表和缩放偏移来自入口寄存器，保留原终止样本判定。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned loaded_sample_resume_v35=ra2_ground_internal_handoff_bridge(4);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(loaded_sample_resume_v35==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
@@ -73454,6 +73495,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -77099,6 +77143,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -80949,6 +80996,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -82561,6 +82611,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -84039,6 +84092,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -85459,6 +85515,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -86586,6 +86645,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -86851,6 +86913,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -87387,6 +87452,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -87610,6 +87678,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */
@@ -87824,6 +87895,9 @@ L_004A46BD:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 16; { RECOMP_REGS_OUT(); return; } /* 0x004A46D4: ret 0xc */
 L_004A46D7:
+    /* 清空目标时按原顺序读写，服务回调和owner重读保持。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_invalidate_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ebp + 0xC); /* 0x004A46D7: mov eax, dword ptr [ebp + 0xc] */
     SET_LO8(ecx, MEM8(eax + 0x7D)); /* 0x004A46DA: mov cl, byte ptr [eax + 0x7d] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x004A46DD: test cl, cl */

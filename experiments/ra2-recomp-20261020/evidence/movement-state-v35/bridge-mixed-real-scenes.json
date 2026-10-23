@@ -1,0 +1,1209 @@
+{
+  "passed": true,
+  "production_scenes": 4,
+  "production_frames": 3604,
+  "independent_frames": 3604,
+  "production_executable_sha256": "1ad182016315f10abe0446f84ce2e1792a3e1474f0dc97e3762780d82d9e2ef1",
+  "observer_executable_sha256": "8aabb381aae3bc24b398b078fd4222cc379db4eba49aa7423f56e91c1df8bf24",
+  "scenes": {
+    "mixed-north": {
+      "passed": true,
+      "dynamic": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "full_upper_mixed_chains": 6,
+          "mixed_upper_queries": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "upper_frames": 158,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 0,
+          "geometry_interactions": 0,
+          "sample_interactions": [],
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "full_upper_mixed_chains": 6,
+          "mixed_upper_queries": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "upper_frames": 158,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 0,
+          "geometry_interactions": 0,
+          "sample_interactions": [],
+          "reached_primary_goal": true
+        }
+      },
+      "configured_aliases": [
+        "004A12F1",
+        "004A134F",
+        "004A161D",
+        "004A166A",
+        "004A17A2"
+      ]
+    },
+    "traffic-north": {
+      "passed": true,
+      "dynamic": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "full_upper_mixed_chains": 12,
+          "mixed_upper_queries": 12,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "upper_frames": 167,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            "1023363": {
+              "distinct_positions": 246,
+              "upper_frames": 193,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 29,
+          "geometry_interactions": 29,
+          "sample_interactions": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            }
+          ],
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "full_upper_mixed_chains": 12,
+          "mixed_upper_queries": 12,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "upper_frames": 167,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            "1023363": {
+              "distinct_positions": 246,
+              "upper_frames": 193,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 29,
+          "geometry_interactions": 29,
+          "sample_interactions": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023363,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            }
+          ],
+          "reached_primary_goal": true
+        }
+      },
+      "configured_aliases": [
+        "004A12F1",
+        "004A134F",
+        "004A161D",
+        "004A166A",
+        "004A17A2"
+      ]
+    },
+    "mixed-south": {
+      "passed": true,
+      "dynamic": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "full_upper_mixed_chains": 6,
+          "mixed_upper_queries": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 233,
+              "upper_frames": 158,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 0,
+          "geometry_interactions": 0,
+          "sample_interactions": [],
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "full_upper_mixed_chains": 6,
+          "mixed_upper_queries": 6,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023368,
+              "visits": [
+                [
+                  1023368,
+                  1023367
+                ],
+                [
+                  1023367,
+                  1023364
+                ],
+                [
+                  1023364,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 233,
+              "upper_frames": 158,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 0,
+          "geometry_interactions": 0,
+          "sample_interactions": [],
+          "reached_primary_goal": true
+        }
+      },
+      "configured_aliases": [
+        "004A32B4",
+        "0070346B",
+        "0070372C",
+        "007038EF"
+      ]
+    },
+    "traffic-south": {
+      "passed": true,
+      "dynamic": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "full_upper_mixed_chains": 12,
+          "mixed_upper_queries": 12,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 246,
+              "upper_frames": 193,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            "1023363": {
+              "distinct_positions": 234,
+              "upper_frames": 166,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 28,
+          "geometry_interactions": 28,
+          "sample_interactions": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            }
+          ],
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "full_upper_mixed_chains": 12,
+          "mixed_upper_queries": 12,
+          "sample_full_chains": [
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            },
+            {
+              "frame": 6,
+              "upper": true,
+              "head": 1023365,
+              "visits": [
+                [
+                  1023365,
+                  1023369
+                ],
+                [
+                  1023369,
+                  1023368
+                ],
+                [
+                  1023368,
+                  0
+                ]
+              ],
+              "lengths": [
+                3,
+                3
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 246,
+              "upper_frames": 193,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            "1023363": {
+              "distinct_positions": 234,
+              "upper_frames": 166,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "moving_interactions": 28,
+          "geometry_interactions": 28,
+          "sample_interactions": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                62
+              ],
+              "value": 1023363,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 26,
+              "id": 1023363,
+              "cell": [
+                60,
+                71
+              ],
+              "value": 1023362,
+              "auxiliary": 5
+            }
+          ],
+          "reached_primary_goal": true
+        }
+      },
+      "configured_aliases": [
+        "004A12F1",
+        "004A134F",
+        "004A161D",
+        "004A166A",
+        "004A17A2"
+      ]
+    }
+  },
+  "totals": {
+    "full_mixed_chains": 36,
+    "mixed_queries": 36,
+    "moving_interactions": 57,
+    "geometry_interactions": 57
+  },
+  "mixed_runtime_classes_verified": true,
+  "opposing_bridge_traffic_verified": true,
+  "nonprimary_natural_entry_proved": false,
+  "scope": "Normal map loading places infantry and vehicles on both real bridge layers. Three ordinary move orders create opposing traffic. No raw motion, chain, bridge-layer, path or budget writes. Complete states and ordered events match native/C and uninstrumented production. Alias absence is limited to these configured first-call probes.",
+  "inputs": [
+    {
+      "path": "audit_bridge_mixed_v35.py",
+      "sha256": "8163c2a785deae9370da9b537c0037538db19dca2637fb075e802c30d0dc280c"
+    },
+    {
+      "path": "make_bridge_mixed_v35.py",
+      "sha256": "792b063748cf84977f10e65e5e4c17354a8d50ab8758f5acce74c5882ec37cd7"
+    },
+    {
+      "path": "run_bridge_mixed_v35.py",
+      "sha256": "39d229da8cae8412e25b0a05ebb80ead4ad5627ca02ef20a82820e3968de0b24"
+    },
+    {
+      "path": "extend_observer_v35.py",
+      "sha256": "3b94c076b36d1fb1967518d4312feaa966aa0d113557964b3276736b071b05b9"
+    },
+    {
+      "path": "run_connection_v35.py",
+      "sha256": "72219de4e7f805400eab0ff6e0971d83d1038d9e5c7e0db66e013a5ce1ca805e"
+    },
+    {
+      "path": "evidence/movement-state-v35/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    }
+  ]
+}
