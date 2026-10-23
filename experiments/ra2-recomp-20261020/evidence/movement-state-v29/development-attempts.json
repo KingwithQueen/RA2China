@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "scope": "Development failures are preserved separately from accepted runs; no failed pair is promoted.",
+  "attempts": [
+    {
+      "area": "template build",
+      "reason": "Initial preparation typo and declaration/link setup errors; corrected before acceptance.",
+      "logs": [
+        "template-probe-build.log",
+        "template-build.log",
+        "template-probe-build-02.log",
+        "template-build-02.log"
+      ]
+    },
+    {
+      "area": "observer first launch",
+      "reason": "Existing host supports at most eight --probe options. Twelve requested options caused usage exit before simulation.",
+      "runs": [
+        "h-north",
+        "h-south",
+        "h-lower-north",
+        "h-lower-south"
+      ]
+    },
+    {
+      "area": "observer native hook",
+      "reason": "703473 was already owned by unchanged production recorder. Direct raw-byte assertion rejected the second observer before native frames. Fixed by chaining byte-checked existing hook and preserving record order.",
+      "runs": [
+        "h2-north",
+        "h2-south",
+        "h2-lower-north",
+        "h2-lower-south"
+      ],
+      "preserved_binary": "investigations/observer-before-hook-chain-fix/receipt.json",
+      "accepted_replacement_prefix": "h3-"
+    },
+    {
+      "area": "recipe replay",
+      "reason": "Broad replacement changed a quoted codec constant; isolated replay failed without live mutations. Replacements bounded to one occurrence; later replay03 matches all production/probe/observer/map bytes.",
+      "retained": "investigations/recipe-replay-01",
+      "passed": "recipe-byte-audit.json"
+    },
+    {
+      "area": "native receipt",
+      "reason": "Historical integration report filename was wrong after all native results had passed. Corrected to returns-integration.json and reran binding.",
+      "logs": [
+        "record_round28_receipt.log",
+        "record_round28_receipt-02.log",
+        "record_round28_receipt-03.log"
+      ]
+    },
+    {
+      "area": "bridge lower goal controls",
+      "reason": "A bridge-cell move selected Z416 from a Z0 actor and produced no movement/chain query. Preserved separately as controls. Replaced coverage maps with legal ground corridor and outside ground goals.",
+      "evidence": "bridge-goal-controls.json"
+    },
+    {
+      "area": "bridge chain gate",
+      "reason": "After normal scatter, the three lower infantry moved to another cell without an upper chain. This valid additional traversal is recorded separately; qualified dual-occupied bridge counts still require both chains length3, six times in each direction.",
+      "failed_audit": "bridge-lower-audit.log",
+      "passed_audit": "bridge-lower-audit-02.log"
+    },
+    {
+      "area": "native startup graphics",
+      "reason": "Two original-mode access violations before first state at Prep direct draw. Preserved entire private-farm directories and exact report/log hashes, then same binaries/maps passed serial retries; no cause claimed and no production change.",
+      "evidence": "startup-failures.json",
+      "passed_retry": "tube-serial-retry.log"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+extern void ra2_ground_prepare_written_return_bridge(unsigned entry);
+extern unsigned ra2_ground_template_table_bridge(void);
 #include "ground_overlap_bridge.h"
 #include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
@@ -68421,6 +68423,9 @@ L_004A26EC:
     eax = MEM32(ebp); /* 0x004A26F5: mov eax, dword ptr [ebp] */
     RECOMP_ICALL(MEM32(eax + 0x414)); /* 0x004A26F8: call dword ptr [eax + 0x414] */
     RECOMP_FLAGS_IN();
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A26FE: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A2702: pop edi */
     esi = POP32_VAL(esp); /* 0x004A2703: pop esi */
@@ -68739,6 +68744,9 @@ L_004A28F2:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A2909; /* 0x004A28F4: jne 0x4a2909 */
 L_004A28F6:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(esp + 0x60); /* 0x004A28F6: mov eax, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A28FA: pop edi */
     esi = POP32_VAL(esp); /* 0x004A28FB: pop esi */
@@ -69657,6 +69665,9 @@ L_004A2F23:
     MEM32(ebp + 0x48) = ecx; /* 0x004A2F34: mov dword ptr [ebp + 0x48], ecx */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A2F37: mov byte ptr [ebp + 0x63], 0 */
 L_004A2F3B:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2F3B: pop edi */
     MEM32(ebp + 0x58) = 0xFFFFFFFFu; /* 0x004A2F3C: mov dword ptr [ebp + 0x58], 0xffffffff */
     MEM8(ebp + 0x61) = (uint8_t)(0); /* 0x004A2F43: mov byte ptr [ebp + 0x61], 0 */
@@ -72020,6 +72031,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -72136,6 +72150,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -73414,6 +73434,9 @@ L_004A2F23:
     MEM32(ebp + 0x48) = ecx; /* 0x004A2F34: mov dword ptr [ebp + 0x48], ecx */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A2F37: mov byte ptr [ebp + 0x63], 0 */
 L_004A2F3B:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2F3B: pop edi */
     MEM32(ebp + 0x58) = 0xFFFFFFFFu; /* 0x004A2F3C: mov dword ptr [ebp + 0x58], 0xffffffff */
     MEM8(ebp + 0x61) = (uint8_t)(0); /* 0x004A2F43: mov byte ptr [ebp + 0x61], 0 */
@@ -73579,6 +73602,9 @@ L_004A2F23:
     MEM32(ebp + 0x48) = ecx; /* 0x004A2F34: mov dword ptr [ebp + 0x48], ecx */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A2F37: mov byte ptr [ebp + 0x63], 0 */
 L_004A2F3B:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edi = POP32_VAL(esp); /* 0x004A2F3B: pop edi */
     MEM32(ebp + 0x58) = 0xFFFFFFFFu; /* 0x004A2F3C: mov dword ptr [ebp + 0x58], 0xffffffff */
     MEM8(ebp + 0x61) = (uint8_t)(0); /* 0x004A2F43: mov byte ptr [ebp + 0x61], 0 */
@@ -75632,6 +75658,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -75748,6 +75777,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -79458,6 +79493,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -79574,6 +79612,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -81043,6 +81087,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -81159,6 +81206,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -82494,6 +82547,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -82610,6 +82666,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -83887,6 +83949,9 @@ L_004A3F4E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A3F66; /* 0x004A3F53: jne 0x4a3f66 */
 L_004A3F55:
+    /* 可读 C：带写回副作用的共享出口，保留读写与出栈顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_written_return_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A3F55: mov ecx, dword ptr [esp + 0x60] */
     edi = POP32_VAL(esp); /* 0x004A3F59: pop edi */
     esi = POP32_VAL(esp); /* 0x004A3F5A: pop esi */
@@ -84003,6 +84068,12 @@ L_004A3FD7:
 L_004A3FDF:
     MEM8(ebp + 0x64) = (uint8_t)(0); /* 0x004A3FDF: mov byte ptr [ebp + 0x64], 0 */
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */
@@ -85106,6 +85177,12 @@ void sub_004A3FE3(void) {
     RECOMP_ENTER(0x004A3FE3u);
 
 L_004A3FE3:
+    /* 可读 C：内部模板表选择与直行回退。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t table_resume_v29=ra2_ground_template_table_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(table_resume_v29==0x4A4015)goto L_004A4015;
+    goto L_004A45B7;
     eax = esi + ebx * 8; /* 0x004A3FE3: lea eax, [esi + ebx*8] */
     MEM8(ebp + 0x60) = (uint8_t)(0); /* 0x004A3FE6: mov byte ptr [ebp + 0x60], 0 */
     MEM32(ebp + 0x58) = eax; /* 0x004A3FEA: mov dword ptr [ebp + 0x58], eax */

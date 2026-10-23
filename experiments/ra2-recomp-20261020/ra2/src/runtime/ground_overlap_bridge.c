@@ -170,3 +170,27 @@ uint32_t ra2_ground_template_layer_bridge(void)
     ra2_ground_template_layer(&services);
     return 0x4A18EF;
 }
+
+/* 4A3FE3 internal continuation: neighbor crushing was already resolved. */
+#include "ground_template_table.h"
+static uint8_t table_byte(void *opaque, int32_t selector, Ra2TemplateByte field)
+{
+    (void)opaque;
+    return MEM8(0x7A0180u+(uint32_t)selector*12u+(field==RA2_TEMPLATE_FLAGS?8u:0u));
+}
+uint32_t ra2_ground_template_table_bridge(void)
+{
+    uint32_t selector=g_esi+g_ebx*8u;
+    unsigned fallback=!table_byte(NULL,(int32_t)selector,RA2_TEMPLATE_ENTRY_TAG);
+    Ra2TemplateServices services={NULL,NULL,table_byte};
+    Ra2TemplateSelection result=ra2_ground_template_table((int32_t)g_ebx,(int32_t)g_esi,
+        MEM8(g_ebp+0x64),&services);
+    MEM8(g_ebp+0x60)=0;
+    MEM32(g_ebp+0x58)=(uint32_t)result.selector;
+    g_ecx=selector*3u;
+    if(fallback)g_edx=g_ebx*9u;
+    g_eax=(uint32_t)result.selector*3u;
+    g_flag_k=FK_NARROW(FK_TEST,24);g_flag_a=(uint32_t)result.flags<<24;
+    g_flag_b=8u<<24;g_flag_cf=0;
+    return result.flags&8u?0x4A4015:0x4A45B7;
+}

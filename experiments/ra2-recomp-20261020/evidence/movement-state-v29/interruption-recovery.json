@@ -1,0 +1,397 @@
+{
+  "passed": true,
+  "production_exe_sha256": "6853d622795908f7f15aa15421cfbf59b5682ada6339382e40a2e3bbad6a13bb",
+  "preserved_attempts": [
+    {
+      "tag": "z-tu",
+      "preserved_path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v29\\investigations\\system-interruption-01\\z-tu",
+      "files": [
+        {
+          "path": "generated-c/command.json",
+          "sha256": "b3b2bf54592156bf4afd5f1c5ad0f6a87cacd1d29c64e7b0926c559ced48c98d"
+        },
+        {
+          "path": "generated-c/game/BINKW32.DLL",
+          "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+        },
+        {
+          "path": "generated-c/game/Blowfish.dll",
+          "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+        },
+        {
+          "path": "generated-c/game/Blowfish.tlb",
+          "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+        },
+        {
+          "path": "generated-c/game/Conquer.dat",
+          "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+        },
+        {
+          "path": "generated-c/game/ddraw.dll",
+          "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+        },
+        {
+          "path": "generated-c/game/ddraw.ini",
+          "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+        },
+        {
+          "path": "generated-c/game/game.exe",
+          "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+        },
+        {
+          "path": "generated-c/game/LANGUAGE.MIX",
+          "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+        },
+        {
+          "path": "generated-c/game/MAPS01.MIX",
+          "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+        },
+        {
+          "path": "generated-c/game/MAPS02.MIX",
+          "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+        },
+        {
+          "path": "generated-c/game/MOVIES01.MIX",
+          "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+        },
+        {
+          "path": "generated-c/game/movies02.mix",
+          "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+        },
+        {
+          "path": "generated-c/game/MULTI.MIX",
+          "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+        },
+        {
+          "path": "generated-c/game/Ra2.exe",
+          "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+        },
+        {
+          "path": "generated-c/game/RA2.INI",
+          "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+        },
+        {
+          "path": "generated-c/game/Ra2.lcf",
+          "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+        },
+        {
+          "path": "generated-c/game/ra2.mix",
+          "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+        },
+        {
+          "path": "generated-c/game/Ra2.tlb",
+          "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+        },
+        {
+          "path": "generated-c/game/SAVE0029.SAV",
+          "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+        },
+        {
+          "path": "generated-c/game/SOV01T.MAP",
+          "sha256": "125303810f3ff7fa62f8f024b14bc5c62894b5a4029a1799f660be2054488547"
+        },
+        {
+          "path": "generated-c/game/THEME.MIX",
+          "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+        },
+        {
+          "path": "generated-c/run.log",
+          "sha256": "670c563f307e35848636613ce0905f40226fe9d0b9fb9850f3211f745d3c7c4f"
+        },
+        {
+          "path": "original/command.json",
+          "sha256": "7afbb2b34292cdbdb7b16486f64813e2f82ec83b94105717578f4265baf35444"
+        },
+        {
+          "path": "original/game/BINKW32.DLL",
+          "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+        },
+        {
+          "path": "original/game/Blowfish.dll",
+          "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+        },
+        {
+          "path": "original/game/Blowfish.tlb",
+          "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+        },
+        {
+          "path": "original/game/Conquer.dat",
+          "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+        },
+        {
+          "path": "original/game/ddraw.dll",
+          "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+        },
+        {
+          "path": "original/game/ddraw.ini",
+          "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+        },
+        {
+          "path": "original/game/game.exe",
+          "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+        },
+        {
+          "path": "original/game/LANGUAGE.MIX",
+          "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+        },
+        {
+          "path": "original/game/MAPS01.MIX",
+          "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+        },
+        {
+          "path": "original/game/MAPS02.MIX",
+          "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+        },
+        {
+          "path": "original/game/MOVIES01.MIX",
+          "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+        },
+        {
+          "path": "original/game/movies02.mix",
+          "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+        },
+        {
+          "path": "original/game/MULTI.MIX",
+          "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+        },
+        {
+          "path": "original/game/Ra2.exe",
+          "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+        },
+        {
+          "path": "original/game/RA2.INI",
+          "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+        },
+        {
+          "path": "original/game/Ra2.lcf",
+          "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+        },
+        {
+          "path": "original/game/ra2.mix",
+          "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+        },
+        {
+          "path": "original/game/Ra2.tlb",
+          "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+        },
+        {
+          "path": "original/game/SAVE0029.SAV",
+          "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+        },
+        {
+          "path": "original/game/SOV01T.MAP",
+          "sha256": "125303810f3ff7fa62f8f024b14bc5c62894b5a4029a1799f660be2054488547"
+        },
+        {
+          "path": "original/game/THEME.MIX",
+          "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+        },
+        {
+          "path": "original/run.log",
+          "sha256": "5ee8284a9299a10f0abc101a312a1610a00817d44a229173a029624d7f7896be"
+        },
+        {
+          "path": "runner-interrupted.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "disposition": "User-reported system blue screen; incomplete pair, no comparison receipt. Never accepted."
+    },
+    {
+      "tag": "z-td",
+      "preserved_path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v29\\investigations\\system-interruption-01\\z-td",
+      "files": [
+        {
+          "path": "generated-c/command.json",
+          "sha256": "1474c3d97bcf9dcc89a5a9c4a6fc9fae4eba9d172536a06a7a95691300762a04"
+        },
+        {
+          "path": "generated-c/game/BINKW32.DLL",
+          "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+        },
+        {
+          "path": "generated-c/game/Blowfish.dll",
+          "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+        },
+        {
+          "path": "generated-c/game/Blowfish.tlb",
+          "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+        },
+        {
+          "path": "generated-c/game/Conquer.dat",
+          "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+        },
+        {
+          "path": "generated-c/game/ddraw.dll",
+          "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+        },
+        {
+          "path": "generated-c/game/ddraw.ini",
+          "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+        },
+        {
+          "path": "generated-c/game/game.exe",
+          "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+        },
+        {
+          "path": "generated-c/game/LANGUAGE.MIX",
+          "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+        },
+        {
+          "path": "generated-c/game/MAPS01.MIX",
+          "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+        },
+        {
+          "path": "generated-c/game/MAPS02.MIX",
+          "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+        },
+        {
+          "path": "generated-c/game/MOVIES01.MIX",
+          "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+        },
+        {
+          "path": "generated-c/game/movies02.mix",
+          "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+        },
+        {
+          "path": "generated-c/game/MULTI.MIX",
+          "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+        },
+        {
+          "path": "generated-c/game/Ra2.exe",
+          "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+        },
+        {
+          "path": "generated-c/game/RA2.INI",
+          "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+        },
+        {
+          "path": "generated-c/game/Ra2.lcf",
+          "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+        },
+        {
+          "path": "generated-c/game/ra2.mix",
+          "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+        },
+        {
+          "path": "generated-c/game/Ra2.tlb",
+          "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+        },
+        {
+          "path": "generated-c/game/SAVE0029.SAV",
+          "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+        },
+        {
+          "path": "generated-c/game/SOV01T.MAP",
+          "sha256": "edd4d9694ed922700945b8d4067caa705b55dabb8f935d463caa87273e8aceb2"
+        },
+        {
+          "path": "generated-c/game/THEME.MIX",
+          "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+        },
+        {
+          "path": "generated-c/run.log",
+          "sha256": "a1a7adb43301f4ff32c3fa2e3ca6bbc95e62d02da849631ef3348888eeb22c6b"
+        },
+        {
+          "path": "original/command.json",
+          "sha256": "3f7a19687065b9646e2c5088059c864d859649b0da7393df981b9fd78544376e"
+        },
+        {
+          "path": "original/game/BINKW32.DLL",
+          "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+        },
+        {
+          "path": "original/game/Blowfish.dll",
+          "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+        },
+        {
+          "path": "original/game/Blowfish.tlb",
+          "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+        },
+        {
+          "path": "original/game/Conquer.dat",
+          "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+        },
+        {
+          "path": "original/game/ddraw.dll",
+          "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+        },
+        {
+          "path": "original/game/ddraw.ini",
+          "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+        },
+        {
+          "path": "original/game/game.exe",
+          "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+        },
+        {
+          "path": "original/game/LANGUAGE.MIX",
+          "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+        },
+        {
+          "path": "original/game/MAPS01.MIX",
+          "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+        },
+        {
+          "path": "original/game/MAPS02.MIX",
+          "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+        },
+        {
+          "path": "original/game/MOVIES01.MIX",
+          "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+        },
+        {
+          "path": "original/game/movies02.mix",
+          "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+        },
+        {
+          "path": "original/game/MULTI.MIX",
+          "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+        },
+        {
+          "path": "original/game/Ra2.exe",
+          "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+        },
+        {
+          "path": "original/game/RA2.INI",
+          "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+        },
+        {
+          "path": "original/game/Ra2.lcf",
+          "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+        },
+        {
+          "path": "original/game/ra2.mix",
+          "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+        },
+        {
+          "path": "original/game/Ra2.tlb",
+          "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+        },
+        {
+          "path": "original/game/SAVE0029.SAV",
+          "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+        },
+        {
+          "path": "original/game/SOV01T.MAP",
+          "sha256": "edd4d9694ed922700945b8d4067caa705b55dabb8f935d463caa87273e8aceb2"
+        },
+        {
+          "path": "original/game/THEME.MIX",
+          "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+        },
+        {
+          "path": "original/run.log",
+          "sha256": "bdcb9a513dd6b903ecdfd71b42fc279909471cc31d18115a8014336becc060d5"
+        },
+        {
+          "path": "runner-interrupted.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "disposition": "User-reported system blue screen; incomplete pair, no comparison receipt. Never accepted."
+    }
+  ],
+  "accepted_interrupted_pairs": false
+}

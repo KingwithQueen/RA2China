@@ -1,0 +1,9 @@
+{
+  "production_sha256": "6853d622795908f7f15aa15421cfbf59b5682ada6339382e40a2e3bbad6a13bb",
+  "changed_object": "CMakeFiles\\ra2.dir\\src\\runtime\\movement_fixture.c.obj",
+  "source_sha256": "937fe2ad22ba8006abb65666bc50c89031090cf45a8ebf6ad04341db5d4f2fa5",
+  "default_rules": true,
+  "blocker_type": "TRUCKA",
+  "occupied_cells": "preserve and report",
+  "explicit_rebuild_for_radius_2_or_3": false
+}

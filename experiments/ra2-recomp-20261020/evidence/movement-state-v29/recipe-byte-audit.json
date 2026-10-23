@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "production_sources_replayed": 9,
+  "probe_sources_replayed": 2,
+  "observer_sources_replayed": 1,
+  "bridge_maps_replayed": 4,
+  "byte_identical": true,
+  "scope": "Replay starts from protected generation-27 sources; archived writers never run in place.",
+  "inputs": [
+    {
+      "path": "integrate_template_v29.py",
+      "sha256": "6265fabc42a8f9d8609537f25e524478f7172a1ff6c5bae826531c45cd1a1807"
+    },
+    {
+      "path": "integrate_objects_v29.py",
+      "sha256": "3ba46ef2446739155298aeb40ad5d742cb4b60985110366c1d4bab4aadc13936"
+    },
+    {
+      "path": "integrate_returns_v29.py",
+      "sha256": "4a8c10d59a7c37b18a6051a88aa07a06c145f55ce95d241381da758480de0785"
+    },
+    {
+      "path": "extend_probes_v29.py",
+      "sha256": "703bed1bd8c8adbb6d3d154082974fdff625eaf03a656991ea721784aa11a91b"
+    },
+    {
+      "path": "extend_observer_v29_chain.py",
+      "sha256": "d59c5cff4bd4f805a99b09a069cb2d7dbca769a20da795567112cee510690ba7"
+    },
+    {
+      "path": "make_bridge_scenes_v29.py",
+      "sha256": "7d605bff2da30cafe96a75434e5c9c6c8e707cecf3ffdad63e1db53d53179f31"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template.c",
+      "sha256": "32a1c83cffc805c2b02339afccd2f03d45c50d6ad3ffff2b4a9b0d9cc3dbd40e"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "95597546f6d6839666a80e423dcf4057c37fa2b83ffd25b519d664706defb556"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "98bbaf6ba5e450cbaf70e50925af0a57cecdda7575972c10bc0745a34c23025c"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "b0dc80b9b582fd94d554b456a8495fdbb3faefb8b6706c54db8314dc10d1748e"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "db3b721fa382062bb132abd2ff75f63f3fc6e6b0346f1b03c7b1d8e030fc3262"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "4d58054be1900fe6bb2e9a3542561c3b88a731e0f854b154bd71d8e2c4718f1d"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "274a8521a62ee68e8740caffcbbe44a9c32bd9235f11d41dc1c2e39d13cc3bc1"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_table.h",
+      "sha256": "dbd4375479ac741b8faa60ea21a709a800fb6dcf252692976d0bc5641a286479"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_building_flags.h",
+      "sha256": "542543a304f273c04fece50ce6f2761e1e5a5d5994088e33f06f69c39a7756cb"
+    },
+    {
+      "path": "evidence/movement-state-v29/overlap_probe.c",
+      "sha256": "6497d6b323918aa02d2a6ad2c29521c1e5196bd5bb3b1f805274e6acb8b23a21"
+    },
+    {
+      "path": "evidence/movement-state-v29/objects_probe.c",
+      "sha256": "c211182b772d3900291e5eba2a62485b9b355da224cf85a8bfc7a5ee92004372"
+    },
+    {
+      "path": "evidence/movement-state-v29/connection_observer.c",
+      "sha256": "7e2d3fbfb5e9b25b5ca5ebd226ee6fd959e0b6ccf037db0a3593bcd933842ac3"
+    },
+    {
+      "path": "evidence/movement-state-v29/fixtures/bridge-chain-lower-east.MAP",
+      "sha256": "59b7fd7dbf2981f88e401f67f7ed7e5d8fd52f2cdb9c1b004d3cc1d954aabfbc"
+    },
+    {
+      "path": "evidence/movement-state-v29/fixtures/bridge-chain-lower-west.MAP",
+      "sha256": "be20a5a0c68f05ba732441db419e3f2fc110d779c95335ae58df80eeabc24b34"
+    },
+    {
+      "path": "evidence/movement-state-v29/fixtures/bridge-chain-north.MAP",
+      "sha256": "fed7d7a05d5ac5f983c7c6cfcb0665de9a81224f865563fa0b7b670bbf2667c0"
+    },
+    {
+      "path": "evidence/movement-state-v29/fixtures/bridge-chain-south.MAP",
+      "sha256": "3b8a9a4fceda6a44cc9f98fefd5679a9247629a7d4eaea52b9c050bc2efea25c"
+    },
+    {
+      "path": "audit_recipe_replay_v29.py",
+      "sha256": "2bbd91028e4019bf0d7db4a9a2b432a886fc628650dd96d583542f03d5d36326"
+    }
+  ]
+}

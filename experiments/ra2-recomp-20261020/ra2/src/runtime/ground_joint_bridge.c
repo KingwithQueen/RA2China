@@ -73,3 +73,26 @@ void ra2_ground_return_frame(uint32_t frame,Ra2GroundFrameKind kind,uint32_t res
     g_eax=result;g_edi=MEM32(frame);g_esi=MEM32(frame+4);g_ebp=MEM32(frame+8);g_ebx=MEM32(frame+12);
     g_flag_k=FK_ADD;g_flag_a=frame+16;g_flag_b=plan.locals;g_flag_cf=frame+16+plan.locals<frame+16;g_esp=frame+plan.total;
 }
+
+void ra2_ground_prepare_written_return_bridge(unsigned entry)
+{
+    uint32_t frame=g_esp,result=g_eax;
+    uint32_t saved_edi=MEM32(frame);
+    if(entry==2)
+    {
+        /* Original pops EDI before the writes, then ESI/EBP/EBX afterward. */
+        MEM32(g_ebp+0x58)=UINT32_MAX;
+        MEM8(g_ebp+0x61)=0;
+        ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result&UINT32_C(0xFFFFFF00));
+        g_edi=saved_edi;
+        return;
+    }
+    uint32_t output=MEM32(frame+0x60),saved_esi=MEM32(frame+4),saved_ebp=MEM32(frame+8);
+    if(entry==1)result=output;
+    else g_ecx=output;
+    MEM8(output)=entry==0?(uint8_t)result:1;
+    if(entry!=3)result&=UINT32_C(0xFFFFFF00);
+    ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result);
+    /* Output may alias saved EDI/ESI/EBP; those were already popped. EBX was not. */
+    g_edi=saved_edi;g_esi=saved_esi;g_ebp=saved_ebp;
+}

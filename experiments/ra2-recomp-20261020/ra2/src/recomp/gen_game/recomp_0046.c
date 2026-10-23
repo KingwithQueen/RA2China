@@ -67648,6 +67648,13 @@ L_007035D7:
     esi = MEM32(esi + 0x30); /* 0x007035D7: mov esi, dword ptr [esi + 0x30] */
     goto L_007038FD; /* 0x007035DA: jmp 0x7038fd */
 L_007035DF:
+    /* 可读 C：建筑标志内部接续，与完整建筑筛选共享。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t building_resume_v29=ra2_ground_object_branch_bridge(5);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(building_resume_v29==0x703B5A)goto L_00703B5A;
+    if(building_resume_v29==0x7038FD)goto L_007038FD;
+    goto L_00703693;
     eax = MEM32(esi + 0x418); /* 0x007035DF: mov eax, dword ptr [esi + 0x418] */
     SET_LO8(ecx, MEM8(eax + 0x1385)); /* 0x007035E5: mov cl, byte ptr [eax + 0x1385] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x007035EB: test cl, cl */
@@ -68829,6 +68836,13 @@ L_007035D7:
     esi = MEM32(esi + 0x30); /* 0x007035D7: mov esi, dword ptr [esi + 0x30] */
     goto L_007038FD; /* 0x007035DA: jmp 0x7038fd */
 L_007035DF:
+    /* 可读 C：建筑标志内部接续，与完整建筑筛选共享。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t building_resume_v29=ra2_ground_object_branch_bridge(5);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(building_resume_v29==0x703B5A)goto L_00703B5A;
+    if(building_resume_v29==0x7038FD)goto L_007038FD;
+    goto L_00703693;
     eax = MEM32(esi + 0x418); /* 0x007035DF: mov eax, dword ptr [esi + 0x418] */
     SET_LO8(ecx, MEM8(eax + 0x1385)); /* 0x007035E5: mov cl, byte ptr [eax + 0x1385] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x007035EB: test cl, cl */

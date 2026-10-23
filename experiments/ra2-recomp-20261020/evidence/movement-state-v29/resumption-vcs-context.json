@@ -1,0 +1,4 @@
+{
+  "config_sha256": "d91c7e6257be56360b5d25674376c62955a28194dbdd26aa874bf9e00dfd0b97",
+  "scope": "Read-only local configuration fingerprint before final staging and commit; no remote operation."
+}

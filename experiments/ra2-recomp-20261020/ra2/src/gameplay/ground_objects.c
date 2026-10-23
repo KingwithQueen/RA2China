@@ -1,5 +1,6 @@
 #include "ground_objects.h"
 #include "ground_object_kind.h"
+#include "ground_building_flags.h"
 #include "ground_collision.h"
 
 Ra2ObjectPassageOutcome ra2_ground_filter_object(const Ra2ObjectPassageServices *s)
@@ -25,6 +26,11 @@ Ra2ObjectPassageOutcome ra2_ground_filter_building(int32_t direction,const Ra2Ob
     if(direction!=-1 && s->query(c,RA2_OBJECT_BUILDING_FOOTPRINT_TEST)
         && s->query(c,RA2_OBJECT_IS_CELL_BUILDING) && !s->query(c,RA2_OBJECT_BUILDING_OCCUPIES_CELL))
         return RA2_OBJECT_SKIP;
+    return ra2_ground_filter_building_flags(s);
+}
+Ra2ObjectPassageOutcome ra2_ground_filter_building_flags(const Ra2ObjectPassageServices *s)
+{
+    void *c=s->context;
     if(s->query(c,RA2_OBJECT_BUILDING_IGNORED)) return RA2_OBJECT_SKIP;
     if(s->query(c,RA2_OBJECT_BUILDING_MISSION_PASSAGE))
     {

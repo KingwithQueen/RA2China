@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_template.h"
+#include "ground_template_table.h"
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -21,6 +22,12 @@ Ra2TemplateSelection ra2_ground_choose_template(int32_t direction, int32_t next_
         && services->neighbor_overlay_crushable(services->context,next_direction);
     unsigned crushing = crush_neighbor || crush_current_overlay;
     if (crushing) next_direction = direction;
+    return ra2_ground_template_table(direction, next_direction, crushing, services);
+}
+
+Ra2TemplateSelection ra2_ground_template_table(int32_t direction, int32_t next_direction,
+    unsigned crushing, const Ra2TemplateServices *services)
+{
     int32_t selector = signed_bits((uint32_t)next_direction + (uint32_t)direction * 8u);
     if (!services->template_byte(services->context,selector,RA2_TEMPLATE_ENTRY_TAG))
     {
