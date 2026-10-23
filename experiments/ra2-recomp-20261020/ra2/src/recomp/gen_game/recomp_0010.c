@@ -1,3 +1,4 @@
+extern void ra2_ground_prepare_following_return_bridge(unsigned entry);
 extern void ra2_ground_prepare_stop_return_bridge(unsigned entry);
 extern unsigned ra2_ground_template_destination_bridge(unsigned alternate);
 extern unsigned ra2_ground_advance_service_return_bridge(unsigned entry);
@@ -66002,6 +66003,9 @@ L_004A24C0:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
     ebx = MEM32(esp + 0x7C); /* 0x004A24CE: mov ebx, dword ptr [esp + 0x7c] */
@@ -66009,6 +66013,9 @@ L_004A24C6:
     MEM32(esp + 0x1C) = edx; /* 0x004A24D6: mov dword ptr [esp + 0x1c], edx */
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
     ebx = MEM32(esp + 0x2C); /* 0x004A24E4: mov ebx, dword ptr [esp + 0x2c] */
@@ -66028,6 +66035,7 @@ L_004A24F4:
     ecx = MEM32(ebp + 0xC); /* 0x004A251B: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
+destination_resume_v33:
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -66455,6 +66463,9 @@ L_004A24C0:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
     ebx = MEM32(esp + 0x7C); /* 0x004A24CE: mov ebx, dword ptr [esp + 0x7c] */
@@ -66462,6 +66473,9 @@ L_004A24C6:
     MEM32(esp + 0x1C) = edx; /* 0x004A24D6: mov dword ptr [esp + 0x1c], edx */
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
     ebx = MEM32(esp + 0x2C); /* 0x004A24E4: mov ebx, dword ptr [esp + 0x2c] */
@@ -66481,6 +66495,7 @@ L_004A24F4:
     ecx = MEM32(ebp + 0xC); /* 0x004A251B: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
+destination_resume_v33:
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -67651,6 +67666,9 @@ L_004A24C0:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
     ebx = MEM32(esp + 0x7C); /* 0x004A24CE: mov ebx, dword ptr [esp + 0x7c] */
@@ -67658,6 +67676,9 @@ L_004A24C6:
     MEM32(esp + 0x1C) = edx; /* 0x004A24D6: mov dword ptr [esp + 0x1c], edx */
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
     ebx = MEM32(esp + 0x2C); /* 0x004A24E4: mov ebx, dword ptr [esp + 0x2c] */
@@ -67677,6 +67698,7 @@ L_004A24F4:
     ecx = MEM32(ebp + 0xC); /* 0x004A251B: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
+destination_resume_v33:
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -68057,6 +68079,9 @@ L_004A24C0:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
     ebx = MEM32(esp + 0x7C); /* 0x004A24CE: mov ebx, dword ptr [esp + 0x7c] */
@@ -68064,6 +68089,9 @@ L_004A24C6:
     MEM32(esp + 0x1C) = edx; /* 0x004A24D6: mov dword ptr [esp + 0x1c], edx */
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* 复用已验证的目标坐标服务，接回本副本原有的2528指令。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
     ebx = MEM32(esp + 0x2C); /* 0x004A24E4: mov ebx, dword ptr [esp + 0x2c] */
@@ -68083,6 +68111,7 @@ L_004A24F4:
     ecx = MEM32(ebp + 0xC); /* 0x004A251B: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
+destination_resume_v33:
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -73175,6 +73204,9 @@ L_004A4560:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -73351,6 +73383,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -76811,6 +76846,9 @@ L_004A4560:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -76987,6 +77025,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -80652,6 +80693,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -80828,6 +80872,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -82255,6 +82302,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -82431,6 +82481,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -83724,6 +83777,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -83900,6 +83956,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -85135,6 +85194,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -85311,6 +85373,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -86253,6 +86318,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -86429,6 +86497,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -86691,6 +86762,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -86915,6 +86989,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -87040,6 +87117,9 @@ L_004A4560:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004A3A38; /* 0x004A4568: je 0x4a3a38 */
 L_004A456E:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     RECOMP_CALL(sub_004CD9B0); /* 0x004A456E: call 0x4cd9b0 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0xC); /* 0x004A4573: mov ecx, dword ptr [ebp + 0xc] */
@@ -87218,6 +87298,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -87438,6 +87521,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */
@@ -87649,6 +87735,9 @@ L_004A46B3:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A46D7; /* 0x004A46BB: jne 0x4a46d7 */
 L_004A46BD:
+    /* 保留服务顺序、回调后的owner重读及原返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_following_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = esp + 0x38; /* 0x004A46BD: lea edx, [esp + 0x38] */
     PUSH32(esp, 1); /* 0x004A46C1: push 1 */
     PUSH32(esp, edx); /* 0x004A46C3: push edx */

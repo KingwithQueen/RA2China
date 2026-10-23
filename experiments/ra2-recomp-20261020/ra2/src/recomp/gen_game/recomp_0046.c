@@ -68216,6 +68216,11 @@ L_00703990:
     eax = 1; /* 0x00703990: mov eax, 1 */
     goto L_00703A66; /* 0x00703995: jmp 0x703a66 */
 L_0070399A:
+    /* 敌方具体对象：碾压能力、可碾压属性、阵营重查与武器门槛。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned enemy_contact_v33=ra2_ground_object_branch_bridge(7);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_contact_v33==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp + 0x5AC); /* 0x0070399A: mov eax, dword ptr [ebp + 0x5ac] */
     SET_LO8(ecx, MEM8(eax + 0xAF3)); /* 0x007039A0: mov cl, byte ptr [eax + 0xaf3] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x007039A6: test cl, cl */
@@ -69419,6 +69424,11 @@ L_00703990:
     eax = 1; /* 0x00703990: mov eax, 1 */
     goto L_00703A66; /* 0x00703995: jmp 0x703a66 */
 L_0070399A:
+    /* 敌方具体对象：碾压能力、可碾压属性、阵营重查与武器门槛。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned enemy_contact_v33=ra2_ground_object_branch_bridge(7);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_contact_v33==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp + 0x5AC); /* 0x0070399A: mov eax, dword ptr [ebp + 0x5ac] */
     SET_LO8(ecx, MEM8(eax + 0xAF3)); /* 0x007039A0: mov cl, byte ptr [eax + 0xaf3] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x007039A6: test cl, cl */
@@ -70125,6 +70135,11 @@ L_00703990:
     eax = 1; /* 0x00703990: mov eax, 1 */
     goto L_00703A66; /* 0x00703995: jmp 0x703a66 */
 L_0070399A:
+    /* 敌方具体对象：碾压能力、可碾压属性、阵营重查与武器门槛。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned enemy_contact_v33=ra2_ground_object_branch_bridge(7);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_contact_v33==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp + 0x5AC); /* 0x0070399A: mov eax, dword ptr [ebp + 0x5ac] */
     SET_LO8(ecx, MEM8(eax + 0xAF3)); /* 0x007039A0: mov cl, byte ptr [eax + 0xaf3] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x007039A6: test cl, cl */

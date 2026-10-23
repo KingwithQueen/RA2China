@@ -175,3 +175,21 @@ void ra2_ground_prepare_stop_return_bridge(unsigned entry)
         /* Re-read the output pointer after the callback; saved slots can alias it. */
         ra2_ground_prepare_written_return_bridge(0);
 }
+
+void ra2_ground_prepare_following_return_bridge(unsigned entry)
+{
+    uint32_t frame=g_esp,drive=g_ebp,result;
+    if(entry)
+    {
+        uint32_t args[]={frame+0x38,1};
+        result=call(0x4A0BC0,drive,args,2)&UINT32_C(0xFFFFFF00);
+    }
+    else
+    {
+        /* 第一项服务完成后重读owner，不能沿用回调前的对象。 */
+        call(0x4CD9B0,g_ecx,NULL,0);
+        uint32_t unit=MEM32(drive+0xC),args[]={0,1};
+        result=method(unit,0x414,args,2);
+    }
+    ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result);
+}

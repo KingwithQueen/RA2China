@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "total_cases": 491520,
+  "results": {
+    "tube-approach-probe": {
+      "passed": true,
+      "phase": 0,
+      "cases": 32768,
+      "ordered_callback_values": 1179648,
+      "original_stack_cleanup_verified": true
+    },
+    "tube-height-progress-probe": {
+      "passed": true,
+      "phase": 1,
+      "cases": 393216,
+      "ordered_callback_values": 2359296,
+      "original_stack_cleanup_verified": true
+    },
+    "movement-internal-next-probe": {
+      "passed": true,
+      "phase": 2,
+      "cases": 32768,
+      "ordered_callback_values": 327690,
+      "original_stack_cleanup_verified": true
+    },
+    "object-passage-finish-probe": {
+      "passed": true,
+      "phase": 3,
+      "cases": 32768,
+      "ordered_callback_values": 60870,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "scope": "Native 6FABAA approach fragment; full 6FAD1C/6FAE1D height and epilogues; 4A166A/4A32B4 continuations; complete 703AA9 classification finish. Callback substitutions test query order and mutable centers/owner/offset data; no claim of whole-function or complete real-game coverage.",
+  "operation_control_modes": 12,
+  "conversion_rounding_modes": 4,
+  "straight_and_diagonal_lengths": true,
+  "stack_and_nonvolatile_registers_verified": true,
+  "callback_sequence_and_values_verified": true,
+  "prefetched_coordinate_registers_verified": true,
+  "probe_executable": {
+    "path": "evidence/movement-state-v33/progress_probe.exe",
+    "sha256": "88fe8d03ff6e9e6cb70592ba5ab1166bcea24ed00734b6dead706dfedd4eb92c"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v33/progress_probe.c",
+      "sha256": "d16bd0a0497d1e2b174ac801ddb9a4faf3c90189f42dbf590b6e045a335ec350"
+    },
+    {
+      "path": "evidence/movement-state-v33/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-progress-probe-v33.ps1",
+      "sha256": "56386629fb48601d5da3c72d1bea76078651456a90c82c947d5933a7f8036476"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_progress.c",
+      "sha256": "4479de0be5b809fd25be702316168db2a9e37d60b48e532c6244a6134ea238cd"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_progress.h",
+      "sha256": "91ebd7418aeb08514c9592df02ad803deef4aa519c934033b98382ae0aac78f6"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_internal_next.c",
+      "sha256": "142d43d72857fee58007230805fa3b8fc4b6e9ef6d415c448f186dc7bdec07a1"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_internal_next.h",
+      "sha256": "a79ac13d188dd8bd912a86dcffce7727064abfafe01424af527de08f016ee9af"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_finish.c",
+      "sha256": "0df504b1ea3925b9ee449684140790a4e9430111faa3c5218c8afbcb3eb11931"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_finish.h",
+      "sha256": "21dd094d566215bb43bab0584d6a25d73a18ec7433b649ed69c1ae74d79e1a79"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.c",
+      "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.h",
+      "sha256": "8347d8c313a8f31dd2f286246658da4a844e97e14947a89b4b4bb41c389d3701"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.c",
+      "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.h",
+      "sha256": "19c822a81038d87a1976b59341fbd6b9f67b5d42ddd484a65ca54767cba7dcc8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.c",
+      "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.h",
+      "sha256": "c8dca091773955136c64315006bbb905ee7cb2040f9c1b17767d6c62b99a7f83"
+    },
+    {
+      "path": "ra2/src/runtime/ground_progress_bridge.c",
+      "sha256": "89d5cad5b0e9455b715d23bb06bbd626de9f11e586d5fcf3c37c4fd612489313"
+    },
+    {
+      "path": "ra2/src/runtime/ground_progress_bridge.h",
+      "sha256": "0cc9bced624d8347d29d786eb28b245d98664013742c927ca3f71f05bbabe0f3"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "6587b0b4c2c488fa27abef8024d2337df61b6cb8c98b0d377c889cfa2bbe87d8"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.h",
+      "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "ra2/src/compat/x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    }
+  ]
+}

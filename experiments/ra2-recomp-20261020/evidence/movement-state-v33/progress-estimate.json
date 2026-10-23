@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "reestimated_this_round": false,
+  "historical_only": true,
+  "previous_estimate": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v32\\progress-estimate.json",
+  "remaining_destination_copies_from_generation31": 0,
+  "north_moving_meeting_relationship_query_completed": true,
+  "remaining": [
+    "Other template/Advance/Prepare continuations and service exits; callback and recursive side effects.",
+    "More concrete object/locomotor/building/terrain/crush/bridge-destruction and traffic combinations.",
+    "Legal natural entry sources for 28 nonprimary C aliases; computed pointers and unrun routes remain unresolved.",
+    "Alternate saved-segment pointer and broader curved height/occupied exit scenarios.",
+    "Whole-game readable recovery, unsupported guard classification, campaigns, network synchronization and performance acceptance."
+  ],
+  "inputs": [
+    {
+      "path": "record_remaining_v33.py",
+      "sha256": "755fdd03cc048376656b4dbed9d42367104f26ceb5c100c087f78cd4f15e6fc4"
+    },
+    {
+      "path": "evidence/movement-state-v33/destination-copy-contract.json",
+      "sha256": "00af2168280963382487aec428a3606c8552b1f1a65e6a00f70e0944092dc791"
+    },
+    {
+      "path": "evidence/movement-state-v33/north-query-real-scenes.json",
+      "sha256": "73315dbb163416343c1de403861b35d3d1e9f1e3788ffc50de783817ef6a6b93"
+    }
+  ]
+}

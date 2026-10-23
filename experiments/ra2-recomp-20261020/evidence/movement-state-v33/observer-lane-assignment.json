@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "delegated_jobs": ["combined-scenes", "bridge-observer"],
+  "owner": "continue_freed_lane_v33.py",
+  "prerequisite": "core-observers-complete.json",
+  "purpose": "Run the identical scene suites once on the freed core lane. The bridge lane waits for their completion receipts.",
+  "maximum_simulation_lanes": 2,
+  "maximum_game_processes": 4
+}

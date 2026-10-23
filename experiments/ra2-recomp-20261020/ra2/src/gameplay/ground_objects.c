@@ -1,4 +1,5 @@
 #include "ground_objects.h"
+#include "ground_enemy_contact.h"
 #include "ground_enemy_kind.h"
 #include "ground_object_kind.h"
 #include "ground_building_flags.h"
@@ -53,6 +54,11 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy(Ra2ObjectPassageState *state,c
     {
         raise_passage(state,RA2_CELL_CLOAKED_OBSTACLE);return RA2_OBJECT_SCANNED;
     }
+    return ra2_ground_classify_enemy_contact(state,s);
+}
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_contact(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
+{
+    void *c=s->context;
     if((s->query(c,RA2_OBJECT_OWNER_CRUSHER) || s->query(c,RA2_OBJECT_CRUSHER_ABILITY))
         && s->query(c,RA2_OBJECT_CRUSHABLE))
     {

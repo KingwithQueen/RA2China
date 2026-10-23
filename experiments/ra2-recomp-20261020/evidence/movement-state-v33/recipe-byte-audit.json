@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "production_sources_replayed": 6,
+  "probe_sources_replayed": 2,
+  "observer_sources_replayed": 1,
+  "candidate_maps_replayed": 3,
+  "byte_identical": true,
+  "inputs": [
+    {
+      "path": "audit_recipe_replay_v33.py",
+      "sha256": "09711b6ea85facee795ceb55b3a7e5106e2e61f7d9324d12742df37449264ac8"
+    },
+    {
+      "path": "integrate_template_v33.py",
+      "sha256": "ae6e15d27a754e7c0a9bffbabb569d600c524c4a0573e40f38ffbe11a183d077"
+    },
+    {
+      "path": "integrate_objects_v33.py",
+      "sha256": "4bb8906b076605db6488b98ae23d9e6f285578c85aa38397428e8b11fbf066d3"
+    },
+    {
+      "path": "extend_objects_probe_v33.py",
+      "sha256": "114ba2ba16397c259093099bb50f7915e1a79f559ff8868b036e91d9ae9d17fb"
+    },
+    {
+      "path": "integrate_returns_v33.py",
+      "sha256": "cd1f8ffaf4e5f7775cdb860c7f2637b3c4493cbe90d508f691ba11d00f500c81"
+    },
+    {
+      "path": "extend_exit_probe_v33.py",
+      "sha256": "60ecfd3b1d0a35dd56289f3492c3f1886351880cd5c65a44664f12d78e90d5c3"
+    },
+    {
+      "path": "extend_observer_v33.py",
+      "sha256": "b5e6dd902e0333d6219b0983f48b11ed1bc4c970b4ab9e1f6bc653ebaa4c976d"
+    },
+    {
+      "path": "make_bridge_north_query_v33.py",
+      "sha256": "e07a145c9e1f1eda897ac4347ee898009943eb46d59efcdbfbc496f685898e36"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "6587b0b4c2c488fa27abef8024d2337df61b6cb8c98b0d377c889cfa2bbe87d8"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "d0037f7b58b8e7f44dd8d0b0ea773615c6ec52570ba361a410bcdc1f32c36125"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "e9edda4b89b3f753c8a88fc3fa5ff7577ea99ed460c16b4309dae5fd0115f18a"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "c1ad7b741fe0416c652002fbae447358f2f2b25326ab623adb1203cdd8ea44b2"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "43f33bfbc4f204fd5a92d9b196b179373ef54c01b952f524457830223ee717a8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_enemy_contact.h",
+      "sha256": "665998397759f6d5caf785fbc0064472f6888b762746e4d84a74e5772606235d"
+    },
+    {
+      "path": "evidence/movement-state-v33/overlap_probe.c",
+      "sha256": "c899a161df385ae4a5dfcea99eb0616cbae338fda27b93fa5b78afc453c0d71f"
+    },
+    {
+      "path": "evidence/movement-state-v33/objects_probe.c",
+      "sha256": "1a3ab55e8a1b57e64eda9d041e7990cba0101971609e3b48d0b368c8fbe20796"
+    },
+    {
+      "path": "evidence/movement-state-v33/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    },
+    {
+      "path": "evidence/movement-state-v33/fixtures/bridge-north-lane-nface.MAP",
+      "sha256": "833738794bdc90fb462c970ca340d11240385ac44d4cea05a0e87c851c91f11d"
+    },
+    {
+      "path": "evidence/movement-state-v33/fixtures/bridge-north-lane-nmirror.MAP",
+      "sha256": "10861ab45e3c8c84059484a8865f47256cecb09245ff34f446d12da10565e973"
+    },
+    {
+      "path": "evidence/movement-state-v33/fixtures/bridge-north-lane-nsub.MAP",
+      "sha256": "54ae4899e3f8724e58a127021c3de4c04edced01eac1ddcd8c70cd86bf9a233b"
+    }
+  ]
+}

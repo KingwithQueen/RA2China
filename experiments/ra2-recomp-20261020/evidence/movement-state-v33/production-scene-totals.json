@@ -1,0 +1,437 @@
+{
+  "passed": true,
+  "production_scenes": 61,
+  "production_frames": 40231,
+  "production_executable_sha256": "19bb89a2f7a69534848b40bdd474c0a44f5788a8b3bb536d8a8650285e8a2104",
+  "groups": {
+    "main_matrix": {
+      "scenes": 27,
+      "frames": 14897,
+      "tags": [
+        "t-standard-01",
+        "t-congestion-01",
+        "t-restricted-rock",
+        "t-restricted-clear",
+        "t-wall",
+        "t-gate",
+        "t-truck",
+        "t-budget-natural",
+        "t-budget-entry",
+        "t-cloaked-corridor",
+        "t-slope-healthy",
+        "t-slope-damaged",
+        "t-chrono-team-reference",
+        "t-zero-delay",
+        "t-chrono-seam-budget",
+        "u-ring2",
+        "u-ring3",
+        "u-tc0",
+        "u-tc1",
+        "u-tc2",
+        "u-large",
+        "u-ur2",
+        "u-ur3",
+        "u-long",
+        "u-second-failure",
+        "u-repeat-failure",
+        "u-zero-road"
+      ]
+    },
+    "final_checkpoint_production": {
+      "scenes": 4,
+      "frames": 2404,
+      "tags": [
+        "c-final-default",
+        "c-final-tube-east",
+        "c-final-tube-west",
+        "c-final-tube-blocked"
+      ]
+    },
+    "additional_tube_production": {
+      "scenes": 9,
+      "frames": 5209,
+      "tags": [
+        "z-tube-production-uphill",
+        "z-tube-production-downhill",
+        "z-ce",
+        "z-cw",
+        "z-cu",
+        "z-cd",
+        "z-cb",
+        "z-tu",
+        "z-td"
+      ]
+    },
+    "combined_production": {
+      "scenes": 4,
+      "frames": 2404,
+      "tags": [
+        "x-ub",
+        "x-db",
+        "x-mu",
+        "x-md"
+      ]
+    },
+    "bridge_chain": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "b-north",
+        "b-south",
+        "b-lower-west",
+        "b-lower-east"
+      ]
+    },
+    "bridge_mixed": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "mp-mixed-north",
+        "mp-traffic-north",
+        "mp-mixed-south",
+        "mp-traffic-south"
+      ]
+    },
+    "bridge_hostile": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "ep-enemy-mixed-north",
+        "ep-enemy-traffic-ai3-north",
+        "ep-enemy-mixed-south",
+        "ep-enemy-traffic-ai3-south"
+      ]
+    },
+    "bridge_infantry": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "ip-meeting-north",
+        "ip-following-north",
+        "ip-meeting-south",
+        "ip-following-south"
+      ]
+    },
+    "north_query": {
+      "scenes": 1,
+      "frames": 901,
+      "tags": [
+        "np-nsub"
+      ]
+    }
+  },
+  "excluded_final_executable_runs": [
+    {
+      "tag": "c-final-ur3",
+      "frames": 101,
+      "formal_count": 0,
+      "reason": "Short part-checkpoint regression retained separately"
+    },
+    {
+      "tag": "trial-nc68",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nface",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nl68",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nl69",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nmirror",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nr210",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nr214",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nr218",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-nsub",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    }
+  ],
+  "observer_budget_not_counted_as_production": true,
+  "part_checkpoint_short_regression_not_double_counted": true,
+  "inputs": [
+    {
+      "path": "audit_scene_totals_v33.py",
+      "sha256": "f7463693d32c5cdccbdb655f4044642a0d5b500c9c7b4f907405e44355f75303"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-standard-01/comparison.json",
+      "sha256": "b72e0fba39d7b03dee5c4b6657231569a7e297dfbd482e64d909fedc564a132b"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-congestion-01/comparison.json",
+      "sha256": "aa0c7770f08c3366d7972b80d86e79b1f70afc63e6a6ebc191fe72d4cb6c8d6d"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-restricted-rock/comparison.json",
+      "sha256": "08c7152cd7f29ac0483b25e50555a0e23c45e7c4e334e0afec965ca4b24397b4"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-restricted-clear/comparison.json",
+      "sha256": "1c7ee398941b5231a84261274e0d6fe1c8a4b277646ba15a221a2d045b52d49b"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-wall/comparison.json",
+      "sha256": "95f2771f704bebdbaf98f11e2284533fa709274256ac54e210b17b69e2d7e04f"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-gate/comparison.json",
+      "sha256": "16b77e29a154cd8237ccd529c6e69bb892966f0bcab400760fcef1ba5716232d"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-truck/comparison.json",
+      "sha256": "9395895d672ec715eb7559320fed7aa308fd6f20fd5344d22666071a8df4b625"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-budget-natural/comparison.json",
+      "sha256": "e21ea54d25c0b1c5d34c4237274a210dedb1da026f2496fa851cecb7b2d79b71"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-budget-entry/comparison.json",
+      "sha256": "bcd95c0b9f5ede5f2c6d03da1a95a3b3ec0eda1a822d54833eb7456566dc1b67"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-cloaked-corridor/comparison.json",
+      "sha256": "7ed550a3e666a52780ec529abf15f3dc2dd3a598309a1c6593077c85a48b0221"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-slope-healthy/comparison.json",
+      "sha256": "c64557c7f0db73834dd1fcc1075470304055b719a06065bfb1894a492de7c897"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-slope-damaged/comparison.json",
+      "sha256": "49cd42b99923abbcbfca283949d21d1365d975946809cfea4a8deb5a23fc1d10"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-chrono-team-reference/comparison.json",
+      "sha256": "310b24c23b1ca5754e8b7c775c76d516782e4bf2a43b5b0e3fc417bc7cdea6ae"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-zero-delay/comparison.json",
+      "sha256": "9d300c5f979b80d22d4f088a61caa15c1594fb311598fd1c223804fcc2947b05"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/t-chrono-seam-budget/comparison.json",
+      "sha256": "ec32823f9df0e1a17b3874fc54a9e9d99617b765b4c81eaf1f8d751d3077f979"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-ring2/comparison.json",
+      "sha256": "ce3dee5ed18ad4d4cbadbd390bf99f175f8dcbc9da231248ee903cde815b88b5"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-ring3/comparison.json",
+      "sha256": "66df9392848c1037a19ae64c7fef548011d8c549f255cc28d02ef5484d771e81"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-tc0/comparison.json",
+      "sha256": "481abec1cf9b68023a4bcc102523a5a47793082b9c0c9b7e42431572c6d2ab9a"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-tc1/comparison.json",
+      "sha256": "17f124f222ed3c7be798ed940fb00ecc74a5b5aa9998d9c361ed5db8ba42b12d"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-tc2/comparison.json",
+      "sha256": "f7fad2c67b0bde6151a137fe20abc999cccedc80f43c6aa95629ee7d9f3d177a"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-large/comparison.json",
+      "sha256": "8831add103844ed51ce2d61280182ee5e475193004e5a39f9a111203782adeda"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-ur2/comparison.json",
+      "sha256": "9197f88bcd2cff11e22339198fb18ce61f50a244aa0325e5ecc40d6f50e9a3c1"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-ur3/comparison.json",
+      "sha256": "0e4551360082b11de817af265f46f4f9f6df601d8231d73d032007cb0f1de854"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-long/comparison.json",
+      "sha256": "11a6800e590947e31096f62bbe3fa3412631b5c9d7b406cec2625c3cf00210c2"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-second-failure/comparison.json",
+      "sha256": "9cfce32e7469a663a171128c10cf554fe311e46e92a55c9a28621cddd6fc5f37"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-repeat-failure/comparison.json",
+      "sha256": "f7f6b1c7a2574911616881dc79c575160aff7ea4bbc22503872141a1497f0633"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/u-zero-road/comparison.json",
+      "sha256": "633e7c5acb4d77264e6dc0ef7ee54ed623a0df85fc487870aea8085d5653f3b7"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/c-final-default/comparison.json",
+      "sha256": "b4671581dc16841205f969ed07a981c332a7c3187d46bb83291430aa94d43c45"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/c-final-tube-east/comparison.json",
+      "sha256": "8d44a12efd7b4dc94eb72d787febd8ae1fa4dd4f13917d92133e948c341e2521"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/c-final-tube-west/comparison.json",
+      "sha256": "2948c5305d3ca4b500bc575be2db15f95eef0d5547d40cdf62261373206415d2"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/c-final-tube-blocked/comparison.json",
+      "sha256": "d9fe8d1b593b75d7913a90c77f4076df23df8b2f98e3c330395dd5fd297a23e9"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-tube-production-uphill/comparison.json",
+      "sha256": "82d02f09b3e92cf555f246c2b2a5d646704af43af2ca0e26135191eff5307b8d"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-tube-production-downhill/comparison.json",
+      "sha256": "34814a158fd2e2cc793fb8473a4574e52674d2f39a5a9eb319ead8d3c89e1474"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-ce/comparison.json",
+      "sha256": "1b2735bbb71fa3642585038a0df08596fd330d35cffb4afd76ace35249caf5a7"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-cw/comparison.json",
+      "sha256": "0b6f3a9baa02be03aecbb1f9b24ba3a29a10ca77fa2bdbf1f6b4c5cb0bd0c47b"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-cu/comparison.json",
+      "sha256": "12ec3163fab2edac02233a85a2e9fcd047da6f6f841960671be70a29e422b3ac"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-cd/comparison.json",
+      "sha256": "adec388ef158ea4b211709f305bafa4712fa116ae97e10e417ec308daac41d38"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-cb/comparison.json",
+      "sha256": "cbdd7ed05dd5381404e2a56d0e1c83ad9d7f2436421b31bf2fcab918a5c6457f"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-tu/comparison.json",
+      "sha256": "ce6f8d9378cadcaad53319cfeab61959a9d0cb8d94c1d92387fefb3e075186a9"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/z-td/comparison.json",
+      "sha256": "fdeee39beb0330be380433e686084d602822d99ef21be15e91630c6c7a9b913e"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/x-ub/comparison.json",
+      "sha256": "494bd2801ab666ce88131c5301f60a4af21bf3f0460be3dafb3f6138849c856c"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/x-db/comparison.json",
+      "sha256": "0f50d0f0e2db08d13d3761bc49626caf06ce5efc7b1480ecb41883888755f1e9"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/x-mu/comparison.json",
+      "sha256": "61640f5ec0d71a69e9335e1107c6eb213fc22b29fa5d5bc15459f405b40a1ea6"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/x-md/comparison.json",
+      "sha256": "df412c415523227a8e286ce96f9e1d679092fa20fddb5d351f3a1185db70ba3d"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/b-north/comparison.json",
+      "sha256": "7fd68c5ddba8f24a7dcd03c3c29d8ca51304f2ca6e008c2a16f5532ef1c4d2ec"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/b-south/comparison.json",
+      "sha256": "5f406cfebb678cc811a1075a77bae3b42fe2acccea2843edf8cb1033754fd228"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/b-lower-west/comparison.json",
+      "sha256": "574c6d5a2530e21acaf8a602b1ef205dbb30a079d96a19e929921049a252b7cf"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/b-lower-east/comparison.json",
+      "sha256": "88b27dd61df94bfedef57905f547e74460c2c299058aa74215e85206cbe07b88"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/mp-mixed-north/comparison.json",
+      "sha256": "6cda3cf4df1093658e94aad3e0a9b71706ac60731dd8162b0ecac722d11d4834"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/mp-traffic-north/comparison.json",
+      "sha256": "e8f68ace48f1a4c309ab7ca5e760d0591d88fecf19db79e6d216ec6ccd750c85"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/mp-mixed-south/comparison.json",
+      "sha256": "6411506d72e6afbeab337a9b37b5b8149d66513502fdf888427c0d534b20f823"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/mp-traffic-south/comparison.json",
+      "sha256": "816170b6b78b2d9f71a719d4d72983f050f3325b6431fae32c01ebfcc0076bf2"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ep-enemy-mixed-north/comparison.json",
+      "sha256": "1388ea3f2db30d10cfbce120cd1e42fa06e44517aed628f212d4022cd9b28fcf"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ep-enemy-traffic-ai3-north/comparison.json",
+      "sha256": "f7c69efd377afb031d7d2c59f2884ff0855fa91d0a0b9ccd14a210b82d46b198"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ep-enemy-mixed-south/comparison.json",
+      "sha256": "ff3ed83feeef7cdd027618453e2fb1472a24a49a1e873bb5c8a0a88e3d4550f9"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ep-enemy-traffic-ai3-south/comparison.json",
+      "sha256": "67b23c7b38171e2f1484ab47600c6f99a7503c3554a5cad4db649ee9351644de"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ip-meeting-north/comparison.json",
+      "sha256": "9c6c348bf6e09659265b4dce2080948f2d739b64f2aaa10df7238c5191972aa3"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ip-following-north/comparison.json",
+      "sha256": "0812eb9e41b89b3d3d1a2c49cd69e006c566c0f763c0ead0b6311f88a2c11e80"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ip-meeting-south/comparison.json",
+      "sha256": "c3c71e277127fa5bc8c652cff66dd61462b796929bae762e51dda7f00d6a8775"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/ip-following-south/comparison.json",
+      "sha256": "79fe264ca0ff8cdb2b02ae9a16be2bd924ca42fb1920c9d335ccbec8530a7d51"
+    },
+    {
+      "path": "evidence/movement-state-v33/runs/np-nsub/comparison.json",
+      "sha256": "939ad9441ff5e0c7c04bb74282cb1d7e8dbd346e3107cd4e3a0d032391b5f2ae"
+    }
+  ]
+}

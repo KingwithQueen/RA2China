@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "nmirror",
+      "tag": "trial-nmirror",
+      "paired_frames": 301,
+      "acceptance_frames": 0,
+      "positive": false,
+      "modes": {
+        "original": {
+          "relationship_queries": 0,
+          "geometry_queries": 0,
+          "samples": []
+        },
+        "generated-c": {
+          "relationship_queries": 0,
+          "geometry_queries": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "name": "nface",
+      "tag": "trial-nface",
+      "paired_frames": 301,
+      "acceptance_frames": 0,
+      "positive": false,
+      "modes": {
+        "original": {
+          "relationship_queries": 0,
+          "geometry_queries": 0,
+          "samples": []
+        },
+        "generated-c": {
+          "relationship_queries": 0,
+          "geometry_queries": 0,
+          "samples": []
+        }
+      }
+    },
+    {
+      "name": "nsub",
+      "tag": "trial-nsub",
+      "paired_frames": 301,
+      "acceptance_frames": 0,
+      "positive": true,
+      "modes": {
+        "original": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "samples": [
+            {
+              "kind": "movement-audit",
+              "frame": 108,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 108,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        },
+        "generated-c": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "samples": [
+            {
+              "kind": "movement-audit",
+              "frame": 108,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 108,
+              "stage": 26,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "acceptance_frames": 0
+}
