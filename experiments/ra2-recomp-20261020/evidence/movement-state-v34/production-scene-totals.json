@@ -1,0 +1,429 @@
+{
+  "passed": true,
+  "production_scenes": 63,
+  "production_frames": 42033,
+  "production_executable_sha256": "7d0e3eb5e601f84218ff5c1a75baadb7c372b4a5224b6c593b9e233a16b1ceca",
+  "groups": {
+    "main_matrix": {
+      "scenes": 27,
+      "frames": 14897,
+      "tags": [
+        "t-standard-01",
+        "t-congestion-01",
+        "t-restricted-rock",
+        "t-restricted-clear",
+        "t-wall",
+        "t-gate",
+        "t-truck",
+        "t-budget-natural",
+        "t-budget-entry",
+        "t-cloaked-corridor",
+        "t-slope-healthy",
+        "t-slope-damaged",
+        "t-chrono-team-reference",
+        "t-zero-delay",
+        "t-chrono-seam-budget",
+        "u-ring2",
+        "u-ring3",
+        "u-tc0",
+        "u-tc1",
+        "u-tc2",
+        "u-large",
+        "u-ur2",
+        "u-ur3",
+        "u-long",
+        "u-second-failure",
+        "u-repeat-failure",
+        "u-zero-road"
+      ]
+    },
+    "final_checkpoint_production": {
+      "scenes": 4,
+      "frames": 2404,
+      "tags": [
+        "c-final-default",
+        "c-final-tube-east",
+        "c-final-tube-west",
+        "c-final-tube-blocked"
+      ]
+    },
+    "additional_tube_production": {
+      "scenes": 9,
+      "frames": 5209,
+      "tags": [
+        "z-tube-production-uphill",
+        "z-tube-production-downhill",
+        "z-ce",
+        "z-cw",
+        "z-cu",
+        "z-cd",
+        "z-cb",
+        "z-tu",
+        "z-td"
+      ]
+    },
+    "combined_production": {
+      "scenes": 4,
+      "frames": 2404,
+      "tags": [
+        "x-ub",
+        "x-db",
+        "x-mu",
+        "x-md"
+      ]
+    },
+    "bridge_chain": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "b-north",
+        "b-south",
+        "b-lower-west",
+        "b-lower-east"
+      ]
+    },
+    "bridge_mixed": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "mp-mixed-north",
+        "mp-traffic-north",
+        "mp-mixed-south",
+        "mp-traffic-south"
+      ]
+    },
+    "bridge_hostile": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "ep-enemy-mixed-north",
+        "ep-enemy-traffic-ai3-north",
+        "ep-enemy-mixed-south",
+        "ep-enemy-traffic-ai3-south"
+      ]
+    },
+    "bridge_infantry": {
+      "scenes": 4,
+      "frames": 3604,
+      "tags": [
+        "ip-meeting-north",
+        "ip-following-north",
+        "ip-meeting-south",
+        "ip-following-south"
+      ]
+    },
+    "north_query": {
+      "scenes": 1,
+      "frames": 901,
+      "tags": [
+        "np-nsub"
+      ]
+    },
+    "occupied_bridge": {
+      "scenes": 2,
+      "frames": 1802,
+      "tags": [
+        "op-north",
+        "op-south"
+      ]
+    }
+  },
+  "excluded_final_executable_runs": [
+    {
+      "tag": "c-final-ur3",
+      "frames": 101,
+      "formal_count": 0,
+      "reason": "Short part-checkpoint regression retained separately"
+    },
+    {
+      "tag": "trial-goalright",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-os3b",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-os4b",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-right64",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    },
+    {
+      "tag": "trial-right65",
+      "frames": 301,
+      "formal_count": 0,
+      "reason": "Exploration trial retained separately"
+    }
+  ],
+  "observer_budget_not_counted_as_production": true,
+  "part_checkpoint_short_regression_not_double_counted": true,
+  "inputs": [
+    {
+      "path": "audit_scene_totals_v34.py",
+      "sha256": "2fc755e0a83ec321fc6a82ed066c54a21d36fcc55f4e32208ed282ab2c957401"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-standard-01/comparison.json",
+      "sha256": "6a36da1868e45610cccba6f48f865ec9aaea5ec28dd9ac128c32675dffc52091"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-congestion-01/comparison.json",
+      "sha256": "f3d6354ed08545ae638f020eaea9ff482f15ff67d4ef0d82e836a1921caad19c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-restricted-rock/comparison.json",
+      "sha256": "911462c9b8608e8be1d0b0be83cd0403fbdf24721e9311688e241e92c3aff759"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-restricted-clear/comparison.json",
+      "sha256": "384957a9d545e154b0014ac6bad8ae7b182c33abfd549150c74881598965f2ed"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-wall/comparison.json",
+      "sha256": "9015bd0980a3794b4a033ea95c9e5a7a06d264672217d3472175906aadea30e0"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-gate/comparison.json",
+      "sha256": "667b762d24870ebc0b95fc52fc4f753b3e5efdeda4afc0171990d168e9f444d0"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-truck/comparison.json",
+      "sha256": "8559dfb6f3b9538efd0c88d8e3cac69c231769a40d2d9d6e260c7c23969b8422"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-budget-natural/comparison.json",
+      "sha256": "8267a5108dff3153cc541ca861a615aea579862d138264e4bd02f2ebc93c83e8"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-budget-entry/comparison.json",
+      "sha256": "6ce0b53a14c411e3338d7b8d0a0be7d353e5a252fd05f60bdd345facc5758377"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-cloaked-corridor/comparison.json",
+      "sha256": "8ef929cae42886561cf86f5ea08f97232dd33b2a1581fb77da2eef240f78042f"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-slope-healthy/comparison.json",
+      "sha256": "194b2c0ba68c06fb94489d35ad80c9d60354e468ee270267f076b4852eef0b49"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-slope-damaged/comparison.json",
+      "sha256": "2598429ae4435a1fcfd552f68ecd7bd1761bbe935f8b8dd1a683d2aa23e901ba"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-chrono-team-reference/comparison.json",
+      "sha256": "158875fad1e624511bf2886da17fe18c3c38edc49b769ba85abf81ff56b7eae7"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-zero-delay/comparison.json",
+      "sha256": "de8d7038a9eb8e02b5b5917619230dbdac8fdeacea16e2c11f0bf378ba225995"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/t-chrono-seam-budget/comparison.json",
+      "sha256": "17884927f79968121491f7f5fe37544ae9686aed01f4b3648ad0d334bd61af96"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-ring2/comparison.json",
+      "sha256": "e0680e3025d05c5324423ba2aac952815ce35d24fc9b62ed6ac3e3a6d8ddfb86"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-ring3/comparison.json",
+      "sha256": "86bb22342ee20628c567d4edd6e0a10adf98359c1b3dfc8665ec3930d8ab177c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-tc0/comparison.json",
+      "sha256": "505a50371b138a2a7f589e63bd78ef11e11a214c84c3e8af1f78161fd38cf075"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-tc1/comparison.json",
+      "sha256": "7faeaf45e88658756e9356f49ce099367507281889d42ddc35f3641c05a5508c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-tc2/comparison.json",
+      "sha256": "b98dc023c02da938fa7d775bd1e40e2449385bdfdd2a434f588660e97c87f05d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-large/comparison.json",
+      "sha256": "d90d75f1c7b570eefca868d11d8b89893c131dd54c899c51638cf7aefa9368ee"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-ur2/comparison.json",
+      "sha256": "0934898a338671f4551bf6d5c48d47863808b91391e02ed4851436091444711b"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-ur3/comparison.json",
+      "sha256": "e33e90d8afcc356098125c8c78a2f8459ec4f513d368abd7b8630d9f90adfbae"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-long/comparison.json",
+      "sha256": "3409f77dc35e1c3f3f804daad348d76cba63e4dcfe9cd0cae26394b33d20166a"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-second-failure/comparison.json",
+      "sha256": "613b75d03a440cf67332a1524a1288c1fb322e31774231f587dd77791358c59d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-repeat-failure/comparison.json",
+      "sha256": "b9b9c448b54bde7cf06bd954d446bb82b34e9b3d9214b770f75886a79678817f"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/u-zero-road/comparison.json",
+      "sha256": "445f9f52f6d153359fef722f1f37c718ba4f605da35a708b2d661e69b2485f0b"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/c-final-default/comparison.json",
+      "sha256": "08acef8031b8d58595d2f4f0a69ff0d2e01ceeccec4ce79611fadf9e88af514e"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/c-final-tube-east/comparison.json",
+      "sha256": "83ca730b2fbc05015112bf622cb0f5d40f155ad2690b047c991514a4e33180c2"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/c-final-tube-west/comparison.json",
+      "sha256": "f95d3ec1d493f2dbc9676601083c7624d707ef68a027bfc96272a3f91467f585"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/c-final-tube-blocked/comparison.json",
+      "sha256": "e716111510ca1de4ef4575da06303d22518ce23302859deacf28f381e47e1561"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-tube-production-uphill/comparison.json",
+      "sha256": "aa43ec35dd1df9216c37fa870423fbe4c2962d9549a105e1d1d8fd104683e0a7"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-tube-production-downhill/comparison.json",
+      "sha256": "db6f7a5ce68a214bb56510c55b61fef06123eb3882bb66b860ae4af5abcf546d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-ce/comparison.json",
+      "sha256": "de5d6f91ac927540c00407b933b288825a2c5552d91622310b9254047a75b257"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-cw/comparison.json",
+      "sha256": "00d5e0bb852ed8b207c4a48e8b53d5fe0c11aec9aff2e54ba9a56087f3694f29"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-cu/comparison.json",
+      "sha256": "968c20ad8b1640e44189c7678f8fbb9bfdcfbe90a6840a560356179f170f2214"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-cd/comparison.json",
+      "sha256": "33587a2c74dbb2b172e906c201fb2f53aad717774ff472623cd8f66ac909415e"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-cb/comparison.json",
+      "sha256": "32297dd8eb4f042ab78c10c5ad25e4bd44613d840625991badfa528391281526"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-tu/comparison.json",
+      "sha256": "10c6aad50973e5ff4838342e05588880956d3c901e3170ea9db9e196fe25d666"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/z-td/comparison.json",
+      "sha256": "cbb3658eefa7bf0d9b140d103b4b55b8c8205e4b141efc47342e92f5d0ded267"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/x-ub/comparison.json",
+      "sha256": "4b4a59bee54ede1b4e03e7b7bec4d790b25685235d428998822b17a3a58d043f"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/x-db/comparison.json",
+      "sha256": "ce9ac482650b4514f30cc428cc9d041ea35c7b0b6143a4ef5990cbe051cff0d4"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/x-mu/comparison.json",
+      "sha256": "29e956b8d96d0e20a653d9dc1a734ccc04117403abf1880c21f89b9892825f7d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/x-md/comparison.json",
+      "sha256": "4538c72eced621247627a096e4a4d169b01cdd9aa161becf3028897f2037c6ee"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/b-north/comparison.json",
+      "sha256": "9513ffff7f7b558f7618a94080091f51a740c5445853f491fdd9e1e5db554b0d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/b-south/comparison.json",
+      "sha256": "a96df03227db98b2a60bd44642d69d913bc0366844d9d32afe7371df3d9d8ac2"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/b-lower-west/comparison.json",
+      "sha256": "4bf9f6c94f31680c100dfb853fd847b4720198a283b012dfdb0835d4a723fc24"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/b-lower-east/comparison.json",
+      "sha256": "656dedde6257d8c70cc7ab571c1b681997cd68d0f0f10b84cc676457165e7236"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/mp-mixed-north/comparison.json",
+      "sha256": "746b11ea4d06a692cd5b9cb56ed45516c30a1caec5ac80f164606c871bf24a59"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/mp-traffic-north/comparison.json",
+      "sha256": "9f0773776020a0f61845709937ea234f740ea37710b1dcf4d0c05ed1c455720c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/mp-mixed-south/comparison.json",
+      "sha256": "bdd79adb7c912b3ed41f2646c7cd8afb6e9d1df10cf6735bc873ff64b2447e81"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/mp-traffic-south/comparison.json",
+      "sha256": "52a85e3936efcd3ae514cc719ab67abbb9697ca5eac02d940f3e72f8d23300c8"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ep-enemy-mixed-north/comparison.json",
+      "sha256": "055d66bf1e6e77f46b5fad1a467e42b692ac66a2953c62462025169adcc5a010"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ep-enemy-traffic-ai3-north/comparison.json",
+      "sha256": "c619f0b9ca00e16e0cd83db9545ae9d64628e4df5acd59255734678b5b35fd40"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ep-enemy-mixed-south/comparison.json",
+      "sha256": "7cbed290b87c2a3fcf64f32fa99602ffa2af0245215e8663715cf36bc5799c74"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ep-enemy-traffic-ai3-south/comparison.json",
+      "sha256": "f294a7c97ca0ad1b6db825e1b3096848d6d633ddc3658ab101001c1163f8ebf8"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ip-meeting-north/comparison.json",
+      "sha256": "ca6b43e175fb8336727963b09d228d0597404070621b978ea66767dfa8bfb659"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ip-following-north/comparison.json",
+      "sha256": "8917514d5bf091834d6b8ed2a40bb2a10b3f06dac4e1ccebc2e258e297acd9df"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ip-meeting-south/comparison.json",
+      "sha256": "8f8bfe6c55ebb6cc8e0b6283866e2ac44c0a82e63cf6c24c0bc5d3c37afb5ee0"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ip-following-south/comparison.json",
+      "sha256": "fca404fd9300c984c967463df3ed76124ae164514279ce4ebb518d920e92b9c8"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/np-nsub/comparison.json",
+      "sha256": "34ad5a37e621450e59451fff197aa660f96f582b69de8be145919f99dfa3e42c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/op-north/comparison.json",
+      "sha256": "8e5d6dd11a4ac5e847212a37b894375c3d28e00649cf4d2847c8f3fbe5e88e4d"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/op-south/comparison.json",
+      "sha256": "d2be151af3b9721b3bef0065fd885679ba4b31dcdba681ff41bedb99be12008e"
+    }
+  ]
+}

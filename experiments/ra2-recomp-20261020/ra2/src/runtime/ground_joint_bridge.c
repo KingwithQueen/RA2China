@@ -193,3 +193,10 @@ void ra2_ground_prepare_following_return_bridge(unsigned entry)
     }
     ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result);
 }
+
+void ra2_ground_prepare_owner_stop_return_bridge(void)
+{
+    uint32_t frame=g_esp,unit=g_ecx,args[]={0,1};
+    uint32_t result=method(unit,0x410,args,2);
+    ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result&UINT32_C(0xFFFFFF00));
+}

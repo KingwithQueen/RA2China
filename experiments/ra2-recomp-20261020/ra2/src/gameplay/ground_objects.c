@@ -66,6 +66,11 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_contact(Ra2ObjectPassageState 
         if(!s->query(c,RA2_OBJECT_ALLIED)) state->crush_enemy=1;
         return RA2_OBJECT_SCANNED;
     }
+    return ra2_ground_classify_enemy_weapon(state,s);
+}
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_weapon(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
+{
+    void *c=s->context;
     if(!s->query(c,RA2_OBJECT_HAS_WEAPON_ZERO) && !s->query(c,RA2_OBJECT_OWNER_IS_TRAIN))
         return RA2_OBJECT_BLOCKED;
     return ra2_ground_classify_enemy_kind(state,s);

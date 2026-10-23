@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "attempts": [
+    {
+      "tag": "a-template-ur3",
+      "simulation_frames": 0,
+      "game_launched": false,
+      "private_scenario_created": false,
+      "reason": "Path admission guard refused before scenario creation; exact same path now resolves within the existing runs directory. No comparator or guard changes.",
+      "log": "evidence/movement-state-v34/investigations/prelaunch-path-guard/a-template-ur3.log",
+      "sha256": "d9ac5038d1c65a3111c710ca35ca0fe879c23a763d4f0d149eafff74f9a92072"
+    }
+  ]
+}

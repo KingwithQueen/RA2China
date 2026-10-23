@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "scenes": 6,
+  "frames": 5406,
+  "aliases": 28,
+  "records": [
+    {
+      "tag": "ao-0",
+      "frames": 901,
+      "configured_aliases": [
+        "004A12F1",
+        "004A134F",
+        "004A161D",
+        "004A166A",
+        "004A17A2"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A12F1": 0,
+        "004A134F": 0,
+        "004A161D": 0,
+        "004A166A": 0,
+        "004A17A2": 0,
+        "004A2670": 5,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "ao-1",
+      "frames": 901,
+      "configured_aliases": [
+        "004A199D",
+        "004A1ACD",
+        "004A1F8D",
+        "004A1FA1",
+        "004A1FDC"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A199D": 0,
+        "004A1ACD": 0,
+        "004A1F8D": 0,
+        "004A1FA1": 0,
+        "004A1FDC": 0,
+        "004A2670": 5,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "ao-2",
+      "frames": 901,
+      "configured_aliases": [
+        "004A2112",
+        "004A230E",
+        "004A2311",
+        "004A32B4",
+        "004A3C92"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2112": 0,
+        "004A230E": 0,
+        "004A2311": 0,
+        "004A2670": 5,
+        "004A32B4": 0,
+        "004A3C92": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "ao-3",
+      "frames": 901,
+      "configured_aliases": [
+        "004A3C9B",
+        "004A3DBA",
+        "004A3E35",
+        "004A3FE3",
+        "004A4174"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A3C9B": 0,
+        "004A3DBA": 0,
+        "004A3E35": 0,
+        "004A3FE3": 0,
+        "004A4174": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "ao-4",
+      "frames": 901,
+      "configured_aliases": [
+        "004A44D1",
+        "004A4522",
+        "004A458C",
+        "004A45B7",
+        "004A45D0"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A44D1": 0,
+        "004A4522": 0,
+        "004A458C": 0,
+        "004A45B7": 0,
+        "004A45D0": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "ao-5",
+      "frames": 901,
+      "configured_aliases": [
+        "0070346B",
+        "0070372C",
+        "007038EF"
+      ],
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "00703040": 5,
+        "0070346B": 0,
+        "0070372C": 0,
+        "007038EF": 0
+      }
+    }
+  ],
+  "natural_entry_candidates": [],
+  "nonprimary_natural_entry_proved": false,
+  "production_observer_state_identity": true,
+  "limits": "All28 configured candidates across six alternating north/south occupied-exit scenes; not every candidate in every scene. Primary positive controls are present. Fixed-frame first-call observation is not an exclusion of arbitrary computed targets or unrun routes.",
+  "inputs": [
+    {
+      "path": "audit_occupied_alias_v34.py",
+      "sha256": "72dc85fe77e5999f0bb59495af8b7b15f6525d6eb148e9e940a145dd23047ff9"
+    },
+    {
+      "path": "run_occupied_alias_probe_v34.py",
+      "sha256": "5bc11a74892904e9366d59f649d8caf621f009fc3a713934ad0832b72ff8e8d0"
+    },
+    {
+      "path": "run_occupied_alias_scenes_v34.py",
+      "sha256": "69d95d2f72736d3ba4d6da6e678b21a9480bc21527ad86a9c4fc100a03c3bb02"
+    },
+    {
+      "path": "evidence/movement-state-v34/internal-alias-sources.json",
+      "sha256": "3c0f7a0bfe804301e16de5424bebc8a4a3e5cb86ceb51a99a3fef16843c9fb6b"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-0/comparison.json",
+      "sha256": "bbee7546599208a087d914d54ac71335f4b391da287ec1df66d25df74ec0b330"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-0/generated-c/command.json",
+      "sha256": "0b4fd36851db0cc81a295ff98ce91edfd0aa57b5005907ef92d1a6727087ea16"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-0/generated-c/run.log",
+      "sha256": "adb814517f96075ca03b2b67a9b5cd367b17fc50b8c1e39e7b92c29641041b8e"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-1/comparison.json",
+      "sha256": "bff9b98ff71a8be1885c168d3ea27fb46d430c86a1875b00e4918fd6838eb9d5"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-1/generated-c/command.json",
+      "sha256": "6b96cf687df48fb72c0e5258d1c43a93db1d34a0af25e64e3bd130a600a2cc2c"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-1/generated-c/run.log",
+      "sha256": "587f47187f3582155794dafa41de40e7039b96366781c827a15fc4091058a29f"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-2/comparison.json",
+      "sha256": "bbee7546599208a087d914d54ac71335f4b391da287ec1df66d25df74ec0b330"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-2/generated-c/command.json",
+      "sha256": "69de3f97e5796acd5d30fdf57578c890781ccc0a70ae5c0b95970b68ba9fde56"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-2/generated-c/run.log",
+      "sha256": "e5e994da8600a53034c85b8fe30c51e01c21d3cd204f4fc20de360be15180697"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-3/comparison.json",
+      "sha256": "bff9b98ff71a8be1885c168d3ea27fb46d430c86a1875b00e4918fd6838eb9d5"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-3/generated-c/command.json",
+      "sha256": "4664238581ed7a80a0003db45b05116116ef9ac1bfc8c3916fc6b3df9a1ae0b7"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-3/generated-c/run.log",
+      "sha256": "ec2ff27e6cc547d19adfc0c4fc4c82a1553e729c80792722173150196f49b394"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-4/comparison.json",
+      "sha256": "bbee7546599208a087d914d54ac71335f4b391da287ec1df66d25df74ec0b330"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-4/generated-c/command.json",
+      "sha256": "7634f1818717cfa87c7fb54eef121fbaf7fb93b8e1d654c4ed897e8c4ebea882"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-4/generated-c/run.log",
+      "sha256": "3d5bea7ede1378cd6b64ce0ae4629e50eaf45849d869e612549b2fccbd5c52a4"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-5/comparison.json",
+      "sha256": "bff9b98ff71a8be1885c168d3ea27fb46d430c86a1875b00e4918fd6838eb9d5"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-5/generated-c/command.json",
+      "sha256": "c3ad634d78bd001dd1546ec3b91f44a547712bcde3e863b4d3eca56a4d431802"
+    },
+    {
+      "path": "evidence/movement-state-v34/runs/ao-5/generated-c/run.log",
+      "sha256": "41876aa349aad78bf8df2c992ae27d0cadb74c12e63392748bd8968f2b72de6d"
+    }
+  ]
+}

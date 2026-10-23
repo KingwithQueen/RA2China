@@ -1,3 +1,4 @@
+extern void ra2_ground_prepare_owner_stop_return_bridge(void);
 extern void ra2_ground_prepare_following_return_bridge(unsigned entry);
 extern void ra2_ground_prepare_stop_return_bridge(unsigned entry);
 extern unsigned ra2_ground_template_destination_bridge(unsigned alternate);
@@ -37446,6 +37447,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -42787,6 +42793,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -47832,6 +47843,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -52326,6 +52342,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -56529,6 +56550,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -59792,6 +59818,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -62348,6 +62379,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -64562,6 +64598,11 @@ L_004A2311:
     goto L_004A237D;
     edx = MEM32(ebp + 0x5C); /* 0x004A2311: mov edx, dword ptr [ebp + 0x5c] */
 L_004A2314:
+    /* 从原寄存器读取样本下标，不重读drive缓存。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned sample_resume_v34=ra2_ground_internal_handoff_bridge(3);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(sample_resume_v34==0x4A263A)goto L_004A263A;
+    goto L_004A237D;
     if (4u) _cf = (((eax) >> 28) & 1u); /* 0x004A2314: shl eax, 4 */
     if (4u) { _flag_a = recomp_flags_pack((eax << 4u), _cf, 0, 0); _flag_b = 0; _flag_k = FK_EFLAGS; }
     eax = eax << 4u; /* 0x004A2314: shl eax, 4 */
@@ -73052,6 +73093,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -76694,6 +76738,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -80542,6 +80589,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -82151,6 +82201,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -83626,6 +83679,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -85043,6 +85099,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */
@@ -86167,6 +86226,9 @@ L_004A448E:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A44B3; /* 0x004A4499: jne 0x4a44b3 */
 L_004A449B:
+    /* 服务对象来自ECX；保留回调写回、EAX高位与返回帧。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_owner_stop_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     edx = MEM32(ecx); /* 0x004A449B: mov edx, dword ptr [ecx] */
     PUSH32(esp, 1); /* 0x004A449D: push 1 */
     PUSH32(esp, 0); /* 0x004A449F: push 0 */

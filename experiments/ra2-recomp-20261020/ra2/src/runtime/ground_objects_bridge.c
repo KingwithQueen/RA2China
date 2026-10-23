@@ -105,6 +105,7 @@ uint32_t ra2_ground_object_branch_bridge(unsigned entry)
     else if(entry==4) outcome=ra2_ground_filter_object_kind(&services);
     else if(entry==5) outcome=ra2_ground_filter_building_flags(&services);
     else if(entry==1) outcome=ra2_ground_filter_building((int32_t)MEM32(c.frame+0x80),&services);
+    else if(entry==8) outcome=ra2_ground_classify_enemy_weapon(&state,&services);
     else if(entry==7) outcome=ra2_ground_classify_enemy_contact(&state,&services);
     else if(entry==6) outcome=ra2_ground_classify_enemy_kind(&state,&services);
     else if(entry==2) outcome=ra2_ground_classify_enemy(&state,&services);

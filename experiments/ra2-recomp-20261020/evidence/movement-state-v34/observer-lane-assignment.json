@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "delegated_jobs": ["tall-scenes"],
+  "owner": "continue_freed_lane_v34.py",
+  "prerequisite": "core-scenes-complete.json",
+  "maximum_simulation_lanes": 2,
+  "maximum_game_processes": 4
+}

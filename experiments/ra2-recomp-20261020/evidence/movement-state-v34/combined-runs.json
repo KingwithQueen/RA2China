@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "x-ub",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "k-ub",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "x-db",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "k-db",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "x-mu",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "k-mu",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "x-md",
+      "passed": true,
+      "frames": 601
+    },
+    {
+      "tag": "k-md",
+      "passed": true,
+      "frames": 601
+    }
+  ]
+}

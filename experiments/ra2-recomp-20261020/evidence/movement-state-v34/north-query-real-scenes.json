@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "production_scenes": 1,
+  "production_frames": 901,
+  "independent_frames": 901,
+  "production_executable_sha256": "7d0e3eb5e601f84218ff5c1a75baadb7c372b4a5224b6c593b9e233a16b1ceca",
+  "observer_executable_sha256": "4cbdbbf46c2626765bbc6fd53d7c8b631cb2bb055a37262d941107e521529c6a",
+  "scenes": {
+    "nsub": {
+      "passed": true,
+      "frames": 901,
+      "query_after_frame": 5,
+      "modes": {
+        "original": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "samples": [
+            {
+              "frame": 108,
+              "stage": 25,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15482,
+                17211,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15487,
+                17221,
+                416
+              ]
+            },
+            {
+              "frame": 108,
+              "stage": 26,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15482,
+                17211,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15487,
+                17221,
+                416
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true
+            }
+          }
+        },
+        "generated-c": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "samples": [
+            {
+              "frame": 108,
+              "stage": 25,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15482,
+                17211,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15487,
+                17221,
+                416
+              ]
+            },
+            {
+              "frame": 108,
+              "stage": 26,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15482,
+                17211,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15487,
+                17221,
+                416
+              ]
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "north_meeting_dynamic_relation_query_verified": true,
+  "opposite_motion_on_same_frame_verified": true,
+  "initial_scan_not_counted": true,
+  "raw_state_writes": false,
+  "scope": "Player-owned E2 and vehicle receive ordinary opposing moves from ordinary map placement and headings. Count only pair queries after initial orders while vehicle Y increases and infantry Y decreases in the same recorded frame, both at deck416 and within four cells. Full schema12 states, RNG, commands and ordered events match original/C and production/observer. Arrival and query coverage are separate.",
+  "inputs": [
+    {
+      "path": "audit_north_query_v34.py",
+      "sha256": "40fe494380ce07e80a41d5663983bac90de251fee95f0df1957c8088e1ced893"
+    },
+    {
+      "path": "evidence/movement-state-v34/north-query-fixtures.json",
+      "sha256": "f47d7341f664b1c00829da1e56546bfd37272b4fc60a5f25748537d0f68694b4"
+    },
+    {
+      "path": "make_bridge_north_query_v34.py",
+      "sha256": "82cf53c1f5242f685f3cb061ab89d9a39211a0628d1b834aed631f6a195bc22f"
+    },
+    {
+      "path": "trial_north_query_v34.py",
+      "sha256": "6d7594b8b97378bf5f7c9183bfac1378a48d2749bad6f10fbbf1a86d41613a2a"
+    },
+    {
+      "path": "run_north_query_v34.py",
+      "sha256": "04ccf9155447355e1dc1c4cc2b00881a218b07ed25fe1b5d40fa0dd69fe1b58c"
+    }
+  ]
+}

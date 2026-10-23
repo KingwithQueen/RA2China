@@ -68265,6 +68265,11 @@ L_007039DF:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x007039E7: jmp 0x7038ef */
 L_007039EC:
+    /* 武器查询之后按原顺序读取列车属性，再分类具体对象。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned weapon_resume_v34=ra2_ground_object_branch_bridge(8);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v34==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x007039EC: mov eax, dword ptr [ebp] */
     PUSH32(esp, 0); /* 0x007039EF: push 0 */
     ecx = ebp; /* 0x007039F1: mov ecx, ebp */
@@ -69473,6 +69478,11 @@ L_007039DF:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x007039E7: jmp 0x7038ef */
 L_007039EC:
+    /* 武器查询之后按原顺序读取列车属性，再分类具体对象。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned weapon_resume_v34=ra2_ground_object_branch_bridge(8);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v34==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x007039EC: mov eax, dword ptr [ebp] */
     PUSH32(esp, 0); /* 0x007039EF: push 0 */
     ecx = ebp; /* 0x007039F1: mov ecx, ebp */
@@ -70184,6 +70194,11 @@ L_007039DF:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x007039E7: jmp 0x7038ef */
 L_007039EC:
+    /* 武器查询之后按原顺序读取列车属性，再分类具体对象。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned weapon_resume_v34=ra2_ground_object_branch_bridge(8);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v34==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(ebp); /* 0x007039EC: mov eax, dword ptr [ebp] */
     PUSH32(esp, 0); /* 0x007039EF: push 0 */
     ecx = ebp; /* 0x007039F1: mov ecx, ebp */

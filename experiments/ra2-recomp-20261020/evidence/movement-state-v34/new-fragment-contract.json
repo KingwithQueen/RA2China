@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "register_sample_copies": 8,
+  "enemy_weapon_copies": 3,
+  "owner_stop_copies": 7,
+  "new_native_entries": 0,
+  "prior_four_destination_copies_preserved": true,
+  "old_labels_instructions_tails_guards_preserved": true,
+  "natural_nonprimary_entry_proved": false,
+  "inputs": [
+    {
+      "path": "audit_fragment_contract_v34.py",
+      "sha256": "4dcd1b3e028cbf1e08e13bd5d6df107d0b248ff7defcfdae2166a8f2f65a9c14"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "53a4cc1371131db6969461d56bbfaef8a1ffc19c79e8286829215d69dc3bc8ee"
+    },
+    {
+      "path": "evidence/movement-state-v34/baseline/ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "c1ad7b741fe0416c652002fbae447358f2f2b25326ab623adb1203cdd8ea44b2"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "d8deebcc058411bff9666c9dc2fb0a04eb33c103890b0bb256c95b8ca9b94e2c"
+    },
+    {
+      "path": "evidence/movement-state-v34/baseline/ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "43f33bfbc4f204fd5a92d9b196b179373ef54c01b952f524457830223ee717a8"
+    }
+  ]
+}

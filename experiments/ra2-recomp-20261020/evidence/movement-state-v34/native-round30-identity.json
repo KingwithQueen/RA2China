@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "total_cases": 196608,
+  "results": {
+    "template-index-probe": {
+      "passed": true,
+      "phase": 8,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    },
+    "enemy-kind-probe": {
+      "passed": true,
+      "phase": 6,
+      "object_cases": 65536,
+      "outcomes": [
+        0,
+        0,
+        22656,
+        0,
+        0,
+        0,
+        42880
+      ],
+      "calls_live_state_verified": true
+    },
+    "service-exits-probe": {
+      "passed": true,
+      "phase": 9,
+      "cases": 65536,
+      "ordered_callback_values": 436906,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    }
+  },
+  "ordered_service_arguments_and_writes_verified": true,
+  "callback_mutated_saved_frame_verified": true,
+  "mutable_owner_verified": true,
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executables": [
+    {
+      "path": "evidence/movement-state-v34/overlap_probe.exe",
+      "sha256": "fb49ea64fd2b2e1db1327e0acc5e9d193ad1b5f2f6d58eacae1a7912e77f34f6"
+    },
+    {
+      "path": "evidence/movement-state-v34/objects_probe.exe",
+      "sha256": "183595acbd43a233d2deb535007bd2a1b9cef8f29aab1c78be68b1303d67224f"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "record_round30_receipt_v34.py",
+      "sha256": "a1a2407d3af56a794a5848ca29a641bda76c9da553fc815094004a1cc5effb33"
+    },
+    {
+      "path": "integrate_template_v34.py",
+      "sha256": "17b6073d9dbfae945b28b0cf13a5ecde7d4302cd4e04a1a10c53f245329f70ce"
+    },
+    {
+      "path": "integrate_objects_v34.py",
+      "sha256": "d707222ea575e689363e7b25066561dacfb0e092368e345276916c0f686ad7ab"
+    },
+    {
+      "path": "integrate_returns_v34.py",
+      "sha256": "6269f2d408f4adfc93a52cfe3d686778b392c468a3d74a190d06c632c8310746"
+    },
+    {
+      "path": "extend_probes_v34.py",
+      "sha256": "6bafa87837b3cedfd210dffb0c0541a79b63bb6a5de5858bd4a2bb3e473b2f34"
+    },
+    {
+      "path": "build-overlap-probe-v34.ps1",
+      "sha256": "6457b16187e3eee403d6b5a2f1832f26bf7a4dae500c5a00ad9ac02a30f7412c"
+    },
+    {
+      "path": "build-objects-probe-v34.ps1",
+      "sha256": "c836b90eb81868b46f27b2190e87ccd976cdfc2dc6d95c6f4e10f668679789f8"
+    },
+    {
+      "path": "evidence/movement-state-v34/overlap_probe.c",
+      "sha256": "3403ae508b6997ce89b46aab9cf33f075874d43e6259dcda88e79ee735d0cee7"
+    },
+    {
+      "path": "evidence/movement-state-v34/objects_probe.c",
+      "sha256": "95d5de3ad010d97e941128e2048c541e88e7a8b719decdcb25842f679631ba01"
+    },
+    {
+      "path": "evidence/movement-state-v34/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "evidence/movement-state-v34/remaining_return_cases.h",
+      "sha256": "bea92f01beba37ee5340d5ea98c34a27750eff3b6f6eec88bf1ea4ad1d037d07"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.c",
+      "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.h",
+      "sha256": "6394efba5d2f05ab5ce4ca00850cbc5f4555a9f6aaf6d95d98079d7859b81c64"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "9ddd064329ddbbae040d14dc707ebc087493763b1232867bb74f383f016cf1d9"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.h",
+      "sha256": "d47b5d5f5072dc5f69a80b1e6166211c6ee61113323109ad6d99a909496944c5"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_enemy_kind.h",
+      "sha256": "1aacbb59e50df73346a28e59520eacc2efe1f7a8f71ba650768836a662914596"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.h",
+      "sha256": "e47a3ba48ed5b00c0b2b992a045811167cc96b4ee00ac385db693b097196321a"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "70afb1a62c3bcb6794214df3d452cc90e4e3bba9a077d44a84a2d9ecc82b5829"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.h",
+      "sha256": "b997a4f2fab454127c7852a44719cca5fc238d7c13a9bdff809549d00c61f2aa"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "476b5082642a23a39bad4741a193b2a03ef2c0d6dc4eb4bbad7ebe742f0c7984"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.h",
+      "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+    }
+  ]
+}
