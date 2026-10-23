@@ -5,6 +5,7 @@
 #include "recomp_types.h"
 #include "state_trace.h"
 #include "ground_allied.h"
+#include "ground_moving_tail.h"
 #include "ground_allied_bridge.h"
 #include "x87_arithmetic.h"
 
@@ -142,4 +143,16 @@ uint32_t ra2_ground_allied_bridge(void)
         case RA2_ALLIED_CHECK_STATIONARY: return 0x70394F;
         default: return 0x7038EF;
     }
+}
+
+uint32_t ra2_ground_moving_tail_bridge(void)
+{
+    uint32_t frame=g_esp,object=g_esi;
+    AlliedContext c={frame,MEM32(frame+0x14),MEM32(frame+0x7C),MEM32(frame+0x20)};
+    Ra2AlliedServices services={&c,query,heading,opposite,relative,distance,remember};
+    g_esp=frame-0x100;
+    /* The locomotor callback can update the caller's passage slot. */
+    ra2_ground_classify_moving_tail((int32_t *)(uintptr_t)ADDR(frame+0x8C),&services);
+    g_esp=frame;g_ebp=MEM32(frame+0x14);g_esi=object;g_edi=c.object;
+    return 0x7038EF;
 }

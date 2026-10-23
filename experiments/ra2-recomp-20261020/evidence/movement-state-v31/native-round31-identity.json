@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "total_cases": 196608,
+  "results": {
+    "sample-anchor-probe": {
+      "passed": true,
+      "phase": 10,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    },
+    "moving-tail-probe": {
+      "passed": true,
+      "allied_cases": 65536,
+      "moving_tail_cases": 65536,
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        65536
+      ],
+      "native_math_services": true,
+      "calls_live_state_control_verified": true
+    },
+    "advance-service-probe": {
+      "passed": true,
+      "phase": 11,
+      "cases": 65536,
+      "ordered_callback_values": 294912,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 16384,
+      "secondary_service_cases": 49152,
+      "alive_continuations": 12288
+    }
+  },
+  "anchor_aliasing_order_verified": true,
+  "callback_updated_passage_verified": true,
+  "callback_updated_owner_and_saved_registers_verified": true,
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executables": [
+    {
+      "path": "evidence/movement-state-v31/overlap_probe.exe",
+      "sha256": "4b30cacf30087bb97275217e0b702ea96d84abdbb8b09a198b57dc6255b76771"
+    },
+    {
+      "path": "evidence/movement-state-v31/allied_probe.exe",
+      "sha256": "d8a67b291078dbfd2db9214a40779046be5ff603d7493a5eef926ca18c4721bd"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "record_round31_receipt_v31.py",
+      "sha256": "b31123bc4c97d6f6e907f28e883cd736bf4812a5bfe6881f17ed43a29957fea2"
+    },
+    {
+      "path": "integrate_template_v31.py",
+      "sha256": "f15327c4f7fe683fb7dfc549b7ec92eace46197d932254a2c032788295371a51"
+    },
+    {
+      "path": "integrate_objects_v31.py",
+      "sha256": "d11e3828b3f7b86fb64df81bbacecf8d62629d93ccdeb9dabc04772b51741403"
+    },
+    {
+      "path": "integrate_returns_v31.py",
+      "sha256": "6fa06fdf1f815d835794a6d0f6de06c02be8394447477de4d6504fdf1aee9312"
+    },
+    {
+      "path": "extend_probes_v31.py",
+      "sha256": "cf33072ca1ddbcc3f6d95a562dce73a3b0c60416836fdad8f6c939033b105756"
+    },
+    {
+      "path": "extend_allied_probe_v31.py",
+      "sha256": "284a7200ceaeb717b2b8b9c23e83b6d3fb390498854d00c2e0a615bc5c25d1b7"
+    },
+    {
+      "path": "build-overlap-probe-v31.ps1",
+      "sha256": "44985f5564874469c1d890e2c4c4cec4ae8fb144fe26d615a3abec404e6b77dc"
+    },
+    {
+      "path": "build-allied-probe-v31.ps1",
+      "sha256": "8a9e53cb31549891c4422ea313f6e642ce1f37b76d44dd02b57c38f9d34398f0"
+    },
+    {
+      "path": "evidence/movement-state-v31/overlap_probe.c",
+      "sha256": "45b0152dd695b935d6f7d173c31f611634dd5fc2e98ab29ff1014ba8c88196cc"
+    },
+    {
+      "path": "evidence/movement-state-v31/allied_probe.c",
+      "sha256": "8c308c4291163e792232611d96adc1a1f61f504b0554e97093f7e5a21b6c49eb"
+    },
+    {
+      "path": "evidence/movement-state-v31/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "evidence/movement-state-v31/remaining_return_cases.h",
+      "sha256": "bea92f01beba37ee5340d5ea98c34a27750eff3b6f6eec88bf1ea4ad1d037d07"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "68e78edc00bfb7f0698d7ef43b2cdfa5f544cbca4c9e1e65adde76db11ab316f"
+    },
+    {
+      "path": "ra2/src/runtime/ground_allied_bridge.c",
+      "sha256": "fec4d8b6603bc5915087f42137cb3775a49895982e1515992d1dd1bbfc339821"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_allied.c",
+      "sha256": "b0638f5305ec003102be4cf96b8842af5f1cc2f3b386e670d800bd9fa118f652"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_moving_tail.h",
+      "sha256": "2e1deed04e21ee37ce8fcd09814113a1468154329293ad87652aebe1809ba48e"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "c8b81f8f05209edbb9e757875081aa831fdeb8e716ad8766fc678eead4ea335a"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "a163e85aa1c5dea9d87e660ae918daedac3e74edc8d5f9016f540a640c90cebf"
+    }
+  ]
+}

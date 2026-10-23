@@ -117,3 +117,35 @@ void ra2_ground_prepare_service_return_bridge(unsigned entry)
     }
     ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result);
 }
+
+uint32_t ra2_ground_advance_service_return_bridge(unsigned entry)
+{
+    uint32_t frame=g_esp,drive=g_ebp,result;
+    if(!entry)
+    {
+        uint32_t unit=MEM32(drive+0xC),args[]={0,1};
+        result=method(unit,0x414,args,2);
+        if(result&255u)
+        {
+            ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,(result&UINT32_C(0xFFFFFF00))|1u);
+            return 0;
+        }
+    }
+    uint32_t unit=MEM32(drive+0xC);
+    g_edx=MEM32(unit);
+    result=method(unit,0x490,NULL,0);
+    if(result&255u)
+    {
+        ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,(result&UINT32_C(0xFFFFFF00))|1u);
+        return 0;
+    }
+    unit=MEM32(drive+0xC);unsigned alive=MEM8(unit+0x7D);
+    g_eax=unit;g_ecx=(g_ecx&UINT32_C(0xFFFFFF00))|alive;
+    if(alive)
+    {
+        g_flag_k=FK_NARROW(FK_TEST,24);g_flag_a=alive<<24;g_flag_b=alive<<24;g_flag_cf=0;
+        return 0x4A1FA1;
+    }
+    ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,unit&UINT32_C(0xFFFFFF00));
+    return 0;
+}

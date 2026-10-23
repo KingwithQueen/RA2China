@@ -1,4 +1,5 @@
 #include "ground_allied.h"
+#include "ground_moving_tail.h"
 
 Ra2AlliedOutcome ra2_ground_classify_allied_motion(int32_t *passage,
     const Ra2AlliedServices *s)
@@ -35,6 +36,12 @@ Ra2AlliedOutcome ra2_ground_classify_allied_motion(int32_t *passage,
         && relative_heading == owner_heading)
         return RA2_ALLIED_BLOCKED;
 
+    return ra2_ground_classify_moving_tail(passage,s);
+}
+
+Ra2AlliedOutcome ra2_ground_classify_moving_tail(int32_t *passage,const Ra2AlliedServices *s)
+{
+    void *c=s->context;
     /* 5A0 含义尚未完全确认。15 号对象仍须查询移动器，不能合并分支。 */
     int moving_passage = s->query(c, RA2_ALLIED_OBJECT_FLAG_5A0)
         && s->query(c, RA2_ALLIED_OBJECT_KIND) != 15;

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "scope": "Native original fragments 4A15F0/4A230E/4A3216/4A39C8/4A39CA versus production bridges. Continuations are intercepted and original fragment stack balance is checked; prior finish/exit services retain separate native regression gates.",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "probe_executable": {
+    "path": "evidence/movement-state-v31/internal_probe.exe",
+    "sha256": "792e6a07590023e9fc13a9bcc34501294ea31dbe5ef21af2086f6964e08c1c78"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v31/internal_probe.c",
+      "sha256": "0d758462f9e51b8a24370f7f5b500769ecd6938241eb6b62cd51430a986da2fe"
+    },
+    {
+      "path": "evidence/movement-state-v31/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-internal-probe-v31.ps1",
+      "sha256": "76dcc4d88bfc24cca19b86fc5d9a1af97ec42953e8576fbbbe2a400dafc2e503"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.c",
+      "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.h",
+      "sha256": "6394efba5d2f05ab5ce4ca00850cbc5f4555a9f6aaf6d95d98079d7859b81c64"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_internal.c",
+      "sha256": "eba42a6ab83103a8000b745741d93fe80c1fabef12f67771b11380d5eee55668"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_internal.h",
+      "sha256": "955f398187502683eeabe32ad48b49dc5ea2de059ac85b9eace01ae9d8bdd9de"
+    },
+    {
+      "path": "ra2/src/runtime/ground_internal_bridge.c",
+      "sha256": "703422ed25a0c7db0e058612843926492e8e55b50b8e71a87130782a02a6b801"
+    },
+    {
+      "path": "ra2/src/runtime/ground_internal_bridge.h",
+      "sha256": "bd1aa996e5117566678d61f596a2888ff35f62d746888dd0dfc2935809bc9935"
+    }
+  ],
+  "results": {
+    "advance-shared-sampling-probe": {
+      "passed": true,
+      "cases": 65536,
+      "phase": 0,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true
+    },
+    "prepare-internal-probe": {
+      "passed": true,
+      "cases": 65536,
+      "phase": 1,
+      "ordered_callback_values": 131073,
+      "original_stack_cleanup_verified": true
+    }
+  },
+  "total_cases": 131072,
+  "signed_coordinate_boundaries_tested": true,
+  "callback_owner_replacement_tested": true,
+  "full_return_value_verified": true,
+  "interpolation_input_registers_verified": true
+}

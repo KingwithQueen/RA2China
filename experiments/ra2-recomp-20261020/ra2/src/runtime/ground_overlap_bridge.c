@@ -206,3 +206,19 @@ uint32_t ra2_ground_template_index_bridge(void)
     g_flag_k=FK_NARROW(FK_TEST,24);g_flag_a=alternate<<24;g_flag_b=alternate<<24;g_flag_cf=0;
     return 0x4A2311;
 }
+
+uint32_t ra2_ground_sample_anchor_bridge(void)
+{
+    uint32_t position=MEM32(g_ebp+0xC)+0x88u;
+    /* Keep each load adjacent to its store: the sample can alias the saved anchor. */
+    MEM32(g_esp+0x80)=MEM32(position);
+    MEM32(g_esp+0x84)=MEM32(position+4);
+    MEM32(g_esp+0x88)=MEM32(position+8);
+    g_ecx=MEM32(g_ecx+8);
+    MEM32(g_esp+0x34)=g_ecx;
+    g_eax=position;
+    g_esi=MEM32(position);g_ebx=MEM32(position+4);g_edx=MEM32(position+8);
+    g_flag_k=FK_ADD;g_flag_a=position-0x88u;g_flag_b=0x88u;
+    g_flag_cf=position<position-0x88u;
+    return 0x4A237D;
+}

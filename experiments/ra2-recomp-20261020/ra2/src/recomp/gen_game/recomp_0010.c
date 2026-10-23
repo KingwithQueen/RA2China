@@ -1,3 +1,5 @@
+extern unsigned ra2_ground_advance_service_return_bridge(unsigned entry);
+extern unsigned ra2_ground_sample_anchor_bridge(void);
 extern void ra2_ground_prepare_service_return_bridge(unsigned entry);
 extern unsigned ra2_ground_template_index_bridge(void);
 extern void ra2_ground_prepare_written_return_bridge(unsigned entry);
@@ -37299,6 +37301,9 @@ L_004A2297:
 L_004A229A:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
 L_004A229F:
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
@@ -37334,6 +37339,9 @@ L_004A22B5:
 L_004A22BB:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
 L_004A22C1:
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
@@ -37474,6 +37482,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -42625,6 +42636,9 @@ L_004A2297:
 L_004A229A:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
 L_004A229F:
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
@@ -42660,6 +42674,9 @@ L_004A22B5:
 L_004A22BB:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
 L_004A22C1:
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
@@ -42800,6 +42817,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -47655,6 +47675,9 @@ L_004A2297:
 L_004A229A:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
 L_004A229F:
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
@@ -47690,6 +47713,9 @@ L_004A22B5:
 L_004A22BB:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
 L_004A22C1:
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
@@ -47830,6 +47856,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -52134,6 +52163,9 @@ L_004A2297:
 L_004A229A:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
 L_004A229F:
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
@@ -52169,6 +52201,9 @@ L_004A22B5:
 L_004A22BB:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
 L_004A22C1:
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
@@ -52309,6 +52344,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -56346,6 +56384,9 @@ L_004A2297:
 L_004A229A:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
 L_004A229F:
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
@@ -56381,6 +56422,9 @@ L_004A22B5:
 L_004A22BB:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
 L_004A22C1:
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
@@ -56497,6 +56541,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -59751,6 +59798,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -62298,6 +62348,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -64503,6 +64556,9 @@ L_004A233F:
 L_004A2341:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_NE, _cf)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
 L_004A234A:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
@@ -65745,6 +65801,9 @@ L_004A233F:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
@@ -66195,6 +66254,9 @@ L_004A233F:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
@@ -66961,6 +67023,9 @@ L_004A227A:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
     PUSH32(esp, 0); /* 0x004A22A1: push 0 */
@@ -66984,6 +67049,9 @@ L_004A22AF:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x490)); /* 0x004A22C3: call dword ptr [edx + 0x490] */
@@ -67258,6 +67326,9 @@ L_004A227A:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A22BE; /* 0x004A229A: jne 0x4a22be */
 L_004A229C:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_0=ra2_ground_advance_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_0)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A229C: mov ecx, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A229F: push 1 */
     PUSH32(esp, 0); /* 0x004A22A1: push 0 */
@@ -67281,6 +67352,9 @@ L_004A22AF:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A22BB: ret 4 */
 L_004A22BE:
+    /* Readable C: service return or original alive-owner remainder continuation. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned advance_exit_v31_1=ra2_ground_advance_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); if(advance_exit_v31_1)goto L_004A1FA1; return;
     ecx = MEM32(ebp + 0xC); /* 0x004A22BE: mov ecx, dword ptr [ebp + 0xc] */
     edx = MEM32(ecx); /* 0x004A22C1: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x490)); /* 0x004A22C3: call dword ptr [edx + 0x490] */
@@ -67376,6 +67450,9 @@ L_004A233F:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
@@ -67779,6 +67856,9 @@ L_004A233F:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A2341: jne 0x4a263a */
 L_004A2347:
+    /* Readable C: owner anchor and sample direction, retaining ordered aliasing. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_sample_anchor_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A237D;
     eax = MEM32(ebp + 0xC); /* 0x004A2347: mov eax, dword ptr [ebp + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0x88u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);

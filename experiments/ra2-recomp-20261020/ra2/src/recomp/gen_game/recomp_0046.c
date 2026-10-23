@@ -1,3 +1,4 @@
+extern unsigned ra2_ground_moving_tail_bridge(void);
 #include "ground_overlap_bridge.h"
 #include "ground_joint_bridge.h"
 #include "ground_travel_bridge.h"
@@ -68045,6 +68046,9 @@ L_00703880:
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00703B5A; /* 0x0070388F: je 0x703b5a */
 L_00703895:
+    /* Readable C: remembered moving-object kind and locomotor passage. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_moving_tail_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_007038EF;
     edi = MEM32(esp + 0x20); /* 0x00703895: mov edi, dword ptr [esp + 0x20] */
     SET_LO8(eax, MEM8(edi + 0x5A0)); /* 0x00703899: mov al, byte ptr [edi + 0x5a0] */
     /* test LO8(eax), LO8(eax) */ /* 0x0070389F: test al, al */
@@ -69238,6 +69242,9 @@ L_00703880:
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00703B5A; /* 0x0070388F: je 0x703b5a */
 L_00703895:
+    /* Readable C: remembered moving-object kind and locomotor passage. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_moving_tail_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_007038EF;
     edi = MEM32(esp + 0x20); /* 0x00703895: mov edi, dword ptr [esp + 0x20] */
     SET_LO8(eax, MEM8(edi + 0x5A0)); /* 0x00703899: mov al, byte ptr [edi + 0x5a0] */
     /* test LO8(eax), LO8(eax) */ /* 0x0070389F: test al, al */
@@ -69936,6 +69943,9 @@ L_00703880:
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00703B5A; /* 0x0070388F: je 0x703b5a */
 L_00703895:
+    /* Readable C: remembered moving-object kind and locomotor passage. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_moving_tail_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_007038EF;
     edi = MEM32(esp + 0x20); /* 0x00703895: mov edi, dword ptr [esp + 0x20] */
     SET_LO8(eax, MEM8(edi + 0x5A0)); /* 0x00703899: mov al, byte ptr [edi + 0x5a0] */
     /* test LO8(eax), LO8(eax) */ /* 0x0070389F: test al, al */

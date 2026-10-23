@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "accepted_production_scenes": 0,
+  "records": [
+    {
+      "tag": "inv-enemy-ai-north",
+      "frames": 301,
+      "setup_investigation_only": true,
+      "native_and_c_equal": true,
+      "enemy_positions": 1,
+      "enemy_moves": false,
+      "enemy_player_order": false
+    },
+    {
+      "tag": "inv-enemy-ai2-north",
+      "frames": 181,
+      "setup_investigation_only": true,
+      "native_and_c_equal": true,
+      "enemy_positions": 1,
+      "enemy_moves": false,
+      "enemy_player_order": false
+    },
+    {
+      "tag": "inv-enemy-ai3-north",
+      "frames": 181,
+      "setup_investigation_only": true,
+      "native_and_c_equal": true,
+      "enemy_positions": 136,
+      "enemy_moves": true,
+      "enemy_player_order": false
+    }
+  ],
+  "conclusion": "The first two setup trials lacked an instantiated Tags entry and produced no enemy motion. The third adds the normal tag instance: the original CreateTeam action recruits the placed enemy truck and script action3 drives it. These short trials are kept separate from the later 901-frame accepted scenes.",
+  "inputs": [
+    {
+      "path": "audit_team_trials_v31.py",
+      "sha256": "536ee2b8fdc51b2b77fb4116e7db278371211282a8bc95c6558ee0caea52f639"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai-north/original/state.jsonl",
+      "sha256": "4162a9c5ac177eb92c296bae7a5d25dee51381a31740b4396ae8e341f5cf1593"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai-north/original/command.json",
+      "sha256": "ad6573fc126478e1bcf0207d2b67f8591b38cb9bc4e0f7f71f53fb26c5465481"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai-north/generated-c/state.jsonl",
+      "sha256": "4162a9c5ac177eb92c296bae7a5d25dee51381a31740b4396ae8e341f5cf1593"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai-north/generated-c/command.json",
+      "sha256": "2a8e2edb11a10194938874e761108930dc1462ba271e8fddee3784eebcc23bfd"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai-north/comparison.json",
+      "sha256": "2c6154a77ba9cc73384de48f4efa28ae0d464e19d2bfb2c6f1b6eb32251bed4c"
+    },
+    {
+      "path": "evidence/movement-state-v31/fixtures/bridge-enemy-traffic-ai-north.MAP",
+      "sha256": "b26bf63916b804ff8096b5ea54d9a0e411d477e7363b974f99de90a257b20a7c"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai2-north/original/state.jsonl",
+      "sha256": "e1e899bb003d2f23922ff0b003dde18833ae578bb331336ed4512a6061a42065"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai2-north/original/command.json",
+      "sha256": "25c40c794988d56dc0bf11fa888144a7e7dca3099f311abd3b674df74a3809b5"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai2-north/generated-c/state.jsonl",
+      "sha256": "e1e899bb003d2f23922ff0b003dde18833ae578bb331336ed4512a6061a42065"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai2-north/generated-c/command.json",
+      "sha256": "b095a7991d4c6c5bcc5a24d6b0ab219a291d68037422e39dfdb99e7fe3a6773c"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai2-north/comparison.json",
+      "sha256": "66ce54ced3eac07704e043c99d4011816dd30fff426f8703e1039f577df66b00"
+    },
+    {
+      "path": "evidence/movement-state-v31/fixtures/bridge-enemy-traffic-ai2-north.MAP",
+      "sha256": "fcaea09f98d0f995f8c36b56b9ef76e1897165367354fea2b804fecab0a89531"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai3-north/original/state.jsonl",
+      "sha256": "7ce237df2c246519154e33dd367a61e0d4aa31e23c965d7e27ba5029826774a9"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai3-north/original/command.json",
+      "sha256": "35e877f901d92a69c87eece0b009ac82e790c0e6479041d2792cc54166cbfad0"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai3-north/generated-c/state.jsonl",
+      "sha256": "7ce237df2c246519154e33dd367a61e0d4aa31e23c965d7e27ba5029826774a9"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai3-north/generated-c/command.json",
+      "sha256": "5cdd01c1d0c5f9d05a0576baedd08919eb4b4e5144ba7d271060a054fa859f12"
+    },
+    {
+      "path": "evidence/movement-state-v31/runs/inv-enemy-ai3-north/comparison.json",
+      "sha256": "146680ceb371a6f89e2a977af050d455a73ff0e7ab5d4ea78a054f4159892368"
+    },
+    {
+      "path": "evidence/movement-state-v31/fixtures/bridge-enemy-traffic-ai3-north.MAP",
+      "sha256": "3b9426ea80b9efb2bb5723f83a0baa54a202587dbe8fdb7586b53a67488b5809"
+    }
+  ]
+}
