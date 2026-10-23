@@ -149,3 +149,29 @@ uint32_t ra2_ground_advance_service_return_bridge(unsigned entry)
     ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,unit&UINT32_C(0xFFFFFF00));
     return 0;
 }
+
+uint32_t ra2_ground_template_destination_bridge(unsigned alternate)
+{
+    uint32_t frame=g_esp,drive=g_ebp,offset=alternate?0x24u:0x74u;
+    uint32_t x=MEM32(frame+offset),y=MEM32(frame+offset+4),z=MEM32(frame+offset+8);
+    MEM32(frame+0x18)=x;MEM32(frame+0x1C)=y;MEM32(frame+0x20)=z;
+    MEM32(frame+0xD0)=x;MEM32(frame+0xD4)=y;MEM32(frame+0xD8)=z;
+    uint32_t pointer=frame+0xD0;
+    uint32_t result=call(0x548000,0x8324E0,&pointer,1);
+    /* The map service may replace the drive's owner. Read it after the call. */
+    g_ecx=MEM32(drive+0xC);MEM32(frame+0x54)=result;
+    g_eax=result;g_edx=g_ecx+0x88u;g_ebx=z;
+    return 0x4A2528;
+}
+
+void ra2_ground_prepare_stop_return_bridge(unsigned entry)
+{
+    uint32_t frame=g_esp,args[]={0,1};
+    g_ebp=MEM32(g_ebp+0xC);
+    uint32_t result=method(g_ebp,entry?0x410u:0x414u,args,2);
+    if(entry)
+        ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result&UINT32_C(0xFFFFFF00));
+    else
+        /* Re-read the output pointer after the callback; saved slots can alias it. */
+        ra2_ground_prepare_written_return_bridge(0);
+}

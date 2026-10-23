@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "static_aliases": 26,
+  "byte_checked_edges": 83,
+  "new_runtime_probe_targets": 17,
+  "prior_runtime_probe_targets": 9,
+  "all_configured_aliases_without_first_call_record": true,
+  "external_jump_candidates": [],
+  "additional_observer_scenes": 4,
+  "additional_observer_frames": 3604,
+  "production_observer_state_identity": true,
+  "records": [
+    {
+      "tag": "al-a",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A199D": 0,
+        "004A1ACD": 0,
+        "004A1F8D": 0,
+        "004A1FA1": 0,
+        "004A2670": 5,
+        "004A3C92": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-b",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A3C9B": 0,
+        "004A3DBA": 0,
+        "004A3E35": 0,
+        "004A3FE3": 0,
+        "004A4174": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-c",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A230E": 0,
+        "004A2311": 0,
+        "004A2670": 5,
+        "004A458C": 0,
+        "004A45B7": 0,
+        "004A45D0": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-d",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A1FDC": 0,
+        "004A2112": 0,
+        "004A2670": 5,
+        "00703040": 5
+      }
+    }
+  ],
+  "nonprimary_natural_entry_proved": false,
+  "limits": "Natural ordinary moves only. All 26 configured aliases lack their first-call record in the examined bridge scenes, with primary703040 positive controls. Fixed-frame termination provides no full-run counters. Arbitrary computed targets, runtime-built pointers and unrun scenes remain unresolved.",
+  "inputs": [
+    {
+      "path": "audit_alias_runtime_v32.py",
+      "sha256": "ab6a112651974a46ac8b3c46d52f33f10f0174ac3c93f6ff6a83b34cbb60d862"
+    },
+    {
+      "path": "run_alias_probe_v32.py",
+      "sha256": "d9d7b5ecd7d1d93cd98c3915db8aa442a9d40fff501d0dac717588b02b074096"
+    },
+    {
+      "path": "run_alias_scenes_v32.py",
+      "sha256": "dd77be3fbd18a4933ec858b41967c41c5821bb955202952d7c6bf3cc9d699906"
+    },
+    {
+      "path": "evidence/movement-state-v32/internal-alias-sources.json",
+      "sha256": "962ca86e1d926c72ef2be5bd950a1407452090ef8d35932d8c3143cec7bd5e31"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-a/comparison.json",
+      "sha256": "8bfb8039f67bc09febb6d4fc0b2b8b5ccb49516fd39281473544510359209a9d"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-a/generated-c/run.log",
+      "sha256": "a171064f376cb6a5d68227c44107f94a9d4bff7ce61050342c9b90d1becdc143"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-a/generated-c/command.json",
+      "sha256": "db739fbde12540ad522c15523bda6b42423b3e96c4d42bb822db635edd78181f"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-b/comparison.json",
+      "sha256": "5181433bb450d53ef9157e4193c47c553f81677df68be53cfcf6c275f6e4fa67"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-b/generated-c/run.log",
+      "sha256": "6848c845af55018f0c342d959f22eb9510cda9ad448bbb043c58d89951f5623f"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-b/generated-c/command.json",
+      "sha256": "563b9ae788b93c8f61dc4cf851984fa0a0c1234a2d85191787ebd2a4855d8fb9"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-c/comparison.json",
+      "sha256": "aa889a9e68002c2afa6b0bfa5020a412302dde7085e829437e0e934c699e21ea"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-c/generated-c/run.log",
+      "sha256": "561c0eab8dbba0fd9eeeebf69d6b9d582b89f10017064e706f004663f26edf83"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-c/generated-c/command.json",
+      "sha256": "4381c14fc8747ef6f9773c8287618ff3514cf4459661f3e9d7d06108e7a8892c"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-d/comparison.json",
+      "sha256": "5d644b41723b2618f66042998677a3acc1f6402b1b3a702b0486ea51de0ca516"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-d/generated-c/run.log",
+      "sha256": "a796c3bf2cc79567b345270918df53ef333ff37d4deb4fb4e67acc9c362aadd4"
+    },
+    {
+      "path": "evidence/movement-state-v32/runs/al-d/generated-c/command.json",
+      "sha256": "65cc2e39979452f9aa585a1efccabfecb5c675fdef8d382c22a463a350ecfc82"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "total_cases": 262144,
+  "results": {
+    "sample-cell-transition-probe": {
+      "passed": true,
+      "phase": 0,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    },
+    "prepare-type-gate-probe": {
+      "passed": true,
+      "phase": 1,
+      "cases": 65536,
+      "ordered_callback_values": 108438,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    },
+    "object-chain-probe": {
+      "passed": true,
+      "phase": 2,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    },
+    "passage-shared-exits-probe": {
+      "passed": true,
+      "phase": 3,
+      "cases": 65536,
+      "ordered_callback_values": 0,
+      "original_stack_cleanup_verified": true,
+      "primary_fallthrough_cases": 0,
+      "secondary_service_cases": 0,
+      "alive_continuations": 0
+    }
+  },
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "scope": "Direct original 4A17FE cell comparison, 4A3502 type-dependent gate with mutable classification/owner callbacks, 703439 and 7038EF object-chain state, five original passage return entries. Complete runtime module coverage is not claimed.",
+  "stack_and_nonvolatile_registers_verified": true,
+  "callback_sequence_and_values_verified": true,
+  "probe_executable": {
+    "path": "evidence/movement-state-v32/overlap_probe.exe",
+    "sha256": "3d455312b635a3b4b63141e5b95a2c892aaa44809a50f7349f2c3dfa2f401030"
+  },
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v32/overlap_probe.c",
+      "sha256": "af3c333f0cbef8a56b5e54b05e639a82e8ec984828e5d6fdc81d029a4d681eda"
+    },
+    {
+      "path": "evidence/movement-state-v32/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "build-overlap-probe-v32.ps1",
+      "sha256": "000ffe4af35c0fe257c24e3cdf928ccd9e58630f340d27d06f8dd4b60e319649"
+    },
+    {
+      "path": "make_overlap_probe_v32.py",
+      "sha256": "e6aa77ef4c71983bb9e588c15b3f86c605f9d8a4e7de8298cfad7c8b73a862af"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_transition.c",
+      "sha256": "c7e0c531ddb1e8504551ef14431f6d7ad9627551a8b7f5309a7a7cedc98e78bf"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_transition.h",
+      "sha256": "5631b1026b8f88a4e549a71278dad827091bee9deabe6eea8cd23e589234b811"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_chain.c",
+      "sha256": "1c2477bfb421ad3cc1dc778cf6d4f46f31591f41e7eff92e7464f769ba663c76"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_chain.h",
+      "sha256": "8e7447dfe7ea8760685e445b7a21baf88eb98ee42783039d2b2bc827f33a8ffe"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.c",
+      "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.h",
+      "sha256": "8347d8c313a8f31dd2f286246658da4a844e97e14947a89b4b4bb41c389d3701"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.c",
+      "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.h",
+      "sha256": "19c822a81038d87a1976b59341fbd6b9f67b5d42ddd484a65ca54767cba7dcc8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.c",
+      "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.h",
+      "sha256": "c8dca091773955136c64315006bbb905ee7cb2040f9c1b17767d6c62b99a7f83"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.h",
+      "sha256": "e47a3ba48ed5b00c0b2b992a045811167cc96b4ee00ac385db693b097196321a"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "ada5da86159ce1f5a25d73d85cdfa54aa847704f706b2327182800674cf9784b"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.h",
+      "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+    }
+  ]
+}

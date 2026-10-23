@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "production_sources_replayed": 6,
+  "probe_sources_replayed": 2,
+  "observer_sources_replayed": 1,
+  "accepted_bridge_maps_replayed": 4,
+  "byte_identical": true,
+  "inputs": [
+    {
+      "path": "audit_recipe_replay_v32.py",
+      "sha256": "caa9c467031c500c44f3b3bf0e010ea32ac5e378ce3e1eb77c3dfc17be781517"
+    },
+    {
+      "path": "integrate_template_v32.py",
+      "sha256": "86d286310c2971d12b52a956da88f43f7c05cde15790ffa83de30eaefa4d05b0"
+    },
+    {
+      "path": "extend_probes_v32.py",
+      "sha256": "89c0d21e7e8447b93c42acac028fe21b0b79094618a555d9d7bac2dfa118a32c"
+    },
+    {
+      "path": "integrate_objects_v32.py",
+      "sha256": "94af491a2b807a0664fd2cdb899828b0a9033827809eb32eae0cf34d8fb57211"
+    },
+    {
+      "path": "extend_allied_probe_v32.py",
+      "sha256": "7cd5a51d557faaffc2252f364df8a69160c88deac132bd3dc591bf4750a28bdb"
+    },
+    {
+      "path": "integrate_returns_v32.py",
+      "sha256": "46bde53b94c6853d6ad47ffdcd1d8fd1cf150bf3d81b3a5eb7aa18220de1ff0d"
+    },
+    {
+      "path": "extend_exit_probe_v32.py",
+      "sha256": "004b1125cf5d700e8bea807e5ae71f420bea51c98b4ea05e4f0a981f12bb7aec"
+    },
+    {
+      "path": "extend_observer_v32.py",
+      "sha256": "61d1a5efac6bca39a7dff32c8f851c2e4e355e71e0fc95f28423fecd6c89ede5"
+    },
+    {
+      "path": "make_bridge_infantry_v32.py",
+      "sha256": "c19991c3f5595025ca4e5ca4c50e6839bbdf5cbc5e7a3de3b19fdbcffe2b1df8"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "ada5da86159ce1f5a25d73d85cdfa54aa847704f706b2327182800674cf9784b"
+    },
+    {
+      "path": "ra2/src/runtime/ground_allied_bridge.c",
+      "sha256": "e2dba1bc3392981f87bc4233dd0cde9fe920de5041428f00fb8a6b999e53d70c"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_allied.c",
+      "sha256": "d195ec3788049bea0a5861916b216e5e47d54cd01cd4d1cd3c8a84e47ca2aab7"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "aac64c5ec41339e377412621c9b196207837b0b7beca9b8785fe7cb6dc7be935"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "cab2c3408f126aaddac71f35e3937d8efe20f3e5244624e8afe00cf3438c53f8"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_allied_relation.h",
+      "sha256": "24530f44594b9b46728de0647f8621711cf04d65bc58a814b2dc377ca937320d"
+    },
+    {
+      "path": "evidence/movement-state-v32/overlap_probe.c",
+      "sha256": "af3c333f0cbef8a56b5e54b05e639a82e8ec984828e5d6fdc81d029a4d681eda"
+    },
+    {
+      "path": "evidence/movement-state-v32/allied_probe.c",
+      "sha256": "65dcb1b9596327446ecdf31dbded6e2816b2325af46ebd84b663d480165d4ee6"
+    },
+    {
+      "path": "evidence/movement-state-v32/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    },
+    {
+      "path": "evidence/movement-state-v32/fixtures/bridge-infantry-following-north.MAP",
+      "sha256": "c5139b52d3d5367122cf87b2669cf8422699e6638cb4c4bc11fc24f94e4dbaa6"
+    },
+    {
+      "path": "evidence/movement-state-v32/fixtures/bridge-infantry-following-south.MAP",
+      "sha256": "5d4b4dc86192700fa82fb42cf6b19ef90bb9509e1e60bfd7f43660ea7d53299e"
+    },
+    {
+      "path": "evidence/movement-state-v32/fixtures/bridge-infantry-meeting-north.MAP",
+      "sha256": "8af9f57d2981ec4438788a74efb8eb77e194866ea0a99aa86570443108f00cd4"
+    },
+    {
+      "path": "evidence/movement-state-v32/fixtures/bridge-infantry-meeting-south.MAP",
+      "sha256": "61dfe3b03625b7a652184e40967f48563a9be2d5a84b5ecae09b0dca04b7548d"
+    }
+  ]
+}

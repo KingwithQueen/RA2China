@@ -1,3 +1,5 @@
+extern void ra2_ground_prepare_stop_return_bridge(unsigned entry);
+extern unsigned ra2_ground_template_destination_bridge(unsigned alternate);
 extern unsigned ra2_ground_advance_service_return_bridge(unsigned entry);
 extern unsigned ra2_ground_sample_anchor_bridge(void);
 extern void ra2_ground_prepare_service_return_bridge(unsigned entry);
@@ -37728,6 +37730,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -37740,6 +37745,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -43063,6 +43071,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -43075,6 +43086,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -48102,6 +48116,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -48114,6 +48131,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -52590,6 +52610,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -52602,6 +52625,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -56787,6 +56813,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -56799,6 +56828,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -60044,6 +60076,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -60056,6 +60091,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -62594,6 +62632,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -62606,6 +62647,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -64802,6 +64846,9 @@ L_004A24C0:
 L_004A24C4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A24F4; /* 0x004A24C4: jle 0x4a24f4 */
 L_004A24C6:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x74); /* 0x004A24C6: mov ecx, dword ptr [esp + 0x74] */
 L_004A24CA:
     edx = MEM32(esp + 0x78); /* 0x004A24CA: mov edx, dword ptr [esp + 0x78] */
@@ -64814,6 +64861,9 @@ L_004A24D6:
 L_004A24DA:
     goto L_004A24F0; /* 0x004A24DA: jmp 0x4a24f0 */
 L_004A24DC:
+    /* Readable C: template destination and map service. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     ecx = MEM32(esp + 0x24); /* 0x004A24DC: mov ecx, dword ptr [esp + 0x24] */
 L_004A24E0:
     edx = MEM32(esp + 0x28); /* 0x004A24E0: mov edx, dword ptr [esp + 0x28] */
@@ -68528,6 +68578,9 @@ L_004A26D8:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A3A44; /* 0x004A26E6: jne 0x4a3a44 */
 L_004A26EC:
+    /* Readable C: stop service and its ordered shared output/return frame. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_stop_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A26EC: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A26EF: push 1 */
     PUSH32(esp, 0); /* 0x004A26F1: push 0 */
@@ -68885,6 +68938,9 @@ L_004A2909:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_NZ(_flag_a, _flag_b)) goto L_004A2934; /* 0x004A2914: jne 0x4a2934 */
 L_004A2916:
+    /* Readable C: stop service and its ordered shared output/return frame. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_stop_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ebp = MEM32(ebp + 0xC); /* 0x004A2916: mov ebp, dword ptr [ebp + 0xc] */
     PUSH32(esp, 1); /* 0x004A2919: push 1 */
     PUSH32(esp, 0); /* 0x004A291B: push 0 */

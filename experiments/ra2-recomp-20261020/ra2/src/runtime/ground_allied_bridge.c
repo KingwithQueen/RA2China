@@ -5,6 +5,7 @@
 #include "recomp_types.h"
 #include "state_trace.h"
 #include "ground_allied.h"
+#include "ground_allied_relation.h"
 #include "ground_moving_tail.h"
 #include "ground_allied_bridge.h"
 #include "x87_arithmetic.h"
@@ -155,4 +156,23 @@ uint32_t ra2_ground_moving_tail_bridge(void)
     ra2_ground_classify_moving_tail((int32_t *)(uintptr_t)ADDR(frame+0x8C),&services);
     g_esp=frame;g_ebp=MEM32(frame+0x14);g_esi=object;g_edi=c.object;
     return 0x7038EF;
+}
+
+uint32_t ra2_ground_allied_relation_bridge(void)
+{
+    AlliedContext c={g_esp,MEM32(g_esp+0x14),MEM32(g_esp+0x7C),g_esi};
+    Ra2AlliedServices services={&c,query,heading,opposite,relative,distance,remember};
+    int moving=(g_ebx&255u)!=0;
+    int32_t passage=(int32_t)MEM32(c.frame+0x8C);
+    g_esp=c.frame-0x100;
+    Ra2AlliedOutcome outcome=ra2_ground_classify_allied_relation(moving,&passage,&services);
+    MEM32(c.frame+0x8C)=(uint32_t)passage;
+    g_esp=c.frame;g_ebp=c.owner;g_ebx=c.cell;g_esi=c.object;g_edi=(uint32_t)passage;
+    switch(outcome)
+    {
+        case RA2_ALLIED_CHECK_ENEMY:return 0x70397C;
+        case RA2_ALLIED_CHECK_STATIONARY:return 0x70394F;
+        case RA2_ALLIED_BLOCKED:return 0x703B5A;
+        default:return 0x7038EF;
+    }
 }

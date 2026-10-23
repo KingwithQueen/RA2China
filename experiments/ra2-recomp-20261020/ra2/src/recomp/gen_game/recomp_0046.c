@@ -1,3 +1,4 @@
+extern unsigned ra2_ground_allied_relation_bridge(void);
 extern unsigned ra2_ground_moving_tail_bridge(void);
 #include "ground_overlap_bridge.h"
 #include "ground_joint_bridge.h"
@@ -67853,6 +67854,13 @@ L_0070372A:
     _cf = 0;
     _flag_k = FK_NARROW(FK_TEST, 24);
 L_0070372C:
+    /* Readable C: alliance, movement and ordered facing/distance services. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned relation_v32=ra2_ground_allied_relation_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(relation_v32==0x70397C)goto L_0070397C;
+    if(relation_v32==0x70394F)goto L_0070394F;
+    if(relation_v32==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     ecx = MEM32(ebp + 0x1B4); /* 0x0070372C: mov ecx, dword ptr [ebp + 0x1b4] */
     PUSH32(esp, esi); /* 0x00703732: push esi */
     RECOMP_CALL(sub_004E5580); /* 0x00703733: call 0x4e5580 */
@@ -69049,6 +69057,13 @@ L_0070372A:
     _cf = 0;
     _flag_k = FK_NARROW(FK_TEST, 24);
 L_0070372C:
+    /* Readable C: alliance, movement and ordered facing/distance services. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned relation_v32=ra2_ground_allied_relation_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(relation_v32==0x70397C)goto L_0070397C;
+    if(relation_v32==0x70394F)goto L_0070394F;
+    if(relation_v32==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     ecx = MEM32(ebp + 0x1B4); /* 0x0070372C: mov ecx, dword ptr [ebp + 0x1b4] */
     PUSH32(esp, esi); /* 0x00703732: push esi */
     RECOMP_CALL(sub_004E5580); /* 0x00703733: call 0x4e5580 */
@@ -69750,6 +69765,13 @@ void sub_0070372C(void) {
     RECOMP_ENTER(0x0070372Cu);
 
 L_0070372C:
+    /* Readable C: alliance, movement and ordered facing/distance services. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); unsigned relation_v32=ra2_ground_allied_relation_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(relation_v32==0x70397C)goto L_0070397C;
+    if(relation_v32==0x70394F)goto L_0070394F;
+    if(relation_v32==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     ecx = MEM32(ebp + 0x1B4); /* 0x0070372C: mov ecx, dword ptr [ebp + 0x1b4] */
     PUSH32(esp, esi); /* 0x00703732: push esi */
     RECOMP_CALL(sub_004E5580); /* 0x00703733: call 0x4e5580 */

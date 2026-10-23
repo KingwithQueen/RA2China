@@ -1,0 +1,1362 @@
+{
+  "passed": true,
+  "production_scenes": 4,
+  "production_frames": 3604,
+  "independent_frames": 3604,
+  "production_executable_sha256": "d03ef60ce68c447108299d173677ded81af794a8aa5b25b8d184a6efe6c0e45f",
+  "observer_executable_sha256": "23d9345668b674214a96c46fc7eda3f4c2b30e5fb2697fe2ed14981cf86235b9",
+  "scenes": {
+    "enemy-mixed-north": {
+      "passed": true,
+      "dynamic": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "enemy_classifier_entries": 6,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 6,
+          "sample_mixed_visits": [
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ]
+          ],
+          "hostile_traffic_queries": 0,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023364": {
+              "distinct_positions": 1,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                17024,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "enemy_classifier_entries": 6,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 6,
+          "sample_mixed_visits": [
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ]
+          ],
+          "hostile_traffic_queries": 0,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023364": {
+              "distinct_positions": 1,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                17024,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        }
+      }
+    },
+    "enemy-traffic-ai3-north": {
+      "passed": true,
+      "dynamic": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "enemy_classifier_entries": 5,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 8,
+          "sample_mixed_visits": [
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ]
+          ],
+          "hostile_traffic_queries": 5,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023363": {
+              "distinct_positions": 246,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "enemy_classifier_entries": 5,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                16000,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                18560,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 8,
+          "sample_mixed_visits": [
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ]
+          ],
+          "hostile_traffic_queries": 5,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023363": {
+              "distinct_positions": 246,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        }
+      }
+    },
+    "enemy-mixed-south": {
+      "passed": true,
+      "dynamic": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "enemy_classifier_entries": 6,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 6,
+          "sample_mixed_visits": [
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ]
+          ],
+          "hostile_traffic_queries": 0,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 233,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023364": {
+              "distinct_positions": 1,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                17024,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "enemy_classifier_entries": 6,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023364,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 6,
+          "sample_mixed_visits": [
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ],
+            [
+              1023368,
+              1023367,
+              1023364
+            ]
+          ],
+          "hostile_traffic_queries": 0,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 233,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023364": {
+              "distinct_positions": 1,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                17024,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        }
+      }
+    },
+    "enemy-traffic-ai3-south": {
+      "passed": true,
+      "dynamic": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "enemy_classifier_entries": 9,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 8,
+          "sample_mixed_visits": [
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ]
+          ],
+          "hostile_traffic_queries": 9,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 244,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023363": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        },
+        "generated-c": {
+          "enemy_classifier_entries": 9,
+          "enemy_samples": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1023362,
+              "stage": 27,
+              "value": [
+                1023363,
+                8052216
+              ],
+              "position": [
+                15488,
+                18304,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                15488,
+                15744,
+                416
+              ]
+            }
+          ],
+          "mixed_queries": 8,
+          "sample_mixed_visits": [
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ],
+            [
+              1023365,
+              1023369,
+              1023368
+            ]
+          ],
+          "hostile_traffic_queries": 9,
+          "motion": {
+            "1023362": {
+              "distinct_positions": 244,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            },
+            "1023363": {
+              "distinct_positions": 234,
+              "last_present_frame": 900,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_destination": [
+                0,
+                0,
+                0
+              ],
+              "final_health": 200,
+              "absent_at_end": false
+            }
+          },
+          "reached_primary_goal": true
+        }
+      }
+    }
+  },
+  "totals": {
+    "enemy_classifier_entries": 26,
+    "mixed_queries": 28,
+    "hostile_traffic_queries": 14,
+    "goals_reached": 4
+  },
+  "hostile_classifier_observed": true,
+  "hostile_bridge_traffic_observed": true,
+  "all_routes_required_to_complete": false,
+  "scope": "Original bridge overlays, accepted lower terrain, ordinary map units and unchanged native house alliances. Normal move orders only. The byte-checked observer relocates one original CALL and preserves CPU/FPU state. Full states, RNG, commands and ordered events match native/C and production. Enemy classifier entries and bridge traffic queries are observed separately from final arrival; original stalls, destruction and diversions are retained.",
+  "inputs": [
+    {
+      "path": "audit_bridge_hostile_v32.py",
+      "sha256": "0771de2bd9e19f1ff3c84e2b33417210ede1a72c60fb92e112878f2d36ab81a9"
+    },
+    {
+      "path": "evidence/movement-state-v32/bridge-hostile-fixtures.json",
+      "sha256": "7abbf5d4f9e7bee9194ecf664235d2633820a82ca8ecc02d160ea65bc045a17a"
+    },
+    {
+      "path": "make_bridge_hostile_v32.py",
+      "sha256": "fd59a773baf13a4f2b45b53460fdf1745bf0b80cded28885b23e0124c2147ad1"
+    },
+    {
+      "path": "extend_bridge_hostile_ai_v32.py",
+      "sha256": "8583ef0497b615b9500c5827fa41668b9e0e6f4f598b0463702f25f2a560b1a5"
+    },
+    {
+      "path": "run_bridge_hostile_v32.py",
+      "sha256": "f4304d1da6a7b275c9136506d94ecf988ad682e12169d426c4ebb809332b32fa"
+    },
+    {
+      "path": "extend_observer_v32.py",
+      "sha256": "61d1a5efac6bca39a7dff32c8f851c2e4e355e71e0fc95f28423fecd6c89ede5"
+    },
+    {
+      "path": "make_connection_fixture_v32.py",
+      "sha256": "806663c4b5cf9fa29a0c825807af770cd89c99778f4f51de060b70342bc03840"
+    },
+    {
+      "path": "evidence/movement-state-v32/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    }
+  ]
+}

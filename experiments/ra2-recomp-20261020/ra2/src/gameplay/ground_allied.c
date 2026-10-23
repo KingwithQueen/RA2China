@@ -1,4 +1,5 @@
 #include "ground_allied.h"
+#include "ground_allied_relation.h"
 #include "ground_moving_tail.h"
 
 Ra2AlliedOutcome ra2_ground_classify_allied_motion(int32_t *passage,
@@ -24,6 +25,12 @@ Ra2AlliedOutcome ra2_ground_classify_allied_motion(int32_t *passage,
     }
     else s->remember_moving_object(c, 0);
 
+    return ra2_ground_classify_allied_relation(moving,passage,s);
+}
+
+Ra2AlliedOutcome ra2_ground_classify_allied_relation(int moving,int32_t *passage,const Ra2AlliedServices *s)
+{
+    void *c=s->context;
     if (!s->query(c, RA2_ALLIED_OBJECT_IS_ALLIED))
         return RA2_ALLIED_CHECK_ENEMY;
     if (!moving) return RA2_ALLIED_CHECK_STATIONARY;
