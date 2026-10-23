@@ -96,3 +96,24 @@ void ra2_ground_prepare_written_return_bridge(unsigned entry)
     /* Output may alias saved EDI/ESI/EBP; those were already popped. EBX was not. */
     g_edi=saved_edi;g_esi=saved_esi;g_ebp=saved_ebp;
 }
+
+void ra2_ground_prepare_service_return_bridge(unsigned entry)
+{
+    uint32_t frame=g_esp,drive=g_ebp,result;
+    if(entry==0)
+    {
+        uint32_t first_owner=MEM32(drive+0xC);
+        MEM32(drive+0x58)=g_edi;
+        MEM32(first_owner+0x4D0)=g_edi;
+        uint32_t current_owner=MEM32(drive+0xC),args[]={0,0};
+        g_edx=MEM32(current_owner);
+        result=method(current_owner,0x4C8,args,2)&UINT32_C(0xFFFFFF00);
+    }
+    else
+    {
+        uint32_t second=entry==1?g_ebx:MEM32(frame+0x64);
+        uint32_t args[]={MEM32(frame+0x60),second,1};
+        result=call(0x4A2670,drive,args,3);
+    }
+    ra2_ground_return_frame(frame,RA2_FRAME_PREPARE,result);
+}

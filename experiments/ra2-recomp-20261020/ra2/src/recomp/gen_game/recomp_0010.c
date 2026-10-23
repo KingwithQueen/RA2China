@@ -1,3 +1,5 @@
+extern void ra2_ground_prepare_service_return_bridge(unsigned entry);
+extern unsigned ra2_ground_template_index_bridge(void);
 extern void ra2_ground_prepare_written_return_bridge(unsigned entry);
 extern unsigned ra2_ground_template_table_bridge(void);
 #include "ground_overlap_bridge.h"
@@ -36687,6 +36689,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -42010,6 +42015,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -47037,6 +47045,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -51513,6 +51524,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -55722,6 +55736,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -59661,6 +59678,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -62205,6 +62225,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -64407,6 +64430,9 @@ L_004A1FB5:
 L_004A1FB8:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_LE, _cf)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
 L_004A1FC1:
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
@@ -65663,6 +65689,9 @@ L_004A1FB2:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
     SET_LO8(ecx, MEM8(ebp + 0x60)); /* 0x004A1FC8: mov cl, byte ptr [ebp + 0x60] */
@@ -66110,6 +66139,9 @@ L_004A1FB2:
     _flag_k = FK_CMP;
     if (CMP_LE(_flag_a, _flag_b)) goto L_004A263A; /* 0x004A1FB8: jle 0x4a263a */
 L_004A1FBE:
+    /* Readable C: selected template index, retaining AL-width test and signed table bytes. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_index_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2311;
     ecx = eax + eax * 2; /* 0x004A1FBE: lea ecx, [eax + eax*2] */
     eax = ecx * 4 + 0x7A0180; /* 0x004A1FC1: lea eax, [ecx*4 + 0x7a0180] */
     SET_LO8(ecx, MEM8(ebp + 0x60)); /* 0x004A1FC8: mov cl, byte ptr [ebp + 0x60] */
@@ -72423,6 +72455,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -72450,6 +72485,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -73217,6 +73255,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -76050,6 +76091,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -76077,6 +76121,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -76844,6 +76891,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -79883,6 +79933,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -79910,6 +79963,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -80676,6 +80732,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -81477,6 +81536,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -81504,6 +81566,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -82270,6 +82335,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -82937,6 +83005,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -82964,6 +83035,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -83730,6 +83804,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -84339,6 +84416,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -84366,6 +84446,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -85132,6 +85215,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -85448,6 +85534,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -85475,6 +85564,9 @@ L_004A41C7:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A41E9; /* 0x004A41CA: jne 0x4a41e9 */
 L_004A41CC:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x64); /* 0x004A41CC: mov ecx, dword ptr [esp + 0x64] */
     edx = MEM32(esp + 0x60); /* 0x004A41D0: mov edx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41D4: push 1 */
@@ -86241,6 +86333,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -86311,6 +86406,9 @@ L_004A41A5:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_004A45D0; /* 0x004A41A8: jne 0x4a45d0 */
 L_004A41AE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(esp + 0x60); /* 0x004A41AE: mov ecx, dword ptr [esp + 0x60] */
     PUSH32(esp, 1); /* 0x004A41B2: push 1 */
     PUSH32(esp, ebx); /* 0x004A41B4: push ebx */
@@ -86497,6 +86595,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -87021,6 +87122,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -87238,6 +87342,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */
@@ -87446,6 +87553,9 @@ L_004A46E1:
     MEM32(esi + 0x8) = eax; /* 0x004A46F7: mov dword ptr [esi + 8], eax */
     MEM8(ebp + 0x63) = (uint8_t)(0); /* 0x004A46FA: mov byte ptr [ebp + 0x63], 0 */
 L_004A46FE:
+    /* Readable C: service call and shared return, retaining callback ordering. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_prepare_service_return_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A46FE: mov ecx, dword ptr [ebp + 0xc] */
     MEM32(ebp + 0x58) = edi; /* 0x004A4701: mov dword ptr [ebp + 0x58], edi */
     PUSH32(esp, 0); /* 0x004A4704: push 0 */

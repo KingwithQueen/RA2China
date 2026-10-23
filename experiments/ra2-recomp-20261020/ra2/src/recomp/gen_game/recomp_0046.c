@@ -68267,6 +68267,12 @@ L_007039FE:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A0C: je 0x703b5a */
 L_00703A12:
+    /* Readable C: concrete enemy object kinds and selected terrain weapon. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t enemy_kind_resume_v30=ra2_ground_object_branch_bridge(6);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_kind_resume_v30==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     edx = MEM32(esi); /* 0x00703A12: mov edx, dword ptr [esi] */
     ecx = esi; /* 0x00703A14: mov ecx, esi */
     RECOMP_ICALL(MEM32(edx + 0x2C)); /* 0x00703A16: call dword ptr [edx + 0x2c] */
@@ -69454,6 +69460,12 @@ L_007039FE:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A0C: je 0x703b5a */
 L_00703A12:
+    /* Readable C: concrete enemy object kinds and selected terrain weapon. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t enemy_kind_resume_v30=ra2_ground_object_branch_bridge(6);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_kind_resume_v30==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     edx = MEM32(esi); /* 0x00703A12: mov edx, dword ptr [esi] */
     ecx = esi; /* 0x00703A14: mov ecx, esi */
     RECOMP_ICALL(MEM32(edx + 0x2C)); /* 0x00703A16: call dword ptr [edx + 0x2c] */
@@ -70144,6 +70156,12 @@ L_007039FE:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A0C: je 0x703b5a */
 L_00703A12:
+    /* Readable C: concrete enemy object kinds and selected terrain weapon. */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
+    uint32_t enemy_kind_resume_v30=ra2_ground_object_branch_bridge(6);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(enemy_kind_resume_v30==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     edx = MEM32(esi); /* 0x00703A12: mov edx, dword ptr [esi] */
     ecx = esi; /* 0x00703A14: mov ecx, esi */
     RECOMP_ICALL(MEM32(edx + 0x2C)); /* 0x00703A16: call dword ptr [edx + 0x2c] */

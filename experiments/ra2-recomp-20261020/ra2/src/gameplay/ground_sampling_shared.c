@@ -5,7 +5,7 @@ Ra2SamplingPhase ra2_ground_choose_shared_full(int32_t progress, int32_t directi
     Ra2SamplingChoice *choice, const Ra2SamplingServices *s)
 {
     if (progress <= 7) return RA2_SAMPLING_REMAINDER;
-    choice->table = alternate ? selected.alternate : selected.normal;
+    choice->table = ra2_ground_template_index(selected, alternate);
     s->select_table(s->context, choice->table);
     if (direction < direction_sentinel || direction > 8) return RA2_SAMPLING_INVALID_DIRECTION;
     choice->turning = 0;
@@ -27,3 +27,6 @@ Ra2SamplingPhase ra2_ground_choose_selected_remainder(int32_t table, int32_t ind
         return RA2_SAMPLING_DONE;
     return RA2_SAMPLING_INTERPOLATE;
 }
+
+int32_t ra2_ground_template_index(Ra2SamplingTemplate selected, unsigned alternate)
+{ return alternate ? selected.alternate : selected.normal; }

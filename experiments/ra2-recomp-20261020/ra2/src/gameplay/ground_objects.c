@@ -1,4 +1,5 @@
 #include "ground_objects.h"
+#include "ground_enemy_kind.h"
 #include "ground_object_kind.h"
 #include "ground_building_flags.h"
 #include "ground_collision.h"
@@ -61,6 +62,11 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy(Ra2ObjectPassageState *state,c
     }
     if(!s->query(c,RA2_OBJECT_HAS_WEAPON_ZERO) && !s->query(c,RA2_OBJECT_OWNER_IS_TRAIN))
         return RA2_OBJECT_BLOCKED;
+    return ra2_ground_classify_enemy_kind(state,s);
+}
+Ra2ObjectPassageOutcome ra2_ground_classify_enemy_kind(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
+{
+    void *c=s->context;
     int32_t kind=s->query(c,RA2_OBJECT_KIND);
     if(kind==6 && s->query(c,RA2_OBJECT_BUILDING_FLAG_1350)) return RA2_OBJECT_BLOCKED;
     if(kind==36 && !s->query(c,RA2_OBJECT_TERRAIN_WEAPON_ALLOWED)) return RA2_OBJECT_BLOCKED;

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "production_c_sources": 171,
+  "compile_inputs": 289,
+  "template_table_entries": 7,
+  "building_flags_entries": 2,
+  "shared_exit_entries": 4,
+  "shared_exit_copies": 11,
+  "existing_tail_targets_preserved": true,
+  "state_trace_unchanged": true,
+  "comparators_unchanged": true,
+  "byte_styles_preserved": true,
+  "whole_object_passage_classifier_readable": false,
+  "full_original_equivalence_verified": false,
+  "template_index_internal_entries": 10,
+  "enemy_kind_internal_entries": 3,
+  "service_exit_entries": 3,
+  "service_exit_copies": 26
+}

@@ -194,3 +194,15 @@ uint32_t ra2_ground_template_table_bridge(void)
     g_flag_b=8u<<24;g_flag_cf=0;
     return result.flags&8u?0x4A4015:0x4A45B7;
 }
+
+#include "ground_sampling_shared.h"
+uint32_t ra2_ground_template_index_bridge(void)
+{
+    uint32_t scaled=g_eax*3u, table=0x7A0180u+scaled*4u;
+    unsigned alternate=MEM8(g_ebp+0x60);
+    Ra2SamplingTemplate selected={(int8_t)MEM8(table),(int8_t)MEM8(table+1),0};
+    g_eax=(uint32_t)ra2_ground_template_index(selected,alternate);
+    g_ecx=(scaled&UINT32_C(0xFFFFFF00))|alternate;
+    g_flag_k=FK_NARROW(FK_TEST,24);g_flag_a=alternate<<24;g_flag_b=alternate<<24;g_flag_cf=0;
+    return 0x4A2311;
+}
