@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "register_destination_copies": 12,
+  "confirmed_building_copies": 3,
+  "placement_restore_service_copies": 13,
+  "loaded_sample_copies": 8,
+  "terrain_weapon_copies": 3,
+  "invalidate_service_copies": 11,
+  "register_sample_copies": 8,
+  "enemy_weapon_copies": 3,
+  "owner_stop_copies": 7,
+  "new_native_entries": 0,
+  "prior_four_destination_copies_preserved": true,
+  "old_labels_instructions_tails_guards_preserved": true,
+  "natural_nonprimary_entry_proved": false,
+  "inputs": [
+    {
+      "path": "audit_fragment_contract_v36.py",
+      "sha256": "5ce3b72ced19eab52c67fbcdd874a9bf26df7aad0a6a27b578dc3381b26d8ed1"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "8f0ec4c976b8e1739d3e0c034f7a4758eeb5fd13fd17bebdb21f8b2b1c66520d"
+    },
+    {
+      "path": "evidence/movement-state-v36/baseline/ra2/src/recomp/gen_game/recomp_0010.c",
+      "sha256": "51704c620d78cb8f0ed982aa3c6236bbf00e26c288cca1e25105b96a0e4d1b90"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "c4e20a2f2a40203030cea05b7489901513b598ccaafb8d36f05ac6b257f4b79a"
+    },
+    {
+      "path": "evidence/movement-state-v36/baseline/ra2/src/recomp/gen_game/recomp_0046.c",
+      "sha256": "69af0e1849ad1bd011d10f8c529bdbbfff7509dcc44ca8077546ab9030ab6519"
+    }
+  ]
+}

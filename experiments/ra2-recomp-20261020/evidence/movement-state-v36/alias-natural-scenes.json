@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "static_aliases": 29,
+  "byte_checked_edges": 86,
+  "new_runtime_probe_targets": 19,
+  "prior_runtime_probe_targets": 9,
+  "all_configured_aliases_without_first_call_record": true,
+  "external_jump_candidates": [],
+  "additional_observer_scenes": 4,
+  "additional_observer_frames": 3604,
+  "production_observer_state_identity": true,
+  "records": [
+    {
+      "tag": "al-a",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A199D": 0,
+        "004A1ACD": 0,
+        "004A1F8D": 0,
+        "004A1FA1": 0,
+        "004A2670": 5,
+        "004A3C92": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-b",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A3C9B": 0,
+        "004A3DBA": 0,
+        "004A3E35": 0,
+        "004A3FE3": 0,
+        "004A4174": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-c",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A230E": 0,
+        "004A2311": 0,
+        "004A2670": 5,
+        "004A458C": 0,
+        "004A45B7": 0,
+        "004A45D0": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "al-d",
+      "frames": 901,
+      "first_call_record_counts": {
+        "004A1000": 5,
+        "004A1FDC": 0,
+        "004A2112": 0,
+        "004A2670": 5,
+        "004A44D1": 0,
+        "004A4522": 0,
+        "00703040": 5
+      }
+    }
+  ],
+  "nonprimary_natural_entry_proved": false,
+  "limits": "Natural ordinary moves only. All 28 configured aliases lack their first-call record in the examined bridge scenes, with primary703040 positive controls. Fixed-frame termination provides no full-run counters. Arbitrary computed targets, runtime-built pointers and unrun scenes remain unresolved.",
+  "inputs": [
+    {
+      "path": "audit_alias_runtime_v36.py",
+      "sha256": "44b2065fa089e428dde755dc73df1674c19c176af111f5f62f42120cf1448e72"
+    },
+    {
+      "path": "run_alias_probe_v36.py",
+      "sha256": "5267b53c044e1a31323aac786f7dfe30378c002962cf2a36e1da52cb7e30b545"
+    },
+    {
+      "path": "run_alias_scenes_v36.py",
+      "sha256": "2f5b94725c0e3dadecb45316871107faca07740e6bee288bdcc2a854a5670aa0"
+    },
+    {
+      "path": "evidence/movement-state-v36/internal-alias-sources.json",
+      "sha256": "8bb254757e63081dbef876799efa50e3cdccb1b7d11e1a8a7f544168c1b6f01e"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-a/comparison.json",
+      "sha256": "49952b8a06cf4cf5653b34f70f5c571f94ee085a37af35d599e865d751a8cb4a"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-a/generated-c/run.log",
+      "sha256": "920fcaed09abbd8d1f07abb5f6e8fd8dac73b9371d45ecbbf5135c97153de7d8"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-a/generated-c/command.json",
+      "sha256": "049834e902e342654c5c91c2cd59e9aa23f7cd09d2d9a66e52f03167c9b5a080"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-b/comparison.json",
+      "sha256": "e39ec24142a1f9db0e67b8af37d98fc2de32d0838419e63ad80e4d7a58511175"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-b/generated-c/run.log",
+      "sha256": "1f1b482c906fa2dda1e18121effe4412d04be98bde81683e492b0eeb163c35bd"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-b/generated-c/command.json",
+      "sha256": "a5c8c444ea7d56dece4dbd7aea0a3d6d8e4a1959e144d2403df5484f3dad86c0"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-c/comparison.json",
+      "sha256": "50715f2465ae39fc2a2706cb2f0d889823aac2d6cc4acb56e4245811277cc81e"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-c/generated-c/run.log",
+      "sha256": "db50e94d427d2eea52eb162df4d4f47bb9f65c081e95793d01d230c5f59aca26"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-c/generated-c/command.json",
+      "sha256": "5aa35bac74547e9fe05926c945dc04dc289366ad2f297b8422bb38fd979cc856"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-d/comparison.json",
+      "sha256": "a5487624d614711dab98738e1d027ed13a52fd71b932e458f73457e989d3b3ad"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-d/generated-c/run.log",
+      "sha256": "b71796e1504fa13ea0fac7da9e628782ea720273da5936d4a25f457837f4063c"
+    },
+    {
+      "path": "evidence/movement-state-v36/runs/al-d/generated-c/command.json",
+      "sha256": "e4f090b26218e66080eec4b31e5f3841a9507b9366b659bdb724f5a6af8a7c06"
+    }
+  ]
+}

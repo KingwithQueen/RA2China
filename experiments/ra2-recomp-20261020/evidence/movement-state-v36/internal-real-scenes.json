@@ -1,0 +1,3594 @@
+{
+  "passed": true,
+  "production_executable_sha256": "5854f94bac6bdee0bd6d0b1ea6caf0eca005ae1b8a957c86affd5804e7b6a303",
+  "observer_executable_sha256": "858e33701de58e25867e7fa84d4cb0b48100af2512894d2b2879925733967aca",
+  "independent_scenes": 4,
+  "independent_frames": 4054,
+  "stages": {
+    "14": 3304,
+    "18": 3148,
+    "23": 3148,
+    "22": 1412,
+    "21": 1412,
+    "19": 14,
+    "15": 136,
+    "13": 66,
+    "17": 66,
+    "10": 1513,
+    "12": 1513,
+    "16": 1513,
+    "11": 1449,
+    "20": 43,
+    "27": 1404
+  },
+  "scenes": {
+    "default": {
+      "passed": true,
+      "frames": 901,
+      "production_scene": "c-final-default",
+      "modes": {
+        "original": {
+          "count": 904,
+          "stages": {
+            "14": 46,
+            "18": 46,
+            "23": 46,
+            "22": 8,
+            "21": 8,
+            "19": 9,
+            "15": 12,
+            "13": 7,
+            "17": 7,
+            "10": 179,
+            "12": 179,
+            "16": 179,
+            "11": 173,
+            "20": 5
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "ed56862f82bbf75504fe59348c7af15f2817e984138d41364afbcb4cd0c9010c",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 12,
+              "value": [
+                19328,
+                31360
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 52,
+              "id": 1032259,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19192,
+                31496,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 17,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 22,
+              "value": [
+                1032265,
+                1032264
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 23,
+              "value": [
+                1,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "generated-c": {
+          "count": 904,
+          "stages": {
+            "14": 46,
+            "18": 46,
+            "23": 46,
+            "22": 8,
+            "21": 8,
+            "19": 9,
+            "15": 12,
+            "13": 7,
+            "17": 7,
+            "10": 179,
+            "12": 179,
+            "16": 179,
+            "11": 173,
+            "20": 5
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "ed56862f82bbf75504fe59348c7af15f2817e984138d41364afbcb4cd0c9010c",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 12,
+              "value": [
+                19328,
+                31360
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 0,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 45,
+              "id": 1032259,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 5,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 52,
+              "id": 1032259,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19192,
+                31496,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 6,
+              "selector": 46,
+              "sample": 17,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 22,
+              "value": [
+                1032265,
+                1032264
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 26,
+              "id": 1032259,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                19328,
+                31360,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                17280,
+                31872,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 23,
+              "value": [
+                1,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 127,
+              "id": 1032259,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17536,
+                31872,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "long": {
+      "passed": true,
+      "frames": 1501,
+      "production_scene": "u-long",
+      "modes": {
+        "original": {
+          "count": 3558,
+          "stages": {
+            "14": 135,
+            "18": 135,
+            "23": 135,
+            "13": 33,
+            "17": 33,
+            "15": 61,
+            "10": 759,
+            "12": 759,
+            "16": 759,
+            "11": 726,
+            "20": 22,
+            "19": 1
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "cdf3009042aed0fbbdbb923ccc8889e062bde1fb042b187127b01d0a289cf106",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 17,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17301,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17291,
+                29312
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 48,
+              "id": 1022579,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17668,
+                29312,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 11,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                1,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "generated-c": {
+          "count": 3558,
+          "stages": {
+            "14": 135,
+            "18": 135,
+            "23": 135,
+            "13": 33,
+            "17": 33,
+            "15": 61,
+            "10": 759,
+            "12": 759,
+            "16": 759,
+            "11": 726,
+            "20": 22,
+            "19": 1
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "cdf3009042aed0fbbdbb923ccc8889e062bde1fb042b187127b01d0a289cf106",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 17,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17301,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17291,
+                29312
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 48,
+              "id": 1022579,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17668,
+                29312,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 11,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                1,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 603,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                25728,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "tc1": {
+      "passed": true,
+      "frames": 401,
+      "production_scene": "u-tc1",
+      "modes": {
+        "original": {
+          "count": 440,
+          "stages": {
+            "14": 203,
+            "18": 47,
+            "23": 47,
+            "22": 13,
+            "21": 13,
+            "27": 13,
+            "19": 3,
+            "15": 6,
+            "13": 2,
+            "17": 2,
+            "10": 23,
+            "12": 23,
+            "16": 23,
+            "11": 22
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "1c0d724c20e2bc7eb40cf72100bed399f74ba8dab4a60f17818a9f782cf9e563",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 174,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29291,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17280,
+                29301
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 163,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 163,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 22,
+              "value": [
+                1022580,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022580,
+                8052216
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "generated-c": {
+          "count": 440,
+          "stages": {
+            "14": 203,
+            "18": 47,
+            "23": 47,
+            "22": 13,
+            "21": 13,
+            "27": 13,
+            "19": 3,
+            "15": 6,
+            "13": 2,
+            "17": 2,
+            "10": 23,
+            "12": 23,
+            "16": 23,
+            "11": 22
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "1c0d724c20e2bc7eb40cf72100bed399f74ba8dab4a60f17818a9f782cf9e563",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 174,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29291,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17280,
+                29301
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 163,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 171,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29302,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": 0,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 163,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 0,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 22,
+              "value": [
+                1022580,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 151,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022580,
+                8052216
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                18304,
+                28544,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 197,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29056,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": 1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "repeat-failure": {
+      "passed": true,
+      "frames": 1251,
+      "production_scene": "u-repeat-failure",
+      "modes": {
+        "original": {
+          "count": 15239,
+          "stages": {
+            "14": 2920,
+            "18": 2920,
+            "23": 2920,
+            "13": 24,
+            "17": 24,
+            "15": 57,
+            "10": 552,
+            "12": 552,
+            "16": 552,
+            "11": 528,
+            "20": 16,
+            "22": 1391,
+            "21": 1391,
+            "27": 1391,
+            "19": 1
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "54b533d2f6ef096f43b88dadcc546efd892fadc034f25994ec4a9c98db54c6a7",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 17,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17301,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17291,
+                29312
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 423,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 48,
+              "id": 1022579,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17668,
+                29312,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 11,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 22,
+              "value": [
+                1022589,
+                0
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022589,
+                8052216
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022585,
+                8052216
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "generated-c": {
+          "count": 15239,
+          "stages": {
+            "14": 2920,
+            "18": 2920,
+            "23": 2920,
+            "13": 24,
+            "17": 24,
+            "15": 57,
+            "10": 552,
+            "12": 552,
+            "16": 552,
+            "11": 528,
+            "20": 16,
+            "22": 1391,
+            "21": 1391,
+            "27": 1391,
+            "19": 1
+          },
+          "plain_state_identity": true,
+          "ordered_hits_sha256": "54b533d2f6ef096f43b88dadcc546efd892fadc034f25994ec4a9c98db54c6a7",
+          "sample_hits": [
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 10,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 17,
+              "id": 1022579,
+              "stage": 11,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17301,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 12,
+              "value": [
+                17291,
+                29312
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 13,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 14,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 14,
+              "id": 1022579,
+              "stage": 16,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17290,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 17,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 18,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 423,
+              "id": 1022579,
+              "stage": 19,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 48,
+              "id": 1022579,
+              "stage": 20,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17668,
+                29312,
+                0
+              ],
+              "budget": 10,
+              "path_direction": 2,
+              "selector": 18,
+              "sample": 11,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 22,
+              "value": [
+                1022589,
+                0
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 6,
+              "id": 1022579,
+              "stage": 23,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                17280,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": -1,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 399,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022589,
+                8052216
+              ],
+              "position": [
+                23168,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 21,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 27,
+              "value": [
+                1022585,
+                8052216
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                25728,
+                29312,
+                416
+              ]
+            },
+            {
+              "kind": "fixture-internal-hit",
+              "frame": 1111,
+              "id": 1022579,
+              "stage": 15,
+              "value": [
+                0,
+                0
+              ],
+              "position": [
+                23424,
+                29312,
+                416
+              ],
+              "budget": 10,
+              "path_direction": -1,
+              "selector": -1,
+              "sample": 0,
+              "destination": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "scope": "Read-only native hooks at twelve boundaries, adding 4A17FE, 4A3502, 703439, 7038EF, 4A18AB and 7034BF. Natural current/previous samples, type gates, entry, object-chain initialization/continuation and shared return; no raw state/path/budget injection. Generated entry-route inventory distinguishes actual adapter use from matching high-level service observations; it is not complete coverage of every overlapping function.",
+  "all_rare_branches_verified": false,
+  "previous_sample_real_scene_verified": true,
+  "bridge_layer_chain_entries": 0,
+  "bridge_layer_nonempty_chain_entries": 0,
+  "generated_entry_routes": [
+    {
+      "scene": "j-default",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 0,
+      "host_return": "6450C853",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e86dd4dd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-default",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 26,
+      "host_return": "6450CFA7",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e819cddd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C853",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e86dd4dd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-long",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 603,
+      "host_return": "6450CFA7",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e819cddd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 5,
+      "host_return": "6450C853",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e86dd4dd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-tc1",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 61,
+      "host_return": "6450CFA7",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e819cddd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 18,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 6,
+      "host_return": "6450C853",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e86dd4dd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    },
+    {
+      "scene": "j-fail",
+      "stage": 19,
+      "generated_entry": "00703040",
+      "generated_function": "UnitClass__virtual_101",
+      "first_frame": 423,
+      "host_return": "6450CFA7",
+      "host_function_start": "6450C520",
+      "host_call_bytes": "e819cddd00",
+      "host_call_target": "652E9CC0",
+      "call_target_symbol": "_ra2_ground_object_chain_bridge"
+    }
+  ],
+  "new_adapter_runtime_stages": [
+    18,
+    19
+  ],
+  "nonprimary_overlapping_adapter_naturally_observed": false,
+  "sources": [
+    {
+      "path": "make_connection_fixture_v36.py",
+      "sha256": "c9d6c1bc475a7d992b71f4d3ed4a75ddc4421dc7c18e60ef45e08bc26d6d70f4"
+    },
+    {
+      "path": "extend_overlap_observer_v36.py",
+      "sha256": "39e24655f9b303212ea74456c5be1a291986f471b61d412ad424ff9081b5f615"
+    },
+    {
+      "path": "evidence/movement-state-v36/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    },
+    {
+      "path": "evidence/movement-state-v36/connection_advance_bridge.c",
+      "sha256": "6b6407916529955210a56d705af65611f726aa1bc389e7c9a96b58bd1a34aaea"
+    },
+    {
+      "path": "evidence/movement-state-v36/connection_joint_bridge.c",
+      "sha256": "d6c7e4160443fceb234569ccfbde680dbc8516cfdf9ba90f838a0fa28b37b533"
+    },
+    {
+      "path": "evidence/movement-state-v36/connection_overlap_bridge.c",
+      "sha256": "9e5f7501617f19bd50549a7017a008949554d9e4ed639ffeb2dcb22f024384a0"
+    },
+    {
+      "path": "run_internal_scenes_v36.py",
+      "sha256": "5ef17094062bb144bada816bd77986684d76c3e2aeb5c04d6bab66265b7e54c3"
+    },
+    {
+      "path": "audit_internal_scenes_v36.py",
+      "sha256": "efc10dac8a5caeecefc806e12deac35cda997723613e318144aa9ab7abe425f2"
+    }
+  ]
+}

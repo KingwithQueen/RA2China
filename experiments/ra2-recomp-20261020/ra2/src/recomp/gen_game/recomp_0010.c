@@ -1,3 +1,4 @@
+extern void ra2_ground_advance_place_return_bridge(void);
 extern void ra2_ground_prepare_invalidate_return_bridge(void);
 extern void ra2_ground_prepare_owner_stop_return_bridge(void);
 extern void ra2_ground_prepare_following_return_bridge(unsigned entry);
@@ -37773,6 +37774,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -37992,6 +37996,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -43124,6 +43131,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -43343,6 +43353,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -48179,6 +48192,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -48398,6 +48414,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -52683,6 +52702,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -52902,6 +52924,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -56896,6 +56921,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -57115,6 +57143,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -60169,6 +60200,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -60388,6 +60422,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -62735,6 +62772,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -62954,6 +62994,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -64959,6 +65002,9 @@ L_004A24EC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A2528;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
 L_004A24FB:
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
@@ -65178,6 +65224,9 @@ L_004A25FE:
 L_004A2604:
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
 L_004A260A:
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
@@ -66106,6 +66155,9 @@ L_004A24DC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
     PUSH32(esp, eax); /* 0x004A2502: push eax */
@@ -66257,6 +66309,9 @@ L_004A25E8:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
     ecx = MEM32(ebp + 0xC); /* 0x004A260E: mov ecx, dword ptr [ebp + 0xc] */
@@ -66566,6 +66621,9 @@ L_004A24DC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
     PUSH32(esp, eax); /* 0x004A2502: push eax */
@@ -66717,6 +66775,9 @@ L_004A25E8:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
     ecx = MEM32(ebp + 0xC); /* 0x004A260E: mov ecx, dword ptr [ebp + 0xc] */
@@ -67769,6 +67830,9 @@ L_004A24DC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
     PUSH32(esp, eax); /* 0x004A2502: push eax */
@@ -67920,6 +67984,9 @@ L_004A25E8:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
     ecx = MEM32(ebp + 0xC); /* 0x004A260E: mov ecx, dword ptr [ebp + 0xc] */
@@ -68182,6 +68249,9 @@ L_004A24DC:
 L_004A24F0:
     MEM32(esp + 0x20) = ebx; /* 0x004A24F0: mov dword ptr [esp + 0x20], ebx */
 L_004A24F4:
+    /* 共享地图查询使用入口坐标，服务后重读owner。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_template_destination_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto destination_resume_v33;
     eax = esp + 0xD0; /* 0x004A24F4: lea eax, [esp + 0xd0] */
     MEM32(esp + 0xD0) = ecx; /* 0x004A24FB: mov dword ptr [esp + 0xd0], ecx */
     PUSH32(esp, eax); /* 0x004A2502: push eax */
@@ -68333,6 +68403,9 @@ L_004A25E8:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
     ecx = MEM32(ebp + 0xC); /* 0x004A260E: mov ecx, dword ptr [ebp + 0xc] */
@@ -68540,6 +68613,9 @@ L_004A25E8:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 8; { RECOMP_REGS_OUT(); return; } /* 0x004A2604: ret 4 */
 L_004A2607:
+    /* 定位服务可改owner及保存槽，恢复字节时保持原出栈次序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     SET_LO8(ebx, MEM8(ecx + 0x74)); /* 0x004A2607: mov bl, byte ptr [ecx + 0x74] */
     MEM8(ecx + 0x74) = (uint8_t)(0); /* 0x004A260A: mov byte ptr [ecx + 0x74], 0 */
     ecx = MEM32(ebp + 0xC); /* 0x004A260E: mov ecx, dword ptr [ebp + 0xc] */

@@ -153,8 +153,13 @@ uint32_t ra2_ground_advance_service_return_bridge(unsigned entry)
 uint32_t ra2_ground_template_destination_bridge(unsigned alternate)
 {
     uint32_t frame=g_esp,drive=g_ebp,offset=alternate?0x24u:0x74u;
-    uint32_t x=MEM32(frame+offset),y=MEM32(frame+offset+4),z=MEM32(frame+offset+8);
-    MEM32(frame+0x18)=x;MEM32(frame+0x1C)=y;MEM32(frame+0x20)=z;
+    uint32_t x,y,z;
+    if(alternate==2){x=g_ecx;y=g_edx;z=g_ebx;}
+    else
+    {
+        x=MEM32(frame+offset);y=MEM32(frame+offset+4);z=MEM32(frame+offset+8);
+        MEM32(frame+0x18)=x;MEM32(frame+0x1C)=y;MEM32(frame+0x20)=z;
+    }
     MEM32(frame+0xD0)=x;MEM32(frame+0xD4)=y;MEM32(frame+0xD8)=z;
     uint32_t pointer=frame+0xD0;
     uint32_t result=call(0x548000,0x8324E0,&pointer,1);
@@ -214,4 +219,17 @@ void ra2_ground_prepare_invalidate_return_bridge(void)
         MEM8(drive+0x63)=0;
     }
     ra2_ground_prepare_service_return_bridge(0);
+}
+
+void ra2_ground_advance_place_return_bridge(void)
+{
+    uint32_t frame=g_esp,drive=g_ebp,unit=g_ecx;
+    uint8_t old_flag=MEM8(unit+0x74);MEM8(unit+0x74)=0;
+    unit=MEM32(drive+0xC);uint32_t argument=frame+0x18;
+    method(unit,0x19C,&argument,1);
+    uint32_t current_owner=MEM32(drive+0xC);
+    uint32_t saved_edi=MEM32(frame),saved_esi=MEM32(frame+4),saved_ebp=MEM32(frame+8);
+    MEM8(current_owner+0x74)=old_flag;
+    ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,current_owner&UINT32_C(0xFFFFFF00));
+    g_edi=saved_edi;g_esi=saved_esi;g_ebp=saved_ebp;
 }

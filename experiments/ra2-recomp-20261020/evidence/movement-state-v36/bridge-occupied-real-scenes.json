@@ -1,0 +1,437 @@
+{
+  "passed": true,
+  "production_scenes": 2,
+  "production_frames": 1802,
+  "independent_frames": 1802,
+  "production_executable_sha256": "5854f94bac6bdee0bd6d0b1ea6caf0eca005ae1b8a957c86affd5804e7b6a303",
+  "observer_executable_sha256": "858e33701de58e25867e7fa84d4cb0b48100af2512894d2b2879925733967aca",
+  "scenes": {
+    "north": {
+      "passed": true,
+      "frames": 901,
+      "release_frame": 300,
+      "modes": {
+        "original": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "query_samples": [
+            {
+              "frame": 108,
+              "stage": 25,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15547,
+                17335,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15552,
+                17344,
+                416
+              ]
+            },
+            {
+              "frame": 108,
+              "stage": 26,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15547,
+                17335,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15552,
+                17344,
+                416
+              ]
+            }
+          ],
+          "blocker_queries": 17,
+          "blocker_query_frames": [
+            188,
+            188,
+            188,
+            188,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            194
+          ],
+          "longest_near_exit_wait_frames": 6,
+          "wait_range": [
+            195,
+            200
+          ],
+          "blocker_departed": true,
+          "vehicle_moved_after_release": true,
+          "normal_move_reissued_frame": 320,
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                19328,
+                416
+              ],
+              "health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "health": 125,
+              "reached_goal_cell": true
+            }
+          },
+          "first_motion_after_wait_before_release": 201
+        },
+        "generated-c": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "query_samples": [
+            {
+              "frame": 108,
+              "stage": 25,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15547,
+                17335,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15552,
+                17344,
+                416
+              ]
+            },
+            {
+              "frame": 108,
+              "stage": 26,
+              "vehicle": [
+                15605,
+                16885,
+                416
+              ],
+              "infantry": [
+                15547,
+                17335,
+                416
+              ],
+              "vehicle_previous": [
+                15594,
+                16874,
+                416
+              ],
+              "infantry_previous": [
+                15552,
+                17344,
+                416
+              ]
+            }
+          ],
+          "blocker_queries": 17,
+          "blocker_query_frames": [
+            188,
+            188,
+            188,
+            188,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            194
+          ],
+          "longest_near_exit_wait_frames": 6,
+          "wait_range": [
+            195,
+            200
+          ],
+          "blocker_departed": true,
+          "vehicle_moved_after_release": true,
+          "normal_move_reissued_frame": 320,
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                19328,
+                416
+              ],
+              "health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "health": 125,
+              "reached_goal_cell": true
+            }
+          },
+          "first_motion_after_wait_before_release": 201
+        }
+      }
+    },
+    "south": {
+      "passed": true,
+      "frames": 901,
+      "release_frame": 300,
+      "modes": {
+        "original": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "query_samples": [
+            {
+              "frame": 98,
+              "stage": 25,
+              "vehicle": [
+                15488,
+                17539,
+                416
+              ],
+              "infantry": [
+                15805,
+                16988,
+                416
+              ],
+              "vehicle_previous": [
+                15488,
+                17551,
+                416
+              ],
+              "infantry_previous": [
+                15805,
+                16979,
+                416
+              ]
+            },
+            {
+              "frame": 98,
+              "stage": 26,
+              "vehicle": [
+                15488,
+                17539,
+                416
+              ],
+              "infantry": [
+                15805,
+                16988,
+                416
+              ],
+              "vehicle_previous": [
+                15488,
+                17551,
+                416
+              ],
+              "infantry_previous": [
+                15805,
+                16979,
+                416
+              ]
+            }
+          ],
+          "blocker_queries": 39,
+          "blocker_query_frames": [
+            98,
+            120,
+            185,
+            185,
+            185,
+            185,
+            185,
+            185,
+            185,
+            191,
+            191,
+            191
+          ],
+          "longest_near_exit_wait_frames": 12,
+          "wait_range": [
+            205,
+            216
+          ],
+          "blocker_departed": true,
+          "vehicle_moved_after_release": true,
+          "normal_move_reissued_frame": 320,
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                14976,
+                416
+              ],
+              "health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15808,
+                18624,
+                416
+              ],
+              "health": 125,
+              "reached_goal_cell": true
+            }
+          },
+          "first_motion_after_wait_before_release": 217
+        },
+        "generated-c": {
+          "relationship_queries": 1,
+          "geometry_queries": 1,
+          "query_samples": [
+            {
+              "frame": 98,
+              "stage": 25,
+              "vehicle": [
+                15488,
+                17539,
+                416
+              ],
+              "infantry": [
+                15805,
+                16988,
+                416
+              ],
+              "vehicle_previous": [
+                15488,
+                17551,
+                416
+              ],
+              "infantry_previous": [
+                15805,
+                16979,
+                416
+              ]
+            },
+            {
+              "frame": 98,
+              "stage": 26,
+              "vehicle": [
+                15488,
+                17539,
+                416
+              ],
+              "infantry": [
+                15805,
+                16988,
+                416
+              ],
+              "vehicle_previous": [
+                15488,
+                17551,
+                416
+              ],
+              "infantry_previous": [
+                15805,
+                16979,
+                416
+              ]
+            }
+          ],
+          "blocker_queries": 39,
+          "blocker_query_frames": [
+            98,
+            120,
+            185,
+            185,
+            185,
+            185,
+            185,
+            185,
+            185,
+            191,
+            191,
+            191
+          ],
+          "longest_near_exit_wait_frames": 12,
+          "wait_range": [
+            205,
+            216
+          ],
+          "blocker_departed": true,
+          "vehicle_moved_after_release": true,
+          "normal_move_reissued_frame": 320,
+          "motion": {
+            "1023362": {
+              "final_position": [
+                15488,
+                14976,
+                416
+              ],
+              "health": 200,
+              "reached_goal_cell": true
+            },
+            "1023367": {
+              "final_position": [
+                15808,
+                18624,
+                416
+              ],
+              "health": 125,
+              "reached_goal_cell": true
+            }
+          },
+          "first_motion_after_wait_before_release": 217
+        }
+      }
+    }
+  },
+  "ordinary_map_and_orders": true,
+  "raw_state_writes": false,
+  "scope": "Opposing E2/vehicle queries while both move on deck416. Two ordinary vehicles move to occupy the exit, are queried after initial scans, and stand still during a near-exit wait before arrival. Ordinary frame300 departure and a frame320 repeated player move precede subsequent vehicle motion. This is not an automatic-resumption claim. Arrival is reported separately.",
+  "inputs": [
+    {
+      "path": "audit_bridge_occupied_v36.py",
+      "sha256": "9446c994224245bd76141cad3405648427f3f9c2517883cac3177f18e3da106d"
+    },
+    {
+      "path": "make_bridge_occupied_v36.py",
+      "sha256": "182b73e05c6e662ce9e3ceec80b390222262e282411131d44045b1380dd442b8"
+    },
+    {
+      "path": "run_bridge_occupied_v36.py",
+      "sha256": "cc6e8d4f4979cf48617a5035cf0e76931e81c00f3f86a257d0912acd358ea801"
+    },
+    {
+      "path": "evidence/movement-state-v36/bridge-occupied-fixtures.json",
+      "sha256": "8e278a288c2d3f602be7bf0168fdbf4b6ad3f9a15f9073faf9a02f67a9749a5b"
+    }
+  ]
+}

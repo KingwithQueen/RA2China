@@ -68360,6 +68360,11 @@ L_00703A73:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x00703A7A: jmp 0x7038ef */
 L_00703A7F:
+    /* 建筑类型已确认，只读取当前建筑通行标志。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t building_resume_v36=ra2_ground_object_branch_bridge(10);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(building_resume_v36==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(esi + 0x418); /* 0x00703A7F: mov eax, dword ptr [esi + 0x418] */
     SET_LO8(ecx, MEM8(eax + 0x1350)); /* 0x00703A85: mov cl, byte ptr [eax + 0x1350] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A8B: test cl, cl */
@@ -69578,6 +69583,11 @@ L_00703A73:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x00703A7A: jmp 0x7038ef */
 L_00703A7F:
+    /* 建筑类型已确认，只读取当前建筑通行标志。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t building_resume_v36=ra2_ground_object_branch_bridge(10);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(building_resume_v36==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(esi + 0x418); /* 0x00703A7F: mov eax, dword ptr [esi + 0x418] */
     SET_LO8(ecx, MEM8(eax + 0x1350)); /* 0x00703A85: mov cl, byte ptr [eax + 0x1350] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A8B: test cl, cl */
@@ -70299,6 +70309,11 @@ L_00703A73:
     RECOMP_BACKEDGE();
     goto L_007038EF; /* 0x00703A7A: jmp 0x7038ef */
 L_00703A7F:
+    /* 建筑类型已确认，只读取当前建筑通行标志。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t building_resume_v36=ra2_ground_object_branch_bridge(10);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(building_resume_v36==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(esi + 0x418); /* 0x00703A7F: mov eax, dword ptr [esi + 0x418] */
     SET_LO8(ecx, MEM8(eax + 0x1350)); /* 0x00703A85: mov cl, byte ptr [eax + 0x1350] */
     /* test LO8(ecx), LO8(ecx) */ /* 0x00703A8B: test cl, cl */

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "phase": 16,
+  "cases": 65536,
+  "ordered_callback_values": 393216,
+  "original_stack_cleanup_verified": true,
+  "primary_fallthrough_cases": 0,
+  "secondary_service_cases": 0,
+  "alive_continuations": 0
+}
