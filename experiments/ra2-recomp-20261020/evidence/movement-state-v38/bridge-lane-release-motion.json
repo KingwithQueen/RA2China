@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "scenes": {
+    "north": {
+      "original": {
+        "vehicle_crossed_exit_frame": 250,
+        "blockers": [
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 210,
+            "first_actual_motion_frame": 253,
+            "order_to_motion_delay_frames": 43,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              18048,
+              416
+            ]
+          },
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 300,
+            "first_actual_motion_frame": 302,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15744,
+              18048,
+              416
+            ]
+          }
+        ]
+      },
+      "generated-c": {
+        "vehicle_crossed_exit_frame": 250,
+        "blockers": [
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 210,
+            "first_actual_motion_frame": 253,
+            "order_to_motion_delay_frames": 43,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              18048,
+              416
+            ]
+          },
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 300,
+            "first_actual_motion_frame": 302,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15744,
+              18048,
+              416
+            ]
+          }
+        ]
+      }
+    },
+    "south": {
+      "original": {
+        "vehicle_crossed_exit_frame": 266,
+        "blockers": [
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 226,
+            "first_actual_motion_frame": 269,
+            "order_to_motion_delay_frames": 43,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              16256,
+              416
+            ]
+          },
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 316,
+            "first_actual_motion_frame": 318,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15744,
+              16256,
+              416
+            ]
+          }
+        ]
+      },
+      "generated-c": {
+        "vehicle_crossed_exit_frame": 266,
+        "blockers": [
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 226,
+            "first_actual_motion_frame": 269,
+            "order_to_motion_delay_frames": 43,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              16256,
+              416
+            ]
+          },
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 316,
+            "first_actual_motion_frame": 318,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15744,
+              16256,
+              416
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "scope": "Release orders are ordinary submitted commands. Actual blocker motion is measured independently. In this pair the main car crosses while both blockers still retain their wait positions; the earlier release request does not immediately clear the lane. No anomaly is corrected.",
+  "inputs": [
+    {
+      "path": "audit_bridge_release_motion_v38.py",
+      "sha256": "7c279eefb1ef1591c7e9e3df33e0312e2b5ce4a15865a2075b6a3f97f052650c"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-lane-release-real-scenes.json",
+      "sha256": "118141c558ac8bdc0cc7574a7d3147892ecfc4bd7d3610b824ff24fd75c9cb5c"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-lane-release-fixtures.json",
+      "sha256": "068b5b4037218a74dedc69ca6f366470b17ee6694b707729c3f1c93efd3ba2eb"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/lp-north/original/state.jsonl",
+      "sha256": "00f4b943fcb32cc96f114857ef41cbaa45842548742818d32b895486d3f15133"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/lp-north/generated-c/state.jsonl",
+      "sha256": "00f4b943fcb32cc96f114857ef41cbaa45842548742818d32b895486d3f15133"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/lp-south/original/state.jsonl",
+      "sha256": "d973168fc8afcd7c1bdcd08ce24b3e3910d00e3bf914adabe377b989e4c42dbb"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/lp-south/generated-c/state.jsonl",
+      "sha256": "d973168fc8afcd7c1bdcd08ce24b3e3910d00e3bf914adabe377b989e4c42dbb"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "deleted_files": 296,
+  "deleted_bytes": 3565688,
+  "protected_files_unchanged": true,
+  "authorized_by_current_user_cleanup_request": true,
+  "plan_sha256": "b0f5ee9af4fea0796b47211fc0ae07fc143dde272633ed66afbb7f23717096fa",
+  "method": "Hash-checked literal file deletion; no force, no recursion",
+  "protected_files": 1127,
+  "passed": true
+}

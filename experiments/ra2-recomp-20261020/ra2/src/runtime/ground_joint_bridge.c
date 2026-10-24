@@ -4,6 +4,7 @@
 #include "ground_template_entry.h"
 #include "ground_passage_entry.h"
 #include "ground_joint_bridge.h"
+#include "ground_template_transition.h"
 typedef struct JointContext { uint32_t frame,drive,unit,cell,direction,flags;int32_t level; } JointContext;
 static uint32_t call(uint32_t address,uint32_t object,const uint32_t *args,unsigned count)
 {
@@ -240,4 +241,45 @@ void ra2_ground_advance_mark_return_bridge(void)
     g_ebp=unit;g_edx=MEM32(unit);
     uint32_t result=method(unit,0x11C,&argument,1);
     ra2_ground_return_frame(frame,RA2_FRAME_ADVANCE,result&UINT32_C(0xFFFFFF00));
+}
+
+typedef struct LateLayerContext { uint32_t drive,previous,next; } LateLayerContext;
+static int32_t late_level(void *opaque,unsigned next)
+{
+    LateLayerContext *c=opaque;
+    int32_t value=(int8_t)MEM8((next?c->next:c->previous)+0x11B);
+    if(next){g_esi=(uint32_t)value;g_edx=0x100;}else g_edx=(uint32_t)value;
+    return value;
+}
+static uint32_t late_flags(void *opaque,unsigned next)
+{
+    LateLayerContext *c=opaque;uint32_t value=MEM32((next?c->next:c->previous)+0x140);
+    g_flag_k=FK_TEST;g_flag_a=value;g_flag_b=0x100;g_flag_cf=0;
+    return value;
+}
+static void late_set_layer(void *opaque,unsigned upper)
+{
+    LateLayerContext *c=opaque;uint32_t unit=MEM32(c->drive+0xC);
+    if(upper)g_esi=unit;else g_eax=unit;
+    /* 写回可能覆盖格子标志；下次查询必须重新读取。 */
+    MEM8(unit+0x79)=(uint8_t)upper;
+}
+uint32_t ra2_ground_late_layer_bridge(void)
+{
+    LateLayerContext c={g_ebp,MEM32(g_esp+0x6C),MEM32(g_esp+0x54)};
+    g_ecx=c.previous;g_eax=c.next;
+    Ra2TemplateLayerServices services={&c,late_level,late_flags,late_set_layer};
+    ra2_ground_template_layer(&services);return 0x4A25E8;
+}
+
+void ra2_ground_advance_leave_place_return_bridge(void)
+{
+    uint32_t frame=g_esp,drive=g_ebp,argument=0;
+    /* 首次使用入口 ECX；离格回调后重新读取当前 owner。 */
+    g_eax=MEM32(g_ecx);method(g_ecx,0x11C,&argument,1);
+    uint32_t unit=MEM32(drive+0xC);argument=frame+0x18;
+    g_eax=argument;g_edx=MEM32(unit);method(unit,0x19C,&argument,1);
+    g_esp=frame;g_ebp=drive;
+    ra2_ground_late_layer_bridge();
+    ra2_ground_advance_mark_return_bridge();
 }

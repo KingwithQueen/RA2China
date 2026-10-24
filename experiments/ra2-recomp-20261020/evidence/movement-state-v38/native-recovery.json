@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "first_preparation_queue_failed": true,
+  "recovered_by_serial_full_native_rerun": true,
+  "groups": 126,
+  "production_executable_unchanged": true,
+  "inputs": [
+    {
+      "path": "evidence/movement-state-v38/native-gates.json",
+      "sha256": "3fec02281185f56ed43fb8a6e906778e9a7a59da0b66dd54451485cd137b93a2"
+    },
+    {
+      "path": "evidence/movement-state-v38/native-retry-01.log",
+      "sha256": "b14679f3b7a3e00a66d8beea3dc2a9bd906cace1e74e493936c3882d9ec3b75a"
+    },
+    {
+      "path": "evidence/movement-state-v38/native-round38-identity.json",
+      "sha256": "2d9d79a069a727d699e065a61abb927783692da69220cdd1fdba54bc519fa499"
+    },
+    {
+      "path": "evidence/movement-state-v38/investigations/native-build-01/receipt.json",
+      "sha256": "001d38a787eb5bb6456ac4cb8c0ed220c593d730a7af5f8be3d6a176b62536c4"
+    }
+  ]
+}

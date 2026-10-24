@@ -1,3 +1,5 @@
+extern void ra2_ground_advance_leave_place_return_bridge(void);
+extern unsigned ra2_ground_late_layer_bridge(void);
 extern void ra2_ground_advance_mark_return_bridge(void);
 extern void ra2_ground_advance_place_return_bridge(void);
 extern void ra2_ground_prepare_invalidate_return_bridge(void);
@@ -37900,6 +37902,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -37918,6 +37923,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -43263,6 +43271,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -43281,6 +43292,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -48330,6 +48344,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -48348,6 +48365,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -52846,6 +52866,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -52864,6 +52887,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -57071,6 +57097,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -57089,6 +57118,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -60356,6 +60388,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -60374,6 +60409,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -62934,6 +62972,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -62952,6 +62993,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -65170,6 +65214,9 @@ L_004A257D:
 L_004A2580:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
 L_004A2588:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
@@ -65188,6 +65235,9 @@ L_004A259A:
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
 L_004A25A0:
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
 L_004A25A4:
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
@@ -66292,6 +66342,9 @@ L_004A257D:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
@@ -66302,6 +66355,9 @@ L_004A2586:
     edx = MEM32(ecx); /* 0x004A2598: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
     edx = (int32_t)(int8_t)MEM8(ecx + 0x11B); /* 0x004A25A8: movsx edx, byte ptr [ecx + 0x11b] */
@@ -66764,6 +66820,9 @@ L_004A257D:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
@@ -66774,6 +66833,9 @@ L_004A2586:
     edx = MEM32(ecx); /* 0x004A2598: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
     edx = (int32_t)(int8_t)MEM8(ecx + 0x11B); /* 0x004A25A8: movsx edx, byte ptr [ecx + 0x11b] */
@@ -67979,6 +68041,9 @@ L_004A257D:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
@@ -67989,6 +68054,9 @@ L_004A2586:
     edx = MEM32(ecx); /* 0x004A2598: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
     edx = (int32_t)(int8_t)MEM8(ecx + 0x11B); /* 0x004A25A8: movsx edx, byte ptr [ecx + 0x11b] */
@@ -68404,6 +68472,9 @@ L_004A257D:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
@@ -68414,6 +68485,9 @@ L_004A2586:
     edx = MEM32(ecx); /* 0x004A2598: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
     edx = (int32_t)(int8_t)MEM8(ecx + 0x11B); /* 0x004A25A8: movsx edx, byte ptr [ecx + 0x11b] */
@@ -68621,6 +68695,9 @@ L_004A257D:
     _flag_k = FK_NARROW(FK_CMP, 16);
     if (CMP_EQ(_flag_a, _flag_b)) goto L_004A2607; /* 0x004A2580: je 0x4a2607 */
 L_004A2586:
+    /* 离格和定位均可改写 owner、落点及保存槽，随后重读。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_leave_place_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     eax = MEM32(ecx); /* 0x004A2586: mov eax, dword ptr [ecx] */
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
@@ -68631,6 +68708,9 @@ L_004A2586:
     edx = MEM32(ecx); /* 0x004A2598: mov edx, dword ptr [ecx] */
     RECOMP_ICALL(MEM32(edx + 0x19C)); /* 0x004A259A: call dword ptr [edx + 0x19c] */
     RECOMP_FLAGS_IN();
+    /* 桥层写回沿用已取格子，保留重复读取与写回顺序。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_late_layer_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); goto L_004A25E8;
     ecx = MEM32(esp + 0x6C); /* 0x004A25A0: mov ecx, dword ptr [esp + 0x6c] */
     eax = MEM32(esp + 0x54); /* 0x004A25A4: mov eax, dword ptr [esp + 0x54] */
     edx = (int32_t)(int8_t)MEM8(ecx + 0x11B); /* 0x004A25A8: movsx edx, byte ptr [ecx + 0x11b] */

@@ -1,0 +1,1282 @@
+{
+  "north_meeting_dynamic_query_observed": false,
+  "passed": true,
+  "production_scenes": 4,
+  "production_frames": 3604,
+  "independent_frames": 3604,
+  "production_executable_sha256": "d697cc4c16d5cb103343c2743c11146eb09b3f13d5c7683b8adbeef8821ae7c8",
+  "observer_executable_sha256": "5ff714e20d062a062319df615beb4e9cf5e8c7e7763d5e961edcc5330ce4e054",
+  "scenes": {
+    "meeting-north": {
+      "passed": true,
+      "meeting": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "same_frame_both_moving_queries": 0,
+          "sample_both_moving_queries": [],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 192,
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 2,
+          "simultaneous_upper_queries": 2,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        },
+        "generated-c": {
+          "same_frame_both_moving_queries": 0,
+          "sample_both_moving_queries": [],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 234,
+              "final_position": [
+                15488,
+                18560,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 192,
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 2,
+          "simultaneous_upper_queries": 2,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        }
+      }
+    },
+    "following-north": {
+      "passed": true,
+      "meeting": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "same_frame_both_moving_queries": 22,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 222,
+              "final_position": [
+                15488,
+                18304,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": false,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 239,
+              "final_position": [
+                15424,
+                18624,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 100,
+          "simultaneous_upper_queries": 100,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 107,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 107,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        },
+        "generated-c": {
+          "same_frame_both_moving_queries": 22,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 153,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 222,
+              "final_position": [
+                15488,
+                18304,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": false,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 239,
+              "final_position": [
+                15424,
+                18624,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 100,
+          "simultaneous_upper_queries": 100,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 57,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                65
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 107,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 107,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        }
+      }
+    },
+    "meeting-south": {
+      "passed": true,
+      "meeting": true,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "same_frame_both_moving_queries": 16,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 236,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 239,
+              "final_position": [
+                15424,
+                18624,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 18,
+          "simultaneous_upper_queries": 18,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        },
+        "generated-c": {
+          "same_frame_both_moving_queries": 16,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 236,
+              "final_position": [
+                15488,
+                15744,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 239,
+              "final_position": [
+                15424,
+                18624,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 18,
+          "simultaneous_upper_queries": 18,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                64
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                66
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        }
+      }
+    },
+    "following-south": {
+      "passed": true,
+      "meeting": false,
+      "frames": 901,
+      "modes": {
+        "original": {
+          "same_frame_both_moving_queries": 4,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 183,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                63
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 183,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                63
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 222,
+              "final_position": [
+                15488,
+                16000,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": false,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 192,
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 36,
+          "simultaneous_upper_queries": 36,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 73,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 73,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        },
+        "generated-c": {
+          "same_frame_both_moving_queries": 4,
+          "sample_both_moving_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 183,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                63
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 183,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                63
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ],
+          "motion": {
+            "1023362": {
+              "distinct_positions": 222,
+              "final_position": [
+                15488,
+                16000,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 200,
+              "reached_goal_cell": false,
+              "absent_at_end": false
+            },
+            "1023367": {
+              "distinct_positions": 192,
+              "final_position": [
+                15424,
+                15808,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ],
+              "final_health": 125,
+              "reached_goal_cell": true,
+              "absent_at_end": false
+            }
+          },
+          "cross_class_queries": 36,
+          "simultaneous_upper_queries": 36,
+          "sample_queries": [
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 6,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                69
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 65,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 73,
+              "stage": 24,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            },
+            {
+              "kind": "movement-audit",
+              "frame": 73,
+              "stage": 25,
+              "id": 1023362,
+              "cell": [
+                60,
+                67
+              ],
+              "value": 1023367,
+              "auxiliary": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "totals": {
+    "same_frame_both_moving_queries": 42,
+    "cross_class_queries": 156,
+    "simultaneous_upper_queries": 156,
+    "vehicle_goals": 2,
+    "infantry_goals": 4
+  },
+  "ordinary_legal_player_orders": true,
+  "raw_movement_state_writes": false,
+  "bridge_moving_infantry_vehicle_query_verified": true,
+  "scope": "Ordinary map objects and normal player-owned moves on the original bridge overlay. Motion, queries with both actors on deck, queries where both positions change that frame, and final goal cells are separately reported. North meeting only queries the pair in its initial frame6 scan before motion; south meeting and following supply actual simultaneous motion queries. No assumption that a query guarantees arrival or that all routes complete.",
+  "inputs": [
+    {
+      "path": "audit_bridge_infantry_v38.py",
+      "sha256": "ea90af5965369902c99be0ba8bc856f70b475569033de350a32523a79a26be94"
+    },
+    {
+      "path": "make_bridge_infantry_v38.py",
+      "sha256": "0261229e91d392340e449410185c21502020527a62ad27ad08a0ccd2cb8c150f"
+    },
+    {
+      "path": "run_bridge_infantry_v38.py",
+      "sha256": "4ec163d5f8ceb3faee70a9b19d6eedcf959d3ccb5e13bb8ca31b316f2743dbea"
+    },
+    {
+      "path": "extend_observer_v38.py",
+      "sha256": "9a73bf349bf9c67bcee367db6fb12fbfc111683a259bd3abe7c815040419f5ee"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-infantry-fixtures.json",
+      "sha256": "952692bf887a08ff52d824e38399b240b1d0de5a58737a73220211650a8d4fd8"
+    },
+    {
+      "path": "evidence/movement-state-v38/connection_observer.c",
+      "sha256": "f4336de20f6fbf0ac4446c3e36de255d892ebbf888f9d63b092c5a6fc3c81367"
+    }
+  ]
+}

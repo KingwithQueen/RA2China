@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "job": "bridge-infantry-scenes",
+  "production_scenes": 4,
+  "observer_scenes": 4,
+  "frames": 7208,
+  "completed_on_owned_core_lane": true,
+  "starts_after_core_bridge_observer": true,
+  "max_scene_lanes": 2,
+  "max_game_processes": 4,
+  "inputs": [
+    {
+      "path": "complete_core_infantry_v38.py",
+      "sha256": "328e736c614051d384e3ed506a807f02281d23c5ae8577be07111d6faeac409a"
+    },
+    {
+      "path": "run_bridge_infantry_v38.py",
+      "sha256": "4ec163d5f8ceb3faee70a9b19d6eedcf959d3ccb5e13bb8ca31b316f2743dbea"
+    },
+    {
+      "path": "evidence/movement-state-v38/observer-lane-assignment.json",
+      "sha256": "0c2830db647a55f7eaae405fd72780df0e5122366daa9a999505bfde32c8a7f9"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/h3-north/comparison.json",
+      "sha256": "abd3b78390e9e7ea89df68569005387da2a0038d99e2c1e0b7da0421aa541271"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/h3-south/comparison.json",
+      "sha256": "45b70e2182f155a2b39338f695105289e69806a92b526b1633884c2d64147c43"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/h3-lower-west/comparison.json",
+      "sha256": "a3c3b2bb8a6e1aff69a71228f05a38226d6a5991394b7841b4ffd3a9aef14347"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/h3-lower-east/comparison.json",
+      "sha256": "ea603ddc62a52095760d61ffbac3c09e80da4e504181ee79047ba399356aa4c1"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ip-meeting-north/comparison.json",
+      "sha256": "f7ba329a659a5f71e2389e79db3cb2670646cb91ae68b2c1d6e249a305470288"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ih-meeting-north/comparison.json",
+      "sha256": "496519fb980f17c5181c8afbf92ffe6054963406f1d1bd7fbd95240dad5a26fa"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ip-following-north/comparison.json",
+      "sha256": "abfc29a9950758777e80dbd939f39ea9afd8652e3b161b4e26f0c4174e382215"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ih-following-north/comparison.json",
+      "sha256": "92c5663b0887e5ef78a1eabf5b2c6deb16fcb8e1ffbec5809f7e8591646f9b80"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ip-meeting-south/comparison.json",
+      "sha256": "31aa3d14215bb2fee7f8740911b04dbdb4dc8a38dc31de919f9a4644447b0b09"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ih-meeting-south/comparison.json",
+      "sha256": "d827b34435a15e6ca27e56e052428ba2c74a29b2ca5e04dc7b8b914f2e9184d3"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ip-following-south/comparison.json",
+      "sha256": "c1258c3d745ded5a4a4410d8c448118b6e1809054bea03265bd08ad991a7fc17"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/ih-following-south/comparison.json",
+      "sha256": "58b8dc7575e516f1cbdb8b1b169bb154766647a34ccea2dbb43f90a79dd942a8"
+    }
+  ]
+}

@@ -68333,6 +68333,11 @@ L_00703A23:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A3F: je 0x703b5a */
 L_00703A45:
+    /* 武器已载入，直接检查可空弹头，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t weapon_resume_v38=ra2_ground_object_branch_bridge(12);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v38==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax + 0xAC); /* 0x00703A45: mov eax, dword ptr [eax + 0xac] */
     /* test eax, eax */ /* 0x00703A4B: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
@@ -69561,6 +69566,11 @@ L_00703A23:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A3F: je 0x703b5a */
 L_00703A45:
+    /* 武器已载入，直接检查可空弹头，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t weapon_resume_v38=ra2_ground_object_branch_bridge(12);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v38==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax + 0xAC); /* 0x00703A45: mov eax, dword ptr [eax + 0xac] */
     /* test eax, eax */ /* 0x00703A4B: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
@@ -70292,6 +70302,11 @@ L_00703A23:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00703B5A; /* 0x00703A3F: je 0x703b5a */
 L_00703A45:
+    /* 武器已载入，直接检查可空弹头，不重选武器。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t weapon_resume_v38=ra2_ground_object_branch_bridge(12);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(weapon_resume_v38==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax + 0xAC); /* 0x00703A45: mov eax, dword ptr [eax + 0xac] */
     /* test eax, eax */ /* 0x00703A4B: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);

@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "original_coordinator_retained_failures": [
+    "preparation probe link",
+    "neighbor audit measurement baseline",
+    "acceptance audit seed prefix replacement"
+  ],
+  "complete_native_rerun_passed": true,
+  "bridge_lane_resumed_passed": true,
+  "core_lane_passed": true,
+  "final_acceptance_passed": true,
+  "production_source_unchanged_during_recovery": true,
+  "max_scene_lanes": 2,
+  "max_game_processes": 4,
+  "inputs": [
+    {
+      "path": "record_queue_recovery_v38.py",
+      "sha256": "dd6fc0afa1369983d35b8b70d996a9ec33bc45d95774ac152e9f1a3d20a6e3f1"
+    },
+    {
+      "path": "evidence/movement-state-v38/delegated-bridge-infantry-scenes.json",
+      "sha256": "006032cb2de74f381e2bb95e1783bed57f32b5f475d0cfdfe3053342556e43cd"
+    },
+    {
+      "path": "evidence/movement-state-v38/native-recovery.json",
+      "sha256": "117631d49bdb59fc622847f50e7718addcfeb2dbaf4e7f6a61d21b7653db4276"
+    },
+    {
+      "path": "evidence/movement-state-v38/native-gates.json",
+      "sha256": "3fec02281185f56ed43fb8a6e906778e9a7a59da0b66dd54451485cd137b93a2"
+    },
+    {
+      "path": "evidence/movement-state-v38/core-scenes-complete.json",
+      "sha256": "c25b9c85d57834ce6fd0702eaacda71a746c6483132f0ad9a2502ee0d6a1539b"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-scenes-complete.json",
+      "sha256": "aafa23be48a3de6c39251f0c7606fe537906611f26bbcb4850ac2d3dab2053f9"
+    },
+    {
+      "path": "evidence/movement-state-v38/validation.json",
+      "sha256": "1c8465cb0383bf6c8b03ef736e4bbd4604d28bfa156bed4736884f0e9e0cb002"
+    },
+    {
+      "path": "evidence/movement-state-v38/final-check.json",
+      "sha256": "686e33b79b755ed661e2e4307d95ed658369ecb2579b9a4ef240c13e622fef4c"
+    },
+    {
+      "path": "evidence/movement-state-v38/queue-preparation.log",
+      "sha256": "3cb56dcbdf85c492ac2742f2688b75767a3d366e0febdb2258478f8308f13d56"
+    },
+    {
+      "path": "evidence/movement-state-v38/queue-bridge.log",
+      "sha256": "c37b0d4182cc4173005679dea909796f378600ecc6847e920bc54e1013079e87"
+    },
+    {
+      "path": "evidence/movement-state-v38/queue-bridge-resume-01.log",
+      "sha256": "3bb961c1e1ff5b526199284a9ee75aa020c2f6747430575f3ad2482d70f7dcea"
+    },
+    {
+      "path": "evidence/movement-state-v38/native-retry-01.log",
+      "sha256": "b14679f3b7a3e00a66d8beea3dc2a9bd906cace1e74e493936c3882d9ec3b75a"
+    },
+    {
+      "path": "evidence/movement-state-v38/queue-acceptance.log",
+      "sha256": "b0005d51dd5e7b6a6528bda308b0812e7ef70b9ee9782eeb87a5bf232120ecf9"
+    },
+    {
+      "path": "evidence/movement-state-v38/acceptance-resume-01.log",
+      "sha256": "1b304ded8853b504a76dadf6a2afbb5b1123c2eedc743553954971268dfd0e84"
+    }
+  ]
+}

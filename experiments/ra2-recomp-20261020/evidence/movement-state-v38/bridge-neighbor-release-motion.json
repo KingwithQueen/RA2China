@@ -1,0 +1,244 @@
+{
+  "passed": true,
+  "scenes": {
+    "north": {
+      "original": {
+        "vehicle_crossed_exit_frame": 250,
+        "blockers": [
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 210,
+            "first_actual_motion_frame": 212,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": false,
+            "position_at_cross": [
+              15744,
+              18388,
+              416
+            ]
+          },
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 420,
+            "first_actual_motion_frame": 422,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              18048,
+              416
+            ]
+          }
+        ],
+        "simultaneous_near_exit_detour_frames": [
+          212,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ],
+        "simultaneous_near_exit_detour_frame_count": 19
+      },
+      "generated-c": {
+        "vehicle_crossed_exit_frame": 250,
+        "blockers": [
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 210,
+            "first_actual_motion_frame": 212,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": false,
+            "position_at_cross": [
+              15744,
+              18388,
+              416
+            ]
+          },
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 420,
+            "first_actual_motion_frame": 422,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              18048,
+              416
+            ]
+          }
+        ],
+        "simultaneous_near_exit_detour_frames": [
+          212,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ],
+        "simultaneous_near_exit_detour_frame_count": 19
+      }
+    },
+    "south": {
+      "original": {
+        "vehicle_crossed_exit_frame": 266,
+        "blockers": [
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 226,
+            "first_actual_motion_frame": 228,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": false,
+            "position_at_cross": [
+              15744,
+              15916,
+              416
+            ]
+          },
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 436,
+            "first_actual_motion_frame": 438,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              16256,
+              416
+            ]
+          }
+        ],
+        "simultaneous_near_exit_detour_frames": [
+          228,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248
+        ],
+        "simultaneous_near_exit_detour_frame_count": 19
+      },
+      "generated-c": {
+        "vehicle_crossed_exit_frame": 266,
+        "blockers": [
+          {
+            "id": 1023363,
+            "normal_release_order_frame": 226,
+            "first_actual_motion_frame": 228,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": false,
+            "position_at_cross": [
+              15744,
+              15916,
+              416
+            ]
+          },
+          {
+            "id": 1023364,
+            "normal_release_order_frame": 436,
+            "first_actual_motion_frame": 438,
+            "order_to_motion_delay_frames": 2,
+            "held_through_vehicle_crossing": true,
+            "position_at_cross": [
+              15488,
+              16256,
+              416
+            ]
+          }
+        ],
+        "simultaneous_near_exit_detour_frames": [
+          228,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248
+        ],
+        "simultaneous_near_exit_detour_frame_count": 19
+      }
+    }
+  },
+  "scope": "Release orders are ordinary submitted commands. Actual blocker motion is measured independently. In this pair the main car crosses after the neighboring blocker starts moving and before the main-lane blocker leaves. The two lane-release orders and actual movement times are measured separately. No anomaly is corrected.",
+  "inputs": [
+    {
+      "path": "audit_bridge_neighbor_motion_v38.py",
+      "sha256": "a83ac1713b26ba06863829ae4b8eafd5dc485fc93d7eaf0fcc468268951b9a7f"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-neighbor-release-real-scenes.json",
+      "sha256": "718da73873b4b0faefcc6ae08b13bfaddb383c7b54a56e4ac4db4ac4c6877d38"
+    },
+    {
+      "path": "evidence/movement-state-v38/bridge-neighbor-release-fixtures.json",
+      "sha256": "88783a56e3202c13a17617e791e5311173bc2b15ca0932f107d87a5e832f4afd"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/nr-north/original/state.jsonl",
+      "sha256": "a24a87c880b4bf04522b354a362d560f8dbbd88845dc867433ef6d6cb17c88c4"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/nr-north/generated-c/state.jsonl",
+      "sha256": "a24a87c880b4bf04522b354a362d560f8dbbd88845dc867433ef6d6cb17c88c4"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/nr-south/original/state.jsonl",
+      "sha256": "8e304d1cd6e55e8ffdf7245e2d6b720b74d3889aee60094a55fa114e4f9c63a8"
+    },
+    {
+      "path": "evidence/movement-state-v38/runs/nr-south/generated-c/state.jsonl",
+      "sha256": "8e304d1cd6e55e8ffdf7245e2d6b720b74d3889aee60094a55fa114e4f9c63a8"
+    }
+  ]
+}

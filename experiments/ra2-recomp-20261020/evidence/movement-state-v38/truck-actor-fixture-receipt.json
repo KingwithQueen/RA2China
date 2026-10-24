@@ -1,0 +1,693 @@
+{
+  "production_exe_sha256": "d697cc4c16d5cb103343c2743c11146eb09b3f13d5c7683b8adbeef8821ae7c8",
+  "fixture_exe_sha256": "0049b84bf01c46f7eb3199e3ca2133c16e50066bbf238e01e53b5e158dc8f40f",
+  "fixture_source_sha256": "298c78cd3b9f5bf6130e744b2b02f493c18dbb9593036d56cc81389a13a3eb4b",
+  "changed_object": "movement_fixture.c.obj",
+  "object_count": 171,
+  "objects": [
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\host.c.obj",
+      "sha256": "2b6a6a3b3b9155883b10153b57187896e9eec581cdbb4684c26c7899473dad7e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\recovery_checks.c.obj",
+      "sha256": "25c56f75afed0c5feb54fd5630f3f43be86e4c906f144ce154c7e5bafebb58e1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\state_trace.c.obj",
+      "sha256": "d5ae1c4f87626492386d0bed6df28438e29980d1f9f581e78d5c5a0bbc36d216"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\truck_actor_movement_fixture.obj",
+      "sha256": "e7a2616fe4c05ca5ba2b090c14d5e759f9cc32ef3e79c4f3a92e159fdb749956"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\x87_precision.c.obj",
+      "sha256": "49cdc67fd7a5c83b58cf1d26d889732bc1f1b6dbb894a1b71bc96af39fdb7880"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\movement_bridge.c.obj",
+      "sha256": "6dce527dd3345c253b257346e4325dd763bdb81eec02b756c5193d0a3c40b70b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_bridge.c.obj",
+      "sha256": "de03fe722da4a7ef1d385724c74fcb2e11c0fcc30e3bc900982a153e1a377a8e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path.c.obj",
+      "sha256": "3bf78b93f4b1bb580b96f23c7a4a85f584f175298e34482b5bf3acaa49bde7a8"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_advance.c.obj",
+      "sha256": "1f5b7a1a58a9c88f59371d2e810167d1128cbe609ad2c3d6aa6e77100cd31343"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_continuation.c.obj",
+      "sha256": "e624728305f1f3bc83c78666bb36139ac51d31bb4dc2a6f8d62eccb8eaeecad8"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_continuation_bridge.c.obj",
+      "sha256": "403d9994b12518cc8ea88a1fa6ad77ca75ddcba4794130a6dae76d49cc6f7277"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_advance_bridge.c.obj",
+      "sha256": "23b9fd77ce4c29890c7d5f2bf765a173c2e078b2d99ae42636dcbda0f924c9c5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_drive.c.obj",
+      "sha256": "83dedc438d5a963ee4af7a34a1f0aec7a4c5b8a9fc3d65d2c9046d22cbd1d9a7"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_drive_bridge.c.obj",
+      "sha256": "4f2e5cffc943ec90c637df20a4fb134b0e089aa90fa8b2993b9bf4a02fe6569a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_collision_bridge.c.obj",
+      "sha256": "b8000e0c38539d2abb8d9594826f981ca19d055af14025c91b203adcb9619e87"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_collision.c.obj",
+      "sha256": "de54637161d1db85c32a18fe466e2f420f975e22f1cba28ab73873a969e92341"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_entry.c.obj",
+      "sha256": "d62f9542ac31af0f78499105422a52458e04dce52fce3aacf56a7e8ce4218d3f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_objects.c.obj",
+      "sha256": "3f07cc1cb6713bbb052b1a1899f11b9aac0a7acb1bb8bd57930dc695d09a6861"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_allied.c.obj",
+      "sha256": "8da020292b8f67cfcc96a9b6d15a6a84f694be445d590de306b6f68bf6fe96b1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_allied_bridge.c.obj",
+      "sha256": "34fab929798ba6fbc85fa731a004730eaf88e68a232fcfc6d9d5480f4d604b71"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_objects_bridge.c.obj",
+      "sha256": "fdf011caf99fa620693cf8fcc0f1d3305625d67b1f54f59873ff0b2637776f7f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_entry_bridge.c.obj",
+      "sha256": "8ad78637d3e441c87938c92c015a51e3d9429c16507f9dfbd1256ee80c0281c8"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_terrain.c.obj",
+      "sha256": "5fff342d830ccb71cfbc0f4eb8094b9f774232da7ab9e07a6ad2bfd0d80f476d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_arrival.c.obj",
+      "sha256": "67413b4b8a8788fa2e7b42fd16aa269661e260f9722baacb7c92c82bb777ddbe"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_prepare.c.obj",
+      "sha256": "321b84523a533a7a11a62240bf2aebf9037db9e269c056d5926865f2aa052fb5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_segment.c.obj",
+      "sha256": "7ab8ffde4b06cb5452fffb27a58ae889e5d8a5fba73d3cf3ab22f09b89ad6949"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_wait.c.obj",
+      "sha256": "7ff9e08f4699c305f6df41377734e5f38f9602033f118ee1260fa71ef8aca92a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_reaction.c.obj",
+      "sha256": "27bbb5bb46c5aec4e69c33ecbd20f4d8578f59a6d113e35298da9e39e0132e7d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_special.c.obj",
+      "sha256": "91945b2e4525f23ffc0d4d6198c568e4225ba41d84d3b8ae86e1bdd81ee8b13a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_template.c.obj",
+      "sha256": "ce2b6241bc62627950f47506bf2fbc4b5fe682916cced212fd24670a0c8804b3"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_followup.c.obj",
+      "sha256": "471a5425c52ceeb92de905ad977166221f0970afaa8d6e0cac3dcdd90b786215"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_turn.c.obj",
+      "sha256": "85d193c51082a9780f6d550ab346e949a024b1bdd07e5ab1843a58b4ab4be872"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_followup_bridge.c.obj",
+      "sha256": "2c0a1d168eca070a186252acd12287bc0eeb93a02f0beb5932d9df5503260f3f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_obstacle.c.obj",
+      "sha256": "ca94b30137c69798b0371557a2c7c56a3daf592b429d077c2ee4674c6c6942ca"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_recovery.c.obj",
+      "sha256": "c673ce41d3dc85b91740d07cc1f8a1f08938bb9f662082d66ee847b1a0f68569"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_barrier.c.obj",
+      "sha256": "80691243f71641a339d85f447cb6cae722a6386287e73421c3dcc83cdd44a29b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_barrier_bridge.c.obj",
+      "sha256": "454459cfc8928bd37ebdebcb1584e1b08fafc55e78f481e61d014f89d14ad150"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_recovery_bridge.c.obj",
+      "sha256": "2a340d50075b624a6de70ba685551f511ed214e0c7853052e25b66a42e21aa18"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_prepare_bridge.c.obj",
+      "sha256": "c29fd6c1fdd899599dee783df06e771249c2091552ab99c601d015345f3c367c"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_arrival_bridge.c.obj",
+      "sha256": "edee59d797bce1572717a774620f2a42050d2d73c7a1a332977b758c6906adb9"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\compat\\x87_arithmetic.c.obj",
+      "sha256": "df6069dd5fb80e955edcb01d87687ce1a5daf96df605fd9290bad385b537eb3e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\unit_movement.c.obj",
+      "sha256": "c9d5cdc3bba63491b4be9f9e9cd050f4f55fb4050b0523531bd7a40f758d575b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\input.c.obj",
+      "sha256": "2fad3f7b8e46458eae5dde7423e802aa6c036e13481832a8cb507635b71ff9b2"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\mods.c.obj",
+      "sha256": "d621e00c12138a79d0c339b26a3ef24d51349dbcb34fea43e93fecd07570b829"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\oracle.c.obj",
+      "sha256": "f238e648b559a56736f51a38846e076a4256a3c4ee8821a9c2e9c6bb7b1e3e88"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\present.c.obj",
+      "sha256": "dbf18517959f2f2c5fc4da4e9a683d3590fefea450b9b2ee74ad3018e28368cf"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\hdvox.c.obj",
+      "sha256": "48037efbb2350362198d188cb2350080dd516c345b84b34313236382d97b45b4"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\queuefive.c.obj",
+      "sha256": "aa15ca958882a70ad602decda7624b735d5c8efe0158dade814e482f4f6e42a5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\native32\\native32.c.obj",
+      "sha256": "6606f64672b6efca0aa1311fd062eaf36379dd121b5f1386db0dfbd99787a510"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\image_loader.c.obj",
+      "sha256": "a900537fcff18ea6b93f7537c97ddb64fc01177bcde62d3449c82bb3d3a426c4"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\D_\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\recomp_trace.c.obj",
+      "sha256": "670acd01de6e47e5c2956159eb09e5dc3ae3b4b7c788f58f66842110ec9f5f66"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0000.c.obj",
+      "sha256": "6e6c0dd3f541f30d2a0d8f45bf9a07ecae37b5390f102c37c217a66d6b307e89"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0001.c.obj",
+      "sha256": "0a1a36fda3684d9c06949a089a7ba7f9d93f62e9bdd8b2409e8ece2821d50586"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0002.c.obj",
+      "sha256": "81ae5e0ccd170d9bf4e5e8917930074530b9a80adff987240b55b8643c10b9db"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0003.c.obj",
+      "sha256": "b53dd1e360e45d121b772f83c884cd6fe11704903041abaaaea894587073c8c5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0004.c.obj",
+      "sha256": "8280e163cc9438d24500f99ecf97033d42cb953181639a2415f93a28523e8472"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0005.c.obj",
+      "sha256": "8162dd96d924208cc198bde2b0e7eec3732c4ecf99269fc8bd9532139fac979e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0006.c.obj",
+      "sha256": "8baff8e70bde176cb5a7dc1f13e36126215303b74c3467ef150ffc3c8aeb8810"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0007.c.obj",
+      "sha256": "a9cf1a2cfaf0e5a5c51f3008b8a86b15cf3fb8af1bb6442ae511fa1f28a87586"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0008.c.obj",
+      "sha256": "c46fb696e3b2b6f88f92e667fe7192c23cd4d21d0ae7a46e032b84131b3675e5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0009.c.obj",
+      "sha256": "08627d6a8e6124aea84d6318284a6b6a889c0d3e42f8c45953e8b08405396cdb"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0010.c.obj",
+      "sha256": "cae3866d284c4066ecfc28ee54da18666739ccc940ff20b975b0cfea882bd941"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0011.c.obj",
+      "sha256": "713601a6e65b343cba3a6451b59879a3ba3b41df2cd9b059027107212dcbb972"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0012.c.obj",
+      "sha256": "19367dad42e3a17f9dc4683a95f24d1fcefc2d5856f9d738377ea6e19c287825"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0013.c.obj",
+      "sha256": "a95a7866deb7140d44ae959f40c7091d45746243bbb5947f45422f645d8b6f76"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0014.c.obj",
+      "sha256": "85731cd05c0cf65d5f616804cf24913afd618c3f7bc6800217c2c2e2cefa0df2"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0015.c.obj",
+      "sha256": "8d142f58533b284f17c626d18c8cc2ce225a270da7fcded6cba6eb3e5f61bd31"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0016.c.obj",
+      "sha256": "94466dfe89c5e50dcd8b5b93b35e689a583935f96e7c164ae4653286c81c1bd9"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0017.c.obj",
+      "sha256": "dc3db0a70009b9fc630b7f6b648781c6aeb526976cdb550b09c963f5daa8b23d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0018.c.obj",
+      "sha256": "e177ae521e6ae59f485a8988630abd1b10435ab5d196e34fb3dda39843c3bfcf"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0019.c.obj",
+      "sha256": "76b9ae82eb9fd3f7459cc2fe2f151ac44a78c95ff77bdc2d408d8de838107eb3"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0020.c.obj",
+      "sha256": "47fa04ac425aaff7d623c18930959f9de8fe59c43cfa574131c493daa9306085"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0021.c.obj",
+      "sha256": "9402d035863c6d588ce086cce664e85222ae2625fc5994b49c6728801ed646f0"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0022.c.obj",
+      "sha256": "26f64a1321793b2a4bb93ab035969a249b787395203b740c514dd0f0d4bb6354"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0023.c.obj",
+      "sha256": "08750760bb334692c751835e6f1698b38f5969f6ba8b1fe82d75e48162bf2465"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0024.c.obj",
+      "sha256": "43f1d9aee445388f79fcad236c2103dd30f25d408231a965d81638040400853f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0025.c.obj",
+      "sha256": "551a00149678953957448421e8d82ae772eea8f5b204a2e828e25a28c915e637"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0026.c.obj",
+      "sha256": "d66110749eb4950aa601963e81e548321a8f842eb029da99da0f1d31be9d9792"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0027.c.obj",
+      "sha256": "2b1cd0371191b63d4beea0efefc4feb50f75c1d283ccec11a9b63df16c1e6f60"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0028.c.obj",
+      "sha256": "f1a9fb57e157a019c0e93243bf8e8759a70b288b883a58f1f764e58abfbfffb3"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0029.c.obj",
+      "sha256": "0fb18333b50a10379b8f104a5dff1ba13395ada5b98b96ba6263b3b0094577ec"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0030.c.obj",
+      "sha256": "6929a3bf79c95f0b8635f02f8f13df4eb523a144b2ecd7f996119cc864b972ef"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0031.c.obj",
+      "sha256": "a9da10c08645a4e5aa0175c005bb4492a5ff05b3e82fe27f8ad995021d963a04"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0032.c.obj",
+      "sha256": "e55a7237412a004a756a2bf2dbe81b8807e66e20b3bf4461e366b8a099f91992"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0033.c.obj",
+      "sha256": "babedc63c9cad24c5a18fdfc0652b303c0fb8f0fc3ce86c00a6dd08bbc2760b9"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0034.c.obj",
+      "sha256": "a56f170f6aa539209f0664d653ffefeaca7075c409fcb52fe7efbb3ab677380a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0035.c.obj",
+      "sha256": "d225563ea0ae26e84637a36cdd1ca477a01fdc989496fe75a593a5b66eec7628"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0036.c.obj",
+      "sha256": "bbb9641ba4846d5c762f1df6b05b407068c76b7df15c9c57d64621269e7b4dde"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0037.c.obj",
+      "sha256": "28b63176a505b852499e9184da735ce599ea3373d94e0f84804e446aca9a9c6d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0038.c.obj",
+      "sha256": "7d02f63b8be82933353cf7c8a6d764dcac64e042c7d94431b947388ce060a633"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0039.c.obj",
+      "sha256": "b4a7db37dfbdfec69480cf8133398b95f66622cea06cf357b091ede3836e7b82"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0040.c.obj",
+      "sha256": "0f0b1ea5ab51363bf09810be2ba33fbbcc33b9d2b5ffa8721757b22e46ab2e7f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0041.c.obj",
+      "sha256": "8fc5a80bf42b1927f88b9fd9908d6952b3ef67bddfbea10e5df1be579af751cd"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0042.c.obj",
+      "sha256": "3e30ac7985a21d6c7f2363fef3f1bb03eff993affdfa60413623bcc97ebe32c5"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0043.c.obj",
+      "sha256": "2f441bd32470e2bcb39261302d14daf21fbc0b75315906b26f2ded7408f3ce86"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0044.c.obj",
+      "sha256": "33263cc86dfb1aed18bfb806c770e6a79608d2591db2fe4aba75667fed3e678d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0045.c.obj",
+      "sha256": "e1e1c05bd3e571268aaae2ba1e636c297f497de1f9c366095aa7eafd5b101cc0"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0046.c.obj",
+      "sha256": "4894bfc37aa00b89d37cb6ba1ed0647843646c817b25712229486593971abe20"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0047.c.obj",
+      "sha256": "9f93eb7978b28fc811a7a69d83451e1f4d06a8d92b9c964e1f2e85cf5e207674"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0048.c.obj",
+      "sha256": "9e258a9e604e67c7c926b7bf6ba5a0b772bb9fbecfcafc09e0f471df7b9139df"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0049.c.obj",
+      "sha256": "aa9acb2b3236777825fb2542ae73e9e34f721340894b6877265e26186d59b964"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0050.c.obj",
+      "sha256": "a41a40bcd0042b5cfeef75767f96c1705472604bcc2ab2909fae0da69960e97d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0051.c.obj",
+      "sha256": "4b1b0d7fa7eec216d73dfa6448280a6def3b9c04c85a413da3c60bc81ce9b02a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0052.c.obj",
+      "sha256": "481ef2979f68c489e8c7d3c09262b443e29b3689fcddda98dfad405cc4f61d73"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0053.c.obj",
+      "sha256": "7aa6e640f7ac5b5692e3e13c423978d3c04176bd249f21d52b82752bee8fccc0"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0054.c.obj",
+      "sha256": "3d6469d32d0445769016fbc1de265a84a99176aa77445a07df274937c2113ad1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0055.c.obj",
+      "sha256": "6712dd44ce7396a89d98a70fb15994a9b555b241fb47cdf9fab0e131e9f93342"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0056.c.obj",
+      "sha256": "8b9f1eb5ebd54e65c5f71a134a9c825b3c7bea66ea93e0ffc63ae6d4f1902d42"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_0057.c.obj",
+      "sha256": "534eaae59c80015388f5453bb05401541e68770b2c1db77de115f709c67152bb"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\recomp\\gen_game\\recomp_dispatch.c.obj",
+      "sha256": "6ccdc4efab1e4152efa99acbb24790308e56b7aadabf025e927b1a73515c2375"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_cost.c.obj",
+      "sha256": "81700ec22b0645b5a5c6aaaaf4dc7650a63afa0422a8ad8fde2f8fbde7d2c2ac"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\walk_movement.c.obj",
+      "sha256": "562eafc61852e329ea36e6a02bd484805412df62d38886a22334cca1d2a79067"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\walk_movement_bridge.c.obj",
+      "sha256": "5165ace219aae186c795fa09e4d122cfb5c5fa32d81d2b50f9bce8c1c06a251e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_cache.c.obj",
+      "sha256": "a11c32d0865492ebd0f4a3e50a0738b0d820a8e389365fddbbbb507695d43caf"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_heap.c.obj",
+      "sha256": "c585cfb4e5fb49879fb36f0c960d04619cb6fee70c93689624b1d49a7017d7c1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_heap_bridge.c.obj",
+      "sha256": "8db32415ce07a58209e5a39735b13db28ddaf3cb34d075e53369cbffb9285925"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_nodes.c.obj",
+      "sha256": "c2aa4b5d9237e881b087df42eae8706b3d1d393253ee0b252b0039db06bc6b05"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_nodes_bridge.c.obj",
+      "sha256": "60b9f00f2474d3975aa93fb2b8505ae5253b3075795b70b8af76202d63e0b228"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_distance.c.obj",
+      "sha256": "8935deeaf447c81307219856513ca38e7f1bb3e01c01e5e080df01c42e0b908f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_distance_bridge.c.obj",
+      "sha256": "4da0fa25d6403c22b8e6ddf4f1449e30e9b719a79f5e7464e9b31e2113045d7d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_search.c.obj",
+      "sha256": "3a904dd7de6d20b72594cde1cb22665739019b0478b5b167819f79efd32de210"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_search_bridge.c.obj",
+      "sha256": "02cf0d00b99e7d38904b9cf045c37854a9919a4e9dc3118a6372f8352312a37a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_prepare.c.obj",
+      "sha256": "86fa2ec562b84af56ad9b2b5b1ab92acb50706f7fa4414cbec316ddeda702d42"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_region_route.c.obj",
+      "sha256": "2a2bc863f55cab56caeeef33574f803ff6a0753f3c5bb41d9cd1e32da0894f39"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_rebuild.c.obj",
+      "sha256": "847187d54d2b7e441d2c94f6ed69630411241ba5d787c04c20d525e6b734208a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_lifecycle_bridge.c.obj",
+      "sha256": "9809f36b562124ce93bc0bac4f6b7062c2a15e06300138ee4439059aa3636fd3"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_region_search.c.obj",
+      "sha256": "e3136e2a7bf9471c62c78f2de2a67ef3eec540dbfecc9b435d2ca80d7ec8d541"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_routing_bridge.c.obj",
+      "sha256": "3a19663ff7f741033ffa6293d5161c311a9e0042e55e0fa0e176ff46850c511a"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_optimize.c.obj",
+      "sha256": "0b41f52f732115125cb635c1ddfee5744ae3e18652cff2db2e4ed6ef5d474242"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_local.c.obj",
+      "sha256": "4c223d5d6608adad8894bc6b33ad2fdc08f6fccb8df1551977bbace8ccfab807"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_path_completion.c.obj",
+      "sha256": "2c0189d977159c05003f703dc7d60eb71ad38f54473bbd2ac0b2b9e97391dccb"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_path_local_bridge.c.obj",
+      "sha256": "0f19ef377163e820a638136c9fb255eabcf19c34ccbbb780398cece086a7a5fe"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_interpolation.c.obj",
+      "sha256": "5c043c2480e5f9b5fa3e06f3eb36f7694cf08ca035e87069738b2e0624c138ad"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_prepare_shared.c.obj",
+      "sha256": "7c220e4c23c64f53b467b0ee754842e5bb5bc26dcfad5b39a2796f7aa4ec01e1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_cell_services.c.obj",
+      "sha256": "966154c8ddd25c2c9744e01144d801e32cac147adebf28bc5d7edb60b4d9af2f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_services_bridge.c.obj",
+      "sha256": "621adc8a755a29a820d334e2c0e1c24699b38bd97a60bff57e751317a02c9961"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_sampling.c.obj",
+      "sha256": "af53b0ceee50699c027e2c3d93bf8681889ebe9acb89857766a5b74cb4b0d0d1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_prepare_exit.c.obj",
+      "sha256": "c1c964cf443b3f12d442eddd6949c9b16428e5b9cc9e94508a8eaf678b892a92"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_object_services.c.obj",
+      "sha256": "5f172f8e810721a553cdc1a86e03d6e41771049952549275de6d53a9fbfe2453"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_dispatch_bridge.c.obj",
+      "sha256": "1c42a9f23a7debe60107c70d3a40960a427ca816db924f590b9493d111eb3c04"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_completion.c.obj",
+      "sha256": "7051759ad900d7bdb0d8595c9449b94ba1eda1632a061778900f6f58a4366413"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_passage.c.obj",
+      "sha256": "02884552693df53204d5517009dcec9303d19fb9904dfb86bae2ccf173d7a40e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_completion_bridge.c.obj",
+      "sha256": "d7c4b4b96c2076becc3a58316170e4752f6c14d4469abd1d14d7fb4b8a172c30"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_landing.c.obj",
+      "sha256": "100e12616023b910d90f5621efcdee0dfd37c7c5c56099179f6fe2507361f653"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_failure.c.obj",
+      "sha256": "f79269cfc5e40eb0ad5b51898a7cc4f287cd2ba6126bcb78a051a8ff0ba6deb0"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_slope.c.obj",
+      "sha256": "81b40bc265c6ba6679afbd9bbe19dcdd7ed223950bc89cebf6991651ae7c0572"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_remainder_bridge.c.obj",
+      "sha256": "bb71318caf237fdacfd4a55d5f1d7ea85c768b28c0a3a007070cb117bc1c582f"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_sampling_shared.c.obj",
+      "sha256": "c736a8466fe78486ba12523b20405ef2750e7c2c976e1a642ae5903fea623a4d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_prepare_internal.c.obj",
+      "sha256": "20fd4b227a933a7e91b472be86c2e863075efae0c3f57df1cbcb0c13843f7ee0"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_internal_bridge.c.obj",
+      "sha256": "ac51ac5703265e4448471a250a4b2707710f330d8dc4cbce61af46edb77eface"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_connection_numeric.c.obj",
+      "sha256": "0c3a3ceebf22eb03b591d0ce240f9e89cc3db6570bb0dd00552ef8449537a4a9"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_connection_numeric_bridge.c.obj",
+      "sha256": "8ce9e5f2189426116158b42626290b5b38c70a7d3d8b41b9a4a703f594b1a456"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_tube_state.c.obj",
+      "sha256": "ed2fbb9006f1e7f9ef3e3c60a8e0d046c118c73694d0b0fe296901d2a638f6f1"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_handoff.c.obj",
+      "sha256": "45543d6c472785aeb0a4d65d14797b04a215bae6683ba7492738798b5c53933b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_surface_class.c.obj",
+      "sha256": "5cd46c52c10346dc4e1eee28497a291a7dfe2b3a1556060758d3efd1b4d6c7fa"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_tube_state_bridge.c.obj",
+      "sha256": "0585dcefe8bf55c12a9dea79fb2bd20c5de01de20a35755a250602cf454ff2f6"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_tube_progress.c.obj",
+      "sha256": "02d206b9526a72a9b1d2b2b4cbe782b2339a27afe1b850ea990acc14a84be0a7"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_internal_next.c.obj",
+      "sha256": "47567a77d5392e05587f15e5faf83c505da23f02aad513e31d6c0a53d7d3cf46"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_passage_finish.c.obj",
+      "sha256": "d3a127a875a94401e5e45fcf62385c968f430b6802554a79b083201ccc79b15b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_progress_bridge.c.obj",
+      "sha256": "54903559d979b399cf1b08c897f1fd55343d5da0cdd887d394ef8f12c30ccf9d"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_tube_travel.c.obj",
+      "sha256": "353fd6a65f5c32dea901c5a5f9616f3610cd46626b5504439e98ae1f5abfd359"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_template_next.c.obj",
+      "sha256": "2449d25d6a6d7f84595b44e07e4dbebadd35a09954e5f2c959282a817351c415"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_passage_neighbor.c.obj",
+      "sha256": "f28d6cd624a27cd53a9e6cc83146c1f6674416798b237718e1889975137ec1d8"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_travel_bridge.c.obj",
+      "sha256": "63552147bff8bb16e7ed96607f846fe502fd6395700306f25f23d5632bd4c800"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_template_entry.c.obj",
+      "sha256": "6c2cec3a32b5dd95b26eda598bafcc05b7619085b49c97d9ba9f17eb2d24e029"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_passage_entry.c.obj",
+      "sha256": "92b6603be2c81bc76e29781cf5e13f091b9ef9e180bc26ebc4c73569570602eb"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_return_plan.c.obj",
+      "sha256": "f009650a8d62528f697a034105b28667420191f5e9b471c03a0dc1e9b011a15e"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_joint_bridge.c.obj",
+      "sha256": "39ddbba19be7e0ab3947613a5a41a9fbcf54572fe66ced3858c08902d1fec4b6"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_template_transition.c.obj",
+      "sha256": "1350403ab2a288f3477af20f5b63656aad5dc033de19924c500bffe4c5b515d6"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\gameplay\\ground_object_chain.c.obj",
+      "sha256": "b00ef902f51f6568260b8d711a5a27834180e1c5172aed42c071be8d5e4cb57b"
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\ra2\\build-original-c\\CMakeFiles\\ra2.dir\\src\\runtime\\ground_overlap_bridge.c.obj",
+      "sha256": "a6319bdbb658158c0a3202e47ac2a21c49e9f5b4914b703ff7e310e801193bd6"
+    }
+  ]
+}
