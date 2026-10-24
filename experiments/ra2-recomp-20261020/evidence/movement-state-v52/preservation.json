@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_advance.c",
+    "ra2/src/gameplay/ground_prepare.c"
+  ],
+  "added_compile_inputs": [],
+  "build_recipe_changed": false,
+  "source_count": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 403,
+  "baseline_files": 315,
+  "parts": {
+    "prepare": {
+      "files": 338,
+      "exe_sha256": "d2372718ebc94d11692f90ebdee43b6f8c6ca6b4ef715e6e8452071c3cde7132"
+    },
+    "advance": {
+      "files": 346,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

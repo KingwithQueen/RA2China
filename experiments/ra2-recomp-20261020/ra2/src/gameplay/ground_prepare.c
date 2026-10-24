@@ -21,6 +21,29 @@ static int32_t query(const Ra2PrepareServices *services, Ra2PrepareQuery value)
     return services->query(services->context, value);
 }
 
+static Ra2PreparePhase prepare_queued_path(int32_t *cached_path_head,
+    const Ra2PrepareServices *services)
+{
+    if (*cached_path_head != -1)
+    {
+        /* 原版只对这两类目标按距离裁剪；两个类别查询的短路顺序也保留。 */
+        if (query(services, RA2_PREPARE_TARGET_CATEGORY) == 1 || query(services, RA2_PREPARE_TARGET_CATEGORY) == 15)
+        {
+            int32_t distance_in_cells = query(services, RA2_PREPARE_DISTANCE_TO_DESTINATION) / 256;
+            if (distance_in_cells < 24)
+            {
+                services->trim_path(services->context, distance_in_cells);
+                *cached_path_head = query(services, RA2_PREPARE_PATH_HEAD);
+            }
+        }
+        if (*cached_path_head != -1)
+        {
+            return RA2_PREPARE_USE_QUEUED_PATH;
+        }
+    }
+    return RA2_PREPARE_RETRY_PATH;
+}
+
 Ra2PreparePhase ra2_ground_prepare_entry(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
     int is_moving, int32_t *cached_path_head, const Ra2PrepareServices *services)
 {
@@ -52,24 +75,7 @@ Ra2PreparePhase ra2_ground_prepare_entry(Ra2GroundPrepareState *state, Ra2WorldP
         return RA2_PREPARE_RETURN_TRUE;
     }
 
-    if (*cached_path_head != -1)
-    {
-        /* 原版只对这两类目标按距离裁剪；两个类别查询的短路顺序也保留。 */
-        if (query(services, RA2_PREPARE_TARGET_CATEGORY) == 1 || query(services, RA2_PREPARE_TARGET_CATEGORY) == 15)
-        {
-            int32_t distance_in_cells = query(services, RA2_PREPARE_DISTANCE_TO_DESTINATION) / 256;
-            if (distance_in_cells < 24)
-            {
-                services->trim_path(services->context, distance_in_cells);
-                *cached_path_head = query(services, RA2_PREPARE_PATH_HEAD);
-            }
-        }
-        if (*cached_path_head != -1)
-        {
-            return RA2_PREPARE_USE_QUEUED_PATH;
-        }
-    }
-    return RA2_PREPARE_RETRY_PATH;
+    return prepare_queued_path(cached_path_head, services);
 }
 
 int ra2_ground_retry_timer_ready(Ra2PathRetryTimer timer, int32_t current_frame)
@@ -87,19 +93,9 @@ int ra2_ground_retry_timer_ready(Ra2PathRetryTimer timer, int32_t current_frame)
     return remaining == 0;
 }
 
-Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
-    Ra2PathRetryTimer timer, int32_t frame, const Ra2PrepareServices *services)
+static Ra2PreparePhase finish_failed_rebuild(Ra2GroundPrepareState *state,
+    Ra2WorldPoint invalid_position, const Ra2PrepareServices *services)
 {
-    if (!ra2_ground_retry_timer_ready(timer, frame))
-    {
-        return RA2_PREPARE_RETURN_FALSE;
-    }
-    int32_t delay = query(services, RA2_PREPARE_RETRY_DELAY_FRAMES);
-    services->restart_retry_timer(services->context, frame, delay);
-    if (services->rebuild_path(services->context))
-    {
-        return RA2_PREPARE_PATH_REBUILT;
-    }
     if (!query(services, RA2_PREPARE_OWNER_EXISTS))
     {
         services->write_aborted(services->context, 1);
@@ -137,4 +133,21 @@ Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state, Ra2WorldPoin
         }
     }
     return RA2_PREPARE_INSPECT_OBSTACLE;
+}
+
+Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
+    Ra2PathRetryTimer timer, int32_t frame, const Ra2PrepareServices *services)
+{
+    if (!ra2_ground_retry_timer_ready(timer, frame))
+    {
+        return RA2_PREPARE_RETURN_FALSE;
+    }
+    int32_t delay = query(services, RA2_PREPARE_RETRY_DELAY_FRAMES);
+    services->restart_retry_timer(services->context, frame, delay);
+    if (services->rebuild_path(services->context))
+    {
+        return RA2_PREPARE_PATH_REBUILT;
+    }
+    /* 重建服务可能移除所属对象或改变目标，失败后的判断留在服务之后。 */
+    return finish_failed_rebuild(state, invalid_position, services);
 }

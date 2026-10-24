@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 196608,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-prepare-prepare.json",
+    "part-advance-advance.json"
+  ],
+  "scope": "Prepare entry and failed retry continuation (131072); Advance sample/cell placement and callback ordering (65536). Separate original-fragment probes, not natural scene coverage."
+}

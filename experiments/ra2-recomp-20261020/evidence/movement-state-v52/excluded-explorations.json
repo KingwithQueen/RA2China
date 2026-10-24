@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "identity_js_short_window": {
+    "tag": "identity-js",
+    "scope": "Both games finished frames0..2; comparison wrapper then required a terrain catalog emitted only after frame900. Preserved as harness-input error, excluded from formal pairs."
+  },
+  "identity_confirmation": {
+    "tag": "identity-js-confirm",
+    "comparison_sha256": "2a30fdfe5d764026580b3070e5cded4437117e79acbef1e87cfdedc04ce130da",
+    "passed": true,
+    "frames": 3,
+    "counted_as_formal_pair": false
+  },
+  "inherited_original_anomalies_not_repaired": [
+    "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\excluded-explorations.json",
+    "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\corner-boundary-findings.json"
+  ]
+}

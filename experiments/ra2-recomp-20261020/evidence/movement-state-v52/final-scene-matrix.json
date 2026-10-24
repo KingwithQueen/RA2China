@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "ww",
+      "frames": 3501,
+      "exe_sha256": "24b453316d6ccee0124d8f1b571104c8be17d1da0042d1c4b465ad12e1d8a3ea",
+      "comparison_sha256": "dbfc44d55ab30db85d868dd7cf38f70365866fffa339062fa7c6eea52b9c2d07",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "js",
+      "frames": 4001,
+      "exe_sha256": "24b453316d6ccee0124d8f1b571104c8be17d1da0042d1c4b465ad12e1d8a3ea",
+      "comparison_sha256": "058af1183f0ca5e88338cac8f943284f48602175523a9f01cd2469f7cbbee9fb",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "cm",
+      "frames": 3601,
+      "exe_sha256": "24b453316d6ccee0124d8f1b571104c8be17d1da0042d1c4b465ad12e1d8a3ea",
+      "comparison_sha256": "5a8fe759420d5ca678287f6839f52545cb2e593afb34a40b5a0a9cf0071862e3",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980",
+      "comparison_sha256": "b52ad660c4a388b792dce88e4be7b114bec3b1aece489ba9edaf578ad623957a",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980",
+      "comparison_sha256": "cae9b9cd26afd9de9112ce2b981957de5f45152892a0e25b776d6476ce63e720",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980",
+      "comparison_sha256": "504c1f631f2f48b2f497e24fef76aceb6b55a1d1551b341a0790f9931ae0b4da",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980",
+      "comparison_sha256": "88552b1d77665ba7c55aeb5d5a6538bd71d82816c1b76db2682a97c72c316f60",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980",
+      "comparison_sha256": "486849aff6b4a8453bc3c5478e65997ff637f9fac3d1943cb66f400ff51ad864",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 3,
+  "observer_frames": 11103,
+  "scope": "Loaded water unload request, repeated shoreline loading, Jumpjet infantry and submarine traffic; inherited corner8 trip and affected collision/failure/height regression."
+}

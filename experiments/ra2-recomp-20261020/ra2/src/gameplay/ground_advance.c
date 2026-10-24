@@ -142,6 +142,25 @@ int ra2_ground_advance_finish_sample(const Ra2AdvanceServices *s, int32_t direct
     return 1;
 }
 
+static Ra2AdvanceCell previous_sample_cell(const Ra2AdvanceServices *s, void *c)
+{
+    int32_t index = s->query(c, RA2_ADVANCE_SAMPLE_INDEX, 0);
+    if (!index) return s->current_cell(c);
+    Ra2PathSample prior_sample = s->sample(c, index - 1, 1);
+    return cell_of(s->transform_sample(c, &prior_sample, 1));
+}
+
+static Ra2WorldPoint current_sample_position(const Ra2AdvanceServices *s, void *c,
+    Ra2PathSample *sample)
+{
+    /* 前一采样的变换服务可改索引；当前索引必须在服务之后重新查询。 */
+    int32_t index = s->query(c, RA2_ADVANCE_SAMPLE_INDEX, 0);
+    *sample = s->sample(c, index, 0);
+    Ra2WorldPoint position = s->transform_sample(c, sample, 0);
+    position.z = 0;
+    return position;
+}
+
 int ra2_ground_advance_sample(const Ra2AdvanceServices *s)
 {
     void *c = s->context;
@@ -150,18 +169,9 @@ int ra2_ground_advance_sample(const Ra2AdvanceServices *s)
         s->act(c, RA2_ADVANCE_MARK_POSITION, 0, 0);
         s->act(c, RA2_ADVANCE_CLEAR_SAMPLE_FLAGS, 0, 0);
     }
-    int32_t index = s->query(c, RA2_ADVANCE_SAMPLE_INDEX, 0);
-    Ra2AdvanceCell previous;
-    if (!index) previous = s->current_cell(c);
-    else
-    {
-        Ra2PathSample prior_sample = s->sample(c, index - 1, 1);
-        previous = cell_of(s->transform_sample(c, &prior_sample, 1));
-    }
-    index = s->query(c, RA2_ADVANCE_SAMPLE_INDEX, 0);
-    Ra2PathSample sample = s->sample(c, index, 0);
-    Ra2WorldPoint position = s->transform_sample(c, &sample, 0);
-    position.z = 0;
+    Ra2AdvanceCell previous = previous_sample_cell(s, c);
+    Ra2PathSample sample;
+    Ra2WorldPoint position = current_sample_position(s, c, &sample);
     Ra2WorldPoint raw_position = s->raw_position(c);
     Ra2TemplateCells cells = ra2_ground_template_cells(ra2_ground_sample_adjusted(position.x),
         ra2_ground_sample_adjusted(position.y), raw_position.x, raw_position.y);

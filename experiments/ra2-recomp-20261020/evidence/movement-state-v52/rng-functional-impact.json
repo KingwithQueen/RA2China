@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\rng-functional-impact.json",
+      "sha256": "b1d2852b0a034331cbe509ebb1f356b398339d47f4d4d7ec8564ca57ba64b89a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\corner-boundary-findings.json",
+      "sha256": "438ac5f94a47faf7055a293cafcdb736ca518d8873e37256d40c42713228e78a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\rules-and-locomotors.json",
+      "sha256": "8755c2dcaab99aec06fd926b2dba1cd326836a186e17e85cea941bfd863548da"
+    }
+  ],
+  "new_variants": {
+    "ww": {
+      "functional_acceptance_sha256": "6998e16049eaaf7e9f58833af621d8383cc5b8f9131d922c1c90789d6d9241f1",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 3095,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "js": {
+      "functional_acceptance_sha256": "23616837a4d2d93cd24f2cd1dc1a1430d164ea5b4e59119d43113f05547128ed",
+      "rng_first_different_frame": 440,
+      "rng_different_frames": 3270,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    }
+  },
+  "old1029_analysis_inherited_not_rerun": true,
+  "old349_coast_analysis_inherited_not_counted_as_new_pairs": true,
+  "no_rng_reset_or_seed_change": true,
+  "no_global_comparator_relaxation": true,
+  "scope": "Water unload request, repeated coast transport, Jumpjet infantry and submarine traffic effects only. Current full mode traces equal their pre-change baselines; later combat/random allocation equivalence not claimed."
+}

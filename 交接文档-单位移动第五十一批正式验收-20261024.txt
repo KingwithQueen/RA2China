@@ -1,0 +1,14 @@
+当前正式51 / 验证52，2026-10-24。
+父提交：f0460d63872c16359adc03a7b2be126dbb4cda0a。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第五十一批-Prepare重试与Advance采样及水岸交通-20261024.txt
+程序SHA-256：6d332ec0ee218c88c8abc05f5149841e31e490e53acd000fa723155612a9b980
+只整理ground_prepare与ground_advance，181C/312输入/37保护，无新增生产文件或CMake改动。Prepare分已有路径/失败重建后续；Advance分前样本/重读当前样本，服务副作用及状态顺序保留。
+196608原生片段用例（Prepare131072、Advance65536），两部分各3组1303帧；合计14组17164帧，12严格、2局部功能通过。运输128/Capture64继承，不重复计数。
+ww在700帧真实水格[129,103]执行卸载事件但载员保持，返岸1404帧才卸；原落点占用改选[139,102]，交通车2261帧实际离开，第二卸3004帧回到[138,101]。第二次装车原版1923/C1955帧差异保留。
+js的SUB/JUMPJET替换按正常地图记录，编号先短窗口确认；SHAD/E2两轮77/2004、2353/3504，潜艇、普通/飞行步兵目标格成立，生命保持。飞行步兵最终500高度、任务2悬停，峰值585；不称Guard完成，不把潜艇Z0当潜航深度。
+ww/js随机快照首差349/440，固定17帧窗口及有限功能核查；各模式当前完整轨迹等于其改动前轨迹，严格false保留，不追平随机数或逐BUG复刻。
+坡型8独立往返与列车/碾压/重复失败/高差异常有限回归；旧坡图原因、旧飞机/随机诊断等按哈希继承。29非主C/86入边继承，无新自然入口结论。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v52\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v52\parts；改动前宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v52\baseline-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v52\final-source。
+下一步可按功能需要整理ground_obstacle友军阻挡/桥层通知、ground_path_prepare桥层/朝向排除/根节点、ground_recovery失败预算/音效/关联对象通知；再补全合法卸载点占用后的等待释放、多载员卸载顺序。它们是待整理候选，不是已确认失败；其他引擎子系统仍在范围外。沿用整体功能/效果一致的有限验收，保留原版异常。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v52.py。本地提交不推送。

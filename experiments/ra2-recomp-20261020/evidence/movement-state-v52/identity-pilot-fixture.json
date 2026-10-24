@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "path": "evidence/movement-state-v52/fixtures/coast-js.MAP",
+  "sha256": "fb1f2e55f697a066be2986488c1c92b5186c0bd50036743b7bb639c338df7cb9",
+  "orders": [],
+  "last": 2,
+  "capture_host": true
+}

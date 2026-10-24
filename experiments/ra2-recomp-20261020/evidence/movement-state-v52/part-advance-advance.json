@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "advance_cases": 65536,
+  "continue_cases": 20152,
+  "removed_cases": 45384,
+  "damage_calls": 13566,
+  "same_cell_calls": 17470,
+  "state_calls_live_locals_verified": true,
+  "cases": 65536,
+  "probe_exe_sha256": "3e957f0a9c22d58ba065c99d193e0aa5acc54b7eb9e791834cf46a05160e9bfe",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}
