@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_passage.c",
+    "ra2/src/gameplay/ground_internal_next.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/gameplay/ground_transition_rules.h",
+    "ra2/src/gameplay/ground_transition_rules.c"
+  ],
+  "build_recipe_changed": true,
+  "source_count": 179,
+  "content_inputs": 308,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 380,
+  "baseline_files": 309,
+  "parts": {
+    "transition": {
+      "files": 335,
+      "exe_sha256": "89cf8de886a3dbdd4a0fef032e2fa805a07851e15f19a5bfe84c3b6829e1b59f"
+    },
+    "approach": {
+      "files": 340,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

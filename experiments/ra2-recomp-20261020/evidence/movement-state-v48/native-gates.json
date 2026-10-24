@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 65536,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-transition-completion_services-1.json",
+    "part-approach-progress-2.json"
+  ],
+  "scope": "Height/ramp/bridge transition and Prepare approach live-reference boundaries. Existing native packet constructor proof inherited unchanged."
+}

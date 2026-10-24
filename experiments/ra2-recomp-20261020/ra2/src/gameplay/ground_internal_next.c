@@ -1,4 +1,5 @@
 #include "ground_internal_next.h"
+#include "ground_transition_rules.h"
 
 int ra2_ground_full_sample_exhausted(int32_t index, int32_t x, int32_t y)
 { return x == 0 && y == 0 && index != 0; }
@@ -20,7 +21,7 @@ int ra2_ground_prepare_approach(int32_t *level, const Ra2PrepareApproachServices
     services->construct_target(context, displaced(point, services->offset(context)));
     services->store_probe(context, services->position(context));
     uintptr_t cell = services->probe_cell(context);
-    *level = services->cell_level(context, cell) + (services->upper_layer(context) ? 4 : 0);
+    *level = ra2_ground_layer_reference(services->cell_level(context, cell),services->upper_layer(context));
 
     /* 首次查询可能改变单位、坐标或偏移表，不能沿用上面的缓存。 */
     point = services->position(context);

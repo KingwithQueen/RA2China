@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "dc",
+      "baseline_tag": "b-dc",
+      "path": "evidence/movement-state-v48/fixtures/collapse-cargo-shore.MAP",
+      "sha256": "09165c9293158183dc8e025a78c2aa16817db6818f282cc52924d96b977e75e2",
+      "orders": [
+        "50:1023363:7:1023362:0",
+        "300:1023364:2:60:79",
+        "500:1023366:2:65:61",
+        "1000:1023365:2:64:72",
+        "400:1023362:2:63:59",
+        "1500:1023362:16:0:0",
+        "1700:1023363:2:64:62"
+      ],
+      "last": 2200,
+      "capture_host": true
+    },
+    {
+      "tag": "wg",
+      "baseline_tag": "b-wg",
+      "path": "evidence/movement-state-v48/fixtures/collapse-cargo-shore.MAP",
+      "sha256": "09165c9293158183dc8e025a78c2aa16817db6818f282cc52924d96b977e75e2",
+      "orders": [
+        "50:1023363:7:1023362:0",
+        "300:1023364:2:60:79",
+        "500:1023366:2:65:61",
+        "1000:1023365:2:64:72",
+        "400:1023362:2:60:66",
+        "1200:1023362:16:0:0",
+        "1450:1023362:2:63:59",
+        "2000:1023362:16:0:0",
+        "2150:1023363:2:64:62"
+      ],
+      "last": 2550,
+      "capture_host": true
+    },
+    {
+      "tag": "ss",
+      "baseline_tag": "b-ss",
+      "path": "evidence/movement-state-v48/fixtures/bridge-slope-ss.MAP",
+      "sha256": "4a328eacc747513d193ceac9898f7db61faed7b2ccf64024ecb23f476d41c72d",
+      "orders": [
+        "5:1023362:2:60:80",
+        "60:1023363:2:61:55",
+        "75:1023365:2:60:55",
+        "450:1023364:2:61:82",
+        "900:1023362:2:60:56"
+      ],
+      "last": 1800,
+      "capture_host": true,
+      "start": [
+        60,
+        56
+      ],
+      "slope_type": 2,
+      "source_cell": [
+        54,
+        44
+      ]
+    },
+    {
+      "tag": "es",
+      "baseline_tag": "b-es",
+      "path": "evidence/movement-state-v48/fixtures/bridge-slope-es.MAP",
+      "sha256": "145e58edb4037edea61ba780fe1e01a04c8e06fd632f80d885dd8c1403c03c12",
+      "orders": [
+        "5:1023362:2:60:80",
+        "60:1023363:2:61:55",
+        "75:1023365:2:60:55",
+        "450:1023364:2:61:82",
+        "900:1023362:2:54:58"
+      ],
+      "last": 1800,
+      "capture_host": true,
+      "start": [
+        54,
+        58
+      ],
+      "slope_type": 3,
+      "source_cell": [
+        69,
+        40
+      ]
+    }
+  ],
+  "ordinary_maps_and_commands": true,
+  "direct_result_or_path_writes": false
+}

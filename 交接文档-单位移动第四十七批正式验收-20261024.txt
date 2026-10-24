@@ -1,0 +1,14 @@
+当前正式47 / 验证48，2026-10-24。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第四十七批-高度转换与接近服务及毁桥运输和多向坡面-20261024.txt
+程序SHA-256：8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858
+新增ground_transition_rules，整理同高/一级坡面/四级桥层判断和上层参考高度；Prepare接近阶段保留两组实时世界查询，不缓存第一次结果。
+179C/308输入/37保护；生成入口/runtime/生产记录器/比较器/规则与美术未改。
+两部分各3配对1303帧并保留回退；正式矩阵共15配对13465帧，原生65536例。运输构造器128例及Capture64例证明继承，不重复计数。
+毁桥载车的清地与道路卸载已核对实际落格land0/1；道路场景桥毁瞬间船正带货水平移动，清地桥毁时处于起步转向阶段，随后完整运输/卸车/独立移动。
+南侧坡型2、东西向坡型3往返及动态交通完成，实际高差416↔520、桥层两进两出。船不在断裂桥面上，不冒称验证了坠落/直接伤害。
+清地气垫瞬时数值和三条关系查询1帧时点差异单列功能验收，当前各模式与基线完整轨迹相同，严格false保留。
+额外b3-dc在改代码前即有1029帧起随机数分流，根因未定、未计通过；b-dc/b-wg低岸试验未形成移动，也不计水面卸载验证。全部输入/轨迹与原版高差异常/旧差异及29候选调查保留。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v48\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v48\parts；基线宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v48\baseline-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v48\final-source。
+后续优先有界核查额外时序的随机数差异、其他装卸地形、贴近坍塌区的载具伤害，再推进剩余状态服务、坡型/移动器及其他子系统。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v48.py。本地提交不推送。

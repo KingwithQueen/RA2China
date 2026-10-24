@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unqualified_low_shore_tags": [
+    "b-dc",
+    "b-wg"
+  ],
+  "unqualified_timed_clear_tag": "b3-dc",
+  "timed_clear_prechange_rng_divergence_frame": 1029,
+  "prechange_parent_executable": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v48\\baseline-observer\\bridge-catalog-observer.exe",
+  "root_cause_unresolved": true,
+  "accepted_clear_tag": "b2-dc",
+  "accepted_road_tag": "b3-rd",
+  "scope": "Low shore did not move. Timed clear variant diverged RNG before this batch code changes and is not accepted; full records retained. Road variant covers actual loaded horizontal movement at bridge collapse; clear variant covers loaded turning phase collapse and subsequent unload. Common comparator/RNG gate unchanged."
+}

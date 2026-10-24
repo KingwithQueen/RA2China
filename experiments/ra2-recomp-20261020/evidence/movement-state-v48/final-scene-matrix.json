@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "dc",
+      "frames": 2201,
+      "exe_sha256": "f52b71de801591e72b37c9ceb858d3eb07feadc437318414c32a3473f32af76a",
+      "comparison_sha256": "ffe7ead052893d2c62d732c8aaeb150464689137983dc258aa698273dd7675cf",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "rd",
+      "frames": 1601,
+      "exe_sha256": "f52b71de801591e72b37c9ceb858d3eb07feadc437318414c32a3473f32af76a",
+      "comparison_sha256": "603cc760173be592993f36106422190f4b3e729c5a622aaeeea5ba5465039cbc",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "ss",
+      "frames": 1801,
+      "exe_sha256": "f52b71de801591e72b37c9ceb858d3eb07feadc437318414c32a3473f32af76a",
+      "comparison_sha256": "516bee54873da26e355c6673364dc6fa0242a9d8239e323f968537292be0f0a5",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "es",
+      "frames": 1801,
+      "exe_sha256": "f52b71de801591e72b37c9ceb858d3eb07feadc437318414c32a3473f32af76a",
+      "comparison_sha256": "aad6b54936a0ec4b0c8ad10aa05be8713671b733493696e0cf569c6c7d1e0c4c",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+      "comparison_sha256": "e0862af50f6d73cced2618c51939da7c7b70c879d77ab790455269626505e7ab",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+      "comparison_sha256": "f2b3ec681bf5e78b336a8774af31f8a991c6813eef211363bf065b9bbaea4808",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+      "comparison_sha256": "0000d5291f77ff0527107371b87483986a1d3983577f4835a3ccda10930e0acb",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+      "comparison_sha256": "f623ed2cfd64f49da077012347f00f60fbcd53f5c3bd4c15a4b23c613ee1039f",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+      "comparison_sha256": "980098bc9367dc639269f8366b57b2c6e15eb8e6039f7e6e4e0d927b13cb0516",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 4,
+  "observer_frames": 7404,
+  "scope": "Finite collapse while vehicle-loaded, water/land unload and south/east-west ramps, with affected collision/failure/height regression."
+}

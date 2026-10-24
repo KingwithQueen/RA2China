@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "shared": "ground_transition_rules",
+  "reference": "uint32(level)+(upper?4:0), returned as int32 bits",
+  "height_cases": {
+    "same": "bridge/deck flags first, then unknown/equal reference",
+    "one": "down checks destination ramp; up checks origin ramp",
+    "four": "preserve bridge/reference guards; write changing_layer=1 only on allowed downward four-level transition",
+    "other": "blocked7"
+  },
+  "passage": {
+    "unknown_reference_initialization_preserved": true,
+    "direction_minus_one_special_case_preserved": true,
+    "invalid_origins_early_return_preserved": true
+  },
+  "approach": {
+    "order": [
+      "reset budget",
+      "direction8 early exit",
+      "position/offset and target construction",
+      "fresh position stored as probe",
+      "cell and layer-adjusted reference",
+      "fresh position/offset and probe construction",
+      "fresh cell/flags and upper layer",
+      "mark mismatch"
+    ],
+    "do_not_cache_first_query_context": true
+  },
+  "native_groups": [
+    {
+      "probe": "completion_services",
+      "phase": 1,
+      "cases": 32768
+    },
+    {
+      "probe": "progress",
+      "phase": 2,
+      "cases": 32768
+    }
+  ],
+  "production_rules_changed": false,
+  "art_resources_changed": false,
+  "generated_runtime_adapters_changed": false,
+  "transport_packets_inherited": 128
+}
