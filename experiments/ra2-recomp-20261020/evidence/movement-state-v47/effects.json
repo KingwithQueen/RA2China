@@ -1,0 +1,466 @@
+{
+  "passed": true,
+  "representative": {
+    "vehicle-cargo": {
+      "passed": true,
+      "carrier_type": "LCRF",
+      "cargo_type": "TRUCKA",
+      "board_frame": 145,
+      "unload_order": 1200,
+      "unload_frame": 1204,
+      "post_unload_order": 1450,
+      "post_unload_first_motion": 1474,
+      "carrier_final": [
+        16258,
+        15231,
+        499
+      ],
+      "cargo_final": [
+        16320,
+        16448,
+        416
+      ],
+      "foot_final": [
+        16832,
+        15680,
+        416
+      ],
+      "carrier_and_foot_horizontal_overlap_frames": 476,
+      "negative_control_keeps_vehicle_loaded": true,
+      "static_vehicle": [
+        16512,
+        16000,
+        416
+      ],
+      "static_vehicle_move_order_did_not_produce_motion": true,
+      "static_vehicle_not_counted_as_dynamic_traffic": true,
+      "normal_destination_enter_and_unload": true
+    },
+    "real-bridge-slope": {
+      "passed": true,
+      "ground_locomotor": true,
+      "height_range": [
+        416,
+        520
+      ],
+      "ramp_type": 4,
+      "ramp_row": 61,
+      "bridge_layer_transitions": [
+        {
+          "frame": 0,
+          "upper_layer": 0,
+          "position": [
+            15488,
+            14464,
+            520
+          ]
+        },
+        {
+          "frame": 155,
+          "upper_layer": 1,
+          "position": [
+            15488,
+            16128,
+            416
+          ]
+        },
+        {
+          "frame": 308,
+          "upper_layer": 0,
+          "position": [
+            15488,
+            18184,
+            416
+          ]
+        },
+        {
+          "frame": 1099,
+          "upper_layer": 1,
+          "position": [
+            15488,
+            18174,
+            416
+          ]
+        },
+        {
+          "frame": 1230,
+          "upper_layer": 0,
+          "position": [
+            15488,
+            16117,
+            416
+          ]
+        }
+      ],
+      "ramps": [
+        {
+          "direction": "down",
+          "samples": [
+            {
+              "frame": 123,
+              "position": [
+                15488,
+                15626,
+                518
+              ]
+            },
+            {
+              "frame": 124,
+              "position": [
+                15488,
+                15641,
+                513
+              ]
+            },
+            {
+              "frame": 125,
+              "position": [
+                15488,
+                15657,
+                504
+              ]
+            },
+            {
+              "frame": 126,
+              "position": [
+                15488,
+                15673,
+                500
+              ]
+            },
+            {
+              "frame": 127,
+              "position": [
+                15488,
+                15689,
+                491
+              ]
+            },
+            {
+              "frame": 128,
+              "position": [
+                15488,
+                15704,
+                487
+              ]
+            },
+            {
+              "frame": 129,
+              "position": [
+                15488,
+                15720,
+                478
+              ]
+            },
+            {
+              "frame": 130,
+              "position": [
+                15488,
+                15736,
+                473
+              ]
+            },
+            {
+              "frame": 131,
+              "position": [
+                15488,
+                15741,
+                469
+              ]
+            },
+            {
+              "frame": 132,
+              "position": [
+                15488,
+                15767,
+                459
+              ]
+            },
+            {
+              "frame": 133,
+              "position": [
+                15488,
+                15783,
+                454
+              ]
+            },
+            {
+              "frame": 134,
+              "position": [
+                15488,
+                15798,
+                450
+              ]
+            },
+            {
+              "frame": 135,
+              "position": [
+                15488,
+                15814,
+                441
+              ]
+            },
+            {
+              "frame": 136,
+              "position": [
+                15488,
+                15830,
+                436
+              ]
+            },
+            {
+              "frame": 137,
+              "position": [
+                15488,
+                15846,
+                427
+              ]
+            },
+            {
+              "frame": 138,
+              "position": [
+                15488,
+                15861,
+                423
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "up",
+          "samples": [
+            {
+              "frame": 1246,
+              "position": [
+                15488,
+                15865,
+                417
+              ]
+            },
+            {
+              "frame": 1247,
+              "position": [
+                15488,
+                15850,
+                422
+              ]
+            },
+            {
+              "frame": 1248,
+              "position": [
+                15488,
+                15834,
+                431
+              ]
+            },
+            {
+              "frame": 1249,
+              "position": [
+                15488,
+                15818,
+                435
+              ]
+            },
+            {
+              "frame": 1250,
+              "position": [
+                15488,
+                15803,
+                439
+              ]
+            },
+            {
+              "frame": 1251,
+              "position": [
+                15488,
+                15787,
+                448
+              ]
+            },
+            {
+              "frame": 1252,
+              "position": [
+                15488,
+                15771,
+                453
+              ]
+            },
+            {
+              "frame": 1253,
+              "position": [
+                15488,
+                15755,
+                462
+              ]
+            },
+            {
+              "frame": 1254,
+              "position": [
+                15488,
+                15747,
+                466
+              ]
+            },
+            {
+              "frame": 1255,
+              "position": [
+                15488,
+                15724,
+                472
+              ]
+            },
+            {
+              "frame": 1256,
+              "position": [
+                15488,
+                15708,
+                481
+              ]
+            },
+            {
+              "frame": 1257,
+              "position": [
+                15488,
+                15693,
+                485
+              ]
+            },
+            {
+              "frame": 1258,
+              "position": [
+                15488,
+                15677,
+                494
+              ]
+            },
+            {
+              "frame": 1259,
+              "position": [
+                15488,
+                15661,
+                499
+              ]
+            },
+            {
+              "frame": 1260,
+              "position": [
+                15488,
+                15646,
+                503
+              ]
+            },
+            {
+              "frame": 1261,
+              "position": [
+                15488,
+                15630,
+                512
+              ]
+            }
+          ]
+        }
+      ],
+      "round_trip_goal_reached": true,
+      "blocking_vehicle_first_motion": 479,
+      "all_health_preserved": true,
+      "ordinary_map_records": true,
+      "original_bridge_overlay_retained": true,
+      "runtime_path_or_height_injection": false
+    }
+  },
+  "bridge_cross_release": true,
+  "real_train_contact": true,
+  "real_infantry_crushing": true,
+  "repeated_failure_frames": [
+    451,
+    511,
+    571,
+    631,
+    691,
+    751,
+    811,
+    871,
+    931,
+    991,
+    1051,
+    1111
+  ],
+  "original_anomalies": [
+    {
+      "tag": "curve-up",
+      "original_final_position": [
+        18040,
+        29059,
+        436
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    },
+    {
+      "tag": "curve-tall-down",
+      "original_final_position": [
+        19583,
+        29070,
+        -193
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    }
+  ],
+  "accepted_baseline_variations": 2,
+  "production_rules_and_art_files_changed": false,
+  "whole_game_equivalence_verified": false,
+  "bug_for_bug_required": false,
+  "hover_variations": [
+    {
+      "passed": true,
+      "comparison_sha256": "61e9274d4df9383398eafdb4367714ac6988c4cca94d30ee8d281bc047db5780",
+      "strict_comparison_preserved_false": true,
+      "max_world_coordinate_delta": [
+        13,
+        21
+      ],
+      "max_circular_heading_delta": [
+        5316,
+        5324
+      ],
+      "max_facing_timing_delta": [
+        257,
+        4
+      ],
+      "all_other_state_fields_and_ordinary_commands_equal": true,
+      "all_ground_and_nonterrain_audit_records_equal": true,
+      "hover_terrain_rule_value_counts_equal": true,
+      "baseline_inherited_exactly": true,
+      "baseline_original_trace_sha256": "3a5de40cc9e6b372eeeb14c714fe9c1c8e40a21778a9b7cd899c4a0246282d7d",
+      "baseline_C_trace_sha256": "4936057625dfe441b8d2582152afb0f9a4a6d1f4704911797576dcbedbc7f645",
+      "scope": "Only existing Hover horizontal position/turn state and its terrain-query timing vary. Ground vehicles, infantry, bridge effects, health, missions, RNG and ordinary commands match. Current traces must match each baseline mode exactly; no global comparator relaxation."
+    },
+    {
+      "passed": true,
+      "comparison_sha256": "5f4098acc5ba2bf943987478d9a6e66263cda951b58a8289dccd956e7bdb9b27",
+      "strict_comparison_preserved_false": true,
+      "max_world_coordinate_delta": [
+        13,
+        21
+      ],
+      "max_circular_heading_delta": [
+        5316,
+        5324
+      ],
+      "max_facing_timing_delta": [
+        257,
+        4
+      ],
+      "all_other_state_fields_and_ordinary_commands_equal": true,
+      "all_ground_and_nonterrain_audit_records_equal": true,
+      "hover_terrain_rule_value_counts_equal": true,
+      "baseline_inherited_exactly": true,
+      "baseline_original_trace_sha256": "4fc27e6c4b45af19bc0d87d629251b6805c41bf4ad03d6ca8a86bc775cdb31a2",
+      "baseline_C_trace_sha256": "398cf1f522ce942101bfe2461c681cb37c8fe991ca00a93e23a1f1e80094f8b3",
+      "scope": "Only existing Hover horizontal position/turn state and its terrain-query timing vary. Ground vehicles, infantry, bridge effects, health, missions, RNG and ordinary commands match. Current traces must match each baseline mode exactly; no global comparator relaxation."
+    }
+  ]
+}

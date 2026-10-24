@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_entry.h"
+#include "ground_bridge_plane.h"
 
 static int direction_conflicts(int32_t direction, int32_t link_direction)
 {
@@ -26,7 +27,7 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
         return RA2_ENTRY_BLOCKED;
     if (s->check_placement(c,state)==7) return RA2_ENTRY_BLOCKED;
     if (state->reference_level!=-1 && s->query(c,RA2_ENTRY_HAS_BRIDGE)
-        && state->reference_level==s->query(c,RA2_ENTRY_CELL_LEVEL)+4)
+        && ra2_ground_bridge_height_matches(state->reference_level,s->query(c,RA2_ENTRY_CELL_LEVEL)))
     {
         state->occupation_flags=(uint8_t)s->query(c,RA2_ENTRY_UPPER_FLAGS);
         state->vehicle_present=(state->occupation_flags>>5)&1u;

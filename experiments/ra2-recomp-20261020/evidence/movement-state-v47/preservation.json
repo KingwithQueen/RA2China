@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_entry.c",
+    "ra2/src/gameplay/ground_template_transition.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/gameplay/ground_bridge_plane.c",
+    "ra2/src/gameplay/ground_bridge_plane.h"
+  ],
+  "build_recipe_changed": true,
+  "source_count": 178,
+  "content_inputs": 306,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 384,
+  "baseline_files": 307,
+  "parts": {
+    "entry": {
+      "files": 334,
+      "exe_sha256": "84337b9fbb8bf613d011d9e071e4d01944388b84bb0070cc004d332b50c727da"
+    },
+    "layer": {
+      "files": 337,
+      "exe_sha256": "dcbb410bab0ef8e57aa5f4c316f24718b37289a7c7b97280155ba799a1faee42"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

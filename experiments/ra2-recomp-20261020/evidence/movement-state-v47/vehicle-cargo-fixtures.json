@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "vc",
+      "baseline_tag": "b-vc",
+      "path": "evidence/movement-state-v47/fixtures/vehicle-cargo.MAP",
+      "sha256": "cb75e04e2aec91a394ccac0435283effc750e12a561b8ff864a6a81c2972aa88",
+      "orders": [
+        "50:1023363:7:1023362:0",
+        "400:1023362:2:63:59",
+        "500:1023364:2:64:73",
+        "500:1023365:2:65:61",
+        "1200:1023362:16:0:0",
+        "1450:1023363:2:63:64"
+      ],
+      "last": 1900,
+      "capture_host": true
+    },
+    {
+      "tag": "cc",
+      "baseline_tag": "b-cc",
+      "path": "evidence/movement-state-v47/fixtures/vehicle-cargo.MAP",
+      "sha256": "cb75e04e2aec91a394ccac0435283effc750e12a561b8ff864a6a81c2972aa88",
+      "orders": [
+        "50:1023363:7:1023362:0",
+        "400:1023362:2:63:59",
+        "500:1023364:2:64:73",
+        "500:1023365:2:65:61"
+      ],
+      "last": 1900,
+      "capture_host": true
+    }
+  ],
+  "ordinary_map_and_commands": true
+}

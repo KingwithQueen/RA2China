@@ -1,6 +1,7 @@
 #include <string.h>
 #include "ground_template_entry.h"
 #include "ground_template_transition.h"
+#include "ground_bridge_plane.h"
 
 static int32_t signed_shift_cell(uint32_t adjusted)
 {
@@ -42,17 +43,6 @@ void ra2_ground_template_gate(const Ra2TemplateGateServices *services)
 
 void ra2_ground_template_layer(const Ra2TemplateLayerServices *services)
 {
-    void *context = services->context;
-    int32_t previous_level = services->level(context, 0);
-    int32_t next_level = services->level(context, 1);
-    if ((uint32_t)next_level == (uint32_t)previous_level - 4u
-        && (services->flags(context, 1) & 0x100u))
-    {
-        services->set_layer(context, 1);
-    }
-    if (!(services->flags(context, 1) & 0x100u)
-        && (services->flags(context, 0) & 0x100u))
-    {
-        services->set_layer(context, 0);
-    }
+    /* set_layer 后重新查询标志的约定由共享边界保持，不能预先缓存下一格标志。 */
+    ra2_ground_transition_bridge(services->context,services->level,services->flags,services->set_layer);
 }

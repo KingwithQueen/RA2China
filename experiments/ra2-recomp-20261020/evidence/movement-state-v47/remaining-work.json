@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "percentage_reestimated": false,
+  "remaining": [
+    "Other generated state/service entries",
+    "More vehicle cargo/unload terrain, collapse while loaded, and slope directions/types",
+    "Other locomotors and engine subsystem integration"
+  ]
+}

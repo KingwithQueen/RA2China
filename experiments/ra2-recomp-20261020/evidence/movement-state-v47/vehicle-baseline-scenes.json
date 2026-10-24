@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-vc",
+      "strict_passed": false,
+      "frames": 1901,
+      "comparison_sha256": "bb9bcf4119e96309ce67feacc73ee07fca899e2a06ad11dd7dc531a002ab7a0e"
+    },
+    {
+      "tag": "b-cc",
+      "strict_passed": false,
+      "frames": 1901,
+      "comparison_sha256": "5d5f04557ec1c713d770a397b7ccc4d85df79876e4a7091e08b58ade2504d92c"
+    }
+  ],
+  "effect_qualification_required": true,
+  "excluded_from_final_acceptance_count": true
+}

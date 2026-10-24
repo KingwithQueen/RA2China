@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 131072,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-entry-entry-None.json",
+    "part-layer-advance-None.json"
+  ],
+  "scope": "Entry bridge-plane occupation and Advance layer transitions; preserve live service order. Existing native packet constructor proof inherited unchanged."
+}
