@@ -1,0 +1,540 @@
+{
+  "passed": true,
+  "baseline_scenes": [
+    {
+      "tag": "b-mi",
+      "comparison_sha256": "d1b4255e8a573ca92920ff8175c88853747704eacd43d440998ba0aa98ea5806",
+      "effects": {
+        "original": {
+          "cycles": {
+            "1023363": [
+              {
+                "board_frame": 133,
+                "drop_frame": 2020,
+                "water_frames": 693,
+                "landing_cell": [
+                  139,
+                  102
+                ],
+                "landing_land": 0
+              }
+            ],
+            "1023368": [
+              {
+                "board_frame": 197,
+                "drop_frame": 2004,
+                "water_frames": 693,
+                "landing_cell": [
+                  139,
+                  101
+                ],
+                "landing_land": 0
+              }
+            ]
+          },
+          "actor_health": {
+            "1023362": 300,
+            "1023364": 600,
+            "1023369": 125,
+            "1023363": 200,
+            "1023368": 125,
+            "1023366": 200,
+            "1023367": 200
+          },
+          "carrier_final_cell": [
+            138,
+            102
+          ],
+          "ship_final_cell": [
+            130,
+            106
+          ],
+          "cargo_final_cells": {
+            "1023363": [
+              139,
+              104
+            ],
+            "1023368": [
+              140,
+              104
+            ]
+          },
+          "special": {
+            "simultaneous_loaded_range": [
+              197,
+              2003
+            ],
+            "mixed_passengers": [
+              {
+                "id": 1023363,
+                "type": "TRUCKA",
+                "size": 6
+              },
+              {
+                "id": 1023368,
+                "type": "E2",
+                "size": 1
+              }
+            ],
+            "payload_size": 7,
+            "capacity": 12,
+            "size_limit": 6,
+            "water_with_both_frames": 693,
+            "beach_with_both_frames": 49,
+            "drop_order": [
+              1023368,
+              1023363
+            ],
+            "drop_frames": [
+              2004,
+              2020
+            ],
+            "shore": [
+              138,
+              102
+            ],
+            "shore_land": 0,
+            "neighbour_land_vector": [
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "traffic_at_unload": {
+              "1023366": [
+                141,
+                104
+              ],
+              "1023367": [
+                138,
+                101
+              ]
+            },
+            "all_normal_goals_guard": true
+          }
+        },
+        "generated-c": {
+          "cycles": {
+            "1023363": [
+              {
+                "board_frame": 133,
+                "drop_frame": 2018,
+                "water_frames": 693,
+                "landing_cell": [
+                  139,
+                  102
+                ],
+                "landing_land": 0
+              }
+            ],
+            "1023368": [
+              {
+                "board_frame": 197,
+                "drop_frame": 2004,
+                "water_frames": 693,
+                "landing_cell": [
+                  139,
+                  101
+                ],
+                "landing_land": 0
+              }
+            ]
+          },
+          "actor_health": {
+            "1023362": 300,
+            "1023364": 600,
+            "1023369": 125,
+            "1023363": 200,
+            "1023368": 125,
+            "1023366": 200,
+            "1023367": 200
+          },
+          "carrier_final_cell": [
+            138,
+            102
+          ],
+          "ship_final_cell": [
+            130,
+            106
+          ],
+          "cargo_final_cells": {
+            "1023363": [
+              139,
+              104
+            ],
+            "1023368": [
+              140,
+              104
+            ]
+          },
+          "special": {
+            "simultaneous_loaded_range": [
+              197,
+              2003
+            ],
+            "mixed_passengers": [
+              {
+                "id": 1023363,
+                "type": "TRUCKA",
+                "size": 6
+              },
+              {
+                "id": 1023368,
+                "type": "E2",
+                "size": 1
+              }
+            ],
+            "payload_size": 7,
+            "capacity": 12,
+            "size_limit": 6,
+            "water_with_both_frames": 693,
+            "beach_with_both_frames": 49,
+            "drop_order": [
+              1023368,
+              1023363
+            ],
+            "drop_frames": [
+              2004,
+              2018
+            ],
+            "shore": [
+              138,
+              102
+            ],
+            "shore_land": 0,
+            "neighbour_land_vector": [
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "traffic_at_unload": {
+              "1023366": [
+                141,
+                104
+              ],
+              "1023367": [
+                138,
+                101
+              ]
+            },
+            "all_normal_goals_guard": true
+          }
+        }
+      }
+    },
+    {
+      "tag": "b-sc",
+      "comparison_sha256": "c197d83e2459fe5af802f15c840b93c9c920d6dce903c3b54fc7545bd9b4f488",
+      "effects": {
+        "original": {
+          "cycles": {
+            "1023363": [
+              {
+                "board_frame": 133,
+                "drop_frame": 2218,
+                "water_frames": 624,
+                "landing_cell": [
+                  138,
+                  106
+                ],
+                "landing_land": 0
+              }
+            ],
+            "1023368": [
+              {
+                "board_frame": 197,
+                "drop_frame": 2204,
+                "water_frames": 624,
+                "landing_cell": [
+                  137,
+                  107
+                ],
+                "landing_land": 7
+              }
+            ]
+          },
+          "actor_health": {
+            "1023362": 300,
+            "1023364": 600,
+            "1023369": 125,
+            "1023363": 200,
+            "1023368": 125,
+            "1023366": 200,
+            "1023367": 200
+          },
+          "carrier_final_cell": [
+            138,
+            107
+          ],
+          "ship_final_cell": [
+            130,
+            106
+          ],
+          "cargo_final_cells": {
+            "1023363": [
+              139,
+              104
+            ],
+            "1023368": [
+              140,
+              104
+            ]
+          },
+          "special": {
+            "simultaneous_loaded_range": [
+              197,
+              2203
+            ],
+            "mixed_passengers": [
+              {
+                "id": 1023363,
+                "type": "TRUCKA",
+                "size": 6
+              },
+              {
+                "id": 1023368,
+                "type": "E2",
+                "size": 1
+              }
+            ],
+            "payload_size": 7,
+            "capacity": 12,
+            "size_limit": 6,
+            "water_with_both_frames": 624,
+            "beach_with_both_frames": 89,
+            "drop_order": [
+              1023368,
+              1023363
+            ],
+            "drop_frames": [
+              2204,
+              2218
+            ],
+            "shore": [
+              138,
+              107
+            ],
+            "shore_land": 7,
+            "neighbour_land_vector": [
+              0,
+              0,
+              0,
+              7,
+              7,
+              6,
+              6,
+              6
+            ],
+            "traffic_at_unload": {
+              "1023366": [
+                139,
+                106
+              ],
+              "1023367": [
+                137,
+                106
+              ]
+            },
+            "all_normal_goals_guard": true
+          }
+        },
+        "generated-c": {
+          "cycles": {
+            "1023363": [
+              {
+                "board_frame": 133,
+                "drop_frame": 2218,
+                "water_frames": 626,
+                "landing_cell": [
+                  138,
+                  106
+                ],
+                "landing_land": 0
+              }
+            ],
+            "1023368": [
+              {
+                "board_frame": 197,
+                "drop_frame": 2204,
+                "water_frames": 626,
+                "landing_cell": [
+                  137,
+                  107
+                ],
+                "landing_land": 7
+              }
+            ]
+          },
+          "actor_health": {
+            "1023362": 300,
+            "1023364": 600,
+            "1023369": 125,
+            "1023363": 200,
+            "1023368": 125,
+            "1023366": 200,
+            "1023367": 200
+          },
+          "carrier_final_cell": [
+            138,
+            107
+          ],
+          "ship_final_cell": [
+            130,
+            106
+          ],
+          "cargo_final_cells": {
+            "1023363": [
+              139,
+              104
+            ],
+            "1023368": [
+              140,
+              104
+            ]
+          },
+          "special": {
+            "simultaneous_loaded_range": [
+              197,
+              2203
+            ],
+            "mixed_passengers": [
+              {
+                "id": 1023363,
+                "type": "TRUCKA",
+                "size": 6
+              },
+              {
+                "id": 1023368,
+                "type": "E2",
+                "size": 1
+              }
+            ],
+            "payload_size": 7,
+            "capacity": 12,
+            "size_limit": 6,
+            "water_with_both_frames": 626,
+            "beach_with_both_frames": 89,
+            "drop_order": [
+              1023368,
+              1023363
+            ],
+            "drop_frames": [
+              2204,
+              2218
+            ],
+            "shore": [
+              138,
+              107
+            ],
+            "shore_land": 7,
+            "neighbour_land_vector": [
+              0,
+              0,
+              0,
+              7,
+              7,
+              6,
+              6,
+              6
+            ],
+            "traffic_at_unload": {
+              "1023366": [
+                139,
+                106
+              ],
+              "1023367": [
+                137,
+                106
+              ]
+            },
+            "all_normal_goals_guard": true
+          }
+        }
+      }
+    }
+  ],
+  "original_map_terrain_unchanged": true,
+  "shore_centers": [
+    [
+      138,
+      102
+    ],
+    [
+      138,
+      107
+    ]
+  ],
+  "land_names": [
+    {
+      "value": 0,
+      "name": "Clear",
+      "string_va": "0x7d3a6c"
+    },
+    {
+      "value": 1,
+      "name": "Road",
+      "string_va": "0x7d3a64"
+    },
+    {
+      "value": 2,
+      "name": "Water",
+      "string_va": "0x7d1ab8"
+    },
+    {
+      "value": 3,
+      "name": "Rock",
+      "string_va": "0x7d3a5c"
+    },
+    {
+      "value": 4,
+      "name": "Wall",
+      "string_va": "0x7d0fa8"
+    },
+    {
+      "value": 5,
+      "name": "Tiberium",
+      "string_va": "0x7cdcd0"
+    },
+    {
+      "value": 6,
+      "name": "Beach",
+      "string_va": "0x7d3a54"
+    },
+    {
+      "value": 7,
+      "name": "Rough",
+      "string_va": "0x7d3a4c"
+    },
+    {
+      "value": 8,
+      "name": "Ice",
+      "string_va": "0x7d3a48"
+    },
+    {
+      "value": 9,
+      "name": "Railroad",
+      "string_va": "0x7d3a3c"
+    },
+    {
+      "value": 10,
+      "name": "Tunnel",
+      "string_va": "0x7d3a34"
+    },
+    {
+      "value": 11,
+      "name": "Weeds",
+      "string_va": "0x7d3a2c"
+    }
+  ],
+  "land_names_proof_sha256": "dedc4472f8a0cd21bba2cccd8c476a90fe7518b52ef678429f4a7798a5e9a039",
+  "scope": "Two different original shoreline neighborhoods in the same unmodified map: Clear center vs Rough center adjacent to Beach. No new terrain type, map alteration or all-coast equivalence claimed. Mixed vehicle and infantry payload, not two vehicles."
+}

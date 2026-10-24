@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v53\\rng-functional-impact.json",
+      "sha256": "0099da24a29398affad2b0ab2523aa8bcc1a8bbb559edbeaac39c441bdeee17d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v53\\corner-boundary-inheritance.json",
+      "sha256": "41f269dea0c65a1c403a4f094281a29b252fab676de5925cc67ef6ae2f136303"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v53\\rules-and-locomotors.json",
+      "sha256": "13d806d2af78cf8c2ca9c3fe000d34f6f395bce8e9bd7d559e4d3a6e27d9ea21"
+    }
+  ],
+  "new_variants": {
+    "mi": {
+      "functional_acceptance_sha256": "99c54564cfdee6b63a6e06685175b4882ef93e57778334ec4ca8472fa97b859d",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2526,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "sc": {
+      "functional_acceptance_sha256": "d57eb653389dd47e486525d983df392408d61d1fa19424c3e4e87d08aaeaf6bd",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2849,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "aw3": {
+      "functional_acceptance_sha256": "736ba461a8abebda5565720fd4ee0565aef254722f3667f96993c2b174e315fa",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2754,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    }
+  },
+  "old1029_analysis_inherited_not_rerun": true,
+  "old349_coast_analysis_inherited_not_counted_as_new_pairs": true,
+  "no_rng_reset_or_seed_change": true,
+  "no_global_comparator_relaxation": true,
+  "scope": "Mixed vehicle/infantry passengers, alternate Clear/Rough/Beach shore and retained full-adjacent-occupation retry effects only. Current complete per-mode traces equal their pre-change baselines; later combat/random allocation equivalence not claimed."
+}

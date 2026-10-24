@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "percentage_reestimated": false,
+  "old_corner_followup_only_for_functional_need": true,
+  "rng_exact_call_source_proved": false,
+  "candidates_not_confirmed_failures": true,
+  "remaining": [
+    "ground_path_search neighbor expansion, region restrictions and node/cache services",
+    "More natural mixed passenger capacities, shore directions and bridge-layer traffic",
+    "Other engine subsystems and full visual/resource acceptance"
+  ]
+}

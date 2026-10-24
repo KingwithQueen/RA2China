@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cases": 8192,
+  "stop_cases": [
+    538,
+    1094,
+    386,
+    6174
+  ],
+  "engine_services_stubbed": true,
+  "ordered_callbacks_compared": true,
+  "probe_exe_sha256": "539fb91bb4bd9d40ab609b76c8d6a999804f8f8800a752a679b873ba43e9fc08",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}
