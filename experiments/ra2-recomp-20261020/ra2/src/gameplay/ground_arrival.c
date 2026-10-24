@@ -2,6 +2,7 @@
 #include <string.h>
 #include "ground_arrival.h"
 #include "ground_failure_transition.h"
+#include "ground_owner_boundary.h"
 
 
 static int same_cell(Ra2WorldPoint left, Ra2WorldPoint right)
@@ -29,32 +30,31 @@ static int32_t wrapped_distance(int32_t left, int32_t right)
 }
 
 
-/* 刷新后重新检查可用性；停止任务/更新服务均可结束本帧或移除所有者。 */
-static Ra2ArrivalOutcome finish_after_refresh(int reached_target, const Ra2ArrivalServices *services)
+/* 适配查询接口；服务仍在原有实时上下文执行，不缓存刷新前的任务或存活状态。 */
+static void refresh(void *context)
+{ const Ra2ArrivalServices *s=context; s->refresh_owner(s->context); }
+static int usable(void *context)
+{ const Ra2ArrivalServices *s=context; return s->query(s->context,RA2_ARRIVAL_OWNER_USABLE); }
+static void cancel(void *context)
+{ const Ra2ArrivalServices *s=context; s->cancel_target_and_path(s->context); }
+static int mission(void *context)
+{ const Ra2ArrivalServices *s=context; return s->query(s->context,RA2_ARRIVAL_EFFECTIVE_MISSION); }
+static int stop_move(void *context)
+{ const Ra2ArrivalServices *s=context; return s->stop_move_mission(s->context); }
+static int update(void *context)
+{ const Ra2ArrivalServices *s=context; return s->query(s->context,RA2_ARRIVAL_OWNER_UPDATE); }
+static int alive(void *context)
+{ const Ra2ArrivalServices *s=context; return s->query(s->context,RA2_ARRIVAL_OWNER_ALIVE); }
+
+static Ra2ArrivalOutcome finish_after_refresh(int reached_target,const Ra2ArrivalServices *s)
 {
-    services->refresh_owner(services->context);
-    if (!services->query(services->context, RA2_ARRIVAL_OWNER_USABLE))
+    const Ra2OwnerCompletionServices completion={{(void *)s,refresh,usable},cancel,mission,stop_move,update,alive};
+    switch(ra2_ground_complete_owner(reached_target,&completion))
     {
-        return RA2_ARRIVAL_RETURN_TRUE;
+        case RA2_OWNER_RETURN_TRUE: return RA2_ARRIVAL_RETURN_TRUE;
+        case RA2_OWNER_RETURN_FALSE: return RA2_ARRIVAL_RETURN_FALSE;
+        default: return RA2_ARRIVAL_CONTINUE;
     }
-    if (reached_target)
-    {
-        services->cancel_target_and_path(services->context);
-        if (services->query(services->context, RA2_ARRIVAL_EFFECTIVE_MISSION) == 2
-            && services->stop_move_mission(services->context))
-        {
-            return RA2_ARRIVAL_RETURN_TRUE;
-        }
-    }
-    if (services->query(services->context, RA2_ARRIVAL_OWNER_UPDATE))
-    {
-        return RA2_ARRIVAL_RETURN_TRUE;
-    }
-    if (!services->query(services->context, RA2_ARRIVAL_OWNER_ALIVE))
-    {
-        return RA2_ARRIVAL_RETURN_FALSE;
-    }
-    return RA2_ARRIVAL_CONTINUE;
 }
 
 Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state, Ra2WorldPoint owner_position,

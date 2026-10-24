@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "old_arrival_sha256": "421d0ddfa3ffdcba316e917e9464df1f7232a881d166a15312cf1ba2bd88e66b",
+  "old_drive_sha256": "aab0a9c8b8544f834da71cba9cda5cbdb34f76fd500c2a52210c48e4daf7b02a",
+  "arguments_sha256": "072e0e206b8bda5be78a2db1403e52f313dc5e155c6fd4d55d8fd6cc61dc2b49",
+  "both_changed_units_rebuilt_from_parent": true,
+  "new_helper_excluded": true,
+  "original_qualified_baseline_executable_unchanged": true,
+  "scope": "Private reproducible rollback build; not a new runtime acceptance pair.",
+  "build_succeeded": true,
+  "rebuilt_executable_sha256": "959163d39cce89f99be1acc8eb9ca89bbb29670aa0313d4036145c16ebe20257",
+  "production_executable_unchanged": true
+}

@@ -111,6 +111,7 @@ add_executable(ra2
   src/gameplay/ground_arrival.c
   src/gameplay/ground_prepare.c
   src/gameplay/ground_failure_transition.c
+  src/gameplay/ground_owner_boundary.c
   src/gameplay/ground_segment_admission.c
   src/gameplay/ground_rebuild_result.c
   src/gameplay/ground_prepare_cycle.c
@@ -293,3 +294,5 @@ set_source_files_properties(src/gameplay/ground_failure_transition.c PROPERTIES 
 set_source_files_properties(src/gameplay/ground_rebuild_result.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
 
 set_source_files_properties(src/gameplay/ground_segment_admission.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+set_source_files_properties(src/gameplay/ground_owner_boundary.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

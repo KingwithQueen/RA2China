@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b3-tr",
+      "frames": 1901,
+      "comparison_sha256": "3a964e83df85b4318c0ed00725792e3cc268a59cfaaf7d3becabe922abf0fd47",
+      "strict_passed": true
+    },
+    {
+      "tag": "b3-tc",
+      "frames": 1901,
+      "comparison_sha256": "d9cb616ce1d344f1f9bcceb6cc081460291d805c16f6ad8ddae32a5d56043e41",
+      "strict_passed": true
+    },
+    {
+      "tag": "b2-hv",
+      "frames": 1501,
+      "comparison_sha256": "3c1adc07982b502279ce16649fc17cc5531d9f22a2f30e22259923f529cb63c0",
+      "strict_passed": false
+    }
+  ],
+  "baseline_host": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v46\\baseline\\transport-observer\\bridge-catalog-observer.exe"
+}

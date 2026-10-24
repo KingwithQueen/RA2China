@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "native_capture_constructor_cases": 64,
+  "all_111_bytes_equal": true,
+  "native_constructor": "004B6170",
+  "target_uid_offset": "0E",
+  "target_type_offset": "12",
+  "type_value": "34",
+  "source_sha256": "f0e160cec9abe145cf853335f9ba0f2e7c8b80493fc9dc43c50066235429c4e2",
+  "probe_sha256": "38b60d4d20fe30e55898344a92d76dbc194e7c37450fa3a9a7f62ebc89986394",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "scope": "Native constructor executed before the baseline repair scenes; packet is submitted through the existing OutList. No repair/path/bridge-result function called by harness."
+}

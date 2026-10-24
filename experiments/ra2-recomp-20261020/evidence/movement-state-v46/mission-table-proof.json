@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "table_va": "0x7CD774",
+  "entries": [
+    {
+      "index": 0,
+      "name": "Sleep"
+    },
+    {
+      "index": 1,
+      "name": "Attack"
+    },
+    {
+      "index": 2,
+      "name": "Move"
+    },
+    {
+      "index": 3,
+      "name": "QMove"
+    },
+    {
+      "index": 4,
+      "name": "Retreat"
+    },
+    {
+      "index": 5,
+      "name": "Guard"
+    },
+    {
+      "index": 6,
+      "name": "Sticky"
+    },
+    {
+      "index": 7,
+      "name": "Enter"
+    },
+    {
+      "index": 8,
+      "name": "Capture"
+    },
+    {
+      "index": 9,
+      "name": "Eaten"
+    },
+    {
+      "index": 10,
+      "name": "Harvest"
+    },
+    {
+      "index": 11,
+      "name": "Area Guard"
+    },
+    {
+      "index": 12,
+      "name": "Return"
+    },
+    {
+      "index": 13,
+      "name": "Stop"
+    },
+    {
+      "index": 14,
+      "name": "Ambush"
+    },
+    {
+      "index": 15,
+      "name": "Hunt"
+    },
+    {
+      "index": 16,
+      "name": "Unload"
+    },
+    {
+      "index": 17,
+      "name": "Sabotage"
+    },
+    {
+      "index": 18,
+      "name": "Construction"
+    },
+    {
+      "index": 19,
+      "name": "Selling"
+    },
+    {
+      "index": 20,
+      "name": "Repair"
+    },
+    {
+      "index": 21,
+      "name": "Rescue"
+    },
+    {
+      "index": 22,
+      "name": "Missile"
+    },
+    {
+      "index": 23,
+      "name": "Harmless"
+    },
+    {
+      "index": 24,
+      "name": "Open"
+    },
+    {
+      "index": 25,
+      "name": "Patrol"
+    },
+    {
+      "index": 26,
+      "name": "Paradrop Approach"
+    },
+    {
+      "index": 27,
+      "name": "Paradrop Overfly"
+    },
+    {
+      "index": 28,
+      "name": "Wait"
+    },
+    {
+      "index": 29,
+      "name": "Attack Move"
+    }
+  ]
+}

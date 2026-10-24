@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "shared": "ground_owner_boundary",
+  "refresh": {
+    "order": [
+      "refresh service",
+      "live usability query"
+    ],
+    "never_cache_before_refresh": true
+  },
+  "arrival": {
+    "native_range": [
+      "0x4A2034",
+      "0x4A22F9"
+    ],
+    "cases": 65536,
+    "order": [
+      "refresh and usability",
+      "if reached: cancel target/path",
+      "if reached and effective mission2: stop Move",
+      "update owner",
+      "alive query only if update returned false"
+    ],
+    "outcomes": [
+      "CONTINUE",
+      "RETURN_FALSE",
+      "RETURN_TRUE"
+    ],
+    "reached_false_skips_cancel_mission_and_stop": true,
+    "unusable_returns_true_immediately": true,
+    "update_true_skips_alive": true
+  },
+  "drive": {
+    "cases": 32768,
+    "turn_order": [
+      "clear pending flag",
+      "refresh",
+      "live usability"
+    ],
+    "unusable_returns_zero": true,
+    "does_not_run_arrival_cancel_stop_update_policy": true
+  },
+  "transport_input": {
+    "mission_table_va": "0x7CD774",
+    "enter": 7,
+    "unload": 16,
+    "constructor_va": "0x4B6170",
+    "new_packet_cases": 128,
+    "enter_destination_offsets": [
+      "0x13",
+      "0x17"
+    ],
+    "capture_target_offsets": [
+      "0x0E",
+      "0x12"
+    ],
+    "observation_only": "Infantry bytes74/75/76/79/7A/7D and bridge cells; no gameplay service invocation"
+  },
+  "production_rules_changed": false,
+  "art_resources_changed": false,
+  "generated_runtime_adapters_changed": false
+}

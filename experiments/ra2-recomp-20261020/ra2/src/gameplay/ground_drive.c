@@ -1,5 +1,6 @@
 #include "ground_drive.h"
 #include "ground_failure_transition.h"
+#include "ground_owner_boundary.h"
 
 static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
 {
@@ -11,6 +12,17 @@ static int32_t query(const Ra2DriveServices *services, Ra2DriveQuery value)
     return services->query(services->context, value);
 }
 
+
+static void refresh_after_turn(void *context)
+{
+    const Ra2DriveServices *s=context;
+    s->refresh_owner_after_turn(s->context);
+}
+static int usable_after_turn(void *context)
+{
+    const Ra2DriveServices *s=context;
+    return query(s,RA2_DRIVE_OWNER_USABLE);
+}
 
 /* Prepare/Advance 都可移除单位；每次服务返回后再查存活。
    接续同帧第二段传入1，避免再次累计本帧速度；新段从0开始。 */
@@ -86,8 +98,8 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
     {
         /* 转向结束后只刷新一次；保留世界服务在刷新过程中产生的单位失效状态。 */
         state->turn_update_pending = 0;
-        services->refresh_owner_after_turn(services->context);
-        if (!query(services, RA2_DRIVE_OWNER_USABLE))
+        const Ra2OwnerRefreshServices refresh={(void *)services,refresh_after_turn,usable_after_turn};
+        if (!ra2_ground_refresh_owner(&refresh))
         {
             return 0;
         }
