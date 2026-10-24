@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "exit_code": 2,
+  "all_warnings_are_unchanged_inherited_bytes": true,
+  "warnings": [
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/bridge-cross-release-north.MAP",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\bridge-cross-release-north.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/bridge-cross-release-south.MAP",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\bridge-cross-release-south.MAP",
+      "sha256": "0920fb78f92c49da611e3c40ec64081b03a4ef8d418d84d9b1df9ecca49419da"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/bridge-crush-contact-02.MAP",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\bridge-crush-contact-02.MAP",
+      "sha256": "6e405a0cb234d14428140cd8f2cad55aa9904bb46ac88722d5c863e6308353a9"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/dynamic-far-base.MAP",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\dynamic-far-base.MAP",
+      "sha256": "b1c4af2043e733a7e0cf48767330c01cd9364ab57d7495b6fadaf6735e8d82ce"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-contact.ini",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-crush-contact.ini",
+      "sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-crush-control.ini",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-contact.ini",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-contact.ini",
+      "sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "trailing whitespace.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/fixtures/rules-train-control.ini",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\fixtures\\rules-train-control.ini",
+      "sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/movement-state-v56/native_probe_host.h",
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    }
+  ]
+}

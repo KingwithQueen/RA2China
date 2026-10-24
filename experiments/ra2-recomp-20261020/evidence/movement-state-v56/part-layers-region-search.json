@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "cases": 6144,
+  "successes": 3972,
+  "failures": 2172,
+  "numeric_modes": 12,
+  "three_layers": true,
+  "same_region_shortcut": true,
+  "heap_capacity_and_ties": true,
+  "ordered_engine_callbacks_compared": true,
+  "engine_services_stubbed": true,
+  "final_numeric_control_compared": true,
+  "probe_exe_sha256": "66fec54bbf8677a797ebb7047d6b8ea2aae09bd0b66e0ed596072549cdbc2c3c",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

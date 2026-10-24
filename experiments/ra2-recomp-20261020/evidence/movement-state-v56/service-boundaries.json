@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "changed_unit": "ground_region_search.c",
+  "new_headers_or_build_sources": false,
+  "stages": [
+    "prepare_layer and same-region/root publication",
+    "proposed_edge_cost with live conversion control",
+    "edge_is_eligible: visited, upper-layer connection, terrain and blocked-pair checks"
+  ],
+  "retained": [
+    "snapshot heap before region lookups; snapshot layer cache after lookups",
+    "start lookup then goal lookup; fresh context per service call",
+    "clear heap entries/count without resetting historical address bounds",
+    "same-region writes only original fields; no root/blocked-list work",
+    "owner factor and house precede threshold decision",
+    "penalty multiplication precedes integer conversion control update",
+    "proposed cost before all edge filters",
+    "blocked pair list queried only after previous filters and only if initially nonempty",
+    "heap full still publishes visited/cost and consumes node pool slot",
+    "failure keeps already completed coarse-layer routes"
+  ],
+  "native_probe_scope": "Mapped original three-layer routine with native engine event stubs. Final native control word compared with the C logical control; not all ABI fields or all callback mutations."
+}

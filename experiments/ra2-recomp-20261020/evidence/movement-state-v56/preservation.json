@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_region_search.c"
+  ],
+  "added_compile_inputs": [],
+  "build_recipe_changed": false,
+  "source_count": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 401,
+  "baseline_files": 315,
+  "parts": {
+    "layers": {
+      "files": 343,
+      "exe_sha256": "5dc634b89bfb04073d6e7e907cb340897aaa0a7ba873c735f054253232dabf12"
+    },
+    "edges": {
+      "files": 343,
+      "exe_sha256": "73f74ddf9c32af9d05ea0a65ecda3fe20f44d2df062cc77c0a8cba715346e833"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

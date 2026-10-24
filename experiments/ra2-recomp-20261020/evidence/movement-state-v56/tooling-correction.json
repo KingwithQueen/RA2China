@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "check": "parent source-manifest identity",
+  "derived_parent_before": "movement-state-v54",
+  "correct_parent": "movement-state-v55",
+  "parent_manifest_sha256": "7946d3e90876c3f0dca1103f71483bed330da7470caa58c63d748c147ad797d3",
+  "current_helper_sha256": "c3149afdebefc4f06ab79e185b55e71cd413b4e50a2ac269a86763bcaaaec1c8",
+  "executed_part_helper_sha256": "83b5e07754a2cc30f8e3f2c1c86ad7d9bd421100fe932b628bb0edc9d82eb511",
+  "production_inputs_unchanged": true,
+  "scene_paths_come_from_current_fixtures_with_explicit_baseline_stage": true,
+  "stage_archives_and_game_traces_unchanged": true
+}

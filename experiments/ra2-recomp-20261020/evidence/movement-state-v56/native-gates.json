@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 1,
+  "cases": 6144,
+  "receipts": [
+    "part-edges-region-search.json"
+  ],
+  "capture_packet_cases_inherited": 64,
+  "transport_packet_cases_inherited": 128,
+  "scope": "Mapped original three-layer regional search; engine services stubbed. Same 6144 inputs before changes and after both parts, counted once. Ordered native engine events, routes, caches, node pool, heap and final logical numeric control."
+}
