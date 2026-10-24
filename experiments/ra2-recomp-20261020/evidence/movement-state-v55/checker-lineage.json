@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "accept_dynamic_v54.py",
+      "source_sha256": "c5e7ec69754ec8dbd2061ef3d3fd537d1b5f8080675f12f90ed14db5aa96ed82",
+      "derived": "accept_dynamic_v55.py",
+      "derived_sha256": "7301e669de7244c810cdf270a04d7768c3d24ca582f690da03ea84d552e254b7"
+    },
+    {
+      "source": "audit_scenes_v54.py",
+      "source_sha256": "b17bcc4b1fe61535272a231ba7c995dd6f0f2df729eb0a67136bd84d0d0fdaa9",
+      "derived": "audit_scenes_v55.py",
+      "derived_sha256": "226d21b9784c301970a58f671ce58cef4086600fcb49abf8e67dfd58605622b3"
+    },
+    {
+      "source": "audit_sources_v54.py",
+      "source_sha256": "7b28b2af5d3d2d8668e58e3c8848f179a63d3f7a3105f44093977b424cccf5a5",
+      "derived": "audit_sources_v55.py",
+      "derived_sha256": "a553978430056b1cf2dd03651f9363f74b956ae80b89204102a7985b1e1b6b7b"
+    },
+    {
+      "source": "plan_cleanup_v54.py",
+      "source_sha256": "59339aca1792077db9575fc8de75b4e5ea9cc8f5f38c547b5c1d5a29b1d7403e",
+      "derived": "plan_cleanup_v55.py",
+      "derived_sha256": "5f18b59e534e0459177fd010baad1aa9f4758fae756225195f1c3a85d3a33623"
+    },
+    {
+      "source": "commit_movement_v54.py",
+      "source_sha256": "2d920b6205212057ca18d7e6e1df9a87322c94196488c8c2f7b4dc2ad334e2ad",
+      "derived": "commit_movement_v55.py",
+      "derived_sha256": "98de3015916f91cfb64d0c6b61dbd8ee14bdaffed66801a58626d2405047963b"
+    }
+  ],
+  "scope": "Only current harness/checkers derived. Prior source archives and accepted traces remain in place."
+}

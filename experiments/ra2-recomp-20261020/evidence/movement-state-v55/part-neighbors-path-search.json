@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "cases": 8192,
+  "ordered_service_events": 311395,
+  "created_nodes": 17661,
+  "stop_cases": [
+    2765,
+    636,
+    668,
+    4123
+  ],
+  "mapped_complete_original_loop": true,
+  "numeric_controls": 12,
+  "services_stubbed": true,
+  "probe_exe_sha256": "0e55529ef32311f50f7bd5beb22de61ddbb037db7efa4d2a24dfebe774fbaee6",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

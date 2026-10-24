@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 1,
+  "cases": 8192,
+  "receipts": [
+    "part-frontier-path-search.json"
+  ],
+  "capture_packet_cases_inherited": 64,
+  "transport_packet_cases_inherited": 128,
+  "scope": "Complete mapped original neighbor loop; engine services stubbed. Same 8192 cases after both parts, counted once. Ordered calls, mutable weights/region connection/cache stamps, heap, nodes and four exits."
+}

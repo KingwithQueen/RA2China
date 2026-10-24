@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-fm",
+      "frames": 3401,
+      "exe_sha256": "e717eba0967075ec0a00c8a79018d1e19d1fbc67e8280ecaddb78b28cdc32f25",
+      "comparison_sha256": "1553ad82db648946d955ac0b11d6d37262d794a559f44831aec31c26989d2fe6",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "mi",
+      "stage": "movement-state-v54",
+      "frames": 3001,
+      "comparison_sha256": "768b102a63af3925ff81dd3d2ae1f8233eab766aa0f4ba4f98aa58f37eecd803",
+      "inherited": true
+    },
+    {
+      "tag": "sc",
+      "stage": "movement-state-v54",
+      "frames": 3401,
+      "comparison_sha256": "0316c0da228c5efad9deddc57fd42937b361fb317b569996738aa32655935981",
+      "inherited": true
+    },
+    {
+      "tag": "aw3",
+      "stage": "movement-state-v54",
+      "frames": 3201,
+      "comparison_sha256": "86491aa8e7ec044d28bd932a7f3bd18654b29228593e8ebedaa2ff209f3fb376",
+      "inherited": true
+    }
+  ],
+  "scope": "Three exact parent traces inherited; one pre-change infantry-first recipe run with frozen parent observer."
+}
