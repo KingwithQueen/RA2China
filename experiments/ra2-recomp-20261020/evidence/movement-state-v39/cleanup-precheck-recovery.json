@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "precheck_receipt": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v39\\investigations\\cleanup-precheck-01\\receipt.json",
+  "precheck_sha256": "f8fcb0e37b44343bb3b6270853654ece048294634b3b32ad162abeebb85ac8ab",
+  "failed_precheck_deleted_files": 0,
+  "all_scenes_completed_before_successful_cleanup": true,
+  "successful_cleanup_sha256": "588d12abcb6448e98d391e811f3a9a590078fe1f2ac6e37f28779ee180229788"
+}

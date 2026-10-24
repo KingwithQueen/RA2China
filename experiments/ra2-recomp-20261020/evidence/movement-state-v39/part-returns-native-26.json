@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "phase": 26,
+  "cases": 65536,
+  "ordered_callback_values": 786432,
+  "original_stack_cleanup_verified": true,
+  "primary_fallthrough_cases": 0,
+  "secondary_service_cases": 0,
+  "alive_continuations": 0,
+  "probe_exe_sha256": "04e88c564247f1bb9bca51513d208b5651ee5966e8a650cfdb61331443476843",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

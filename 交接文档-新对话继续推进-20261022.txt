@@ -1,3 +1,10 @@
+最新接续：第三十八批已验收，正式38 / 验证39。
+先读验收边界：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+交接：D:\Program\红色警戒2\交接文档-单位移动第三十八批正式验收-20261024.txt
+程序SHA-256：4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee
+只读核对：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v39.py
+以功能/效果/规则/资源整体一致为目标；逐帧比较有边界，不要求BUG逐个复刻。下列历史描述以此为准。
+
 最新接续：第三十七批已验收，正式37 / 验证38。
 先读：D:\Program\红色警戒2\交接文档-单位移动第三十七批正式验收-20261024.txt
 程序SHA-256：d697cc4c16d5cb103343c2743c11146eb09b3f13d5c7683b8adbeef8821ae7c8

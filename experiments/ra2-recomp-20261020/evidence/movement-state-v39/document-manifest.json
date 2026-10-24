@@ -1,0 +1,38 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "ee0dab55d80bdc073123f990a69e49f00bf96f74b702361f881c1ba57c92f3bd"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/单位移动第三十八批-采样目标接续与桥上途中放行组合-20261024.txt",
+    "sha256": "a28a0b167591688fe46e3a79526b41de2ad6638c97983b919d50f20163f629d3"
+  },
+  {
+    "path": "交接文档-单位移动第三十八批正式验收-20261024.txt",
+    "sha256": "1c9daeab2744653a1ad807d3c5d553218b1481de022a5b37cd61c634197af09f"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "c7eda1b759076802052a670d449bf183150109dddbcb305e61ef174db65b554e"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "74c834ab48b7274e69717481446db96a3b096aaeef8fe200fb1f167b346d6e5c"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "f8db4621242b0cc223f54b3499d90ae2dbe66f2c40d2819f3e3c2f3b17075deb"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "f8db4621242b0cc223f54b3499d90ae2dbe66f2c40d2819f3e3c2f3b17075deb"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "f8db4621242b0cc223f54b3499d90ae2dbe66f2c40d2819f3e3c2f3b17075deb"
+  }
+]

@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "aliases": 29,
+  "scenes": 6,
+  "frames": 3006,
+  "records": [
+    {
+      "tag": "alias-0",
+      "configured_aliases": [
+        "004A12F1",
+        "004A134F",
+        "004A161D",
+        "004A166A",
+        "004A17A2"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A12F1": 0,
+        "004A134F": 0,
+        "004A161D": 0,
+        "004A166A": 0,
+        "004A17A2": 0,
+        "004A2670": 5,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "alias-1",
+      "configured_aliases": [
+        "004A199D",
+        "004A1ACD",
+        "004A1F8D",
+        "004A1FA1",
+        "004A1FDC"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A199D": 0,
+        "004A1ACD": 0,
+        "004A1F8D": 0,
+        "004A1FA1": 0,
+        "004A1FDC": 0,
+        "004A2670": 5,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "alias-2",
+      "configured_aliases": [
+        "004A2112",
+        "004A230E",
+        "004A2311",
+        "004A24F0",
+        "004A32B4"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A2112": 0,
+        "004A230E": 0,
+        "004A2311": 0,
+        "004A24F0": 0,
+        "004A2670": 5,
+        "004A32B4": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "alias-3",
+      "configured_aliases": [
+        "004A3C92",
+        "004A3C9B",
+        "004A3DBA",
+        "004A3E35",
+        "004A3FE3"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A3C92": 0,
+        "004A3C9B": 0,
+        "004A3DBA": 0,
+        "004A3E35": 0,
+        "004A3FE3": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "alias-4",
+      "configured_aliases": [
+        "004A4174",
+        "004A44D1",
+        "004A4522",
+        "004A458C",
+        "004A45B7"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A2670": 5,
+        "004A4174": 0,
+        "004A44D1": 0,
+        "004A4522": 0,
+        "004A458C": 0,
+        "004A45B7": 0,
+        "00703040": 5
+      }
+    },
+    {
+      "tag": "alias-5",
+      "configured_aliases": [
+        "004A24F0",
+        "004A45D0",
+        "0070346B",
+        "0070372C",
+        "007038EF"
+      ],
+      "first_call_counts": {
+        "004A1000": 5,
+        "004A24F0": 0,
+        "004A2670": 5,
+        "004A45D0": 0,
+        "00703040": 5,
+        "0070346B": 0,
+        "0070372C": 0,
+        "007038EF": 0
+      }
+    }
+  ],
+  "natural_entry_candidates": [],
+  "nonprimary_natural_entry_proved": false,
+  "limits": "Each candidate was observed in one of six bounded ordinary bridge scenes; three primary positive controls were hit. No forced C-alias calls. Native intra-function edges are not separate C dispatch. Unseen computed targets and unrun scenarios remain open."
+}

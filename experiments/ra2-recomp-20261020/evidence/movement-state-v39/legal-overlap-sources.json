@@ -1,0 +1,373 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "entry": "004A1000",
+      "entry_kind": "start",
+      "decoded_incoming": [
+        {
+          "address": "004A0666",
+          "target": "004A1000",
+          "instruction": "call",
+          "bytes": "e895090000"
+        },
+        {
+          "address": "004A0753",
+          "target": "004A1000",
+          "instruction": "call",
+          "bytes": "e8a8080000"
+        },
+        {
+          "address": "004A0B9E",
+          "target": "004A1000",
+          "instruction": "call",
+          "bytes": "e85d040000"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": true,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A12F1",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A125D",
+          "target": "004A12F1",
+          "instruction": "jmp",
+          "bytes": "e98f000000"
+        },
+        {
+          "address": "004A1271",
+          "target": "004A12F1",
+          "instruction": "jmp",
+          "bytes": "eb7e"
+        },
+        {
+          "address": "004A12AF",
+          "target": "004A12F1",
+          "instruction": "jmp",
+          "bytes": "eb40"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A134F",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A108C",
+          "target": "004A134F",
+          "instruction": "jge",
+          "bytes": "0f8dbd020000"
+        },
+        {
+          "address": "004A1094",
+          "target": "004A134F",
+          "instruction": "je",
+          "bytes": "0f84b5020000"
+        },
+        {
+          "address": "004A1303",
+          "target": "004A134F",
+          "instruction": "jne",
+          "bytes": "754a"
+        },
+        {
+          "address": "004A1310",
+          "target": "004A134F",
+          "instruction": "je",
+          "bytes": "743d"
+        },
+        {
+          "address": "004A1335",
+          "target": "004A134F",
+          "instruction": "je",
+          "bytes": "7418"
+        },
+        {
+          "address": "004A133F",
+          "target": "004A134F",
+          "instruction": "jmp",
+          "bytes": "eb0e"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A161D",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A1618",
+          "target": "004A161D",
+          "instruction": "jmp",
+          "bytes": "eb03"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A166A",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A1644",
+          "target": "004A166A",
+          "instruction": "je",
+          "bytes": "7424"
+        },
+        {
+          "address": "004A1648",
+          "target": "004A166A",
+          "instruction": "je",
+          "bytes": "7420"
+        },
+        {
+          "address": "004A1663",
+          "target": "004A166A",
+          "instruction": "je",
+          "bytes": "7405"
+        },
+        {
+          "address": "004A1F9B",
+          "target": "004A166A",
+          "instruction": "jg",
+          "bytes": "0f8fc9f6ffff"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A17A2",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A1723",
+          "target": "004A17A2",
+          "instruction": "jmp",
+          "bytes": "eb7d"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A2670",
+      "entry_kind": "start",
+      "decoded_incoming": [
+        {
+          "address": "004A0734",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e8371f0000"
+        },
+        {
+          "address": "004A0B70",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e8fb1a0000"
+        },
+        {
+          "address": "004A3976",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e8f5ecffff"
+        },
+        {
+          "address": "004A3B05",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e866ebffff"
+        },
+        {
+          "address": "004A41B8",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e8b3e4ffff"
+        },
+        {
+          "address": "004A41DA",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e891e4ffff"
+        },
+        {
+          "address": "004A4441",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e82ae2ffff"
+        },
+        {
+          "address": "004A4513",
+          "target": "004A2670",
+          "instruction": "call",
+          "bytes": "e858e1ffff"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": true,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "004A32B4",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "004A2FFC",
+          "target": "004A32B4",
+          "instruction": "je",
+          "bytes": "0f84b2020000"
+        },
+        {
+          "address": "004A3054",
+          "target": "004A32B4",
+          "instruction": "jmp",
+          "bytes": "e95b020000"
+        },
+        {
+          "address": "004A305C",
+          "target": "004A32B4",
+          "instruction": "jne",
+          "bytes": "0f8552020000"
+        },
+        {
+          "address": "004A30EA",
+          "target": "004A32B4",
+          "instruction": "je",
+          "bytes": "0f84c4010000"
+        },
+        {
+          "address": "004A3101",
+          "target": "004A32B4",
+          "instruction": "je",
+          "bytes": "0f84ad010000"
+        },
+        {
+          "address": "004A311A",
+          "target": "004A32B4",
+          "instruction": "jne",
+          "bytes": "0f8594010000"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "00703040",
+      "entry_kind": "start",
+      "decoded_incoming": [],
+      "image_address_literals": [
+        {
+          "address": "007ADF8C",
+          "section": ".rdata",
+          "executable": false,
+          "aligned": true
+        }
+      ],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": true
+    },
+    {
+      "entry": "0070346B",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "007038FF",
+          "target": "0070346B",
+          "instruction": "jne",
+          "bytes": "0f8566fbffff"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "0070372C",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "00703720",
+          "target": "0070372C",
+          "instruction": "jmp",
+          "bytes": "eb0a"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    },
+    {
+      "entry": "007038EF",
+      "entry_kind": "alias",
+      "decoded_incoming": [
+        {
+          "address": "00703977",
+          "target": "007038EF",
+          "instruction": "jmp",
+          "bytes": "e973ffffff"
+        },
+        {
+          "address": "007039E7",
+          "target": "007038EF",
+          "instruction": "jmp",
+          "bytes": "e903ffffff"
+        },
+        {
+          "address": "00703A7A",
+          "target": "007038EF",
+          "instruction": "jmp",
+          "bytes": "e970feffff"
+        },
+        {
+          "address": "00703AA4",
+          "target": "007038EF",
+          "instruction": "jmp",
+          "bytes": "e946feffff"
+        }
+      ],
+      "image_address_literals": [],
+      "direct_native_call_found": false,
+      "noncode_address_literal_found": false
+    }
+  ],
+  "unique_native_edges": 38,
+  "alias_count": 9,
+  "nonprimary_natural_entry_proved": false,
+  "conclusion": "All nine examined nonprimary entries are recursive-disassembler aliases. Their legal native sources are intra-function branches. No direct CALL or non-code image address literal points to these aliases in the scanned evidence. An alias lookup registration is not a native call source.",
+  "limits": [
+    "Decoded disassembly coverage is bounded; arbitrary computed targets and runtime-built pointers are not excluded.",
+    "Internal native-boundary hits do not prove entry through the separately generated C alias function."
+  ],
+  "inputs": [
+    {
+      "path": "ra2/game/game.exe",
+      "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+    },
+    {
+      "path": "ra2/work/game/functions.json",
+      "sha256": "bc9ef414fa120c6ce90771eb0e390437eff7bfed949fbc1a682b0f330682359e"
+    },
+    {
+      "path": "ra2/work/game/disassembly.asm",
+      "sha256": "b5cc838f7d57da8795dbc641631afa0f1530d7de74f0858cc873f4e509630aa1"
+    },
+    {
+      "path": "audit_legal_sources_v39.py",
+      "sha256": "532f52f379b87c7c318a04b862982fa9fcddbbcbd02eba72450a725d2d226e05"
+    }
+  ]
+}

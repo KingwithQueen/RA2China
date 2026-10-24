@@ -68326,6 +68326,11 @@ L_00703A23:
     ecx = ebp; /* 0x00703A33: mov ecx, ebp */
     RECOMP_ICALL(MEM32(edx + 0x39C)); /* 0x00703A35: call dword ptr [edx + 0x39c] */
     RECOMP_FLAGS_IN();
+    /* 武器选择服务已返回，直接解释可空持有槽。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t holder_resume_v39=ra2_ground_object_branch_bridge(13);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(holder_resume_v39==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax); /* 0x00703A3B: mov eax, dword ptr [eax] */
     /* test eax, eax */ /* 0x00703A3D: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
@@ -69559,6 +69564,11 @@ L_00703A23:
     ecx = ebp; /* 0x00703A33: mov ecx, ebp */
     RECOMP_ICALL(MEM32(edx + 0x39C)); /* 0x00703A35: call dword ptr [edx + 0x39c] */
     RECOMP_FLAGS_IN();
+    /* 武器选择服务已返回，直接解释可空持有槽。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t holder_resume_v39=ra2_ground_object_branch_bridge(13);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(holder_resume_v39==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax); /* 0x00703A3B: mov eax, dword ptr [eax] */
     /* test eax, eax */ /* 0x00703A3D: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
@@ -70295,6 +70305,11 @@ L_00703A23:
     ecx = ebp; /* 0x00703A33: mov ecx, ebp */
     RECOMP_ICALL(MEM32(edx + 0x39C)); /* 0x00703A35: call dword ptr [edx + 0x39c] */
     RECOMP_FLAGS_IN();
+    /* 武器选择服务已返回，直接解释可空持有槽。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t holder_resume_v39=ra2_ground_object_branch_bridge(13);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(holder_resume_v39==0x703B5A)goto L_00703B5A;
+    goto L_007038EF;
     eax = MEM32(eax); /* 0x00703A3B: mov eax, dword ptr [eax] */
     /* test eax, eax */ /* 0x00703A3D: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);

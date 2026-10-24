@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "phase": 9,
+  "object_cases": 65536,
+  "outcomes": [
+    0,
+    0,
+    54685,
+    0,
+    0,
+    0,
+    10851
+  ],
+  "calls_live_state_verified": true,
+  "probe_exe_sha256": "e957efd816e78c1cd167c7ba60f340946b8f8af3725388fd6e412fc7cae62317",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

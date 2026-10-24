@@ -1,3 +1,5 @@
+extern void ra2_ground_advance_place_layer_return_bridge(void);
+extern unsigned ra2_ground_template_continuation_bridge(unsigned entry);
 extern void ra2_ground_advance_leave_place_return_bridge(void);
 extern unsigned ra2_ground_late_layer_bridge(void);
 extern void ra2_ground_advance_mark_return_bridge(void);
@@ -37474,6 +37476,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -37712,6 +37719,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -37804,6 +37817,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -37912,6 +37930,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -42843,6 +42864,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -43081,6 +43107,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -43173,6 +43205,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -43281,6 +43318,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -47916,6 +47956,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -48154,6 +48199,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -48246,6 +48297,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -48354,6 +48410,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -52438,6 +52497,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -52676,6 +52740,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -52768,6 +52838,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -52876,6 +52951,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -56669,6 +56747,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -56907,6 +56990,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -56999,6 +57088,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -57107,6 +57201,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -59960,6 +60057,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -60198,6 +60300,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -60290,6 +60398,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -60398,6 +60511,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -62544,6 +62660,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -62782,6 +62903,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -62874,6 +63001,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -62982,6 +63114,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -64786,6 +64921,11 @@ L_004A2320:
 L_004A2323:
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
 L_004A2326:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -65024,6 +65164,12 @@ L_004A249C:
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
 L_004A24A2:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -65116,6 +65262,11 @@ L_004A251E:
 L_004A2522:
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 L_004A2528:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
 L_004A252E:
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
@@ -65224,6 +65375,9 @@ L_004A258A:
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
 L_004A2590:
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
 L_004A2593:
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
@@ -66061,6 +66215,11 @@ L_004A2311:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -66208,6 +66367,12 @@ L_004A237D:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -66272,6 +66437,11 @@ L_004A24F4:
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 destination_resume_v33:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -66349,6 +66519,9 @@ L_004A2586:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
     PUSH32(esp, eax); /* 0x004A2597: push eax */
@@ -66539,6 +66712,11 @@ L_004A2311:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -66686,6 +66864,12 @@ L_004A237D:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -66750,6 +66934,11 @@ L_004A24F4:
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 destination_resume_v33:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -66827,6 +67016,9 @@ L_004A2586:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
     PUSH32(esp, eax); /* 0x004A2597: push eax */
@@ -67760,6 +67952,11 @@ L_004A230E:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -67907,6 +68104,12 @@ L_004A237D:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -67971,6 +68174,11 @@ L_004A24F4:
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 destination_resume_v33:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -68048,6 +68256,9 @@ L_004A2586:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
     PUSH32(esp, eax); /* 0x004A2597: push eax */
@@ -68191,6 +68402,11 @@ L_004A2311:
     eax = MEM32(eax + 0x7A00A0); /* 0x004A231A: mov eax, dword ptr [eax + 0x7a00a0] */
     esi = MEM32(eax + ecx * 4); /* 0x004A2320: mov esi, dword ptr [eax + ecx*4] */
     ecx = eax + ecx * 4; /* 0x004A2323: lea ecx, [eax + ecx*4] */
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2326_v39=ra2_ground_template_continuation_bridge(0);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2326_v39==0x004A2347)goto L_004A2347;
+    goto L_004A263A;
     /* cmp esi, edi */ /* 0x004A2326: cmp esi, edi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(edi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -68338,6 +68554,12 @@ L_004A237D:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     edx = edx + 0x88u; /* 0x004A249C: add edx, 0x88 */
     _flag_k = FK_ADD;
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A24A2_v39=ra2_ground_template_continuation_bridge(1);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A24A2_v39==0x004A24DC)goto L_004A24DC;
+    if(continuation_004A24A2_v39==0x004A24F4)goto L_004A24F4;
+    goto L_004A24C6;
     /* cmp eax, esi */ /* 0x004A24A2: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -68402,6 +68624,11 @@ L_004A24F4:
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 destination_resume_v33:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -68479,6 +68706,9 @@ L_004A2586:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
     PUSH32(esp, eax); /* 0x004A2597: push eax */
@@ -68625,6 +68855,11 @@ L_004A24F0:
     MEM32(esp + 0x54) = eax; /* 0x004A251E: mov dword ptr [esp + 0x54], eax */
     edx = ecx + 0x88; /* 0x004A2522: lea edx, [ecx + 0x88] */
 destination_resume_v37:
+    /* 可读接续：保留有效目标选择和原生段内来源。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); uint32_t continuation_004A2528_v39=ra2_ground_template_continuation_bridge(2);
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    if(continuation_004A2528_v39==0x004A2607)goto L_004A2607;
+    goto L_004A2586;
     eax = MEM32(ecx + 0x88); /* 0x004A2528: mov eax, dword ptr [ecx + 0x88] */
     edi = MEM32(edx + 0x4); /* 0x004A252E: mov edi, dword ptr [edx + 4] */
     edx = MEM32(edx + 0x8); /* 0x004A2531: mov edx, dword ptr [edx + 8] */
@@ -68702,6 +68937,9 @@ L_004A2586:
     PUSH32(esp, 0); /* 0x004A2588: push 0 */
     RECOMP_ICALL(MEM32(eax + 0x11C)); /* 0x004A258A: call dword ptr [eax + 0x11c] */
     RECOMP_FLAGS_IN();
+    /* 离格已完成：定位后重读落点、桥层及当前对象，再占格。 */
+    RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT(); ra2_ground_advance_place_layer_return_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN(); return;
     ecx = MEM32(ebp + 0xC); /* 0x004A2590: mov ecx, dword ptr [ebp + 0xc] */
     eax = esp + 0x18; /* 0x004A2593: lea eax, [esp + 0x18] */
     PUSH32(esp, eax); /* 0x004A2597: push eax */

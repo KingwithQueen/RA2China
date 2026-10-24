@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "parent_commit": "65ffecb844c08b0dbc5d46c53b7646635572c108",
+  "policy": "Overall functional, effect, rules and resource conformance; finite representative per-frame comparisons, not mandatory bug-for-bug replication.",
+  "part_scenes": 3,
+  "part_frames": 1303,
+  "affected_native_groups": 41,
+  "new_native_groups": 5,
+  "cases_per_group": 65536,
+  "max_scene_lanes": 2,
+  "max_game_processes": 4,
+  "serial_builders": true,
+  "unaffected_history": "Reuse accepted v38 evidence, without claiming it was rerun.",
+  "natural_aliases": "29 bounded source and ordinary-runtime observations; unobserved indirect entrances stay open, not a release blocker."
+}

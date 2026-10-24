@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "completed_entries": [
+    "004A2326",
+    "004A24A2",
+    "004A2528",
+    "00703A3B",
+    "004A2590"
+  ],
+  "alias_investigation_open": true,
+  "natural_aliases_required_for_completion": false,
+  "bug_for_bug_required": false,
+  "remaining": [
+    "Functional consolidation of Advance/Prepare/connection state machines",
+    "Concrete crushing/building/terrain/bridge destruction and locomotor/service combinations",
+    "Wider campaign/skirmish integration and other engine subsystems"
+  ],
+  "unsupported_guards": 37,
+  "percentage_reestimated": false,
+  "historical_estimates_not_current": true
+}

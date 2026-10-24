@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+  "source_files": 475,
+  "report_sha256": "a28a0b167591688fe46e3a79526b41de2ad6638c97983b919d50f20163f629d3",
+  "handoff_sha256": "1c9daeab2744653a1ad807d3c5d553218b1481de022a5b37cd61c634197af09f",
+  "policy_sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25",
+  "source_manifest_sha256": "28c9d187c0f59e1fb16459f65ee934a96359cfc04f1673c2d6236f51dc56effc",
+  "document_manifest_sha256": "642501e35874176d86e12187f2a8e85092b5dc4b895401934ac15a6cf6dfcd51",
+  "pushed": false
+}

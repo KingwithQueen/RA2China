@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "cross-north",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "0bf83d8c4fd2fb1534cc6f11dbe07033ca9bc403e23d8d31bdbfe652c52d9734"
+    },
+    {
+      "tag": "observed-cross-north",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "eb55da9e647c22ac3c49e387860115eff79b2b1db5f42ff5fe7f28d30da61a9d"
+    },
+    {
+      "tag": "cross-south",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "9b84a23fdd55e2636276024207469fa154d0c784801159d0ba2d5e2db4d72b32"
+    },
+    {
+      "tag": "observed-cross-south",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "2a2ff0a48250dbfe41f80e111a07f3ebdcb17b2c0f705576fb34d0d71b2299d4"
+    },
+    {
+      "tag": "meeting-north",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "492eb0329002b709a2dcc3c55b629bda699481b6445155b09f002c938c6870ca"
+    },
+    {
+      "tag": "meeting-south",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "b338cb8cb30a647a4fcab10a462f50300e43ad7fc8fe1e4e0b471a5e86e0e423"
+    },
+    {
+      "tag": "enemy-traffic-north",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "605f7491893e7cd49889c05f20438d5aa63890b16dfdf3c24afb76fad03388ec"
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "3e9140d3bce2cd818e8c306f3424de24175e181e311398e61607ec84ee831ce3"
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "b266a99a77132d97791fbdcb683e55f0ac786a49e1d082b300294ca2fc132a9c"
+    },
+    {
+      "tag": "blocked-tube",
+      "frames": 501,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "3118b8033713e35c414f8939d044fde10309eebf217c92af425e3c5979bf2bfa"
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "4a8d0e2621f6cb83e66a445eb65f0ddf12bacfc7d4d35a9fe092a2dc8dd69aee",
+      "comparison_sha256": "aafdd4757a958d6e2b70a16cafbb39cb9fd02d97c3edf0d40edb3374ca4e5187"
+    },
+    {
+      "tag": "alias-0",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "eb55da9e647c22ac3c49e387860115eff79b2b1db5f42ff5fe7f28d30da61a9d"
+    },
+    {
+      "tag": "alias-1",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "2a2ff0a48250dbfe41f80e111a07f3ebdcb17b2c0f705576fb34d0d71b2299d4"
+    },
+    {
+      "tag": "alias-2",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "eb55da9e647c22ac3c49e387860115eff79b2b1db5f42ff5fe7f28d30da61a9d"
+    },
+    {
+      "tag": "alias-3",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "2a2ff0a48250dbfe41f80e111a07f3ebdcb17b2c0f705576fb34d0d71b2299d4"
+    },
+    {
+      "tag": "alias-4",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "eb55da9e647c22ac3c49e387860115eff79b2b1db5f42ff5fe7f28d30da61a9d"
+    },
+    {
+      "tag": "alias-5",
+      "frames": 501,
+      "exe_sha256": "6bf8dbfce2de80b0c877b204dbbae16b7a4eb36c7f8ee6c0384ea1b72534aa8a",
+      "comparison_sha256": "2a2ff0a48250dbfe41f80e111a07f3ebdcb17b2c0f705576fb34d0d71b2299d4"
+    }
+  ],
+  "production_scenes": 9,
+  "production_frames": 5459,
+  "observer_scenes": 8,
+  "observer_frames": 4008,
+  "alias_scenes": 6,
+  "alias_frames": 3006,
+  "scope": "Two bridge crossing/release combinations, two unobstructed opposing infantry scenes, hostile traffic, two curved height anomalies, controlled blocked exit, repeated failure. Existing broad historical matrices are retained in v38, not claimed as rerun."
+}

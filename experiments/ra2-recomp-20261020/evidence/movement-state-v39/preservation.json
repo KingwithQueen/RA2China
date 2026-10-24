@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/recomp/gen_game/recomp_0010.c",
+    "ra2/src/recomp/gen_game/recomp_0046.c",
+    "ra2/src/runtime/ground_joint_bridge.c",
+    "ra2/src/runtime/ground_objects_bridge.c"
+  ],
+  "content_inputs": 292,
+  "production_c_sources": 171,
+  "unsupported_guards": 37,
+  "current_baseline_files": 361,
+  "part_files": {
+    "template": 322,
+    "passage": 323,
+    "returns": 327
+  },
+  "accepted_parent_archive_files": 6328,
+  "accepted_parent_archive_in_place": true,
+  "H_originals_checked": 20,
+  "old_engine_and_original_save_preserved": true,
+  "native_labels_tails_annotations_and_registration_unchanged": true,
+  "comparator_and_recorder_unchanged": true,
+  "config_and_remote_refs_unchanged": true,
+  "whole_game_equivalence_verified": false
+}
