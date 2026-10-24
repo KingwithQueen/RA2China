@@ -41,3 +41,10 @@ typedef struct Ra2AdvanceServices
 /* 每个采样先完成坐标变换和放置，再更新桥面、列车碰撞和朝向。
    回调可能伤害/移除单位，所以存活检查与世界查询必须保留原有顺序。 */
 int ra2_ground_advance_sample(const Ra2AdvanceServices *services);
+
+/* 可单独修改的跨格业务；列车下一链项在伤害回调前保存，地表碾压在进入后执行。 */
+void ra2_ground_advance_train_contact(const Ra2AdvanceServices *services,Ra2AdvanceCell next);
+void ra2_ground_advance_overlay_contact(const Ra2AdvanceServices *services,uint32_t next_cell);
+int ra2_ground_enter_sample_cell(const Ra2AdvanceServices *services,Ra2AdvanceCell previous,
+    Ra2AdvanceCell next,Ra2WorldPoint position);
+int ra2_ground_advance_finish_sample(const Ra2AdvanceServices *services,int32_t direction);

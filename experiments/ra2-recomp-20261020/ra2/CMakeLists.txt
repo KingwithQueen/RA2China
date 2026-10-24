@@ -93,6 +93,7 @@ add_executable(ra2
   src/runtime/ground_path_bridge.c
   src/gameplay/ground_path.c
   src/gameplay/ground_advance.c
+  src/gameplay/ground_cell_placement.c
   src/gameplay/ground_continuation.c
   src/runtime/ground_continuation_bridge.c
   src/runtime/ground_advance_bridge.c
@@ -278,3 +279,5 @@ set_source_files_properties(src/gameplay/ground_template_entry.c src/gameplay/gr
 
 target_sources(ra2 PRIVATE src/gameplay/ground_template_transition.c src/gameplay/ground_object_chain.c src/runtime/ground_overlap_bridge.c)
 set_source_files_properties(src/gameplay/ground_template_transition.c src/gameplay/ground_object_chain.c src/runtime/ground_overlap_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+set_source_files_properties(src/gameplay/ground_cell_placement.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

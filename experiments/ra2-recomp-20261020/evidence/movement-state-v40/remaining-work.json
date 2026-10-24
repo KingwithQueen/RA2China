@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "completed_functional_units": [
+    "Ordered cell-placement services shared across Advance and two existing exits",
+    "Sampled cell entry, train-chain contact, overlay contact and finishing step"
+  ],
+  "remaining": [
+    "Prepare/Advance/connection state consolidation",
+    "Representative locomotor/crushing/building/terrain/bridge destruction scenes",
+    "Other engine subsystem readability and integration"
+  ],
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "percentage_reestimated": false
+}

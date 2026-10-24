@@ -1,0 +1,27 @@
+{
+  "protected_files": 1792,
+  "protected_files_unchanged": true,
+  "deleted_files": 189,
+  "plan_sha256": "0398cfdef506ec2ad588f2af52b4a2163d45937e88a4b52465eb946002cb7913",
+  "deleted_bytes": 4280897,
+  "passed": true,
+  "method": "Literal exact allowlist; no force or recursion",
+  "types": [
+    {
+      "Name": "python-bytecode-cache",
+      "Count": 6
+    },
+    {
+      "Name": "redundant-private-copy-of-preserved-original-save",
+      "Count": 1
+    },
+    {
+      "Name": "reproducible-root-probe-object",
+      "Count": 180
+    },
+    {
+      "Name": "scratch-difftest-with-retained-source",
+      "Count": 2
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+#include "ground_cell_placement.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "recomp_types.h"
@@ -272,19 +273,42 @@ uint32_t ra2_ground_late_layer_bridge(void)
     ra2_ground_template_layer(&services);return 0x4A25E8;
 }
 
-void ra2_ground_advance_place_layer_return_bridge(void)
+typedef struct JointPlacementContext { uint32_t frame,drive; } JointPlacementContext;
+static void placement_restore(JointPlacementContext *c)
+{g_esp=c->frame;g_ebp=c->drive;}
+static void placement_leave(void *opaque)
 {
-    uint32_t frame=g_esp,drive=g_ebp,unit=MEM32(g_ebp+0xC),argument=frame+0x18;
-    g_eax=argument;g_edx=MEM32(unit);method(unit,0x19C,&argument,1);
-    g_esp=frame;g_ebp=drive;
-    ra2_ground_late_layer_bridge();ra2_ground_advance_mark_return_bridge();
-}
-void ra2_ground_advance_leave_place_return_bridge(void)
-{
-    uint32_t frame=g_esp,drive=g_ebp,argument=0;
+    JointPlacementContext *c=opaque;uint32_t argument=0;
     g_eax=MEM32(g_ecx);method(g_ecx,0x11C,&argument,1);
-    g_esp=frame;g_ebp=drive;ra2_ground_advance_place_layer_return_bridge();
+    placement_restore(c);
 }
+static void placement_place(void *opaque)
+{
+    JointPlacementContext *c=opaque;
+    uint32_t unit=MEM32(c->drive+0xC),argument=c->frame+0x18;
+    g_eax=argument;g_edx=MEM32(unit);method(unit,0x19C,&argument,1);
+    placement_restore(c);
+}
+static void placement_layer(void *opaque)
+{(void)opaque;ra2_ground_late_layer_bridge();}
+static uint32_t placement_enter(void *opaque)
+{
+    JointPlacementContext *c=opaque;uint32_t unit=MEM32(c->drive+0xC),argument=1;
+    g_ebp=unit;g_edx=MEM32(unit);
+    return method(unit,0x11C,&argument,1);
+}
+static void placement_return(unsigned needs_leave)
+{
+    JointPlacementContext context={g_esp,g_ebp};
+    Ra2CellPlacementServices services={&context,placement_leave,placement_place,
+        placement_layer,NULL,placement_enter};
+    Ra2CellPlacementResult result=ra2_ground_place_cell(&services,needs_leave);
+    ra2_ground_return_frame(context.frame,RA2_FRAME_ADVANCE,result.value&UINT32_C(0xFFFFFF00));
+}
+void ra2_ground_advance_place_layer_return_bridge(void)
+{placement_return(0);}
+void ra2_ground_advance_leave_place_return_bridge(void)
+{placement_return(1);}
 
 static void template_compare32(uint32_t a,uint32_t b)
 {g_flag_k=FK_CMP;g_flag_a=a;g_flag_b=b;g_flag_cf=a<b;}
