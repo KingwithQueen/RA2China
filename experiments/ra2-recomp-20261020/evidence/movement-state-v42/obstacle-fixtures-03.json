@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "obstacles-drive",
+      "path": "evidence/movement-state-v42/fixtures/obstacles-drive-03.MAP",
+      "sha256": "2ba64ad82a9f06346b3cf647d6c60cd145c00e4f3ff49803509e46f9d7bb3878",
+      "orders": [
+        "5:1022585:2:100:120"
+      ],
+      "actor": 1022585,
+      "last": 900
+    },
+    {
+      "name": "obstacles-hover",
+      "path": "evidence/movement-state-v42/fixtures/obstacles-hover-03.MAP",
+      "sha256": "64a5e33f322eaa67f27a57e82c5a77a523a79738851ee888a1093892db302f32",
+      "orders": [
+        "5:1022585:2:100:120"
+      ],
+      "actor": 1022585,
+      "last": 900
+    }
+  ]
+}

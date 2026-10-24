@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "enemy-traffic-ai3-north",
+      "path": "evidence/movement-state-v42/fixtures/bridge-enemy-traffic-ai3-north.MAP",
+      "sha256": "3b9426ea80b9efb2bb5723f83a0baa54a202587dbe8fdb7586b53a67488b5809",
+      "dynamic": true,
+      "actor_ids": [
+        1023362,
+        1023363
+      ],
+      "enemy_id": 1023363,
+      "orders": [
+        "5:1023362:2:60:72",
+        "1:1023365:2:60:75"
+      ],
+      "goal": [
+        60,
+        72
+      ],
+      "source": "evidence/movement-state-v36/fixtures/bridge-traffic-north.MAP",
+      "enemy_motion": "native triggered CreateTeam plus script action3 to waypoint99"
+    }
+  ],
+  "ordinary_map_objects": true,
+  "native_house_alliances_unchanged": true,
+  "raw_state_writes": false,
+  "enemy_player_orders": false,
+  "enemy_native_team_script": true
+}

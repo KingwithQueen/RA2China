@@ -1,14 +1,11 @@
 #include <string.h>
 #include "ground_continuation.h"
+#include "ground_failure_transition.h"
 
 static int32_t signed_bits(uint32_t bits)
 { int32_t result; memcpy(&result,&bits,4); return result; }
 static int valid_point(Ra2WorldPoint point,Ra2WorldPoint invalid)
 { return point.x!=invalid.x || point.y!=invalid.y || point.z!=invalid.z; }
-static void clear_segment(Ra2ContinuationState *state,Ra2WorldPoint invalid)
-{
-    if (valid_point(state->segment_end,invalid)) { state->segment_end=invalid; state->driving=0; }
-}
 static int32_t absolute_difference(int32_t a,int32_t b)
 {
     uint32_t bits=(uint32_t)a-(uint32_t)b;
@@ -26,13 +23,13 @@ static int commit_turn_segment(Ra2ContinuationState *state,Ra2WorldPoint invalid
     state->orientation_mismatch=0;
     state->sample_index=signed_bits((uint32_t)selected.entry_index-1u);
     s->commit_template(c,selected);
-    clear_segment(state,invalid);
+    ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid);
     state->driving=1;
     s->refresh_owner(c);
     state->driving=0;
     if(!s->query(c,RA2_CONTINUATION_OWNER_ALIVE) || s->query(c,RA2_CONTINUATION_OWNER_FLAG_76)
         || s->query(c,RA2_CONTINUATION_OWNER_FLAG_7A)) return 0;
-    clear_segment(state,invalid);
+    ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid);
     if(!valid_point(state->candidate,invalid)) return 1;
     state->segment_end=state->candidate; state->driving=1;
     if(s->candidate_accepts_owner(c) && !s->query(c,RA2_CONTINUATION_OWNER_FLAG_76))

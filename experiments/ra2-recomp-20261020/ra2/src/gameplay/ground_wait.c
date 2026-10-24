@@ -1,16 +1,9 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_wait.h"
+#include "ground_failure_transition.h"
+#include "ground_prepare_exit.h"
 
-static void clear_segment(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position)
-{
-    if (state->segment_end.x != invalid_position.x || state->segment_end.y != invalid_position.y
-        || state->segment_end.z != invalid_position.z)
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-}
 
 static int32_t level_difference(int32_t left, int32_t right)
 {
@@ -57,7 +50,7 @@ Ra2ClearancePhase ra2_ground_check_clearance(Ra2GroundPrepareState *state, Ra2Wo
         }
         services->request_gate(services->context);
     }
-    clear_segment(state, invalid_position);
+    ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
     return passage == RA2_CELL_MOVING_OBSTACLE ? RA2_CLEARANCE_WAIT_FOR_TRAFFIC : RA2_CLEARANCE_OTHER_OBSTACLE;
 }
 
@@ -78,19 +71,10 @@ Ra2TrafficWaitPhase ra2_ground_wait_for_traffic(Ra2TrafficWaitState *state,
     }
     int mode = state->waiting && ra2_ground_retry_timer_ready(state->obstruction, frame) ? 2 : 1;
     int rebuilt = services->rebuild_path(services->context, mode);
-    if (!services->owner_exists(services->context))
-    {
-        services->write_aborted(services->context);
-        return RA2_TRAFFIC_RETURN_FALSE;
-    }
-    if (!rebuilt && !services->destination_accepted(services->context))
-    {
-        services->stop_navigation(services->context);
-        return RA2_TRAFFIC_RETURN_FALSE;
-    }
-    /* 重建服务可能改变当前帧或对象；原版在调用后再次读取。 */
-    frame = services->current_frame(services->context);
-    int32_t delay = services->retry_delay(services->context);
-    services->restart_retry(services->context, frame, delay);
-    return RA2_TRAFFIC_RETURN_TRUE;
+    /* 重建服务可替换对象或推进帧；统一出口在服务返回后重新查询。 */
+    Ra2PrepareExitServices exit_services = { services->context, services->owner_exists,
+        services->write_aborted, services->destination_accepted, services->stop_navigation,
+        services->current_frame, services->retry_delay, services->restart_retry };
+    return ra2_ground_prepare_after_rebuild(rebuilt, 0, &exit_services)
+        ? RA2_TRAFFIC_RETURN_TRUE : RA2_TRAFFIC_RETURN_FALSE;
 }

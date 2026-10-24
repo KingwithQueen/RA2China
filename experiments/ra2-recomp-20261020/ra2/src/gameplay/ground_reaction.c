@@ -1,21 +1,12 @@
 #include "ground_reaction.h"
+#include "ground_failure_transition.h"
 
 static int stop_at_obstacle(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
     const Ra2ReactionServices *services)
 {
-    if (state->segment_end.x != invalid_position.x || state->segment_end.y != invalid_position.y
-        || state->segment_end.z != invalid_position.z)
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-    if (!services->has_target_488(services->context))
-    {
-        services->stop_navigation(services->context, 0);
-        return 0;
-    }
-    services->cancel_target(services->context);
-    return services->stop_navigation(services->context, 1);
+    ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+    int target = !!services->has_target_488(services->context);
+    return ra2_ground_stop_target(target, services->context, services->cancel_target, services->stop_navigation);
 }
 
 int ra2_ground_react_to_obstacle(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,

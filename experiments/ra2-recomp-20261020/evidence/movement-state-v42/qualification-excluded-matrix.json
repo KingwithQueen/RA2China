@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "obstacles-drive",
+      "frames": 901,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "5ce012d67a958b3bef42be4479638f190d09e58eb26b69a5e7afa38daa14d420",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "obstacles-hover",
+      "frames": 901,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "2ec4a5ff3f6b5d2b4e9250841dddce3b7ca220d3860fb4790d712170150be782",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "bridge-destroy",
+      "frames": 901,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "bf9d6a909d73e77a2a146e3fc2c25a7b18a06b42b8a1eae7a3b9a090902b3fc4",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "bridge-intact",
+      "frames": 901,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "2076755c1ba792ac27bd12cc361394331622211fbd6e070319ee732a175daac6",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "obstacles-drive-open",
+      "frames": 901,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "d1fc81b07a9b80b71e27d154b27300c048c6dfd5e250b3aa6235e7d1f2bc04e0",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "f86b6770bf1ce6c7b9491fb7ee0932efa0ef1f9c83c78e50f635e16d46e428db",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "51964d404d0a5b7624f688c7e1382c5b74d14f15cb1a0ddb737f81c13f0f6a6b",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "0d0320b147899ea7c280fb406f24fc71d371263c9e1c5ca742d961e9701b4573",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "e7d04175c21a7a1fcd7fe7c9376a8e56025dc182370919cac366920ccd45ac16",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "80449164b84626cc8f8763094d2d9ac0608752a15e91958d6f26f2c8782e3b34",
+      "comparison_sha256": "4e92c7033352eb09a7c1678ddc6409a81391b861416c96a2780143e7d0342396",
+      "strict_internal_trace_equal": true
+    }
+  ],
+  "production_scenes": 10,
+  "production_frames": 7960,
+  "observer_scenes": 0,
+  "scope": "Finite representative other-locomotor, building/terrain, bridge-destruction and occupied-exit/collision/failure/height regression; ordinary scene evidence separated from diagnostic unit-ring and inherited observer evidence."
+}

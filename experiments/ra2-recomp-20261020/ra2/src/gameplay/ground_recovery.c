@@ -1,14 +1,6 @@
 #include "ground_recovery.h"
+#include "ground_failure_transition.h"
 
-static void clear_segment(Ra2GroundRecoveryState *state, Ra2WorldPoint invalid_position)
-{
-    if (state->segment_end.x != invalid_position.x || state->segment_end.y != invalid_position.y
-        || state->segment_end.z != invalid_position.z)
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-}
 
 int ra2_ground_recover_path(Ra2GroundRecoveryState *state, Ra2WorldPoint invalid_position,
     int finish_only, const Ra2RecoveryServices *services)
@@ -21,18 +13,11 @@ int ra2_ground_recover_path(Ra2GroundRecoveryState *state, Ra2WorldPoint invalid
         }
         else
         {
-            clear_segment(state, invalid_position);
-            if (!services->query(services->context, RA2_RECOVERY_HAS_TARGET_488))
+            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+            int target = !!services->query(services->context, RA2_RECOVERY_HAS_TARGET_488);
+            if (ra2_ground_stop_target(target, services->context, services->cancel_target, services->stop_navigation))
             {
-                services->stop_navigation(services->context, 0);
-            }
-            else
-            {
-                services->cancel_target(services->context);
-                if (services->stop_navigation(services->context, 1))
-                {
-                    return 1;
-                }
+                return 1;
             }
             if (!services->query(services->context, RA2_RECOVERY_OWNER_ALIVE))
             {
@@ -53,7 +38,7 @@ int ra2_ground_recover_path(Ra2GroundRecoveryState *state, Ra2WorldPoint invalid
         state->legacy_flag_578 = 1;
         services->notify_linked_objects(services->context);
     }
-    clear_segment(state, invalid_position);
+    ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
     state->path_selector = -1;
     state->legacy_flag_61 = 0;
     return 0;

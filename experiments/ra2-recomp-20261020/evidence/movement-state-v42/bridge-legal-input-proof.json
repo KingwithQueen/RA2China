@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "original_map": "evidence/movement-state-v4/SOV01T-original.MAP",
+  "original_map_sha256": "7f4492961d30b5799367aa840ba007932057b19a22a77f95475a18ca1407b99f",
+  "original_EnteredBy_events": [
+    "09367F40=1,1,0,13",
+    "093679E0=1,1,0,13"
+  ],
+  "player_house_slot": 0,
+  "entered_by_country_index": 13,
+  "native_action32_bridge_call": [
+    "006B1592 -> 00569090",
+    "006B15A8 -> 00569090"
+  ],
+  "actor_map_tag": "None; not directly attached to the destroy-object trigger",
+  "earlier_recipe": "EnteredBy=0 does not match Player country13, so no effect; exact original map examples supply the legal country value. Earlier no-effect scenes kept."
+}

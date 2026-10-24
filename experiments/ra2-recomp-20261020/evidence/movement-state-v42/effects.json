@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "representative": {
+    "obstacles-drive": {
+      "passed": true,
+      "locomotor_vtable": "0x7a04cc",
+      "health": 200,
+      "arrival": 598,
+      "final": [
+        25728,
+        30848,
+        416
+      ],
+      "obstacle_region_detour_frames": 60
+    },
+    "obstacles-hover": {
+      "passed": true,
+      "locomotor_vtable": "0x7a31ec",
+      "health": 300,
+      "arrival": 598,
+      "final": [
+        25731,
+        30848,
+        503
+      ],
+      "obstacle_region_detour_frames": 63
+    },
+    "obstacles-drive-open": {
+      "passed": true,
+      "locomotor_vtable": "0x7a04cc",
+      "health": 200,
+      "arrival": 575,
+      "final": [
+        25728,
+        30848,
+        416
+      ],
+      "obstacle_region_detour_frames": 0
+    },
+    "bridge-destruction": {
+      "passed": true,
+      "first_fall_frame": 117,
+      "readonly_bridge_cells_removed": 2,
+      "native_trigger": "EnteredBy event1 / DestroyAttached action32 on bridge CellTag",
+      "first_actor_removed_frame": 145,
+      "follower_order_frame": 400,
+      "after_destruction_follower": [
+        15488,
+        14976,
+        416
+      ],
+      "intact_control_follower": [
+        15488,
+        19328,
+        416
+      ],
+      "runtime_state_injection": false
+    }
+  },
+  "bridge_cross_release": true,
+  "real_train_contact": true,
+  "real_infantry_crushing": true,
+  "repeated_failure_frames": [
+    451,
+    511,
+    571,
+    631,
+    691,
+    751,
+    811,
+    871,
+    931,
+    991,
+    1051,
+    1111
+  ],
+  "original_anomalies": [
+    {
+      "tag": "curve-up",
+      "original_final_position": [
+        18040,
+        29059,
+        436
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    },
+    {
+      "tag": "curve-tall-down",
+      "original_final_position": [
+        19583,
+        29070,
+        -193
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    }
+  ],
+  "whole_game_equivalence_verified": false,
+  "production_rules_and_art_files_changed": false,
+  "independent_scene_rules_used": true,
+  "bug_for_bug_required": false
+}

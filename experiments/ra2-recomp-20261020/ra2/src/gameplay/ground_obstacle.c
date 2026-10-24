@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include "ground_obstacle.h"
+#include "ground_failure_transition.h"
 
 static int32_t wrapped_absolute_difference(int32_t left, int32_t right)
 {
@@ -7,14 +8,6 @@ static int32_t wrapped_absolute_difference(int32_t left, int32_t right)
     return (int32_t)((int32_t)difference < 0 ? 0u - difference : difference);
 }
 
-static void clear_segment(Ra2GroundPrepareState *state, Ra2WorldPoint invalid)
-{
-    if (state->segment_end.x != invalid.x || state->segment_end.y != invalid.y || state->segment_end.z != invalid.z)
-    {
-        state->segment_end = invalid;
-        state->driving = 0;
-    }
-}
 
 Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
     int rebuilt, int32_t *path_head, const Ra2ObstacleServices *services)
@@ -60,13 +53,10 @@ Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2Wor
             }
             if (close_to_destination)
             {
-                clear_segment(state, invalid_position);
+                ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
                 int target_variant = services->query(context, RA2_OBSTACLE_HAS_TARGET_488);
-                if (target_variant)
-                {
-                    services->cancel_target(context);
-                }
-                int stopped = services->stop_navigation(context, target_variant);
+                int stopped = ra2_ground_stop_target(target_variant, context,
+                    services->cancel_target, services->stop_navigation);
                 return target_variant && stopped ? RA2_PREPARE_RETURN_TRUE : RA2_PREPARE_RETURN_FALSE;
             }
             int bridge_layer = 0;

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "baseline-02-obstacles-drive",
+      "frames": 901,
+      "exe_sha256": "95201319a3165669bcaa23edbba5aec0f951ea827c7b47a92134cda8d17b785d",
+      "comparison_sha256": "0963538a00af761eb6acac81a666383953eaabc5cf3f1605da9e00879bd38972",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "baseline-02-obstacles-hover",
+      "frames": 901,
+      "exe_sha256": "95201319a3165669bcaa23edbba5aec0f951ea827c7b47a92134cda8d17b785d",
+      "comparison_sha256": "049e2e682fce91f5a6ef1612b6669dc6afbf3721be01cddd0ab67d6eae6d6310",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "baseline-02-bridge-destroy",
+      "frames": 901,
+      "exe_sha256": "95201319a3165669bcaa23edbba5aec0f951ea827c7b47a92134cda8d17b785d",
+      "comparison_sha256": "3409b8b588625916f0edfd65b2a4391f74d1cc0bd63903d27db79ea4fbdee4d4",
+      "strict_internal_trace_equal": true
+    },
+    {
+      "tag": "baseline-02-bridge-intact",
+      "frames": 901,
+      "exe_sha256": "95201319a3165669bcaa23edbba5aec0f951ea827c7b47a92134cda8d17b785d",
+      "comparison_sha256": "9b6cda5b8171b2ef9dc38dcbb7b98a7a0f78cc97356826bdc64f5046ee40d263",
+      "strict_internal_trace_equal": true
+    }
+  ]
+}
