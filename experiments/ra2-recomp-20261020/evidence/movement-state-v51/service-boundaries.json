@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source_count": 181,
+  "content_inputs": 312,
+  "added_production_files": 0,
+  "cmake_unchanged": true,
+  "template_gate": "Bind entry context once; first classification/type stage short-circuits; overlay stage rereads classification after callbacks, then type flag and overlay in order.",
+  "shared_exit": "Bind context before occupant lookup; snapshot full original chain before clearance; reread count each iteration, kind twice for non1; query movement only for kinds1/15; speed then cleanup. Empty exit places/enters before goal query, restores mission before speed reset/facing.",
+  "formal_unique_native_cases": 98304,
+  "probe_receipts": [
+    "part-exit2-overlap-1.json",
+    "part-exit2-tube_state-0.json"
+  ],
+  "new_natural_tube_exit_claimed": false,
+  "old_probe_sources_reused_with_current_reexecution": true,
+  "transport_packet_cases_inherited": 128,
+  "capture_packet_cases_inherited": 64
+}

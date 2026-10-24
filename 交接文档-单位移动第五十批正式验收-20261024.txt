@@ -1,0 +1,14 @@
+当前正式50 / 验证51，2026-10-24。
+父提交：05f8736006fef99cfcbd9bc938d088d6c906f2e2。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第五十批-模板与共享出口及坡型8接桥和水岸循环-20261024.txt
+程序SHA-256：8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f
+整理ground_template_transition与ground_tube_state两阶段服务边界，181C/312输入/37保护，未新增生产文件或改CMake；生成入口/runtime/记录器/比较器/随机/规则/美术不变。
+正式98304原生用例（模板65536、出口32768，复验不重复计数），两部分各3配对1303帧；共15配对19365帧，12严格、3局部功能通过。运输128/Capture64按哈希继承。初版出口在parts/exit-before-context保留，最终按入口context一次绑定复验。
+坡型8独立模块cm保留已验桥入口，原版/C严格逐帧相同，完成级4/5/6、主车桥道往返、车兵交通及绕行。历史地图cf低处重新出发也受阻，cs高低路点可达但桥目标仍受阻；原因未定位，仅有界记录，不再默认继续追旧地图内部边界。
+cw真实水岸两轮装/卸201/1404、1955/3004；首卸原点被占改选[139,102]，占位车1500命令未动、2250换目标后2261实际移动，第二卸[138,101]；ca两轮77/2004、2353/3504后乘员继续移动。生命/目标保持。
+无机场ORCA于305帧移除，后续命令无对象的试验保留排除；正常GAAIRC/GAPOWR条件of完成四段飞行和返场停靠，生命/结果一致，不冒称已到达请求水格。飞机任务7与货车/步兵装载语义分开。
+三功能场景已有随机、时点/瞬时高度/子格差异，严格false保留，当前各模式等于改动前完整轨迹；不改随机数、不追平旧BUG、不推及全游戏。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v51\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v51\parts；基线宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v51\baseline-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v51\final-source。
+后续剩余状态/服务、更多运输/移动器及其他子系统，维持整体功能与效果一致的有限验收。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v51.py。本地提交不推送。

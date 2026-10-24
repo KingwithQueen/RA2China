@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v50\\rng-functional-impact.json",
+      "sha256": "a239d37a3147bcb0d7589b8e7ff2a9540066a733f97887930cda546a765796dd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v50\\corner-qualification.json",
+      "sha256": "77c7c266d150a6f9f63e23f2f62c3c21a4b200cbd57e3d691b777c3c96f00e96"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v50\\rules-and-locomotors.json",
+      "sha256": "91ef9a2d530a70b61afb10ed1b438e8c0db7f9d3b71acfed444c26bc6005f18f"
+    }
+  ],
+  "new_variants": {
+    "cw": {
+      "functional_acceptance_sha256": "095ea1f898fe3090940757dd3dc6fdc97e707120a3c57505c759455e7bb37c0a",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 3052,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "ca": {
+      "functional_acceptance_sha256": "3ab0504bf8fb9b82188dde3b11c913b26ccb4eee0f791acc6b69a7d41389eadf",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 3398,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "of": {
+      "functional_acceptance_sha256": "827189082a98395219f3c2da1447457ef5eac82bae671e9dac017d2ea3ad4091",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 1811,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    }
+  },
+  "old1029_analysis_inherited_not_rerun": true,
+  "old349_coast_analysis_inherited_not_counted_as_new_pairs": true,
+  "no_rng_reset_or_seed_change": true,
+  "no_global_comparator_relaxation": true,
+  "scope": "New repeated transport, occupied-shore and normal-airfield effects only. Current full mode traces equal their pre-change baselines; later combat/random allocation equivalence not claimed."
+}

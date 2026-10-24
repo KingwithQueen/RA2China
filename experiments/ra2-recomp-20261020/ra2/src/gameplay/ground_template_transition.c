@@ -24,21 +24,28 @@ Ra2TemplateCells ra2_ground_template_cells(uint32_t adjusted_x, uint32_t adjuste
     return cells;
 }
 
+static int clear_type_gate(const Ra2TemplateGateServices *services, void *context)
+{
+    if (services->classification(context) >= 7) return 0;
+    if (!services->type_flag(context, 0)) return 0;
+    services->clear_classification(context);
+    return 1;
+}
+
+static void clear_overlay_gate(const Ra2TemplateGateServices *services, void *context)
+{
+    /* 第一阶段的类型查询可能改变分类；第二阶段必须重新读取。 */
+    int32_t classification = services->classification(context);
+    if (classification != 5 && classification != 4) return;
+    if (!services->type_flag(context, 1)) return;
+    if (services->overlay(context) != 0) return;
+    services->clear_classification(context);
+}
+
 void ra2_ground_template_gate(const Ra2TemplateGateServices *services)
 {
     void *context = services->context;
-    if (services->classification(context) < 7 && services->type_flag(context, 0))
-    {
-        services->clear_classification(context);
-        return;
-    }
-
-    int32_t classification = services->classification(context);
-    if ((classification == 5 || classification == 4)
-        && services->type_flag(context, 1) && services->overlay(context) == 0)
-    {
-        services->clear_classification(context);
-    }
+    if (!clear_type_gate(services, context)) clear_overlay_gate(services, context);
 }
 
 void ra2_ground_template_layer(const Ra2TemplateLayerServices *services)

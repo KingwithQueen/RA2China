@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 98304,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-gate-overlap-1.json",
+    "part-exit-tube_state-0.json"
+  ],
+  "scope": "Template live type/overlay gates and occupied/empty shared tube exits; native service callback mutation and cleanup boundaries."
+}

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "cm",
+      "frames": 3601,
+      "exe_sha256": "8c580f32ebfb77653d6a01365098b1ecbc047c588564931a01c88d0e08647a43",
+      "comparison_sha256": "938cc4e2d06ea4be4997a982c510415e67a6b8add78ce40d94270fb05f6ab388",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "cw",
+      "frames": 3501,
+      "exe_sha256": "8c580f32ebfb77653d6a01365098b1ecbc047c588564931a01c88d0e08647a43",
+      "comparison_sha256": "3be5a1358eaec1bd532384cdbbfa527d706f771760ee11e20bc3a6f7648761f1",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "ca",
+      "frames": 4001,
+      "exe_sha256": "8c580f32ebfb77653d6a01365098b1ecbc047c588564931a01c88d0e08647a43",
+      "comparison_sha256": "1f661a1da075895ad5d119945c8b72bef68b8c9e6378770de1a8c1bc2c65f911",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "of",
+      "frames": 2201,
+      "exe_sha256": "8c580f32ebfb77653d6a01365098b1ecbc047c588564931a01c88d0e08647a43",
+      "comparison_sha256": "96f0291e3b39ffcdce4746c8b7949cf1fd453bd91d33a94f38ce1c06e1bedfa5",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f",
+      "comparison_sha256": "f4a63e5d22554aa16d7bd90e6fbf754f66fc82c715b8e1dfd53e2ff973cc83a7",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f",
+      "comparison_sha256": "6bbf84324561c373df7c6c7298df539faeaf727cae87a1e43f80ec2bfeba56f2",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f",
+      "comparison_sha256": "5439c6b9b11ed01d91de1c447534b97ac6feab0df644094abe3dbabe59bfef95",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f",
+      "comparison_sha256": "1d240f14a5d71e5b1829464d662fe2744ffb26556e0bcabb1a15512cf514fbc3",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "8e7008d36dc3af320f90751d73cc43fe935dec16de930ad0ebd113c2437f476f",
+      "comparison_sha256": "fb9d5f816dfc05a227ae014aa9fddacdd0ef6be9bae1e80c3a0510a866af40a4",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 4,
+  "observer_frames": 13304,
+  "scope": "Independent corner8 bridge module, repeated water/air transport, occupied-shore fallback and normal-airfield aircraft return, with affected collision/failure/height regression."
+}

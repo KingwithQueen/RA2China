@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "entry_context_bound_once": true,
+  "context_fields_and_live_function_table_reads_preserved": true,
+  "preliminary_exit_archive": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v51\\parts\\exit-before-context",
+  "preliminary_exit_manifest_sha256": "492f2a6a20c9370c030996510d44ced0d702dc757700f4cc68b25ee419c23a8d",
+  "final_native_receipts": [
+    "part-exit2-overlap-1.json",
+    "part-exit2-tube_state-0.json"
+  ],
+  "formal_unique_native_cases": 98304,
+  "repeated_same_probe_inputs_not_double_counted": true
+}
