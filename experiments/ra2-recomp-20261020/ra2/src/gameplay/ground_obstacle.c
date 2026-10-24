@@ -9,6 +9,45 @@ static int32_t wrapped_absolute_difference(int32_t left, int32_t right)
 }
 
 
+static int close_to_allied_blocker(Ra2GroundPrepareState *state,
+    const Ra2ObstacleServices *services, void *context)
+{
+    Ra2WorldPoint position;
+    int32_t distance = services->query(context, RA2_OBSTACLE_DISTANCE_TO_DESTINATION);
+    int32_t close_enough = services->query(context, RA2_OBSTACLE_CLOSE_ENOUGH_DISTANCE);
+    int close_to_destination = distance < close_enough;
+    if (close_to_destination && !services->query(context, RA2_OBSTACLE_PREDICATE_636F10))
+    {
+        position = services->position(context, 0);
+        int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
+        int32_t two_levels = (int32_t)((uint32_t)height * 2u);
+        close_to_destination = wrapped_absolute_difference(state->destination.z, position.z) < two_levels;
+        if (close_to_destination)
+        {
+            close_to_destination = services->query(context, RA2_OBSTACLE_CURRENT_LAND) != 10;
+        }
+    }
+    else
+    {
+        close_to_destination = 0;
+    }
+    return close_to_destination;
+}
+
+static void notify_allied_blocker(const Ra2ObstacleServices *services, void *context)
+{
+    Ra2WorldPoint position;
+    int bridge_layer = 0;
+    if (services->query(context, RA2_OBSTACLE_CELL_HAS_BRIDGE))
+    {
+        position = services->position(context, 0);
+        int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
+        int32_t level = services->query(context, RA2_OBSTACLE_CELL_LEVEL);
+        bridge_layer = wrapped_absolute_difference(position.z / height, level) > 2;
+    }
+    services->notify_blocker(context, bridge_layer);
+}
+
 Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
     int rebuilt, int32_t *path_head, const Ra2ObstacleServices *services)
 {
@@ -33,25 +72,8 @@ Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2Wor
         else if (passage == 6 && services->find_allied_blocker(context, cell)
             && !services->query(context, RA2_OBSTACLE_TRAIN))
         {
-            int32_t distance = services->query(context, RA2_OBSTACLE_DISTANCE_TO_DESTINATION);
-            int32_t close_enough = services->query(context, RA2_OBSTACLE_CLOSE_ENOUGH_DISTANCE);
-            int close_to_destination = distance < close_enough;
-            if (close_to_destination && !services->query(context, RA2_OBSTACLE_PREDICATE_636F10))
-            {
-                position = services->position(context, 0);
-                int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
-                int32_t two_levels = (int32_t)((uint32_t)height * 2u);
-                close_to_destination = wrapped_absolute_difference(state->destination.z, position.z) < two_levels;
-                if (close_to_destination)
-                {
-                    close_to_destination = services->query(context, RA2_OBSTACLE_CURRENT_LAND) != 10;
-                }
-            }
-            else
-            {
-                close_to_destination = 0;
-            }
-            if (close_to_destination)
+            /* 友军查询和列车过滤之后才判断距离；桥层查询只在不结束目标时执行。 */
+            if (close_to_allied_blocker(state, services, context))
             {
                 ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
                 int target_variant = services->query(context, RA2_OBSTACLE_HAS_TARGET_488);
@@ -59,15 +81,7 @@ Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2Wor
                     services->cancel_target, services->stop_navigation);
                 return target_variant && stopped ? RA2_PREPARE_RETURN_TRUE : RA2_PREPARE_RETURN_FALSE;
             }
-            int bridge_layer = 0;
-            if (services->query(context, RA2_OBSTACLE_CELL_HAS_BRIDGE))
-            {
-                position = services->position(context, 0);
-                int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
-                int32_t level = services->query(context, RA2_OBSTACLE_CELL_LEVEL);
-                bridge_layer = wrapped_absolute_difference(position.z / height, level) > 2;
-            }
-            services->notify_blocker(context, bridge_layer);
+            notify_allied_blocker(services, context);
         }
     }
     if (rebuilt)

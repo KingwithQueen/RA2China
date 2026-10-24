@@ -1,0 +1,8 @@
+{
+  "parent_commit": "0f948aa26a9e20382bd6c017e0af28f2d203eccd",
+  "config_sha256": "d91c7e6257be56360b5d25674376c62955a28194dbdd26aa874bf9e00dfd0b97",
+  "remote_refs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "parent_archive": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\final-source",
+  "parent_source_files": 408,
+  "parent_source_manifest_sha256": "d3f9853a3599ebdc918dcb45c42ea342e9bfd2ac91e7e4b15855b9d1b65c892c"
+}

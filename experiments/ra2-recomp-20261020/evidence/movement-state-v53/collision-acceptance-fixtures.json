@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "train",
+      "path": "evidence/movement-state-v53/fixtures/bridge-train-contact-02.MAP",
+      "sha256": "8370b6aae0cfff61c430fd91ee63622d6a921288603976514026bbcc4fc44a70",
+      "rules": "evidence/movement-state-v53/fixtures/rules-train-contact.ini",
+      "rules_sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523",
+      "orders": [],
+      "actor": 1023362,
+      "targets": [
+        1023363,
+        1023364
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false,
+      "ordinary_native_team_script": true
+    },
+    {
+      "name": "train-control",
+      "path": "evidence/movement-state-v53/fixtures/bridge-train-contact-02.MAP",
+      "sha256": "8370b6aae0cfff61c430fd91ee63622d6a921288603976514026bbcc4fc44a70",
+      "rules": "evidence/movement-state-v53/fixtures/rules-train-control.ini",
+      "rules_sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04",
+      "orders": [],
+      "actor": 1023362,
+      "targets": [
+        1023363,
+        1023364
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false,
+      "ordinary_native_team_script": true,
+      "negative_control": "IsTrain=no"
+    },
+    {
+      "name": "crush",
+      "path": "evidence/movement-state-v53/fixtures/bridge-crush-contact-02.MAP",
+      "sha256": "6e405a0cb234d14428140cd8f2cad55aa9904bb46ac88722d5c863e6308353a9",
+      "rules": "evidence/movement-state-v53/fixtures/rules-crush-contact.ini",
+      "rules_sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e",
+      "orders": [
+        "1:1023364:2:60:70",
+        "1:1023363:2:61:70",
+        "5:1023362:2:60:75",
+        "300:1023364:2:60:79",
+        "210:1023363:2:61:79"
+      ],
+      "actor": 1023362,
+      "targets": [
+        1023365,
+        1023366
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false
+    },
+    {
+      "name": "crush-control",
+      "path": "evidence/movement-state-v53/fixtures/bridge-crush-contact-02.MAP",
+      "sha256": "6e405a0cb234d14428140cd8f2cad55aa9904bb46ac88722d5c863e6308353a9",
+      "rules": "evidence/movement-state-v53/fixtures/rules-crush-control.ini",
+      "rules_sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04",
+      "orders": [
+        "1:1023364:2:60:70",
+        "1:1023363:2:61:70",
+        "5:1023362:2:60:75",
+        "300:1023364:2:60:79",
+        "210:1023363:2:61:79"
+      ],
+      "actor": 1023362,
+      "targets": [
+        1023365,
+        1023366
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false,
+      "negative_control": "Crusher=no"
+    }
+  ],
+  "original_rules_source": "H:\\\u5f00\u53d1\\\u7814\u7a76\u8d44\u6599\\\u63d0\u53d6\\\u539f\u7248\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "original_rules_sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f",
+  "prior_nonqualifying_recipe": "collision-fixtures.json",
+  "correction": "Targets must spawn on bridge layer. Train receives a native team movement script rather than a player command.",
+  "initial_trials_qualify": false,
+  "qualified_baseline_runs": [
+    "baseline02-train",
+    "baseline02-crush"
+  ]
+}

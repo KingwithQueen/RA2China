@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "production_c_sources": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "changed_units": [
+    "ground_obstacle",
+    "ground_recovery"
+  ],
+  "added_production_files": [],
+  "obstacle": [
+    "Direction reread after inside-map query",
+    "Allied blocker query before train exclusion",
+    "Distance/predicate/height/land short circuits before stop-target result",
+    "Bridge flag then raw position, height and level before notification",
+    "Rebuilt budget reset then live path-head reread"
+  ],
+  "recovery": [
+    "Budget decrement or exhausted-target stop",
+    "Successful stop and dead-owner return before sound/shared finish",
+    "Sound callback before pending flag clear",
+    "Live moving/link existence/acceptance queries before notification",
+    "Invalidate segment and selector/legacy reset only on normal completion"
+  ],
+  "context_binding": "Obstacle keeps entry-bound context; recovery retains each original live context lookup.",
+  "native_cases": 262144,
+  "natural_alias_or_tube_exit_coverage_added": false,
+  "production_adapters_schema_rules_and_generated_entries_unchanged": true
+}

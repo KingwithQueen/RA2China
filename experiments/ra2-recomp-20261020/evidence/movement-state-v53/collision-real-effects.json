@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "scenes": {
+    "train": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ],
+        [
+          78,
+          160
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023363": 78,
+        "1023364": 78
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 160,
+      "targets_preserved": false,
+      "rules_sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    "crush": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023365": 115,
+        "1023366": 115
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 200,
+      "targets_preserved": false,
+      "rules_sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    }
+  },
+  "negative_controls_inherited": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\collision-real-effects.json",
+  "negative_controls_sha256": "19cb2a93bb1eac76914ac90d24ccfd479cd564024e29861c75686bc97a0933c0"
+}

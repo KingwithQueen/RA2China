@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "failed_rebuild_cases": 65536,
+  "rebuilt_cases": 65536,
+  "state_calls_abi_cw_verified": true,
+  "cases": 131072,
+  "probe_exe_sha256": "a09471f2a391c4b60e3f0bcd44de83df084188c1f5e2c877de37d3d54a323537",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

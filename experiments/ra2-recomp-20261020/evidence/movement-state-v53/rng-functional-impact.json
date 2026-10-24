@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\rng-functional-impact.json",
+      "sha256": "807aa28e602fd9646363f1824f98e861276c3d3e51ffb9e0d14201c9e5a2bd62"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\corner-boundary-inheritance.json",
+      "sha256": "17f25de6c7bd3d77c7fddad1bb0c41d1ed98bead629cc92a64211ba7d586a379"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\rules-and-locomotors.json",
+      "sha256": "6d0b82acdc0b3fea342d08a6019cb26cd6c2508b07b45b02edf670587c780b05"
+    }
+  ],
+  "new_variants": {
+    "aw3": {
+      "functional_acceptance_sha256": "603f84a2fabce0f2dd278c02d7bea2cc133614a9180d932f608fc2d8985a9270",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2754,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "mp": {
+      "functional_acceptance_sha256": "d0068fac9cda7d42afd69f03787a3e3f6d76339ad977ead1a35efc50246aff94",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2400,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "js": {
+      "functional_acceptance_sha256": "9368e542f132809ae1aaa8d1d2326ac0ed49123576b924e4bf154105426944a4",
+      "rng_first_different_frame": 440,
+      "rng_different_frames": 3270,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    }
+  },
+  "old1029_analysis_inherited_not_rerun": true,
+  "old349_coast_analysis_inherited_not_counted_as_new_pairs": true,
+  "no_rng_reset_or_seed_change": true,
+  "no_global_comparator_relaxation": true,
+  "scope": "Full adjacent shore occupation and unload retry, two-passenger unload order/capacity and retained Jumpjet/submarine traffic effects only. Current complete per-mode traces equal their pre-change baselines; later combat/random allocation equivalence not claimed."
+}

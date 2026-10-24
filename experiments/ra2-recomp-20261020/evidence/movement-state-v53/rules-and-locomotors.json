@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "original_rules": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f",
+  "values": {
+    "LCRF": {
+      "Locomotor": "{4A582742-9839-11d1-B709-00A024DDAFD1}",
+      "MovementZone": "Amphibious",
+      "SpeedType": "Hover",
+      "Speed": "6",
+      "Strength": "300",
+      "Passengers": "12",
+      "SizeLimit": "6",
+      "Size": "16"
+    },
+    "TRUCKA": {
+      "Locomotor": "{4A582741-9839-11d1-B709-00A024DDAFD1}",
+      "MovementZone": "Normal",
+      "Speed": "4",
+      "Strength": "200",
+      "Size": "6"
+    },
+    "DEST": {
+      "Locomotor": "{2BEA74E1-7CCA-11d3-BE14-00104B62A16C}",
+      "MovementZone": "Water",
+      "SpeedType": "Float",
+      "Speed": "6",
+      "Strength": "600",
+      "Size": "30"
+    },
+    "SUB": {
+      "Locomotor": "{2BEA74E1-7CCA-11d3-BE14-00104B62A16C}",
+      "MovementZone": "Water",
+      "SpeedType": "Float",
+      "Speed": "4",
+      "Strength": "600",
+      "Size": "20"
+    },
+    "E2": {
+      "Locomotor": "{4A582744-9839-11d1-B709-00A024DDAFD1}",
+      "MovementZone": "Infantry",
+      "Speed": "4",
+      "Strength": "125",
+      "Size": "1"
+    },
+    "JUMPJET": {
+      "Locomotor": "{92612C46-F71F-11d1-AC9F-006008055BB5}",
+      "MovementZone": "Fly",
+      "SpeedType": "Hover",
+      "Speed": "9",
+      "Strength": "125",
+      "Size": "1",
+      "JumpjetHeight": "500",
+      "JumpjetClimb": "20",
+      "JumpjetSpeed": "30",
+      "JumpjetNoWobbles": "yes"
+    },
+    "SHAD": {
+      "Locomotor": "{92612C46-F71F-11d1-AC9F-006008055BB5}",
+      "MovementZone": "Fly",
+      "SpeedType": "Hover",
+      "Speed": "14",
+      "Strength": "175",
+      "Passengers": "5",
+      "SizeLimit": "2",
+      "Size": "15",
+      "JumpjetHeight": "500",
+      "JumpjetClimb": "10",
+      "JumpjetSpeed": "30"
+    },
+    "CLEG": {
+      "Locomotor": "{4A582747-9839-11d1-B709-00A024DDAFD1}",
+      "MovementZone": "Infantry",
+      "Speed": "5",
+      "Strength": "125",
+      "Size": "1"
+    }
+  },
+  "no_rule_override": true,
+  "capacity_interpretation": {
+    "capacity": 12,
+    "two_truck_sizes": [
+      6,
+      6
+    ],
+    "infantry_size": 1,
+    "no_direct_rejection_return_observed": true
+  }
+}

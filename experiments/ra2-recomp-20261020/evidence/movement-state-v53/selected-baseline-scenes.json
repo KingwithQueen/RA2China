@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-aw3",
+      "frames": 3201,
+      "exe_sha256": "24b453316d6ccee0124d8f1b571104c8be17d1da0042d1c4b465ad12e1d8a3ea",
+      "comparison_sha256": "49745090c43df048277f0792c9559d38dc96a860ea177721179b781345c74884",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "b-mp",
+      "frames": 3001,
+      "exe_sha256": "24b453316d6ccee0124d8f1b571104c8be17d1da0042d1c4b465ad12e1d8a3ea",
+      "comparison_sha256": "95ad6802f3f094ff3a253e5c0354eac78125eb99be97bbdd2752d8d63c93bcfe",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "js",
+      "stage": "movement-state-v52",
+      "frames": 4001,
+      "comparison_sha256": "058af1183f0ca5e88338cac8f943284f48602175523a9f01cd2469f7cbbee9fb",
+      "inherited": true
+    }
+  ],
+  "scope": "Full pre-change per-mode traces, using the frozen parent observer."
+}

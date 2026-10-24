@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_obstacle.c",
+    "ra2/src/gameplay/ground_recovery.c"
+  ],
+  "added_compile_inputs": [],
+  "build_recipe_changed": false,
+  "source_count": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 408,
+  "baseline_files": 315,
+  "parts": {
+    "obstacle": {
+      "files": 345,
+      "exe_sha256": "4f1745bc135e3631734eba0e20c8cd48f71fcd892055859e95aa366c33f63ef0"
+    },
+    "recovery": {
+      "files": 346,
+      "exe_sha256": "441ed78df38c597fa4416c788785a2e843ea46b53aee38b2ea755c72797d3b33"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

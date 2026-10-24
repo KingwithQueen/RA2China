@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "not_counted_as_formal_scenes": [
+    "b-aw",
+    "b-aw2"
+  ],
+  "qualification": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v53\\occupied-shore-qualification.json",
+  "qualification_sha256": "8b7eba5eddf596a536bc10ae123fcdc78f65470ca097cbacaae5eb4b34bbf97e",
+  "old_anomalies_inherited": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v52\\excluded-explorations.json",
+  "old_anomalies_sha256": "6a80c4c412074d88d410d88ac38ab3488dd9ed4e1d7132b6e833f7df19ff3e3f",
+  "old_corner_controls_inherited": true,
+  "no_new_identity_pilot_needed": true
+}

@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "trials": [
+    {
+      "tag": "b-aw",
+      "qualified": false,
+      "comparison_sha256": "ef287fdbea3cc67cb6a7caf2a883cb9c764eae711ee40abf12d45882a44d68b3",
+      "both_modes_run_passed": true,
+      "counted_as_formal_scene": false,
+      "modes": {
+        "original": {
+          "adjacent_occupied_at1900": 7,
+          "minimum_adjacent_occupied1900_2299": 7,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35456,
+            26240,
+            0
+          ],
+          "release_final_position": [
+            35968,
+            26496,
+            0
+          ]
+        },
+        "generated-c": {
+          "adjacent_occupied_at1900": 7,
+          "minimum_adjacent_occupied1900_2299": 7,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35456,
+            26240,
+            0
+          ],
+          "release_final_position": [
+            35968,
+            26496,
+            0
+          ]
+        }
+      },
+      "selected_for_final_retest": false
+    },
+    {
+      "tag": "b-aw2",
+      "qualified": false,
+      "comparison_sha256": "6bc688d60114567cb6d18b8c22d24049b669378a315e0c4213c6c4fe5ff8649b",
+      "both_modes_run_passed": true,
+      "counted_as_formal_scene": false,
+      "modes": {
+        "original": {
+          "adjacent_occupied_at1900": 8,
+          "minimum_adjacent_occupied1900_2299": 8,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35456,
+            26240,
+            0
+          ],
+          "release_final_position": [
+            35712,
+            26240,
+            0
+          ]
+        },
+        "generated-c": {
+          "adjacent_occupied_at1900": 8,
+          "minimum_adjacent_occupied1900_2299": 8,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35456,
+            26240,
+            0
+          ],
+          "release_final_position": [
+            35712,
+            26240,
+            0
+          ]
+        }
+      },
+      "selected_for_final_retest": false
+    },
+    {
+      "tag": "b-aw3",
+      "qualified": true,
+      "comparison_sha256": "49745090c43df048277f0792c9559d38dc96a860ea177721179b781345c74884",
+      "both_modes_run_passed": true,
+      "counted_as_formal_scene": false,
+      "modes": {
+        "original": {
+          "adjacent_occupied_at1900": 8,
+          "minimum_adjacent_occupied1900_2299": 8,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35904,
+            26816,
+            0
+          ],
+          "release_final_position": [
+            36224,
+            25984,
+            0
+          ]
+        },
+        "generated-c": {
+          "adjacent_occupied_at1900": 8,
+          "minimum_adjacent_occupied1900_2299": 8,
+          "carrier_missions_in_occupied_window": {
+            "5": 400
+          },
+          "final_cargo_position": [
+            35904,
+            26816,
+            0
+          ],
+          "release_final_position": [
+            36224,
+            25984,
+            0
+          ]
+        }
+      },
+      "selected_for_final_retest": true
+    }
+  ],
+  "initial_target_cells": {
+    "release_goal144102_land": 0,
+    "cargo_goal144104_land": 2
+  },
+  "corrected_targets": {
+    "release_goal141101_land": 0,
+    "cargo_goal140104_land": 0
+  },
+  "scope": "First attempt reached seven occupied neighbors; second reached eight but release never moved. Causes of rejected long move not proved. Cargo follow-up water target corrected. Both unqualified attempts retained; final ordinary short move and unload retry qualify. No forced occupancy/path/results."
+}
