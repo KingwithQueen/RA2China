@@ -305,3 +305,6 @@ set_source_files_properties(src/gameplay/ground_transition_rules.c PROPERTIES CO
 
 target_sources(ra2 PRIVATE src/gameplay/ground_exit_policy.c)
 set_source_files_properties(src/gameplay/ground_exit_policy.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_outcome_policy.c)
+set_source_files_properties(src/gameplay/ground_outcome_policy.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

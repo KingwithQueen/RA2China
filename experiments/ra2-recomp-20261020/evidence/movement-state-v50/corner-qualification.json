@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "corner6_scope": "Primary corner/high-ground/bridge roundtrip and moving traffic.",
+  "corner8_scope": "Corner4/5/6 height transitions, naturally held target then valid-goal recovery, and other actors using bridge. Primary corner8-to-bridge route not qualified.",
+  "excluded_bridge_trials": [
+    "d8",
+    "e8"
+  ],
+  "main_corner8_bridge_trip_remaining": true,
+  "no_original_bug_attribution": true
+}

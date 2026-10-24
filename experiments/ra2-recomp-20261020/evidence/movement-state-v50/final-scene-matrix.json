@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "w2",
+      "frames": 2601,
+      "exe_sha256": "21b7cd29d01aefbe0695350b59901b2de5619ee3f96c3f29eb3759b4f122ea2d",
+      "comparison_sha256": "1f5b979ff4b8d6078124a1861a1420952579ecab6679821cf22daec57fd17c14",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "a2",
+      "frames": 2701,
+      "exe_sha256": "21b7cd29d01aefbe0695350b59901b2de5619ee3f96c3f29eb3759b4f122ea2d",
+      "comparison_sha256": "853accf4f83715756c469c9e9d86b30bcaa5af11f9de027091ab1bbcae3af7e5",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "c6",
+      "frames": 2001,
+      "exe_sha256": "21b7cd29d01aefbe0695350b59901b2de5619ee3f96c3f29eb3759b4f122ea2d",
+      "comparison_sha256": "8a37fb69ce7164dae77b03fa417324918d874b3b14ea2af4fd7860b3011ee312",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "c8",
+      "frames": 2401,
+      "exe_sha256": "21b7cd29d01aefbe0695350b59901b2de5619ee3f96c3f29eb3759b4f122ea2d",
+      "comparison_sha256": "ab6f8f5a5dda6a7a6ee32aa6e214995ebc57afc35ddac2994bb6882eaeeda734",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "70c9b72dfe6f32b547e69e9322474ba8cf9aa791e57a2b189b1526fa23ff3855",
+      "comparison_sha256": "975c57af435fe6a5d3626d8ba4c033f69195b1e04694d71e92c9a4ca1eb661d0",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "70c9b72dfe6f32b547e69e9322474ba8cf9aa791e57a2b189b1526fa23ff3855",
+      "comparison_sha256": "e95be218fe62b1075d42dc278f3d3c9e597d86a450d491a7006df04564bbb122",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "70c9b72dfe6f32b547e69e9322474ba8cf9aa791e57a2b189b1526fa23ff3855",
+      "comparison_sha256": "b3571433f1f22427f8807a9326f9711de5924e307c67f1b3cbba2db97a3b46b7",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "70c9b72dfe6f32b547e69e9322474ba8cf9aa791e57a2b189b1526fa23ff3855",
+      "comparison_sha256": "b43064582200a9385d3400a1f395d0c05933129cebe1fc78010e6bd528dd8ea5",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "70c9b72dfe6f32b547e69e9322474ba8cf9aa791e57a2b189b1526fa23ff3855",
+      "comparison_sha256": "277f5e2bf42791b2b317a281e2c2c385fc8690152ec8a63fd879f6a9a11ed496",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 4,
+  "observer_frames": 9704,
+  "scope": "Natural coast/air transport, ship and teleport effects with frozen baseline variations, corner6/8 traffic, with affected collision/failure/height regression."
+}

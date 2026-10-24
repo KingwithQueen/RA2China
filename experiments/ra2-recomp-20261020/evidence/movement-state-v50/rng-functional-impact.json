@@ -1,0 +1,495 @@
+{
+  "passed": true,
+  "scope": "Finite effects analysis; old1029 trace inherited/read only, new natural coast scenes measured this round. No new RNG hook, reset, seed change or global comparator relaxation.",
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v49\\rng-provenance.json",
+      "sha256": "e71ab9f99a18631b3fb63cb6300556530ead35abd0f4ac017c13e27043123533"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v48\\runs\\b3-dc\\comparison.json",
+      "sha256": "9e69314988e088b49f4535542001a6be50e57121f6f686f28ec05366f31a4ed7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v48\\runs\\b3-dc\\original\\state.jsonl",
+      "sha256": "8cb7888abe92b88cc6cf87a64fa596dedabf28bb282a8b62104d83b49e2af7ca"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v48\\runs\\b3-dc\\generated-c\\state.jsonl",
+      "sha256": "9c726903fc7d96f3bdffe9607219166519f3745e9c2df5b977f0941df407fb9d"
+    }
+  ],
+  "old_variant": {
+    "modes": {
+      "original": {
+        "board_frame": 145,
+        "drop_frame": 1504,
+        "collapse_frame": 430,
+        "trap_removed_frame": 460,
+        "landing_cell": [
+          63,
+          60
+        ],
+        "goal_cells": {
+          "1023362": [
+            63,
+            59
+          ],
+          "1023363": [
+            64,
+            62
+          ],
+          "1023365": [
+            64,
+            72
+          ],
+          "1023366": [
+            65,
+            61
+          ]
+        },
+        "final_health": {
+          "1023362": 300,
+          "1023363": 200,
+          "1023365": 200,
+          "1023366": 125
+        },
+        "final_positions": {
+          "1023362": [
+            16256,
+            15231,
+            518
+          ],
+          "1023363": [
+            16576,
+            15936,
+            416
+          ],
+          "1023365": [
+            16512,
+            18560,
+            416
+          ],
+          "1023366": [
+            16832,
+            15680,
+            416
+          ]
+        }
+      },
+      "generated-c": {
+        "board_frame": 145,
+        "drop_frame": 1504,
+        "collapse_frame": 430,
+        "trap_removed_frame": 460,
+        "landing_cell": [
+          63,
+          60
+        ],
+        "goal_cells": {
+          "1023362": [
+            63,
+            59
+          ],
+          "1023363": [
+            64,
+            62
+          ],
+          "1023365": [
+            64,
+            72
+          ],
+          "1023366": [
+            65,
+            61
+          ]
+        },
+        "final_health": {
+          "1023362": 300,
+          "1023363": 200,
+          "1023365": 200,
+          "1023366": 125
+        },
+        "final_positions": {
+          "1023362": [
+            16256,
+            15228,
+            518
+          ],
+          "1023363": [
+            16448,
+            16064,
+            416
+          ],
+          "1023365": [
+            16512,
+            18560,
+            416
+          ],
+          "1023366": [
+            16832,
+            15680,
+            416
+          ]
+        }
+      }
+    },
+    "rng_different_frames": 980,
+    "first_rng_frame": 1029,
+    "functional_effect_keys_equal": [
+      "board_frame",
+      "drop_frame",
+      "collapse_frame",
+      "trap_removed_frame",
+      "landing_cell",
+      "goal_cells",
+      "final_health"
+    ],
+    "exact_subcell_positions_equal": false,
+    "inherited_call_provenance_sha256": "e71ab9f99a18631b3fb63cb6300556530ead35abd0f4ac017c13e27043123533",
+    "not_counted_as_new_scene_pair": true
+  },
+  "new_variants": {
+    "w2": {
+      "functional_acceptance_sha256": "774a2648980b2a30b3bd7bcd1be49866cf79a88e8a0669bedf0ab382a0c99d3b",
+      "first_rng_frame": 349,
+      "rng_different_frames": 2018,
+      "ship_arrival_observations": {
+        "original": [
+          {
+            "frame": 345,
+            "position": [
+              33408,
+              27253,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 346,
+            "position": [
+              33408,
+              27259,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 347,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 348,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 349,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 350,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          }
+        ],
+        "generated-c": [
+          {
+            "frame": 345,
+            "position": [
+              33408,
+              27254,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 346,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 347,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 348,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 349,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 350,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          }
+        ]
+      },
+      "exact_rng_call_source_proved_this_round": false,
+      "whole_tail_random_assignment_equal": false,
+      "finite_transport_health_and_goals_equal": true
+    },
+    "a2": {
+      "functional_acceptance_sha256": "31eaa2455ba983ba28c1769fc8e922d151e84a70b7a0b824f91ef68db3f9052d",
+      "first_rng_frame": 349,
+      "rng_different_frames": 2165,
+      "ship_arrival_observations": {
+        "original": [
+          {
+            "frame": 345,
+            "position": [
+              33408,
+              27253,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 346,
+            "position": [
+              33408,
+              27259,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 347,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 348,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 349,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 350,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          }
+        ],
+        "generated-c": [
+          {
+            "frame": 345,
+            "position": [
+              33408,
+              27254,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 346,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 347,
+            "position": [
+              33408,
+              27261,
+              0
+            ],
+            "mission": [
+              2,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 348,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 349,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          },
+          {
+            "frame": 350,
+            "position": [
+              33408,
+              27264,
+              0
+            ],
+            "mission": [
+              5,
+              -1,
+              -1
+            ]
+          }
+        ]
+      },
+      "exact_rng_call_source_proved_this_round": false,
+      "whole_tail_random_assignment_equal": false,
+      "finite_transport_health_and_goals_equal": true
+    }
+  },
+  "conclusion": "Observed differences preserve these transport states, target cells, health and bridge effects. Arrival/height/subcell timing and later random assignments remain recorded differences; no full-game equivalence or exact new ship-call attribution claim."
+}

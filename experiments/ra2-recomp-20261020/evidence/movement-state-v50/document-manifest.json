@@ -1,0 +1,38 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "4d669577f4106e4286b591dd16ad0053954e510ee377ef591616e32e71e4aae1"
+  },
+  {
+    "path": "docs/单位移动第四十九批-失败与通行服务及真实水岸和斜角坡面-20261024.txt",
+    "sha256": "9cb432f6dcac9ef96d377ecb69e4458bb6688355816ad2f4bd4b0317ffacb3b9"
+  },
+  {
+    "path": "交接文档-单位移动第四十九批正式验收-20261024.txt",
+    "sha256": "200cce7f71812a360efa5ac46c44c7ffdc57e8da281a40b5d14914017e0c883c"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "313f11cbab91ababec55e4e57b0df709bd14fca86cc59759ade17c73380111be"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "8b1cb02dff7624119769a75e67e3738e1c84b60aa673e8aa2610e80377a971ee"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "921c0429cb3cbc27704bd3eee8cf06f7715f98f7b95495bbc192ec03a45687ca"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "921c0429cb3cbc27704bd3eee8cf06f7715f98f7b95495bbc192ec03a45687ca"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "921c0429cb3cbc27704bd3eee8cf06f7715f98f7b95495bbc192ec03a45687ca"
+  }
+]

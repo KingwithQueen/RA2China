@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "percentage_reestimated": false,
+  "remaining": [
+    "Uncovered generated state/service entries",
+    "Primary corner8-to-bridge route remains unqualified; retained bounded trials",
+    "More natural shore/transport and locomotor combinations",
+    "Recorded timing/subcell/RNG variations: revisit only for functional impact",
+    "Other engine subsystem integration"
+  ]
+}
