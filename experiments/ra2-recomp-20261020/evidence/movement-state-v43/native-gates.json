@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "groups": 6,
+  "cases": 360448,
+  "capture_packet_cases": 64,
+  "receipts": [
+    "part-prepare-prepare.json",
+    "part-prepare-special.json",
+    "part-process-drive_process.json",
+    "part-process-arrival.json"
+  ],
+  "scope": "Prepare entry/retry/cycle, special obstacles, Process32768 and Arrival65536; independent native command-constructor64 cases."
+}

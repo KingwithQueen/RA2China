@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "repair",
+      "frames": 1501,
+      "exe_sha256": "91a5848f1bd56ff49df6e259c9b2a27ef8a9d85a220833b0a1b873e98b39aecb",
+      "comparison_sha256": "a9a57def2545126f0d2bd625deb30f136526c2fb873bedfba174426dc5ebbc38",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repair-control",
+      "frames": 1501,
+      "exe_sha256": "91a5848f1bd56ff49df6e259c9b2a27ef8a9d85a220833b0a1b873e98b39aecb",
+      "comparison_sha256": "ea4e725e098239104033fa14efe990d7035fd7d439933af5b45370c6f981472d",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "detour",
+      "frames": 1201,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "c4a9cc6ff24bbeb11c8b802d193aa06d966dab6bcf2f2f18c08b7f873c072d7b",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "jumpjet",
+      "frames": 1001,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "049165f4ba138c704ce3b12b6cf4220496559a0f2c07006f500a5f4e9b6e0632",
+      "capture_host": false,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "0eb78acf6cc3ebfe2a96d45cd05c6ca5fba7a7c21d5363b0562d4880de806e21",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "3667e253217457a2e8424fedac5f240c6a2af7048042e437cc0d5bc2a30c245b",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "34f91082d196ab3381acfea62e447127fec49796aa8d18ce24153d395fbc69b9",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "d2b63024f4e1b861fbb5838f7da00b4b4e04173646795aa4fbe7d94efe0f4b88",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+      "comparison_sha256": "dcad8e30131cbb329d0f0a2d26d004df8fb3fc55b0d36a1c3d80a1bdb2e6a7dc",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 7,
+  "production_frames": 5657,
+  "observer_scenes": 2,
+  "observer_frames": 3002,
+  "scope": "Finite native command repair/control, ordinary detour/jumpjet, and affected collision/failure/height regression."
+}

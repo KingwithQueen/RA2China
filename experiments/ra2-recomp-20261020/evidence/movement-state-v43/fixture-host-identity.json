@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_sha256": "56af390aa98f27c37472006371b8d19ab435e8a3045d7abc0dfbad585e9eb32f",
+  "host_sha256": "91a5848f1bd56ff49df6e259c9b2a27ef8a9d85a220833b0a1b873e98b39aecb",
+  "production_sha256": "dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1",
+  "native_packet_receipt_sha256": "7a62ba837091e02c2cb719cc96a039bf04155165812e44d5117fbdb19d1b6d34",
+  "production_recorder_unchanged": true,
+  "no_direct_repair_or_path_result_calls": true,
+  "original_and_C_normal_input_path": true,
+  "readonly_bridge_observation_frames": [
+    200,
+    900
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "baseline-repair",
+      "passed": true,
+      "strict_passed": true,
+      "frames": 1501
+    },
+    {
+      "tag": "baseline-repair-control",
+      "passed": true,
+      "strict_passed": true,
+      "frames": 1501
+    },
+    {
+      "tag": "baseline-detour",
+      "passed": true,
+      "strict_passed": true,
+      "frames": 1201
+    },
+    {
+      "tag": "baseline-jumpjet",
+      "passed": true,
+      "strict_passed": false,
+      "frames": 1001
+    }
+  ],
+  "scope": "Exploration/recipe qualification against the accepted generation41 host; one pre-existing flight variation accepted explicitly."
+}

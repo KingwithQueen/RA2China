@@ -1,0 +1,38 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "aef486105b35c776117bc2cc026d6d9f4a87476367e6664f3a8dbbe6c12444b6"
+  },
+  {
+    "path": "docs/单位移动第四十二批-Prepare特殊阻挡与Process收尾及修桥绕行实景-20261024.txt",
+    "sha256": "5431f80d80601b24b78c5cc46e4dbd82986c2611a03b9b9e193b4bd952502691"
+  },
+  {
+    "path": "交接文档-单位移动第四十二批正式验收-20261024.txt",
+    "sha256": "ef6a5e1776292fbbcff8e662e8d06ec7ba49df7b3d23dc807e1a80cbc7c4aecb"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "d8f8cd94c254b33560bcf82322059350044ffffdb8b1eeaa0f8d632f3c56c37e"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "c06d026f16dbbb101356911370de8898fe61dab225a2d3578835cf873e4bc299"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "9654f68f3b1c1ea8409f08ba2745238fb54930207f94d974d2f4aa33bf1d7fb9"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "9654f68f3b1c1ea8409f08ba2745238fb54930207f94d974d2f4aa33bf1d7fb9"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "9654f68f3b1c1ea8409f08ba2745238fb54930207f94d974d2f4aa33bf1d7fb9"
+  }
+]

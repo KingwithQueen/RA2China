@@ -1,4 +1,5 @@
 #include "ground_drive.h"
+#include "ground_failure_transition.h"
 
 static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
 {
@@ -10,14 +11,15 @@ static int32_t query(const Ra2DriveServices *services, Ra2DriveQuery value)
     return services->query(services->context, value);
 }
 
-static void clear_segment(Ra2GroundDriveState *state, Ra2WorldPoint invalid_position)
+
+/* Prepare/Advance 都可移除单位；每次服务返回后再查存活。
+   接续同帧第二段传入1，避免再次累计本帧速度；新段从0开始。 */
+static int prepare_and_advance(const Ra2DriveServices *services, int continuing)
 {
-    /* 原版只在坐标确实改变时清 driving；空路径段可能保留旧标志，不能擅自做状态清理。 */
-    if (!same_position(state->segment_end, invalid_position))
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
+    if (services->prepare_segment(services->context) || !query(services, RA2_DRIVE_OWNER_ALIVE)) return 0;
+    services->advance_segment(services->context, continuing);
+    if (!query(services, RA2_DRIVE_OWNER_ALIVE)) return 0;
+    return services->finish_frame(services->context);
 }
 
 int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_position, const Ra2DriveServices *services)
@@ -59,17 +61,7 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
                 services->set_destination(services->context, position);
             }
         }
-        if (services->prepare_segment(services->context) || !query(services, RA2_DRIVE_OWNER_ALIVE))
-        {
-            return 0;
-        }
-        /* 本帧速度已经在第一段消耗；切换到下一段时不能再累计一次。 */
-        services->advance_segment(services->context, 1);
-        if (!query(services, RA2_DRIVE_OWNER_ALIVE))
-        {
-            return 0;
-        }
-        return services->finish_frame(services->context);
+        return prepare_and_advance(services, 1);
     }
 
     /* 没有活动路段：先处理已经到达的格目标，再处理原地转向和等待任务。 */
@@ -114,7 +106,7 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
         /* 路径队列为空时只同步目标或停止速度，不能凭空进入新路径段。 */
         if (query(services, RA2_DRIVE_OWNER_FLAG_325))
         {
-            clear_segment(state, invalid_position);
+            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
             state->desired_speed = 0.0;
             return services->finish_frame(services->context);
         }
@@ -131,21 +123,12 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
     if (query(services, RA2_DRIVE_OWNER_FLAG_32D) && query(services, RA2_DRIVE_EFFECTIVE_MISSION) != 7
         && query(services, RA2_DRIVE_IS_MOVING) && !query(services, RA2_DRIVE_DESTINATION_ACCEPTED))
     {
-        clear_segment(state, invalid_position);
+        ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
         if (services->stop_navigation(services->context))
         {
             return 0;
         }
         return services->finish_frame(services->context);
     }
-    if (services->prepare_segment(services->context) || !query(services, RA2_DRIVE_OWNER_ALIVE))
-    {
-        return 0;
-    }
-    services->advance_segment(services->context, 0);
-    if (!query(services, RA2_DRIVE_OWNER_ALIVE))
-    {
-        return 0;
-    }
-    return services->finish_frame(services->context);
+    return prepare_and_advance(services, 0);
 }

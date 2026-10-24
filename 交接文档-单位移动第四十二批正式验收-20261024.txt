@@ -1,0 +1,11 @@
+当前正式42 / 验证43，2026-10-24。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第四十二批-Prepare特殊阻挡与Process收尾及修桥绕行实景-20261024.txt
+程序SHA-256：dab1142f70413b7604242bef7cbcf0fefaf830c4806ba18663b0a26d6ef076c1
+已整理Prepare近目标失败/特殊阻挡、Process新段与接续服务序列及Arrival刷新收尾；仅四个现有业务C改变。174个C、298项输入、37保护，生成入口/适配/生产记录器/比较器未改。
+两部分各3场1303帧，有独立回退。正式与功能宿主共15个验收配对11265帧；六组原生路径360448例，另64例原版命令构造器。
+已取得工程师正常进入维修屋修桥、桥格恢复后车辆重新通行、无捕获命令负对照、毁桥后自然绕行、Jumpjet飞过断口的实景。
+Jumpjet既有水平位置不足0.09格/朝向约3.2度差异保留，严格报告false与独立功能验收分开；当前各模式轨迹与基线分别逐条一致，不追逐瞬时数值完美相同。
+原版两项高差异常、29候选来源调查和父批原始证据保留。只有受影响/新功能证据才扩大矩阵。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v43\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v43\parts；基线功能宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v43\baseline-observer；当前封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v43\final-source。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v43.py。后续继续其他移动器/状态入口与全引擎集成；有限验收、清理可再生成缓存，本地提交不推送。

@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_special.h"
+#include "ground_failure_transition.h"
 
 static int32_t absolute_difference(int32_t left, int32_t right)
 {
@@ -11,22 +12,12 @@ static int32_t absolute_difference(int32_t left, int32_t right)
     return result;
 }
 
-static void clear_segment(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position)
-{
-    if (state->segment_end.x != invalid_position.x || state->segment_end.y != invalid_position.y
-        || state->segment_end.z != invalid_position.z)
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-}
 
 static int stop_navigation(const Ra2SpecialServices *services)
 {
     int target_variant = services->query(services->context, RA2_SPECIAL_HAS_TARGET_488);
-    if (target_variant) services->cancel_target(services->context);
-    int stopped = services->stop_navigation(services->context, target_variant);
-    return target_variant && stopped;
+    return !!ra2_ground_stop_target(target_variant, services->context,
+        services->cancel_target, services->stop_navigation);
 }
 
 Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
@@ -40,7 +31,7 @@ Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state,
         {
             return services->retry(context, path_head, 0) ? RA2_SPECIAL_RETURN_TRUE : RA2_SPECIAL_RETURN_FALSE;
         }
-        clear_segment(state, invalid_position);
+        ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
         return stop_navigation(services) ? RA2_SPECIAL_RETURN_TRUE : RA2_SPECIAL_RETURN_FALSE;
     }
     if (passage != RA2_CELL_TEMPORARY_OBSTACLE || services->query(context, RA2_SPECIAL_IS_TRAIN))
@@ -60,7 +51,7 @@ Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state,
         if (absolute_difference(state->destination.z, position.z) < (int32_t)((uint32_t)height * 2u)
             && services->query(context, RA2_SPECIAL_CURRENT_LAND) != 10)
         {
-            clear_segment(state, invalid_position);
+            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
             if (stop_navigation(services)) return RA2_SPECIAL_RETURN_TRUE;
             return RA2_SPECIAL_CLEAR_SEGMENT;
         }

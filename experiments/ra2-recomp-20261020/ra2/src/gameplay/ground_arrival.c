@@ -1,11 +1,8 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_arrival.h"
+#include "ground_failure_transition.h"
 
-static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
-{
-    return left.x == right.x && left.y == right.y && left.z == right.z;
-}
 
 static int same_cell(Ra2WorldPoint left, Ra2WorldPoint right)
 {
@@ -31,38 +28,10 @@ static int32_t wrapped_distance(int32_t left, int32_t right)
     return signed_bits(difference);
 }
 
-static void clear_segment(Ra2GroundArrivalState *state, Ra2WorldPoint invalid_position)
+
+/* 刷新后重新检查可用性；停止任务/更新服务均可结束本帧或移除所有者。 */
+static Ra2ArrivalOutcome finish_after_refresh(int reached_target, const Ra2ArrivalServices *services)
 {
-    /* 和 Process 一样：重复写入空坐标时保留旧 driving，真正到达目标后才无条件清零。 */
-    if (!same_position(state->segment_end, invalid_position))
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-}
-
-Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state, Ra2WorldPoint owner_position,
-    Ra2WorldPoint invalid_position, int32_t level_height, const Ra2ArrivalServices *services)
-{
-    services->relocate(services->context, !same_cell(owner_position, state->segment_end));
-    clear_segment(state, invalid_position);
-    state->path_selector = -1;
-    state->sample_index = 0;
-
-    int reached_target = 0;
-    if (services->query(services->context, RA2_ARRIVAL_TARGET_IS_CURRENT_CELL))
-    {
-        int32_t owner_z = services->query(services->context, RA2_ARRIVAL_OWNER_REFERENCE_Z);
-        int32_t tolerance = signed_bits((uint32_t)level_height * 2u);
-        if (wrapped_distance(owner_z, state->destination.z) < tolerance)
-        {
-            reached_target = 1;
-            state->destination = invalid_position;
-            clear_segment(state, invalid_position);
-            state->driving = 0;
-        }
-    }
-
     services->refresh_owner(services->context);
     if (!services->query(services->context, RA2_ARRIVAL_OWNER_USABLE))
     {
@@ -86,4 +55,29 @@ Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state, Ra2Wor
         return RA2_ARRIVAL_RETURN_FALSE;
     }
     return RA2_ARRIVAL_CONTINUE;
+}
+
+Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state, Ra2WorldPoint owner_position,
+    Ra2WorldPoint invalid_position, int32_t level_height, const Ra2ArrivalServices *services)
+{
+    services->relocate(services->context, !same_cell(owner_position, state->segment_end));
+    ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+    state->path_selector = -1;
+    state->sample_index = 0;
+
+    int reached_target = 0;
+    if (services->query(services->context, RA2_ARRIVAL_TARGET_IS_CURRENT_CELL))
+    {
+        int32_t owner_z = services->query(services->context, RA2_ARRIVAL_OWNER_REFERENCE_Z);
+        int32_t tolerance = signed_bits((uint32_t)level_height * 2u);
+        if (wrapped_distance(owner_z, state->destination.z) < tolerance)
+        {
+            reached_target = 1;
+            state->destination = invalid_position;
+            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+            state->driving = 0;
+        }
+    }
+
+    return finish_after_refresh(reached_target, services);
 }

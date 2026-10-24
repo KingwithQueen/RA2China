@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_prepare.h"
+#include "ground_failure_transition.h"
 
 static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
 {
@@ -14,14 +15,6 @@ static int32_t signed_bits(uint32_t bits)
     return result;
 }
 
-static void clear_segment(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position)
-{
-    if (!same_position(state->segment_end, invalid_position))
-    {
-        state->segment_end = invalid_position;
-        state->driving = 0;
-    }
-}
 
 static int32_t query(const Ra2PrepareServices *services, Ra2PrepareQuery value)
 {
@@ -34,7 +27,7 @@ Ra2PreparePhase ra2_ground_prepare_entry(Ra2GroundPrepareState *state, Ra2WorldP
     if (!is_moving && *cached_path_head == -1)
     {
         state->legacy_flag_61 = 0;
-        clear_segment(state, invalid_position);
+        ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
         if (query(services, RA2_PREPARE_EFFECTIVE_MISSION) == 2)
         {
             unsigned aborted = (unsigned)services->stop_navigation(services->context, 1);
@@ -133,18 +126,11 @@ Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state, Ra2WorldPoin
         /* 两次任务查询照原版执行；服务可能带有可观察副作用，不能合并成一次。 */
         if (query(services, RA2_PREPARE_EFFECTIVE_MISSION) == 2 || query(services, RA2_PREPARE_EFFECTIVE_MISSION) == 11)
         {
-            clear_segment(state, invalid_position);
-            if (!query(services, RA2_PREPARE_HAS_TARGET_488))
+            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+            int target = !!query(services, RA2_PREPARE_HAS_TARGET_488);
+            if (ra2_ground_stop_target(target, services->context, services->cancel_target, services->stop_navigation))
             {
-                services->stop_navigation(services->context, 0);
-            }
-            else
-            {
-                services->cancel_target(services->context);
-                if (services->stop_navigation(services->context, 1))
-                {
-                    return RA2_PREPARE_RETURN_TRUE;
-                }
+                return RA2_PREPARE_RETURN_TRUE;
             }
             return query(services, RA2_PREPARE_OWNER_ALIVE)
                 ? RA2_PREPARE_FINISH_FAILED_ATTEMPT : RA2_PREPARE_RETURN_FALSE;
