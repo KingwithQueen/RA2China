@@ -111,6 +111,7 @@ add_executable(ra2
   src/gameplay/ground_arrival.c
   src/gameplay/ground_prepare.c
   src/gameplay/ground_failure_transition.c
+  src/gameplay/ground_rebuild_result.c
   src/gameplay/ground_prepare_cycle.c
   src/gameplay/ground_segment.c
   src/gameplay/ground_wait.c
@@ -287,3 +288,5 @@ set_source_files_properties(src/gameplay/ground_cell_placement.c PROPERTIES COMP
 set_source_files_properties(src/gameplay/ground_prepare_cycle.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
 
 set_source_files_properties(src/gameplay/ground_failure_transition.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+set_source_files_properties(src/gameplay/ground_rebuild_result.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

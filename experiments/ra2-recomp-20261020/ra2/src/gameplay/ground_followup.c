@@ -1,4 +1,5 @@
 #include "ground_followup.h"
+#include "ground_rebuild_result.h"
 
 static unsigned highest_bit(uint64_t bits)
 {
@@ -82,16 +83,15 @@ Ra2FollowupResult ra2_ground_prepare_followup(const Ra2FollowupServices *service
         return result;
     }
     int train = services->is_train(context);
-    if (!services->rebuild_path(context, train))
+    int rebuilt = services->rebuild_path(context, train);
+    Ra2RebuildResultServices checks = { context, services->owner_exists, services->write_aborted,
+        services->destination_accepted, services->stop_navigation };
+    if (ra2_ground_check_rebuild_result(rebuilt, 0, &checks) == RA2_REBUILD_NO_OWNER)
     {
-        if (!services->owner_exists(context))
-        {
-            services->write_aborted(context);
-            result.aborted = 1;
-            return result;
-        }
-        if (!services->destination_accepted(context)) services->stop_navigation(context);
+        result.aborted = 1;
+        return result;
     }
+    /* 拒绝目标并停止后仍重取第二方向；与Prepare计时出口的直接返回不同。 */
     result.next_direction = services->next_direction(context);
     return result;
 }

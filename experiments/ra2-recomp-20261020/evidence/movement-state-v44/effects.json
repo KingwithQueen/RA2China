@@ -1,0 +1,309 @@
+{
+  "passed": true,
+  "representative": {
+    "restored-bridge-traffic": {
+      "passed": true,
+      "engineer_consumed_frame": 671,
+      "broken_frame200": [
+        0,
+        0
+      ],
+      "restored_frames900_1800": [
+        1,
+        1
+      ],
+      "negative_control_remains_broken": true,
+      "meeting_query_events": [
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        },
+        {
+          "frame": 1240,
+          "stage": 25
+        },
+        {
+          "frame": 1240,
+          "stage": 26
+        }
+      ],
+      "waiting_sample_frames": [
+        1291,
+        1292,
+        1293,
+        1294,
+        1295,
+        1335,
+        1336,
+        1337,
+        1338,
+        1339,
+        1340,
+        1341,
+        1342,
+        1343,
+        1344,
+        1345
+      ],
+      "waiting_samples_are_not_one_continuous_interval": true,
+      "blocker_classification_events": 24,
+      "blocker_releases": [
+        {
+          "id": 1023365,
+          "order_frame": 1350,
+          "first_motion_frame": 1380
+        },
+        {
+          "id": 1023364,
+          "order_frame": 1450,
+          "first_motion_frame": 1480
+        }
+      ],
+      "car_arrival_frame": 1417,
+      "car_final": [
+        15488,
+        19840,
+        416
+      ],
+      "foot_final": [
+        15552,
+        14912,
+        416
+      ],
+      "stationary_hover_position": [
+        15744,
+        20352,
+        495
+      ],
+      "hover_move_claimed": false,
+      "result_or_path_injection": false
+    },
+    "mixed-detour": {
+      "passed": true,
+      "bypass_frames": [
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625
+      ],
+      "car_final": [
+        15488,
+        19328,
+        416
+      ],
+      "foot_final": [
+        16576,
+        14912,
+        416
+      ],
+      "hover_final": [
+        16256,
+        15228,
+        500
+      ],
+      "parked_vehicle": [
+        16512,
+        19072,
+        416
+      ],
+      "hover_foot_classification_queries": [
+        {
+          "kind": "movement-audit",
+          "frame": 451,
+          "stage": 24,
+          "id": 1023365,
+          "cell": [
+            64,
+            77
+          ],
+          "value": 1023366,
+          "auxiliary": 5
+        },
+        {
+          "kind": "movement-audit",
+          "frame": 451,
+          "stage": 25,
+          "id": 1023365,
+          "cell": [
+            64,
+            77
+          ],
+          "value": 1023366,
+          "auxiliary": 5
+        },
+        {
+          "kind": "movement-audit",
+          "frame": 451,
+          "stage": 26,
+          "id": 1023365,
+          "cell": [
+            64,
+            77
+          ],
+          "value": 1023366,
+          "auxiliary": 5
+        }
+      ],
+      "main_move_submissions": 1,
+      "ordinary_map_and_commands": true
+    },
+    "hover-variation": {
+      "passed": true,
+      "comparison_sha256": "ec062faa038e29f906df40dbfe4997898fb89de42c12d1ddea4fd13c7df9f6cc",
+      "strict_comparison_preserved_false": true,
+      "max_world_coordinate_delta": [
+        13,
+        21
+      ],
+      "max_circular_heading_delta": [
+        5316,
+        5324
+      ],
+      "max_facing_timing_delta": [
+        88,
+        4
+      ],
+      "all_other_state_fields_and_ordinary_commands_equal": true,
+      "all_ground_and_nonterrain_audit_records_equal": true,
+      "hover_terrain_rule_value_counts_equal": true,
+      "baseline_inherited_exactly": true,
+      "baseline_original_trace_sha256": "7b9a5e23a2bfc30404ad049b48a2f8330fffc4303bc7a04f557f530211174f32",
+      "baseline_C_trace_sha256": "a0bf22a94ee0b76696ada1be8a898f0245cb8006fe6d18127b9c0fbf459f17f3",
+      "scope": "Only existing Hover horizontal position/turn state and its terrain-query timing vary. Ground vehicles, infantry, bridge effects, health, missions, RNG and ordinary commands match. Current traces must match each baseline mode exactly; no global comparator relaxation."
+    }
+  },
+  "bridge_cross_release": true,
+  "real_train_contact": true,
+  "real_infantry_crushing": true,
+  "repeated_failure_frames": [
+    451,
+    511,
+    571,
+    631,
+    691,
+    751,
+    811,
+    871,
+    931,
+    991,
+    1051,
+    1111
+  ],
+  "original_anomalies": [
+    {
+      "tag": "curve-up",
+      "original_final_position": [
+        18040,
+        29059,
+        436
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    },
+    {
+      "tag": "curve-tall-down",
+      "original_final_position": [
+        19583,
+        29070,
+        -193
+      ],
+      "candidate_currently_matches": true,
+      "must_replicate_bug": false,
+      "scope": "Retained original anomaly. Future deliberate correction may be accepted against functionality/rules/effects with an explained comparison."
+    }
+  ],
+  "accepted_baseline_variations": 1,
+  "production_rules_and_art_files_changed": false,
+  "whole_game_equivalence_verified": false,
+  "bug_for_bug_required": false
+}

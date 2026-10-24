@@ -1,5 +1,7 @@
 #include <string.h>
 #include "ground_turn.h"
+#include "ground_failure_transition.h"
+#include "ground_template_transition.h"
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -13,25 +15,6 @@ static int32_t absolute_difference(int32_t left, int32_t right)
     uint32_t bits = (uint32_t)left - (uint32_t)right;
     if (bits & UINT32_C(0x80000000)) bits = 0u - bits;
     return signed_bits(bits);
-}
-
-static void clear_segment(Ra2TurnState *state, Ra2WorldPoint invalid)
-{
-    Ra2WorldPoint end = state->movement.segment_end;
-    if (end.x!=invalid.x || end.y!=invalid.y || end.z!=invalid.z)
-    {
-        state->movement.segment_end = invalid;
-        state->movement.driving = 0;
-    }
-}
-
-static int stop_navigation(const Ra2TurnServices *services)
-{
-    void *context = services->context;
-    int has_target = services->query(context, RA2_TURN_HAS_TARGET_488);
-    if (has_target) services->cancel_target(context);
-    int result = services->stop_navigation(context, has_target);
-    return has_target && result;
 }
 
 static Ra2TurnPhase retry(const Ra2TurnServices *services, unsigned allow_recursive,
@@ -54,6 +37,30 @@ static Ra2TurnPhase discard_candidate(Ra2TurnState *state, Ra2WorldPoint invalid
     return RA2_TURN_COMMIT_WITHOUT_SHIFT;
 }
 
+typedef struct TurnGate { int32_t passage; const Ra2TurnServices *services; } TurnGate;
+static int32_t gate_class(void *opaque) { return ((TurnGate *)opaque)->passage; }
+static unsigned gate_type(void *opaque, unsigned crusher)
+{
+    const Ra2TurnServices *s = ((TurnGate *)opaque)->services;
+    return (unsigned)s->query(s->context, crusher ? RA2_TURN_IS_CRUSHER : RA2_TURN_IS_TRAIN);
+}
+static int32_t gate_overlay(void *opaque)
+{
+    const Ra2TurnServices *s = ((TurnGate *)opaque)->services;
+    return s->query(s->context, RA2_TURN_CELL_OVERLAY_INDEX);
+}
+static void gate_clear(void *opaque) { ((TurnGate *)opaque)->passage = RA2_CELL_CLEAR; }
+
+/* 临时障碍停止失败后放弃候选；隐形/完全阻挡直接返回。服务次序共用，接续策略保留。 */
+static Ra2TurnPhase stop_candidate(Ra2TurnState *state, Ra2WorldPoint invalid, int discard,
+    int32_t passage, unsigned allow_recursive, const Ra2TurnServices *s)
+{
+    ra2_ground_invalidate_segment(&state->movement.segment_end, &state->movement.driving, invalid);
+    int target = s->query(s->context, RA2_TURN_HAS_TARGET_488);
+    if (ra2_ground_stop_target(target, s->context, s->cancel_target, s->stop_navigation)) return RA2_TURN_RETURN_TRUE;
+    return discard ? discard_candidate(state, invalid, passage, allow_recursive, s) : RA2_TURN_RETURN_FALSE;
+}
+
 Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
     int32_t next_direction, unsigned allow_recursive, const Ra2TurnServices *services)
 {
@@ -66,16 +73,10 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
         state->candidate.x = signed_bits((uint32_t)state->candidate.x + (uint32_t)step.x);
         state->candidate.y = signed_bits((uint32_t)state->candidate.y + (uint32_t)step.y);
         passage = services->probe_passage(context, next_direction);
-        if (passage < RA2_CELL_BLOCKED && services->query(context, RA2_TURN_IS_TRAIN))
-        {
-            passage = RA2_CELL_CLEAR;
-        }
-        else if ((passage==RA2_CELL_FRIENDLY_OBSTACLE || passage==RA2_CELL_DESTROYABLE)
-            && services->query(context, RA2_TURN_IS_CRUSHER)
-            && services->query(context, RA2_TURN_CELL_OVERLAY_INDEX)==0)
-        {
-            passage = RA2_CELL_CLEAR;
-        }
+        TurnGate gate = { passage, services };
+        Ra2TemplateGateServices checks = { &gate, gate_class, gate_type, gate_overlay, gate_clear };
+        ra2_ground_template_gate(&checks);
+        passage = gate.passage;
     }
     else if (!services->query(context, RA2_TURN_OWNER_ALIVE)) return RA2_TURN_RETURN_FALSE;
     services->classified(context, passage);
@@ -113,9 +114,7 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
             if (absolute_difference(state->movement.destination.z, position.z) < signed_bits((uint32_t)height*2u)
                 && services->query(context, RA2_TURN_CURRENT_LAND)!=10)
             {
-                clear_segment(state, invalid);
-                if (stop_navigation(services)) return RA2_TURN_RETURN_TRUE;
-                return discard_candidate(state, invalid, passage, allow_recursive, services);
+                return stop_candidate(state, invalid, 1, passage, allow_recursive, services);
             }
         }
         int bridge_layer = 0;
@@ -137,8 +136,7 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
             state->directions[0] = -1;
             return retry(services, 0, 0, 0);
         }
-        clear_segment(state, invalid);
-        return stop_navigation(services) ? RA2_TURN_RETURN_TRUE : RA2_TURN_RETURN_FALSE;
+        return stop_candidate(state, invalid, 0, passage, allow_recursive, services);
     }
     if (passage==RA2_CELL_BLOCKED)
     {
@@ -147,8 +145,7 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
             state->directions[0] = -1;
             return retry(services, 0, 0, 1);
         }
-        clear_segment(state, invalid);
-        return stop_navigation(services) ? RA2_TURN_RETURN_TRUE : RA2_TURN_RETURN_FALSE;
+        return stop_candidate(state, invalid, 0, passage, allow_recursive, services);
     }
     return discard_candidate(state, invalid, passage, allow_recursive, services);
 }

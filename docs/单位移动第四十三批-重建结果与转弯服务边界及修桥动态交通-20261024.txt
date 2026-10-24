@@ -1,0 +1,302 @@
+单位移动第四十三批（正式43 / 验证44），2026-10-24。
+父提交：6ff1c9c303b6498aadd0023e11f76f88cfd4a8a7。第四十二批368项封存已核对，当前301项独立基线保留。
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：1a08809f4ab7cc50bef1617113770ed994b3887804e3b9437d77fec86577d527
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+
+范围与实现
+以整体功能、效果、规则及资源解读一致为验收边界，不要求逐BUG或无关瞬时数值完全相同。固定当前实现、代表效果与受影响回归，保留差异和回退后结束本批。
+新增ground_rebuild_result.h/.c：集中重建后的owner存在、写aborted、目标接受和停止服务，返回READY/NO_OWNER/REJECTED。成功时是否复核owner由调用点明确指定。
+ground_prepare_exit在非timer_only分支复核成功/失败重建的owner；拒绝直接退出，不重启短计时器。ground_followup成功时跳过owner复核；失败被拒绝并停止后仍重取第二方向，只有NO_OWNER才直接aborted。两个调用点的不同后续策略保留，未因共用服务而合并。
+ground_turn的列车/碾压放行复用已有template_gate，保留类型与覆盖层查询短路顺序；停止候选复用已验证的路段失效与取消/停止导航。临时障碍停止失败后丢弃候选，隐形/完全阻挡则直接返回；递归重试和提交方向队列保持原分流。
+175个生产C、300项编译输入，新增一C一头文件；仅另改prepare_exit、followup、turn三个业务C及CMake。生成入口、runtime适配、比较器、生产记录器/schema12和37个未实现保护不变。
+
+验证
+重建结果与Turn两部分，各默认遭遇战301帧、南北占用出口/步兵车辆交会各501帧，每部分1303帧，并各自保存源码/EXE回退。
+四组受影响原生片段共262144例：Followup速度/候选两个阶段各65536，等待重建出口65536，Turn分类/停止/重试/提交65536；Turn包括3537例分类过程owner失效。服务次序、状态、返回/栈及相关x87边界均按探针已覆盖范围核对。正常Capture命令构造器64例证明沿用前批，源和探针程序哈希一致，本轮没有重复运行或混入新计数。
+最终正式程序5场3455帧、正常命令/只读桥格功能宿主3场5303帧；连同两部分共14个功能验收配对、11364帧。气垫绕行有一项基线差异另存功能验收，其余代表矩阵按严格逐模拟帧核对。
+固定seed12345，最多两条配对通道/四个游戏进程，所有构建串行。受控单位环只用于重复失败回归，与普通地图/正常命令实景分开。
+另7个资格探索配对单独保留；初始化失败和未合格配方不计正式验收。没有为穷尽全部标签或追平瞬时数值扩大矩阵。
+
+动态组合的真实效果
+{
+  "restored-bridge-traffic": {
+    "passed": true,
+    "engineer_consumed_frame": 671,
+    "broken_frame200": [
+      0,
+      0
+    ],
+    "restored_frames900_1800": [
+      1,
+      1
+    ],
+    "negative_control_remains_broken": true,
+    "meeting_query_events": [
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      },
+      {
+        "frame": 1240,
+        "stage": 25
+      },
+      {
+        "frame": 1240,
+        "stage": 26
+      }
+    ],
+    "waiting_sample_frames": [
+      1291,
+      1292,
+      1293,
+      1294,
+      1295,
+      1335,
+      1336,
+      1337,
+      1338,
+      1339,
+      1340,
+      1341,
+      1342,
+      1343,
+      1344,
+      1345
+    ],
+    "waiting_samples_are_not_one_continuous_interval": true,
+    "blocker_classification_events": 24,
+    "blocker_releases": [
+      {
+        "id": 1023365,
+        "order_frame": 1350,
+        "first_motion_frame": 1380
+      },
+      {
+        "id": 1023364,
+        "order_frame": 1450,
+        "first_motion_frame": 1480
+      }
+    ],
+    "car_arrival_frame": 1417,
+    "car_final": [
+      15488,
+      19840,
+      416
+    ],
+    "foot_final": [
+      15552,
+      14912,
+      416
+    ],
+    "stationary_hover_position": [
+      15744,
+      20352,
+      495
+    ],
+    "hover_move_claimed": false,
+    "result_or_path_injection": false
+  },
+  "mixed-detour": {
+    "passed": true,
+    "bypass_frames": [
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625
+    ],
+    "car_final": [
+      15488,
+      19328,
+      416
+    ],
+    "foot_final": [
+      16576,
+      14912,
+      416
+    ],
+    "hover_final": [
+      16256,
+      15228,
+      500
+    ],
+    "parked_vehicle": [
+      16512,
+      19072,
+      416
+    ],
+    "hover_foot_classification_queries": [
+      {
+        "kind": "movement-audit",
+        "frame": 451,
+        "stage": 24,
+        "id": 1023365,
+        "cell": [
+          64,
+          77
+        ],
+        "value": 1023366,
+        "auxiliary": 5
+      },
+      {
+        "kind": "movement-audit",
+        "frame": 451,
+        "stage": 25,
+        "id": 1023365,
+        "cell": [
+          64,
+          77
+        ],
+        "value": 1023366,
+        "auxiliary": 5
+      },
+      {
+        "kind": "movement-audit",
+        "frame": 451,
+        "stage": 26,
+        "id": 1023365,
+        "cell": [
+          64,
+          77
+        ],
+        "value": 1023366,
+        "auxiliary": 5
+      }
+    ],
+    "main_move_submissions": 1,
+    "ordinary_map_and_commands": true
+  },
+  "hover-variation": {
+    "passed": true,
+    "comparison_sha256": "ec062faa038e29f906df40dbfe4997898fb89de42c12d1ddea4fd13c7df9f6cc",
+    "strict_comparison_preserved_false": true,
+    "max_world_coordinate_delta": [
+      13,
+      21
+    ],
+    "max_circular_heading_delta": [
+      5316,
+      5324
+    ],
+    "max_facing_timing_delta": [
+      88,
+      4
+    ],
+    "all_other_state_fields_and_ordinary_commands_equal": true,
+    "all_ground_and_nonterrain_audit_records_equal": true,
+    "hover_terrain_rule_value_counts_equal": true,
+    "baseline_inherited_exactly": true,
+    "baseline_original_trace_sha256": "7b9a5e23a2bfc30404ad049b48a2f8330fffc4303bc7a04f557f530211174f32",
+    "baseline_C_trace_sha256": "a0bf22a94ee0b76696ada1be8a898f0245cb8006fe6d18127b9c0fbf459f17f3",
+    "scope": "Only existing Hover horizontal position/turn state and its terrain-query timing vary. Ground vehicles, infantry, bridge effects, health, missions, RNG and ordinary commands match. Current traces must match each baseline mode exactly; no global comparator relaxation."
+  }
+}
+
+修桥交通：普通地图中工程师正常进入维修屋修复断口；900帧桥格恢复、1800帧仍可通行。车辆重新发令后与反向步兵交会，并遇到两辆出口占位车；两车以1350/1450帧普通Move命令先后离开。静止气垫单位构成出口附近的另一种对象占位。保留断口、仅省去捕获命令的对照中，工程师仍在，车辆与步兵没有跨越断口。
+毁桥绕行：同一普通地形替代通道上加入停放车辆、移动步兵和实际移动的LCRF气垫单位；主车只有一次Move命令，自行绕过断口及占位，最终完成经过出口的移动。气垫与步兵也到达各自目标区域。没有直接改写桥/路径、速度、对象链或最终结果。
+功能宿主继承已核对的Capture8普通事件输入，只多一次1800帧只读桥格观察；生产记录器不改。所有新效果分别检查原版与C，且当前每个模式的动态场景轨迹须与本轮改动前对应基线逐条一致。
+
+差异、探索与原版异常
+气垫绕行在本轮源码改动前已出现水平坐标与转向状态差异；位置最大X13/Y21世界单位（不足0.09格），方向和转向计时具体最大值见functional-acceptance.json。地面车辆、步兵、生命、任务、桥格、随机数、普通命令及其余状态字段一致；仅该气垫单位的地形查询时点有变化，规则值计数一致。
+严格comparison.json仍保留false；额外功能验收只允许已定位的六个气垫字段与其stage27地形观察变化，当前原版/C分别必须和本轮基线同模式全部记录逐条相同，不能扩大范围。没有修改通用比较器，也没有重写气垫移动器或追平既有转向振荡。前批Jumpjet差异原地保留，本轮不重跑其矩阵。
+初轮气垫在修桥地图上的一条移动目标未达成，因此最终配方明确保留它作为静止占位；实际气垫移动效果由绕行配方验证。初轮停放车没有完成指定移动，最终配方也明确保留其静止占位，不把失败发令计作动态效果。
+未修桥对照两次在较长运行标签下于ra2.csf初始化阶段退出，没有进入模拟；同一地图和命令改为短隔离目录后通过。日志、失败报告及输入全部保留，只记录观察与解决方式，不把未确定的根因归咎于游戏逻辑或修改原始资源。
+原版两项弯曲高差异常Z436停滞、Z-193未完成仍保留，有限回归中当前表现一致，不作为永久逐BUG复刻要求。列车真实碰撞和步兵碾压继续回归，规则关闭负对照继承已验证历史。
+29个非主C候选及86条原始入边沿用，全部300项输入扫描没有新增直接C调用；没有新的独立自然入口结论，不强造入口凑覆盖。
+
+保留、清理与后续
+父批368项封存、当前301项基线、两部分回退、基线功能宿主和全部探索/异常输入轨迹保留。本轮封存仅当前实际构建内容、当前配方、选用场景和必要探针。
+清理23个路径/类型/哈希已核对的可重建中间文件或缓存，共318968字节；69个同目录非候选文件哈希不变。源文件、正式程序、原始资源/存档、轨迹和回退保留。
+H盘20项原版输入、只读提取规则、原版EXE、真实SAVE0029和旧手写引擎指纹不变；生产规则及美术资源未改。
+仍需推进其他状态入口、移动器及运输/上下桥等服务边界与其他引擎子系统集成；本批不是完整可读地面移动或全游戏等价。只在新功能证据、重要差异或回归出现时扩大有界验证，不估算总体百分比。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v44.py。
+本地提交，不推送；提交身份见postcommit/git-local-commit.json。

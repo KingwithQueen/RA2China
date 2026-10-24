@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "groups": 4,
+  "cases": 262144,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-rebuild-followup-0.json",
+    "part-rebuild-followup-1.json",
+    "part-rebuild-wait-2.json",
+    "part-turn-turn-0.json"
+  ],
+  "scope": "Followup speed/candidate phases, post-rebuild wait exit, Turn classification/retry/stop/commit. Existing native packet constructor proof inherited unchanged."
+}
