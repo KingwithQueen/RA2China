@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "candidates_not_confirmed_failures": true,
+  "remaining": [
+    "ground_path_local turn shortening, anchor lookup and local segment rewriting services",
+    "Passage/threat/bridge-level service ordering and natural representative cases as functionally needed",
+    "Other engine subsystems and full visual/resource acceptance"
+  ]
+}

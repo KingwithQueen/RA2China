@@ -1,0 +1,15 @@
+{
+  "protected_files_unchanged": true,
+  "method": "Literal exact allowlist; no force or recursion",
+  "deleted_bytes": 73720,
+  "deleted_files": 3,
+  "plan_sha256": "21e997e5289909f179e05e15b316aa1b66da1865489fb4b222473f8c94632bad",
+  "types": [
+    {
+      "Name": "reproducible-root-probe-object",
+      "Count": 3
+    }
+  ],
+  "protected_files": 72,
+  "passed": true
+}

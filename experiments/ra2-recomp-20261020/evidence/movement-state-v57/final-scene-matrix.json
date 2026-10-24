@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "mi",
+      "frames": 3001,
+      "exe_sha256": "010ae9fa39d445b308de36e6aed076d441ba8bef7c629cbe24baaf8cadc4ad95",
+      "comparison_sha256": "f0f680e4850f68ff80ace73127b33141939d246e2816babd537d362bcb0136d5",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "sc",
+      "frames": 3401,
+      "exe_sha256": "010ae9fa39d445b308de36e6aed076d441ba8bef7c629cbe24baaf8cadc4ad95",
+      "comparison_sha256": "39f056ec610e493115db127ef4846af79134da240bde6d38e6f21bbf033709b9",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "aw3",
+      "frames": 3201,
+      "exe_sha256": "010ae9fa39d445b308de36e6aed076d441ba8bef7c629cbe24baaf8cadc4ad95",
+      "comparison_sha256": "c616a151284ab34d067c716606fdf462235cefb8683382ee27a51eab58b1caac",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "fm",
+      "frames": 3401,
+      "exe_sha256": "010ae9fa39d445b308de36e6aed076d441ba8bef7c629cbe24baaf8cadc4ad95",
+      "comparison_sha256": "ba214851016e144b4738e93c5a7c06a3350b46867e1f9189e080127f79907631",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0",
+      "comparison_sha256": "c6acffd18a73c6b5256d38a6ca126335db4150d3592ea36249a601038f29e3c0",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0",
+      "comparison_sha256": "e252febf00e285f6b887c4a3263fb529ee2e648ed74e06740949844c7a4c0635",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0",
+      "comparison_sha256": "cb193d44111bc2e4e852b6af7e0318e81d08a63d7423cdb9ecac8d535a6ddb34",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0",
+      "comparison_sha256": "b5410e39fb6cfd135f57215094f21544c38c42dfda8ac4dfa053896e53a00643",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0",
+      "comparison_sha256": "81cf36fa2419d877fdcbdfdf01174b7a00175a995ea53d3f0be5d977b99e5fa4",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 4,
+  "observer_frames": 13004,
+  "scope": "Finite regression: mixed loading in both orders, two natural shores, full occupancy/release, bridge contact, repeated search failure and retained height anomalies."
+}

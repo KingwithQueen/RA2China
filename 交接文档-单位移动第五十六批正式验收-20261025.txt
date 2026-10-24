@@ -1,0 +1,14 @@
+当前正式56 / 验证57，2026-10-25。
+父提交：819776fe6afab48654ceb20ddd3e2e2a791cca89。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第五十六批-路径平滑与后处理服务-20261025.txt
+程序SHA-256：c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0
+仅整理ground_path_optimize.c：内部平滑扫描状态、advance_smooth_scan/finish_smooth_pair，后处理rewrite_postprocess_segment/compact_postprocess_directions。181C/312输入/37保护不变。入口长度/数组快照、回调后的方向/层高/锚点重读、末尾配对忽略返回、特殊连接两种处理、前20步/同索引重试、终段长度和方向独立压紧/额外终止槽保持。
+平滑与后处理各8192原版映射例，正式计16384；改动前和两部分后重复执行不累计。改动前探针程序另存baseline-probe，两部分各3配对1303帧全部严格。总15配对19065帧，11严格、4局部功能。引擎服务仍为桩，不称全部ABI或自然改写覆盖。
+mi/sc/aw3/fm本轮复验，基线按父批哈希继承，无新自然场景；每种模式完整轨迹均等于改动前本模式。旧1/2帧差异、严格false和随机首差窗口保留，不追逐个BUG。
+列车/碾压/重复失败/高差原版异常有限回归；旧未合格岸边、远目标、坡图/飞机、名称表与29非主C/86入边按哈希继承，无新自然入口结论。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v57\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v57\parts；基线探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v57\baseline-probe；基线宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v57\baseline-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v57\final-source。
+已清理逐路径哈希核对的可重建缓存；原版、H输入、原规则、旧引擎和历史证据保留。
+下一步按功能需要推进ground_path_local转弯缩短/锚点/局部段改写服务，注意通行、威胁及桥层高度的服务顺序；其他子系统与完整视觉/资源调用仍未覆盖。
+派生下一批工具时显式更新父证据目录为movement-state-v57，并保留导入时的父目录身份校验。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v57.py。本地提交不推送。

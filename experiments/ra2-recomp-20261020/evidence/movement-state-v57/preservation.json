@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_path_optimize.c"
+  ],
+  "added_compile_inputs": [],
+  "build_recipe_changed": false,
+  "source_count": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 396,
+  "baseline_files": 315,
+  "parts": {
+    "smooth": {
+      "files": 343,
+      "exe_sha256": "36a900c5050bb7e7bb98295d99ada83da9dcb32895cdd54c2bac23d3d73a9f94"
+    },
+    "postprocess": {
+      "files": 343,
+      "exe_sha256": "c93cbe420f41a8c58f72c07d0b923692cddda7185d9c9d6496344fce2b3279e0"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

@@ -8,31 +8,75 @@ static Ra2PathPoint subtract(Ra2PathPoint a,Ra2PathPoint b)
 static int distance(Ra2PathPoint p){int x=abs(p.x),y=abs(p.y);return x>y?x:y;}
 static int nonzero(Ra2PathPoint p){return p.x!=0||p.y!=0;}
 
+typedef struct Ra2SmoothScan {
+    int32_t first_start,first_count,second_start,second_count;
+    int32_t previous,second_direction;
+    int pairing;
+    Ra2PathPoint anchor,point;
+} Ra2SmoothScan;
+
+static void finish_smooth_pair(Ra2SmoothScan *s,const Ra2PathOptimizationServices *v,
+    int32_t *directions,int32_t *levels)
+{
+    s->first_start+=v->shorten_turn(v->context,directions+s->first_start,levels+s->first_start,
+        s->first_count,s->second_count,&s->anchor);
+    /* 服务可改方向、层高和锚点；返回后才重读新起点方向与偏移表。 */
+    s->previous=directions[s->first_start];s->first_count=1;s->pairing=0;
+    s->point=add(s->anchor,v->offsets[s->previous&7]);
+}
+
+static void advance_smooth_scan(Ra2SmoothScan *s,const Ra2PathOptimizationServices *v,
+    const int32_t *directions)
+{
+    int32_t index=s->first_start+s->first_count,direction=directions[index];
+    unsigned turn=((uint32_t)direction-(uint32_t)s->previous)&7;
+    if(direction==s->previous)++s->first_count;
+    else if((turn==2||turn==6) && s->previous!=-1 && s->previous!=8 && direction!=8) {
+        s->pairing=1;s->second_direction=direction;s->second_start=index;s->second_count=1;
+    } else {
+        s->first_start=index;s->first_count=1;s->previous=(direction&1)?direction:-1;s->anchor=s->point;
+    }
+    /* 平滑阶段的特殊连接查询使用同一当前点；普通方向不额外归一化。 */
+    s->point=direction==8?v->connection_exit(v->context,&s->point):add(s->point,v->offsets[direction]);
+}
+
 void ra2_path_smooth(Ra2RebuiltPath *path,const Ra2PathOptimizationServices *v)
 {
-    int32_t last=path->length-1,first_start=0,first_count=0,second_start=0,second_count=0;
-    int32_t previous=-1,second_direction=-1;
-    int pairing=0;Ra2PathPoint anchor=path->start,point=path->start;
+    int32_t last=path->length-1;
+    Ra2SmoothScan scan={0};scan.previous=-1;scan.second_direction=-1;
+    scan.anchor=path->start;scan.point=path->start;
     int32_t *directions=path->directions,*levels=path->surface_levels;
-    while(first_start+first_count<last && second_start+second_count<last) {
-        if(pairing) {
-            if(directions[second_start+second_count]==second_direction){++second_count;continue;}
-            first_start+=v->shorten_turn(v->context,directions+first_start,levels+first_start,first_count,second_count,&anchor);
-            previous=directions[first_start];first_count=1;pairing=0;
-            point=add(anchor,v->offsets[previous&7]);
-            continue;
+    while(scan.first_start+scan.first_count<last && scan.second_start+scan.second_count<last) {
+        if(scan.pairing) {
+            if(directions[scan.second_start+scan.second_count]==scan.second_direction){++scan.second_count;continue;}
+            finish_smooth_pair(&scan,v,directions,levels);continue;
         }
-        int32_t index=first_start+first_count,direction=directions[index];
-        unsigned turn=((uint32_t)direction-(uint32_t)previous)&7;
-        if(direction==previous)++first_count;
-        else if((turn==2||turn==6) && previous!=-1 && previous!=8 && direction!=8) {
-            pairing=1;second_direction=direction;second_start=index;second_count=1;
-        } else {
-            first_start=index;first_count=1;previous=(direction&1)?direction:-1;anchor=point;
-        }
-        point=direction==8?v->connection_exit(v->context,&point):add(point,v->offsets[direction]);
+        advance_smooth_scan(&scan,v,directions);
     }
-    if(pairing)v->shorten_turn(v->context,directions+first_start,levels+first_start,first_count,second_count,&anchor);
+    /* 末尾配对只发服务调用，沿用忽略返回值、不再重读方向或推进点的行为。 */
+    if(scan.pairing)v->shorten_turn(v->context,directions+scan.first_start,levels+scan.first_start,
+        scan.first_count,scan.second_count,&scan.anchor);
+}
+
+static void rewrite_postprocess_segment(const Ra2PathOptimizationServices *v,
+    int32_t *directions,int32_t *levels,int32_t index,int32_t start,Ra2PathPoint point,int final_segment)
+{
+    int32_t anchor_index;Ra2PathPoint anchor=point;
+    v->find_anchor(v->context,directions,final_segment?index-1:index,start,&anchor_index,&anchor);
+    /* 锚点服务可修改索引、锚点和缓冲；之后才算差量、长度并读取该槽层高。 */
+    Ra2PathPoint delta=subtract(point,anchor);
+    int32_t count=final_segment?index-anchor_index:index-anchor_index+1;
+    v->rewrite_segment(v->context,directions+anchor_index,count,&anchor,&delta,levels[anchor_index],final_segment);
+    /* 改写服务对局部锚点/差量的反馈不回写扫描点，保持原有服务边界。 */
+}
+
+static void compact_postprocess_directions(Ra2RebuiltPath *path,int32_t *directions,int32_t last)
+{
+    /* last是入口快照；补槽时仍读取实时length，只压方向、不搬层高。 */
+    int32_t written=0;
+    for(int32_t i=0;i<last && directions[i]!=-1;++i)if(directions[i]!=-2)directions[written++]=directions[i];
+    for(int32_t i=written;i<path->length+1;++i)directions[i]=-1;
+    path->length=written+1;
 }
 
 /* 原版仅扫描前20步寻找折返；局部改写可将方向标成-2。
@@ -63,21 +107,12 @@ void ra2_path_postprocess(Ra2RebuiltPath *path,const Ra2PathOptimizationServices
         run_delta=next_run;max_x=abs(next_run.x);max_y=abs(next_run.y);point=add(point,step);
         if(distance(next_candidate)>max_distance)max_distance=distance(next_candidate);
         else {
-            int32_t anchor_index;Ra2PathPoint anchor=point;
-            v->find_anchor(v->context,directions,index,segment_start,&anchor_index,&anchor);
-            Ra2PathPoint delta=subtract(point,anchor);
-            v->rewrite_segment(v->context,directions+anchor_index,index-anchor_index+1,&anchor,&delta,levels[anchor_index],0);
+            rewrite_postprocess_segment(v,directions,levels,index,segment_start,point,0);
         }
         candidate_delta=next_candidate;++index;
     }
     if(nonzero(checkpoint) && index-checkpoint_index-1>distance(subtract(point,checkpoint))) {
-        int32_t anchor_index;Ra2PathPoint anchor=point;
-        v->find_anchor(v->context,directions,index-1,checkpoint_index,&anchor_index,&anchor);
-        Ra2PathPoint delta=subtract(point,anchor);
-        v->rewrite_segment(v->context,directions+anchor_index,index-anchor_index,&anchor,&delta,levels[anchor_index],1);
+        rewrite_postprocess_segment(v,directions,levels,index,checkpoint_index,point,1);
     }
-    int32_t written=0;
-    for(int32_t i=0;i<last && directions[i]!=-1;++i)if(directions[i]!=-2)directions[written++]=directions[i];
-    for(int32_t i=written;i<path->length+1;++i)directions[i]=-1;
-    path->length=written+1;
+    compact_postprocess_directions(path,directions,last);
 }

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cases": 8192,
+  "phase": 1,
+  "shorten_callbacks": 0,
+  "connection_callbacks": 0,
+  "rewrite_callbacks": 54718,
+  "final_rewrites": 694,
+  "retained_segments": 17956,
+  "ordered_callbacks_and_buffers_compared": true,
+  "engine_services_stubbed": true,
+  "probe_exe_sha256": "28670df3dd4b95c3cc1fc65062390d0b3950633d4ebdfd6b2ab604b7b29ae6b0",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

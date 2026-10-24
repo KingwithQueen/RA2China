@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 16384,
+  "receipts": [
+    "part-postprocess-path-optimize-0.json",
+    "part-postprocess-path-optimize-1.json"
+  ],
+  "capture_packet_cases_inherited": 64,
+  "transport_packet_cases_inherited": 128,
+  "scope": "Mapped original smooth and postprocess routines, 8192 distinct inputs each. Same groups before and after both parts; repeat executions counted once. Ordered callback arguments, full path structure, direction and height buffers; engine services stubbed."
+}
