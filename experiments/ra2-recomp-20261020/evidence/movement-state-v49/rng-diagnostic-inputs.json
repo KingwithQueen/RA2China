@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "production_exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+  "generated_source_sha256": "75e975f76a1d34336490012f3212cba52c306a895bf6d926266f6abd15d57687",
+  "observer_sha256": "b8219b07b1028b42460ec50699691120ee6e0bac71ecbcc9a9d005c90ea71cc4",
+  "copied_generated_sha256": "01dfbcf2d31881d5a94a32b0741f560800fad189cdc6e69565825d4286d473ac",
+  "frame_range": [
+    1027,
+    1046
+  ],
+  "read_only": true,
+  "production_rng_unchanged": true
+}

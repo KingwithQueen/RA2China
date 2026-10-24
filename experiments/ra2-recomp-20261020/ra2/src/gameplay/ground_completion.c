@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_completion.h"
+#include "ground_exit_policy.h"
 
 static uint32_t absolute_difference(int32_t left, int32_t right)
 {
@@ -18,33 +19,15 @@ int32_t ra2_ground_arrival_adjustment(Ra2WorldPoint position, Ra2WorldPoint end,
 uint32_t ra2_ground_prepare_finish(Ra2PrepareFinishEntry entry, int may_retry,
     const Ra2PrepareFinishServices *s)
 {
-    if (entry == RA2_PREPARE_RECURSE_TIMER_TAIL)
-    {
-        s->finish_retry_timer(s->context);
-        return s->prepare_again(s->context);
-    }
-    if (entry == RA2_PREPARE_RECURSE_CLEAR_PATH)
-    {
-        s->clear_path(s->context);
-        return s->prepare_again(s->context);
-    }
-    if (entry == RA2_PREPARE_RETRY_OR_CLEAR && may_retry)
-    {
-        s->clear_path(s->context);
-        s->start_immediate_retry(s->context);
-        s->finish_retry_timer(s->context);
-        return s->prepare_again(s->context);
-    }
-    if (entry == RA2_PREPARE_CLEAR_SEGMENT || entry == RA2_PREPARE_CLEAR_SEGMENT_SAVED_OWNER
-        || entry == RA2_PREPARE_RETRY_OR_CLEAR)
-    {
-        s->clear_segment(s->context);
-    }
-    if (entry == RA2_PREPARE_CLEAR_DRIVING)
-    {
-        s->clear_driving(s->context);
-    }
-    if (entry == RA2_PREPARE_CANCEL_TARGET || s->has_target(s->context))
+    Ra2PrepareExitPlan plan = ra2_ground_prepare_exit_plan(entry, may_retry);
+    if (plan.clear_path) s->clear_path(s->context);
+    if (plan.start_retry) s->start_immediate_retry(s->context);
+    if (plan.finish_timer) s->finish_retry_timer(s->context);
+    if (plan.recurse) return s->prepare_again(s->context);
+    if (plan.clear_segment) s->clear_segment(s->context);
+    if (plan.clear_driving) s->clear_driving(s->context);
+    /* 取消入口短路目标查询；其他入口在清理服务之后再查询。 */
+    if (plan.cancel_target || s->has_target(s->context))
     {
         s->cancel_target(s->context);
         return s->stop(s->context, 1);

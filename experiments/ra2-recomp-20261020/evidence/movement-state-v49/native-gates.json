@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 2,
+  "cases": 65536,
+  "capture_packet_cases_inherited": 64,
+  "receipts": [
+    "part-finish-completion_services-0.json",
+    "part-landing-remainder-0.json"
+  ],
+  "scope": "Prepare eight exit branches and Advance connection service boundaries; native mapped fragments with callback mutation."
+}

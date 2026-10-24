@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_completion.c",
+    "ra2/src/gameplay/ground_landing.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/gameplay/ground_exit_policy.h",
+    "ra2/src/gameplay/ground_exit_policy.c"
+  ],
+  "build_recipe_changed": true,
+  "source_count": 180,
+  "content_inputs": 310,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 392,
+  "baseline_files": 311,
+  "parts": {
+    "finish": {
+      "files": 350,
+      "exe_sha256": "0f06756ff378eb550b087e697fd9463a53f63a496bbfc29b6d60d6132634c059"
+    },
+    "landing": {
+      "files": 356,
+      "exe_sha256": "5b1e76dc09adc5fe66b7ca997b6217507083b68371cb57a37dce08898b9cc29b"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

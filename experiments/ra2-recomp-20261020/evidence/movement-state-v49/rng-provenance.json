@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "scope": "First RNG divergence of inherited timed-clear recipe, finite frames1027..1046 only; not full-game RNG proof.",
+  "first_divergent_snapshot": 1029,
+  "first_different_interval_calls": {
+    "original": [
+      {
+        "frame": 1028,
+        "kind": 1,
+        "caller": 4995402,
+        "indices": [
+          209,
+          62
+        ],
+        "bounds": [
+          0,
+          2
+        ],
+        "word": 2086589456,
+        "object_ids": [
+          1023362,
+          0
+        ]
+      },
+      {
+        "frame": 1032,
+        "kind": 1,
+        "caller": 4995402,
+        "indices": [
+          32,
+          135
+        ],
+        "bounds": [
+          0,
+          2
+        ],
+        "word": 2679565701,
+        "object_ids": [
+          1023365,
+          0
+        ]
+      },
+      {
+        "frame": 1043,
+        "kind": 1,
+        "caller": 4999368,
+        "indices": [
+          231,
+          84
+        ],
+        "bounds": [
+          0,
+          2
+        ],
+        "word": 2051551081,
+        "object_ids": [
+          1023362,
+          0
+        ]
+      }
+    ],
+    "generated-c": [
+      {
+        "frame": 1029,
+        "kind": 1,
+        "caller": 4998752,
+        "indices": [
+          227,
+          80
+        ],
+        "bounds": [
+          0,
+          2
+        ],
+        "word": 1302780102,
+        "object_ids": [
+          1023362,
+          0
+        ]
+      },
+      {
+        "frame": 1032,
+        "kind": 1,
+        "caller": 4995280,
+        "indices": [
+          32,
+          135
+        ],
+        "bounds": [
+          0,
+          2
+        ],
+        "word": 2679565701,
+        "object_ids": [
+          1023365,
+          0
+        ]
+      }
+    ]
+  },
+  "raw_draw_counts": {
+    "original": 345,
+    "generated-c": 344
+  },
+  "sequential_draws_with_same_indices_and_words": 344,
+  "complete_prechange_prefixes": {
+    "original": {
+      "diagnostic_trace_sha256": "c90410e1874612152e1b9f2b94d915b432ba2e809f9e1539918c76f93aa0afca",
+      "parent_trace_sha256": "8cb7888abe92b88cc6cf87a64fa596dedabf28bb282a8b62104d83b49e2af7ca",
+      "complete_records_equal_through": 1045,
+      "last_equal_entry_snapshot": 1046
+    },
+    "generated-c": {
+      "diagnostic_trace_sha256": "da52c4863b5a466da1276d4963c1bad65456b060cae9d850a6df40ff4840f966",
+      "parent_trace_sha256": "9c726903fc7d96f3bdffe9607219166519f3745e9c2df5b977f0941df407fb9d",
+      "complete_records_equal_through": 1045,
+      "last_equal_entry_snapshot": 1046
+    }
+  },
+  "arrival_state_original": [
+    2,
+    -1,
+    -1
+  ],
+  "arrival_state_C": [
+    5,
+    -1,
+    -1
+  ],
+  "finding": "Same LCRF consumes Move interval jitter at original call4C3945 in frame1028, while C next uses Guard interval jitter in Foot virtual129 at frame1029. Arrival/mission scheduling changes draw timing and later assignment; sampled raw generator sequence is identical.",
+  "root_cause_limit": "First split traced to arrival/mission service scheduling. The earlier Hover numerical arrival difference is retained, not corrected; later full-tail random assignments are not proved equivalent.",
+  "strict_false_retained": true,
+  "production_rng_and_comparator_unchanged": true,
+  "not_promoted_as_strict_transport_pass": true,
+  "production_input_before": {
+    "passed": true,
+    "production_exe_sha256": "8900a96e3b3e554605f92f6342d57d7627cda1668310b35ef3ba88f752d89858",
+    "generated_source_sha256": "75e975f76a1d34336490012f3212cba52c306a895bf6d926266f6abd15d57687",
+    "observer_sha256": "b8219b07b1028b42460ec50699691120ee6e0bac71ecbcc9a9d005c90ea71cc4",
+    "copied_generated_sha256": "01dfbcf2d31881d5a94a32b0741f560800fad189cdc6e69565825d4286d473ac",
+    "frame_range": [
+      1027,
+      1046
+    ],
+    "read_only": true,
+    "production_rng_unchanged": true
+  },
+  "diagnostic_executable_sha256": "d0a12ac82c82673c26e047ce2256f450a4467a9653293c8ec97ca908fc721703",
+  "attribution_sources": [
+    {
+      "path": "evidence/movement-state-v49/rng_attribution_observer.c",
+      "sha256": "299173d8f6bbc54dcc33b0d8c883fe32bc38cc25da8fe4ccf79794a9befb6e92"
+    },
+    {
+      "path": "evidence/movement-state-v49/rng_attribution_recomp.c",
+      "sha256": "3891b24da64ae82abeded6a3f5c1ae7221d3dec967350b409877e873e04200da"
+    },
+    {
+      "path": "evidence/movement-state-v49/rng-attribution-build-arguments.json",
+      "sha256": "c492c975e55fab24a3f10e7d59a9dc873d536f8e7dfdb2f9a3c551c71cda631d"
+    }
+  ]
+}

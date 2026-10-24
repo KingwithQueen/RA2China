@@ -302,3 +302,6 @@ set_source_files_properties(src/gameplay/ground_owner_boundary.c PROPERTIES COMP
 set_source_files_properties(src/gameplay/ground_bridge_plane.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
 
 set_source_files_properties(src/gameplay/ground_transition_rules.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/ground_exit_policy.c)
+set_source_files_properties(src/gameplay/ground_exit_policy.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

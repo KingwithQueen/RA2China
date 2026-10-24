@@ -1,4 +1,4 @@
-#include <string.h>
+#include "ground_exit_policy.h"
 #include "ground_landing.h"
 
 int ra2_ground_land_connection(const Ra2LandingServices *s)
@@ -17,13 +17,8 @@ int ra2_ground_land_connection(const Ra2LandingServices *s)
     s->set_approach_point(c);
     int32_t start = s->current_ground_height(c), duration;
     int32_t finish = s->target_ground_height(c, &duration);
-    uint32_t difference = (uint32_t)finish - (uint32_t)start;
-    int32_t signed_difference;
-    memcpy(&signed_difference, &difference, sizeof(difference));
-    /* 原版连接时长必须非零，并满足x86有符号除法的有效范围。 */
-    uint32_t result = (uint32_t)(signed_difference / duration) + (uint32_t)start;
-    int32_t height;
-    memcpy(&height, &result, sizeof(height));
+    /* 两次高度服务依次执行后才取整；不能缓存owner或合并查询。 */
+    int32_t height = ra2_ground_connection_height(start, finish, duration);
     s->finish_connection(c, height);
     return 0;
 }
