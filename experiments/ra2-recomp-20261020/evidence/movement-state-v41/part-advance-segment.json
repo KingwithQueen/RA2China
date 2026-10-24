@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "segment_cases": 65536,
+  "live_stack_locals_verified": true,
+  "state_calls_abi_cw_verified": true,
+  "probe_exe_sha256": "9392d73c4699ce035668afba8b633253065d0238ac5b1fdd487b5d6b5d609dcb",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,3 +1,10 @@
+第四十批当前状态（2026-10-24）
+ground_prepare_cycle把入口/已有路径/重试合并为业务周期，计时器与帧只在转入重试后读取；runtime保留位置服务的旧输出缓冲，避免跨状态交接丢失。
+Advance的commit_turn_segment集中处理接续模板提交及刷新后的存活/候选格分流；Prepare路段共用模板列车/碾压放行规则，保留与Advance不同的移动障碍策略。
+列车真实撞掉两辆车、自损40且同格步兵保留；Crusher真实消除两敌兵并继续经过占用出口。关闭对应规则标志的对照通过。均使用正常地图、完整独立规则、命令/队伍脚本。
+20个验收配对10570帧、六组原版路径393216例；另4个基线探索单独保留。报告：D:\Program\红色警戒2\docs\单位移动第四十批-Prepare周期与Advance接续及列车碾压实景-20261024.txt
+仍按整体功能、效果、规则和资源调用一致验收，不要求逐BUG复刻或无限逐帧扩展。
+
 第三十九批当前状态（2026-10-24）
 ground_cell_placement：leave/place/update_layer/before_enter/enter的顺序业务，已接入Advance和既有共享出口；before_enter失效时不继续占格。
 ground_advance：enter_sample_cell、advance_train_contact、advance_overlay_contact、advance_finish_sample为可修改业务单元。对象链下一项必须在伤害服务前保存，类型/owner/桥层查询仍按原来的服务顺序。

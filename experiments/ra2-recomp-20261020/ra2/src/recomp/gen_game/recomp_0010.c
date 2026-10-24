@@ -1,3 +1,4 @@
+extern unsigned ra2_ground_prepare_cycle_bridge(void);
 extern void ra2_ground_advance_place_layer_return_bridge(void);
 extern unsigned ra2_ground_template_continuation_bridge(unsigned entry);
 extern void ra2_ground_advance_leave_place_return_bridge(void);
@@ -69105,10 +69106,13 @@ L_004A2670:
     RECOMP_FLAGS_IN();
     /* 可读 C：路径准备入口、等待条件和有效路径队列选择。 */
     RECOMP_FLAGS_OUT(); RECOMP_REGS_OUT();
-    uint32_t prepare_entry_resume = ra2_ground_prepare_entry_bridge();
+    uint32_t prepare_entry_resume = ra2_ground_prepare_cycle_bridge();
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
     if (!prepare_entry_resume) return;
     if (prepare_entry_resume == 0x004A285Eu) goto L_004A285E;
+    if (prepare_entry_resume == 0x004A2F7Au) goto L_004A2F7A;
+    if (prepare_entry_resume == 0x004A2A83u) goto L_004A2A83;
+    if (prepare_entry_resume == 0x004A2EACu) goto L_004A2EAC;
     goto L_004A32CA;
     /* test LO8(eax), LO8(eax) */ /* 0x004A2690: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;

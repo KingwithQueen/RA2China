@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "initial_trials": [
+    "baseline-train",
+    "baseline-crush"
+  ],
+  "initial_pair_frame_conformance": true,
+  "initial_pair_effects_qualified": false,
+  "reason": "Train player Move was cancelled by original; targets were on lower layer. No such trial is counted as collision proof.",
+  "qualified_trials": [
+    "baseline02-train",
+    "baseline02-crush"
+  ],
+  "positive_effects": [
+    "Two non-crushable vehicles removed, train health200->160, crushable infantry remains125",
+    "Two enemy infantry removed by crusher, vehicle remains200; held bridge exit and later release remain ordinary orders"
+  ],
+  "all_input_variants_preserved": true,
+  "initial_preflight": "Preparation first rejected an allowlist that omitted the second newly created recipe; no baseline/state mutation occurred."
+}

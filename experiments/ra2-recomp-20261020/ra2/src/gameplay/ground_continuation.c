@@ -15,6 +15,39 @@ static int32_t absolute_difference(int32_t a,int32_t b)
     if(bits&UINT32_C(0x80000000)) bits=0u-bits;
     return signed_bits(bits);
 }
+/* 接续已获放行后，提交模板、刷新对象，再按存活与候选格结果进入/放弃路段。
+   刷新和进入服务可改变状态；恢复速度、移除旧方向只发生在成功进入之后。 */
+static int commit_turn_segment(Ra2ContinuationState *state,Ra2WorldPoint invalid,
+    int32_t selector,Ra2ContinuationTemplate selected,uint64_t speed,
+    const Ra2ContinuationServices *s)
+{
+    void *c=s->context;
+    state->alternate_template=0; state->selector=selector;
+    state->orientation_mismatch=0;
+    state->sample_index=signed_bits((uint32_t)selected.entry_index-1u);
+    s->commit_template(c,selected);
+    clear_segment(state,invalid);
+    state->driving=1;
+    s->refresh_owner(c);
+    state->driving=0;
+    if(!s->query(c,RA2_CONTINUATION_OWNER_ALIVE) || s->query(c,RA2_CONTINUATION_OWNER_FLAG_76)
+        || s->query(c,RA2_CONTINUATION_OWNER_FLAG_7A)) return 0;
+    clear_segment(state,invalid);
+    if(!valid_point(state->candidate,invalid)) return 1;
+    state->segment_end=state->candidate; state->driving=1;
+    if(s->candidate_accepts_owner(c) && !s->query(c,RA2_CONTINUATION_OWNER_FLAG_76))
+    {
+        s->start_segment(c);
+        s->restore_speed(c,speed);
+        s->shift_direction(c);
+    }
+    else if(s->query(c,RA2_CONTINUATION_OWNER_ALIVE))
+    {
+        state->segment_end=invalid; state->driving=0;
+    }
+    return 1;
+}
+
 int ra2_ground_continue_turn(Ra2ContinuationState *state,Ra2WorldPoint invalid,
     int32_t direction,const Ra2ContinuationServices *s)
 {
@@ -37,29 +70,7 @@ int ra2_ground_continue_turn(Ra2ContinuationState *state,Ra2WorldPoint invalid,
     {
         /* 这里原版允许移动障碍接续，与 Prepare 的让路重试分支不同。 */
         if(s->query(c,RA2_CONTINUATION_OWNER_KIND)==1 && !s->query(c,RA2_CONTINUATION_TYPE_FLAG_BA4)) return 1;
-        state->alternate_template=0; state->selector=selector;
-        state->orientation_mismatch=0;
-        state->sample_index=signed_bits((uint32_t)selected.entry_index-1u);
-        s->commit_template(c,selected);
-        clear_segment(state,invalid);
-        state->driving=1;
-        s->refresh_owner(c);
-        state->driving=0;
-        if(!s->query(c,RA2_CONTINUATION_OWNER_ALIVE) || s->query(c,RA2_CONTINUATION_OWNER_FLAG_76)
-            || s->query(c,RA2_CONTINUATION_OWNER_FLAG_7A)) return 0;
-        clear_segment(state,invalid);
-        if(!valid_point(state->candidate,invalid)) return 1;
-        state->segment_end=state->candidate; state->driving=1;
-        if(s->candidate_accepts_owner(c) && !s->query(c,RA2_CONTINUATION_OWNER_FLAG_76))
-        {
-            s->start_segment(c);
-            s->restore_speed(c,speed);
-            s->shift_direction(c);
-        }
-        else if(s->query(c,RA2_CONTINUATION_OWNER_ALIVE))
-        {
-            state->segment_end=invalid; state->driving=0;
-        }
+        return commit_turn_segment(state,invalid,selector,selected,speed,s);
     }
     else if(passage==RA2_CELL_CLOAKED_OBSTACLE) s->reveal_candidate(c);
     else if(passage==RA2_CELL_GATE) s->request_gate(c);

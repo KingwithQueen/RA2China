@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "completed": [
+    "Combined Prepare cycle and deferred state/timer reads",
+    "Advance turn commit and shared train/crusher gate",
+    "Real train and infantry-crushing bridge cases with rule controls"
+  ],
+  "remaining": [
+    "Further Prepare obstacle/wait/failure followups and Advance boundaries",
+    "Other locomotors, buildings/terrain and bridge destruction scenes",
+    "Remaining engine subsystems and integration"
+  ],
+  "bug_for_bug_required": false,
+  "natural_alias_dispatch_required": false,
+  "percentage_reestimated": false
+}

@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "scenes": {
+    "train": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ],
+        [
+          78,
+          160
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023363": 78,
+        "1023364": 78
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 160,
+      "targets_preserved": false,
+      "rules_sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523"
+    },
+    "train-control": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023363": null,
+        "1023364": null
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 200,
+      "targets_preserved": true,
+      "rules_sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    },
+    "crush": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023365": 115,
+        "1023366": 115
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 200,
+      "targets_preserved": false,
+      "rules_sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e"
+    },
+    "crush-control": {
+      "passed": true,
+      "health_changes": [
+        [
+          0,
+          200
+        ]
+      ],
+      "target_disappearance_frames": {
+        "1023365": null,
+        "1023366": null
+      },
+      "final_actor_position": [
+        15488,
+        19328,
+        416
+      ],
+      "actor_final_health": 200,
+      "targets_preserved": true,
+      "rules_sha256": "264b18f2937b0d529ba31128fa9d3d6cf231267443ba5d8dcb2de658648f3c04"
+    }
+  },
+  "ordinary_maps_complete_rules_and_orders": true,
+  "native_train_team_script": true,
+  "raw_state_injection": false,
+  "rule_flag_controls_verified": true,
+  "original_rules_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "original_rules_sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f"
+}

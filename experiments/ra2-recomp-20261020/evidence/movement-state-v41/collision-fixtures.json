@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "train",
+      "path": "evidence/movement-state-v41/fixtures/bridge-train-contact.MAP",
+      "sha256": "9703f9e612561ade1faa3566714b6fb714ab0e4e6b18e3ea25a189018422c608",
+      "rules": "evidence/movement-state-v41/fixtures/rules-train-contact.ini",
+      "rules_sha256": "61d309c4d251034e876a9bc04ed13b88a1277294f6b39c9109c12ffe12592523",
+      "orders": [
+        "5:1023362:2:60:75"
+      ],
+      "actor": 1023362,
+      "targets": [
+        1023363,
+        1023364
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false
+    },
+    {
+      "name": "crush",
+      "path": "evidence/movement-state-v41/fixtures/bridge-crush-contact.MAP",
+      "sha256": "e3cd860bf8ecb0e0d78476898f9f9c693bb9e4a8eaae181e19bc4e562a6be14c",
+      "rules": "evidence/movement-state-v41/fixtures/rules-crush-contact.ini",
+      "rules_sha256": "b831b70adf4ea3bcfa890d02ec64d423caebc5780449d987c91bfcf183973b4e",
+      "orders": [
+        "1:1023364:2:60:70",
+        "1:1023363:2:61:70",
+        "5:1023362:2:60:75",
+        "300:1023364:2:60:79",
+        "210:1023363:2:61:79"
+      ],
+      "actor": 1023362,
+      "targets": [
+        1023365,
+        1023366
+      ],
+      "ordinary_map_rules_orders": true,
+      "runtime_state_injection": false
+    }
+  ],
+  "original_rules_source": "H:\\\u5f00\u53d1\\\u7814\u7a76\u8d44\u6599\\\u63d0\u53d6\\\u539f\u7248\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "original_rules_sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f",
+  "rules_flag_binding": "IsTrain is read at native 006DB049 and stored at type+AA0; no field is directly written by this recipe."
+}

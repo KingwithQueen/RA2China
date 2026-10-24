@@ -1,0 +1,13 @@
+当前正式40 / 验证41，2026-10-24。
+验收边界：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+报告：D:\Program\红色警戒2\docs\单位移动第四十批-Prepare周期与Advance接续及列车碾压实景-20261024.txt
+程序SHA-256：95201319a3165669bcaa23edbba5aec0f951ea827c7b47a92134cda8d17b785d
+只读复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v41.py
+已接入Prepare入口到重试的完整周期；Advance接续提交已收拢，Prepare列车/碾压门槛共用业务接口。组合周期的旧输出缓冲交接已核实并保留。
+两部分各3场1303帧；最终正式10场5960帧、观察4场2004帧；共20个验收配对10570帧。六组原版路径393216例，其中新增组合周期65536例。
+本轮已取得列车真实撞掉两辆载具、自损40、保留可碾步兵的效果，以及Crusher消除两敌兵后经过占用出口的效果；两种规则关闭对照也已核对。
+额外4个基线探索配对单独保留，首对未出现碰撞不能算效果通过。真实场景仅用普通地图/完整独立规则/原生命令与队伍脚本，不写碰撞结果或内部路径。
+列车观察版只多3条stage16读位置诊断，游戏状态/普通命令/RNG及其余诊断一致；严格报告false保留，functional-acceptance和observer-variation记录通过。下一轮不要为此追平内部计数。
+173个C源、296项构建内容、37个保护；原始标签、尾跳和注册保留。29候选来源调查沿用证据，没有新独立自然C命中声明。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v41\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v41\parts；当前封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v41\final-source；父批封存原地保留。
+下一批按功能单元推进Prepare后续状态与其他移动器/毁桥等代表场景，有限验收，保留原版异常；清理确认无用的文件/缓存，本地提交，不推送。

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "continuation_cases": 65536,
+  "continue": 60545,
+  "abort": 4991,
+  "shift": 154,
+  "all_eight_passages": true,
+  "calls_state_live_locals_verified": true,
+  "probe_exe_sha256": "0daa5e04f51dcb9727c94407797c4f2c8eb556cd1b7b6f913acce0a8a10468c5",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

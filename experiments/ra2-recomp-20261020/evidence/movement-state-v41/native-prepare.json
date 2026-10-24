@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "entry_cases": 65536,
+  "retry_cases": 65536,
+  "cycle_cases": 65536,
+  "state_calls_abi_cw_verified": true,
+  "cycle_outcomes": [
+    63253,
+    0,
+    2113,
+    14,
+    153,
+    3
+  ],
+  "probe_exe_sha256": "a230006ca5a7629a3877e1bf1bade6b44caa9e4daa75575f398074ac18dbb365",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

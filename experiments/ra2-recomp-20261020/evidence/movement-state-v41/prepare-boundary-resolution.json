@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "failed_probe": "investigations/prepare-cycle-01",
+  "field": "owner+534 copied from legacy frame+48 during retry restart",
+  "cause": "Native entry distance service writes its output at frame+44, whose y word remains at frame+48; the old split bridge used a separate scratch buffer.",
+  "resolution": "Pass the actual legacy output buffer to the entry-position service; after entry/retry transition, subsequent distance services use their separate retry buffer. Business cycle does not interpret the legacy timer middle word.",
+  "semantic_scope": "Correct service output storage across merged state transitions; no original bug fix or expansion of comparisons."
+}

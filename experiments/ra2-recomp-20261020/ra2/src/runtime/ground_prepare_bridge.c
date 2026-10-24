@@ -1,3 +1,4 @@
+#include "ground_prepare_cycle.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,6 +19,7 @@ typedef struct PrepareContext
     uint32_t drive;
     uint32_t frame;
     uint32_t obstacle_cell;
+    unsigned entry_position_buffer;
     Ra2GroundPrepareState state;
 } PrepareContext;
 
@@ -119,7 +121,7 @@ static int32_t prepare_query(void *opaque, Ra2PrepareQuery query)
             return target ? (int32_t)engine_call(context, MEM32(MEM32(target) + 0x2C), target, NULL, 0) : -1;
         case RA2_PREPARE_DISTANCE_TO_DESTINATION:
         {
-            argument = scratch;
+            argument = context->entry_position_buffer ? context->frame+0x44 : scratch;
             result = owner_call(context, 0x48, &argument, 1);
             Ra2WorldPoint position = read_point(result);
             /* 原版先构造 32 位回绕差向量，再交给原版长度函数；数值算法在本批保持原实现。 */
@@ -235,12 +237,33 @@ static uint32_t finish(PrepareContext *context, Ra2PreparePhase phase, int32_t c
     return 0;
 }
 
+static Ra2PathRetryTimer cycle_retry_timer(void *opaque)
+{
+    PrepareContext *context=opaque;context->entry_position_buffer=0;uint32_t owner=owner_address(context);
+    return (Ra2PathRetryTimer){(int32_t)MEM32(owner+0x530),(int32_t)MEM32(owner+0x538)};
+}
+static int32_t cycle_current_frame(void *opaque)
+{(void)opaque;return (int32_t)MEM32(0xA40D2C);}
+uint32_t ra2_ground_prepare_cycle_bridge(void)
+{
+    ra2_state_movement_audit(15,g_ebp,0,0);
+    PrepareContext context={0};context.drive=g_ebp;context.frame=g_esp;context.entry_position_buffer=1;
+    int32_t path_head=(int32_t)g_ebx;int is_moving=(g_eax&255u)!=0;
+    read_state(&context);g_esp-=0x200;
+    Ra2PrepareServices prepare=services_for(&context);
+    Ra2PrepareCycleServices services={&prepare,&context,cycle_retry_timer,cycle_current_frame};
+    Ra2PreparePhase phase=ra2_ground_prepare_cycle(&context.state,read_point(0x852998),
+        is_moving,&path_head,&services);
+    return finish(&context,phase,path_head);
+}
+
 uint32_t ra2_ground_prepare_entry_bridge(void)
 {
     ra2_state_movement_audit(15,g_ebp,0,0);
     PrepareContext context = { 0 };
     context.drive = g_ebp;
     context.frame = g_esp;
+    context.entry_position_buffer=1;
     int32_t path_head = (int32_t)g_ebx;
     int is_moving = (g_eax & 255u) != 0;
     read_state(&context);

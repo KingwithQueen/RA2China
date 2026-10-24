@@ -1,4 +1,24 @@
+#include "ground_template_transition.h"
 #include "ground_segment.h"
+
+typedef struct SegmentGateContext
+{
+    Ra2SegmentPreparation *output;
+    const Ra2SegmentServices *services;
+} SegmentGateContext;
+static int32_t gate_classification(void *opaque)
+{return ((SegmentGateContext *)opaque)->output->passage;}
+static unsigned gate_type(void *opaque,unsigned crusher)
+{
+    SegmentGateContext *c=opaque;const Ra2SegmentServices *s=c->services;
+    return (unsigned)s->query(s->context,crusher?RA2_SEGMENT_ACTOR_IS_CRUSHER:RA2_SEGMENT_ACTOR_IS_TRAIN);
+}
+static int32_t gate_overlay(void *opaque)
+{
+    SegmentGateContext *c=opaque;return c->services->query(c->services->context,RA2_SEGMENT_CELL_OVERLAY_INDEX);
+}
+static void gate_clear(void *opaque)
+{((SegmentGateContext *)opaque)->output->passage=0;}
 
 Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparation *output, const Ra2SegmentServices *services)
 {
@@ -37,15 +57,8 @@ Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparat
         return RA2_SEGMENT_WAIT;
     }
     output->passage = services->classify_cell(context, output->cell, path_head, output->reference_level);
-    if (output->passage < 7 && services->query(context, RA2_SEGMENT_ACTOR_IS_TRAIN))
-    {
-        output->passage = 0;
-    }
-    else if ((output->passage == 4 || output->passage == 5)
-        && services->query(context, RA2_SEGMENT_ACTOR_IS_CRUSHER)
-        && services->query(context, RA2_SEGMENT_CELL_OVERLAY_INDEX) == 0)
-    {
-        output->passage = 0;
-    }
+    SegmentGateContext gate_context={output,services};
+    Ra2TemplateGateServices gate={&gate_context,gate_classification,gate_type,gate_overlay,gate_clear};
+    ra2_ground_template_gate(&gate);
     return RA2_SEGMENT_CLASSIFIED;
 }

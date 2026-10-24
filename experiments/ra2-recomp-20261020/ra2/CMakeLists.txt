@@ -110,6 +110,7 @@ add_executable(ra2
   src/gameplay/ground_terrain.c
   src/gameplay/ground_arrival.c
   src/gameplay/ground_prepare.c
+  src/gameplay/ground_prepare_cycle.c
   src/gameplay/ground_segment.c
   src/gameplay/ground_wait.c
   src/gameplay/ground_reaction.c
@@ -281,3 +282,5 @@ target_sources(ra2 PRIVATE src/gameplay/ground_template_transition.c src/gamepla
 set_source_files_properties(src/gameplay/ground_template_transition.c src/gameplay/ground_object_chain.c src/runtime/ground_overlap_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
 
 set_source_files_properties(src/gameplay/ground_cell_placement.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+set_source_files_properties(src/gameplay/ground_prepare_cycle.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
