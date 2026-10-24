@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-rs",
+      "frames": 2101,
+      "comparison_sha256": "c397189a3be3c0482880a4b00233f525c8ade2b26f21c9673cb88dec6a07aaf3",
+      "strict_trace_equal": true,
+      "functional_acceptance": false
+    },
+    {
+      "tag": "b-rc",
+      "frames": 2101,
+      "comparison_sha256": "2d96f4c652b918cd57e421ada34b50b6e6f69f1fc08141ffc2685c1b861dd105",
+      "strict_trace_equal": true,
+      "functional_acceptance": false
+    },
+    {
+      "tag": "b-d3",
+      "frames": 1501,
+      "comparison_sha256": "69b6f7cdd57b966adb8b37f74dd11ea7dd195ab9a0fb475a4e70f8f41333cba0",
+      "strict_trace_equal": false,
+      "functional_acceptance": true
+    }
+  ],
+  "excluded_from_final_pair_count": true,
+  "failed_hover_recipes_retained": true
+}

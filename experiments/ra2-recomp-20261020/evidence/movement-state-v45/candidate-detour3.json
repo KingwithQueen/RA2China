@@ -1,0 +1,15 @@
+{
+  "name": "detour-traffic",
+  "path": "evidence/movement-state-v45/fixtures/detour-mixed3.MAP",
+  "sha256": "2ba6a1feb0caf42d8deb5c33aeaf4b76e36bcb7209e38001a83beaf325467fdd",
+  "orders": [
+    "5:1023362:2:60:79",
+    "400:1023363:2:60:75",
+    "300:1023365:2:63:59",
+    "450:1023366:2:64:58"
+  ],
+  "last": 1500,
+  "capture_host": true,
+  "tag": "d3",
+  "baseline_tag": "b-d3"
+}

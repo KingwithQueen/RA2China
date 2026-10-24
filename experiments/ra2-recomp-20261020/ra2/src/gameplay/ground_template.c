@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_template.h"
+#include "ground_segment_admission.h"
 #include "ground_template_table.h"
 
 static int32_t signed_bits(uint32_t bits)
@@ -61,22 +62,10 @@ void ra2_ground_commit_segment(Ra2SegmentCommitState *state, Ra2WorldPoint inval
         state->movement.segment_end = invalid_position;
         state->movement.driving = 0;
     }
-    if (!same_position(candidate,invalid_position))
-    {
-        state->movement.segment_end = candidate;
-        state->movement.driving = 1;
-        if (services->cell_accepts_owner(services->context,candidate)
-            && !services->owner_flag_76(services->context))
-        {
-            services->start_segment(services->context,candidate);
-            return;
-        }
-        if (services->owner_alive(services->context))
-        {
-            state->movement.segment_end = invalid_position;
-            state->movement.driving = 0;
-        }
-    }
+    const Ra2SegmentAdmissionServices admission={services->context,services->cell_accepts_owner,
+        services->owner_flag_76,services->start_segment,services->owner_alive};
+    if(ra2_ground_admit_segment(&state->movement.segment_end,&state->movement.driving,
+        invalid_position,candidate,&admission)==RA2_SEGMENT_STARTED) return;
     state->selector = terminal_direction;
     state->directions[0] = terminal_direction;
     services->set_speed_zero(services->context);

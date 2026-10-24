@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "name": "repair-traffic",
+      "path": "evidence/movement-state-v45/fixtures/repair-reverse.MAP",
+      "sha256": "18a6f4eeb43609c3efe4a5bd1ab45aed1061bb17b7759e432ddc9466311dce4f",
+      "orders": [
+        "5:1023362:2:60:79",
+        "400:1023363:2:60:56",
+        "600:1023367:8:1023371:0",
+        "1000:1023363:2:60:56",
+        "1030:1023368:2:60:76",
+        "1350:1023365:2:61:54",
+        "1450:1023364:2:60:54"
+      ],
+      "last": 2100,
+      "capture_host": true,
+      "tag": "rs",
+      "baseline_tag": "b-rs"
+    },
+    {
+      "name": "repair-traffic-control",
+      "path": "evidence/movement-state-v45/fixtures/repair-reverse.MAP",
+      "sha256": "18a6f4eeb43609c3efe4a5bd1ab45aed1061bb17b7759e432ddc9466311dce4f",
+      "orders": [
+        "5:1023362:2:60:79",
+        "400:1023363:2:60:56",
+        "1000:1023363:2:60:56",
+        "1030:1023368:2:60:76",
+        "1350:1023365:2:61:54",
+        "1450:1023364:2:60:54"
+      ],
+      "last": 2100,
+      "capture_host": true,
+      "tag": "rc",
+      "baseline_tag": "b-rc"
+    },
+    {
+      "name": "detour-traffic",
+      "path": "evidence/movement-state-v45/fixtures/detour-mixed3.MAP",
+      "sha256": "2ba6a1feb0caf42d8deb5c33aeaf4b76e36bcb7209e38001a83beaf325467fdd",
+      "orders": [
+        "5:1023362:2:60:79",
+        "400:1023363:2:60:75",
+        "300:1023365:2:63:59",
+        "450:1023366:2:64:58"
+      ],
+      "last": 1500,
+      "capture_host": true,
+      "tag": "d3",
+      "baseline_tag": "b-d3"
+    }
+  ],
+  "ordinary_maps_and_commands": true,
+  "direct_result_or_path_writes": false,
+  "failed_hover_recipe_tags": [
+    "b-ds",
+    "b-d2"
+  ]
+}

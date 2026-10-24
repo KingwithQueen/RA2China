@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "rs",
+      "frames": 2101,
+      "exe_sha256": "cb14986b8b6216b09f3ffbc10caf27740a8508d3490a8bb22ad74d75dcc87739",
+      "comparison_sha256": "272d9da76ef0087c2cf5ec674f346df44241e4f70b5452e51cb60f44b37d179b",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "rc",
+      "frames": 2101,
+      "exe_sha256": "cb14986b8b6216b09f3ffbc10caf27740a8508d3490a8bb22ad74d75dcc87739",
+      "comparison_sha256": "e90dc229291ee72dc8eadc40ab874a996010dc34fd752db9483acd6cf14eaedf",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "d3",
+      "frames": 1501,
+      "exe_sha256": "cb14986b8b6216b09f3ffbc10caf27740a8508d3490a8bb22ad74d75dcc87739",
+      "comparison_sha256": "081872c42ef852c84e6af1cf29445d812a23522aedd3041019141386a955bf7e",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "72e9af7d6adf0ad3ae6681a6e717a94fd4846ec636e03dd3bb93ba4e5ce805c5",
+      "comparison_sha256": "4b1b7d992ad47b5d876bf048175e8f4fb5e52b7b4af1bc72313528fc0ae403ef",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "72e9af7d6adf0ad3ae6681a6e717a94fd4846ec636e03dd3bb93ba4e5ce805c5",
+      "comparison_sha256": "8d24bf4121eb82719a61bce09a5ea84b57e394b97917163e69094af96e11a516",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "72e9af7d6adf0ad3ae6681a6e717a94fd4846ec636e03dd3bb93ba4e5ce805c5",
+      "comparison_sha256": "e209c8792860d1d2e0619ff846dbc0ab85edd1a4ad49ea474390c079ed68c01e",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "72e9af7d6adf0ad3ae6681a6e717a94fd4846ec636e03dd3bb93ba4e5ce805c5",
+      "comparison_sha256": "df4958548e5873e94e60ed992f5c6ce6aeb53b38b5867e589d02d689f4e271df",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "72e9af7d6adf0ad3ae6681a6e717a94fd4846ec636e03dd3bb93ba4e5ce805c5",
+      "comparison_sha256": "3f7070da0f8fac90f85216109cea0078ca2c060836afb86790beda71761c755a",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 5,
+  "production_frames": 3455,
+  "observer_scenes": 3,
+  "observer_frames": 5703,
+  "scope": "Finite repaired-bridge meeting/held exit, native capture control and mixed-locomotor detour, with affected failure/height/collision regression."
+}

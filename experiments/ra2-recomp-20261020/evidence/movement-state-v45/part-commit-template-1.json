@@ -1,0 +1,9 @@
+{
+  "phase": 1,
+  "passed": true,
+  "template_cases": 65536,
+  "live_stack_locals_verified": true,
+  "state_calls_abi_cw_verified": true,
+  "probe_exe_sha256": "92fc3cc688e526a3f340a5cfd18b96ac2f7962a9f2919b539d6d56eecbb9f95e",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

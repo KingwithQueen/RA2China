@@ -1,17 +1,39 @@
 #include <string.h>
 #include "ground_continuation.h"
 #include "ground_failure_transition.h"
+#include "ground_segment_admission.h"
 
 static int32_t signed_bits(uint32_t bits)
 { int32_t result; memcpy(&result,&bits,4); return result; }
-static int valid_point(Ra2WorldPoint point,Ra2WorldPoint invalid)
-{ return point.x!=invalid.x || point.y!=invalid.y || point.z!=invalid.z; }
 static int32_t absolute_difference(int32_t a,int32_t b)
 {
     uint32_t bits=(uint32_t)a-(uint32_t)b;
     if(bits&UINT32_C(0x80000000)) bits=0u-bits;
     return signed_bits(bits);
 }
+/* 接续服务按实时上下文读取候选，不能改成 Prepare 的按值位置参数。
+   接受服务可能移除 owner 或改写状态；成功后仍按原顺序恢复速度、弹出方向。 */
+static int continuation_accept(void *context,Ra2WorldPoint candidate)
+{
+    const Ra2ContinuationServices *s=context; (void)candidate;
+    return s->candidate_accepts_owner(s->context);
+}
+static int continuation_restricted(void *context)
+{
+    const Ra2ContinuationServices *s=context;
+    return s->query(s->context,RA2_CONTINUATION_OWNER_FLAG_76);
+}
+static int continuation_alive(void *context)
+{
+    const Ra2ContinuationServices *s=context;
+    return s->query(s->context,RA2_CONTINUATION_OWNER_ALIVE);
+}
+static void continuation_start(void *context,Ra2WorldPoint candidate)
+{
+    const Ra2ContinuationServices *s=context; (void)candidate;
+    s->start_segment(s->context);
+}
+
 /* 接续已获放行后，提交模板、刷新对象，再按存活与候选格结果进入/放弃路段。
    刷新和进入服务可改变状态；恢复速度、移除旧方向只发生在成功进入之后。 */
 static int commit_turn_segment(Ra2ContinuationState *state,Ra2WorldPoint invalid,
@@ -30,17 +52,13 @@ static int commit_turn_segment(Ra2ContinuationState *state,Ra2WorldPoint invalid
     if(!s->query(c,RA2_CONTINUATION_OWNER_ALIVE) || s->query(c,RA2_CONTINUATION_OWNER_FLAG_76)
         || s->query(c,RA2_CONTINUATION_OWNER_FLAG_7A)) return 0;
     ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid);
-    if(!valid_point(state->candidate,invalid)) return 1;
-    state->segment_end=state->candidate; state->driving=1;
-    if(s->candidate_accepts_owner(c) && !s->query(c,RA2_CONTINUATION_OWNER_FLAG_76))
+    const Ra2SegmentAdmissionServices admission={(void *)s,continuation_accept,
+        continuation_restricted,continuation_start,continuation_alive};
+    if(ra2_ground_admit_segment(&state->segment_end,&state->driving,invalid,
+        state->candidate,&admission)==RA2_SEGMENT_STARTED)
     {
-        s->start_segment(c);
         s->restore_speed(c,speed);
         s->shift_direction(c);
-    }
-    else if(s->query(c,RA2_CONTINUATION_OWNER_ALIVE))
-    {
-        state->segment_end=invalid; state->driving=0;
     }
     return 1;
 }
