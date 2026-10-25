@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "expect_improvement": false,
+  "zero_slot_heap_reached_goal": false,
+  "goal_cost": -1,
+  "bfs_distance": 1,
+  "one_slot_heap_reached_goal": true,
+  "quality_cases": 0,
+  "guard_cases": 0,
+  "graph_cases": 2,
+  "cases": 2,
+  "synthetic_not_natural": true,
+  "kind": "model",
+  "probe_exe_sha256": "f399222325ae4f9150f5d103a0f14b4b7cc30322f67975bae356f815ea696eec"
+}

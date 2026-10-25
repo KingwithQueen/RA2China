@@ -1,0 +1,42 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "b4f02ecf9b002c4742f821219022fcffedf2f9172ae86d463ce5957d1e5fe65d"
+  },
+  {
+    "path": "docs/单位移动第五十八批-堆容量与节点分配发布-20261025.txt",
+    "sha256": "5b0d8313237b03827e15add13d3744d936e164531798ad9dd438a5cea6497943"
+  },
+  {
+    "path": "交接文档-单位移动第五十八批正式验收-20261025.txt",
+    "sha256": "afd8275bbe63d44aefa4a5e2916f147e6d102f2618f91c45f9986d24dcbd0d0a"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "f6dbfb914712f6343d80d440ddedf60024e2e9676c9dd79a844b3b2956aef70a"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "b7156a02bdddef45e1734d7108ebf638cfb0fbf70e2f0b97c1fe32bdccdd1d88"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "55e0f99c316f7edbb9ecc7a5393c44d78e35045aa7202a13425ebb1c6d0e8432"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "55e0f99c316f7edbb9ecc7a5393c44d78e35045aa7202a13425ebb1c6d0e8432"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "55e0f99c316f7edbb9ecc7a5393c44d78e35045aa7202a13425ebb1c6d0e8432"
+  }
+]

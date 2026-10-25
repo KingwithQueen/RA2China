@@ -10,10 +10,16 @@ void ra2_path_heap_finish_offer(Ra2PathHeap *heap,Ra2SearchNode *node,uint32_t s
     if(address<heap->lowest_node_address)heap->lowest_node_address=address;
 }
 
-static void push(Ra2PathHeap *heap,Ra2SearchNode *node)
+static int has_free_slot(const Ra2PathHeap *heap)
 {
+    /* capacity包含闲置的0号槽；先比较再加一，零容量和计数回绕均不能发布。 */
+    return heap->capacity>0 && heap->count<heap->capacity-1u;
+}
+
+static int try_push(Ra2PathHeap *heap,Ra2SearchNode *node)
+{
+    if(!has_free_slot(heap))return 0;
     uint32_t slot=heap->count+1;
-    if(slot>=heap->capacity)return;
     while(slot>1) {
         uint32_t parent=slot/2;
         if(!(heap->items[parent]->priority>node->priority))break;
@@ -21,15 +27,15 @@ static void push(Ra2PathHeap *heap,Ra2SearchNode *node)
         slot=parent;
     }
     ra2_path_heap_finish_offer(heap,node,slot);
+    return 1;
 }
 
 Ra2SearchNode *ra2_path_heap_offer(Ra2PathHeap *heap,Ra2SearchNode *pending,Ra2SearchNode *candidate)
 {
     if(!pending)return candidate;
-    /* INC 后的零标志才是原版分支依据；计数回绕只为保留该整数分支的定义。 */
-    if(heap->count+1u==0) { push(heap,candidate);return pending; }
-    push(heap,pending);
-    return candidate;
+    if(try_push(heap,pending))return candidate;
+    /* 用户允许寻路改进：满堆不增加内存，保留两候选中分数较低者；同分仍选新的。 */
+    return pending->priority<candidate->priority?pending:candidate;
 }
 
 static void swap(Ra2PathHeap *heap,uint32_t a,uint32_t b)

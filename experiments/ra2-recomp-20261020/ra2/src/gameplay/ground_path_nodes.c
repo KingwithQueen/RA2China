@@ -3,12 +3,9 @@
 #include <stddef.h>
 #include <string.h>
 
-Ra2SearchNode *ra2_path_node_create(Ra2PathNodeStorage *storage,const Ra2PathNodeInput *input,uint16_t control)
+static void initialize_node_state(Ra2SearchNode *node,Ra2PathLink *link,
+    const Ra2PathNodeInput *input,uint16_t control)
 {
-    Ra2SearchNode *node=&storage->nodes[(*storage->used_nodes)++];
-    Ra2PathLink *link=&storage->links[(*storage->used_links)++];
-    link->cell_reference=input->cell_reference;
-    link->parent=input->parent?(Ra2PathLink *)input->parent->path_link:NULL;
     if(!input->parent) {
         link->surface_level=input->root_surface_level;
         node->accumulated_cost=0;
@@ -28,6 +25,17 @@ Ra2SearchNode *ra2_path_node_create(Ra2PathNodeStorage *storage,const Ra2PathNod
         uint32_t length=(uint32_t)input->parent->path_length+1u;
         memcpy(&node->path_length,&length,sizeof(length));
     }
+}
+
+Ra2SearchNode *ra2_path_node_create(Ra2PathNodeStorage *storage,const Ra2PathNodeInput *input,uint16_t control)
+{
+    /* 容量由搜索上下文保证；节点先于链分配，各计数仍在取址时递增。 */
+    Ra2SearchNode *node=&storage->nodes[(*storage->used_nodes)++];
+    Ra2PathLink *link=&storage->links[(*storage->used_links)++];
+    link->cell_reference=input->cell_reference;
+    link->parent=input->parent?(Ra2PathLink *)input->parent->path_link:NULL;
+    initialize_node_state(node,link,input,control);
+    /* 链与节点状态就绪后再发布关联；priority仍留待距离服务生成。 */
     node->path_link=link;
     /* priority 稍后由原距离近似服务与累计代价生成，不改写池中的旧值。 */
     return node;
@@ -48,6 +56,16 @@ void ra2_path_cache_publish(Ra2PathNodeCache *cache,uint32_t cell,unsigned lower
     layer(cache,lower)->costs[cell]=cost;
 }
 
+static void clear_wrapped_generation(Ra2PathNodeCache *cache,uint32_t cell_count,
+    Ra2PathRegionCache regions[3])
+{
+    /* 只清代次标记，不清代价、节点旧内容或历史堆地址界限。 */
+    for(uint32_t i=0;i<cell_count;++i)cache->lower.stamps[i]=cache->upper.stamps[i]=0;
+    for(unsigned group=0;group<3;++group)
+        for(uint32_t i=0;i<regions[group].count;++i)
+            for(unsigned side=0;side<3;++side)regions[group].stamps[side][i]=0;
+}
+
 void ra2_path_search_reset(Ra2PathNodeStorage *storage,Ra2PathHeap *open,Ra2PathHeap *auxiliary,
     Ra2PathNodeCache *cache,uint32_t cell_count,Ra2PathRegionCache regions[3])
 {
@@ -57,9 +75,6 @@ void ra2_path_search_reset(Ra2PathNodeStorage *storage,Ra2PathHeap *open,Ra2Path
     ra2_path_heap_clear(auxiliary);
     ++*cache->generation;
     if(*cache->generation)return;
-    for(uint32_t i=0;i<cell_count;++i)cache->lower.stamps[i]=cache->upper.stamps[i]=0;
-    for(unsigned group=0;group<3;++group)
-        for(uint32_t i=0;i<regions[group].count;++i)
-            for(unsigned side=0;side<3;++side)regions[group].stamps[side][i]=0;
+    clear_wrapped_generation(cache,cell_count,regions);
     ++*cache->generation;
 }

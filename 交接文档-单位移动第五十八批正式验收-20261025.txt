@@ -1,0 +1,17 @@
+当前正式58 / 验证59，2026-10-25。
+父提交：e4937ce7f9c32b184c71a9b40838de71a8046502。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+寻路机制改进授权补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+报告：D:\Program\红色警戒2\docs\单位移动第五十八批-堆容量与节点分配发布-20261025.txt
+程序SHA-256：e0d2690f20f54c19664c9969be5f6aee263069a78e3179b2f73774e9b925a235
+ground_path_heap满堆保留pending/candidate中较低priority，同分选新；正常入堆/取堆不变，固定容量/内存不增加，先比界限再加一防计数回绕。不保证全地图最短路径，也不声称自然场景已触发改进。
+ground_path_nodes拆分状态初始化与回绕代次清理；先节点后链分配、各自取址时递增、最后发布path_link、priority留待距离服务、缓存先代次后代价、回绕只清代次均保持。节点/链布局及上下文容量合同不变，未增加逐项分配越界检查。
+181C/312输入/37保护，改动2个C及1个头注释。原版映射两组429268次操作；满堆选择有意差异7412次、未分类0，节点180224次严格一致。三轮重复不累计。
+独立三格完整搜索：capacity1基线丢目标/耗尽，新版到达成本1，独立BFS确认1；capacity2两者均到达。另65536有限分数检查及3边界检查，合成总65541，与原版映射计数分开，非自然地图证据。
+两部分各3配对1303帧严格；总15配对19065帧，11严格、4局部功能。mi/sc/aw3/fm完整轨迹等于改动前本模式；旧时序、严格false、随机窗口及Z436/Z-193等原版异常保留。原版1.006为比较依据，但验收不要求寻路机制或逐个BUG相同。
+社区5项固定提交/哈希继续继承：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\community-reference-review.json。gagarin YR1.001用于结构符号、EA旧Red Alert用于组织、Phobos为扩展；未引入外部引擎代码，不直接套地址/规则。
+旧未合格岸边/远目标/坡图飞机及29非主C/86入边按哈希继承，无新自然入口结论。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\parts；基线探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\baseline-probe；基线宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\baseline-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v59\final-source。
+已逐路径哈希清理11项可重建缓存；H输入、原版、规则、旧引擎及历史证据保留。本地提交，不推送。
+下一步按功能需要连接路径完成/重建和更多自然交通，或以实际效果支持的搜索改进；其他子系统/完整视觉资源验收未覆盖，不宣称全游戏等价或普遍最短。
+派生下一批工具须显式使用父证据movement-state-v59并保留导入校验；复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v59.py。

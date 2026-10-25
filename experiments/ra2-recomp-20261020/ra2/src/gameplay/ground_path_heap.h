@@ -19,9 +19,9 @@ typedef struct Ra2PathHeap {
     uintptr_t lowest_node_address;
 } Ra2PathHeap;
 
-/* pending 表示单独暂存的候选，不保证分数最优。
- * 原版 427939 的 INC 覆盖了此前的评分比较标志：合法堆计数下总是把旧候选入堆，暂存最新候选。
- * 满堆时旧候选入堆失败，仍暂存最新候选。这里保留原版行为，不改成标准的仅保留最优值。 */
+/* pending是独立暂存的候选。有空槽时把旧候选入堆、暂存新候选。
+ * 满堆时在两候选间保留较低priority者，同分仍选新候选；不增加容量或内存。
+ * 这是经授权的局部路径选择改进，不保证受限预算下的全局最优。 */
 Ra2SearchNode *ra2_path_heap_offer(Ra2PathHeap *heap,Ra2SearchNode *pending,Ra2SearchNode *candidate);
 /* pending 与堆根同分时先取堆根；下沉时相等则不交换，左右同分优先左侧。 */
 Ra2SearchNode *ra2_path_heap_take(Ra2PathHeap *heap,Ra2SearchNode *pending);

@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "run_batch_v58.py",
+      "source_sha256": "6e4bf5fe30e5987a24db5a6dcc7d5729bf3cc1d0e3bf2917eec26f3a14d793ab",
+      "derived": "run_batch_v59.py",
+      "derived_sha256": "2bfd9f7074c9e7cd46c4be63ae05cfe47f0aa1f562e6ae5555128529077cc240",
+      "final_derived_sha256": "2bfd9f7074c9e7cd46c4be63ae05cfe47f0aa1f562e6ae5555128529077cc240",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "accept_dynamic_v58.py",
+      "source_sha256": "7ef43211ab00422d0b61f491e15f8dc38f9c3d1ec3681ff4a4bcf5ea71098e84",
+      "derived": "accept_dynamic_v59.py",
+      "derived_sha256": "2853a978e1b4d63a41ef9bfa8c125db93bb8774a41be6daf07a5efcda599286a",
+      "final_derived_sha256": "2853a978e1b4d63a41ef9bfa8c125db93bb8774a41be6daf07a5efcda599286a",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_scenes_v58.py",
+      "source_sha256": "b82206871c42222145bc472c0489e310a95b65ea4d90b140e93c1062c535bc7b",
+      "derived": "audit_scenes_v59.py",
+      "derived_sha256": "718c54b3c6670238b3dca101114d400fe33054417aea4f667ff1d54c68237eb9",
+      "final_derived_sha256": "718c54b3c6670238b3dca101114d400fe33054417aea4f667ff1d54c68237eb9",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_sources_v58.py",
+      "source_sha256": "dd6419a1b96b4d866fd5d4dea8afe91b130b4cc034b9bd810588fa76b2a518d4",
+      "derived": "audit_sources_v59.py",
+      "derived_sha256": "998357fba2f069efae6dd0b2bebca5f51db80750a9201c9eb66a3badac891e44",
+      "final_derived_sha256": "5794233e96105f8f0cd5e2f5e8094885519b04dc6b333ec9b47316980b1a6a87",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "plan_cleanup_v58.py",
+      "source_sha256": "8bbcd0a494ad6ed0c5b900ad7147b881e906045d0d2dfc0c5d482c2bcb501cf5",
+      "derived": "plan_cleanup_v59.py",
+      "derived_sha256": "e5a4b2b090aed37c4caaa82bfe171c935419bc9ab8a562ba0511cf066efd94e9",
+      "final_derived_sha256": "e5a4b2b090aed37c4caaa82bfe171c935419bc9ab8a562ba0511cf066efd94e9",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "commit_movement_v58.py",
+      "source_sha256": "956c9e44814d462e3db4ccd42825b78e3ee08059e5e47af2c9ec341a7f66cfd1",
+      "derived": "commit_movement_v59.py",
+      "derived_sha256": "ee688113f29d75753275bbcfa3e38c6f968c99beca9faa52580d47685a41deb5",
+      "final_derived_sha256": "ee688113f29d75753275bbcfa3e38c6f968c99beca9faa52580d47685a41deb5",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_evidence_v58.py",
+      "source_sha256": "ffcbd0fddca561ded19726e2f56dc58cd6f0198b4d63993feb3f889035aa9ed4",
+      "derived": "audit_evidence_v59.py",
+      "derived_sha256": "5788153447e74d61c045df1dbd744bb73dca04166a0a3aaa9d7554bb03f715ce",
+      "final_derived_sha256": "5788153447e74d61c045df1dbd744bb73dca04166a0a3aaa9d7554bb03f715ce",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "verify_final_movement_v58.py",
+      "source_sha256": "2823cb89fe0aea326a06282a330efd9089241ab08a59f8313947a00f9a0e5261",
+      "derived": "verify_final_movement_v59.py",
+      "derived_sha256": "080ec7176870dfa0d783a1414d7ebc03381170530a1f71fe8801a14c7fabd5be",
+      "final_derived_sha256": "bb244a82cb6fd6da2e9f3c27146f4ba91d41dd1249c6aa3970ad7f010728cfc3",
+      "unchanged_after_initial_derivation": false
+    }
+  ],
+  "heap_probe_origin_sha256": "25068760e4c5adac7baff734c69a9452f3f9834d87a275c8fad1219d0fcee34c",
+  "nodes_probe_origin_sha256": "903c72f5daf3478c676f4e88e841b47657342a4047b30e46c868a744723db49b"
+}
