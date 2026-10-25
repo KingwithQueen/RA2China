@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "evidence/movement-state-v61/baseline-probe/followup_probe.c",
+      "sha256": "ad563f5b2eecc3d1050387a8c6010320c7ea8ae1df7e23b319bf83b7919c955a"
+    },
+    {
+      "path": "evidence/movement-state-v61/baseline-probe/followup_probe.exe",
+      "sha256": "dbe1cf3820d9914bbf929c0669e38331b7cde2f4987c87c39cb5f0c11d52a5ae"
+    },
+    {
+      "path": "evidence/movement-state-v61/baseline-probe/template_probe.c",
+      "sha256": "71c846843e10c1d99eb91963c6d5639d4ab9e6f2b15af5bb096a509e7ddd16dd"
+    },
+    {
+      "path": "evidence/movement-state-v61/baseline-probe/template_probe.exe",
+      "sha256": "ec843a2214852470660f97d593292257f52e6f6cff08b4bc1cacb00eac194556"
+    },
+    {
+      "path": "evidence/movement-state-v61/baseline-probe/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    }
+  ],
+  "receipts": [
+    "part-baseline-consumer.json",
+    "part-baseline-queue-shift.json",
+    "part-baseline-queue-keep.json"
+  ]
+}

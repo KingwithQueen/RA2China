@@ -1,0 +1,14 @@
+当前正式60 / 验证61，2026-10-25。
+父提交：0e2af0f6b577aea2cee5adb798ede13f38399674；程序SHA-256：d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+报告：D:\Program\红色警戒2\docs\单位移动第六十批-路径消费队列衔接与长交通-20261025.txt
+ground_followup分离缺方向的远目标重建结果消费，保留候选准备前context、train先查、成功略过owner复核、无owner中止、拒绝后仍重取方向。ground_template分离24槽弹出/保留、目标格与计数发布、准入后回退；旧invalid段不额外清driving，尾值沿用原策略。只改2C，181C/312输入/37保护不变，前批共享结果策略、完成重建及堆容量改进保持。
+原版消费phase1/队列弹出phase1/保留phase2各65536，共196608例；改前和两段后通过，重复不累计。原始探针固定来源v44 followup/v45 template，现有gameplay依赖闭包有独立构建收据；未改探针桩或生产构建。不计速度、其他模板选择和全部ABI覆盖。
+两个长交通变体均2401帧，继承原地图/规则，四轮实际发令；四个活动窗口均满足并行移动，关键改发按前一帧真实位移判定。3TRUCKA+1E2普通Move，最终目标/Guard、生命、合法落格、路径缓冲及现有stage6结果通过。改前/后4配对9604帧均严格，完整每模式轨迹等于冻结基线。短901帧配方按哈希保留，无状态/结果注入或新生产钩子。
+总19配对28669帧，15严格、4沿用局部功能差异；mi/sc/aw3/fm旧严格false、1/2帧时序、349/350随机窗口及Z436/Z-193原版异常保留。29非主C/86入边和旧边界按哈希继承。
+社区5项固定来源及原版1.006对照继续使用：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\community-reference-review.json。前批7412预期堆差异及65541合成见证按哈希继承，不计本批新用例；允许有证据的机制改进，不保证全图最短。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\parts；原版探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\baseline-probe；宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\baseline-observer；长交通改前记录：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\runs\b-traffic-long-cross、D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\runs\b-traffic-long-convoy；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v61\final-source。
+已核对哈希清理24项可重建文件；原始资源、旧引擎、基线回退和全部历史证据保留。本地提交，不推送。
+下一步按功能需要推进队列耗尽后的重试/到达衔接及不同通道交通，或有证据的搜索改进；全游戏及完整视觉/资源验收未覆盖。
+派生后续工具须显式指定父证据movement-state-v61并保留导入校验。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v61.py。

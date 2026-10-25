@@ -71,27 +71,32 @@ void ra2_ground_prepare_speed(const Ra2GroundSpeedServices *services)
     }
 }
 
+static void consume_followup_rebuild(const Ra2FollowupServices *services,void *context,
+    Ra2FollowupResult *result)
+{
+    /* 沿用候选准备之前取得的context；回调可以改变目标、所属对象或服务表。 */
+    int train=services->is_train(context);
+    int rebuilt=services->rebuild_path(context,train);
+    Ra2RebuildResultServices checks={context,services->owner_exists,services->write_aborted,
+        services->destination_accepted,services->stop_navigation};
+    if(ra2_ground_check_rebuild_result(rebuilt,0,&checks)==RA2_REBUILD_NO_OWNER) {
+        result->aborted=1;
+        return;
+    }
+    /* 拒绝目标并停止后仍重取第二方向；成功重建不额外复核owner。 */
+    result->next_direction=services->next_direction(context);
+}
+
 Ra2FollowupResult ra2_ground_prepare_followup(const Ra2FollowupServices *services)
 {
-    void *context = services->context;
+    void *context=services->context;
     services->prepare_candidate(context);
-    Ra2FollowupResult result = { services->next_direction(context), 0, 0 };
-    if (result.next_direction != -1) return result;
-    if (services->distance_to_destination(context) <= 512)
-    {
-        result.force_straight = 1;
+    Ra2FollowupResult result={services->next_direction(context),0,0};
+    if(result.next_direction!=-1)return result;
+    if(services->distance_to_destination(context)<=512) {
+        result.force_straight=1;
         return result;
     }
-    int train = services->is_train(context);
-    int rebuilt = services->rebuild_path(context, train);
-    Ra2RebuildResultServices checks = { context, services->owner_exists, services->write_aborted,
-        services->destination_accepted, services->stop_navigation };
-    if (ra2_ground_check_rebuild_result(rebuilt, 0, &checks) == RA2_REBUILD_NO_OWNER)
-    {
-        result.aborted = 1;
-        return result;
-    }
-    /* 拒绝目标并停止后仍重取第二方向；与Prepare计时出口的直接返回不同。 */
-    result.next_direction = services->next_direction(context);
+    consume_followup_rebuild(services,context,&result);
     return result;
 }

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 3,
+  "cases": 196608,
+  "receipts": [
+    "part-queue-consumer.json",
+    "part-queue-queue-shift.json",
+    "part-queue-queue-keep.json"
+  ],
+  "scope": "Missing-next-direction result consumption and two 24-slot queue commit entries. Finite mapped original states, ordered callbacks and checked ABI/control words; no unrelated speed or template-selection phases counted."
+}

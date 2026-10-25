@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-traffic-long-cross",
+      "frames": 2401,
+      "exe_sha256": "c7b710995ffaecd34bbaa13e6a5b29356631b21b4f175fea239ff49e9526c7e5",
+      "comparison_sha256": "e5a36198aa62d1b3f6f76452435ca2fe31b98b15828d0ce5e4a35b6cc79dd47d",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "b-traffic-long-convoy",
+      "frames": 2401,
+      "exe_sha256": "c7b710995ffaecd34bbaa13e6a5b29356631b21b4f175fea239ff49e9526c7e5",
+      "comparison_sha256": "852011b78c66638d0d944cfdb3dd87ad2822964e35fdd4072d30dc5bc91969eb",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "scope": "Two new ordinary-map traffic recipes executed against original and the unchanged parent production program before either service edit."
+}

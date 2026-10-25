@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "mi",
+      "frames": 3001,
+      "exe_sha256": "78bfb49f6cb770478c85127c98264b249ec1aeede92a43dc1207859b93eaea09",
+      "comparison_sha256": "868050cf49755695d298516cdcd9ece929b8076c873d2339e1f8ce28b26d6686",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "sc",
+      "frames": 3401,
+      "exe_sha256": "78bfb49f6cb770478c85127c98264b249ec1aeede92a43dc1207859b93eaea09",
+      "comparison_sha256": "8f6ff45e305d26ec1b3982c7b4c606db6c8449a41e57f8c188832df8d677eb38",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "aw3",
+      "frames": 3201,
+      "exe_sha256": "78bfb49f6cb770478c85127c98264b249ec1aeede92a43dc1207859b93eaea09",
+      "comparison_sha256": "2a76ea1f6318788d9dc0715d07b0a226c499d25e479f416cab75aa42c362cd4e",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "fm",
+      "frames": 3401,
+      "exe_sha256": "78bfb49f6cb770478c85127c98264b249ec1aeede92a43dc1207859b93eaea09",
+      "comparison_sha256": "20f0fddf6f754dfa37c2daab103f11c67efe8bb447c60a1c811c62b525231e1e",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "traffic-long-cross",
+      "frames": 2401,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "47867b559f99643c3f448b42cd1c21ab2940ad038337a2bfe5d602b9bbaca2bb",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "traffic-long-convoy",
+      "frames": 2401,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "f7de6317d3bb2e47819c53d563e2b6038014051abe13cdece7097bbb0d259595",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "16d0b1eec5a13acc1757f0d3b01380498d3f9bfc9219636bc1465ea2ca562702",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "5aecb120624d92781f685e926d9e2b9af7f7d56251f97d5d3964c3859b9c486c",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "7d9818b48bd24a58ee7fc74ea9d9e4609e2d18f24118863053c1caa9cb7d61e7",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "0091a5e90882ca15600e59c94837bd8fe671081b4021c90efe65729a3fcb91c2",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "d4dbef5b12f42eb0d4b5b8c7b0852a933e0fa6584e3e25da77db4d1266fde3fe",
+      "comparison_sha256": "961e1cb62521c6f679ea17e0aefcf9c3a33985b1c6f0e7d1e551a9d8d1adffa1",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 7,
+  "production_frames": 8257,
+  "observer_scenes": 4,
+  "observer_frames": 13004,
+  "scope": "Finite regression: mixed loading in both orders, two natural shores, full occupancy/release, bridge contact, repeated search failure and retained height anomalies."
+}
