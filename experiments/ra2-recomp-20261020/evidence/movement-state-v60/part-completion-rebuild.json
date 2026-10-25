@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "cases": 16384,
+  "mapped_original_function": true,
+  "adjacent_and_special_links": true,
+  "score_truncation": true,
+  "kind": "rebuild",
+  "probe_exe_sha256": "02f05371a49cf09841a1d11da52d9f2c6f102c33baf1531d3f82278f30d00fc7",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "evidence/movement-state-v60/baseline-probe/path_local_probe.c",
+      "sha256": "c067f7bb87e52169ef310f7e5e88f06ad438cb757276cd63dc175a45b23c2519"
+    },
+    {
+      "path": "evidence/movement-state-v60/baseline-probe/path_local_probe.exe",
+      "sha256": "3546f4d6bb560d941ca48bcbcaf6a86f999fc2f752b58d2b126a6c71f5d9188e"
+    },
+    {
+      "path": "evidence/movement-state-v60/baseline-probe/path_lifecycle_probe.c",
+      "sha256": "83900827956b9cfb6ae219a224e7baad9990e8af660c50fc83ca1eac8551d64e"
+    },
+    {
+      "path": "evidence/movement-state-v60/baseline-probe/path_lifecycle_probe.exe",
+      "sha256": "e5f535b849fa3bcf77ff23412f5fd024bd137e77d346bbd1873a50b4aa199eaa"
+    },
+    {
+      "path": "evidence/movement-state-v60/baseline-probe/native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    }
+  ],
+  "receipts": [
+    "part-baseline-completion.json",
+    "part-baseline-rebuild.json"
+  ]
+}

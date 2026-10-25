@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "bug_for_bug_required": false,
+  "path_mechanism_identity_required": false,
+  "globally_shortest_paths_verified": false,
+  "natural_alias_dispatch_required": false,
+  "candidates_not_confirmed_failures": true,
+  "community_references_available": true,
+  "remaining": [
+    "Path-result consumer and movement-queue integration as functionally needed",
+    "Longer ordinary traffic and evidence-supported search improvements",
+    "Other engine subsystems and full visual/resource acceptance"
+  ]
+}

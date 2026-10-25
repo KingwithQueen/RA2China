@@ -1,0 +1,246 @@
+{
+  "passed": true,
+  "scenes": {
+    "b-traffic-cross": {
+      "original": [
+        {
+          "id": 1023363,
+          "submit_frame": 35,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 45,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 80,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 140,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ],
+      "generated-c": [
+        {
+          "id": 1023363,
+          "submit_frame": 35,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 45,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 80,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 140,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ]
+    },
+    "traffic-cross": {
+      "original": [
+        {
+          "id": 1023363,
+          "submit_frame": 35,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 45,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 80,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 140,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ],
+      "generated-c": [
+        {
+          "id": 1023363,
+          "submit_frame": 35,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 45,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 80,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 140,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ]
+    },
+    "b-traffic-convoy": {
+      "original": [
+        {
+          "id": 1023363,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": false
+        },
+        {
+          "id": 1023363,
+          "submit_frame": 220,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ],
+      "generated-c": [
+        {
+          "id": 1023363,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": false
+        },
+        {
+          "id": 1023363,
+          "submit_frame": 220,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ]
+    },
+    "traffic-convoy": {
+      "original": [
+        {
+          "id": 1023363,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": false
+        },
+        {
+          "id": 1023363,
+          "submit_frame": 220,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ],
+      "generated-c": [
+        {
+          "id": 1023363,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023366,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023367,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": true,
+          "old_goal_unfinished": true
+        },
+        {
+          "id": 1023368,
+          "submit_frame": 150,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": false
+        },
+        {
+          "id": 1023363,
+          "submit_frame": 220,
+          "moving_immediately_previous_frame": false,
+          "old_goal_unfinished": true
+        }
+      ]
+    }
+  },
+  "scope": "Raw positions on the two immediately preceding frames independently confirm three moving, unfinished-goal replacements per recipe/mode, before and after the edits. No extra game executions."
+}

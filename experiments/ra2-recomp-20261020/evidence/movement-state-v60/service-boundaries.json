@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "changed_units": [
+    "ground_path_completion.c",
+    "ground_path_rebuild.c"
+  ],
+  "new_headers_or_build_sources": false,
+  "new_mechanism_change": false,
+  "retained": [
+    "invalid/already-there early returns",
+    "equality-only expansion limit gates before path length",
+    "rebuild then smooth then postprocess, even if rebuild returns null",
+    "shared obstacle flag read after callbacks",
+    "metadata before parent-chain reads",
+    "parent surface, parent point then child point, reverse slots",
+    "nonadjacent direction 8 and final -1 slot",
+    "root point read again after terminator; zero score corrected last"
+  ],
+  "scope": "Finite original fragment equality and normal traffic effects. Existing bounded heap choice remains unchanged; no new mechanism change without evidence."
+}
