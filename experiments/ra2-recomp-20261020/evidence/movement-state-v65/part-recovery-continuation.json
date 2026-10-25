@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "phase": 2,
+  "cases": 32768,
+  "ordered_callback_values": 327690,
+  "original_stack_cleanup_verified": true,
+  "kind": "continuation",
+  "probe_name": "progress",
+  "probe_exe_sha256": "46129418eaf17767a3e5adaff377a758cbc88ce9d67378f9c344e037e4b4ae4c",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

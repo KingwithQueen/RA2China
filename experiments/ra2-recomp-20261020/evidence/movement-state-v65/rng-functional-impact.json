@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "protected_parent_files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\rng-functional-impact.json",
+      "sha256": "08dff8b04059ecafe9d05eab38572437d6c1ee17538bcefe99cca8fc40586094"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\corner-boundary-inheritance.json",
+      "sha256": "1ed68c45f789b50fca7f15c7d9ea82b36d0030151b1145a17c2164d450108c1c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\rules-and-locomotors.json",
+      "sha256": "c62f71790252f61594648e37db9f1f9f6b2d71eaf53c9799486a5bc6e293e33c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\land-type-table-proof.json",
+      "sha256": "dedc4472f8a0cd21bba2cccd8c476a90fe7518b52ef678429f4a7798a5e9a039"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\shore-comparison.json",
+      "sha256": "e7fdc6c795247556263771f6134fb58619fdc999b1fbbb1061567cd540df554e"
+    }
+  ],
+  "new_variants": {
+    "mi": {
+      "functional_acceptance_sha256": "397f85382ba7f5005121590235754ea7afdf97426eddffbb6c45681468fd4d16",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2526,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "sc": {
+      "functional_acceptance_sha256": "61a053ad5c27f6b8b7b6afc7676bee478683227b73a81c07b73054cba08d82fe",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2849,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "aw3": {
+      "functional_acceptance_sha256": "ffc535ae936bcdd3735b1b469d99556b285a9e16bc3790261cd271b66464e6e8",
+      "rng_first_different_frame": 349,
+      "rng_different_frames": 2754,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    },
+    "fm": {
+      "functional_acceptance_sha256": "7bb8cafd53873f11dd7e4ba5e2f6a77a406c9e4c0de09c8fe15ac338c7e4d290",
+      "rng_first_different_frame": 350,
+      "rng_different_frames": 2878,
+      "finite_goals_and_health_equal": true,
+      "raw_generator_stream_or_exact_call_source_proved_this_round": false
+    }
+  },
+  "no_rng_reset_or_seed_change": true,
+  "no_global_comparator_relaxation": true,
+  "scope": "Complete per-mode traces equal frozen pre-change baselines; only finite loading, terrain, traffic, health and goals accepted."
+}

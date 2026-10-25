@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_sha256": "084c6d3e2dbd9b432f8cd21bc6cc56df83383cd1d8a6a8798d5f3a3b87db0d7b",
+  "host_sha256": "aa633bd95474f3a1ccb8649d77a401bb9fb3315d6aadc3c2795e9e09fd4b7ebe",
+  "production_sha256": "c0e511ecb18f5a02b959e9388e34d498137f7baf8f7bd4560741664aecbda3b5",
+  "transport_packet_proof_inherited": true,
+  "production_recorder_unchanged": true,
+  "no_direct_board_unload_repair_or_path_result_calls": true,
+  "readonly_bridge_flags_every_frame": true
+}

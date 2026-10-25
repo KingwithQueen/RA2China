@@ -1,0 +1,1275 @@
+{
+  "passed": true,
+  "scenes": {
+    "b-traffic-m3": {
+      "original": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211
+          }
+        },
+        "all_goals_and_health": true
+      },
+      "generated-c": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211
+          }
+        },
+        "all_goals_and_health": true
+      }
+    },
+    "traffic-m3": {
+      "original": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211
+          }
+        },
+        "all_goals_and_health": true
+      },
+      "generated-c": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211
+          }
+        },
+        "all_goals_and_health": true
+      }
+    },
+    "b-traffic-m3-obs": {
+      "original": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 866,
+            "first_reverse_tube": 1688,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 891,
+            "first_reverse_tube": 1663,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212,
+            "first_forward_tube": 915,
+            "first_reverse_tube": 1637,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211,
+            "first_forward_tube": 939,
+            "first_reverse_tube": 1612,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 866,
+            "first_reverse_tube": 1688,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 891,
+            "first_reverse_tube": 1663,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212,
+            "first_forward_tube": 915,
+            "first_reverse_tube": 1637,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211,
+            "first_forward_tube": 939,
+            "first_reverse_tube": 1612,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      }
+    },
+    "traffic-m3-obs": {
+      "original": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 866,
+            "first_reverse_tube": 1688,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 891,
+            "first_reverse_tube": 1663,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212,
+            "first_forward_tube": 915,
+            "first_reverse_tube": 1637,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211,
+            "first_forward_tube": 939,
+            "first_reverse_tube": 1612,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "mixed",
+        "effects": {
+          "1023310": {
+            "first_bridge_frame": 74,
+            "return_bridge_frame": 2708,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 866,
+            "first_reverse_tube": 1688,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023311": {
+            "first_bridge_frame": 90,
+            "return_bridge_frame": 2712,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 214,
+            "first_forward_tube": 891,
+            "first_reverse_tube": 1663,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023312": {
+            "first_bridge_frame": 107,
+            "return_bridge_frame": 2755,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 212,
+            "first_forward_tube": 915,
+            "first_reverse_tube": 1637,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "1023313": {
+            "first_bridge_frame": 123,
+            "return_bridge_frame": 2738,
+            "unit_layer_transitions": 4,
+            "direction8_frames": 211,
+            "first_forward_tube": 939,
+            "first_reverse_tube": 1612,
+            "forward_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "reverse_waypoints": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      }
+    },
+    "b-traffic-q": {
+      "original": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true
+        },
+        "all_goals_and_health": true
+      },
+      "generated-c": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true
+        },
+        "all_goals_and_health": true
+      }
+    },
+    "traffic-q": {
+      "original": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true
+        },
+        "all_goals_and_health": true
+      },
+      "generated-c": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true
+        },
+        "all_goals_and_health": true
+      }
+    },
+    "b-traffic-q-obs": {
+      "original": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true,
+          "per_vehicle": {
+            "1022581": {
+              "request_frame": 100,
+              "route": "ground_bypass",
+              "arrival_frame": 434,
+              "request_to_arrival": 334
+            },
+            "1022582": {
+              "request_frame": 135,
+              "first_active_tube": 333,
+              "exit_publish_frame": 1238,
+              "terminal_stationary_frames": 704,
+              "longest_terminal_wait": 704,
+              "arrival_frame": 1318,
+              "request_to_exit": 1103
+            },
+            "1022583": {
+              "request_frame": 170,
+              "first_active_tube": 305,
+              "exit_publish_frame": 1257,
+              "terminal_stationary_frames": 751,
+              "longest_terminal_wait": 751,
+              "arrival_frame": 1405,
+              "request_to_exit": 1087
+            },
+            "1022584": {
+              "request_frame": 205,
+              "route": "ground_bypass",
+              "arrival_frame": 560,
+              "request_to_arrival": 355
+            },
+            "1022585": {
+              "request_frame": 240,
+              "first_active_tube": 452,
+              "exit_publish_frame": 1285,
+              "terminal_stationary_frames": 632,
+              "longest_terminal_wait": 632,
+              "arrival_frame": 1457,
+              "request_to_exit": 1045
+            },
+            "1022586": {
+              "request_frame": 275,
+              "first_active_tube": 403,
+              "exit_publish_frame": 1313,
+              "terminal_stationary_frames": 709,
+              "longest_terminal_wait": 709,
+              "arrival_frame": 1557,
+              "request_to_exit": 1038
+            },
+            "1022587": {
+              "request_frame": 310,
+              "route": "ground_bypass",
+              "arrival_frame": 765,
+              "request_to_arrival": 455
+            },
+            "1022588": {
+              "request_frame": 345,
+              "first_active_tube": 434,
+              "exit_publish_frame": 1403,
+              "terminal_stationary_frames": 768,
+              "longest_terminal_wait": 768,
+              "arrival_frame": 1629,
+              "request_to_exit": 1058
+            },
+            "1022589": {
+              "request_frame": 380,
+              "first_active_tube": 519,
+              "exit_publish_frame": 1410,
+              "terminal_stationary_frames": 690,
+              "longest_terminal_wait": 690,
+              "arrival_frame": 1745,
+              "request_to_exit": 1030
+            },
+            "1022590": {
+              "request_frame": 415,
+              "first_active_tube": 548,
+              "exit_publish_frame": 1417,
+              "terminal_stationary_frames": 668,
+              "longest_terminal_wait": 668,
+              "arrival_frame": 1832,
+              "request_to_exit": 1002
+            },
+            "1022591": {
+              "request_frame": 450,
+              "first_active_tube": 576,
+              "exit_publish_frame": 1424,
+              "terminal_stationary_frames": 647,
+              "longest_terminal_wait": 647,
+              "arrival_frame": 1740,
+              "request_to_exit": 974
+            },
+            "1022592": {
+              "request_frame": 5,
+              "first_active_tube": 71,
+              "exit_publish_frame": 1511,
+              "terminal_stationary_frames": 1239,
+              "longest_terminal_wait": 1239,
+              "arrival_frame": 1884,
+              "request_to_exit": 1506
+            }
+          },
+          "peak_terminal_waiters": 9,
+          "oldest_later_requests_exited_first": 8,
+          "last_exit_publish_frame": 1511,
+          "maximum_request_to_exit": 1506,
+          "actual_tube_actors": 9,
+          "ground_bypass_actors": 3,
+          "finite_recovery_verified": true,
+          "unbounded_starvation_freedom_proved": false
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true,
+          "per_vehicle": {
+            "1022581": {
+              "request_frame": 100,
+              "route": "ground_bypass",
+              "arrival_frame": 434,
+              "request_to_arrival": 334
+            },
+            "1022582": {
+              "request_frame": 135,
+              "first_active_tube": 333,
+              "exit_publish_frame": 1238,
+              "terminal_stationary_frames": 704,
+              "longest_terminal_wait": 704,
+              "arrival_frame": 1318,
+              "request_to_exit": 1103
+            },
+            "1022583": {
+              "request_frame": 170,
+              "first_active_tube": 305,
+              "exit_publish_frame": 1257,
+              "terminal_stationary_frames": 751,
+              "longest_terminal_wait": 751,
+              "arrival_frame": 1405,
+              "request_to_exit": 1087
+            },
+            "1022584": {
+              "request_frame": 205,
+              "route": "ground_bypass",
+              "arrival_frame": 560,
+              "request_to_arrival": 355
+            },
+            "1022585": {
+              "request_frame": 240,
+              "first_active_tube": 452,
+              "exit_publish_frame": 1285,
+              "terminal_stationary_frames": 632,
+              "longest_terminal_wait": 632,
+              "arrival_frame": 1457,
+              "request_to_exit": 1045
+            },
+            "1022586": {
+              "request_frame": 275,
+              "first_active_tube": 403,
+              "exit_publish_frame": 1313,
+              "terminal_stationary_frames": 709,
+              "longest_terminal_wait": 709,
+              "arrival_frame": 1557,
+              "request_to_exit": 1038
+            },
+            "1022587": {
+              "request_frame": 310,
+              "route": "ground_bypass",
+              "arrival_frame": 765,
+              "request_to_arrival": 455
+            },
+            "1022588": {
+              "request_frame": 345,
+              "first_active_tube": 434,
+              "exit_publish_frame": 1403,
+              "terminal_stationary_frames": 768,
+              "longest_terminal_wait": 768,
+              "arrival_frame": 1629,
+              "request_to_exit": 1058
+            },
+            "1022589": {
+              "request_frame": 380,
+              "first_active_tube": 519,
+              "exit_publish_frame": 1410,
+              "terminal_stationary_frames": 690,
+              "longest_terminal_wait": 690,
+              "arrival_frame": 1745,
+              "request_to_exit": 1030
+            },
+            "1022590": {
+              "request_frame": 415,
+              "first_active_tube": 548,
+              "exit_publish_frame": 1417,
+              "terminal_stationary_frames": 668,
+              "longest_terminal_wait": 668,
+              "arrival_frame": 1832,
+              "request_to_exit": 1002
+            },
+            "1022591": {
+              "request_frame": 450,
+              "first_active_tube": 576,
+              "exit_publish_frame": 1424,
+              "terminal_stationary_frames": 647,
+              "longest_terminal_wait": 647,
+              "arrival_frame": 1740,
+              "request_to_exit": 974
+            },
+            "1022592": {
+              "request_frame": 5,
+              "first_active_tube": 71,
+              "exit_publish_frame": 1511,
+              "terminal_stationary_frames": 1239,
+              "longest_terminal_wait": 1239,
+              "arrival_frame": 1884,
+              "request_to_exit": 1506
+            }
+          },
+          "peak_terminal_waiters": 9,
+          "oldest_later_requests_exited_first": 8,
+          "last_exit_publish_frame": 1511,
+          "maximum_request_to_exit": 1506,
+          "actual_tube_actors": 9,
+          "ground_bypass_actors": 3,
+          "finite_recovery_verified": true,
+          "unbounded_starvation_freedom_proved": false
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      }
+    },
+    "traffic-q-obs": {
+      "original": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true,
+          "per_vehicle": {
+            "1022581": {
+              "request_frame": 100,
+              "route": "ground_bypass",
+              "arrival_frame": 434,
+              "request_to_arrival": 334
+            },
+            "1022582": {
+              "request_frame": 135,
+              "first_active_tube": 333,
+              "exit_publish_frame": 1238,
+              "terminal_stationary_frames": 704,
+              "longest_terminal_wait": 704,
+              "arrival_frame": 1318,
+              "request_to_exit": 1103
+            },
+            "1022583": {
+              "request_frame": 170,
+              "first_active_tube": 305,
+              "exit_publish_frame": 1257,
+              "terminal_stationary_frames": 751,
+              "longest_terminal_wait": 751,
+              "arrival_frame": 1405,
+              "request_to_exit": 1087
+            },
+            "1022584": {
+              "request_frame": 205,
+              "route": "ground_bypass",
+              "arrival_frame": 560,
+              "request_to_arrival": 355
+            },
+            "1022585": {
+              "request_frame": 240,
+              "first_active_tube": 452,
+              "exit_publish_frame": 1285,
+              "terminal_stationary_frames": 632,
+              "longest_terminal_wait": 632,
+              "arrival_frame": 1457,
+              "request_to_exit": 1045
+            },
+            "1022586": {
+              "request_frame": 275,
+              "first_active_tube": 403,
+              "exit_publish_frame": 1313,
+              "terminal_stationary_frames": 709,
+              "longest_terminal_wait": 709,
+              "arrival_frame": 1557,
+              "request_to_exit": 1038
+            },
+            "1022587": {
+              "request_frame": 310,
+              "route": "ground_bypass",
+              "arrival_frame": 765,
+              "request_to_arrival": 455
+            },
+            "1022588": {
+              "request_frame": 345,
+              "first_active_tube": 434,
+              "exit_publish_frame": 1403,
+              "terminal_stationary_frames": 768,
+              "longest_terminal_wait": 768,
+              "arrival_frame": 1629,
+              "request_to_exit": 1058
+            },
+            "1022589": {
+              "request_frame": 380,
+              "first_active_tube": 519,
+              "exit_publish_frame": 1410,
+              "terminal_stationary_frames": 690,
+              "longest_terminal_wait": 690,
+              "arrival_frame": 1745,
+              "request_to_exit": 1030
+            },
+            "1022590": {
+              "request_frame": 415,
+              "first_active_tube": 548,
+              "exit_publish_frame": 1417,
+              "terminal_stationary_frames": 668,
+              "longest_terminal_wait": 668,
+              "arrival_frame": 1832,
+              "request_to_exit": 1002
+            },
+            "1022591": {
+              "request_frame": 450,
+              "first_active_tube": 576,
+              "exit_publish_frame": 1424,
+              "terminal_stationary_frames": 647,
+              "longest_terminal_wait": 647,
+              "arrival_frame": 1740,
+              "request_to_exit": 974
+            },
+            "1022592": {
+              "request_frame": 5,
+              "first_active_tube": 71,
+              "exit_publish_frame": 1511,
+              "terminal_stationary_frames": 1239,
+              "longest_terminal_wait": 1239,
+              "arrival_frame": 1884,
+              "request_to_exit": 1506
+            }
+          },
+          "peak_terminal_waiters": 9,
+          "oldest_later_requests_exited_first": 8,
+          "last_exit_publish_frame": 1511,
+          "maximum_request_to_exit": 1506,
+          "actual_tube_actors": 9,
+          "ground_bypass_actors": 3,
+          "finite_recovery_verified": true,
+          "unbounded_starvation_freedom_proved": false
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "queue",
+        "effects": {
+          "actor_count": 12,
+          "oldest_request_id": 1022592,
+          "final_arrivals": {
+            "1022581": 434,
+            "1022582": 1318,
+            "1022583": 1405,
+            "1022584": 560,
+            "1022585": 1457,
+            "1022586": 1557,
+            "1022587": 765,
+            "1022588": 1629,
+            "1022589": 1745,
+            "1022590": 1832,
+            "1022591": 1740,
+            "1022592": 1884
+          },
+          "all_requests_recovered": true,
+          "per_vehicle": {
+            "1022581": {
+              "request_frame": 100,
+              "route": "ground_bypass",
+              "arrival_frame": 434,
+              "request_to_arrival": 334
+            },
+            "1022582": {
+              "request_frame": 135,
+              "first_active_tube": 333,
+              "exit_publish_frame": 1238,
+              "terminal_stationary_frames": 704,
+              "longest_terminal_wait": 704,
+              "arrival_frame": 1318,
+              "request_to_exit": 1103
+            },
+            "1022583": {
+              "request_frame": 170,
+              "first_active_tube": 305,
+              "exit_publish_frame": 1257,
+              "terminal_stationary_frames": 751,
+              "longest_terminal_wait": 751,
+              "arrival_frame": 1405,
+              "request_to_exit": 1087
+            },
+            "1022584": {
+              "request_frame": 205,
+              "route": "ground_bypass",
+              "arrival_frame": 560,
+              "request_to_arrival": 355
+            },
+            "1022585": {
+              "request_frame": 240,
+              "first_active_tube": 452,
+              "exit_publish_frame": 1285,
+              "terminal_stationary_frames": 632,
+              "longest_terminal_wait": 632,
+              "arrival_frame": 1457,
+              "request_to_exit": 1045
+            },
+            "1022586": {
+              "request_frame": 275,
+              "first_active_tube": 403,
+              "exit_publish_frame": 1313,
+              "terminal_stationary_frames": 709,
+              "longest_terminal_wait": 709,
+              "arrival_frame": 1557,
+              "request_to_exit": 1038
+            },
+            "1022587": {
+              "request_frame": 310,
+              "route": "ground_bypass",
+              "arrival_frame": 765,
+              "request_to_arrival": 455
+            },
+            "1022588": {
+              "request_frame": 345,
+              "first_active_tube": 434,
+              "exit_publish_frame": 1403,
+              "terminal_stationary_frames": 768,
+              "longest_terminal_wait": 768,
+              "arrival_frame": 1629,
+              "request_to_exit": 1058
+            },
+            "1022589": {
+              "request_frame": 380,
+              "first_active_tube": 519,
+              "exit_publish_frame": 1410,
+              "terminal_stationary_frames": 690,
+              "longest_terminal_wait": 690,
+              "arrival_frame": 1745,
+              "request_to_exit": 1030
+            },
+            "1022590": {
+              "request_frame": 415,
+              "first_active_tube": 548,
+              "exit_publish_frame": 1417,
+              "terminal_stationary_frames": 668,
+              "longest_terminal_wait": 668,
+              "arrival_frame": 1832,
+              "request_to_exit": 1002
+            },
+            "1022591": {
+              "request_frame": 450,
+              "first_active_tube": 576,
+              "exit_publish_frame": 1424,
+              "terminal_stationary_frames": 647,
+              "longest_terminal_wait": 647,
+              "arrival_frame": 1740,
+              "request_to_exit": 974
+            },
+            "1022592": {
+              "request_frame": 5,
+              "first_active_tube": 71,
+              "exit_publish_frame": 1511,
+              "terminal_stationary_frames": 1239,
+              "longest_terminal_wait": 1239,
+              "arrival_frame": 1884,
+              "request_to_exit": 1506
+            }
+          },
+          "peak_terminal_waiters": 9,
+          "oldest_later_requests_exited_first": 8,
+          "last_exit_publish_frame": 1511,
+          "maximum_request_to_exit": 1506,
+          "actual_tube_actors": 9,
+          "ground_bypass_actors": 3,
+          "finite_recovery_verified": true,
+          "unbounded_starvation_freedom_proved": false
+        },
+        "all_goals_and_health": true,
+        "all_production_records_identical": true
+      }
+    }
+  },
+  "ordinary_events": true,
+  "unbounded_starvation_freedom_proved": false
+}

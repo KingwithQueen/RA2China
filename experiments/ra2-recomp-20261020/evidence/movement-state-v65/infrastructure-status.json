@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "new_game_setup_failures": true,
+  "parent_status": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\infrastructure-status.json",
+  "parent_status_sha256": "5b2562cc6e6e740ebad55bf304eca5bf2e89bdf45188128ce0c86c7f5ea19f08",
+  "input_packing_failure": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\mixed-packing-exclusion.json",
+  "input_packing_failure_sha256": "0ae531f3eeddcac33ce04e9df7c510bdb3cddb4c5107d2ff8cad6eafa201a18d",
+  "calibration_parameter_errors": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\calibration-parameter-errors.json",
+  "calibration_parameter_errors_sha256": "f037e8741684c486e8a8585c217adc12171b6ee80dbdf8a6bc4c1435e8e6c761",
+  "accepted_scenes_setups_succeeded": true,
+  "scope": "Initial literal-LCW candidate failed in original and C before state capture; compact bounded LCW replacement passed native loading and movement. Range0 calibration parameter failures retained separately; no production or rule fix."
+}

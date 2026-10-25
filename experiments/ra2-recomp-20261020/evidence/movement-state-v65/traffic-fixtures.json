@@ -1,0 +1,756 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "kind": "mixed",
+      "tag": "traffic-m3",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\fixtures\\bridge-chain-lower-west.MAP",
+      "secondary_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\fixtures\\tube-curved-east.MAP",
+      "secondary_source_sha256": "4f0a40d15da275b4a4ef22864e6f32e9fd2aa359220177077fec9c06880f76b7",
+      "starts": [
+        [
+          60,
+          61
+        ],
+        [
+          61,
+          60
+        ],
+        [
+          60,
+          59
+        ],
+        [
+          61,
+          58
+        ]
+      ],
+      "actor_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocker_slots": [],
+      "last": 3500,
+      "seconds": 300,
+      "allowed_changed_sections": [
+        "Units",
+        "Infantry",
+        "Tubes"
+      ],
+      "tube_steps": 10,
+      "scope": "Four ordinary trucks cross the original bridge, use a nearby translated legal curved Tube in both directions, then return across the bridge. A 189-cell terrain/overlay patch is copied from the validated Tube map; original bridge bytes remain unchanged.",
+      "path": "evidence/movement-state-v65/fixtures/traffic-m3.MAP",
+      "sha256": "1801f55987b078e738011a801d7bf6ac6389c4c7c90b1266e730ef72d6d7bad6",
+      "source_sha256": "be20a5a0c68f05ba732441db419e3f2fc110d779c95335ae58df80eeabc24b34",
+      "cell_catalog": true,
+      "capture_host": false,
+      "slot_ids": [
+        1023310,
+        1023311,
+        1023312,
+        1023313
+      ],
+      "actor_ids": [
+        1023310,
+        1023311,
+        1023312,
+        1023313
+      ],
+      "ground_vehicle_ids": [
+        1023310,
+        1023311,
+        1023312,
+        1023313
+      ],
+      "blocker_ids": [],
+      "actor_health": {
+        "1023310": 200,
+        "1023311": 200,
+        "1023312": 200,
+        "1023313": 200
+      },
+      "stationary_health": {},
+      "baseline_tag": "b-traffic-m3",
+      "observer_tag": "traffic-m3-obs",
+      "observer_baseline_tag": "b-traffic-m3-obs",
+      "observer_required": true,
+      "orders": [
+        "5:1023310:2:60:79",
+        "5:1023311:2:61:79",
+        "5:1023312:2:60:77",
+        "5:1023313:2:61:77",
+        "450:1023310:2:59:76",
+        "450:1023311:2:58:76",
+        "450:1023312:2:57:76",
+        "450:1023313:2:56:76",
+        "800:1023310:2:76:76",
+        "800:1023311:2:75:76",
+        "800:1023312:2:74:76",
+        "800:1023313:2:73:76",
+        "1500:1023310:2:56:76",
+        "1500:1023311:2:57:76",
+        "1500:1023312:2:58:76",
+        "1500:1023313:2:59:76",
+        "2200:1023310:2:60:75",
+        "2200:1023311:2:61:75",
+        "2200:1023312:2:60:77",
+        "2200:1023313:2:61:77",
+        "2600:1023310:2:59:55",
+        "2600:1023311:2:61:55",
+        "2600:1023312:2:59:57",
+        "2600:1023313:2:61:57"
+      ],
+      "events": [
+        {
+          "frame": 5,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            60,
+            79
+          ]
+        },
+        {
+          "frame": 5,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            61,
+            79
+          ]
+        },
+        {
+          "frame": 5,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            60,
+            77
+          ]
+        },
+        {
+          "frame": 5,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            61,
+            77
+          ]
+        },
+        {
+          "frame": 450,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            59,
+            76
+          ]
+        },
+        {
+          "frame": 450,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            58,
+            76
+          ]
+        },
+        {
+          "frame": 450,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            57,
+            76
+          ]
+        },
+        {
+          "frame": 450,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            56,
+            76
+          ]
+        },
+        {
+          "frame": 800,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            76,
+            76
+          ]
+        },
+        {
+          "frame": 800,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            75,
+            76
+          ]
+        },
+        {
+          "frame": 800,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            74,
+            76
+          ]
+        },
+        {
+          "frame": 800,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            73,
+            76
+          ]
+        },
+        {
+          "frame": 1500,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            56,
+            76
+          ]
+        },
+        {
+          "frame": 1500,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            57,
+            76
+          ]
+        },
+        {
+          "frame": 1500,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            58,
+            76
+          ]
+        },
+        {
+          "frame": 1500,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            59,
+            76
+          ]
+        },
+        {
+          "frame": 2200,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            60,
+            75
+          ]
+        },
+        {
+          "frame": 2200,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            61,
+            75
+          ]
+        },
+        {
+          "frame": 2200,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            60,
+            77
+          ]
+        },
+        {
+          "frame": 2200,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            61,
+            77
+          ]
+        },
+        {
+          "frame": 2600,
+          "slot": 0,
+          "id": 1023310,
+          "cell": [
+            59,
+            55
+          ]
+        },
+        {
+          "frame": 2600,
+          "slot": 1,
+          "id": 1023311,
+          "cell": [
+            61,
+            55
+          ]
+        },
+        {
+          "frame": 2600,
+          "slot": 2,
+          "id": 1023312,
+          "cell": [
+            59,
+            57
+          ]
+        },
+        {
+          "frame": 2600,
+          "slot": 3,
+          "id": 1023313,
+          "cell": [
+            61,
+            57
+          ]
+        }
+      ],
+      "goals": {
+        "1023310": [
+          59,
+          55
+        ],
+        "1023311": [
+          61,
+          55
+        ],
+        "1023312": [
+          59,
+          57
+        ],
+        "1023313": [
+          61,
+          57
+        ]
+      }
+    },
+    {
+      "kind": "queue",
+      "tag": "traffic-q",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\fixtures\\traffic-tu.MAP",
+      "starts": [
+        [
+          63,
+          112
+        ],
+        [
+          64,
+          112
+        ],
+        [
+          65,
+          112
+        ],
+        [
+          66,
+          112
+        ],
+        [
+          63,
+          114
+        ],
+        [
+          64,
+          114
+        ],
+        [
+          65,
+          114
+        ],
+        [
+          66,
+          114
+        ],
+        [
+          63,
+          116
+        ],
+        [
+          64,
+          116
+        ],
+        [
+          65,
+          116
+        ],
+        [
+          67,
+          114
+        ],
+        [
+          78,
+          114
+        ],
+        [
+          79,
+          114
+        ],
+        [
+          79,
+          115
+        ]
+      ],
+      "actor_slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "blocker_slots": [
+        12,
+        13,
+        14
+      ],
+      "oldest_slot": 11,
+      "last": 3600,
+      "seconds": 360,
+      "allowed_changed_sections": [
+        "Units",
+        "Infantry"
+      ],
+      "tube_steps": 10,
+      "scope": "Twelve ordinary truck requests plus three stationary exit blockers. The highest actor ID receives the oldest request; later requests and staggered blocker releases test finite per-vehicle recovery and overtaking, not an unbounded starvation guarantee.",
+      "path": "evidence/movement-state-v65/fixtures/traffic-q.MAP",
+      "sha256": "37c8830d3a73401564f3c18933bb56b77eb2cc173fa9c6a21072a4be86abebde",
+      "source_sha256": "7cade4a9b77e17b22dd4295ba6145d99581d8f1f837c9d2aa5a2b99ea7b0e924",
+      "cell_catalog": true,
+      "capture_host": false,
+      "slot_ids": [
+        1022581,
+        1022582,
+        1022583,
+        1022584,
+        1022585,
+        1022586,
+        1022587,
+        1022588,
+        1022589,
+        1022590,
+        1022591,
+        1022592,
+        1022593,
+        1022594,
+        1022595
+      ],
+      "actor_ids": [
+        1022581,
+        1022582,
+        1022583,
+        1022584,
+        1022585,
+        1022586,
+        1022587,
+        1022588,
+        1022589,
+        1022590,
+        1022591,
+        1022592
+      ],
+      "ground_vehicle_ids": [
+        1022581,
+        1022582,
+        1022583,
+        1022584,
+        1022585,
+        1022586,
+        1022587,
+        1022588,
+        1022589,
+        1022590,
+        1022591,
+        1022592
+      ],
+      "blocker_ids": [
+        1022593,
+        1022594,
+        1022595
+      ],
+      "actor_health": {
+        "1022581": 200,
+        "1022582": 200,
+        "1022583": 200,
+        "1022584": 200,
+        "1022585": 200,
+        "1022586": 200,
+        "1022587": 200,
+        "1022588": 200,
+        "1022589": 200,
+        "1022590": 200,
+        "1022591": 200,
+        "1022592": 200,
+        "1022593": 200,
+        "1022594": 200,
+        "1022595": 200
+      },
+      "stationary_health": {},
+      "baseline_tag": "b-traffic-q",
+      "observer_tag": "traffic-q-obs",
+      "observer_baseline_tag": "b-traffic-q-obs",
+      "observer_required": true,
+      "oldest_id": 1022592,
+      "request_frames": {
+        "1022592": 5,
+        "1022581": 100,
+        "1022582": 135,
+        "1022583": 170,
+        "1022584": 205,
+        "1022585": 240,
+        "1022586": 275,
+        "1022587": 310,
+        "1022588": 345,
+        "1022589": 380,
+        "1022590": 415,
+        "1022591": 450
+      },
+      "release_frames": {
+        "1022593": 1200,
+        "1022594": 1300,
+        "1022595": 1400
+      },
+      "orders": [
+        "5:1022592:2:91:114",
+        "100:1022581:2:80:114",
+        "135:1022582:2:81:114",
+        "170:1022583:2:82:114",
+        "205:1022584:2:83:114",
+        "240:1022585:2:84:114",
+        "275:1022586:2:85:114",
+        "310:1022587:2:86:114",
+        "345:1022588:2:87:114",
+        "380:1022589:2:88:114",
+        "415:1022590:2:89:114",
+        "450:1022591:2:90:114",
+        "1200:1022593:2:92:114",
+        "1300:1022594:2:93:114",
+        "1400:1022595:2:94:114"
+      ],
+      "events": [
+        {
+          "frame": 5,
+          "slot": 11,
+          "id": 1022592,
+          "cell": [
+            91,
+            114
+          ]
+        },
+        {
+          "frame": 100,
+          "slot": 0,
+          "id": 1022581,
+          "cell": [
+            80,
+            114
+          ]
+        },
+        {
+          "frame": 135,
+          "slot": 1,
+          "id": 1022582,
+          "cell": [
+            81,
+            114
+          ]
+        },
+        {
+          "frame": 170,
+          "slot": 2,
+          "id": 1022583,
+          "cell": [
+            82,
+            114
+          ]
+        },
+        {
+          "frame": 205,
+          "slot": 3,
+          "id": 1022584,
+          "cell": [
+            83,
+            114
+          ]
+        },
+        {
+          "frame": 240,
+          "slot": 4,
+          "id": 1022585,
+          "cell": [
+            84,
+            114
+          ]
+        },
+        {
+          "frame": 275,
+          "slot": 5,
+          "id": 1022586,
+          "cell": [
+            85,
+            114
+          ]
+        },
+        {
+          "frame": 310,
+          "slot": 6,
+          "id": 1022587,
+          "cell": [
+            86,
+            114
+          ]
+        },
+        {
+          "frame": 345,
+          "slot": 7,
+          "id": 1022588,
+          "cell": [
+            87,
+            114
+          ]
+        },
+        {
+          "frame": 380,
+          "slot": 8,
+          "id": 1022589,
+          "cell": [
+            88,
+            114
+          ]
+        },
+        {
+          "frame": 415,
+          "slot": 9,
+          "id": 1022590,
+          "cell": [
+            89,
+            114
+          ]
+        },
+        {
+          "frame": 450,
+          "slot": 10,
+          "id": 1022591,
+          "cell": [
+            90,
+            114
+          ]
+        },
+        {
+          "frame": 1200,
+          "slot": 12,
+          "id": 1022593,
+          "cell": [
+            92,
+            114
+          ]
+        },
+        {
+          "frame": 1300,
+          "slot": 13,
+          "id": 1022594,
+          "cell": [
+            93,
+            114
+          ]
+        },
+        {
+          "frame": 1400,
+          "slot": 14,
+          "id": 1022595,
+          "cell": [
+            94,
+            114
+          ]
+        }
+      ],
+      "goals": {
+        "1022592": [
+          91,
+          114
+        ],
+        "1022581": [
+          80,
+          114
+        ],
+        "1022582": [
+          81,
+          114
+        ],
+        "1022583": [
+          82,
+          114
+        ],
+        "1022584": [
+          83,
+          114
+        ],
+        "1022585": [
+          84,
+          114
+        ],
+        "1022586": [
+          85,
+          114
+        ],
+        "1022587": [
+          86,
+          114
+        ],
+        "1022588": [
+          87,
+          114
+        ],
+        "1022589": [
+          88,
+          114
+        ],
+        "1022590": [
+          89,
+          114
+        ],
+        "1022591": [
+          90,
+          114
+        ],
+        "1022593": [
+          92,
+          114
+        ],
+        "1022594": [
+          93,
+          114
+        ],
+        "1022595": [
+          94,
+          114
+        ]
+      }
+    }
+  ],
+  "new_unique_recipes": 2,
+  "ordinary_map_and_move_events": true,
+  "rules_overrides": false,
+  "engine_state_or_path_injection": false,
+  "claimed_new_natural_heap_saturation": false
+}

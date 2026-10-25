@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "cases": 32768,
+  "phase": 1,
+  "ordered_callback_values": 136273,
+  "original_stack_cleanup_verified": true,
+  "kind": "connection-retry",
+  "probe_name": "remainder",
+  "probe_exe_sha256": "10e05539aa3632054adb005407c2ecf3ac03ca8babb07ca1e40c51be087c9eee",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

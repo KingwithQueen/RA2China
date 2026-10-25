@@ -1,0 +1,42 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "704078f06b426fa8402d0c77d81621662b2414c528d5027400aba4445baabb82"
+  },
+  {
+    "path": "docs/单位移动第六十四批-隧道出口恢复与桥隧队列交通-20261025.txt",
+    "sha256": "443525ea202bf4703746c80c86552c69dbb4ef6eaec3cba5e39f6ae5ad345cc8"
+  },
+  {
+    "path": "交接文档-单位移动第六十四批正式验收-20261025.txt",
+    "sha256": "a16f6c8587f6bf981e95c5158d5b5c1acc4a1e9cbe1b69a71e7ba8bd807289d8"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "17a50a255073407d9db73014e48a475d90bae8c623bb53cafb70d9a9e21c41f5"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "76f988d4861516ecf6d317b379116d8f7400e021f8e82952a8c342cd7677cfd6"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "1215772ab12f655a2db81954d97a254d8e067ed9a2c9c07eb3067ff2e01ead02"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "1215772ab12f655a2db81954d97a254d8e067ed9a2c9c07eb3067ff2e01ead02"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "1215772ab12f655a2db81954d97a254d8e067ed9a2c9c07eb3067ff2e01ead02"
+  }
+]

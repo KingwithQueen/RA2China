@@ -1,0 +1,815 @@
+{
+  "passed": true,
+  "scenes": {
+    "traffic-m3": {
+      "passed": true,
+      "recipe": "traffic-m3",
+      "baseline": false,
+      "observer": false,
+      "comparison_sha256": "5b2f99eb4cbcd723f39ed5db672692766bd1f926de7068bdde92a1857618b488",
+      "strict_trace_equal": true,
+      "per_mode_traces_equal_prechange": true,
+      "baseline_traces": {
+        "original": "7463e720f8f0255ec2f565e4e7364e4bc0f0c08c3702a0d9b461ad4f0bb33407",
+        "generated-c": "7463e720f8f0255ec2f565e4e7364e4bc0f0c08c3702a0d9b461ad4f0bb33407"
+      },
+      "modes": {
+        "original": {
+          "goals": {
+            "1023310": {
+              "final_cell": [
+                59,
+                55
+              ],
+              "final_position": [
+                15232,
+                14208,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023311": {
+              "final_cell": [
+                61,
+                55
+              ],
+              "final_position": [
+                15744,
+                14208,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023312": {
+              "final_cell": [
+                59,
+                57
+              ],
+              "final_position": [
+                15232,
+                14720,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023313": {
+              "final_cell": [
+                61,
+                57
+              ],
+              "final_position": [
+                15744,
+                14720,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1023310": 1763,
+            "1023311": 1800,
+            "1023312": 1601,
+            "1023313": 1531
+          },
+          "simultaneous_two_or_more_frames": 1851,
+          "existing_stage6_observations": 31,
+          "effects": {
+            "1023310": {
+              "first_bridge_frame": 74,
+              "return_bridge_frame": 2708,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 214
+            },
+            "1023311": {
+              "first_bridge_frame": 90,
+              "return_bridge_frame": 2712,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 214
+            },
+            "1023312": {
+              "first_bridge_frame": 107,
+              "return_bridge_frame": 2755,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 212
+            },
+            "1023313": {
+              "first_bridge_frame": 123,
+              "return_bridge_frame": 2738,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 211
+            }
+          }
+        },
+        "generated-c": {
+          "goals": {
+            "1023310": {
+              "final_cell": [
+                59,
+                55
+              ],
+              "final_position": [
+                15232,
+                14208,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023311": {
+              "final_cell": [
+                61,
+                55
+              ],
+              "final_position": [
+                15744,
+                14208,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023312": {
+              "final_cell": [
+                59,
+                57
+              ],
+              "final_position": [
+                15232,
+                14720,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023313": {
+              "final_cell": [
+                61,
+                57
+              ],
+              "final_position": [
+                15744,
+                14720,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1023310": 1763,
+            "1023311": 1800,
+            "1023312": 1601,
+            "1023313": 1531
+          },
+          "simultaneous_two_or_more_frames": 1851,
+          "existing_stage6_observations": 31,
+          "effects": {
+            "1023310": {
+              "first_bridge_frame": 74,
+              "return_bridge_frame": 2708,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 214
+            },
+            "1023311": {
+              "first_bridge_frame": 90,
+              "return_bridge_frame": 2712,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 214
+            },
+            "1023312": {
+              "first_bridge_frame": 107,
+              "return_bridge_frame": 2755,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 212
+            },
+            "1023313": {
+              "first_bridge_frame": 123,
+              "return_bridge_frame": 2738,
+              "unit_layer_transitions": 4,
+              "direction8_frames": 211
+            }
+          }
+        }
+      },
+      "ordinary_move_events": true,
+      "no_memory_or_path_result_injection": true,
+      "scope": "Four ordinary trucks cross the original bridge, use a nearby translated legal curved Tube in both directions, then return across the bridge. A 189-cell terrain/overlay patch is copied from the validated Tube map; original bridge bytes remain unchanged."
+    },
+    "traffic-q": {
+      "passed": true,
+      "recipe": "traffic-q",
+      "baseline": false,
+      "observer": false,
+      "comparison_sha256": "3e0ec173a4b221f65acaad0b817f45f0a69476e977f062e44e9cf9eb5ee9d9e5",
+      "strict_trace_equal": true,
+      "per_mode_traces_equal_prechange": true,
+      "baseline_traces": {
+        "original": "45dde9c70b82d4419fb74c00a7dc9ac4f5a41a414077ec72c674e025c52eae02",
+        "generated-c": "45dde9c70b82d4419fb74c00a7dc9ac4f5a41a414077ec72c674e025c52eae02"
+      },
+      "modes": {
+        "original": {
+          "goals": {
+            "1022581": {
+              "final_cell": [
+                80,
+                114
+              ],
+              "final_position": [
+                20608,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022582": {
+              "final_cell": [
+                81,
+                114
+              ],
+              "final_position": [
+                20864,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022583": {
+              "final_cell": [
+                82,
+                114
+              ],
+              "final_position": [
+                21120,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022584": {
+              "final_cell": [
+                83,
+                114
+              ],
+              "final_position": [
+                21376,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022585": {
+              "final_cell": [
+                84,
+                114
+              ],
+              "final_position": [
+                21632,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022586": {
+              "final_cell": [
+                85,
+                114
+              ],
+              "final_position": [
+                21888,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022587": {
+              "final_cell": [
+                86,
+                114
+              ],
+              "final_position": [
+                22144,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022588": {
+              "final_cell": [
+                87,
+                114
+              ],
+              "final_position": [
+                22400,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022589": {
+              "final_cell": [
+                88,
+                114
+              ],
+              "final_position": [
+                22656,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022590": {
+              "final_cell": [
+                89,
+                114
+              ],
+              "final_position": [
+                22912,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022591": {
+              "final_cell": [
+                90,
+                114
+              ],
+              "final_position": [
+                23168,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022592": {
+              "final_cell": [
+                91,
+                114
+              ],
+              "final_position": [
+                23424,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022593": {
+              "final_cell": [
+                92,
+                114
+              ],
+              "final_position": [
+                23680,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022594": {
+              "final_cell": [
+                93,
+                114
+              ],
+              "final_position": [
+                23936,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022595": {
+              "final_cell": [
+                94,
+                114
+              ],
+              "final_position": [
+                24192,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1022581": 289,
+            "1022582": 1137,
+            "1022583": 1189,
+            "1022584": 328,
+            "1022585": 1170,
+            "1022586": 1236,
+            "1022587": 410,
+            "1022588": 1238,
+            "1022589": 1336,
+            "1022590": 1371,
+            "1022591": 1243,
+            "1022592": 1832
+          },
+          "simultaneous_two_or_more_frames": 1152,
+          "existing_stage6_observations": 21,
+          "effects": {
+            "actor_count": 12,
+            "oldest_request_id": 1022592,
+            "final_arrivals": {
+              "1022581": 434,
+              "1022582": 1318,
+              "1022583": 1405,
+              "1022584": 560,
+              "1022585": 1457,
+              "1022586": 1557,
+              "1022587": 765,
+              "1022588": 1629,
+              "1022589": 1745,
+              "1022590": 1832,
+              "1022591": 1740,
+              "1022592": 1884
+            },
+            "all_requests_recovered": true
+          }
+        },
+        "generated-c": {
+          "goals": {
+            "1022581": {
+              "final_cell": [
+                80,
+                114
+              ],
+              "final_position": [
+                20608,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022582": {
+              "final_cell": [
+                81,
+                114
+              ],
+              "final_position": [
+                20864,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022583": {
+              "final_cell": [
+                82,
+                114
+              ],
+              "final_position": [
+                21120,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022584": {
+              "final_cell": [
+                83,
+                114
+              ],
+              "final_position": [
+                21376,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022585": {
+              "final_cell": [
+                84,
+                114
+              ],
+              "final_position": [
+                21632,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022586": {
+              "final_cell": [
+                85,
+                114
+              ],
+              "final_position": [
+                21888,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022587": {
+              "final_cell": [
+                86,
+                114
+              ],
+              "final_position": [
+                22144,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022588": {
+              "final_cell": [
+                87,
+                114
+              ],
+              "final_position": [
+                22400,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022589": {
+              "final_cell": [
+                88,
+                114
+              ],
+              "final_position": [
+                22656,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022590": {
+              "final_cell": [
+                89,
+                114
+              ],
+              "final_position": [
+                22912,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022591": {
+              "final_cell": [
+                90,
+                114
+              ],
+              "final_position": [
+                23168,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022592": {
+              "final_cell": [
+                91,
+                114
+              ],
+              "final_position": [
+                23424,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022593": {
+              "final_cell": [
+                92,
+                114
+              ],
+              "final_position": [
+                23680,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022594": {
+              "final_cell": [
+                93,
+                114
+              ],
+              "final_position": [
+                23936,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022595": {
+              "final_cell": [
+                94,
+                114
+              ],
+              "final_position": [
+                24192,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1022581": 289,
+            "1022582": 1137,
+            "1022583": 1189,
+            "1022584": 328,
+            "1022585": 1170,
+            "1022586": 1236,
+            "1022587": 410,
+            "1022588": 1238,
+            "1022589": 1336,
+            "1022590": 1371,
+            "1022591": 1243,
+            "1022592": 1832
+          },
+          "simultaneous_two_or_more_frames": 1152,
+          "existing_stage6_observations": 21,
+          "effects": {
+            "actor_count": 12,
+            "oldest_request_id": 1022592,
+            "final_arrivals": {
+              "1022581": 434,
+              "1022582": 1318,
+              "1022583": 1405,
+              "1022584": 560,
+              "1022585": 1457,
+              "1022586": 1557,
+              "1022587": 765,
+              "1022588": 1629,
+              "1022589": 1745,
+              "1022590": 1832,
+              "1022591": 1740,
+              "1022592": 1884
+            },
+            "all_requests_recovered": true
+          }
+        }
+      },
+      "ordinary_move_events": true,
+      "no_memory_or_path_result_injection": true,
+      "scope": "Twelve ordinary truck requests plus three stationary exit blockers. The highest actor ID receives the oldest request; later requests and staggered blocker releases test finite per-vehicle recovery and overtaking, not an unbounded starvation guarantee."
+    }
+  },
+  "new_unique_recipes": 2,
+  "baseline_pairs": 4,
+  "final_pairs": 4,
+  "ordinary_events": true,
+  "production_host": true,
+  "readonly_observer_pairs": 4,
+  "memory_state_injection": false,
+  "path_result_injection": false
+}

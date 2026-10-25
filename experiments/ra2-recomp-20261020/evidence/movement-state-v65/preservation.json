@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/gameplay/ground_tube_state.c",
+    "ra2/src/gameplay/ground_landing.c",
+    "ra2/src/gameplay/ground_failure.c"
+  ],
+  "added_compile_inputs": [],
+  "build_recipe_changed": false,
+  "source_count": 181,
+  "content_inputs": 312,
+  "unsupported_guards": 37,
+  "native_labels_and_entry_tables_preserved": true,
+  "parent_archive_files": 450,
+  "baseline_files": 315,
+  "parts": {
+    "exit": {
+      "files": 358,
+      "exe_sha256": "213e51ee3a11d827e1d5516a61a012767c634abffbcebfe36354c7c2d6713207"
+    },
+    "recovery": {
+      "files": 359,
+      "exe_sha256": "c0e511ecb18f5a02b959e9388e34d498137f7baf8f7bd4560741664aecbda3b5"
+    }
+  },
+  "originals_checked": 20,
+  "original_rules_source_preserved": true,
+  "original_executable_save_and_old_engine_preserved": true,
+  "comparator_recorder_and_policy_unchanged": true
+}

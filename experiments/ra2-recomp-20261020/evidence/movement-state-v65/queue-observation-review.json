@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "comparison": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\runs\\b-traffic-q-obs\\comparison.json",
+  "comparison_sha256": "a486661853495bede23888ff4ff0dd6673eeded07e0e4f8f996b4fed2dcb616e",
+  "initial_assumption": "Every one of the twelve requests would use Tube route0.",
+  "observed_tube_actors": 9,
+  "observed_ground_bypass_actors": 3,
+  "case_specific_acceptance": "All twelve requests recover and reach their individual goals; at least eight actual Tube participants and peak terminal waiters; the oldest request must have a sustained terminal wait and a recorded exit. Ground bypasses classified separately.",
+  "raw_strict_comparison_preserved": true,
+  "game_rerun_for_checker_correction": false,
+  "production_or_map_or_rules_changed": false,
+  "unbounded_starvation_freedom_proved": false
+}

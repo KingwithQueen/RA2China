@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "phase": 0,
+  "cases": 32768,
+  "ordered_callback_values": 2610602,
+  "original_stack_cleanup_verified": true,
+  "kind": "tube-exit",
+  "probe_name": "tube_state",
+  "probe_exe_sha256": "c5b0b3e04eb4482edf41240c8d6a5fb5e67b580b5c53577f8e48f7b20cb1fcf6",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

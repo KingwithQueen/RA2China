@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "base_recipe": "build-tube-state-probe-v51.ps1",
+  "base_recipe_sha256": "736234409e71249dff49a9dd50f07d527bb529952414461d9c481ef7f21e7538",
+  "added_gameplay_sources": [],
+  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
+}

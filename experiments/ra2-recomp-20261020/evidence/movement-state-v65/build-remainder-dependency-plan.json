@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "base_recipe": "build-remainder-probe-v50.ps1",
+  "base_recipe_sha256": "18c01b7970cccfecbdedda27aea49bc741eb778e4cb5e35952a971e624122d90",
+  "added_gameplay_sources": [],
+  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
+}

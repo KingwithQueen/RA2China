@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "retained": [
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\runs\\cal-mixed\\comparison.json",
+      "sha256": "f3de5eece7ba9fc6650eeabae508065aaa5267e7732a795ec5d5f542e02080ae",
+      "reason": "Calibration range0:0 rejected before simulation; corrected to0:1.",
+      "accepted_as_traffic": false
+    },
+    {
+      "path": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\runs\\cal-queue\\comparison.json",
+      "sha256": "a4651fef7e1388efd709937a9756c4038dcb394c0189020680aabdf0599ba084",
+      "reason": "Calibration range0:0 rejected before simulation; corrected to0:1.",
+      "accepted_as_traffic": false
+    }
+  ],
+  "excluded_from_acceptance": true
+}
