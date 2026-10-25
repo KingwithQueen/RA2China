@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "files": {
+    "rules-and-locomotors.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\rules-and-locomotors.json",
+      "sha256": "c62f71790252f61594648e37db9f1f9f6b2d71eaf53c9799486a5bc6e293e33c",
+      "rerun": false
+    },
+    "land-type-table-proof.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\land-type-table-proof.json",
+      "sha256": "dedc4472f8a0cd21bba2cccd8c476a90fe7518b52ef678429f4a7798a5e9a039",
+      "rerun": false
+    },
+    "shore-comparison.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\shore-comparison.json",
+      "sha256": "e7fdc6c795247556263771f6134fb58619fdc999b1fbbb1061567cd540df554e",
+      "rerun": false
+    },
+    "excluded-explorations.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\excluded-explorations.json",
+      "sha256": "9e1fa6f1e5e16a2b90806c5ff503bee087622e4a70cc1c84a818dcca3d84f656",
+      "rerun": false
+    },
+    "collision-real-effects.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v61\\collision-real-effects.json",
+      "sha256": "3da076cd736e9af6eec519ccb9417b2d28b5466fde4d229d918c70bad207cab2",
+      "rerun": false
+    },
+    "remaining-work.json": {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v61\\remaining-work.json",
+      "sha256": "c68f7b9e1e28abe5782e2579e31f2b0570a2780efe0394c06f53c5a3ad2ed4ce",
+      "rerun": false
+    }
+  },
+  "retained_fm_map_equals_parent_south_bytes": true,
+  "retained_fm_terrain_pack_sha256": "8800c01ccc7174870f5248a3cd32f6becffb382310ea5253ed106f8d9958182a",
+  "scope": "Previous no-pass shores, distant release target, slope/aircraft, original terrain-name tables and negative collision controls remain in place. No new claims for these inherited cases."
+}

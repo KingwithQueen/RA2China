@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "base_recipe": "build-drive_process-probe-v46.ps1",
+  "base_recipe_sha256": "2d969c341925d9e68fcbcde639badb390868e6c4fb5ae194fda451a6e68ff94d",
+  "added_gameplay_sources": [],
+  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "59e6fa49fe290eebac861d5cc2cd969bebd1e49c7a00abf532c66d4f1527a13c"
+  },
+  {
+    "path": "docs/单位移动第六十一批-队列耗尽重试到达与不同通道交通-20261025.txt",
+    "sha256": "b7c6a9a5107e3a9804b2577d3bd943b0c890d0cce6528b0b469a6b59a45633e9"
+  },
+  {
+    "path": "交接文档-单位移动第六十一批正式验收-20261025.txt",
+    "sha256": "21025c20276889eb2ebd49b6b796dc94c5cc6a2b50e4444d0484187d49f8dfdf"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "de5121d6b744c9c12c3cd5d885f8a3958e736039f2c888b14933e093046d5a88"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "dbaa1374df486e0b17c14d6c5d370d9f4b75211376637ba5b4ec81ab82cb219c"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "f71986e9407ebabe19af4b476bce1a3573aaca13671df8b8e264784da5963c67"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "f71986e9407ebabe19af4b476bce1a3573aaca13671df8b8e264784da5963c67"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "f71986e9407ebabe19af4b476bce1a3573aaca13671df8b8e264784da5963c67"
+  }
+]

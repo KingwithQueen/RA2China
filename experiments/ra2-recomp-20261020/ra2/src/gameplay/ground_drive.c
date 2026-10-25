@@ -34,6 +34,76 @@ static int prepare_and_advance(const Ra2DriveServices *services, int continuing)
     return services->finish_frame(services->context);
 }
 
+/* 推进和存活检查先于耗尽接续；同帧第二段传1，不重复累计速度。 */
+static int resume_exhausted_segment(Ra2GroundDriveState *state,const Ra2DriveServices *services)
+{
+    /* 先推进正在执行的路径段；路段可能在回调中耗尽，单位也可能在回调中被移除。 */
+    if (services->advance_segment(services->context, 0) || !query(services, RA2_DRIVE_OWNER_ALIVE))
+    {
+        return 0;
+    }
+    if (state->path_selector != -1)
+    {
+        return services->finish_frame(services->context);
+    }
+    if (!query(services, RA2_DRIVE_IS_MOVING) && query(services, RA2_DRIVE_PATH_HEAD) == -1)
+    {
+        return services->finish_frame(services->context);
+    }
+    if (query(services, RA2_DRIVE_OWNER_CATEGORY) == 1 && query(services, RA2_DRIVE_OWNER_FLAG_5B9))
+    {
+        return services->finish_frame(services->context);
+    }
+    if (query(services, RA2_DRIVE_OWNER_CATEGORY) == 1 && query(services, RA2_DRIVE_TARGET_CATEGORY) == 15)
+    {
+        Ra2WorldPoint position;
+        services->target_position(services->context, &position);
+        if (!same_position(position, state->destination))
+        {
+            services->set_destination(services->context, position);
+        }
+    }
+    return prepare_and_advance(services, 1);
+}
+
+static int stop_if_already_arrived(Ra2GroundDriveState *state,Ra2WorldPoint invalid_position,
+    const Ra2DriveServices *services)
+{
+    if (query(services, RA2_DRIVE_TARGET_CATEGORY) == 11 && query(services, RA2_DRIVE_TARGET_IS_CURRENT_CELL))
+    {
+        services->stop_navigation(services->context);
+        return 1;
+    }
+    if (query(services, RA2_DRIVE_CURRENT_MISSION) == 5 && !state->driving
+        && !same_position(state->destination, invalid_position) && query(services, RA2_DRIVE_POSITION_IS_DESTINATION))
+    {
+        services->stop_navigation(services->context);
+        return 1;
+    }
+
+    return 0;
+}
+
+/* 空队列只同步目标或清速度；新的Prepare由外层有路径分支负责。 */
+static int handle_empty_queue(Ra2GroundDriveState *state,Ra2WorldPoint invalid_position,
+    const Ra2DriveServices *services)
+{
+    /* 路径队列为空时只同步目标或停止速度，不能凭空进入新路径段。 */
+    if (query(services, RA2_DRIVE_OWNER_FLAG_325))
+    {
+        ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
+        state->desired_speed = 0.0;
+        return services->finish_frame(services->context);
+    }
+    if (query(services, RA2_DRIVE_HAS_TARGET))
+    {
+        Ra2WorldPoint position;
+        services->target_position(services->context, &position);
+        services->set_destination(services->context, position);
+    }
+    return services->finish_frame(services->context);
+}
+
 int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_position, const Ra2DriveServices *services)
 {
     /* 地表属性改变时保留上一属性，并重启原版的三帧过渡计时器。 */
@@ -45,49 +115,11 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
         services->restart_surface_timer(services->context);
     }
 
-    if (state->path_selector != -1 && state->driving)
-    {
-        /* 先推进正在执行的路径段；路段可能在回调中耗尽，单位也可能在回调中被移除。 */
-        if (services->advance_segment(services->context, 0) || !query(services, RA2_DRIVE_OWNER_ALIVE))
-        {
-            return 0;
-        }
-        if (state->path_selector != -1)
-        {
-            return services->finish_frame(services->context);
-        }
-        if (!query(services, RA2_DRIVE_IS_MOVING) && query(services, RA2_DRIVE_PATH_HEAD) == -1)
-        {
-            return services->finish_frame(services->context);
-        }
-        if (query(services, RA2_DRIVE_OWNER_CATEGORY) == 1 && query(services, RA2_DRIVE_OWNER_FLAG_5B9))
-        {
-            return services->finish_frame(services->context);
-        }
-        if (query(services, RA2_DRIVE_OWNER_CATEGORY) == 1 && query(services, RA2_DRIVE_TARGET_CATEGORY) == 15)
-        {
-            Ra2WorldPoint position;
-            services->target_position(services->context, &position);
-            if (!same_position(position, state->destination))
-            {
-                services->set_destination(services->context, position);
-            }
-        }
-        return prepare_and_advance(services, 1);
-    }
+    if(state->path_selector!=-1 && state->driving)
+        return resume_exhausted_segment(state,services);
 
     /* 没有活动路段：先处理已经到达的格目标，再处理原地转向和等待任务。 */
-    if (query(services, RA2_DRIVE_TARGET_CATEGORY) == 11 && query(services, RA2_DRIVE_TARGET_IS_CURRENT_CELL))
-    {
-        services->stop_navigation(services->context);
-        return 0;
-    }
-    if (query(services, RA2_DRIVE_CURRENT_MISSION) == 5 && !state->driving
-        && !same_position(state->destination, invalid_position) && query(services, RA2_DRIVE_POSITION_IS_DESTINATION))
-    {
-        services->stop_navigation(services->context);
-        return 0;
-    }
+    if(stop_if_already_arrived(state,invalid_position,services))return 0;
 
     if (query(services, RA2_DRIVE_IS_TURNING))
     {
@@ -113,23 +145,8 @@ int ra2_ground_drive_process(Ra2GroundDriveState *state, Ra2WorldPoint invalid_p
         return services->finish_frame(services->context);
     }
 
-    if (!query(services, RA2_DRIVE_IS_MOVING) && query(services, RA2_DRIVE_PATH_HEAD) == -1)
-    {
-        /* 路径队列为空时只同步目标或停止速度，不能凭空进入新路径段。 */
-        if (query(services, RA2_DRIVE_OWNER_FLAG_325))
-        {
-            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
-            state->desired_speed = 0.0;
-            return services->finish_frame(services->context);
-        }
-        if (query(services, RA2_DRIVE_HAS_TARGET))
-        {
-            Ra2WorldPoint position;
-            services->target_position(services->context, &position);
-            services->set_destination(services->context, position);
-        }
-        return services->finish_frame(services->context);
-    }
+    if(!query(services,RA2_DRIVE_IS_MOVING) && query(services,RA2_DRIVE_PATH_HEAD)==-1)
+        return handle_empty_queue(state,invalid_position,services);
 
     /* 某些原版状态要求重新检查目的地；失败时先清路段，再交给任务服务停止导航。 */
     if (query(services, RA2_DRIVE_OWNER_FLAG_32D) && query(services, RA2_DRIVE_EFFECTIVE_MISSION) != 7

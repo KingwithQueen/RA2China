@@ -135,19 +135,19 @@ static Ra2PreparePhase finish_failed_rebuild(Ra2GroundPrepareState *state,
     return RA2_PREPARE_INSPECT_OBSTACLE;
 }
 
-Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
-    Ra2PathRetryTimer timer, int32_t frame, const Ra2PrepareServices *services)
+static Ra2PreparePhase restart_and_rebuild_path(Ra2GroundPrepareState *state,
+    Ra2WorldPoint invalid_position,int32_t frame,const Ra2PrepareServices *services)
 {
-    if (!ra2_ground_retry_timer_ready(timer, frame))
-    {
-        return RA2_PREPARE_RETURN_FALSE;
-    }
-    int32_t delay = query(services, RA2_PREPARE_RETRY_DELAY_FRAMES);
-    services->restart_retry_timer(services->context, frame, delay);
-    if (services->rebuild_path(services->context))
-    {
-        return RA2_PREPARE_PATH_REBUILT;
-    }
-    /* 重建服务可能移除所属对象或改变目标，失败后的判断留在服务之后。 */
-    return finish_failed_rebuild(state, invalid_position, services);
+    int32_t delay=query(services,RA2_PREPARE_RETRY_DELAY_FRAMES);
+    services->restart_retry_timer(services->context,frame,delay);
+    if(services->rebuild_path(services->context))return RA2_PREPARE_PATH_REBUILT;
+    /* 重建可移除owner或改写目标；失败判断继续使用回调之后的实时状态。 */
+    return finish_failed_rebuild(state,invalid_position,services);
+}
+
+Ra2PreparePhase ra2_ground_retry_path(Ra2GroundPrepareState *state,Ra2WorldPoint invalid_position,
+    Ra2PathRetryTimer timer,int32_t frame,const Ra2PrepareServices *services)
+{
+    if(!ra2_ground_retry_timer_ready(timer,frame))return RA2_PREPARE_RETURN_FALSE;
+    return restart_and_rebuild_path(state,invalid_position,frame,services);
 }

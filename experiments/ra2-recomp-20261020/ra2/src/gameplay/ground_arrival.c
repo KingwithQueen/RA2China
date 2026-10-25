@@ -57,27 +57,37 @@ static Ra2ArrivalOutcome finish_after_refresh(int reached_target,const Ra2Arriva
     }
 }
 
-Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state, Ra2WorldPoint owner_position,
-    Ra2WorldPoint invalid_position, int32_t level_height, const Ra2ArrivalServices *services)
+static void publish_arrived_segment(Ra2GroundArrivalState *state,Ra2WorldPoint owner_position,
+    Ra2WorldPoint invalid_position,const Ra2ArrivalServices *services)
 {
-    services->relocate(services->context, !same_cell(owner_position, state->segment_end));
-    ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
-    state->path_selector = -1;
-    state->sample_index = 0;
+    /* relocate可回写状态；先落位，再废弃旧段并清选择器、采样下标。 */
+    services->relocate(services->context,!same_cell(owner_position,state->segment_end));
+    ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid_position);
+    state->path_selector=-1;
+    state->sample_index=0;
+}
 
-    int reached_target = 0;
-    if (services->query(services->context, RA2_ARRIVAL_TARGET_IS_CURRENT_CELL))
-    {
-        int32_t owner_z = services->query(services->context, RA2_ARRIVAL_OWNER_REFERENCE_Z);
-        int32_t tolerance = signed_bits((uint32_t)level_height * 2u);
-        if (wrapped_distance(owner_z, state->destination.z) < tolerance)
-        {
-            reached_target = 1;
-            state->destination = invalid_position;
-            ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
-            state->driving = 0;
+static int mark_reached_destination(Ra2GroundArrivalState *state,Ra2WorldPoint invalid_position,
+    int32_t level_height,const Ra2ArrivalServices *services)
+{
+    if(services->query(services->context,RA2_ARRIVAL_TARGET_IS_CURRENT_CELL)) {
+        int32_t owner_z=services->query(services->context,RA2_ARRIVAL_OWNER_REFERENCE_Z);
+        int32_t tolerance=signed_bits((uint32_t)level_height*2u);
+        /* 目的地高度在查询后读取，保留严格小于和32位回绕距离。 */
+        if(wrapped_distance(owner_z,state->destination.z)<tolerance) {
+            state->destination=invalid_position;
+            ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid_position);
+            state->driving=0;
+            return 1;
         }
     }
+    return 0;
+}
 
-    return finish_after_refresh(reached_target, services);
+Ra2ArrivalOutcome ra2_ground_finish_segment(Ra2GroundArrivalState *state,Ra2WorldPoint owner_position,
+    Ra2WorldPoint invalid_position,int32_t level_height,const Ra2ArrivalServices *services)
+{
+    publish_arrived_segment(state,owner_position,invalid_position,services);
+    int reached_target=mark_reached_destination(state,invalid_position,level_height,services);
+    return finish_after_refresh(reached_target,services);
 }

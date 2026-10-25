@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "run_batch_v61.py",
+      "source_sha256": "4493fe1166a1aea92eac25794b518539e2a5c3f91f011662c327e0f7a726f653",
+      "derived": "run_batch_v62.py",
+      "derived_sha256": "54f20f412ca38fc27eda1544d6acf95593bfb80331d170b2863042e2f1211d77",
+      "final_derived_sha256": "54f20f412ca38fc27eda1544d6acf95593bfb80331d170b2863042e2f1211d77",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "accept_dynamic_v61.py",
+      "source_sha256": "362af931d55dffca7059889ab9ce35c74b1ef9074996ff6c378b411717ffc50a",
+      "derived": "accept_dynamic_v62.py",
+      "derived_sha256": "fb1e72762f6a3206ad53b3984b9950f010ef79b8ac9a2ea234384cb23cbaf694",
+      "final_derived_sha256": "fb1e72762f6a3206ad53b3984b9950f010ef79b8ac9a2ea234384cb23cbaf694",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "accept_traffic_v61.py",
+      "source_sha256": "9ee5d5a0bf1b701a73209a617763ec3f0ade3d33bb01b3a8ab40a225177a7b5f",
+      "derived": "accept_traffic_v62.py",
+      "derived_sha256": "077f2e9e0af00e98d033c43dad0a3decb4526915973b591d382c0d2562150b18",
+      "final_derived_sha256": "4f90f2117deb4ebd63aa0bf89ca58de2df2d7f252837af213784581a2826faae",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "audit_scenes_v61.py",
+      "source_sha256": "fa028bb53f4da51afdc3b7bd87fac92d553fab6db2551cc56701fb58a9ed9866",
+      "derived": "audit_scenes_v62.py",
+      "derived_sha256": "c4e248e685f145dce43939e0a2dc6104a8b25ac5e9e8b36c767afcb55955729e",
+      "final_derived_sha256": "fe6efeab54b540e947437cbe6b5a67d115a08cdc49bd0a8d6866fb9718e8318d",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "audit_sources_v61.py",
+      "source_sha256": "3e67305e1006c984ad1a711018dd68e59dbec1088045f55e30403b22799c527f",
+      "derived": "audit_sources_v62.py",
+      "derived_sha256": "acd1fa290cf3f316a3d6b3bbd09aa2e8996f6ea45e27e4931540fedcc3d9b7b4",
+      "final_derived_sha256": "bf9f6deb68e0a912b2dfd87590131791526ef015b9c554697a107108c8106905",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "plan_cleanup_v61.py",
+      "source_sha256": "3cb3ad85b1912627f62fe34ef018ec9538b8d41183c9cb48ff41de14d682c8fb",
+      "derived": "plan_cleanup_v62.py",
+      "derived_sha256": "e038f85a0777c83300973f2ae412c0d00f2b0113698c112cc5262cca683a51f5",
+      "final_derived_sha256": "e038f85a0777c83300973f2ae412c0d00f2b0113698c112cc5262cca683a51f5",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "commit_movement_v61.py",
+      "source_sha256": "50d1570ec53b4aedef6fdb68e0b12dcee2300a829a900df89d10d55a2eaa7982",
+      "derived": "commit_movement_v62.py",
+      "derived_sha256": "4f018c652945fad6a638977fa89f9f28ad33d9df80c7d95e20e76b65264bd0a3",
+      "final_derived_sha256": "4f018c652945fad6a638977fa89f9f28ad33d9df80c7d95e20e76b65264bd0a3",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_evidence_v61.py",
+      "source_sha256": "9ad1844dc1c288027913a3d1ed899ca05d2cacf111552a2de2e7207c0f4b81ed",
+      "derived": "audit_evidence_v62.py",
+      "derived_sha256": "77d5604136d062c17b33233a79ebb423c37d5631201b815ae8690f817fadadd7",
+      "final_derived_sha256": "77d5604136d062c17b33233a79ebb423c37d5631201b815ae8690f817fadadd7",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "verify_final_movement_v61.py",
+      "source_sha256": "23e9615b26d7597ef4e2d4cd16b2bf41881b935172d24439648894425a0d6746",
+      "derived": "verify_final_movement_v62.py",
+      "derived_sha256": "50f68e514558fbb5d63b018cdff7af370bd2144370ced0fecc348da1c14633d3",
+      "final_derived_sha256": "70352355b6cc72335be890f362c5007d86321b1ea3b9587e4340882f62850511",
+      "unchanged_after_initial_derivation": false
+    }
+  ],
+  "native_origins": [
+    {
+      "name": "drive_process_probe.c",
+      "source": "evidence/movement-state-v46/drive_process_probe.c",
+      "sha256": "e2747f22dff27161d65076bc1e9668014d5642d6c7eb1341b4a04dd4c0224ad1"
+    },
+    {
+      "name": "prepare_probe.c",
+      "source": "evidence/movement-state-v52/prepare_probe.c",
+      "sha256": "1556bdf0763329681faf9f059f345d193a6925e777789bff2c76c806f6110d2b"
+    },
+    {
+      "name": "arrival_probe.c",
+      "source": "evidence/movement-state-v46/arrival_probe.c",
+      "sha256": "9eb07d740c83efd25e60d6f717721f9122296b90fb2ada5247efbfa937a5f94f"
+    }
+  ]
+}

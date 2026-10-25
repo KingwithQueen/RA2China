@@ -1,0 +1,15 @@
+当前正式61 / 验证62，2026-10-25。
+父提交：a58365d95d7b6c844cd8cecd58d636f2c9eec6e6；程序SHA-256：11de39ff6c80c7db0b1e259e2422b5d0cfada2bdc9e866006f5455e52d2c256b。
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+报告：D:\Program\红色警戒2\docs\单位移动第六十一批-队列耗尽重试到达与不同通道交通-20261025.txt
+ground_drive整理活动段耗尽、已到达停止、空队列处理，保留同帧接续1/新段0及回调后存活/状态查询。ground_prepare分离计时通过后的delay/timer/rebuild/失败复核，保留回绕和实时context。ground_arrival分离relocate后发布、严格层高到达判定与任务收尾，owner刷新/取消/存活顺序保持。只改3C，181C/312输入/37保护不变。
+原版Drive32768、Prepare entry/retry各65536、Arrival65536，共229376例，改前和两段后通过，重复不累计。到达继续3937、返回61599，均合法出口；探针被检查ABI/状态/调用通过，不宣称全部ABI。
+平地岸边0高度和高架道路416高度两个通道，各2401帧、四轮活动；3TRUCKA+1E2普通Move，无状态/结果注入或新生产钩子。高架实际Road=1/基础层高4，不作为新Bridge flag切换证明。检查器漏列Road已据原地形表和[Road] Foot/Wheel=100%纠正，原始比较严格通过、轨迹未重跑、规则/地图未改，见channel-land-proof.json。
+改前/后4配对9604帧均严格，完整每模式轨迹等于冻结基线；平地/高架基线有9/4个空队列到达再发见证，最终统计详见traffic-effects/channel-comparison。全程生命、合法落格/高度、队列方向、stage6、最终目标/Guard及真实改发通过。
+总19配对28669帧，15严格、4既有局部功能差异；mi/sc/aw3/fm旧时序、严格false、349/350窗口及Z436/Z-193原版异常保留；旧边界与29非主C/86入边按哈希继承。
+前批完整服务和有证据的堆容量改进保持，7412预期差异/65541合成见证不计当前新覆盖。社区5项固定线索继续继承：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\community-reference-review.json，原版1.006仍为对照；允许机制改进，不保证全图最短。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\parts；原版探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\baseline-probe；宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\baseline-observer；通道改前记录：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\runs\b-traffic-channel-flat、D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\runs\b-traffic-channel-deck；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v62\final-source。
+已哈希核对清理28项可重建文件；原始输入、资源、旧引擎和历史证据保留。本地提交，不推送。
+下一步按功能需要推进等待/障碍释放后的恢复、更多层高与通道交互，或有证据的搜索改进；全游戏及完整视觉/资源验收仍未覆盖。
+派生下一批须显式指定父证据movement-state-v62并保留导入校验。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v62.py。

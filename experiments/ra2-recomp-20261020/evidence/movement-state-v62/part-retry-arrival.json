@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "native_arrival_cases": 65536,
+  "continued": 3937,
+  "returned": 61599,
+  "state_calls_abi_verified": true,
+  "kind": "arrival",
+  "cases": 65536,
+  "probe_name": "arrival",
+  "probe_exe_sha256": "2fe21dceebace0854b800ea775ceec20b157229f7a14b1a8579d8d076312c444",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

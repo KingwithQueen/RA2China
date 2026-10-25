@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "native_process_fixtures": 32768,
+  "service_call_order_and_state_verified": true,
+  "kind": "exhaustion",
+  "cases": 32768,
+  "probe_name": "drive_process",
+  "probe_exe_sha256": "a505dd9460807ab6d40024c383724e015e984d2e9621d746a5843fde9a9cd27b",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

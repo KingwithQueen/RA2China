@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "groups": 3,
+  "cases": 229376,
+  "receipts": [
+    "part-arrival-exhaustion.json",
+    "part-arrival-retry.json",
+    "part-arrival-arrival.json"
+  ],
+  "scope": "Drive exhaustion and restart, preparation entry/retry, and segment arrival. Finite original state, callback order and checked ABI/control evidence; repeated runs do not add unique cases."
+}
