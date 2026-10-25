@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "strict": false,
+  "comparison_sha256": "8b9c101f240f6b56f3a44ebc08b4d04c65ebc3fa79bb497665194cbe1db5d423",
+  "scope": "Before-change executable and locked original; unknown differences stay explicit."
+}

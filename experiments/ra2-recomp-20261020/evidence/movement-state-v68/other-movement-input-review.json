@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "initial_map": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\fixtures\\move-types.MAP",
+  "initial_sha256": "14b2b1516b2b75be2e7e984e0f712f38de9a03fffd18a3e6fa1f44accebe1ecf",
+  "initial_comparison_sha256": "8b9c101f240f6b56f3a44ebc08b4d04c65ebc3fa79bb497665194cbe1db5d423",
+  "excluded_from_positive_acceptance": true,
+  "reason": "Infantry row fields were shifted after Tag, yielding OnBridge=-1 and artificial upper-layer starts; initial traces kept, no production change to imitate this input.",
+  "corrected_map": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\fixtures\\move-types-ground.MAP",
+  "corrected_sha256": "09e2b4c99b6734a9353a97825847e570afb1ae97d20287f9cd24707c88bf4da5",
+  "schema_reference": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\fixtures\\bridge-detour-north.MAP"
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\arrival_probe.c",
+      "sha256": "9eb07d740c83efd25e60d6f717721f9122296b90fb2ada5247efbfa937a5f94f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\arrival_probe.exe",
+      "sha256": "0a062baa5d35d54f238fd9882d82cdd8305124935263f4ec3ea47ed135bd5b06"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\collision_probe.c",
+      "sha256": "29b20af42855d0e47f7a7529c41945b7401bfe9455f07d45543dfe6fbd236e26"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\collision_probe.exe",
+      "sha256": "55b07e3b5f5015da1cc54d5fa11fceca370df9b66e91571b0f7506bd63b31b14"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\ground_services_probe.c",
+      "sha256": "40a19e20a2a77feb70a088454972b645484aae4ab827db8e6a4961f21352d44d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\ground_services_probe.exe",
+      "sha256": "0b556bd3ed74aa73cfb74f3e7a6c5ee182fae6c8389c092064ca8ae44dc62a60"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\obstacle_probe.c",
+      "sha256": "330f7cfee7da9b6cb24def9a7433ee2cac96218b705c664e10f50da86e32b137"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\obstacle_probe.exe",
+      "sha256": "ebeaaa5772b372f1f4bb67b8e4198957956741686bc8ae4adb9a34feb56b362b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\prepare_probe.c",
+      "sha256": "1556bdf0763329681faf9f059f345d193a6925e777789bff2c76c806f6110d2b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\baseline-probe\\prepare_probe.exe",
+      "sha256": "39368a87488d8645f6f4eaab478fd0c28663422834b9e420fb6ebf86d9fe818f"
+    }
+  ]
+}

@@ -1,0 +1,1600 @@
+{
+  "passed": true,
+  "functional_acceptance": true,
+  "strict_original_c_equality": false,
+  "types": [
+    {
+      "type": "HTNK",
+      "id": 1023310,
+      "locomotor_vtable": 7996620,
+      "goal": [
+        70,
+        76
+      ],
+      "final": [
+        18048,
+        19584,
+        416
+      ],
+      "health": 400,
+      "mission": [
+        5,
+        -1,
+        -1
+      ],
+      "moving_frames": 77,
+      "initial": [
+        77,
+        76
+      ]
+    },
+    {
+      "type": "SAPC",
+      "id": 1023311,
+      "locomotor_vtable": 8008172,
+      "goal": [
+        56,
+        64
+      ],
+      "final": [
+        14464,
+        16512,
+        99
+      ],
+      "health": 300,
+      "mission": [
+        5,
+        -1,
+        -1
+      ],
+      "moving_frames": 1619,
+      "initial": [
+        46,
+        64
+      ]
+    },
+    {
+      "type": "DEST",
+      "id": 1023312,
+      "locomotor_vtable": 8040764,
+      "goal": [
+        56,
+        63
+      ],
+      "final": [
+        14464,
+        16256,
+        0
+      ],
+      "health": 600,
+      "mission": [
+        5,
+        -1,
+        -1
+      ],
+      "moving_frames": 163,
+      "initial": [
+        46,
+        63
+      ]
+    },
+    {
+      "type": "E1",
+      "id": 1023314,
+      "locomotor_vtable": 8055512,
+      "goal": [
+        70,
+        80
+      ],
+      "final": [
+        18112,
+        20544,
+        416
+      ],
+      "health": 125,
+      "mission": [
+        5,
+        -1,
+        -1
+      ],
+      "moving_frames": 169,
+      "initial": [
+        77,
+        80
+      ]
+    },
+    {
+      "type": "JUMPJET",
+      "id": 1023315,
+      "locomotor_vtable": 8016548,
+      "goal": [
+        72,
+        80
+      ],
+      "final": [
+        18624,
+        20544,
+        916
+      ],
+      "health": 125,
+      "mission": [
+        2,
+        -1,
+        -1
+      ],
+      "moving_frames": 97,
+      "initial": [
+        78,
+        80
+      ]
+    },
+    {
+      "type": "CLEG",
+      "id": 1023316,
+      "locomotor_vtable": 8049064,
+      "goal": [
+        74,
+        80
+      ],
+      "final": [
+        19136,
+        20672,
+        416
+      ],
+      "health": 125,
+      "mission": [
+        5,
+        -1,
+        -1
+      ],
+      "moving_frames": 1,
+      "initial": [
+        78,
+        78
+      ]
+    }
+  ],
+  "per_mode_before_after_and_observer_parity": [
+    {
+      "mode": "original",
+      "baseline_sha256": "0d3dbb859e7e459d73920f5869ad0ee69dfe25d936d9e8c6718d23575ebd803f",
+      "final_sha256": "0d3dbb859e7e459d73920f5869ad0ee69dfe25d936d9e8c6718d23575ebd803f",
+      "observer_production_records_equal": true
+    },
+    {
+      "mode": "generated-c",
+      "baseline_sha256": "066042e4d31ca462b8893063265433037cf110645282b560d1e857d9783f662f",
+      "final_sha256": "066042e4d31ca462b8893063265433037cf110645282b560d1e857d9783f662f",
+      "observer_production_records_equal": true
+    }
+  ],
+  "rng_equal_all_frames": true,
+  "ordinary_commands_equal": true,
+  "preexisting_ship_variation": {
+    "differing_frames": 32,
+    "maximum_world_unit_delta": 3,
+    "cell_size": 256,
+    "examples": [
+      {
+        "frame": 38,
+        "id": 1023312,
+        "original": [
+          12035,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12037,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 39,
+        "id": 1023312,
+        "original": [
+          12050,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12051,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 40,
+        "id": 1023312,
+        "original": [
+          12064,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12065,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 41,
+        "id": 1023312,
+        "original": [
+          12079,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12081,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 42,
+        "id": 1023312,
+        "original": [
+          12095,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12097,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 43,
+        "id": 1023312,
+        "original": [
+          12112,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12114,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 44,
+        "id": 1023312,
+        "original": [
+          12130,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12131,
+          16256,
+          0
+        ]
+      },
+      {
+        "frame": 45,
+        "id": 1023312,
+        "original": [
+          12149,
+          16256,
+          0
+        ],
+        "generated_c": [
+          12150,
+          16256,
+          0
+        ]
+      }
+    ],
+    "audit_hunks": [
+      {
+        "operation": "insert",
+        "original": [],
+        "generated_c": [
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 24,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 25,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 26,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              64
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              49,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              50,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              51,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              52,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              53,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              54,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              55,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 45,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          }
+        ]
+      },
+      {
+        "operation": "delete",
+        "original": [
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 24,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 25,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 26,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              64
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              49,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              50,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              51,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              52,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              53,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              54,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              55,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 46,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          }
+        ],
+        "generated_c": []
+      },
+      {
+        "operation": "insert",
+        "original": [],
+        "generated_c": [
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 24,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 25,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 26,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              64
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              64
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              49,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              50,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              51,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              52,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              53,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              54,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              55,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 53,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          }
+        ]
+      },
+      {
+        "operation": "delete",
+        "original": [
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 24,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 25,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 5,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "stage": 26,
+            "value": 1023311
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              64
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              64
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              64
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              46,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              49,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              47,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              50,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              48,
+              62
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 3,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 0
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              51,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              52,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              53,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              54,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              55,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          },
+          {
+            "auxiliary": 0,
+            "cell": [
+              56,
+              63
+            ],
+            "frame": 54,
+            "id": 1023312,
+            "kind": "movement-audit",
+            "land": 2,
+            "speed_class": 5,
+            "stage": 27,
+            "value": 1065353216
+          }
+        ],
+        "generated_c": []
+      }
+    ],
+    "current_generated_ship_source_changed": false
+  },
+  "initial_invalid_infantry_layout_excluded": true,
+  "other_locomotors_all_readably_rewritten": false,
+  "scope": "Drive, hover water-to-shore, ship, walk, jumpjet and teleport ordinary missions reach their requested cells alive. Existing 32-frame ship subcell precision/extra terrain query accepted by effects and exact per-mode pre/post parity; no comparator weakening. Jumpjet retains airborne Move state; hover retains vertical motion."
+}

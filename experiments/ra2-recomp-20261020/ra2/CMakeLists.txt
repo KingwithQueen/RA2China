@@ -308,3 +308,6 @@ set_source_files_properties(src/gameplay/ground_exit_policy.c PROPERTIES COMPILE
 
 target_sources(ra2 PRIVATE src/gameplay/ground_outcome_policy.c)
 set_source_files_properties(src/gameplay/ground_outcome_policy.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/runtime/ground_map_bounds_bridge.c)
+set_source_files_properties(src/runtime/ground_map_bounds_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "default",
+      "frames": 301,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "a428d852eacfbacbbb63d929a84b1dc137754d22ef2f53021104686db70f82f5",
+      "strict": true
+    },
+    {
+      "tag": "cross-north",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "151e78046f9914dfcde26597c4cdcfd5522e3c6fdfb552f30b98c974a2b1255f",
+      "strict": true
+    },
+    {
+      "tag": "cross-south",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "284596a4cfe9e0d9b995fc7d8f838a586637c550cf99c8216f053b8b8760ff9a",
+      "strict": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "b5a1753d639b0b68758d8f5f104809132ba20f9483c0612b5a64336424fad12d",
+      "strict": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "d602612b1a76d56f0e177e39d68c32cadef5612201a995efb4c238ce95bd9bac",
+      "strict": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "73024be7695e0a851c6d42913c7e8aea8f1e757f76d57685b8f365928ead4607",
+      "strict": true
+    }
+  ],
+  "pairs": 6,
+  "frames": 3556
+}

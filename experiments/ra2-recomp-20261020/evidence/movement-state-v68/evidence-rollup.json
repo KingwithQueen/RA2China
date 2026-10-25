@@ -1,0 +1,711 @@
+{
+  "passed": true,
+  "formal_generation": 67,
+  "verification_round": 68,
+  "accepted_pairs": 25,
+  "accepted_frames": 76175,
+  "strict_pairs": 22,
+  "functional_pairs": 3,
+  "native_cases": 630784,
+  "native_programs": 6,
+  "native_fragments": 9,
+  "pairs": [
+    {
+      "tag": "b-rq-boundary",
+      "frames": 5401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "b77352d1e44c41c8a46b2dc8ddf275acf09c3a3d8586c8f803482f961d6b9575",
+      "strict": true
+    },
+    {
+      "tag": "b-bm-stop",
+      "frames": 5401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "19d5d19e0610bd600e968172d331ea4aeb066a97cb68f57036a5ba7782519017",
+      "strict": true
+    },
+    {
+      "tag": "b-rq-valid",
+      "frames": 5401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "1eb68838f890b06a064f2a96c5fd60f1c16f2ed48ae0ac7be2180302dd730a8f",
+      "strict": true
+    },
+    {
+      "tag": "b-stop-free",
+      "frames": 2401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "0f382169a4ac702da3dd043905daddb389e4ba03ed2328372635ab511aa0abce",
+      "strict": true
+    },
+    {
+      "tag": "b-stop-occupied",
+      "frames": 2401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "b907b498d832e42e79159001393a569969311ae351455ef0171423f6acaf9d1e",
+      "strict": true
+    },
+    {
+      "tag": "b-bm-zero",
+      "frames": 5401,
+      "exe_sha256": "1214839f8daa0ec844ee3d65ab84706c9aa1cffb60263657dcf1096147a7bcb6",
+      "comparison_sha256": "3a7af749b771643c3d7e626d24998b4730a139d38993e8463764bf023c8cdae1",
+      "strict": true
+    },
+    {
+      "tag": "b-rq-prod",
+      "frames": 5401,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "c6d4f9aa2ab941d6b7ef00afd39b8d83ce13481cf1ba8bbad07faf38af48b2d0",
+      "strict": true
+    },
+    {
+      "tag": "f-rq-boundary",
+      "frames": 5401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "5b6183575ebbb7d26884f684fd432313d352b28ba28c6e3394ae2ce2862a66d9",
+      "strict": true
+    },
+    {
+      "tag": "f-bm-stop",
+      "frames": 5401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "3af897bcb7fa43ac7b4cb77f1fa73e1ff6ac2f8c3cbdcf11ce9e37ed8f005653",
+      "strict": true
+    },
+    {
+      "tag": "f-rq-valid",
+      "frames": 5401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "ca960276ba8284c40bc60b941c76913cf85f41d2b810c3db5b03e175c3d9828f",
+      "strict": true
+    },
+    {
+      "tag": "f-stop-free",
+      "frames": 2401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "e629b910a71c11916e889498b6c0abfb06dcbd09b7e05b2f4db9fee2102d00f9",
+      "strict": true
+    },
+    {
+      "tag": "f-stop-occupied",
+      "frames": 2401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "c46096024fba4e1c9aa5c4524b1964dd7c475f548fffb913ab0a2729eceb7808",
+      "strict": true
+    },
+    {
+      "tag": "f-bm-zero",
+      "frames": 5401,
+      "exe_sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1",
+      "comparison_sha256": "b3836dd891ade495e46376df741d63a255d7ed5cddb43746afe888bf8cc6dd83",
+      "strict": true
+    },
+    {
+      "tag": "f-rq-prod",
+      "frames": 5401,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "d3433ad74e91b8826ab874184b4fcdb61cd240c8f5fb6223df7f9a1f454d1cb9",
+      "strict": true
+    },
+    {
+      "tag": "default",
+      "frames": 301,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "a428d852eacfbacbbb63d929a84b1dc137754d22ef2f53021104686db70f82f5",
+      "strict": true
+    },
+    {
+      "tag": "cross-north",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "151e78046f9914dfcde26597c4cdcfd5522e3c6fdfb552f30b98c974a2b1255f",
+      "strict": true
+    },
+    {
+      "tag": "cross-south",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "284596a4cfe9e0d9b995fc7d8f838a586637c550cf99c8216f053b8b8760ff9a",
+      "strict": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "b5a1753d639b0b68758d8f5f104809132ba20f9483c0612b5a64336424fad12d",
+      "strict": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "d602612b1a76d56f0e177e39d68c32cadef5612201a995efb4c238ce95bd9bac",
+      "strict": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+      "comparison_sha256": "73024be7695e0a851c6d42913c7e8aea8f1e757f76d57685b8f365928ead4607",
+      "strict": true
+    },
+    {
+      "tag": "b-gtypes",
+      "frames": 1801,
+      "strict": false,
+      "comparison_sha256": "ffe2f9b2f1d054474a26406e1925324b9ce69283c74965a9a04a618c3d47ea92",
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963"
+    },
+    {
+      "tag": "f-gtypes",
+      "frames": 1801,
+      "strict": false,
+      "comparison_sha256": "c5eab3d1d0d8477113f2b155da6da3ceb98d5821c39ca832b72912aea9646ac0",
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05"
+    },
+    {
+      "tag": "f-gtypes-obs",
+      "frames": 1801,
+      "strict": false,
+      "comparison_sha256": "8c01de176cdb75784cf628dde588112dd8deda8c51df51080263cc75b7993763",
+      "exe_sha256": "3154b6b27c9f3e5ebea20deddc52328d41837789a0a7752684a496944e52125c"
+    },
+    {
+      "tag": "b-stopcmd",
+      "frames": 1801,
+      "strict": true,
+      "comparison_sha256": "c29d19a6b9ed77ccd744722ffef1154dd5f2b7d01c98c275f1511e58dd9ac7ed",
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963"
+    },
+    {
+      "tag": "f-stopcmd",
+      "frames": 1801,
+      "strict": true,
+      "comparison_sha256": "3dea215d03fd98cbc95c05be24078301c0db3e2a5401d22af6193a8c0ab65312",
+      "exe_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05"
+    }
+  ],
+  "traces": [
+    {
+      "tag": "b-rq-boundary",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-boundary\\original\\state.jsonl",
+      "sha256": "3c13008c5e0ae4af36d4b9a42408fd375d490e8d58d059d6e11a5ad3b8d71e08"
+    },
+    {
+      "tag": "b-rq-boundary",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-boundary\\generated-c\\state.jsonl",
+      "sha256": "3c13008c5e0ae4af36d4b9a42408fd375d490e8d58d059d6e11a5ad3b8d71e08"
+    },
+    {
+      "tag": "b-bm-stop",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-bm-stop\\original\\state.jsonl",
+      "sha256": "a8b550918e9fa212a5dc3aa28ee2da0d2e6771b59f9d70a3413730806a5ee963"
+    },
+    {
+      "tag": "b-bm-stop",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-bm-stop\\generated-c\\state.jsonl",
+      "sha256": "a8b550918e9fa212a5dc3aa28ee2da0d2e6771b59f9d70a3413730806a5ee963"
+    },
+    {
+      "tag": "b-rq-valid",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-valid\\original\\state.jsonl",
+      "sha256": "bb2bc83b30474a597b84b09200b83cf95374355e3eb7ad1b60c6c1e567928a1a"
+    },
+    {
+      "tag": "b-rq-valid",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-valid\\generated-c\\state.jsonl",
+      "sha256": "bb2bc83b30474a597b84b09200b83cf95374355e3eb7ad1b60c6c1e567928a1a"
+    },
+    {
+      "tag": "b-stop-free",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stop-free\\original\\state.jsonl",
+      "sha256": "6ad80c353a7a10ac88ff390aa343a4bba670b2053bdb2a0ba803a7681b47f3d1"
+    },
+    {
+      "tag": "b-stop-free",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stop-free\\generated-c\\state.jsonl",
+      "sha256": "6ad80c353a7a10ac88ff390aa343a4bba670b2053bdb2a0ba803a7681b47f3d1"
+    },
+    {
+      "tag": "b-stop-occupied",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stop-occupied\\original\\state.jsonl",
+      "sha256": "ca59cd807dd9ff0b3f5480824e0c1e8062e8cf08dc5913a8926f1729f7b49d27"
+    },
+    {
+      "tag": "b-stop-occupied",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stop-occupied\\generated-c\\state.jsonl",
+      "sha256": "ca59cd807dd9ff0b3f5480824e0c1e8062e8cf08dc5913a8926f1729f7b49d27"
+    },
+    {
+      "tag": "b-bm-zero",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-bm-zero\\original\\state.jsonl",
+      "sha256": "a2a77940437f5f51115e651d096f82cf1c8edbdeed767f0eac7a378f9ae5893c"
+    },
+    {
+      "tag": "b-bm-zero",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-bm-zero\\generated-c\\state.jsonl",
+      "sha256": "a2a77940437f5f51115e651d096f82cf1c8edbdeed767f0eac7a378f9ae5893c"
+    },
+    {
+      "tag": "b-rq-prod",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-prod\\original\\state.jsonl",
+      "sha256": "0f6156d9857b9468b4c5f778c13a59fcb840163276ebb870202e90d414bc88c9"
+    },
+    {
+      "tag": "b-rq-prod",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-rq-prod\\generated-c\\state.jsonl",
+      "sha256": "0f6156d9857b9468b4c5f778c13a59fcb840163276ebb870202e90d414bc88c9"
+    },
+    {
+      "tag": "f-rq-boundary",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-boundary\\original\\state.jsonl",
+      "sha256": "3c13008c5e0ae4af36d4b9a42408fd375d490e8d58d059d6e11a5ad3b8d71e08"
+    },
+    {
+      "tag": "f-rq-boundary",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-boundary\\generated-c\\state.jsonl",
+      "sha256": "3c13008c5e0ae4af36d4b9a42408fd375d490e8d58d059d6e11a5ad3b8d71e08"
+    },
+    {
+      "tag": "f-bm-stop",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-bm-stop\\original\\state.jsonl",
+      "sha256": "a8b550918e9fa212a5dc3aa28ee2da0d2e6771b59f9d70a3413730806a5ee963"
+    },
+    {
+      "tag": "f-bm-stop",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-bm-stop\\generated-c\\state.jsonl",
+      "sha256": "a8b550918e9fa212a5dc3aa28ee2da0d2e6771b59f9d70a3413730806a5ee963"
+    },
+    {
+      "tag": "f-rq-valid",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-valid\\original\\state.jsonl",
+      "sha256": "bb2bc83b30474a597b84b09200b83cf95374355e3eb7ad1b60c6c1e567928a1a"
+    },
+    {
+      "tag": "f-rq-valid",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-valid\\generated-c\\state.jsonl",
+      "sha256": "bb2bc83b30474a597b84b09200b83cf95374355e3eb7ad1b60c6c1e567928a1a"
+    },
+    {
+      "tag": "f-stop-free",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stop-free\\original\\state.jsonl",
+      "sha256": "6ad80c353a7a10ac88ff390aa343a4bba670b2053bdb2a0ba803a7681b47f3d1"
+    },
+    {
+      "tag": "f-stop-free",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stop-free\\generated-c\\state.jsonl",
+      "sha256": "6ad80c353a7a10ac88ff390aa343a4bba670b2053bdb2a0ba803a7681b47f3d1"
+    },
+    {
+      "tag": "f-stop-occupied",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stop-occupied\\original\\state.jsonl",
+      "sha256": "ca59cd807dd9ff0b3f5480824e0c1e8062e8cf08dc5913a8926f1729f7b49d27"
+    },
+    {
+      "tag": "f-stop-occupied",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stop-occupied\\generated-c\\state.jsonl",
+      "sha256": "ca59cd807dd9ff0b3f5480824e0c1e8062e8cf08dc5913a8926f1729f7b49d27"
+    },
+    {
+      "tag": "f-bm-zero",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-bm-zero\\original\\state.jsonl",
+      "sha256": "a2a77940437f5f51115e651d096f82cf1c8edbdeed767f0eac7a378f9ae5893c"
+    },
+    {
+      "tag": "f-bm-zero",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-bm-zero\\generated-c\\state.jsonl",
+      "sha256": "a2a77940437f5f51115e651d096f82cf1c8edbdeed767f0eac7a378f9ae5893c"
+    },
+    {
+      "tag": "f-rq-prod",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-prod\\original\\state.jsonl",
+      "sha256": "0f6156d9857b9468b4c5f778c13a59fcb840163276ebb870202e90d414bc88c9"
+    },
+    {
+      "tag": "f-rq-prod",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-rq-prod\\generated-c\\state.jsonl",
+      "sha256": "0f6156d9857b9468b4c5f778c13a59fcb840163276ebb870202e90d414bc88c9"
+    },
+    {
+      "tag": "default",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\default\\original\\state.jsonl",
+      "sha256": "a06761998d12d5ea0357286a26ce3787fb6992ca9462e2202886a0f2910ee798"
+    },
+    {
+      "tag": "default",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\default\\generated-c\\state.jsonl",
+      "sha256": "a06761998d12d5ea0357286a26ce3787fb6992ca9462e2202886a0f2910ee798"
+    },
+    {
+      "tag": "cross-north",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\cross-north\\original\\state.jsonl",
+      "sha256": "ddb55d1d89a0e0586e7eeaee216558c6d3b842d7fc726a8ecdbe5fbbd49f3ddb"
+    },
+    {
+      "tag": "cross-north",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\cross-north\\generated-c\\state.jsonl",
+      "sha256": "ddb55d1d89a0e0586e7eeaee216558c6d3b842d7fc726a8ecdbe5fbbd49f3ddb"
+    },
+    {
+      "tag": "cross-south",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\cross-south\\original\\state.jsonl",
+      "sha256": "97af6db6ce1b84534850506cecec469b857fb82d95bb22e374386a23f16d5e3a"
+    },
+    {
+      "tag": "cross-south",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\cross-south\\generated-c\\state.jsonl",
+      "sha256": "97af6db6ce1b84534850506cecec469b857fb82d95bb22e374386a23f16d5e3a"
+    },
+    {
+      "tag": "contact-train",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\contact-train\\original\\state.jsonl",
+      "sha256": "301eaf669948eb821da5be406429e27a22d6308609dccdcfedfbc6e15f015d79"
+    },
+    {
+      "tag": "contact-train",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\contact-train\\generated-c\\state.jsonl",
+      "sha256": "301eaf669948eb821da5be406429e27a22d6308609dccdcfedfbc6e15f015d79"
+    },
+    {
+      "tag": "contact-crush",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\contact-crush\\original\\state.jsonl",
+      "sha256": "e4c4d40be106a45f14ec118f2b7a4613e92baa6f4503a6af370064271ac2816e"
+    },
+    {
+      "tag": "contact-crush",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\contact-crush\\generated-c\\state.jsonl",
+      "sha256": "e4c4d40be106a45f14ec118f2b7a4613e92baa6f4503a6af370064271ac2816e"
+    },
+    {
+      "tag": "repeat-failure",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\repeat-failure\\original\\state.jsonl",
+      "sha256": "a523437b9f09d65b5fb24f080e6e9595afc31806fc11eea9aa9eb4548496bf1e"
+    },
+    {
+      "tag": "repeat-failure",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\repeat-failure\\generated-c\\state.jsonl",
+      "sha256": "a523437b9f09d65b5fb24f080e6e9595afc31806fc11eea9aa9eb4548496bf1e"
+    },
+    {
+      "tag": "b-gtypes",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-gtypes\\original\\state.jsonl",
+      "sha256": "0d3dbb859e7e459d73920f5869ad0ee69dfe25d936d9e8c6718d23575ebd803f"
+    },
+    {
+      "tag": "b-gtypes",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-gtypes\\generated-c\\state.jsonl",
+      "sha256": "066042e4d31ca462b8893063265433037cf110645282b560d1e857d9783f662f"
+    },
+    {
+      "tag": "f-gtypes",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-gtypes\\original\\state.jsonl",
+      "sha256": "0d3dbb859e7e459d73920f5869ad0ee69dfe25d936d9e8c6718d23575ebd803f"
+    },
+    {
+      "tag": "f-gtypes",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-gtypes\\generated-c\\state.jsonl",
+      "sha256": "066042e4d31ca462b8893063265433037cf110645282b560d1e857d9783f662f"
+    },
+    {
+      "tag": "f-gtypes-obs",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-gtypes-obs\\original\\state.jsonl",
+      "sha256": "8d00bf941ffd56c0caf9a9f550836a662a84510e7fbb3715a3341824ad42f818"
+    },
+    {
+      "tag": "f-gtypes-obs",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-gtypes-obs\\generated-c\\state.jsonl",
+      "sha256": "95e948aa0d74b7d1b0b62b3a68d7770080d7bbd0f4cfc74aa1c86bf5f96c3a0d"
+    },
+    {
+      "tag": "b-stopcmd",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stopcmd\\original\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    },
+    {
+      "tag": "b-stopcmd",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\b-stopcmd\\generated-c\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    },
+    {
+      "tag": "f-stopcmd",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stopcmd\\original\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    },
+    {
+      "tag": "f-stopcmd",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\runs\\f-stopcmd\\generated-c\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    }
+  ],
+  "helper_hashes_before_finalization": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\analyze_closeout_v68.py",
+      "sha256": "0c05365f4ce4aac03a1f022a8a06e3202625907e28727b499553697c7974e628"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\analyze_other_movement_v68.py",
+      "sha256": "527fb9c0a955f26f45dfbdeb9fea0596dc8300d5d2fcf2484c55c118aed8aad7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\audit_closeout_code_v68.py",
+      "sha256": "d10a773cc8b4ff249ba56a4ba805eb276796ec4b529babeadc9b447b7ee0dda0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\audit_map_calls_v68.py",
+      "sha256": "968ff99e8b70b51fd29aa45941f6df8505d66ae9d85f7e3736b0289603279d43"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-arrival-probe-v68.ps1",
+      "sha256": "e93b7876bc2cfe76107ffff8dcd5f025a731aadd678a748f2206cacda1e5336f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-bridge-catalog-v68.ps1",
+      "sha256": "eb0fd41b0b5c6e524702fb7fe24d9ef07f603743a9f73f1bb7f6d3995508e237"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-collision-probe-v68.ps1",
+      "sha256": "5c6c92f8d62a77298e9afaa48b293fbfb7e6e0df794fb844cafa7430b2631cb9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-ground-services-probe-v68.ps1",
+      "sha256": "80b9243d8e234c0795baa9cde4f858eb182e1983482a210028d3092fa7ab80b0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-map-area-probe-v68.ps1",
+      "sha256": "a3a1e46bcd01c5ed1912ba965bdff1e61457e4ec63c428029c422b5970620405"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-obstacle-probe-v68.ps1",
+      "sha256": "9d53636f6dcdb0eaecbd16d20c71136b9b7bdff092f822146fcfbb7a169cbbc5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-other-observer-v68.ps1",
+      "sha256": "38d38b39aac02db2a4c40905531efc4c41740bf6222d2d37f84aac13e98af0aa"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\build-prepare-probe-v68.ps1",
+      "sha256": "238b30afe30330df0cb768a22f352e546a97bc8195c959ded2fd12c6007b9301"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\cleanup_closeout_v68.py",
+      "sha256": "8732301723773ed5bce64b39cf963512f969bf9b7a257ab223c1c763a9010dc5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\closeout_jobs_v68.py",
+      "sha256": "43e1a70b4dfe6435051aff60bea1dc482824eb411f3bbc7aa6bf742c8326c0dc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\commit_closeout_v68.py",
+      "sha256": "7eb908c30eb60838e50dcade39b6d2ff5cacb40bbc0a88d511979ab482a3868d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\configure_closeout_v68.py",
+      "sha256": "bb8bef5b2dad0a2c6022eac37d06b2d55528345ac6c31d0df3c455af9153f030"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\finalize_closeout_v68.py",
+      "sha256": "98556b4e9128b328ca127336d92beb8895987059c2d07359635445ccb9049f80"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\integrate_closeout_v68.py",
+      "sha256": "f72feb844cb8e2a80d1316d78a5fbe688fd1e714b56c794790e3a845131e51dc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\make_bridge_catalog_v68.py",
+      "sha256": "7ba057e065f1d603147dc0df84f78e4e04db752fc175344878c9d535e8f64b5c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\make_other_observer_v68.py",
+      "sha256": "06f3aa3e37928ec1f1695bbe361ddd59293469276c52a5c59595f8c2868de1cf"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\other_movement_v68.py",
+      "sha256": "fe87e716531e9d49dc6a282971db79c3cd9c3079bc463f22bd97a94a4773f672"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\prepare_closeout_v68.py",
+      "sha256": "c797a3ac123d433916e20d8027c00a0be2b98621e4fc8226de06705c8925b97d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_baseline_fixture_v68.py",
+      "sha256": "c4e436f3d57c2a17220eac2ba478d4cd7f667ec2c9519f26bccabcd945861199"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_batch_v68.py",
+      "sha256": "7f326a248007bb0d5c4deb7dcae5d99258c1ecb9d45a73744d23fc3fbb0527af"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_bridge_catalog_v68.py",
+      "sha256": "9e0eb6a1dec6678af72b69679048eaab973226d4d2e5b77297e603c460aab25c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_other_observer_v68.py",
+      "sha256": "3cd763223cbfd0db1b6ae514a66696446512b8f7e4d7b47b3aec41039d890a74"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_skirmish_v68.py",
+      "sha256": "891215c3ff2d20b9158532476bed7440ce3a80954aa0d090280967e28c658ab0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\stop_command_v68.py",
+      "sha256": "84445cefa90e6437d78a60c7df55f6207bea94144aba317fc4fcde79d3e085c6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\summarize_closeout_v68.py",
+      "sha256": "3e8e9f3f39ee5e2cc6b18e3e31dd32b04154312854b0a0753ce8b7c81e4c84c8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\verify_closeout_v68.py",
+      "sha256": "781d7020040e45aba7ed7c7dc12ce82734e2a59b1e3131b6f6389489b217a02b"
+    }
+  ],
+  "probe_and_observer_hashes": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\analyze-other-initial.py",
+      "sha256": "522da0cbb18a0c5b588ad7cc99862c14543f5176b58156c64a0c070e5e76aee0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\arrival_probe.c",
+      "sha256": "9eb07d740c83efd25e60d6f717721f9122296b90fb2ada5247efbfa937a5f94f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\arrival_probe.exe",
+      "sha256": "3436849e47058e1ec1dbe0080eac6c96217cf7d07eb44de5e5f5075d58a82827"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\audit_noop.c",
+      "sha256": "0bc58d7968f1db1c3f3b8d97845ccb916ec55c138fbf9e61b7d87fc6e508de9b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\bridge-catalog-observer.exe",
+      "sha256": "328b09c576daec4d660edb2223ffe87d2140aa00e2bda0f0958b168af7ad48d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\bridge_catalog_observer.c",
+      "sha256": "2ac83c54826b389b92d563ee69e4b717943bef88c342f5b2f967a64cdb2adf52"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\collision_probe.c",
+      "sha256": "29b20af42855d0e47f7a7529c41945b7401bfe9455f07d45543dfe6fbd236e26"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\collision_probe.exe",
+      "sha256": "8ff1547f9c351e4697dcf4288db36e6586bfc91017e56c9e22af88c6d0584f4e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\ground_services_probe.c",
+      "sha256": "40a19e20a2a77feb70a088454972b645484aae4ab827db8e6a4961f21352d44d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\ground_services_probe.exe",
+      "sha256": "89140d7ecfd62550702a5255eaaa2f2b3e565920e8636ff0077ef43e5b3042bd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\map-area-generated-before.c",
+      "sha256": "56c8c7f7e3b79780d4e06a661aba815a2c2e22144a461e0876e0f6c92b66624e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\map_area_probe.c",
+      "sha256": "976ecba70706131f2cb02b98214dc72df608d4c38357c39fe04caa6289098008"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\map_area_probe.exe",
+      "sha256": "e82a56e3251d48b1334758f4bdff092811333473de5b24eb01c08bb5676213ad"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\obstacle_probe.c",
+      "sha256": "330f7cfee7da9b6cb24def9a7433ee2cac96218b705c664e10f50da86e32b137"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\obstacle_probe.exe",
+      "sha256": "bbfffb8553b8b528584afe740c78ef1af5bafa192b2d73353dd7f6a6f1dfdabc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\other-movement-observer.exe",
+      "sha256": "3154b6b27c9f3e5ebea20deddc52328d41837789a0a7752684a496944e52125c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\other_movement_observer.c",
+      "sha256": "ca968165e0f267da83a9807779ae21d4f38cf927353aa99b241e7dd9a6ab4c06"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\prepare_probe.c",
+      "sha256": "1556bdf0763329681faf9f059f345d193a6925e777789bff2c76c806f6110d2b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\prepare_probe.exe",
+      "sha256": "05ebfac4db3744ac7b922995b99e4da26446c834a69bb86f3f66a473713c6733"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\stop-command-initial.py",
+      "sha256": "27c86631eb035b76dab4ef2f5028cd172b5aa68992982715e748a971f8b7d0ed"
+    }
+  ],
+  "excluded": [
+    "id-free",
+    "id-occ",
+    "id-types",
+    "id-gtypes",
+    "b-types (invalid infantry OnBridge input)"
+  ],
+  "repeated_native_runs_counted_again": false,
+  "whole_game_equivalence_verified": false,
+  "fifo_guarantee": false,
+  "unbounded_starvation_freedom_proved": false,
+  "all_locomotors_readably_rewritten": false
+}

@@ -1,0 +1,17 @@
+正式67 / 验证68，移动域收口，2026-10-25
+父提交：67f8f2a0cd55336e625aac5671490cc2c1be04c8
+程序SHA-256：7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05
+报告：D:\Program\红色警戒2\docs\单位移动第六十七批-移动域收口-20261025.txt
+收口清单：D:\Program\红色警戒2\docs\移动域收口清单-20261025.txt
+进度：D:\Program\红色警戒2\docs\当前进度与剩余内容-20261025-第六十七批.txt
+25配对、76175帧：22严格，3舰船既有差异按功能接受；630784原版片段例，6程序/9片段，重复运行不累计。
+四个拒绝目标已定位为菱形地图边界，合法控制12/12精确到达；三个近目标结果分别定位为占位改选及后续重建清导航，不统归CloseEnough。实际Stop/保持静止/新Move闭环。六类移动器健康到格；舰船既有3世界单位/32帧及查询时序差按效果接受，原始比较不改。
+182C/313输入/37全局保护，改10既有输入、加1适配C；无新FIFO或调度机制，无别名删除。109命名移动文件/12移动器家族已清点，并非全部移动类都可读重写。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v68\baseline
+有效回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v68\parts\closeout
+探针基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v68\baseline-probe
+最终封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v68\final-source
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_closeout_v68.py
+提交收据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v68\postcommit\git-local-commit.json
+保留全部原版、父档、异常与失败输入；清理39项，本地提交但不推送。
+后续父证据指定movement-state-v68。先推进战斗/对象生命周期等实际功能；移动域仅按收口清单的实测风险重开，不重复扩大已经解释的相同交通配方。

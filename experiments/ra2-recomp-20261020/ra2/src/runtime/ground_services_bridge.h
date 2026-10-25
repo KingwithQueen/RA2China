@@ -3,3 +3,5 @@
 void ra2_ground_interpolation_bridge(void);
 uint32_t ra2_ground_prepare_shared_bridge(int rebuilt);
 void ra2_cell_service_bridge(unsigned entry);
+
+void ra2_cell_map_area_bridge(void);

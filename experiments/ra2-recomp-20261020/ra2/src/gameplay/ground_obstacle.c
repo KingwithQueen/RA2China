@@ -2,11 +2,6 @@
 #include "ground_obstacle.h"
 #include "ground_failure_transition.h"
 
-static int32_t wrapped_absolute_difference(int32_t left, int32_t right)
-{
-    uint32_t difference = (uint32_t)left - (uint32_t)right;
-    return (int32_t)((int32_t)difference < 0 ? 0u - difference : difference);
-}
 
 
 static int close_to_allied_blocker(Ra2GroundPrepareState *state,
@@ -15,13 +10,12 @@ static int close_to_allied_blocker(Ra2GroundPrepareState *state,
     Ra2WorldPoint position;
     int32_t distance = services->query(context, RA2_OBSTACLE_DISTANCE_TO_DESTINATION);
     int32_t close_enough = services->query(context, RA2_OBSTACLE_CLOSE_ENOUGH_DISTANCE);
-    int close_to_destination = distance < close_enough;
+    int close_to_destination = ra2_ground_within_stop_distance(distance,close_enough);
     if (close_to_destination && !services->query(context, RA2_OBSTACLE_PREDICATE_636F10))
     {
         position = services->position(context, 0);
         int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
-        int32_t two_levels = (int32_t)((uint32_t)height * 2u);
-        close_to_destination = wrapped_absolute_difference(state->destination.z, position.z) < two_levels;
+        close_to_destination = ra2_ground_within_stop_height(state->destination.z,position.z,height);
         if (close_to_destination)
         {
             close_to_destination = services->query(context, RA2_OBSTACLE_CURRENT_LAND) != 10;
@@ -43,7 +37,7 @@ static void notify_allied_blocker(const Ra2ObstacleServices *services, void *con
         position = services->position(context, 0);
         int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
         int32_t level = services->query(context, RA2_OBSTACLE_CELL_LEVEL);
-        bridge_layer = wrapped_absolute_difference(position.z / height, level) > 2;
+        bridge_layer = ra2_ground_axis_distance(position.z / height,level) > 2;
     }
     services->notify_blocker(context, bridge_layer);
 }

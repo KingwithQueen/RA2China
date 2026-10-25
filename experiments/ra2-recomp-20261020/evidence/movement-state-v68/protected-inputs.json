@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\BINKW32.DLL",
+      "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Blowfish.dll",
+      "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Blowfish.tlb",
+      "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Conquer.dat",
+      "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ddraw.dll",
+      "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ddraw.ini",
+      "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\game.exe",
+      "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\LANGUAGE.MIX",
+      "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MAPS01.MIX",
+      "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MAPS02.MIX",
+      "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MOVIES01.MIX",
+      "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\movies02.mix",
+      "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MULTI.MIX",
+      "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.exe",
+      "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\RA2.INI",
+      "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.lcf",
+      "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ra2.mix",
+      "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.tlb",
+      "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\SAVE0029.SAV",
+      "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\THEME.MIX",
+      "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\game\\game.exe",
+      "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\game\\SAVE0029.SAV",
+      "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\build\\ra2battle.exe",
+      "sha256": "05d7221ffacdddb2a300aee2c51b61d1fa1d269a5336a08e0c68b023f51bdd27"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\docs\\项目目标与验收边界-20261024.txt",
+      "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\docs\\寻路机制改进验收补充-20261025.txt",
+      "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_fixture_comparison.py",
+      "sha256": "aadfc98e492be4073c7a7afa27b846f4fa08b6fd977f7cbbf89545f757ed8a1e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\state_trace.c",
+      "sha256": "477f071ef17c39d8a12c3eb60ba25a7255a6abbafc4640ac89e7b357a70c1dd4"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "id": 1023310,
+  "orders": [
+    "5:1023310:2:57:76",
+    "100:1023310:13:0:0",
+    "350:1023310:2:57:76"
+  ],
+  "pairs": 2,
+  "frames": 3602,
+  "strict": true,
+  "stationary_after_stop_before_new_move": true,
+  "queue_and_destination_cleared": true,
+  "per_mode_parent_trace_unchanged": true,
+  "scope": "Ordinary Stop at100 while moving; stationary at200/300, new Move at350, reaches requested cell. No direct state, path or budget manipulation."
+}

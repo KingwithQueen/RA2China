@@ -1,0 +1,50 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "e2ceb4dc0234147c5a5fc3854718ce5a722284b334860591a11151e7369cceb2"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "c83ad54f94ebf526e7583fc22b05fb98a3659143c451f35f9740fc64549c7509"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "1cc2c0db15b35dfd411730f73a49f6dfde76a0e3a14f6eae1cbe5f68c553fbf6"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "70707c7abb6a8bad57c01d053bd1a600a33d7ae499019bf7c4dc7c2a3a31b39d"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "70707c7abb6a8bad57c01d053bd1a600a33d7ae499019bf7c4dc7c2a3a31b39d"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "70707c7abb6a8bad57c01d053bd1a600a33d7ae499019bf7c4dc7c2a3a31b39d"
+  },
+  {
+    "path": "docs/单位移动第六十七批-移动域收口-20261025.txt",
+    "sha256": "6d0307b5da8d95c30ad9110c061cc4a1cf3b24d49a7af879022b732002d93629"
+  },
+  {
+    "path": "交接文档-单位移动第六十七批正式验收-20261025.txt",
+    "sha256": "a099b4f4f1f9a22ef63c7bf5771def1ae628a8b1f250561e2533b7b26de551a8"
+  },
+  {
+    "path": "docs/移动域收口清单-20261025.txt",
+    "sha256": "27d1ce6efd24d430d446654841ce671c794011d34f0f9422657605f6fe59c6b3"
+  },
+  {
+    "path": "docs/当前进度与剩余内容-20261025-第六十七批.txt",
+    "sha256": "df404a4006dcc37dd86baceee4d50e662857d9975529329b0e5cedc599ea95d1"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  }
+]

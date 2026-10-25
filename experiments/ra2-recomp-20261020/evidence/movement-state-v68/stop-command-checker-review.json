@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "initial_checker_sha256": "27c86631eb035b76dab4ef2f5028cd172b5aa68992982715e748a971f8b7d0ed",
+  "original_raw_comparison_passed": true,
+  "invalid_assumption": "A separate sampled Stop-entered frame must be visible",
+  "actual_control": {
+    "id": 1023310,
+    "all_fields_equal": true,
+    "first_observed_frame": 0,
+    "last_observed_frame": 1800,
+    "movement_observed": true,
+    "stop_queued": true,
+    "stop_entered": false,
+    "stop_executed": true,
+    "stop_queued_after_execution": true,
+    "stop_completed": true,
+    "final_position": [
+      14720,
+      19584,
+      416
+    ],
+    "final_mission": [
+      5,
+      -1,
+      -1
+    ],
+    "last_ten_positions_stationary": true
+  },
+  "comparator_input_production_unchanged": true,
+  "corrected_contract": "Require queued and executed Stop, completed cancellation, stationary interval, cleared destination/queue and later reissued Move; record that instantaneous mission entry was not sampled."
+}

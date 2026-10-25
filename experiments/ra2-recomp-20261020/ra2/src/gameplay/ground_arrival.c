@@ -12,22 +12,6 @@ static int same_cell(Ra2WorldPoint left, Ra2WorldPoint right)
         && (uint16_t)(left.y / 256) == (uint16_t)(right.y / 256);
 }
 
-static int32_t signed_bits(uint32_t bits)
-{
-    int32_t value;
-    memcpy(&value, &bits, sizeof(value));
-    return value;
-}
-
-static int32_t wrapped_distance(int32_t left, int32_t right)
-{
-    uint32_t difference = (uint32_t)left - (uint32_t)right;
-    if (difference & 0x80000000u)
-    {
-        difference = 0u - difference;
-    }
-    return signed_bits(difference);
-}
 
 
 /* 适配查询接口；服务仍在原有实时上下文执行，不缓存刷新前的任务或存活状态。 */
@@ -72,9 +56,8 @@ static int mark_reached_destination(Ra2GroundArrivalState *state,Ra2WorldPoint i
 {
     if(services->query(services->context,RA2_ARRIVAL_TARGET_IS_CURRENT_CELL)) {
         int32_t owner_z=services->query(services->context,RA2_ARRIVAL_OWNER_REFERENCE_Z);
-        int32_t tolerance=signed_bits((uint32_t)level_height*2u);
         /* 目的地高度在查询后读取，保留严格小于和32位回绕距离。 */
-        if(wrapped_distance(owner_z,state->destination.z)<tolerance) {
+        if(ra2_ground_within_stop_height(owner_z,state->destination.z,level_height)) {
             state->destination=invalid_position;
             ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid_position);
             state->driving=0;

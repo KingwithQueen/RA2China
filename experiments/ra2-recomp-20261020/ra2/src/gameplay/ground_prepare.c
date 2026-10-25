@@ -115,7 +115,7 @@ static Ra2PreparePhase finish_failed_rebuild(Ra2GroundPrepareState *state,
     {
         int32_t distance = query(services, RA2_PREPARE_DISTANCE_TO_DESTINATION);
         int32_t threshold = query(services, RA2_PREPARE_CLOSE_ENOUGH_DISTANCE);
-        if (distance >= threshold)
+        if (!ra2_ground_within_stop_distance(distance,threshold))
         {
             return RA2_PREPARE_INSPECT_OBSTACLE;
         }

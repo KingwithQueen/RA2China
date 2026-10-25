@@ -1,0 +1,2013 @@
+{
+  "passed": true,
+  "compile_inputs": 313,
+  "c_sources": 182,
+  "headers": 131,
+  "readable_units": [
+    {
+      "path": "ra2/src/gameplay/ground_tube_travel.c",
+      "sha256": "a29b563d5fc22715258c1e068a4dfa53068711ecd63658c13de3c4b8391334bd",
+      "functions": [
+        "ra2_ground_tube_step",
+        "ra2_ground_tube_prepare_entry",
+        "ra2_ground_tube_horizontal"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_nodes.c",
+      "sha256": "ba3db837836d44a95218940b0e4386141583e29feac421b87c088e444c3cb29f",
+      "functions": [
+        "ra2_path_node_create",
+        "ra2_path_cache_read_stamp",
+        "ra2_path_cache_read_cost",
+        "ra2_path_cache_write_cost",
+        "ra2_path_cache_publish",
+        "ra2_path_search_reset"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_cycle.c",
+      "sha256": "3abc1d0f48b8c6a53d9d62359f35abefb0d329e5da6a1103714aaca6c1ca41ec",
+      "functions": [
+        "ra2_ground_prepare_cycle"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_prepare.c",
+      "sha256": "3442a83b7ebc94216b0f09059e944338d7b0067ffd9067724c286acf15ade334",
+      "functions": [
+        "ra2_path_prepare"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_completion.c",
+      "sha256": "b1309560df04ce87e3705d8f888a1c2a63f0fae3fcc0fc2ef754ce1251c7fde3",
+      "functions": [
+        "ra2_path_complete"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_arrival.c",
+      "sha256": "db8ddbef1e6c1b298b753375b35004fafa77cc3910cb3a686e8f63081e1d643a",
+      "functions": [
+        "ra2_ground_finish_segment"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_outcome_policy.c",
+      "sha256": "71c914bb605ad9ca1412aec06aa4fd26381a046e51c15995774347b455312b12",
+      "functions": [
+        "ra2_ground_failure_plan",
+        "ra2_ground_occupation_route"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling.c",
+      "sha256": "efd5822e7b1f49632e7e7d14625a41082fb4ac65a91113758888f66b718ea338",
+      "functions": [
+        "ra2_ground_choose_full_sample",
+        "ra2_ground_finish_sample",
+        "ra2_ground_choose_remainder"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_internal_bridge.c",
+      "sha256": "703422ed25a0c7db0e058612843926492e8e55b50b8e71a87130782a02a6b801",
+      "functions": [
+        "ra2_ground_sampling_shared_bridge",
+        "ra2_ground_prepare_internal_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_connection_numeric_bridge.c",
+      "sha256": "cf26ac39e6f4ce87628abdf4801f458c1cc409c2837d6166dce0c28cafeda155",
+      "functions": [
+        "ra2_ground_connection_numeric_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_progress_bridge.c",
+      "sha256": "89d5cad5b0e9455b715d23bb06bbd626de9f11e586d5fcf3c37c4fd612489313",
+      "functions": [
+        "ra2_ground_tube_progress_bridge",
+        "ra2_ground_internal_next_bridge",
+        "ra2_ground_passage_finish_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_cost.c",
+      "sha256": "9e43a922e6245ddd49a532163d45fadc447c4dd94288f121328849d01a172908",
+      "functions": [
+        "ra2_ground_accumulate_path_cost",
+        "ra2_ground_score_path_step",
+        "ra2_ground_path_priority"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_allied.c",
+      "sha256": "d195ec3788049bea0a5861916b216e5e47d54cd01cd4d1cd3c8a84e47ca2aab7",
+      "functions": [
+        "ra2_ground_classify_allied_motion",
+        "ra2_ground_classify_allied_relation",
+        "ra2_ground_classify_moving_tail"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_segment_admission.c",
+      "sha256": "f8a40df0ee67e71b5b26e533fb24fd5abfd7621f10da6cbeaaee6053519a464f",
+      "functions": [
+        "ra2_ground_admit_segment"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_connection_numeric.c",
+      "sha256": "88cc49c41a2b4e2ac48456f0ad1e02b3f1e7679a1c0dca3439cdb474e98026b3",
+      "functions": [
+        "ra2_ground_connection_angle",
+        "ra2_ground_connection_component",
+        "ra2_ground_connection_axis"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_terrain.c",
+      "sha256": "3dc07b246dcb4bfd0cdae6540328d4e68fdf563eaf233063ff5ec945abb30bed",
+      "functions": [
+        "ra2_ground_terrain_speed_is_blocked",
+        "ra2_ground_terrain_is_blocked"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_reaction.c",
+      "sha256": "4ad6a24a12db2290b2ec4e597ce844a9317d47e3f9a971732aafa767e1416995",
+      "functions": [
+        "ra2_ground_react_to_obstacle"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/walk_movement.c",
+      "sha256": "60702206f115b60ab7dde73e1dc0cd598fe5f8bf3a141e52736a742f8f266990",
+      "functions": [
+        "ra2_walk_advance_axis"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_recovery_bridge.c",
+      "sha256": "d62c2a2716ad68572588b1534681d62a726689edbbb9c20343bd9fc77f1ca331",
+      "functions": [
+        "ra2_ground_recover_path_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_drive_bridge.c",
+      "sha256": "bf5ed35d1c1c9d46d70113b4f380b862423c875c606addcf51ab34df4871d995",
+      "functions": [
+        "ra2_ground_drive_process_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/movement_bridge.c",
+      "sha256": "6f4e2fd54cc689dcc8466d6dfba4a60ad89a3ef643551a94524a08bded69c284",
+      "functions": [
+        "ra2_movement_progress_bits",
+        "ra2_movement_interpolate_bridge",
+        "ra2_movement_transform_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_entry.c",
+      "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340",
+      "functions": [
+        "ra2_ground_classify_entry"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_cell_placement.c",
+      "sha256": "98ce8a7c45aa3a42f48dd2d5f1105df4ec4379ae278227e79d43432045add9ff",
+      "functions": [
+        "ra2_ground_place_cell"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_distance_bridge.c",
+      "sha256": "5f1dd7dc952124afb4ce97f64e71f9b8548a94ccda729f74e8f64af5b1628fad",
+      "functions": [
+        "ra2_path_node_distance_bridge",
+        "ra2_path_connection_distance_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_exit_policy.c",
+      "sha256": "23773be6a17eff5bae8d75dc15b56995b971b55932abf596f0a4bac3322ac563",
+      "functions": [
+        "ra2_ground_prepare_exit_plan",
+        "ra2_ground_connection_height"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_search_bridge.c",
+      "sha256": "6cbfe8f6735eaac3ad181027403e40b17dd0a0b5f46807ce762019e3fe622465",
+      "functions": [
+        "ra2_path_region_allows_bridge",
+        "ra2_path_search_neighbors_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage.c",
+      "sha256": "b6f25c47cfa8eecf8e354118ada0e4488f1b13ecc87642c5ef36598e0b485f5a",
+      "functions": [
+        "ra2_ground_classify_transition",
+        "ra2_ground_base_can_enter",
+        "ra2_ground_height_at"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda",
+      "functions": [
+        "ra2_ground_tube_state_bridge",
+        "ra2_ground_internal_handoff_bridge",
+        "ra2_ground_surface_class_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_failure.c",
+      "sha256": "f2631b39471db410c4f394af5a52dbb0ca8e452a68193053a0b812724282d06e",
+      "functions": [
+        "ra2_ground_finish_failure"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_turn.c",
+      "sha256": "fc1ac8d92326dae7fee04e38799af57eea127ca810ed53e07ccf23eef41dba8e",
+      "functions": [
+        "ra2_ground_prepare_turn"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_exit.c",
+      "sha256": "482cb46f1e176829d97df3fe83784c1422fc3e76bb63f387730d84a6a3a477e4",
+      "functions": [
+        "ra2_ground_prepare_after_rebuild",
+        "ra2_ground_prepare_clear_pending"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_distance.c",
+      "sha256": "f46d2bdfefc5b4c393ae16c24dd8929b8f50d80d9de1fd0e495de3f5744c318d",
+      "functions": [
+        "ra2_path_squared_distance",
+        "ra2_path_connection_distance"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_internal.c",
+      "sha256": "eba42a6ab83103a8000b745741d93fe80c1fabef12f67771b11380d5eee55668",
+      "functions": [
+        "ra2_ground_prepare_destination_cell",
+        "ra2_ground_prepare_rebuild_internal",
+        "ra2_ground_prepare_clear_internal"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_wait.c",
+      "sha256": "b9577515ece90f5c388b5edfe6518105cebe616eaa054b28dee883f1a4589660",
+      "functions": [
+        "ra2_ground_check_clearance",
+        "ra2_ground_wait_for_traffic"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_services_bridge.c",
+      "sha256": "370cbba4c6ee03b7b4ac49d0bc65ff552fcf52c98733810e7ac9959b5050e258",
+      "functions": [
+        "ra2_ground_interpolation_bridge",
+        "ra2_ground_prepare_shared_bridge",
+        "ra2_cell_service_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_cache.c",
+      "sha256": "cd54085ab82abcf2a713a2cc2c85771b82dd5b9d8e0da08023d6fe5e68eb3db3",
+      "functions": [
+        "ra2_ground_path_cache_is_current",
+        "ra2_ground_path_cache_compare"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_handoff.c",
+      "sha256": "7087546be99bf3dc633bba846a16e9a9d22dfeb1287dfacc363627d9be53c931",
+      "functions": [
+        "ra2_ground_prepare_upper_layer"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_rebuild_result.c",
+      "sha256": "74167a37f0bc18e64f25bf536f092e05c0fe703b55e450667a693284b1db4f12",
+      "functions": [
+        "ra2_ground_check_rebuild_result"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_completion.c",
+      "sha256": "4edfb9d480fc802804083c8726be2b2b606d69cf183b889ba21e49d4b2a1a200",
+      "functions": [
+        "ra2_ground_arrival_adjustment",
+        "ra2_ground_prepare_finish"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_local_bridge.c",
+      "sha256": "78939d0f998038beaea8a0ab4d590f6ade5f1ed8ba3d654e6450bf97ba59390f",
+      "functions": [
+        "ra2_path_anchor_bridge",
+        "ra2_path_turn_rewrite_bridge",
+        "ra2_path_segment_rewrite_bridge",
+        "ra2_path_completion_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_rebuild.c",
+      "sha256": "85f459a0fdee8e2575c44fc03e761f8d9fda7fa862ee5f26f9f7ba3b1b991bbb",
+      "functions": [
+        "ra2_path_rebuild"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/walk_movement_bridge.c",
+      "sha256": "b61bff2a7bfa0e68f25b3fd0299730b67581696a745ebac8d4b2b929c7d5e38c",
+      "functions": [
+        "ra2_walk_axis_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_overlap_bridge.c",
+      "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45",
+      "functions": [
+        "ra2_ground_template_transition_bridge",
+        "ra2_ground_object_chain_bridge",
+        "ra2_ground_passage_return_bridge",
+        "ra2_ground_template_layer_bridge",
+        "ra2_ground_template_table_bridge",
+        "ra2_ground_template_index_bridge",
+        "ra2_ground_sample_anchor_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_arrival_bridge.c",
+      "sha256": "8e1fdf025f114eed98eba1deb4cd875f9067a9099e5f21e62100ef9e58405bed",
+      "functions": [
+        "ra2_ground_finish_segment_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_lifecycle_bridge.c",
+      "sha256": "949eba8bb7a880a5b67eec9d8ec44f9350195f6cfda17126192ae557090b8285",
+      "functions": [
+        "ra2_path_prepare_bridge",
+        "ra2_region_route_publish_bridge",
+        "ra2_path_rebuild_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_interpolation.c",
+      "sha256": "e0cac378b08ba8e2b678d41695d3d1dda64d996cce5d97ec99331f142aa17d49",
+      "functions": [
+        "ra2_ground_interpolate_advance"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_state.c",
+      "sha256": "67e6c7f4e2318846921b082c212c14353452ca3e2b3a3dfd56463614d2d44e55",
+      "functions": [
+        "ra2_ground_tube_exit",
+        "ra2_ground_tube_waypoint"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_return_plan.c",
+      "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f",
+      "functions": [
+        "ra2_ground_return_plan"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_obstacle.c",
+      "sha256": "fee82e7d1d68309bc5182955837c6101bc83d41fc4bec0159d9948df2da402c2",
+      "functions": [
+        "ra2_ground_observe_obstacle"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_recovery.c",
+      "sha256": "37282da4286f7d6d2d6f169f2adb778659380194858e9ce09320551cf739929f",
+      "functions": [
+        "ra2_ground_recover_path"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_continuation.c",
+      "sha256": "ae899e58c488c778ba0f893298f8d544c734821b67645b9ad3dd60ec7a8717ea",
+      "functions": [
+        "ra2_ground_continue_turn"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare.c",
+      "sha256": "6a62b4f623e19bf3cc67e769627d880d8a3b91b4a753e0757d580b20f7bd6874",
+      "functions": [
+        "ra2_ground_prepare_entry",
+        "ra2_ground_retry_timer_ready",
+        "ra2_ground_retry_path"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/runtime/ground_objects_bridge.c",
+      "sha256": "fd86b609c50456334b90b7e46141ecc5122c59f5fb3c586107746cd08d585216",
+      "functions": [
+        "ra2_ground_object_branch_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_collision_bridge.c",
+      "sha256": "10e8a37536b2ccdd3e8612c2b875a9aadb3391a6c5960ec3acd3ee5555fc3165",
+      "functions": [
+        "ra2_ground_terrain_tail_bridge",
+        "ra2_ground_terrain_bridge",
+        "ra2_ground_collision_finish_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_owner_boundary.c",
+      "sha256": "9da4dcd1a174780a65512849f0de1084caa7389af616ad64c6663aeca7863f38",
+      "functions": [
+        "ra2_ground_refresh_owner",
+        "ra2_ground_complete_owner"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_segment.c",
+      "sha256": "92eed38cbb1c0f996dfb3130a0393889ed05f9240b567ba0b2f1b3ba8215fb3d",
+      "functions": [
+        "ra2_ground_prepare_segment"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_allied_bridge.c",
+      "sha256": "e2dba1bc3392981f87bc4233dd0cde9fe920de5041428f00fb8a6b999e53d70c",
+      "functions": [
+        "ra2_ground_allied_bridge",
+        "ra2_ground_moving_tail_bridge",
+        "ra2_ground_allied_relation_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_advance_bridge.c",
+      "sha256": "e7f37fb7c3230734b8c9ee04b90c87868ee4103dfca536b0b0264ee5adbafaf4",
+      "functions": [
+        "ra2_ground_advance_sample_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_transition.c",
+      "sha256": "4a41a37f73b078c6c42dfef965010760152502c1ba7db928f4d4557c535107d1",
+      "functions": [
+        "ra2_ground_template_cells",
+        "ra2_ground_template_gate",
+        "ra2_ground_template_layer"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_prepare_shared.c",
+      "sha256": "4b4726e75ec8d7988b37858dc7a2d7a7313812fcb28a4ebc1c0ede92cde7f030",
+      "functions": [
+        "ra2_ground_prepare_shared"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_local.c",
+      "sha256": "6117ad8d3e341b78a6fa72d39b0f2ef52a476ba42012786599492d017aff66f1",
+      "functions": [
+        "ra2_path_find_anchor",
+        "ra2_path_shorten_turn",
+        "ra2_path_rewrite_segment"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_entry_bridge.c",
+      "sha256": "192b271e5f5d167577822e5a75d479ca0ed1454af01ee03f82f89b950931ad46",
+      "functions": [
+        "ra2_ground_entry_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_followup.c",
+      "sha256": "18a354aed48dc2084e1454f4444e76d6140cf2aee0373f8d50746ebc3979d60f",
+      "functions": [
+        "ra2_ground_prepare_speed",
+        "ra2_ground_prepare_followup"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_continuation_bridge.c",
+      "sha256": "cb274ad9e747b01148d7c653374cad613e097fb84062cab31c3b75cc9ff766e7",
+      "functions": [
+        "ra2_ground_continue_turn_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_heap.c",
+      "sha256": "ed74d26057321dfb0e015acf7efe69b43954a0fe77d640542ebd188767219e18",
+      "functions": [
+        "ra2_path_heap_finish_offer",
+        "ra2_path_heap_offer",
+        "ra2_path_heap_swap_and_sift",
+        "ra2_path_heap_take",
+        "ra2_path_heap_clear"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_next.c",
+      "sha256": "d0eec5cb39ea55eb7321e5c89c97a0dab43111b844b48f4f0c8c313109cc159a",
+      "functions": [
+        "ra2_ground_template_cell",
+        "ra2_ground_prepare_next_template",
+        "ra2_ground_advance_template_sample"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_surface_class.c",
+      "sha256": "58a3efba27027b4f462fcad7ac63e336e3316b5d75e6d94fbea517ac11ae0b67",
+      "functions": [
+        "ra2_ground_is_tube_entrance",
+        "ra2_ground_is_tile_family",
+        "ra2_ground_surface_support_height"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_optimize.c",
+      "sha256": "2d97b88371981080bd359c6c2b64449f0f25a28874833f7542c33048e2fc6768",
+      "functions": [
+        "ra2_path_smooth",
+        "ra2_path_postprocess"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_heap_bridge.c",
+      "sha256": "4128ca53677e9bc8793cbd1910230c91576f782caaa2c77f628f608ff446a0e3",
+      "functions": [
+        "ra2_path_heap_offer_bridge",
+        "ra2_path_heap_take_bridge",
+        "ra2_path_heap_offer_tail_bridge",
+        "ra2_path_heap_take_tail_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_barrier.c",
+      "sha256": "2f6a65bdccd80f46835931b36aa48922137c539604a4036151b289dd05e33d2c",
+      "functions": [
+        "ra2_ground_check_overlay",
+        "ra2_ground_check_gate"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_chain.c",
+      "sha256": "1c2477bfb421ad3cc1dc778cf6d4f46f31591f41e7eff92e7464f769ba663c76",
+      "functions": [
+        "ra2_ground_object_chain_begin",
+        "ra2_ground_object_chain_next"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_drive.c",
+      "sha256": "21da08d355c3d2e7befded3aeb83d903f060b993502a8e992c18f7e5463aa76b",
+      "functions": [
+        "ra2_ground_drive_process"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_barrier_bridge.c",
+      "sha256": "49325f95eac988cd1f3d5e23a5a57f5d122374713bd60d5e81a284bfba463426",
+      "functions": [
+        "ra2_ground_overlay_bridge",
+        "ra2_ground_gate_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_advance.c",
+      "sha256": "34408cb61ed182991a76c2bf5dd3f7c12c386f03c6e086f8b0c41f2e845aaa30",
+      "functions": [
+        "ra2_ground_advance_train_contact",
+        "ra2_ground_advance_overlay_contact",
+        "ra2_ground_enter_sample_cell",
+        "ra2_ground_advance_finish_sample",
+        "ra2_ground_advance_sample"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_objects.c",
+      "sha256": "dfeda867073baf37f72ca44a38deb21e626ca5e52245038c23fac9064de48795",
+      "functions": [
+        "ra2_ground_filter_object",
+        "ra2_ground_filter_object_kind",
+        "ra2_ground_filter_building",
+        "ra2_ground_filter_building_flags",
+        "ra2_ground_classify_enemy",
+        "ra2_ground_classify_enemy_contact",
+        "ra2_ground_classify_enemy_weapon",
+        "ra2_ground_classify_enemy_kind",
+        "ra2_ground_classify_enemy_terrain",
+        "ra2_ground_classify_stationary_ally",
+        "ra2_ground_classify_enemy_building",
+        "ra2_ground_classify_enemy_warhead"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_dispatch_bridge.c",
+      "sha256": "e1c1f45ad91d2745b85b91b7d188adc347abc24e410446467c3659e1376a3e26",
+      "functions": [
+        "ra2_ground_sampling_bridge",
+        "ra2_ground_prepare_exit_bridge",
+        "ra2_ground_object_service_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_followup_bridge.c",
+      "sha256": "8cc26af13f6d93f944badff191a3657eff63a6077c96bb4a3c44406994c7aaca",
+      "functions": [
+        "ra2_ground_speed_prepare_bridge",
+        "ra2_ground_followup_bridge",
+        "ra2_ground_turn_prepare_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template.c",
+      "sha256": "b4a263cbfff24a2bcee14871c75573a94c5c33bf7a1ac6acf2717aeca4c8b753",
+      "functions": [
+        "ra2_ground_choose_template",
+        "ra2_ground_template_table",
+        "ra2_ground_commit_segment"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_internal_next.c",
+      "sha256": "a18baba8cae4b8d22733e376164ea4ba258bd7bfa38768c853716fd5c4ffab43",
+      "functions": [
+        "ra2_ground_full_sample_exhausted",
+        "ra2_ground_prepare_approach"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_finish.c",
+      "sha256": "61b3928c78cb723ebb39b534bf4919b6230eecf1eacbf7bcb361ee38e4d35183",
+      "functions": [
+        "ra2_ground_finish_passage"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_travel_bridge.c",
+      "sha256": "79cf06485df03c8462cf97b14696a7cca7888cd27a0ac8f2adb7087eeba66cca",
+      "functions": [
+        "ra2_ground_tube_travel_bridge",
+        "ra2_ground_template_next_bridge",
+        "ra2_ground_passage_neighbor_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_map_bounds_bridge.c",
+      "sha256": "4bc0cc8051c0d9cf9f8ce854a510413f6f9a34a0bbf4a896f790e460ced982ce",
+      "functions": [
+        "ra2_cell_map_area_bridge"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path_search.c",
+      "sha256": "dda72070d5da6a8a8ac37c37509bbeaf892039b020ea9c8620b9840d111afd5d",
+      "functions": [
+        "ra2_path_region_allows",
+        "ra2_path_search_neighbors"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/movement_fixture.c",
+      "sha256": "172e498125fa3948b16474510a149f44c729a6de010cfc8162e5a2871e1cc3e3",
+      "functions": [
+        "ra2_movement_fixture_arg",
+        "ra2_movement_fixture_requested",
+        "ra2_movement_fixture_tick"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_slope.c",
+      "sha256": "36db1b29604bc2491d439ff76f3ad4a285547a7e37e2ee49906775517a4562ad",
+      "functions": [
+        "ra2_ground_initialize_slopes",
+        "ra2_ground_slope_height"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_transition_rules.c",
+      "sha256": "13980d712eb11c1254c005f3e5b247e95619c4b46b982b87a52420abbe853a5d",
+      "functions": [
+        "ra2_ground_layer_reference",
+        "ra2_ground_check_height_step"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_special.c",
+      "sha256": "da77a4b28b8db73f05e11c72e0e9aeba83faa1e93638a4a3204bcdb0e39bc7d1",
+      "functions": [
+        "ra2_ground_handle_special_obstacle"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_collision.c",
+      "sha256": "2d35a6e2e5f89dea16527f7a002461b987f0d60b26261055a0d6e328aef135e6",
+      "functions": [
+        "ra2_ground_uses_bridge_occupation",
+        "ra2_ground_remove_self_occupation",
+        "ra2_ground_resolve_occupation"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_failure_transition.c",
+      "sha256": "dff0cde82136e13a0506c7a28398eeb814c54b947a67761cab57c17a6e6a01ec",
+      "functions": [
+        "ra2_ground_invalidate_segment",
+        "ra2_ground_stop_target",
+        "ra2_ground_within_stop_distance",
+        "ra2_ground_axis_distance",
+        "ra2_ground_within_stop_height"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_path.c",
+      "sha256": "045c0ee92d424a4c51df7c0fb56349f4bb0634a9f24a472c301482dca6625933",
+      "functions": [
+        "ra2_ground_consume_path_sample",
+        "ra2_ground_next_sample_index"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_nodes_bridge.c",
+      "sha256": "0978fbdffe5b189300b2adf2a31792dfeca7569d8a15c04ee639260fc4cdd705",
+      "functions": [
+        "ra2_path_node_create_bridge",
+        "ra2_path_cache_stamp_bridge",
+        "ra2_path_cache_cost_bridge",
+        "ra2_path_cache_publish_bridge",
+        "ra2_path_search_reset_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_landing.c",
+      "sha256": "001f3f195607c561b4a755c4294ff9223e7f9b5effbffbca807a633291f55353",
+      "functions": [
+        "ra2_ground_land_connection",
+        "ra2_ground_reject_direction"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_bridge.c",
+      "sha256": "cfde0382a8a3120a9ff27a48e7f753d8ce7ee585fec2f9bb8d236a02a4dc69ec",
+      "functions": [
+        "ra2_ground_consume_sample_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_passage_neighbor.c",
+      "sha256": "570950b91bb32214072b43d6c9b8b229621690510ef15b2cce28b5be9be3a256",
+      "functions": [
+        "ra2_ground_neighbor_blocks"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_region_search.c",
+      "sha256": "82ab52b8e3a57c952159043193f23537063270fdf501afa9a5fad732685113ea",
+      "functions": [
+        "ra2_region_search"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_path_routing_bridge.c",
+      "sha256": "a6e3f6719d38550deaf774930f8c4e859c5ee2a88dfc6db988f393f28629d7d2",
+      "functions": [
+        "ra2_region_search_bridge",
+        "ra2_path_smooth_bridge",
+        "ra2_path_postprocess_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_object_services.c",
+      "sha256": "dee5ef3dc95161e31c1b82d89b2de21a4dc67377768d51de256e2cab21392297",
+      "functions": [
+        "ra2_ground_find_kind",
+        "ra2_ground_find_blocking_object",
+        "ra2_ground_cell_connection",
+        "ra2_ground_surface_level",
+        "ra2_ground_height_above_surface"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_sampling_shared.c",
+      "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca",
+      "functions": [
+        "ra2_ground_choose_shared_full",
+        "ra2_ground_choose_selected_remainder",
+        "ra2_ground_template_index"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_completion_bridge.c",
+      "sha256": "843c03dddec431dcc99d4ec5d88e433f886c4038e540a7fe0102e51e388182a7",
+      "functions": [
+        "ra2_ground_arrival_complete_bridge",
+        "ra2_ground_prepare_finish_bridge",
+        "ra2_ground_passage_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_entry.c",
+      "sha256": "64d57f2c8469085dae7bd70d481ae12990b837c8d5efb3b5b2ebb6c50874e79b",
+      "functions": [
+        "ra2_ground_check_entry"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_cell_services.c",
+      "sha256": "9300347a301721c4bcfab8f71bca3c39c86e5983ebe8b7e5d4a090da9f4e458d",
+      "functions": [
+        "ra2_cell_at_world",
+        "ra2_cell_at_point",
+        "ra2_cell_slot_present",
+        "ra2_cell_threat_index",
+        "ra2_cell_area_boundary",
+        "ra2_cell_usable_area"
+      ],
+      "changed_current": true,
+      "scope": "current implementation and affected checks"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_bridge_plane.c",
+      "sha256": "6b9b97052002b0cfb7ec3372f5d53eac1ead0a97d20a7410fd71500b57ab74e7",
+      "functions": [
+        "ra2_ground_bridge_height_matches",
+        "ra2_ground_transition_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/unit_movement.c",
+      "sha256": "1065aa87eff9f7d922cda5697ee779d19bb9bfd472588950267e46eb2687a190",
+      "functions": [
+        "ra2_ground_add_acceleration",
+        "ra2_ground_apply_deceleration",
+        "ra2_ground_scale_speed",
+        "ra2_ground_arrival_progress_adjustment",
+        "ra2_ground_progress_fraction",
+        "ra2_ground_interpolate_position",
+        "ra2_ground_transform_path_sample"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_region_route.c",
+      "sha256": "ccd429e6aea6ca1477ee203f367ca3aa8f2a779638bf56ca5677570a8f188411",
+      "functions": [
+        "ra2_region_route_publish"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_remainder_bridge.c",
+      "sha256": "f48658d0cac1051f973a207f390d7d3f7cc9ff016074d7301614f000b24af6c7",
+      "functions": [
+        "ra2_ground_landing_bridge",
+        "ra2_ground_failure_bridge",
+        "ra2_ground_slope_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_prepare_bridge.c",
+      "sha256": "686335da73835962326cc457860358fdc87193932e8190895045f7109aeb4697",
+      "functions": [
+        "ra2_ground_prepare_cycle_bridge",
+        "ra2_ground_prepare_entry_bridge",
+        "ra2_ground_retry_path_bridge",
+        "ra2_ground_observe_obstacle_bridge",
+        "ra2_ground_prepare_segment_bridge",
+        "ra2_ground_clearance_bridge",
+        "ra2_ground_traffic_wait_bridge",
+        "ra2_ground_reaction_bridge",
+        "ra2_ground_special_obstacle_bridge",
+        "ra2_ground_template_select_bridge",
+        "ra2_ground_template_commit_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_tube_progress.c",
+      "sha256": "4479de0be5b809fd25be702316168db2a9e37d60b48e532c6244a6134ea238cd",
+      "functions": [
+        "ra2_ground_tube_construct_approach",
+        "ra2_ground_tube_progress_height"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/runtime/ground_joint_bridge.c",
+      "sha256": "94c908dc478155f48f18662ee3d8ece0bf448dd614cfc2c57118ec515646d541",
+      "functions": [
+        "ra2_ground_template_entry_bridge",
+        "ra2_ground_passage_entry_bridge",
+        "ra2_ground_return_frame",
+        "ra2_ground_prepare_written_return_bridge",
+        "ra2_ground_prepare_service_return_bridge",
+        "ra2_ground_advance_service_return_bridge",
+        "ra2_ground_template_destination_bridge",
+        "ra2_ground_prepare_stop_return_bridge",
+        "ra2_ground_prepare_following_return_bridge",
+        "ra2_ground_prepare_owner_stop_return_bridge",
+        "ra2_ground_prepare_invalidate_return_bridge",
+        "ra2_ground_advance_place_return_bridge",
+        "ra2_ground_advance_mark_return_bridge",
+        "ra2_ground_late_layer_bridge",
+        "ra2_ground_advance_place_layer_return_bridge",
+        "ra2_ground_advance_leave_place_return_bridge",
+        "ra2_ground_template_continuation_bridge"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    },
+    {
+      "path": "ra2/src/gameplay/ground_template_entry.c",
+      "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f",
+      "functions": [
+        "ra2_ground_sample_adjusted",
+        "ra2_ground_sample_cell",
+        "ra2_ground_prepare_template_passage"
+      ],
+      "changed_current": false,
+      "scope": "byte-identical accepted parent; finite evidence inherited"
+    }
+  ],
+  "locomotor_classes": [
+    {
+      "class_name": "TunnelLocomotionClass",
+      "primary_vtable": "0x007ADC74",
+      "mapped_virtual_entries": [
+        "0x006EFC30",
+        "0x006EFC40",
+        "0x006EFC70",
+        "0x006EFCD0",
+        "0x006EFDE0",
+        "0x006F0000",
+        "0x006F0390",
+        "0x006F0CE0",
+        "0x006F0FF0",
+        "0x006F11C0",
+        "0x006F1200",
+        "0x006F1230",
+        "0x006F1280",
+        "0x006F12B0",
+        "0x006F12F0",
+        "0x006F1340",
+        "0x006F1360",
+        "0x006F1380",
+        "0x006F13A0",
+        "0x006F13B0"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "MechLocomotionClass",
+      "primary_vtable": "0x007A6174",
+      "mapped_virtual_entries": [
+        "0x00591750",
+        "0x00591760",
+        "0x005917C0",
+        "0x00591840",
+        "0x00591860",
+        "0x00591900",
+        "0x00591950",
+        "0x00591980",
+        "0x00593120",
+        "0x00593160",
+        "0x00593190",
+        "0x005931A0",
+        "0x00593210",
+        "0x00593260",
+        "0x00593300",
+        "0x00593310"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "DropPodLocomotionClass",
+      "primary_vtable": "0x007A0958",
+      "mapped_virtual_entries": [
+        "0x004A5AC0",
+        "0x004A5AD0",
+        "0x004A5B00",
+        "0x004A5FC0",
+        "0x004A6180",
+        "0x004A61C0",
+        "0x004A6240",
+        "0x004A6320",
+        "0x004A6330",
+        "0x004A6380",
+        "0x004A63C0",
+        "0x004A63F0",
+        "0x004A6450",
+        "0x004A6460",
+        "0x004A6570",
+        "0x004A6620",
+        "0x004A6630",
+        "0x004A6640",
+        "0x004A6660",
+        "0x004A6670",
+        "0x004A66C0",
+        "0x004A66D0",
+        "0x004A66E0",
+        "0x004A66F0",
+        "0x004A6700",
+        "0x004A6710"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "JumpjetLocomotionClass",
+      "primary_vtable": "0x007A536C",
+      "mapped_virtual_entries": [
+        "0x0052F230",
+        "0x0052F350",
+        "0x0052F360",
+        "0x0052F3C0",
+        "0x0052F600",
+        "0x0052F960",
+        "0x0052FB70",
+        "0x0052FBA0",
+        "0x0052FBE0",
+        "0x0052FC10",
+        "0x00530AE0",
+        "0x00531250",
+        "0x005312D0",
+        "0x00531320",
+        "0x00531330"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "ShipLocomotionClass",
+      "primary_vtable": "0x007AB204",
+      "mapped_virtual_entries": [
+        "0x006756D0",
+        "0x006757E0",
+        "0x00675840",
+        "0x006758C0",
+        "0x006759A0",
+        "0x006759F0",
+        "0x00675A30",
+        "0x00675BF0",
+        "0x00675C30",
+        "0x00675CD0",
+        "0x00675D40",
+        "0x00675D70",
+        "0x00675DF0",
+        "0x00675EB0",
+        "0x00676010",
+        "0x006764C0",
+        "0x00676580",
+        "0x006765B0",
+        "0x00676C90",
+        "0x00676F30",
+        "0x0067A730",
+        "0x0067A740",
+        "0x0067A780",
+        "0x0067A790",
+        "0x0067A7E0",
+        "0x0067A830",
+        "0x0067AA10",
+        "0x0067AAF0",
+        "0x0067AB00",
+        "0x0067AB10",
+        "0x0067AB20",
+        "0x0067AB30",
+        "0x0067AB40",
+        "0x0067AB50",
+        "0x0067AB60",
+        "0x0067AB80",
+        "0x0067AB90",
+        "0x0067ABE0",
+        "0x0067ABF0",
+        "0x0067AC00",
+        "0x0067AC10",
+        "0x0067AC20",
+        "0x0067AC30"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "RocketLocomotionClass",
+      "primary_vtable": "0x007A8FA4",
+      "mapped_virtual_entries": [
+        "0x0063DB50",
+        "0x0063DB90",
+        "0x0063DBB0",
+        "0x0063DE90",
+        "0x0063EA80",
+        "0x0063EB50",
+        "0x0063EB60",
+        "0x0063EBA0",
+        "0x0063EBF0",
+        "0x0063EC00",
+        "0x0063ED30",
+        "0x0063ED40"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "DriveLocomotionClass",
+      "primary_vtable": "0x007A0594",
+      "mapped_virtual_entries": [
+        "0x0049F710",
+        "0x0049F820",
+        "0x0049F880",
+        "0x0049F900",
+        "0x0049F9E0",
+        "0x0049FA30",
+        "0x0049FA70",
+        "0x0049FC30",
+        "0x0049FC70",
+        "0x0049FD10",
+        "0x0049FD80",
+        "0x0049FDB0",
+        "0x0049FE30",
+        "0x0049FEF0",
+        "0x004A0050",
+        "0x004A0500",
+        "0x004A05C0",
+        "0x004A05F0",
+        "0x004A0D30",
+        "0x004A0FD0",
+        "0x004A47E0",
+        "0x004A47F0",
+        "0x004A4830",
+        "0x004A4840",
+        "0x004A4890",
+        "0x004A48E0",
+        "0x004A4AC0",
+        "0x004A4BA0",
+        "0x004A4BB0",
+        "0x004A4BC0",
+        "0x004A4BD0",
+        "0x004A4BE0",
+        "0x004A4C60",
+        "0x004A4C70",
+        "0x004A4C80",
+        "0x004A4CA0",
+        "0x004A4CB0",
+        "0x004A4D40",
+        "0x004A4D50",
+        "0x004A4D60",
+        "0x004A4D70",
+        "0x004A4D80",
+        "0x004A4D90"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "TeleportLocomotionClass",
+      "primary_vtable": "0x007AD270",
+      "mapped_virtual_entries": [
+        "0x006DFD20",
+        "0x006DFD30",
+        "0x006DFD40",
+        "0x006DFDA0",
+        "0x006DFED0",
+        "0x006E0DE0",
+        "0x006E0E10",
+        "0x006E16F0",
+        "0x006E1730",
+        "0x006E1770",
+        "0x006E1810",
+        "0x006E18F0",
+        "0x006E1900",
+        "0x006E1960",
+        "0x006E19B0",
+        "0x006E19F0",
+        "0x006E1A40",
+        "0x006E1B50",
+        "0x006E1BA0",
+        "0x006E1BB0",
+        "0x006E1BC0",
+        "0x006E1BE0",
+        "0x006E1BF0",
+        "0x006E1C20",
+        "0x006E1C30",
+        "0x006E1C40",
+        "0x006E1C50",
+        "0x006E1C60",
+        "0x006E1C70"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "FlyLocomotionClass",
+      "primary_vtable": "0x007A10CC",
+      "mapped_virtual_entries": [
+        "0x004BC190",
+        "0x004BC200",
+        "0x004BC230",
+        "0x004BC250",
+        "0x004BC2B0",
+        "0x004BC3E0",
+        "0x004BC730",
+        "0x004BED90",
+        "0x004BEFB0",
+        "0x004BF0C0",
+        "0x004BF280",
+        "0x004BF390",
+        "0x004BF400",
+        "0x004BF440",
+        "0x004BF470",
+        "0x004BF4A0",
+        "0x004BF510",
+        "0x004BF520",
+        "0x004BF5A0",
+        "0x004BF5D0",
+        "0x004BF600",
+        "0x004BFAF0",
+        "0x004BFB00"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "WalkLocomotionClass",
+      "primary_vtable": "0x007AEBA0",
+      "mapped_virtual_entries": [
+        "0x0071DEA0",
+        "0x0071DEB0",
+        "0x0071DF10",
+        "0x0071DF70",
+        "0x0071DFF0",
+        "0x0071E020",
+        "0x0071E110",
+        "0x0071E170",
+        "0x0071E1A0",
+        "0x0071F900",
+        "0x0071F940",
+        "0x0071F9C0",
+        "0x0071FAA0",
+        "0x0071FAB0",
+        "0x0071FB10",
+        "0x0071FB60",
+        "0x0071FBA0",
+        "0x0071FBD0",
+        "0x0071FCE0",
+        "0x0071FD30",
+        "0x0071FDD0",
+        "0x0071FDE0",
+        "0x0071FDF0",
+        "0x0071FE00",
+        "0x0071FE20",
+        "0x0071FE30",
+        "0x0071FE40",
+        "0x0071FE90",
+        "0x0071FEA0",
+        "0x0071FEB0",
+        "0x0071FEC0",
+        "0x0071FED0",
+        "0x0071FEE0"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "HoverLocomotionClass",
+      "primary_vtable": "0x007A32B4",
+      "mapped_virtual_entries": [
+        "0x004FB960",
+        "0x004FBBF0",
+        "0x004FBF50",
+        "0x004FBFC0",
+        "0x004FC880",
+        "0x004FC8D0",
+        "0x004FC900",
+        "0x004FC960",
+        "0x004FC9E0",
+        "0x004FDF40",
+        "0x004FDF90",
+        "0x004FE800",
+        "0x004FE880",
+        "0x004FE8B0",
+        "0x004FEA20",
+        "0x004FEBD0",
+        "0x004FEC80",
+        "0x004FECC0",
+        "0x004FED10",
+        "0x004FEDD0",
+        "0x004FEE20",
+        "0x004FEEC0",
+        "0x004FEED0"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    },
+    {
+      "class_name": "LocomotionClass",
+      "primary_vtable": "0x007A33B4",
+      "mapped_virtual_entries": [
+        "0x004A4BF0",
+        "0x004A4C10",
+        "0x004A4C20",
+        "0x004A4C30",
+        "0x004A4C40",
+        "0x004A4C50",
+        "0x004A6590",
+        "0x004A65A0",
+        "0x004A65B0",
+        "0x004A65C0",
+        "0x004A65D0",
+        "0x004A65E0",
+        "0x004A65F0",
+        "0x004A6600",
+        "0x004A6610",
+        "0x004BFCA0",
+        "0x004BFCB0",
+        "0x004BFCC0",
+        "0x004FEF00",
+        "0x0053D010",
+        "0x0053D030",
+        "0x0053D0D0",
+        "0x0053D1C0",
+        "0x0053D1F0",
+        "0x0053D210",
+        "0x0053D230",
+        "0x0053D240",
+        "0x0053D250",
+        "0x0053D270",
+        "0x0053D2B0",
+        "0x0053D360",
+        "0x0053D440",
+        "0x0053D470",
+        "0x0053D480",
+        "0x0053D490",
+        "0x0053D4A0",
+        "0x0053D4B0",
+        "0x0053D4C0",
+        "0x0053D4D0",
+        "0x0053D4E0",
+        "0x0053D4F0",
+        "0x0053D500",
+        "0x0053D510",
+        "0x0053D520",
+        "0x0053D530",
+        "0x0053D540",
+        "0x0053D550",
+        "0x0053D560",
+        "0x0053D570",
+        "0x0053D5A0",
+        "0x0053D5D0",
+        "0x0053D5E0",
+        "0x0053D5F0",
+        "0x0053D600",
+        "0x0053D610"
+      ],
+      "implementation": "Original lifted C retained; ground/common named services and measured natural cases separately enumerated. Not a claim all members were rewritten."
+    }
+  ],
+  "rtti_sha256": "5570726f9b2993e8dda0ba8da1a6ab4da2a5725593b129f2925b4c3f20f71497",
+  "generated_definitions": 23117,
+  "global_guard_sites": [
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0023.c",
+      "function": "sub_0055CB56",
+      "target": "0x0055CB58"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0009.c",
+      "function": "sub_0049258E",
+      "target": "0x0049258E"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0031.c",
+      "function": "sub_005FDABD",
+      "target": "0x005FDABD"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0025.c",
+      "function": "sub_0059A908",
+      "target": "0x0059A90F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0037.c",
+      "function": "sub_00676E69",
+      "target": "0x00676E6F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0037.c",
+      "function": "sub_00676E6F",
+      "target": "0x00676E6F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0004.c",
+      "function": "sub_0043A1DE",
+      "target": "0x0043A1E1"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0045.c",
+      "function": "sub_006F0C51",
+      "target": "0x006F0C55"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0035.c",
+      "function": "sub_0063965C",
+      "target": "0x0063965C"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0032.c",
+      "function": "sub_0061385A",
+      "target": "0x00613864"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0044.c",
+      "function": "TerrainTypeClass__destructor",
+      "target": "0x006E53E3"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0017.c",
+      "function": "sub_004FEC4D",
+      "target": "0x004FEC4D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0042.c",
+      "function": "sub_006BD498",
+      "target": "0x006BD4A0"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0042.c",
+      "function": "sub_006BD498",
+      "target": "0x006BD4A4"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0047.c",
+      "function": "sub_00712E30",
+      "target": "0x00712E32"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_0079071A",
+      "target": "0x0079071D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790725",
+      "target": "0x00790728"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_0079075E",
+      "target": "0x00790761"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790779",
+      "target": "0x0079077C"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007907EE",
+      "target": "0x007907F1"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_0079080D",
+      "target": "0x00790810"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790892",
+      "target": "0x00790895"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007908B1",
+      "target": "0x007908B4"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790936",
+      "target": "0x00790939"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790955",
+      "target": "0x00790958"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007909DA",
+      "target": "0x007909DD"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007909F9",
+      "target": "0x007909FC"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790A7E",
+      "target": "0x00790A81"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790A9D",
+      "target": "0x00790AA0"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790B22",
+      "target": "0x00790B25"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790B41",
+      "target": "0x00790B44"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790DF6",
+      "target": "0x00790FE3"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_00790DF6",
+      "target": "0x00790FF2"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007910AE",
+      "target": "0x0079129B"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_007910AE",
+      "target": "0x007912AA"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "function": "sub_0079226E",
+      "target": "0x0079227D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "function": "DropListClass__constructor_004A5393",
+      "target": "0x004A5393"
+    }
+  ],
+  "guard_sites": 37,
+  "guard_targets": 36,
+  "alias_inventory": [
+    {
+      "entry": "004A12F1",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A134F",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A161D",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A166A",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A17A2",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A199D",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A1ACD",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A1F8D",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A1FA1",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A1FDC",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A2112",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A230E",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A2311",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A24F0",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A32B4",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A3C92",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A3C9B",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A3DBA",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A3E35",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A3FE3",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A4174",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A44D1",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A4522",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A458C",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A45B7",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "004A45D0",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0010.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "0070346B",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0046.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "0070372C",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0046.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    },
+    {
+      "entry": "007038EF",
+      "unchanged_chunks": [
+        "ra2/src/recomp/gen_game/recomp_0046.c"
+      ],
+      "direct_original_call": false,
+      "natural_nonprimary_entry_proved": false
+    }
+  ],
+  "aliases": 29,
+  "unused_interfaces_forced": false,
+  "all_locomotors_readably_rewritten": false,
+  "scope": "Every compiled named movement file and RTTI locomotor family inventoried. Unaffected source and original internal labels retained; neither a guard nor an alias count is a count of missing movement features."
+}
