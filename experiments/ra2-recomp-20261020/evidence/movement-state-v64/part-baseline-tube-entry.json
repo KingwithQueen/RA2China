@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "phase": 0,
+  "cases": 32768,
+  "ordered_callback_values": 1409024,
+  "original_stack_cleanup_verified": true,
+  "kind": "tube-entry",
+  "probe_name": "travel",
+  "probe_exe_sha256": "76305cf8f576a2ee52dbed045fe768a328d6ab2cc8ea45357323bbd4536b9e80",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "modes": {
+    "original": {
+      "production_sha256": "212aeebf6223adf774db29f42b33cc954f681cb5d2c3a76473dab65efe4363ef",
+      "observer_sha256": "61869ae27bcb746a33dc725c284695c9d95a336e60f2a1d30a7ba86cb860faae",
+      "all_production_records_identical": true
+    },
+    "generated-c": {
+      "production_sha256": "212aeebf6223adf774db29f42b33cc954f681cb5d2c3a76473dab65efe4363ef",
+      "observer_sha256": "61869ae27bcb746a33dc725c284695c9d95a336e60f2a1d30a7ba86cb860faae",
+      "all_production_records_identical": true
+    }
+  },
+  "production_exe_sha256": "c00968ba023d99581ed8dc27b52991df4856029776cf7697f7edc6e453d2f9ce",
+  "observer_exe_sha256": "8832bb24ebe473285180edc1935a1ae75b0b58d704038064b376a770f5fbc5fa"
+}

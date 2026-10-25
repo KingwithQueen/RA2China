@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "mi",
+      "frames": 3001,
+      "exe_sha256": "504b1bd5b748bca80753b1e504a8ffce1858fc6c2a9fbd98b6ec001a0cde6fdc",
+      "comparison_sha256": "bfc53f0f425153932751f091313c1098587353df41c6059fa6e4055152b65069",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "sc",
+      "frames": 3401,
+      "exe_sha256": "504b1bd5b748bca80753b1e504a8ffce1858fc6c2a9fbd98b6ec001a0cde6fdc",
+      "comparison_sha256": "1ce4dfdff8a6bde7355e69f95f3b1aa552951f2bd359765e1b0b87ff8927e82e",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "aw3",
+      "frames": 3201,
+      "exe_sha256": "504b1bd5b748bca80753b1e504a8ffce1858fc6c2a9fbd98b6ec001a0cde6fdc",
+      "comparison_sha256": "88966644c8b994a2caf9df258d3564d8015205b56eddab22f8a25e2310a74ba7",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "fm",
+      "frames": 3401,
+      "exe_sha256": "504b1bd5b748bca80753b1e504a8ffce1858fc6c2a9fbd98b6ec001a0cde6fdc",
+      "comparison_sha256": "01c1cb92fd473176b5fb08818019dacf88f2e9a917f468ecd3d98525b11cc7cd",
+      "capture_host": true,
+      "strict_trace_equal": false
+    },
+    {
+      "tag": "traffic-two-plane",
+      "frames": 2401,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "fdbf63a9fde4ae33fe59d0e2b09013c05f70800543a9fe272e1583316d7bf4b1",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "traffic-long-block",
+      "frames": 3601,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "74f9486c515acb478f344d5032bd5f5042e6cf41ec4873962f11b3cdc91a641c",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "traffic-tu",
+      "frames": 2401,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "308490c468d289ba2fc926d3df04bb786f60d24b9ad62dc8f5ad14e51950c58e",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "traffic-tu-obs",
+      "frames": 2401,
+      "exe_sha256": "85085e22dd5bc5226b23be70029f2102fc6e0626bbab84546acb4b64f469577d",
+      "comparison_sha256": "7654b4c998256683bc0780f28617144a22c09315a8c8fb7c4effd030e589efe2",
+      "capture_host": true,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "79f31496a3b1104649def84e5c2098b8974804bd63b3400c878bfdb606a50880",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "6f0b834539d73c88e30a36873f4606de5f43bc7519fdaf7d0fa7eee5a27267cd",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "1c8cfca8f754efee29ef8ec895e97b37bb0fd8f97ad16f5c5ac454cc4b7b81e0",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "928aad5b6a6c32f1be7233ee012ca30201e91396a61d0644ba3889de37394b25",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93",
+      "comparison_sha256": "357f877dfb1496b989f97ab6faaee6c62e1ab7db632c284ff853ecf2d58a3f84",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "production_scenes": 8,
+  "production_frames": 11858,
+  "observer_scenes": 5,
+  "observer_frames": 15405,
+  "scope": "Finite regression: mixed loading in both orders, two natural shores, full occupancy/release, bridge contact, repeated search failure and retained height anomalies."
+}

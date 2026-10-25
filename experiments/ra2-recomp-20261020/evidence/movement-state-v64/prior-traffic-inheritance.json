@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "rerun": false,
+  "parent": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v63\\traffic-effects.json",
+  "sha256": "b8d16af87e5f6b1210cb53973e917972d7d1b8a7b972a3bc67bf4a08b0a4bab9",
+  "scope": "Prior flat/elevated channels remain retained; current round executes simultaneous upper/lower planes, 1000-frame congestion and ordinary Tube traffic."
+}

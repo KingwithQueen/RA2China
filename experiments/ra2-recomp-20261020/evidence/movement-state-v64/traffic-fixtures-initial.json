@@ -1,0 +1,268 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "kind": "bridge",
+      "tag": "traffic-two-plane",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\fixtures\\bridge-chain-lower-west.MAP",
+      "last": 2400,
+      "actor_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023365,
+        1023366,
+        1023367
+      ],
+      "ground_vehicle_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023365
+      ],
+      "actor_health": {
+        "1023362": 200,
+        "1023363": 200,
+        "1023364": 200,
+        "1023365": 200,
+        "1023366": 125,
+        "1023367": 125
+      },
+      "upper_ids": [
+        1023362,
+        1023363
+      ],
+      "lower_ids": [
+        1023364,
+        1023365
+      ],
+      "goals": {
+        "1023362": [
+          60,
+          59
+        ],
+        "1023363": [
+          61,
+          75
+        ],
+        "1023364": [
+          54,
+          66
+        ],
+        "1023365": [
+          65,
+          66
+        ],
+        "1023366": [
+          61,
+          59
+        ],
+        "1023367": [
+          54,
+          65
+        ]
+      },
+      "orders": [
+        "5:1023362:2:60:75",
+        "5:1023363:2:61:59",
+        "5:1023364:2:65:66",
+        "5:1023365:2:54:66",
+        "5:1023366:2:61:75",
+        "5:1023367:2:65:65",
+        "650:1023362:2:60:59",
+        "650:1023363:2:61:75",
+        "650:1023364:2:54:66",
+        "650:1023365:2:65:66",
+        "650:1023366:2:61:59",
+        "650:1023367:2:54:65",
+        "1300:1023362:2:60:75",
+        "1300:1023363:2:61:59",
+        "1300:1023364:2:65:66",
+        "1300:1023365:2:54:66",
+        "1300:1023366:2:61:75",
+        "1300:1023367:2:65:65",
+        "1950:1023362:2:60:59",
+        "1950:1023363:2:61:75",
+        "1950:1023364:2:54:66",
+        "1950:1023365:2:65:66",
+        "1950:1023366:2:61:59",
+        "1950:1023367:2:54:65"
+      ],
+      "scope": "Ordinary opposing traffic on original bridge upper plane and previously validated clear underdeck corridor. Only Units/Infantry sections changed.",
+      "path": "evidence/movement-state-v64/fixtures/traffic-two-plane.MAP",
+      "sha256": "f5acb79315489c56dff8726732a8a30a4513a142ed931ec90cb4535e29271711",
+      "source_sha256": "be20a5a0c68f05ba732441db419e3f2fc110d779c95335ae58df80eeabc24b34",
+      "baseline_tag": "b-traffic-two-plane",
+      "cell_catalog": true,
+      "capture_host": false,
+      "stationary_health": {},
+      "map_bytes_unchanged": false,
+      "unchanged_outside_units_infantry": true,
+      "seconds": 300
+    },
+    {
+      "kind": "congestion",
+      "tag": "traffic-long-block",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v63\\fixtures\\bridge-cross-release-north.MAP",
+      "last": 3600,
+      "actor_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023365,
+        1023366
+      ],
+      "ground_vehicle_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023365
+      ],
+      "actor_health": {
+        "1023362": 200,
+        "1023363": 200,
+        "1023364": 200,
+        "1023365": 200,
+        "1023366": 125
+      },
+      "main_id": 1023362,
+      "blocker_ids": [
+        1023363,
+        1023364,
+        1023365
+      ],
+      "release_frames": {
+        "1023363": 1200,
+        "1023365": 1300,
+        "1023364": 1400
+      },
+      "explicit_recovery_order": 1500,
+      "goals": {
+        "1023362": [
+          60,
+          76
+        ],
+        "1023363": [
+          59,
+          79
+        ],
+        "1023364": [
+          60,
+          79
+        ],
+        "1023365": [
+          61,
+          79
+        ],
+        "1023366": [
+          61,
+          59
+        ]
+      },
+      "orders": [
+        "5:1023362:2:60:75",
+        "5:1023366:2:61:61",
+        "1200:1023363:2:59:79",
+        "1300:1023365:2:61:79",
+        "1400:1023364:2:60:79",
+        "1500:1023362:2:60:75",
+        "1800:1023366:2:61:78",
+        "2000:1023362:2:60:61",
+        "2050:1023363:2:59:59",
+        "2050:1023364:2:60:59",
+        "2050:1023365:2:61:59",
+        "2800:1023362:2:60:76",
+        "2800:1023363:2:59:79",
+        "2800:1023364:2:60:79",
+        "2800:1023365:2:61:79",
+        "2800:1023366:2:61:59"
+      ],
+      "scope": "Ordinary Sleep placement across bridge exit, staggered Move releases and one documented same-goal recovery order; no claim of autonomous recovery until raw positions prove it.",
+      "path": "evidence/movement-state-v64/fixtures/traffic-long-block.MAP",
+      "sha256": "9b62b5bcc54623033bef1c4834bb055b8f4d2f73832d5b6ed7f0b29f492c4eca",
+      "source_sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+      "baseline_tag": "b-traffic-long-block",
+      "cell_catalog": true,
+      "capture_host": false,
+      "stationary_health": {},
+      "map_bytes_unchanged": false,
+      "unchanged_outside_units_infantry": true,
+      "seconds": 300
+    },
+    {
+      "kind": "tube",
+      "tag": "traffic-tube-bidirectional",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v38\\fixtures\\tube-cardinal-elevated-east.MAP",
+      "last": 2400,
+      "actor_ids": [
+        1022581,
+        1022582,
+        1022583,
+        1022584
+      ],
+      "ground_vehicle_ids": [
+        1022581,
+        1022582,
+        1022583,
+        1022584
+      ],
+      "actor_health": {
+        "1022581": 200,
+        "1022582": 200,
+        "1022583": 200,
+        "1022584": 200
+      },
+      "goals": {
+        "1022581": [
+          80,
+          114
+        ],
+        "1022582": [
+          81,
+          114
+        ],
+        "1022583": [
+          66,
+          114
+        ],
+        "1022584": [
+          65,
+          114
+        ]
+      },
+      "orders": [
+        "5:1022581:2:80:114",
+        "100:1022582:2:81:114",
+        "350:1022583:2:66:114",
+        "450:1022584:2:65:114",
+        "800:1022581:2:66:114",
+        "800:1022582:2:65:114",
+        "800:1022583:2:80:114",
+        "800:1022584:2:81:114",
+        "1600:1022581:2:80:114",
+        "1600:1022582:2:81:114",
+        "1600:1022583:2:66:114",
+        "1600:1022584:2:65:114"
+      ],
+      "observer_tag": "traffic-tube-bidirectional-observed",
+      "observer_baseline_tag": "b-traffic-tube-bidirectional-observed",
+      "scope": "Four ordinary trucks use existing bidirectional twelve-step cardinal Tubes, terrain levels4/6, staggered starts and three rounds. Only unit placement changes; no exit unit constructor or route/queue injection.",
+      "path": "evidence/movement-state-v64/fixtures/traffic-tube-bidirectional.MAP",
+      "sha256": "a6a59c0c0218d59f5b2028e7e21750abad3fc573be1952f53cfb033e29ba163a",
+      "source_sha256": "8d443a5265adf9e784da6be801372e01520f31ac7603372f8a7feb5fa3255475",
+      "baseline_tag": "b-traffic-tube-bidirectional",
+      "cell_catalog": true,
+      "capture_host": false,
+      "stationary_health": {},
+      "map_bytes_unchanged": false,
+      "unchanged_outside_units_infantry": true,
+      "seconds": 300
+    }
+  ],
+  "new_unique_recipes": 3,
+  "ordinary_map_and_move_events": true,
+  "terrain_and_tubes_and_overlays_unchanged": true,
+  "rules_overrides": false,
+  "engine_state_or_path_injection": false,
+  "claimed_new_natural_heap_saturation": false
+}

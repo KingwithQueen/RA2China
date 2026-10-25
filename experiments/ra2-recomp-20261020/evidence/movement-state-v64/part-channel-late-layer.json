@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "phase": 21,
+  "cases": 65536,
+  "ordered_callback_values": 0,
+  "original_stack_cleanup_verified": true,
+  "primary_fallthrough_cases": 0,
+  "secondary_service_cases": 0,
+  "alive_continuations": 0,
+  "kind": "late-layer",
+  "probe_name": "overlap",
+  "probe_exe_sha256": "67aa628bd93ed6b0566c3694c23529c496c56e985cbac4442c18b98099552936",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "scenes": {
+    "b-traffic-two-plane": {
+      "original": {
+        "submissions": 24,
+        "executions": 24,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 24,
+        "executions": 24,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "traffic-two-plane": {
+      "original": {
+        "submissions": 24,
+        "executions": 24,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 24,
+        "executions": 24,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "b-traffic-long-block": {
+      "original": {
+        "submissions": 16,
+        "executions": 16,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 16,
+        "executions": 16,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "traffic-long-block": {
+      "original": {
+        "submissions": 16,
+        "executions": 16,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 16,
+        "executions": 16,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "b-traffic-tu": {
+      "original": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "traffic-tu": {
+      "original": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "b-traffic-tu-obs": {
+      "original": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      }
+    },
+    "traffic-tu-obs": {
+      "original": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      },
+      "generated-c": {
+        "submissions": 12,
+        "executions": 12,
+        "all_expected_move_events_verified": true
+      }
+    }
+  },
+  "scope": "All submitted ordinary Move events linked to execution; repeated same-goal commands are explicit and not described as autonomous recovery triggers."
+}

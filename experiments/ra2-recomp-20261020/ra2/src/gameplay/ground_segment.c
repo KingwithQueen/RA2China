@@ -20,14 +20,10 @@ static int32_t gate_overlay(void *opaque)
 static void gate_clear(void *opaque)
 {((SegmentGateContext *)opaque)->output->passage=0;}
 
-Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparation *output, const Ra2SegmentServices *services)
+/* 当前格、owner桥层、第二次候选点、下一格各自保持原查询时点。 */
+static void resolve_segment_surface(unsigned direction,Ra2SegmentPreparation *output,
+    const Ra2SegmentServices *services,void *context)
 {
-    if (path_head == 8)
-    {
-        return RA2_SEGMENT_EMPTY;
-    }
-    void *context = services->context;
-    unsigned direction = (uint32_t)path_head & 7u;
     output->candidate = services->candidate_point(context, direction);
     Ra2CellSurface current = services->current_surface(context);
     output->reference_level = current.level + (services->query(context, RA2_SEGMENT_OWNER_BRIDGE_FLAG) ? 4 : 0);
@@ -38,15 +34,20 @@ Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparat
     {
         services->mark_bridge_transition(context);
     }
+}
+
+static int wait_for_segment_permission(int32_t path_head,Ra2SegmentPreparation *output,
+    const Ra2SegmentServices *services,void *context)
+{
     if (!services->query(context, RA2_SEGMENT_OWNER_PREDICATE_27C))
     {
-        return RA2_SEGMENT_WAIT;
+        return 1;
     }
     output->cell.x = (int16_t)(output->candidate.x / 256);
     output->cell.y = (int16_t)(output->candidate.y / 256);
     if (!services->request_gate(context, output->cell))
     {
-        return RA2_SEGMENT_WAIT;
+        return 1;
     }
     uint16_t desired_facing = (uint16_t)((uint32_t)path_head << 13);
     uint16_t current_facing = (uint16_t)services->query(context, RA2_SEGMENT_FACING_RAW);
@@ -54,8 +55,21 @@ Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparat
     if ((uint16_t)(current_facing - desired_facing) != 0)
     {
         services->turn_toward(context, desired_facing);
-        return RA2_SEGMENT_WAIT;
+        return 1;
     }
+    return 0;
+}
+
+Ra2SegmentPhase ra2_ground_prepare_segment(int32_t path_head, Ra2SegmentPreparation *output, const Ra2SegmentServices *services)
+{
+    if (path_head == 8)
+    {
+        return RA2_SEGMENT_EMPTY;
+    }
+    void *context = services->context;
+    unsigned direction = (uint32_t)path_head & 7u;
+    resolve_segment_surface(direction,output,services,context);
+    if(wait_for_segment_permission(path_head,output,services,context))return RA2_SEGMENT_WAIT;
     output->passage = services->classify_cell(context, output->cell, path_head, output->reference_level);
     SegmentGateContext gate_context={output,services};
     Ra2TemplateGateServices gate={&gate_context,gate_classification,gate_type,gate_overlay,gate_clear};

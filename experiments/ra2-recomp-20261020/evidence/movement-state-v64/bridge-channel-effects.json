@@ -1,0 +1,902 @@
+{
+  "passed": true,
+  "scenes": {
+    "b-traffic-two-plane": {
+      "original": {
+        "kind": "bridge",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          0,
+          416
+        ],
+        "effects": {
+          "unit_layer_flags": {
+            "1023362": {
+              "upper_frames": 520,
+              "transitions": 8
+            },
+            "1023363": {
+              "upper_frames": 625,
+              "transitions": 8
+            },
+            "1023364": {
+              "upper_frames": 0,
+              "transitions": 0
+            },
+            "1023365": {
+              "upper_frames": 0,
+              "transitions": 0
+            }
+          },
+          "nearby_simultaneous_two_plane_frames": 210,
+          "sample_frames": [
+            99,
+            100,
+            101,
+            102,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115
+          ]
+        }
+      },
+      "generated-c": {
+        "kind": "bridge",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          0,
+          416
+        ],
+        "effects": {
+          "unit_layer_flags": {
+            "1023362": {
+              "upper_frames": 520,
+              "transitions": 8
+            },
+            "1023363": {
+              "upper_frames": 625,
+              "transitions": 8
+            },
+            "1023364": {
+              "upper_frames": 0,
+              "transitions": 0
+            },
+            "1023365": {
+              "upper_frames": 0,
+              "transitions": 0
+            }
+          },
+          "nearby_simultaneous_two_plane_frames": 210,
+          "sample_frames": [
+            99,
+            100,
+            101,
+            102,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115
+          ]
+        }
+      }
+    },
+    "traffic-two-plane": {
+      "original": {
+        "kind": "bridge",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          0,
+          416
+        ],
+        "effects": {
+          "unit_layer_flags": {
+            "1023362": {
+              "upper_frames": 520,
+              "transitions": 8
+            },
+            "1023363": {
+              "upper_frames": 625,
+              "transitions": 8
+            },
+            "1023364": {
+              "upper_frames": 0,
+              "transitions": 0
+            },
+            "1023365": {
+              "upper_frames": 0,
+              "transitions": 0
+            }
+          },
+          "nearby_simultaneous_two_plane_frames": 210,
+          "sample_frames": [
+            99,
+            100,
+            101,
+            102,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115
+          ]
+        }
+      },
+      "generated-c": {
+        "kind": "bridge",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          0,
+          416
+        ],
+        "effects": {
+          "unit_layer_flags": {
+            "1023362": {
+              "upper_frames": 520,
+              "transitions": 8
+            },
+            "1023363": {
+              "upper_frames": 625,
+              "transitions": 8
+            },
+            "1023364": {
+              "upper_frames": 0,
+              "transitions": 0
+            },
+            "1023365": {
+              "upper_frames": 0,
+              "transitions": 0
+            }
+          },
+          "nearby_simultaneous_two_plane_frames": 210,
+          "sample_frames": [
+            99,
+            100,
+            101,
+            102,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115
+          ]
+        }
+      }
+    },
+    "b-traffic-long-block": {
+      "original": {
+        "kind": "congestion",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "held_frames": 1000,
+          "held_range": [
+            200,
+            1199
+          ],
+          "main_mission_before_release": [
+            2,
+            -1,
+            -1
+          ],
+          "blocker_first_motion": {
+            "1023363": 1230,
+            "1023364": 1430,
+            "1023365": 1330
+          },
+          "first_recovery_motion": 1336,
+          "ordinary_same_goal_recovery_order": 1500,
+          "automatic_before_recovery_order": true
+        },
+        "traffic_wait_stage8_entries_during_hold": 0,
+        "navigation_waiting_flag_frames_during_hold": 0,
+        "allied_blocker_query_entries_during_hold": 10000
+      },
+      "generated-c": {
+        "kind": "congestion",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "held_frames": 1000,
+          "held_range": [
+            200,
+            1199
+          ],
+          "main_mission_before_release": [
+            2,
+            -1,
+            -1
+          ],
+          "blocker_first_motion": {
+            "1023363": 1230,
+            "1023364": 1430,
+            "1023365": 1330
+          },
+          "first_recovery_motion": 1336,
+          "ordinary_same_goal_recovery_order": 1500,
+          "automatic_before_recovery_order": true
+        },
+        "traffic_wait_stage8_entries_during_hold": 0,
+        "navigation_waiting_flag_frames_during_hold": 0,
+        "allied_blocker_query_entries_during_hold": 10000
+      }
+    },
+    "traffic-long-block": {
+      "original": {
+        "kind": "congestion",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "held_frames": 1000,
+          "held_range": [
+            200,
+            1199
+          ],
+          "main_mission_before_release": [
+            2,
+            -1,
+            -1
+          ],
+          "blocker_first_motion": {
+            "1023363": 1230,
+            "1023364": 1430,
+            "1023365": 1330
+          },
+          "first_recovery_motion": 1336,
+          "ordinary_same_goal_recovery_order": 1500,
+          "automatic_before_recovery_order": true
+        },
+        "traffic_wait_stage8_entries_during_hold": 0,
+        "navigation_waiting_flag_frames_during_hold": 0,
+        "allied_blocker_query_entries_during_hold": 10000
+      },
+      "generated-c": {
+        "kind": "congestion",
+        "observed_lands": [
+          0,
+          1,
+          3
+        ],
+        "base_levels": [
+          0,
+          4
+        ],
+        "cell_bridge_flags": [
+          0,
+          1
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "held_frames": 1000,
+          "held_range": [
+            200,
+            1199
+          ],
+          "main_mission_before_release": [
+            2,
+            -1,
+            -1
+          ],
+          "blocker_first_motion": {
+            "1023363": 1230,
+            "1023364": 1430,
+            "1023365": 1330
+          },
+          "first_recovery_motion": 1336,
+          "ordinary_same_goal_recovery_order": 1500,
+          "automatic_before_recovery_order": true
+        },
+        "traffic_wait_stage8_entries_during_hold": 0,
+        "navigation_waiting_flag_frames_during_hold": 0,
+        "allied_blocker_query_entries_during_hold": 10000
+      }
+    },
+    "b-traffic-tu": {
+      "original": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          }
+        }
+      },
+      "generated-c": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          }
+        }
+      }
+    },
+    "traffic-tu": {
+      "original": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          }
+        }
+      },
+      "generated-c": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          }
+        }
+      }
+    },
+    "b-traffic-tu-obs": {
+      "original": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          },
+          "readonly_tube_progress": {
+            "1022581": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022582": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022583": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            },
+            "1022584": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            }
+          }
+        },
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          },
+          "readonly_tube_progress": {
+            "1022581": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022582": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022583": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            },
+            "1022584": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            }
+          }
+        },
+        "all_production_records_identical": true
+      }
+    },
+    "traffic-tu-obs": {
+      "original": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          },
+          "readonly_tube_progress": {
+            "1022581": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022582": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022583": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            },
+            "1022584": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            }
+          }
+        },
+        "all_production_records_identical": true
+      },
+      "generated-c": {
+        "kind": "tube",
+        "observed_lands": [
+          1,
+          7
+        ],
+        "base_levels": [
+          4
+        ],
+        "cell_bridge_flags": [
+          0
+        ],
+        "unit_heights": [
+          416
+        ],
+        "effects": {
+          "direction8_frames": {
+            "1022581": 192,
+            "1022582": 273,
+            "1022583": 198,
+            "1022584": 254
+          },
+          "readonly_tube_progress": {
+            "1022581": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022582": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 593
+            },
+            "1022583": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            },
+            "1022584": {
+              "routes": [
+                0,
+                1
+              ],
+              "waypoints": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "progress_samples": 586
+            }
+          }
+        },
+        "all_production_records_identical": true
+      }
+    }
+  },
+  "scope": "Actual unit upper flags and lower-plane motion; ordinary long obstruction and autonomous motion before the later same-goal order; Tube route/waypoint progression with production parity. Long blockage is not claimed as a new stage8/mode1/2 natural wait entry."
+}

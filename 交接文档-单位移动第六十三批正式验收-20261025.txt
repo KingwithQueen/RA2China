@@ -1,0 +1,16 @@
+当前正式63 / 验证64，2026-10-25。
+父提交：9b5f4e9af1219f6bfbe2f6cf90b5326130510c2a；程序SHA-256：1ac0b878ea0ca35cdc227b8bc4c8065e1272ee13abb641d52f51ca188016cf93。
+报告：D:\Program\红色警戒2\docs\单位移动第六十三批-桥面层切换与隧道拥堵交通-20261025.txt
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+
+ground_bridge_plane整理独立入桥/离桥服务，保持写回后重读标志；ground_segment分开桥层/候选解析与闸门/朝向等待，保持捕获context和重复查询；ground_tube_travel分离路由后的两端高度/段数衔接。只改3C，181C/312输入/37保护不变，无新算法/规则/资源或生产记录器改动。
+原版早/晚桥层各65536、路段65536、Tube入口32768、剩余/普通推进各131072，共491520例，改前和两段后通过；六组重复不累计，ABI/控制字范围以各探针字段为准。
+新自然交通：2401帧双层桥面（上车各8次层切换、下车保持下层、210帧两层近邻并行）；3601帧长拥堵（1000帧静止保留Move，1336帧自主恢复，早于1500再发令）；2401帧四车双向弯曲Tubes（方向8和实际路由/路点进展）。只读channel-observer逐模式与正式程序完整生产观测相等；不把长期静止阻塞计为stage8等待模式入口，也不宣称三层堆叠桥。
+总23配对40673帧，19严格、4既有局部功能差异；新三配方及Tube独立观测改前/后8配对21608帧严格，完整每模式轨迹相等。既有349/350、2020/2018、2219/2220、Z436/Z-193和旧失败边界保留。
+较长路径标签下3次ra2.csf启动失败与一份原版4→6层cardinal停滞轨迹原地保留；短标签同地图601帧原版/C严格重现停滞，原版前缀相等，单列不计成功自然交通。原因支持路径长度相关，未定位具体原版缓冲区；另保留一次范围/订单参数校验错误。见current-explorations.json。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\parts；探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\baseline-probe；旧宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\baseline-observer；新宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\baseline-channel-observer；新场景改前：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\traffic-baseline-scenes.json；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v64\final-source。
+前批堆改进和5项固定社区线索按哈希继承；原版1.006为准，允许有证据的机制改进，不保证全图最短。
+已核对清理36项对象、缓存及重复导出；保护原始输入、正式程序和全部历史证据。本地提交，不推送。
+下一步按功能需要推进混合桥/隧道、更大队列与饥饿恢复、或有证据的搜索改进；全游戏/完整资源视觉未验收。
+下一批显式指定父证据movement-state-v64并核对导入。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v64.py。

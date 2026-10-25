@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "groups": 6,
+  "cases": 491520,
+  "receipts": [
+    "part-channel-early-layer.json",
+    "part-channel-late-layer.json",
+    "part-channel-segment.json",
+    "part-channel-tube-entry.json",
+    "part-channel-tube-remainder.json",
+    "part-channel-tube-regular.json"
+  ],
+  "scope": "Early/late bridge layers, segment preparation, Tube entry/remainder/regular movement. Finite original state, callback order and checked ABI/control evidence; repeated runs do not add unique cases."
+}

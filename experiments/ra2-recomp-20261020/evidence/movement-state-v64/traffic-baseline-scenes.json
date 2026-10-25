@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-traffic-two-plane",
+      "frames": 2401,
+      "exe_sha256": "c00968ba023d99581ed8dc27b52991df4856029776cf7697f7edc6e453d2f9ce",
+      "comparison_sha256": "6f1662218fd5ee873c0fc1043a25cf3e193fcf66c9bd432ff717b77ca0eff71f",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "b-traffic-long-block",
+      "frames": 3601,
+      "exe_sha256": "c00968ba023d99581ed8dc27b52991df4856029776cf7697f7edc6e453d2f9ce",
+      "comparison_sha256": "0e1f2acb87de0cd5dd7d987b0cbe6e8255e8cf71ef13dff83c68b62da276ba84",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "b-traffic-tu",
+      "frames": 2401,
+      "exe_sha256": "c00968ba023d99581ed8dc27b52991df4856029776cf7697f7edc6e453d2f9ce",
+      "comparison_sha256": "33b09262eaa0a9ac8cb8786cfbb7d8689d6678c2ccab46d4099df2086d9fc24f",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "b-traffic-tu-obs",
+      "frames": 2401,
+      "exe_sha256": "8832bb24ebe473285180edc1935a1ae75b0b58d704038064b376a770f5fbc5fa",
+      "comparison_sha256": "b1f00c0b4beabf065ed71bdb3df15674d86477e596c70c58f94362a62811a28c",
+      "capture_host": true,
+      "strict_trace_equal": true
+    }
+  ],
+  "scope": "Two new ordinary-map traffic recipes executed against original and the unchanged parent production program before either service edit."
+}

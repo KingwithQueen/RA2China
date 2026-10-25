@@ -1,0 +1,19 @@
+{
+  "method": "Literal exact allowlist; no force or recursion",
+  "plan_sha256": "ab9370a538a2fc2df8d61296e6cbc423bb4fffad09fce43838bef5cc2853fbd7",
+  "types": [
+    {
+      "Name": "redundant-checker-lineage-export",
+      "Count": 1
+    },
+    {
+      "Name": "reproducible-root-probe-object",
+      "Count": 35
+    }
+  ],
+  "passed": true,
+  "protected_files": 3743,
+  "deleted_bytes": 374287,
+  "protected_files_unchanged": true,
+  "deleted_files": 36
+}
