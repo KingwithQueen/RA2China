@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "prepare_movement_v66.py",
+      "source_sha256": "9975f6f4c06aa46925091fabe4856afe42547a47b13eb522ec11b3e53a770f2f",
+      "derived": "prepare_movement_v67.py",
+      "derived_sha256": "b0149c98626d3ea8a7228192cfc5812f9b06b97cb12304ec3780022066d4ccb2",
+      "final_derived_sha256": "b0149c98626d3ea8a7228192cfc5812f9b06b97cb12304ec3780022066d4ccb2",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "run_batch_v66.py",
+      "source_sha256": "af081c0c42302e602a7d064728ab1da1e670fc2656b4a17fc8b565062159210a",
+      "derived": "run_batch_v67.py",
+      "derived_sha256": "d3c3589db4a977faef22761b8612d860df2284a05dfd837a26e9dd273e6fc9fe",
+      "final_derived_sha256": "eb2bbb3025914e50e5a389d95e74fe16a712a692b8aad8bc0ae0434942d3fab8",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "accept_dynamic_v66.py",
+      "source_sha256": "83c77a9ebc086b269164d2390cc51b634aece6fe21812ca4bb2679340d291b90",
+      "derived": "accept_dynamic_v67.py",
+      "derived_sha256": "fb39db6fc4b3bb1d315349b9b136624cd25eea534397b149cc2308e6ac452b92",
+      "final_derived_sha256": "fb39db6fc4b3bb1d315349b9b136624cd25eea534397b149cc2308e6ac452b92",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_sources_v66.py",
+      "source_sha256": "38cfc715d9e1119d2234ea0953c9d78a5389edd41fc6aad1d98f649740482c7d",
+      "derived": "audit_sources_v67.py",
+      "derived_sha256": "f24b5ed7e8ec13da27fcce16aeb4517b96197e331faf7ce2f07b046071f81e7b",
+      "final_derived_sha256": "f24b5ed7e8ec13da27fcce16aeb4517b96197e331faf7ce2f07b046071f81e7b",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_evidence_v66.py",
+      "source_sha256": "cf05d8fab82761afb0bf2c3ce14b34aa96725abf710322cab79c6c970b6973bd",
+      "derived": "audit_evidence_v67.py",
+      "derived_sha256": "5e956c6cba1e5d50a25a8ab56a4774da3673914ff9f32b3e392b46b9e0828549",
+      "final_derived_sha256": "5e956c6cba1e5d50a25a8ab56a4774da3673914ff9f32b3e392b46b9e0828549",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_scenes_v66.py",
+      "source_sha256": "0a0563f9871c95670791b354c92a0957329c45d71cb69e1c19a6d0e01fcbabc5",
+      "derived": "audit_scenes_v67.py",
+      "derived_sha256": "7d761ab6cc7e2e20ae107380bf732847acbdfd68d35432c23d821686c3fc9f2e",
+      "final_derived_sha256": "c5b36412b0af4fde8c87437c49f9f0fdd02c7b722ebde4743b41d9a9c23550b2",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "plan_cleanup_v66.py",
+      "source_sha256": "fd73310d7ab328df4eea7f16b189e9b0cdd3522c2f9863dbf58458675101cc15",
+      "derived": "plan_cleanup_v67.py",
+      "derived_sha256": "8cfa2256fb67d276c54101e7aa40cc44fb3e3cd70151fa55e7d9021efd62ed69",
+      "final_derived_sha256": "8cfa2256fb67d276c54101e7aa40cc44fb3e3cd70151fa55e7d9021efd62ed69",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "commit_movement_v66.py",
+      "source_sha256": "4c85f49d3026c898e8f162ea4ed928980af2ba502ad71b65a3534493836a3479",
+      "derived": "commit_movement_v67.py",
+      "derived_sha256": "0348142089291492bb238075a39aab8877d957503fb37276c1b965ae87b6e044",
+      "final_derived_sha256": "b8c48ea2e2229d78a025fd8095dd4a6f0f44beebf63a74a4ba07bed897ba2b15",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "verify_final_movement_v66.py",
+      "source_sha256": "e0fc5ece9fd7bb4cfa0677118974932adb30dd75c042a2aee0bdfb4e1e2b686c",
+      "derived": "verify_final_movement_v67.py",
+      "derived_sha256": "1ef9741934934c07c0abb0183a9cb80456dd7a8ac0ae616b889f67ac34440039",
+      "final_derived_sha256": "799268f9f7f183fab433d7fcf7cd3016538ec4ea1696422f663831ad43c88716",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "audit_baseline_channel_v66.py",
+      "source_sha256": "435d7601f38f81d18bf1e1542e6ac16a6edc8f6a6e2663ef9edc6bec18f1b769",
+      "derived": "audit_baseline_channel_v67.py",
+      "derived_sha256": "f5a3d19ed48929c93d71a1ec8732a7c75162650a96d49db458dcb06b031a2f0d",
+      "final_derived_sha256": "f5a3d19ed48929c93d71a1ec8732a7c75162650a96d49db458dcb06b031a2f0d",
+      "unchanged_after_initial_derivation": true
+    }
+  ],
+  "native_origins": [
+    {
+      "name": "reaction_probe.c",
+      "source": "evidence/movement-state-v42/reaction_probe.c",
+      "sha256": "a1522ebbd2c6909c05efa16710bad6fc89170b83cb2f9071de74deb3faaf82fc"
+    },
+    {
+      "name": "recovery_probe.c",
+      "source": "evidence/movement-state-v63/recovery_probe.c",
+      "sha256": "966d6a227253629486b699ef254c60b8bd0228ba94c3834375393e20accbbdb6"
+    }
+  ]
+}

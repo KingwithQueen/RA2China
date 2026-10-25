@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "mi",
+      "frames": 3001,
+      "exe_sha256": "99626db866ff6634421292f0c4d8cee7048b8d82d14651c920e9610a8f3744cb",
+      "comparison_sha256": "a938ed381d537c4d323f7c57c4fa11cc01e8a79edc607f4f10fdad496e2310ff",
+      "capture_host": true,
+      "strict_trace_equal": false,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "sc",
+      "frames": 3401,
+      "exe_sha256": "99626db866ff6634421292f0c4d8cee7048b8d82d14651c920e9610a8f3744cb",
+      "comparison_sha256": "32c61dafad773b716bcd3c8d3021338f065f1d881bcb22219b237545375f8e7b",
+      "capture_host": true,
+      "strict_trace_equal": false,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "aw3",
+      "frames": 3201,
+      "exe_sha256": "99626db866ff6634421292f0c4d8cee7048b8d82d14651c920e9610a8f3744cb",
+      "comparison_sha256": "988c7792fde8369fe937d410ada8681366a36ffa56668dd983c9a5a14e8b0273",
+      "capture_host": true,
+      "strict_trace_equal": false,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "fm",
+      "frames": 3401,
+      "exe_sha256": "99626db866ff6634421292f0c4d8cee7048b8d82d14651c920e9610a8f3744cb",
+      "comparison_sha256": "205513d3fd91e570bc71206daeb3f98640e05e6e76faa1bead57ad52adb43e56",
+      "capture_host": true,
+      "strict_trace_equal": false,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "traffic-rq",
+      "frames": 5401,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "b5ce1dc9be56b3eac2b5c625f17f9629e3543d066a57aabc022f15f10b88a141",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "original-behavior-boundary"
+    },
+    {
+      "tag": "traffic-bm",
+      "frames": 5401,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "6eb4673c5574c450b9231bf181845fe538e9c105998757261462a046e0260f79",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "original-behavior-boundary"
+    },
+    {
+      "tag": "traffic-rq-obs",
+      "frames": 5401,
+      "exe_sha256": "442ff87871f32c8472e0c254a64d6dd98b970460462250c8736ba500b6ee0703",
+      "comparison_sha256": "ad3e2f98e7528b3f670f429b0ec880fec1a3b758ebc04a32fbfdfba118a44f32",
+      "capture_host": true,
+      "strict_trace_equal": true,
+      "acceptance_kind": "original-behavior-boundary"
+    },
+    {
+      "tag": "traffic-bm-obs",
+      "frames": 5401,
+      "exe_sha256": "442ff87871f32c8472e0c254a64d6dd98b970460462250c8736ba500b6ee0703",
+      "comparison_sha256": "e5c1fd7031d7cecfe461962af7dfcec4f8fe50a804eba3d0dfa6484eedc05e9f",
+      "capture_host": true,
+      "strict_trace_equal": true,
+      "acceptance_kind": "original-behavior-boundary"
+    },
+    {
+      "tag": "contact-train",
+      "frames": 501,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "888e12c5803089c7928e0532dae3a25f9efe32374fb4498694b6f121707d751e",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "contact-crush",
+      "frames": 501,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "ac9550b91e886c71b44f55ab0bc35c99711883590c47b41e031b217b8913f79c",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "curve-up",
+      "frames": 601,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "33315e3403a3fb3cf9917e9d19574719a4f726885207f72ff9238b33d51f7a55",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "curve-tall-down",
+      "frames": 601,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "6d3e279146e046bd17d2f33de0ac3e978ef93d0ee8e1643350359e1043323992",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "regression"
+    },
+    {
+      "tag": "repeat-failure",
+      "frames": 1251,
+      "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+      "comparison_sha256": "1217e3a060d0e41f45b6aab59d6fe5e321175d12db99ce5477284308b915bde3",
+      "capture_host": false,
+      "strict_trace_equal": true,
+      "acceptance_kind": "regression"
+    }
+  ],
+  "production_scenes": 7,
+  "production_frames": 14257,
+  "observer_scenes": 6,
+  "observer_frames": 23806,
+  "scope": "Finite regression: mixed loading in both orders, two natural shores, full occupancy/release, bridge contact, repeated search failure and retained height anomalies."
+}

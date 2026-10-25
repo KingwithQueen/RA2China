@@ -1,0 +1,263 @@
+{
+  "passed": true,
+  "exe_sha256": "7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963",
+  "compile_receipt_sha256": "74b07bf903c6c41373172dec2bf23cfe15ce14d48f9f497cc55000afc1ac6071",
+  "production_c_sources": 181,
+  "compile_inputs": 312,
+  "input_suffix_counts": {
+    ".h": 131,
+    ".c": 181
+  },
+  "compiled_c_groups": {
+    "ra2/src/gameplay": 74,
+    "ra2/src/recomp": 59,
+    "ra2/src/runtime": 44,
+    "pcrecomp/runtime/recomp32": 2,
+    "pcrecomp/runtime/native32": 1,
+    "ra2/src/compat": 1
+  },
+  "generated_function_definitions": 23117,
+  "historical_lift_stats": {
+    "lifted": 23117,
+    "stubs": 0,
+    "errors": 0,
+    "no_terminator": 168,
+    "files": 58,
+    "lines": 5782830,
+    "target": "game",
+    "no_remaster": true,
+    "remaster_patches": 0,
+    "input_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+  },
+  "historical_lift_stats_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\work\\game\\lift_stats.json",
+  "historical_lift_stats_sha256": "ffaf6b92bbca621a435d4086bfa8f03f9a7863d685709acf62cdd4fed28e9351",
+  "unimplemented_guard_sites": 37,
+  "unique_guard_targets": 36,
+  "guard_inventory": [
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0025.c",
+      "line": 38423,
+      "enclosing_function": "sub_0059A908",
+      "target": "0x0059A90F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0009.c",
+      "line": 16755,
+      "enclosing_function": "sub_0049258E",
+      "target": "0x0049258E"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0004.c",
+      "line": 43413,
+      "enclosing_function": "sub_0043A1DE",
+      "target": "0x0043A1E1"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0045.c",
+      "line": 15608,
+      "enclosing_function": "sub_006F0C51",
+      "target": "0x006F0C55"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0023.c",
+      "line": 15859,
+      "enclosing_function": "sub_0055CB56",
+      "target": "0x0055CB58"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0031.c",
+      "line": 167972,
+      "enclosing_function": "sub_005FDABD",
+      "target": "0x005FDABD"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0032.c",
+      "line": 39314,
+      "enclosing_function": "sub_0061385A",
+      "target": "0x00613864"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0042.c",
+      "line": 42261,
+      "enclosing_function": "sub_006BD498",
+      "target": "0x006BD4A0"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0042.c",
+      "line": 42265,
+      "enclosing_function": "sub_006BD498",
+      "target": "0x006BD4A4"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0044.c",
+      "line": 20369,
+      "enclosing_function": "TerrainTypeClass__destructor",
+      "target": "0x006E53E3"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0047.c",
+      "line": 24598,
+      "enclosing_function": "sub_00712E30",
+      "target": "0x00712E32"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 33885,
+      "enclosing_function": "sub_0079071A",
+      "target": "0x0079071D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 33936,
+      "enclosing_function": "sub_00790725",
+      "target": "0x00790728"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34086,
+      "enclosing_function": "sub_0079075E",
+      "target": "0x00790761"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34147,
+      "enclosing_function": "sub_00790779",
+      "target": "0x0079077C"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34323,
+      "enclosing_function": "sub_007907EE",
+      "target": "0x007907F1"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34388,
+      "enclosing_function": "sub_0079080D",
+      "target": "0x00790810"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34574,
+      "enclosing_function": "sub_00790892",
+      "target": "0x00790895"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34639,
+      "enclosing_function": "sub_007908B1",
+      "target": "0x007908B4"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34825,
+      "enclosing_function": "sub_00790936",
+      "target": "0x00790939"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 34890,
+      "enclosing_function": "sub_00790955",
+      "target": "0x00790958"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35076,
+      "enclosing_function": "sub_007909DA",
+      "target": "0x007909DD"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35141,
+      "enclosing_function": "sub_007909F9",
+      "target": "0x007909FC"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35327,
+      "enclosing_function": "sub_00790A7E",
+      "target": "0x00790A81"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35392,
+      "enclosing_function": "sub_00790A9D",
+      "target": "0x00790AA0"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35578,
+      "enclosing_function": "sub_00790B22",
+      "target": "0x00790B25"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 35643,
+      "enclosing_function": "sub_00790B41",
+      "target": "0x00790B44"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 36282,
+      "enclosing_function": "sub_00790DF6",
+      "target": "0x00790FE3"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 36291,
+      "enclosing_function": "sub_00790DF6",
+      "target": "0x00790FF2"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 36728,
+      "enclosing_function": "sub_007910AE",
+      "target": "0x0079129B"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 36737,
+      "enclosing_function": "sub_007910AE",
+      "target": "0x007912AA"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+      "line": 50407,
+      "enclosing_function": "sub_0079226E",
+      "target": "0x0079227D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0017.c",
+      "line": 8506,
+      "enclosing_function": "sub_004FEC4D",
+      "target": "0x004FEC4D"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+      "line": 90387,
+      "enclosing_function": "DropListClass__constructor_004A5393",
+      "target": "0x004A5393"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0037.c",
+      "line": 59454,
+      "enclosing_function": "sub_00676E69",
+      "target": "0x00676E6F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0037.c",
+      "line": 59569,
+      "enclosing_function": "sub_00676E6F",
+      "target": "0x00676E6F"
+    },
+    {
+      "path": "ra2/src/recomp/gen_game/recomp_0035.c",
+      "line": 5416,
+      "enclosing_function": "sub_0063965C",
+      "target": "0x0063965C"
+    }
+  ],
+  "whole_game_equivalence_verified": false,
+  "completion_percentage": null,
+  "scope": "Current compiled source counts and generated definition/guard inventory. 74 gameplay files and lifted function counts are not counts of fully accepted features; old x64 handwritten-engine milestones are not merged into this x86 recompilation status."
+}

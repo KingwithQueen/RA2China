@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "failure_budget_cases": 65536,
+  "shared_finish_cases": 65536,
+  "state_calls_abi_verified": true,
+  "unique_cases": 131072,
+  "kind": "failure-budget-finish",
+  "probe_name": "recovery",
+  "probe_exe_sha256": "46e7ec3db574e51cf6246dac8e74e6b89ab104048af93020258edcf896d16f0a",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,0 +1,12 @@
+{
+  "phase": 0,
+  "passed": true,
+  "reaction_cases": 65536,
+  "live_stack_locals_verified": true,
+  "state_calls_abi_cw_verified": true,
+  "unique_cases": 65536,
+  "kind": "dispatch",
+  "probe_name": "reaction",
+  "probe_exe_sha256": "6686ed17b64e3bf200b7ef15b1f62e770014266b53da88fa01edc987b886b48b",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

@@ -1,0 +1,880 @@
+{
+  "passed": true,
+  "scenes": [
+    {
+      "tag": "traffic-rq",
+      "map_sha256": "5d7e8122382528824871bc255c2becdf4ec2121eab36f0fa97b5f74f0a0becda",
+      "catalog": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\runs\\id-cq3\\original\\cells.json",
+      "catalog_sha256": "b378457b66412352046e2383ae901aa036793d7a8ac788faf7d6001bd1cd3d01",
+      "checked": [
+        {
+          "stage": "start",
+          "cell": [
+            80,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            81,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            82,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            83,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            80,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            81,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            82,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            83,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            80,
+            116
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            81,
+            116
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            82,
+            116
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            79,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            68,
+            114
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            67,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            67,
+            115
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            65,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            63,
+            112
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            64,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            65,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            66,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            63,
+            114
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            64,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            66,
+            114
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            63,
+            116
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            64,
+            116
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            65,
+            116
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            66,
+            116
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            63,
+            110
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            64,
+            110
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            65,
+            110
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        }
+      ]
+    },
+    {
+      "tag": "traffic-bm",
+      "map_sha256": "9d9fb8220b911fdcb26fabae4fbbbfddaa9a9bf7023d6a85f29689acc059486a",
+      "catalog": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\runs\\id-cm5\\original\\cells.json",
+      "catalog_sha256": "7df30ea71cc74c8f23df006bb8b317a808051146060e89cb5361eb3ecdd41f94",
+      "checked": [
+        {
+          "stage": "start",
+          "cell": [
+            60,
+            60
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            61,
+            60
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            59,
+            60
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            62,
+            60
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            60,
+            58
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            61,
+            58
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            59,
+            58
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            62,
+            58
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            77,
+            76
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            78,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            77,
+            74
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            78,
+            74
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            77,
+            78
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            78,
+            78
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            77,
+            80
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "start",
+          "cell": [
+            78,
+            80
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            60,
+            79
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            59,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            73,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            61,
+            79
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            58,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            74,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            60,
+            77
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            57,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            75,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            61,
+            77
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            56,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            76,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            60,
+            75
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            59,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            73,
+            74
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            61,
+            75
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            58,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            74,
+            74
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            60,
+            79
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            57,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            75,
+            74
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            61,
+            79
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            56,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            76,
+            74
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            56,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            57,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            58,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            59,
+            76
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            56,
+            78
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            57,
+            78
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            58,
+            78
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "stage": "ordinary-move-goal",
+          "cell": [
+            59,
+            78
+          ],
+          "land": 1,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        }
+      ]
+    }
+  ],
+  "scope": "Every start, waypoint and final goal checked against the locked original native catalog before game execution; occupancy and routing still require natural acceptance."
+}

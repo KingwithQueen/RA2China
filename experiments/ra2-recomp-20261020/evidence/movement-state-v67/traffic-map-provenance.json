@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "path": "evidence/movement-state-v67/fixtures/traffic-rq.MAP",
+      "sha256": "5d7e8122382528824871bc255c2becdf4ec2121eab36f0fa97b5f74f0a0becda",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\fixtures\\traffic-cq2.MAP",
+      "source_sha256": "036523fe8700988f33fcc42e236c5b0e23608e8ceef33686001ee53318c2107f",
+      "only_units_and_infantry_changed": true
+    },
+    {
+      "path": "evidence/movement-state-v67/fixtures/traffic-bm.MAP",
+      "sha256": "9d9fb8220b911fdcb26fabae4fbbbfddaa9a9bf7023d6a85f29689acc059486a",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\fixtures\\traffic-cm5.MAP",
+      "source_sha256": "da218f1aa55691e330aa9c81499c522eba9abf37de5d8e0674e296b34b1e666e",
+      "only_units_and_infantry_changed": true
+    }
+  ]
+}

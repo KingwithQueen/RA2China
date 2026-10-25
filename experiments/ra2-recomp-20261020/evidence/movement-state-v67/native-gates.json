@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "groups": 5,
+  "cases": 393216,
+  "receipts": [
+    "part-recovery-dispatch.json",
+    "part-recovery-report.json",
+    "part-recovery-attack.json",
+    "part-recovery-blocked.json",
+    "part-recovery-failure-budget-finish.json"
+  ],
+  "scope": "Obstacle dispatch/report/attack/blocked entries and failure-budget/shared recovery finish. Finite original state, callback order and checked ABI/control evidence; repeated runs do not add unique cases."
+}

@@ -1,0 +1,194 @@
+当前正式66 / 验证67，2026-10-25。
+父提交：6d677d13e00c7cb0a4567f72763a82c016fd2e96；程序SHA-256：7741caebc7df6ac3a6f504f34bca557e1890c4f7fa7521141fdeaf22dda4f963。
+报告：D:\Program\红色警戒2\docs\单位移动第六十六批-反向竞争通道与障碍恢复-20261025.txt
+当前进度与剩余：D:\Program\红色警戒2\docs\当前进度与剩余内容-20261025-第六十六批.txt
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt；机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt。
+
+仅改ground_reaction/ground_recovery两处生产C，整理分派/对象攻击/重试出口、预算耗尽和共享恢复收尾；回调顺序、动态context/对象读取、返回/停止约定保持，无新FIFO/退避/路径算法。181C/312输入/37保护。
+原版四reaction入口与两recovery段，共五收据393216唯一例；改前和两段后通过，重复不累计，ABI/控制字范围按各探针字段。
+两张普通地图：反向12请求+3占道；桥隧双向8+8请求。所有起点/路点/目标先经原版地形检查；每图5401帧，正式/观测改前/最终共8配对43208帧严格。完整轨迹等于冻结基线；观察与正式生产记录逐模式一致；新增8配对为边界对照，不是全请求恢复成功。
+[
+  {
+    "tag": "traffic-rq",
+    "kind": "reverse",
+    "frames": 5401,
+    "requests": 12,
+    "blockers": 3,
+    "actual_tube_actors": 3,
+    "non_tube_requests": 9,
+    "exact_goal_count": 8,
+    "near_goal_count": 0,
+    "stationary_request_count": 4,
+    "last_exact_goal_arrival": 2433,
+    "by_direction": {
+      "1": {
+        "requests": 12,
+        "actual_tube_actors": 3,
+        "non_tube_requests": 9,
+        "planned_min_actual": 4,
+        "planned_min_actual_met": false,
+        "arrival_window": [
+          5,
+          2100
+        ],
+        "oldest_id": 1022592,
+        "oldest_observed": {
+          "request_frame": 5,
+          "arrival_frame": 1867,
+          "request_to_arrival": 1862,
+          "requested_route": 1,
+          "goal_outcome": {
+            "final_cell": [
+              65,
+              114
+            ],
+            "requested_cell": [
+              65,
+              114
+            ],
+            "exact_goal": true,
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "final_guard": true,
+            "cell_distance": 0,
+            "post_request_motion_frames": 366
+          },
+          "route": "tube",
+          "first_active_tube": 71,
+          "exit_publish_frame": 1681,
+          "terminal_stationary_frames": 1416,
+          "longest_terminal_wait": 1416,
+          "request_to_exit": 1676,
+          "first_bridge_frame": null,
+          "later_requests_exited_first": 2
+        },
+        "peak_terminal_waiters": 3,
+        "exits_during_arrivals": 3,
+        "maximum_request_to_exit": 1676,
+        "maximum_terminal_wait": 1416
+      }
+    },
+    "opposing_inflight_frames": null
+  },
+  {
+    "tag": "traffic-bm",
+    "kind": "mixed",
+    "frames": 5401,
+    "requests": 16,
+    "blockers": 0,
+    "actual_tube_actors": 7,
+    "non_tube_requests": 9,
+    "exact_goal_count": 13,
+    "near_goal_count": 3,
+    "stationary_request_count": 0,
+    "last_exact_goal_arrival": 3368,
+    "by_direction": {
+      "0": {
+        "requests": 8,
+        "actual_tube_actors": 5,
+        "non_tube_requests": 3,
+        "planned_min_actual": 2,
+        "planned_min_actual_met": true,
+        "arrival_window": [
+          800,
+          2900
+        ],
+        "oldest_id": 1023310,
+        "oldest_observed": {
+          "request_frame": 800,
+          "arrival_frame": 1128,
+          "request_to_arrival": 328,
+          "requested_route": 0,
+          "goal_outcome": {
+            "final_cell": [
+              73,
+              76
+            ],
+            "requested_cell": [
+              73,
+              76
+            ],
+            "exact_goal": true,
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "final_guard": true,
+            "cell_distance": 0,
+            "post_request_motion_frames": 340
+          },
+          "route": "tube",
+          "first_active_tube": 866,
+          "exit_publish_frame": 1066,
+          "terminal_stationary_frames": 0,
+          "longest_terminal_wait": 0,
+          "request_to_exit": 266,
+          "first_bridge_frame": 90,
+          "later_requests_exited_first": 0
+        },
+        "peak_terminal_waiters": 0,
+        "exits_during_arrivals": 3,
+        "maximum_request_to_exit": 323,
+        "maximum_terminal_wait": 0
+      },
+      "1": {
+        "requests": 8,
+        "actual_tube_actors": 2,
+        "non_tube_requests": 6,
+        "planned_min_actual": 2,
+        "planned_min_actual_met": true,
+        "arrival_window": [
+          900,
+          3000
+        ],
+        "oldest_id": 1023318,
+        "oldest_observed": {
+          "request_frame": 900,
+          "arrival_frame": 1357,
+          "request_to_arrival": 457,
+          "requested_route": 1,
+          "goal_outcome": {
+            "final_cell": [
+              56,
+              76
+            ],
+            "requested_cell": [
+              56,
+              76
+            ],
+            "exact_goal": true,
+            "final_mission": [
+              5,
+              -1,
+              -1
+            ],
+            "final_guard": true,
+            "cell_distance": 0,
+            "post_request_motion_frames": 460
+          },
+          "route": "tube",
+          "first_active_tube": 1064,
+          "exit_publish_frame": 1257,
+          "terminal_stationary_frames": 0,
+          "longest_terminal_wait": 0,
+          "request_to_exit": 357,
+          "first_bridge_frame": null,
+          "later_requests_exited_first": 0
+        },
+        "peak_terminal_waiters": 0,
+        "exits_during_arrivals": 2,
+        "maximum_request_to_exit": 398,
+        "maximum_terminal_wait": 0
+      }
+    },
+    "opposing_inflight_frames": 161
+  }
+]
+总23配对62273帧，19严格、4既有局部功能差异。无限负载无饥饿/FIFO/全图最短未证明。旧RNG、时序、高差和起点异常、失败输入及无效快照原地继承，不计当前新覆盖，不要求逐BUG复刻。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\baseline；有效回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\parts\reaction、D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\parts\recovery；探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\baseline-probe；宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\baseline-channel-observer；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v67\final-source。
+清理25项无用产物，本地提交，不推送。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v67.py。
+下一批父证据显式指定movement-state-v67；优先按进度清单收口移动功能边界，再进入战斗/对象生命周期等相邻玩法，避免仅无限扩大相同交通配方。

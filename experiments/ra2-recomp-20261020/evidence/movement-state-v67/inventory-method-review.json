@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "initial_sub_name_only_count": 16260,
+  "current_all_named_and_sub_entries": 23117,
+  "initial_inventory": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v67\\progress-inventory-subnames-only.json",
+  "current_inventory": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v67\\progress-inventory.json",
+  "reason": "Initial regex counted only sub_ names; current counter includes named original functions and excludes the registration table. Neither count is a gameplay completion metric. No production source change."
+}

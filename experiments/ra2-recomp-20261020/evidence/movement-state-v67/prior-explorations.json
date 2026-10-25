@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\current-explorations.json",
+  "sha256": "5fbaf164e48c951bf2c4fa9929fb5493780cb185f8d9ffea1c13ea96f08d9072",
+  "rerun": false,
+  "scope": "Retain prior invalid targets, unresolved stationary start and explicitly invalidated overlap snapshot by hash. No current positive claims for them."
+}

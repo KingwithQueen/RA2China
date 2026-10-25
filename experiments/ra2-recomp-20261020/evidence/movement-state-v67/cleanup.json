@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "protected_files": 3834,
+  "method": "Literal exact allowlist; no force or recursion",
+  "protected_files_unchanged": true,
+  "deleted_files": 25,
+  "plan_sha256": "28871d7b30c99068f138f28bc78ab37d691bfc8c70d30b08daa319f71f971031",
+  "types": [
+    {
+      "Name": "redundant-checker-lineage-export",
+      "Count": 1
+    },
+    {
+      "Name": "reproducible-root-probe-object",
+      "Count": 24
+    }
+  ],
+  "deleted_bytes": 276261
+}
