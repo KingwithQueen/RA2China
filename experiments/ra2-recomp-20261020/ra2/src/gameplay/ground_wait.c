@@ -17,6 +17,28 @@ static int32_t level_difference(int32_t left, int32_t right)
     return result;
 }
 
+/* 通行后才解析可碾覆盖和层高；每次查询仍使用当时的context。 */
+static void resolve_clear_terrain(int32_t overlay,int32_t reference_level,
+    Ra2ClearanceResult *result,const Ra2ClearanceServices *services)
+{
+    if (overlay != -1 && services->query(services->context, RA2_CLEARANCE_OVERLAY_CRUSHABLE))
+    {
+        result->crush_overlay = 1;
+    }
+    int32_t level = services->query(services->context, RA2_CLEARANCE_CELL_LEVEL);
+    if (level_difference(reference_level, level) >= 2)
+    {
+        result->target_level = reference_level;
+        result->land = 1;
+    }
+    else
+    {
+        /* 原版重新查询两次；引擎服务的调用顺序是行为的一部分。 */
+        result->target_level = services->query(services->context, RA2_CLEARANCE_CELL_LEVEL);
+        result->land = services->query(services->context, RA2_CLEARANCE_CELL_LAND);
+    }
+}
+
 Ra2ClearancePhase ra2_ground_check_clearance(Ra2GroundPrepareState *state, Ra2WorldPoint invalid_position,
     int32_t passage, int32_t reference_level, int clear_only, Ra2ClearanceResult *result,
     const Ra2ClearanceServices *services)
@@ -26,22 +48,7 @@ Ra2ClearancePhase ra2_ground_check_clearance(Ra2GroundPrepareState *state, Ra2Wo
         int32_t overlay = services->query(services->context, RA2_CLEARANCE_OVERLAY_INDEX);
         if (passage == RA2_CELL_CLEAR)
         {
-            if (overlay != -1 && services->query(services->context, RA2_CLEARANCE_OVERLAY_CRUSHABLE))
-            {
-                result->crush_overlay = 1;
-            }
-            int32_t level = services->query(services->context, RA2_CLEARANCE_CELL_LEVEL);
-            if (level_difference(reference_level, level) >= 2)
-            {
-                result->target_level = reference_level;
-                result->land = 1;
-            }
-            else
-            {
-                /* 原版重新查询两次；引擎服务的调用顺序是行为的一部分。 */
-                result->target_level = services->query(services->context, RA2_CLEARANCE_CELL_LEVEL);
-                result->land = services->query(services->context, RA2_CLEARANCE_CELL_LAND);
-            }
+            resolve_clear_terrain(overlay,reference_level,result,services);
             return RA2_CLEARANCE_TERRAIN_SPEED;
         }
         if (passage != RA2_CELL_GATE)
@@ -54,22 +61,17 @@ Ra2ClearancePhase ra2_ground_check_clearance(Ra2GroundPrepareState *state, Ra2Wo
     return passage == RA2_CELL_MOVING_OBSTACLE ? RA2_CLEARANCE_WAIT_FOR_TRAFFIC : RA2_CLEARANCE_OTHER_OBSTACLE;
 }
 
-Ra2TrafficWaitPhase ra2_ground_wait_for_traffic(Ra2TrafficWaitState *state,
-    const Ra2TrafficWaitServices *services)
+/* 首次阻塞只启动一次；start_wait可改写计时或waiting，调用后不覆盖。 */
+static void start_traffic_wait_once(Ra2TrafficWaitState *state,const Ra2TrafficWaitServices *services)
 {
-    if (!state->waiting)
-    {
-        state->waiting = 1;
-        state->obstruction.start_frame = services->current_frame(services->context);
-        state->obstruction.remaining_frames = services->wait_duration(services->context);
-        services->start_wait(services->context, state->obstruction.start_frame, state->obstruction.remaining_frames);
-    }
-    int32_t frame = services->current_frame(services->context);
-    if (!ra2_ground_retry_timer_ready(state->retry, frame))
-    {
-        return RA2_TRAFFIC_REPORT_OBSTACLE;
-    }
-    int mode = state->waiting && ra2_ground_retry_timer_ready(state->obstruction, frame) ? 2 : 1;
+    state->waiting = 1;
+    state->obstruction.start_frame = services->current_frame(services->context);
+    state->obstruction.remaining_frames = services->wait_duration(services->context);
+    services->start_wait(services->context, state->obstruction.start_frame, state->obstruction.remaining_frames);
+}
+
+static Ra2TrafficWaitPhase rebuild_after_traffic_wait(int mode,const Ra2TrafficWaitServices *services)
+{
     int rebuilt = services->rebuild_path(services->context, mode);
     /* 重建服务可替换对象或推进帧；统一出口在服务返回后重新查询。 */
     Ra2PrepareExitServices exit_services = { services->context, services->owner_exists,
@@ -77,4 +79,15 @@ Ra2TrafficWaitPhase ra2_ground_wait_for_traffic(Ra2TrafficWaitState *state,
         services->current_frame, services->retry_delay, services->restart_retry };
     return ra2_ground_prepare_after_rebuild(rebuilt, 0, &exit_services)
         ? RA2_TRAFFIC_RETURN_TRUE : RA2_TRAFFIC_RETURN_FALSE;
+}
+
+Ra2TrafficWaitPhase ra2_ground_wait_for_traffic(Ra2TrafficWaitState *state,
+    const Ra2TrafficWaitServices *services)
+{
+    if(!state->waiting)start_traffic_wait_once(state,services);
+    int32_t frame=services->current_frame(services->context);
+    if(!ra2_ground_retry_timer_ready(state->retry,frame))return RA2_TRAFFIC_REPORT_OBSTACLE;
+    /* 重试门禁先于长等待判断；保留回绕计时和mode 1/2的原版选择。 */
+    int mode=state->waiting && ra2_ground_retry_timer_ready(state->obstruction,frame) ? 2:1;
+    return rebuild_after_traffic_wait(mode,services);
 }

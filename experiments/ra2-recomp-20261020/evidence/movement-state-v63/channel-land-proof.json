@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "land_table": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v54\\land-type-table-proof.json",
+  "land_table_sha256": "dedc4472f8a0cd21bba2cccd8c476a90fe7518b52ef678429f4a7798a5e9a039",
+  "original_rules": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "original_rules_sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f",
+  "road_land_id": 1,
+  "road_rule_section": "[Road]\nFoot=100%\nTrack=100%\nWheel=100%\nHover=75%\nFloat=0%\nFloatBeach=0%\nAmphibious=100%\nBuildable=yes\n\n; open water\n",
+  "raised_road_level": 4,
+  "expected_z": 416,
+  "bridge_flag_transition_proved": false,
+  "checker_correction": "Flat-only allowed land set omitted Road=1. The raised route is original Road with level4, not a slope-height mismatch. Original/generated-C raw comparison passed; map, rules, production and traces untouched.",
+  "raw_game_rerun": false
+}

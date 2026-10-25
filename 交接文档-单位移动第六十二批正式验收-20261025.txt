@@ -1,0 +1,14 @@
+当前正式62 / 验证63，2026-10-25。
+父提交：ccd7050fdf03e2d4c41770412e757264b79d1e2b；程序SHA-256：c00968ba023d99581ed8dc27b52991df4856029776cf7697f7edc6e453d2f9ce。
+报告：D:\Program\红色警戒2\docs\单位移动第六十二批-等待障碍恢复与层高通道交通-20261025.txt
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+
+ground_wait完成通行地形、首次等待、计时重建与统一出口服务；ground_obstacle完成边界后实时方向、近目标停止与恢复队列发布服务。保留回调顺序、实时/捕获context边界、回绕计时及层高回退。只改2C，181C/312输入/37保护不变，runtime/生成入口/记录器/比较器/规则资源未改。
+原版wait三相196608、obstacle两入口131072、未改动recovery两出口131072，共458752例，改前及两段后通过。五组，重复不累计，ABI/控制字范围以各探针字段为准。
+两个3001帧普通交通配方先分批释放障碍，再通过既有4/5层坡道和交叉路口，实测Z416..520包含中间高度，全部活动单位有上下坡、近邻不同高度并行。四窗活动、行进改发、空队列再发、生命、路径、目标与Guard通过。不是新的Bridge flag切换证明，也不泛称内部每个等待分支自然覆盖。
+总19配对31069帧，15严格、4既有局部功能差异；新交通改前/后4配对12004帧严格且完整每模式轨迹相等。既有349/350窗口、2020/2018和2219/2220时序、Z436/Z-193异常、旧失败地图与边界保留。堆改进和5项固定社区线索按哈希继承，不重计新门禁。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\parts；探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\baseline-probe；宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\baseline-observer；自然改前：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\runs\b-traffic-height-ramp、D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\runs\b-traffic-height-crossroad；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v63\final-source。
+清理26项对象文件、缓存和独立留存后的重复导出；保护原始输入、正式程序与历史证据。本地提交，不推送。
+后续按功能推进多层桥面/隧道交通、长时间拥堵恢复或有证据的寻路改进；全游戏/完整资源视觉/全图最优路径未验收。
+派生下一批显式指定父证据movement-state-v63并核对导入。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v63.py。

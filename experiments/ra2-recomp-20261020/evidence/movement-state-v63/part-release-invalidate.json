@@ -1,0 +1,12 @@
+{
+  "phase": 1,
+  "passed": true,
+  "fragment_cases": 65536,
+  "live_stack_locals_verified": true,
+  "state_calls_abi_cw_verified": true,
+  "kind": "invalidate",
+  "cases": 65536,
+  "probe_name": "wait",
+  "probe_exe_sha256": "ad172d1bb9efd20a1d712601149a85e9fb5920ab8517d6ea63814a9d5e163529",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

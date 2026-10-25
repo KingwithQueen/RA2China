@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "rerun": false,
+  "parent": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v62\\traffic-effects.json",
+  "sha256": "00f5857e4077da9761f58d4ddb9a462f3480341dce7fd8d3811ac677f0a41f5c",
+  "scope": "Prior flat/elevated channels remain retained; current round executes compound blocker-release, existing ramp and crossroad recipes with normal movement orders."
+}

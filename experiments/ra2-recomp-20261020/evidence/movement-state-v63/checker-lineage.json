@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "run_batch_v62.py",
+      "source_sha256": "54f20f412ca38fc27eda1544d6acf95593bfb80331d170b2863042e2f1211d77",
+      "derived": "run_batch_v63.py",
+      "derived_sha256": "4c3a8dab99f2e16601a453f0ed03dd1e85de7b0dce40f02ee910ffef6d076f5c",
+      "final_derived_sha256": "9d969b2ea2d446d967287811db09659b65e09319113df2e5dfa14a2409bcd39f",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "accept_dynamic_v62.py",
+      "source_sha256": "fb1e72762f6a3206ad53b3984b9950f010ef79b8ac9a2ea234384cb23cbaf694",
+      "derived": "accept_dynamic_v63.py",
+      "derived_sha256": "3df877315fd17b5b030f5fdf5e69d2c85277cab0004fe8d4028c82e91411c77a",
+      "final_derived_sha256": "3df877315fd17b5b030f5fdf5e69d2c85277cab0004fe8d4028c82e91411c77a",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "accept_traffic_v62.py",
+      "source_sha256": "4f90f2117deb4ebd63aa0bf89ca58de2df2d7f252837af213784581a2826faae",
+      "derived": "accept_traffic_v63.py",
+      "derived_sha256": "84be3a8dc2808474ef3723ec9dd5775301322178e0a3752fe2d14a9b8729df50",
+      "final_derived_sha256": "759a5c9205b8e17098c2141012b24aff91537c370c2a4ef5f2f8d0e3f4ddfca8",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "audit_scenes_v62.py",
+      "source_sha256": "fe6efeab54b540e947437cbe6b5a67d115a08cdc49bd0a8d6866fb9718e8318d",
+      "derived": "audit_scenes_v63.py",
+      "derived_sha256": "c0a06c84beb7729f0e58596d1d44bf701497dbd01829af4bd96b830bfedd46b4",
+      "final_derived_sha256": "7d7191db75810a302c23b61229e32c7d09aed7e8b2f3d927a1539ed908ab06a2",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "audit_sources_v62.py",
+      "source_sha256": "bf9f6deb68e0a912b2dfd87590131791526ef015b9c554697a107108c8106905",
+      "derived": "audit_sources_v63.py",
+      "derived_sha256": "7f98ed36e8398f5401fb82b3033e0dafac91eee7567b07fe97a5fa916f0d7cd9",
+      "final_derived_sha256": "cace92c5d4a70e8f9714495661101d44b818e34a22264d883c4ff6d34dbdfe98",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "plan_cleanup_v62.py",
+      "source_sha256": "e038f85a0777c83300973f2ae412c0d00f2b0113698c112cc5262cca683a51f5",
+      "derived": "plan_cleanup_v63.py",
+      "derived_sha256": "9c5c96f32b2d1c2a912609a54555b740cb5b764a9055a63366143a495ca3d309",
+      "final_derived_sha256": "16ff10756039e619cbfe54d71dc0020102faae9c73591ee171231413060243cc",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "commit_movement_v62.py",
+      "source_sha256": "4f018c652945fad6a638977fa89f9f28ad33d9df80c7d95e20e76b65264bd0a3",
+      "derived": "commit_movement_v63.py",
+      "derived_sha256": "55ee16754ed4f19b7359dd9f0adaf83a24d1f92b90bc474c79904bb8bbf9821f",
+      "final_derived_sha256": "55ee16754ed4f19b7359dd9f0adaf83a24d1f92b90bc474c79904bb8bbf9821f",
+      "unchanged_after_initial_derivation": true
+    },
+    {
+      "source": "audit_evidence_v62.py",
+      "source_sha256": "77d5604136d062c17b33233a79ebb423c37d5631201b815ae8690f817fadadd7",
+      "derived": "audit_evidence_v63.py",
+      "derived_sha256": "9b0ee86360c37e190a119e48fc8cc39e758707cdbb245097eae06a1046e5acfe",
+      "final_derived_sha256": "79df0a03554476b8a66c948becc79f1453e480d966fb006604ac344cf85eaea2",
+      "unchanged_after_initial_derivation": false
+    },
+    {
+      "source": "verify_final_movement_v62.py",
+      "source_sha256": "70352355b6cc72335be890f362c5007d86321b1ea3b9587e4340882f62850511",
+      "derived": "verify_final_movement_v63.py",
+      "derived_sha256": "9c0fa24ece21f892cff37200d53ad8d77c15f25f10c950354fa7c4d9085983ce",
+      "final_derived_sha256": "f7faaa5235a6c474c5b3440b7ba580c5404832ed35d62e28407e6439c3f9d7a2",
+      "unchanged_after_initial_derivation": false
+    }
+  ],
+  "native_origins": [
+    {
+      "name": "wait_probe.c",
+      "source": "evidence/movement-state-v44/wait_probe.c",
+      "sha256": "b01a70a5a7cd3c3e791cf36c963b5a8922e918950bff8ed9de2bc7e4241f3411"
+    },
+    {
+      "name": "obstacle_probe.c",
+      "source": "evidence/movement-state-v53/obstacle_probe.c",
+      "sha256": "330f7cfee7da9b6cb24def9a7433ee2cac96218b705c664e10f50da86e32b137"
+    },
+    {
+      "name": "recovery_probe.c",
+      "source": "evidence/movement-state-v53/recovery_probe.c",
+      "sha256": "966d6a227253629486b699ef254c60b8bd0228ba94c3834375393e20accbbdb6"
+    }
+  ]
+}

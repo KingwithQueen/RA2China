@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "groups": 5,
+  "cases": 458752,
+  "receipts": [
+    "part-release-clearance.json",
+    "part-release-invalidate.json",
+    "part-release-wait.json",
+    "part-release-obstacle.json",
+    "part-release-recovery.json"
+  ],
+  "scope": "Clearance, invalidation, traffic wait, failed/rebuilt obstacle observation and failure recovery. Finite original state, callback order and checked ABI/control evidence; repeated runs do not add unique cases."
+}

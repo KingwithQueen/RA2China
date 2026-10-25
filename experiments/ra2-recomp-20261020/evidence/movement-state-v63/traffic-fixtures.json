@@ -1,0 +1,345 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "path": "evidence/movement-state-v63/fixtures/traffic-height-ramp.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v62\\fixtures\\bridge-cross-release-north.MAP",
+      "source_sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+      "last": 3000,
+      "tag": "traffic-height-ramp",
+      "baseline_tag": "b-traffic-height-ramp",
+      "capture_host": false,
+      "cell_catalog": true,
+      "channel_kind": "ramp",
+      "height_range": [
+        416,
+        520
+      ],
+      "required_base_levels": [
+        4,
+        5
+      ],
+      "actor_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023367
+      ],
+      "ground_vehicle_ids": [
+        1023362,
+        1023363,
+        1023364
+      ],
+      "actor_health": {
+        "1023362": 200,
+        "1023363": 200,
+        "1023364": 200,
+        "1023367": 125
+      },
+      "stationary_health": {
+        "1023365": 125,
+        "1023366": 125,
+        "1023368": 125,
+        "1023369": 125
+      },
+      "orders": [
+        "1:1023364:2:60:70",
+        "1:1023363:2:61:70",
+        "5:1023362:2:60:75",
+        "5:1023367:2:60:61",
+        "300:1023364:2:60:79",
+        "210:1023363:2:61:79",
+        "600:1023362:2:60:43",
+        "600:1023363:2:61:44",
+        "600:1023364:2:59:45",
+        "600:1023367:2:61:46",
+        "680:1023362:2:61:42",
+        "680:1023363:2:60:43",
+        "680:1023364:2:61:44",
+        "680:1023367:2:59:45",
+        "1300:1023362:2:60:59",
+        "1300:1023363:2:61:58",
+        "1300:1023364:2:59:57",
+        "1300:1023367:2:61:56",
+        "1380:1023362:2:61:59",
+        "1380:1023363:2:60:58",
+        "1380:1023364:2:61:57",
+        "1380:1023367:2:59:56",
+        "2000:1023362:2:60:43",
+        "2000:1023363:2:61:44",
+        "2000:1023364:2:59:45",
+        "2000:1023367:2:61:46",
+        "2080:1023362:2:61:42",
+        "2080:1023363:2:60:43",
+        "2080:1023364:2:61:44",
+        "2080:1023367:2:59:45",
+        "2800:1023362:2:61:42",
+        "2800:1023363:2:60:43",
+        "2800:1023364:2:61:44",
+        "2800:1023367:2:59:45"
+      ],
+      "goals": {
+        "1023362": [
+          61,
+          42
+        ],
+        "1023363": [
+          60,
+          43
+        ],
+        "1023364": [
+          61,
+          44
+        ],
+        "1023367": [
+          59,
+          45
+        ]
+      },
+      "activity_windows": [
+        [
+          0,
+          550
+        ],
+        [
+          600,
+          1250
+        ],
+        [
+          1300,
+          1950
+        ],
+        [
+          2000,
+          2850
+        ]
+      ],
+      "arrival_reissue_required": true,
+      "release_prefix": {
+        "name": "north",
+        "path": "evidence/movement-state-v62/fixtures/bridge-cross-release-north.MAP",
+        "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+        "actor_ids": [
+          1023362,
+          1023367
+        ],
+        "blocker_id": 1023364,
+        "blocker_ids": [
+          1023363,
+          1023364
+        ],
+        "blocker_cell": [
+          60,
+          70
+        ],
+        "release_frame": 300,
+        "reissue_frame": null,
+        "goals": {
+          "1023362": [
+            60,
+            75
+          ],
+          "1023367": [
+            60,
+            61
+          ]
+        },
+        "orders": [
+          "1:1023364:2:60:70",
+          "1:1023363:2:61:70",
+          "5:1023362:2:60:75",
+          "5:1023367:2:60:61",
+          "300:1023364:2:60:79",
+          "210:1023363:2:61:79"
+        ],
+        "source": "evidence/movement-state-v39/fixtures/bridge-neighbor-release-north.MAP",
+        "ordinary_map_and_orders": true,
+        "raw_state_writes": false,
+        "held_exit_until_frame": 210,
+        "main_move_reissued": false,
+        "release_frames": {
+          "1023363": 210,
+          "1023364": 300
+        }
+      },
+      "scope": "Unchanged source map and staged ordinary blocker-release prefix; three later rounds through existing ramp and road intersection."
+    },
+    {
+      "path": "evidence/movement-state-v63/fixtures/traffic-height-crossroad.MAP",
+      "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v62\\fixtures\\bridge-cross-release-north.MAP",
+      "source_sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+      "last": 3000,
+      "tag": "traffic-height-crossroad",
+      "baseline_tag": "b-traffic-height-crossroad",
+      "capture_host": false,
+      "cell_catalog": true,
+      "channel_kind": "crossroad",
+      "height_range": [
+        416,
+        520
+      ],
+      "required_base_levels": [
+        4,
+        5
+      ],
+      "actor_ids": [
+        1023362,
+        1023363,
+        1023364,
+        1023367
+      ],
+      "ground_vehicle_ids": [
+        1023362,
+        1023363,
+        1023364
+      ],
+      "actor_health": {
+        "1023362": 200,
+        "1023363": 200,
+        "1023364": 200,
+        "1023367": 125
+      },
+      "stationary_health": {
+        "1023365": 125,
+        "1023366": 125,
+        "1023368": 125,
+        "1023369": 125
+      },
+      "orders": [
+        "1:1023364:2:60:70",
+        "1:1023363:2:61:70",
+        "5:1023362:2:60:75",
+        "5:1023367:2:60:61",
+        "300:1023364:2:60:79",
+        "210:1023363:2:61:79",
+        "600:1023362:2:70:49",
+        "600:1023363:2:71:50",
+        "600:1023364:2:69:50",
+        "600:1023367:2:70:51",
+        "680:1023362:2:60:43",
+        "680:1023363:2:61:44",
+        "680:1023364:2:59:45",
+        "680:1023367:2:61:46",
+        "1300:1023362:2:70:50",
+        "1300:1023363:2:69:49",
+        "1300:1023364:2:71:50",
+        "1300:1023367:2:70:49",
+        "1380:1023362:2:60:59",
+        "1380:1023363:2:61:58",
+        "1380:1023364:2:59:57",
+        "1380:1023367:2:61:56",
+        "2000:1023362:2:70:49",
+        "2000:1023363:2:71:50",
+        "2000:1023364:2:69:50",
+        "2000:1023367:2:70:51",
+        "2080:1023362:2:60:43",
+        "2080:1023363:2:61:44",
+        "2080:1023364:2:59:45",
+        "2080:1023367:2:61:46",
+        "2800:1023362:2:60:43",
+        "2800:1023363:2:61:44",
+        "2800:1023364:2:59:45",
+        "2800:1023367:2:61:46"
+      ],
+      "goals": {
+        "1023362": [
+          60,
+          43
+        ],
+        "1023363": [
+          61,
+          44
+        ],
+        "1023364": [
+          59,
+          45
+        ],
+        "1023367": [
+          61,
+          46
+        ]
+      },
+      "activity_windows": [
+        [
+          0,
+          550
+        ],
+        [
+          600,
+          1250
+        ],
+        [
+          1300,
+          1950
+        ],
+        [
+          2000,
+          2850
+        ]
+      ],
+      "arrival_reissue_required": true,
+      "release_prefix": {
+        "name": "north",
+        "path": "evidence/movement-state-v62/fixtures/bridge-cross-release-north.MAP",
+        "sha256": "21ac3a1969e7140e19028def128ab8b7cb6b89e5a332ec9867dc55ab900c27d6",
+        "actor_ids": [
+          1023362,
+          1023367
+        ],
+        "blocker_id": 1023364,
+        "blocker_ids": [
+          1023363,
+          1023364
+        ],
+        "blocker_cell": [
+          60,
+          70
+        ],
+        "release_frame": 300,
+        "reissue_frame": null,
+        "goals": {
+          "1023362": [
+            60,
+            75
+          ],
+          "1023367": [
+            60,
+            61
+          ]
+        },
+        "orders": [
+          "1:1023364:2:60:70",
+          "1:1023363:2:61:70",
+          "5:1023362:2:60:75",
+          "5:1023367:2:60:61",
+          "300:1023364:2:60:79",
+          "210:1023363:2:61:79"
+        ],
+        "source": "evidence/movement-state-v39/fixtures/bridge-neighbor-release-north.MAP",
+        "ordinary_map_and_orders": true,
+        "raw_state_writes": false,
+        "held_exit_until_frame": 210,
+        "main_move_reissued": false,
+        "release_frames": {
+          "1023363": 210,
+          "1023364": 300
+        }
+      },
+      "scope": "Unchanged source map and staged ordinary blocker-release prefix; three later rounds through existing ramp and road intersection."
+    }
+  ],
+  "new_unique_recipes": 2,
+  "distinct_channels": [
+    "ramp",
+    "crossroad"
+  ],
+  "ordinary_map_and_move_events": true,
+  "map_bytes_unchanged": true,
+  "rules_overrides": false,
+  "engine_state_or_path_injection": false,
+  "claimed_new_natural_heap_saturation": false,
+  "frames_each": 3001,
+  "activity_rounds": 4
+}

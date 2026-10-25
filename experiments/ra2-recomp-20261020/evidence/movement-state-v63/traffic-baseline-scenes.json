@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "b-traffic-height-ramp",
+      "frames": 3001,
+      "exe_sha256": "11de39ff6c80c7db0b1e259e2422b5d0cfada2bdc9e866006f5455e52d2c256b",
+      "comparison_sha256": "b7603cf6c4a6236aada6e148db23e2aaecbd22966bb2ae010d771ff05c6ebce6",
+      "capture_host": false,
+      "strict_trace_equal": true
+    },
+    {
+      "tag": "b-traffic-height-crossroad",
+      "frames": 3001,
+      "exe_sha256": "11de39ff6c80c7db0b1e259e2422b5d0cfada2bdc9e866006f5455e52d2c256b",
+      "comparison_sha256": "964b37151fb72cfd90cd2eb7098e57750ff8fd0a14ca113117262d016661d24a",
+      "capture_host": false,
+      "strict_trace_equal": true
+    }
+  ],
+  "scope": "Two new ordinary-map traffic recipes executed against original and the unchanged parent production program before either service edit."
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "failed_rebuild_cases": 65536,
+  "rebuilt_cases": 65536,
+  "state_calls_abi_cw_verified": true,
+  "kind": "obstacle",
+  "cases": 131072,
+  "probe_name": "obstacle",
+  "probe_exe_sha256": "61cd73d14e32977d7bc6132c2a385d897f7a1c77876abd7ac894d5f04c66a8a0",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

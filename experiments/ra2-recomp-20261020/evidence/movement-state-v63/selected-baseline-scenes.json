@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "mi",
+      "stage": "movement-state-v62",
+      "frames": 3001,
+      "comparison_sha256": "be881f73af2846e28ac688a3c7dd24e5465c0056b520d9239b9095d701c8c7bc",
+      "inherited": true
+    },
+    {
+      "tag": "sc",
+      "stage": "movement-state-v62",
+      "frames": 3401,
+      "comparison_sha256": "136a58f63a08f16d55253e4dc5599135068abc614017354506670849a4c0917e",
+      "inherited": true
+    },
+    {
+      "tag": "aw3",
+      "stage": "movement-state-v62",
+      "frames": 3201,
+      "comparison_sha256": "c093945fdfcfef4cd6f23eabb4be40513531d9f6a024e698cc502f7d2793321d",
+      "inherited": true
+    },
+    {
+      "tag": "fm",
+      "stage": "movement-state-v62",
+      "frames": 3401,
+      "comparison_sha256": "08440f05dbbe166339c4f898cd4ca3e436deb3711b1ebaa8faf3a8a611d73aef",
+      "inherited": true
+    }
+  ],
+  "scope": "All four exact parent per-mode traces inherited by hash; frozen observer retained. No duplicate pre-change game runs."
+}
