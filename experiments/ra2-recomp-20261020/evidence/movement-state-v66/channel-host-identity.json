@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "source_sha256": "7782669d7f5e20e84261811ddb47a6185f36236dbaf468514d473c0201c0ecf9",
+  "host_sha256": "bf01cee97f6d068c40688b5b280fc6ca9ce1132f086cb874e8d60ca6f3f92a8f",
+  "baseline": [
+    {
+      "path": "channel_observer.c",
+      "sha256": "7782669d7f5e20e84261811ddb47a6185f36236dbaf468514d473c0201c0ecf9"
+    },
+    {
+      "path": "channel-observer.exe",
+      "sha256": "e33543fcf6cfdbfa80c05582581acb5abeb9e9fb78e5740d4d97953f852003e7"
+    }
+  ],
+  "production_sha256": "9066a5ce4068a70768428db37e694a07cc9de132df9f97537ab3dd8b9f249342",
+  "new_observer_fields": false,
+  "new_game_function_calls": false,
+  "new_native_hooks": false,
+  "production_recorder_unchanged": true,
+  "per_mode_production_and_observer_records_equal": true
+}

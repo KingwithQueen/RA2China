@@ -81,13 +81,19 @@ static Ra2TrafficWaitPhase rebuild_after_traffic_wait(int mode,const Ra2TrafficW
         ? RA2_TRAFFIC_RETURN_TRUE : RA2_TRAFFIC_RETURN_FALSE;
 }
 
+/* 先通过短重试门禁，再按同一帧判断长等待；此选择本身不重置已有等待起点。 */
+static int traffic_rebuild_mode(const Ra2TrafficWaitState *state,int32_t frame)
+{
+    if(!ra2_ground_retry_timer_ready(state->retry,frame))return 0;
+    return state->waiting && ra2_ground_retry_timer_ready(state->obstruction,frame) ? 2:1;
+}
+
 Ra2TrafficWaitPhase ra2_ground_wait_for_traffic(Ra2TrafficWaitState *state,
     const Ra2TrafficWaitServices *services)
 {
     if(!state->waiting)start_traffic_wait_once(state,services);
     int32_t frame=services->current_frame(services->context);
-    if(!ra2_ground_retry_timer_ready(state->retry,frame))return RA2_TRAFFIC_REPORT_OBSTACLE;
-    /* 重试门禁先于长等待判断；保留回绕计时和mode 1/2的原版选择。 */
-    int mode=state->waiting && ra2_ground_retry_timer_ready(state->obstruction,frame) ? 2:1;
+    int mode=traffic_rebuild_mode(state,frame);
+    if(!mode)return RA2_TRAFFIC_REPORT_OBSTACLE;
     return rebuild_after_traffic_wait(mode,services);
 }

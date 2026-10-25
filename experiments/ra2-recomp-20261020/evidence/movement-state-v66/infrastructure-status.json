@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "new_game_setup_failures": false,
+  "build_overlap_retained": true,
+  "build_overlap_review": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\phase-overlap-review.json",
+  "build_overlap_review_sha256": "9ff1bcff3ed600812f9eb652cefc39a328e02b892fe729b8ef2655b4a1a7dd46",
+  "pre_simulation_parameter_failure_retained": true,
+  "accepted_scene_setups_succeeded": true,
+  "excluded_inputs": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\traffic-exclusions.json",
+  "excluded_inputs_sha256": "8e031f91bda32cbab6f312d5b94e7de6fa0b6882ae209224fa8c2d369116aff0",
+  "parent_status": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\infrastructure-status.json",
+  "parent_status_sha256": "1539a294bee86c1cb53b9a1a7e5f4631957c923fa4ae309e0499f76aab6bca5a",
+  "scope": "Current accepted ordinary maps use parent terrain/overlays. Initial ground-bypass and invalid-terrain-target candidates, the withdrawn load interpretation, and a pre-simulation calibration order-range rejection are retained separately, with no game/rule/comparator edits; prior startup and packing failures inherited."
+}

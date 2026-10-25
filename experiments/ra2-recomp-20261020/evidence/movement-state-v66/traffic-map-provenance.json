@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "path": "evidence/movement-state-v66/fixtures/traffic-cq2.MAP",
+      "sha256": "036523fe8700988f33fcc42e236c5b0e23608e8ceef33686001ee53318c2107f",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\fixtures\\traffic-q.MAP",
+      "source_sha256": "37c8830d3a73401564f3c18933bb56b77eb2cc173fa9c6a21072a4be86abebde",
+      "only_units_and_infantry_changed": true,
+      "terrain_overlay_tubes_unchanged": true
+    },
+    {
+      "path": "evidence/movement-state-v66/fixtures/traffic-cm5.MAP",
+      "sha256": "da218f1aa55691e330aa9c81499c522eba9abf37de5d8e0674e296b34b1e666e",
+      "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\fixtures\\traffic-m3.MAP",
+      "source_sha256": "1801f55987b078e738011a801d7bf6ac6389c4c7c90b1266e730ef72d6d7bad6",
+      "only_units_and_infantry_changed": true,
+      "terrain_overlay_tubes_unchanged": true
+    }
+  ],
+  "parent_mixed_patch": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\mixed-relocation-rle.json",
+  "parent_mixed_patch_sha256": "5ac2e66034e5f9411cc8a45fe2bb73e280a5fa11b07e637ff150a0f270e3b55c",
+  "ordinary_map_only": true,
+  "rules_or_resources_changed": false
+}

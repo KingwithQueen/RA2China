@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "scenes": {
+    "b-traffic-cq2": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      }
+    },
+    "traffic-cq2": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      }
+    },
+    "b-traffic-cq2-obs": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      }
+    },
+    "traffic-cq2-obs": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 27
+      }
+    },
+    "b-traffic-cm5": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      }
+    },
+    "traffic-cm5": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      }
+    },
+    "b-traffic-cm5-obs": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      }
+    },
+    "traffic-cm5-obs": {
+      "original": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      },
+      "generated-c": {
+        "all_expected_move_events_verified": true,
+        "queue_request_replacement": false,
+        "events": 48
+      }
+    }
+  },
+  "scope": "Every scheduled ordinary Move submission is linked to its execution. The mixed route has declared bridge/approach waypoints before a single exit request; queued exit requests are not reissued."
+}

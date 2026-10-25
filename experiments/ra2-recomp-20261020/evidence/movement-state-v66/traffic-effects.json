@@ -1,0 +1,1745 @@
+{
+  "passed": true,
+  "scenes": {
+    "traffic-cq2": {
+      "passed": true,
+      "recipe": "traffic-cq2",
+      "baseline": false,
+      "observer": false,
+      "comparison_sha256": "d7c31f6c3270325af400375e37dab652014b8528af58d93db129e6ece6161ba7",
+      "strict_trace_equal": true,
+      "per_mode_traces_equal_prechange": true,
+      "baseline_traces": {
+        "original": "a7a961bb550279b1aed51b64692e5d285ff0efaece7607ec3b443703c2f89ec2",
+        "generated-c": "a7a961bb550279b1aed51b64692e5d285ff0efaece7607ec3b443703c2f89ec2"
+      },
+      "modes": {
+        "original": {
+          "goals": {
+            "1022581": {
+              "final_cell": [
+                80,
+                114
+              ],
+              "final_position": [
+                20608,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022582": {
+              "final_cell": [
+                81,
+                114
+              ],
+              "final_position": [
+                20864,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022583": {
+              "final_cell": [
+                82,
+                114
+              ],
+              "final_position": [
+                21120,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022584": {
+              "final_cell": [
+                83,
+                114
+              ],
+              "final_position": [
+                21376,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022585": {
+              "final_cell": [
+                84,
+                114
+              ],
+              "final_position": [
+                21632,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022586": {
+              "final_cell": [
+                85,
+                114
+              ],
+              "final_position": [
+                21888,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022587": {
+              "final_cell": [
+                86,
+                114
+              ],
+              "final_position": [
+                22144,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022588": {
+              "final_cell": [
+                87,
+                114
+              ],
+              "final_position": [
+                22400,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022589": {
+              "final_cell": [
+                88,
+                114
+              ],
+              "final_position": [
+                22656,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022590": {
+              "final_cell": [
+                89,
+                114
+              ],
+              "final_position": [
+                22912,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022591": {
+              "final_cell": [
+                90,
+                114
+              ],
+              "final_position": [
+                23168,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022592": {
+              "final_cell": [
+                103,
+                114
+              ],
+              "final_position": [
+                26496,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022593": {
+              "final_cell": [
+                92,
+                114
+              ],
+              "final_position": [
+                23680,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022594": {
+              "final_cell": [
+                93,
+                114
+              ],
+              "final_position": [
+                23936,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022595": {
+              "final_cell": [
+                94,
+                114
+              ],
+              "final_position": [
+                24192,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022596": {
+              "final_cell": [
+                95,
+                114
+              ],
+              "final_position": [
+                24448,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022597": {
+              "final_cell": [
+                96,
+                114
+              ],
+              "final_position": [
+                24704,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022598": {
+              "final_cell": [
+                97,
+                114
+              ],
+              "final_position": [
+                24960,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022599": {
+              "final_cell": [
+                98,
+                114
+              ],
+              "final_position": [
+                25216,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022600": {
+              "final_cell": [
+                99,
+                114
+              ],
+              "final_position": [
+                25472,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022601": {
+              "final_cell": [
+                100,
+                114
+              ],
+              "final_position": [
+                25728,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022602": {
+              "final_cell": [
+                101,
+                114
+              ],
+              "final_position": [
+                25984,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022603": {
+              "final_cell": [
+                102,
+                114
+              ],
+              "final_position": [
+                26240,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022604": {
+              "final_cell": [
+                91,
+                114
+              ],
+              "final_position": [
+                23424,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022605": {
+              "final_cell": [
+                108,
+                114
+              ],
+              "final_position": [
+                27776,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022606": {
+              "final_cell": [
+                109,
+                114
+              ],
+              "final_position": [
+                28032,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022607": {
+              "final_cell": [
+                110,
+                114
+              ],
+              "final_position": [
+                28288,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1022581": 289,
+            "1022582": 312,
+            "1022583": 334,
+            "1022584": 312,
+            "1022585": 1526,
+            "1022586": 1416,
+            "1022587": 1323,
+            "1022588": 1230,
+            "1022589": 1137,
+            "1022590": 1044,
+            "1022591": 951,
+            "1022592": 1108,
+            "1022593": 810,
+            "1022594": 700,
+            "1022595": 632,
+            "1022596": 629,
+            "1022597": 618,
+            "1022598": 643,
+            "1022599": 551,
+            "1022600": 700,
+            "1022601": 684,
+            "1022602": 661,
+            "1022603": 670,
+            "1022604": 2933
+          },
+          "existing_successful_stage6_observations": 59,
+          "effects": {
+            "actor_count": 24,
+            "oldest_request_id": 1022604,
+            "arrival_window": [
+              5,
+              4060
+            ],
+            "arrival_period": 180,
+            "blocker_release_window": [
+              2200,
+              2400
+            ],
+            "all_requests_recovered": true,
+            "arrivals": {
+              "1022581": 434,
+              "1022582": 637,
+              "1022583": 840,
+              "1022584": 999,
+              "1022585": 2375,
+              "1022586": 2462,
+              "1022587": 2549,
+              "1022588": 2636,
+              "1022589": 2723,
+              "1022590": 2810,
+              "1022591": 2897,
+              "1022592": 3215,
+              "1022593": 3099,
+              "1022594": 3186,
+              "1022595": 3299,
+              "1022596": 3474,
+              "1022597": 3644,
+              "1022598": 3849,
+              "1022599": 3937,
+              "1022600": 4289,
+              "1022601": 4429,
+              "1022602": 4586,
+              "1022603": 4777,
+              "1022604": 2984
+            },
+            "replacement_queue_requests": false
+          }
+        },
+        "generated-c": {
+          "goals": {
+            "1022581": {
+              "final_cell": [
+                80,
+                114
+              ],
+              "final_position": [
+                20608,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022582": {
+              "final_cell": [
+                81,
+                114
+              ],
+              "final_position": [
+                20864,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022583": {
+              "final_cell": [
+                82,
+                114
+              ],
+              "final_position": [
+                21120,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022584": {
+              "final_cell": [
+                83,
+                114
+              ],
+              "final_position": [
+                21376,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022585": {
+              "final_cell": [
+                84,
+                114
+              ],
+              "final_position": [
+                21632,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022586": {
+              "final_cell": [
+                85,
+                114
+              ],
+              "final_position": [
+                21888,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022587": {
+              "final_cell": [
+                86,
+                114
+              ],
+              "final_position": [
+                22144,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022588": {
+              "final_cell": [
+                87,
+                114
+              ],
+              "final_position": [
+                22400,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022589": {
+              "final_cell": [
+                88,
+                114
+              ],
+              "final_position": [
+                22656,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022590": {
+              "final_cell": [
+                89,
+                114
+              ],
+              "final_position": [
+                22912,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022591": {
+              "final_cell": [
+                90,
+                114
+              ],
+              "final_position": [
+                23168,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022592": {
+              "final_cell": [
+                103,
+                114
+              ],
+              "final_position": [
+                26496,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022593": {
+              "final_cell": [
+                92,
+                114
+              ],
+              "final_position": [
+                23680,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022594": {
+              "final_cell": [
+                93,
+                114
+              ],
+              "final_position": [
+                23936,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022595": {
+              "final_cell": [
+                94,
+                114
+              ],
+              "final_position": [
+                24192,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022596": {
+              "final_cell": [
+                95,
+                114
+              ],
+              "final_position": [
+                24448,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022597": {
+              "final_cell": [
+                96,
+                114
+              ],
+              "final_position": [
+                24704,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022598": {
+              "final_cell": [
+                97,
+                114
+              ],
+              "final_position": [
+                24960,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022599": {
+              "final_cell": [
+                98,
+                114
+              ],
+              "final_position": [
+                25216,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022600": {
+              "final_cell": [
+                99,
+                114
+              ],
+              "final_position": [
+                25472,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022601": {
+              "final_cell": [
+                100,
+                114
+              ],
+              "final_position": [
+                25728,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022602": {
+              "final_cell": [
+                101,
+                114
+              ],
+              "final_position": [
+                25984,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022603": {
+              "final_cell": [
+                102,
+                114
+              ],
+              "final_position": [
+                26240,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022604": {
+              "final_cell": [
+                91,
+                114
+              ],
+              "final_position": [
+                23424,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022605": {
+              "final_cell": [
+                108,
+                114
+              ],
+              "final_position": [
+                27776,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022606": {
+              "final_cell": [
+                109,
+                114
+              ],
+              "final_position": [
+                28032,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1022607": {
+              "final_cell": [
+                110,
+                114
+              ],
+              "final_position": [
+                28288,
+                29312,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1022581": 289,
+            "1022582": 312,
+            "1022583": 334,
+            "1022584": 312,
+            "1022585": 1526,
+            "1022586": 1416,
+            "1022587": 1323,
+            "1022588": 1230,
+            "1022589": 1137,
+            "1022590": 1044,
+            "1022591": 951,
+            "1022592": 1108,
+            "1022593": 810,
+            "1022594": 700,
+            "1022595": 632,
+            "1022596": 629,
+            "1022597": 618,
+            "1022598": 643,
+            "1022599": 551,
+            "1022600": 700,
+            "1022601": 684,
+            "1022602": 661,
+            "1022603": 670,
+            "1022604": 2933
+          },
+          "existing_successful_stage6_observations": 59,
+          "effects": {
+            "actor_count": 24,
+            "oldest_request_id": 1022604,
+            "arrival_window": [
+              5,
+              4060
+            ],
+            "arrival_period": 180,
+            "blocker_release_window": [
+              2200,
+              2400
+            ],
+            "all_requests_recovered": true,
+            "arrivals": {
+              "1022581": 434,
+              "1022582": 637,
+              "1022583": 840,
+              "1022584": 999,
+              "1022585": 2375,
+              "1022586": 2462,
+              "1022587": 2549,
+              "1022588": 2636,
+              "1022589": 2723,
+              "1022590": 2810,
+              "1022591": 2897,
+              "1022592": 3215,
+              "1022593": 3099,
+              "1022594": 3186,
+              "1022595": 3299,
+              "1022596": 3474,
+              "1022597": 3644,
+              "1022598": 3849,
+              "1022599": 3937,
+              "1022600": 4289,
+              "1022601": 4429,
+              "1022602": 4586,
+              "1022603": 4777,
+              "1022604": 2984
+            },
+            "replacement_queue_requests": false
+          }
+        }
+      },
+      "ordinary_move_events": true,
+      "no_memory_or_path_result_injection": true,
+      "scope": "Finite sustained arrivals on the unchanged accepted parent terrain/overlays, with ordinary Move commands and staggered stationary-blocker release; per-request recovery and throughput, not arbitrary-load starvation freedom."
+    },
+    "traffic-cm5": {
+      "passed": true,
+      "recipe": "traffic-cm5",
+      "baseline": false,
+      "observer": false,
+      "comparison_sha256": "fc5d61b53a2da4d45f9f2323cd59c0df3ff5e7d0301fa2b655926be92a4f4f78",
+      "strict_trace_equal": true,
+      "per_mode_traces_equal_prechange": true,
+      "baseline_traces": {
+        "original": "686dfffdf45091c9bbf52bd8404cca64e55241e3883c9190a036a890aebad05c",
+        "generated-c": "686dfffdf45091c9bbf52bd8404cca64e55241e3883c9190a036a890aebad05c"
+      },
+      "modes": {
+        "original": {
+          "goals": {
+            "1023310": {
+              "final_cell": [
+                73,
+                76
+              ],
+              "final_position": [
+                18816,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023311": {
+              "final_cell": [
+                74,
+                76
+              ],
+              "final_position": [
+                19072,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023312": {
+              "final_cell": [
+                75,
+                76
+              ],
+              "final_position": [
+                19328,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023313": {
+              "final_cell": [
+                76,
+                76
+              ],
+              "final_position": [
+                19584,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023314": {
+              "final_cell": [
+                77,
+                76
+              ],
+              "final_position": [
+                19840,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023315": {
+              "final_cell": [
+                78,
+                76
+              ],
+              "final_position": [
+                20096,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023316": {
+              "final_cell": [
+                73,
+                78
+              ],
+              "final_position": [
+                18816,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023317": {
+              "final_cell": [
+                74,
+                78
+              ],
+              "final_position": [
+                19072,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023318": {
+              "final_cell": [
+                75,
+                78
+              ],
+              "final_position": [
+                19328,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023319": {
+              "final_cell": [
+                76,
+                78
+              ],
+              "final_position": [
+                19584,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023320": {
+              "final_cell": [
+                77,
+                78
+              ],
+              "final_position": [
+                19840,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023321": {
+              "final_cell": [
+                78,
+                78
+              ],
+              "final_position": [
+                20096,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023322": {
+              "final_cell": [
+                73,
+                74
+              ],
+              "final_position": [
+                18816,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023323": {
+              "final_cell": [
+                74,
+                74
+              ],
+              "final_position": [
+                19072,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023324": {
+              "final_cell": [
+                75,
+                74
+              ],
+              "final_position": [
+                19328,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023325": {
+              "final_cell": [
+                74,
+                80
+              ],
+              "final_position": [
+                19072,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023326": {
+              "final_cell": [
+                76,
+                80
+              ],
+              "final_position": [
+                19584,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023327": {
+              "final_cell": [
+                78,
+                80
+              ],
+              "final_position": [
+                20096,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1023310": 2341,
+            "1023311": 2222,
+            "1023312": 2096,
+            "1023313": 2045,
+            "1023314": 1859,
+            "1023315": 1908,
+            "1023316": 812,
+            "1023317": 828,
+            "1023318": 707,
+            "1023319": 760,
+            "1023320": 792,
+            "1023321": 916,
+            "1023322": 764,
+            "1023323": 815,
+            "1023324": 910
+          },
+          "existing_successful_stage6_observations": 70,
+          "effects": {
+            "actor_count": 15,
+            "oldest_request_id": 1023310,
+            "arrival_window": [
+              800,
+              3320
+            ],
+            "arrival_period": 180,
+            "blocker_release_window": [
+              2600,
+              2800
+            ],
+            "all_requests_recovered": true,
+            "arrivals": {
+              "1023310": 2743,
+              "1023311": 2847,
+              "1023312": 2935,
+              "1023313": 3022,
+              "1023314": 3109,
+              "1023315": 3196,
+              "1023316": 2213,
+              "1023317": 2483,
+              "1023318": 2599,
+              "1023319": 2806,
+              "1023320": 3021,
+              "1023321": 3249,
+              "1023322": 3265,
+              "1023323": 3518,
+              "1023324": 3743
+            },
+            "replacement_queue_requests": false
+          }
+        },
+        "generated-c": {
+          "goals": {
+            "1023310": {
+              "final_cell": [
+                73,
+                76
+              ],
+              "final_position": [
+                18816,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023311": {
+              "final_cell": [
+                74,
+                76
+              ],
+              "final_position": [
+                19072,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023312": {
+              "final_cell": [
+                75,
+                76
+              ],
+              "final_position": [
+                19328,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023313": {
+              "final_cell": [
+                76,
+                76
+              ],
+              "final_position": [
+                19584,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023314": {
+              "final_cell": [
+                77,
+                76
+              ],
+              "final_position": [
+                19840,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023315": {
+              "final_cell": [
+                78,
+                76
+              ],
+              "final_position": [
+                20096,
+                19584,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023316": {
+              "final_cell": [
+                73,
+                78
+              ],
+              "final_position": [
+                18816,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023317": {
+              "final_cell": [
+                74,
+                78
+              ],
+              "final_position": [
+                19072,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023318": {
+              "final_cell": [
+                75,
+                78
+              ],
+              "final_position": [
+                19328,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023319": {
+              "final_cell": [
+                76,
+                78
+              ],
+              "final_position": [
+                19584,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023320": {
+              "final_cell": [
+                77,
+                78
+              ],
+              "final_position": [
+                19840,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023321": {
+              "final_cell": [
+                78,
+                78
+              ],
+              "final_position": [
+                20096,
+                20096,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023322": {
+              "final_cell": [
+                73,
+                74
+              ],
+              "final_position": [
+                18816,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023323": {
+              "final_cell": [
+                74,
+                74
+              ],
+              "final_position": [
+                19072,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023324": {
+              "final_cell": [
+                75,
+                74
+              ],
+              "final_position": [
+                19328,
+                19072,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023325": {
+              "final_cell": [
+                74,
+                80
+              ],
+              "final_position": [
+                19072,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023326": {
+              "final_cell": [
+                76,
+                80
+              ],
+              "final_position": [
+                19584,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            },
+            "1023327": {
+              "final_cell": [
+                78,
+                80
+              ],
+              "final_position": [
+                20096,
+                20608,
+                416
+              ],
+              "final_mission": [
+                5,
+                -1,
+                -1
+              ]
+            }
+          },
+          "health_preserved": true,
+          "reconstructed_path_frames": {
+            "1023310": 2341,
+            "1023311": 2222,
+            "1023312": 2096,
+            "1023313": 2045,
+            "1023314": 1859,
+            "1023315": 1908,
+            "1023316": 812,
+            "1023317": 828,
+            "1023318": 707,
+            "1023319": 760,
+            "1023320": 792,
+            "1023321": 916,
+            "1023322": 764,
+            "1023323": 815,
+            "1023324": 910
+          },
+          "existing_successful_stage6_observations": 70,
+          "effects": {
+            "actor_count": 15,
+            "oldest_request_id": 1023310,
+            "arrival_window": [
+              800,
+              3320
+            ],
+            "arrival_period": 180,
+            "blocker_release_window": [
+              2600,
+              2800
+            ],
+            "all_requests_recovered": true,
+            "arrivals": {
+              "1023310": 2743,
+              "1023311": 2847,
+              "1023312": 2935,
+              "1023313": 3022,
+              "1023314": 3109,
+              "1023315": 3196,
+              "1023316": 2213,
+              "1023317": 2483,
+              "1023318": 2599,
+              "1023319": 2806,
+              "1023320": 3021,
+              "1023321": 3249,
+              "1023322": 3265,
+              "1023323": 3518,
+              "1023324": 3743
+            },
+            "replacement_queue_requests": false
+          }
+        }
+      },
+      "ordinary_move_events": true,
+      "no_memory_or_path_result_injection": true,
+      "scope": "Finite sustained arrivals on the unchanged accepted parent terrain/overlays, with ordinary Move commands and staggered stationary-blocker release; per-request recovery and throughput, not arbitrary-load starvation freedom."
+    }
+  },
+  "new_unique_recipes": 2,
+  "baseline_pairs": 4,
+  "final_pairs": 4,
+  "ordinary_events": true,
+  "production_host": true,
+  "readonly_observer_pairs": 4,
+  "memory_state_injection": false,
+  "path_result_injection": false
+}

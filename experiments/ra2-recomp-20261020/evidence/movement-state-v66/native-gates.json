@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "groups": 5,
+  "cases": 360448,
+  "receipts": [
+    "part-publication-clearance.json",
+    "part-publication-clearance-tail.json",
+    "part-publication-traffic-schedule.json",
+    "part-publication-prepare-entry-retry.json",
+    "part-publication-tube-exit.json"
+  ],
+  "scope": "Traffic wait scheduling, clearance regression, prepare entry/retry and unchanged Tube exit integration. Finite original state, callback order and checked ABI/control evidence; repeated runs do not add unique cases."
+}

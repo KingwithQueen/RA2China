@@ -1,0 +1,97 @@
+当前正式65 / 验证66，2026-10-25。
+父提交：50df7b3eb92df16a41e4316242915ca333dca17f；程序SHA-256：9066a5ce4068a70768428db37e694a07cc9de132df9f97537ab3dd8b9f249342。
+报告：D:\Program\红色警戒2\docs\单位移动第六十五批-持续来车公平性与桥隧恢复调度-20261025.txt
+政策：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+机制补充：D:\Program\红色警戒2\docs\寻路机制改进验收补充-20261025.txt
+
+生产仅改ground_wait、ground_prepare_cycle、ground_prepare_exit三处，整理短重试/长等待升级、队列耗尽后调度和重建后期限发布；保持原计时、实时context/回调顺序、owner/目的地接纳和控制字副作用。无新FIFO或路径机制。181C/312输入/37保护不变。
+原版片段五份执行收据、六段共360448唯一例通过，改前与两段后重复不累计；当前ABI/控制字范围以每份探针字段为准。
+24辆持续出口请求与3辆占道车运行7601帧；15辆先桥后Tube混合请求与3辆占道车运行7201帧。普通Move分批释放，队列请求未重发；新来车结束前的吞吐和最终逐车恢复分开计量。正式/观测改前及最终共8配对59208帧严格，总23配对78273帧，19严格、4既有功能差异。完整实测：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\fairness-effects.json。
+[
+  {
+    "tag": "traffic-cq2",
+    "kind": "queue",
+    "frames": 7601,
+    "request_vehicles": 24,
+    "blockers": 3,
+    "arrival_window": [
+      5,
+      4060
+    ],
+    "release_window": [
+      2200,
+      2400
+    ],
+    "actual_tube_actors": 14,
+    "ground_bypass_actors": 10,
+    "peak_waiters": 8,
+    "exits_during_arrivals": 14,
+    "oldest_id": 1022604,
+    "oldest": {
+      "request_frame": 5,
+      "arrival_frame": 2984,
+      "request_to_arrival": 2979,
+      "bridge_frames": 0,
+      "route": "tube",
+      "first_active_tube": 71,
+      "exit_publish_frame": 2431,
+      "terminal_stationary_frames": 2159,
+      "longest_terminal_wait": 2159,
+      "request_to_exit": 2426,
+      "first_bridge_frame": null,
+      "later_requests_exited_first": 7
+    },
+    "oldest_exit_during_arrivals": true,
+    "maximum_request_to_exit": 2426,
+    "maximum_terminal_wait": 2159,
+    "exit_order_inversions": 7,
+    "last_goal_arrival": 4777,
+    "post_release_exits_per_1000_frames": 2.592112571745973
+  },
+  {
+    "tag": "traffic-cm5",
+    "kind": "mixed",
+    "frames": 7201,
+    "request_vehicles": 15,
+    "blockers": 3,
+    "arrival_window": [
+      800,
+      3320
+    ],
+    "release_window": [
+      2600,
+      2800
+    ],
+    "actual_tube_actors": 8,
+    "ground_bypass_actors": 7,
+    "peak_waiters": 6,
+    "exits_during_arrivals": 6,
+    "oldest_id": 1023310,
+    "oldest": {
+      "request_frame": 800,
+      "arrival_frame": 2743,
+      "request_to_arrival": 1943,
+      "bridge_frames": 131,
+      "route": "tube",
+      "first_active_tube": 866,
+      "exit_publish_frame": 2652,
+      "terminal_stationary_frames": 1585,
+      "longest_terminal_wait": 1585,
+      "request_to_exit": 1852,
+      "first_bridge_frame": 90,
+      "later_requests_exited_first": 0
+    },
+    "oldest_exit_during_arrivals": true,
+    "maximum_request_to_exit": 1852,
+    "maximum_terminal_wait": 1585,
+    "exit_order_inversions": 0,
+    "last_goal_arrival": 3743,
+    "post_release_exits_per_1000_frames": 1.738752445120626
+  }
+]
+所有请求最终到达；有限持续来车窗口有实际出口吞吐。未证明无限持续到达下无饥饿、FIFO或任意负载有界等待，不将总吞吐当作最早请求恢复。
+一次构建与前段场景重叠导致链接失败和源码快照错配；无效快照保留，按存档收据和独立基线重建正确回退并核对312输入，未增加测试计数。见phase-overlap-review.json。
+旧349/350、2020/2018、2219/2220、Z436/Z-193以及失败候选/原版异常原地保留。两张新图只改Units/Infantry，原桥/Tube/覆盖保持。5项社区固定线索继承，2份公开源码重新核对哈希；无第三方引擎或私有上传。
+基线：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\baseline；回退：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\parts（仅scheduling/publication，scheduling-overlap-invalid不用于回退）；探针：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\baseline-probe；宿主：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\baseline-channel-observer；新交通改前：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\traffic-baseline-scenes.json；封存：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v66\final-source。
+清理30项无用产物，保护文件保持；本地提交，不推送。
+下一批显式指定父证据movement-state-v66，可推进反向持续需求/不同负载的公平性界限或有证据的优先级/退避改进。复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v66.py。

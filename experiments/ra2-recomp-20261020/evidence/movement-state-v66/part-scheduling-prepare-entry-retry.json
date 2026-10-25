@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "entry_cases": 65536,
+  "retry_cases": 65536,
+  "state_calls_abi_cw_verified": true,
+  "entry_outcomes": [
+    64191,
+    291,
+    1054
+  ],
+  "retry_outcomes": [
+    47356,
+    1763,
+    16312,
+    105
+  ],
+  "unique_cases": 131072,
+  "kind": "prepare-entry-retry",
+  "probe_name": "prepare",
+  "probe_exe_sha256": "fa208d182aa4bffde2f76c3ba30b9817ae21dbcaeadb4fa792c2f4592cbf73b0",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

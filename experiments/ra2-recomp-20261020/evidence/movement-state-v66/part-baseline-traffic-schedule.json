@@ -1,0 +1,12 @@
+{
+  "phase": 2,
+  "passed": true,
+  "fragment_cases": 65536,
+  "live_stack_locals_verified": true,
+  "state_calls_abi_cw_verified": true,
+  "unique_cases": 65536,
+  "kind": "traffic-schedule",
+  "probe_name": "wait",
+  "probe_exe_sha256": "7b4dc0c924f7eec43cbea2949c7e8ea64b840ecd7db1788b1bedc65389bba60e",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+}

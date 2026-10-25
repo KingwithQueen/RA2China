@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "base_recipe": "build-prepare-probe-v62.ps1",
+  "base_recipe_sha256": "6da5f2247f8b9422bb5f9d885c840651a65b4e75a3607d2a104d7c52f5642d6a",
+  "added_gameplay_sources": [],
+  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
+}
