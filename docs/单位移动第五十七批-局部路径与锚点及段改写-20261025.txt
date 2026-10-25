@@ -1,0 +1,59 @@
+单位移动第五十七批（正式57 / 验证58），2026-10-25。
+父提交：0f639963056fe743c802f7c4d2b8f544723abe00。
+程序：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\ra2\build-original-c\ra2.exe
+SHA-256：6d7fc6b5d534da0c93c8fb546af3f7bc171e1f4bbfe35a7dce7c52fc2d7146cf
+验收边界：D:\Program\红色警戒2\docs\项目目标与验收边界-20261024.txt
+
+本轮范围
+按整体功能、效果、规则解读和资源调用一致验收，不追求逐个BUG复刻。本轮完成ground_path_local.c锚点查找、转弯缩短和局部段改写服务整理，仅改一个生产C文件。181个生产C、312项编译输入、37处未实现保护不变，没有新增生产源文件、头文件或CMake改动。生产规则、美术、随机算法、生成入口/标签/分发表、runtime桥接、schema12记录器和通用比较器未改。
+
+第一部分turns：锚点与转弯候选
+锚点反扫改用reverse_delta、candidate_anchor、maximum_extent、passed_peak、reverse_direction等描述状态的局部名称，算法与发布顺序保持。跳过-2槽；方向8在这里仍按低三位普通回退，不查特殊连接。同步回退位移和候选点，越过峰值并再扩大时选择上一格；先写anchor_index，再按原时点读取偏移写anchor。空反扫区间仍写start和原候选点，不新增错误出口。
+can_shorten_run分离候选走廊检查。起点origin仍是外层同一局部对象，首格从origin沿middle方向推进；先查passage，未受阻才查0x40000属性，仍未受阻才查询origin的威胁，按原scaled_at_least表达式与1.0比较。不能把此处威胁点替换成正在推进的point，也不能与段改写的查询顺序合并。
+每次检查后先减remaining，再推进下一格、cell_at、读取属性和更新层高；即使本次受阻或刚好到段尾也保留下一格探测。层高仍以previous-ground_level==4和桥标志0x100决定是否保持上层。owner_factor和owner_house仍在候选循环前按原顺序各查询一次，numeric_control按原表达式读取。
+候选完整通过后才写中间方向，再按实际方向数组walk推进锚点并返回前缀长度；失败候选不发布方向。原有first/second含特殊连接的回退、首段较长时的origin预行走、每次失败后的origin推进和最终走完整首段均保持。
+
+第二部分segments：两段候选与延迟发布
+Ra2SegmentRewritePlan只归拢原先已存在的两方向、两段长度、factor、house和use_threat快照，不缓存context或格属性。方向/长度仍先从delta计算，再依次查询owner_factor/owner_house，随后判断factor>0.00001。
+segment_is_passable检查完整候选。每次尝试从当时anchor、原level和high_threat=0开始；首段长度为0仍按既有条件拒绝。每步先推进point/cell_at，启用威胁时在当前point查询并按0.01累计，再调用passage；不能因威胁已超限而跳过通行服务。passage之后总会读取properties，通行成功才合并0x40000、high_threat>3和非终段有威胁的限制，最后总会更新current_level。通行桩可修改桥层和高度，后读属性的顺序保留。
+final_segment仍按低8位判断，256与0、257与1分别走对应路径。失败后交换两方向及长度再试，第二次重新初始化point/层高/威胁累计；最多两次。两次都失败时方向缓冲不变。publish_segment_directions仅在完整候选通过后按两段顺序发布方向，并把剩余旧槽填-2；不改anchor/delta，也不增加截断或新规则。
+scaled_at_least的x87兼容中间计算、乘法控制与0x037F差值比较保持原样，没有先落为普通double或改变阈值边界。
+
+原版片段与回退
+锚点0x429570共8192例；转弯0x428CF0和段改写0x4296F0各12288例，正式合计32768。改代码前、第一部分后和第二部分后均执行相同三组输入，不把重复累计成98304个新用例。原始探针按v38源字节保留，phase3完成流程未重跑、不计本批覆盖。
+转弯正前缀返回7923例、零前缀4365例；零前缀可能是合法缩短结果，不作为测试失败。段改写返回成功6381、不改写5907例，两类结果均与原版一致。锚点函数返回void，其通用success/failure计数字段不作成败解释。
+比较完整方向/层高缓冲、锚点/差量/索引、格数组、上下文、返回结果及有记录的有序引擎回调。转弯比对437179个事件字、段改写414916个事件字，不能把事件字称作相同数量的服务调用。两者含12种数值控制，覆盖0/临界/负因子、威胁边界、16位坐标边界、特殊连接和passage修改桥层的输入。原版返回栈平衡逐例核对；这些是桩服务映射片段证据，不宣称全部寄存器/ABI或全部自然地图入口覆盖。
+改动前探针源码/程序/header独立留在baseline-probe，生产基线315项、两部分源码/工具/编译收据/正式程序/探针均保留。每部分默认遭遇战301帧、北桥501帧、南桥501帧，共3配对1303帧，全部严格通过。
+
+社区引擎参考核对与应用
+按用户建议核对了gagarin、EA公开Red Alert源码和Phobos的5项固定提交资料，保存内容SHA-256和定位行号；未引入第三方引擎实现代码，生产仍为本项目C17。
+gagarin目标是Yuri Revenge gamemd.exe 1.001。检查的AStar声明、FootClass::FindPath包装和单位AStar调用方提供结构、名称和桥层标记线索，不构成本工程RA2 1.006局部路径函数的已验证同版地址/规则映射。EA旧Red Alert源码提供先检查通行再发布优化方向、-2空槽等组织线索，但其视线/沿边搜索及命令对优化不同于本项目分层搜索和局部规则。Phobos定位为原引擎扩展，不能作为独立C17替代引擎。
+本批据此把候选检查和成功发布清楚分开，后续可直接从固定链接定位相关结构，减少重复检索；不声称已经量化开发提速。阈值、威胁查询位置、桥层读取及返回栈仍以本项目原版探针和功能验证为依据。
+r-melvin/gagarin @ 08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944 / match/_layout/astar_00746000.h
+https://github.com/r-melvin/gagarin/blob/08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944/match/_layout/astar_00746000.h
+SHA-256 8723e396dd76fce51e19530ecc0b748ce8e79f4183a8bd21b42857a8b8327bb8
+r-melvin/gagarin @ 08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944 / match/movement/foot_class_find_path_methods.cpp
+https://github.com/r-melvin/gagarin/blob/08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944/match/movement/foot_class_find_path_methods.cpp
+SHA-256 b089db8a451fd64830f3fbe000b242b6f641dc4e57c81fe135b853f777916333
+r-melvin/gagarin @ 08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944 / match/movement/unit_class_astar_attempt_methods.h
+https://github.com/r-melvin/gagarin/blob/08a5f602fe1bcf8ec69e68ecd709bd7de9ee3944/match/movement/unit_class_astar_attempt_methods.h
+SHA-256 f4f7e3366469341f7b81400586f53d52b939e378bd83f6000d101e32dfe53240
+electronicarts/CnC_Remastered_Collection @ f1f0d42bc2dcd06d5d1df943c6150ab34bf307ae / REDALERT/FINDPATH.CPP
+https://github.com/electronicarts/CnC_Remastered_Collection/blob/f1f0d42bc2dcd06d5d1df943c6150ab34bf307ae/REDALERT/FINDPATH.CPP
+SHA-256 93c75cbc9e701085d3b393c80e55868b0d79202a5fb2d7f5fa0853e8e5f22b95
+Phobos-developers/Phobos @ e81bf980f4606272a5928edef111852c81961433 / README.md
+https://github.com/Phobos-developers/Phobos/blob/e81bf980f4606272a5928edef111852c81961433/README.md
+SHA-256 ad91a49bfbfbce7e58a89b10d00691ab783f5bdc2fd35034c75100a87701928e
+
+自然代表场景与有限回归
+沿用父批mi/sc/aw3/fm四套已验配方和原地形/规则，无新增自然场景；改动前完整轨迹按父批哈希继承，不重复运行基线。最终程序重新运行车先登载、南侧Rough/Clear/Beach岸段、全8邻格占位后释放并重发卸载、步兵先登载四场。每种模式完整轨迹分别等于改代码前本模式；实际装卸、同时过水、合法落格、先后顺序、全程生命及后续Guard目标保持。
+mi货车原版2020/C2018、fm步兵原版2219/C2220等旧时序差异、通用comparison.json的false和随机首差窗口原样保留。首差仍mi/sc/aw3为349帧、fm为350帧，只读前后8帧窗口，不加随机钩子、不改种子、不重置/追平随机流，不把快照差异当作某次随机调用的因果证明。
+最终程序有限复验列车碰撞、碾压、重复失败、弯曲高差。原版Z436停滞和Z-193未完成等异常保留输入、轨迹及基线，不转为必须逐BUG复刻的要求。旧未合格岸边、远释放目标、坡型8/飞机、名称表和碰撞负控制按boundary-inheritance.json哈希继承，未全部重跑。29非主C候选/86原始入边按哈希继承，当前312项输入无新增直接C调用，无新自然非主副本或隧道入口结论。
+
+验收、保护与清理
+合计15配对19065模拟帧，11严格、4局部功能通过；最终生产5配对3455帧，独立事件/只读宿主4配对13004帧。固定seed12345，构建串行，最多两条配对通道/四个游戏进程，没有为无关内部差异扩大矩阵。
+父批399项封存、315项独立基线、改动前探针与宿主、两部分回退、完整轨迹及原版异常保留。H盘20项原始输入、原版game.exe/SAVE0029、原规则、旧手写引擎、Git配置和远端引用校验不变。
+开场受限命令启动器枚举Q盘失败，改用常规执行；首次Python读取公开资料时TLS连接中止，改用系统HTTP接口成功。详见environment-note.json；均属于工具环境问题，未改变生产输入，不是游戏回归差异。公开源码临时下载文件逐个删除。
+逐路径/类型/哈希清理5个可重建中间文件或缓存，共91456字节；同目录80项非候选哈希不变。源码、正式程序、资源、基线、回退与轨迹保留。本地提交，不推送。
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\verify_final_movement_v58.py；提交收据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\movement-state-v58\postcommit\git-local-commit.json。
+下一步按功能需要推进ground_path_heap/nodes的堆容量、节点分配及发布服务，或连接路径完成/重建与更多自然交通；其他引擎子系统及完整视觉/资源调用验收仍未覆盖，不宣称全游戏等价。

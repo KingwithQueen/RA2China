@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "restricted_launcher_error": "MXC enumerate volume Q: OS error 1 before command start",
+  "resolved_execution": "regular local process execution",
+  "python_https_error": "WinError 10053 during TLS handshake on first public reference request",
+  "resolved_public_fetch": "PowerShell Invoke-WebRequest with exact temporary-file cleanup",
+  "game_process_started_by_failed_launches": false,
+  "production_inputs_affected": false,
+  "community_reference_complete": true
+}

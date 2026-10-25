@@ -1,0 +1,366 @@
+{
+  "passed": true,
+  "authorized_by_current_user": true,
+  "workspace": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020",
+  "roots": [
+    "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58"
+  ],
+  "candidates": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge_catalog_observer.obj",
+      "bytes": 52501,
+      "sha256": "efea380e42bf30cbe9a263f1173a3ecf31065065dda6549d88b225fd4b0495e6",
+      "kind": "reproducible-root-probe-object"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\ground_path_completion.obj",
+      "bytes": 897,
+      "sha256": "a41766659e8ee005ce9b659dc5552e69a4df43e08174296a7c8ecb7bda4949a4",
+      "kind": "reproducible-root-probe-object"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\ground_path_local.obj",
+      "bytes": 6083,
+      "sha256": "c258b9bf7da305229a276a0aea49b46d516b14cd033ab4c3e7934c28f646eaec",
+      "kind": "reproducible-root-probe-object"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\path_local_probe.obj",
+      "bytes": 22737,
+      "sha256": "610e57bf627f29306fd33a4ec962a4341a1f6380e92fda7f7e6ed9d3df6c9df6",
+      "kind": "reproducible-root-probe-object"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\x87_arithmetic.obj",
+      "bytes": 9238,
+      "sha256": "0ad97e7f13b7fcee5b6e666906de10d8e9eb6b0d8b574551a88f88b0b934ee84",
+      "kind": "reproducible-root-probe-object"
+    }
+  ],
+  "files": 5,
+  "bytes": 91456,
+  "protected": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\alias-evidence-inheritance.json",
+      "sha256": "a1f46c427f94b1c9eee887dbcef215c55cbb2e7e9b816a889f31c3851e374ffb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\baseline-native-identity.json",
+      "sha256": "952c4b18015a605bc2eb9c905b17e007f1a9bcee896bfcf8f2da6f1eb82b620f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\boundary-inheritance.json",
+      "sha256": "ede72c07694e86848e4bcbdcfb3c6fbf6b9108bd430981a9597113c9c02bd096"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge-catalog-build-arguments.json",
+      "sha256": "c8070df8ea1c5b5a5f5363b92e5fe4c9b0c3dd4e8d49f9de1eec86d502c8134f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge-catalog-observer.exe",
+      "sha256": "d432a628b43325fdf7cf39dcf5ca8e22cb2318698ef411ae0db250c5665de126"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge-catalog-observer.map",
+      "sha256": "29974d43c5fb7b578931e97f7b94cd1c1e6fe6d6318a350cdef52372c421471a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge-cross-release-effects.json",
+      "sha256": "ee5a35acdef13364d014127e8c26928ce5936542367301a862429dedeee15d19"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge-cross-release-fixtures.json",
+      "sha256": "a868bf648efe182a67d6441e875f4c9893ba2ae2bd454088de9f891381d28dad"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\bridge_catalog_observer.c",
+      "sha256": "084c6d3e2dbd9b432f8cd21bc6cc56df83383cd1d8a6a8798d5f3a3b87db0d7b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-final-capture-host.log",
+      "sha256": "a57e007c9ba15460bbf9f7a4b604dacff029e34343ca7266e03df99ee2a66ac3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-native-baseline.log",
+      "sha256": "994236e5560707a824ccbbf4a00b242b232da047045ce9adfdf6ae5ebda9d1b3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-native-segments.log",
+      "sha256": "994236e5560707a824ccbbf4a00b242b232da047045ce9adfdf6ae5ebda9d1b3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-native-turns.log",
+      "sha256": "994236e5560707a824ccbbf4a00b242b232da047045ce9adfdf6ae5ebda9d1b3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-segments.log",
+      "sha256": "bcd7af20aef6b6de31cfe9609d0f494f9bc6c0640af99e37cd3f12c60519856d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\build-turns.log",
+      "sha256": "bcd7af20aef6b6de31cfe9609d0f494f9bc6c0640af99e37cd3f12c60519856d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\capture-native-validation.json",
+      "sha256": "7a62ba837091e02c2cb719cc96a039bf04155165812e44d5117fbdb19d1b6d34"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\capture_packet_probe.c",
+      "sha256": "f0e160cec9abe145cf853335f9ba0f2e7c8b80493fc9dc43c50066235429c4e2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\capture_packet_probe.exe",
+      "sha256": "38b60d4d20fe30e55898344a92d76dbc194e7c37450fa3a9a7f62ebc89986394"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\checker-lineage.json",
+      "sha256": "c1a9a51f16998b2d6cdb25801c99eaa1eb611eedd7ad0751261260193b311f53"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\collision-acceptance-fixtures.json",
+      "sha256": "139ca1d2ab7c417d12439a55f4e1c13cee39da263fd6413be0cf183bd2930465"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\collision-real-effects.json",
+      "sha256": "812d6729b074a0435c67dce867959320f70632095556fed4c8991f9261bb50d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\community-reference-review.json",
+      "sha256": "30428c305b24856510dd910f73c3511666b6e6942961b4b4ee569ef37c67d765"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\corner-boundary-inheritance.json",
+      "sha256": "74df59c728a2933ac35bc1b644da926ac3798af8db56a7029979c1a5b19ef287"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\dynamic-fixtures.json",
+      "sha256": "93b02b244cf0313b8c4d134f718208833dbe3a26bd4d30bcffb49fa280a36a5f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\effects.json",
+      "sha256": "c025a943e4113e795fc927f4f96231ef8524d62e266d5e7b207be3d844a11485"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\environment-note.json",
+      "sha256": "6420b51bab1bafc8531e3056547b2574a437bdcda453557c0e97b05a8762695d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\final-scene-matrix.json",
+      "sha256": "3ac6dc9060db33bc0997265de797051df0a41ae4cd2e2b6ba65437086e3c0b0a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\fixture-host-identity.json",
+      "sha256": "c2e54cee1ea956748a9473be210643bb57e829275cffbf8607190797c7131871"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\infrastructure-status.json",
+      "sha256": "4c1dd07b5cf1bdbbc07e9ff7e1d4f47d1e29013436d74baa24a9c9837e2f04ff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\integrate-segments.log",
+      "sha256": "0b09864273f6fe24aa8899c0d0e61ca28f0ffb8fa20678c1f265ce210d6a4c4e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\integrate-turns.log",
+      "sha256": "a2d706b6362b4e9ee4ea4e80db15dd111292f08dde322a2f9fae8ea56cffb289"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\mission-table-proof.json",
+      "sha256": "3f8834eb31247e3febd7252d021a61bc509990451e9cc9b0f9b5257899dbcb44"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-baseline-0.log",
+      "sha256": "6cbed535a01bd75a9bcddb74fdea334b23a0a536ed5a64ffee399846c467fbd4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-baseline-1.log",
+      "sha256": "ce600174528c5ca69bc85dbfdfccdecd8f5b77373ebfbda95c221319a3a52f51"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-baseline-2.log",
+      "sha256": "1455796ec89cf9fe5ed06f21fae42f9342f0c32253d5cfa6ed33e18f834f9138"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-gates.json",
+      "sha256": "78c5a2df8099ec441a3afd71d869e3534f6f52d7f3789b54bdddf3454de6ad5d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-input-identity.json",
+      "sha256": "dbc8887b66927eb8c17dc2458b421358efcddfccf24235909290194947322028"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-segments-0.log",
+      "sha256": "6cbed535a01bd75a9bcddb74fdea334b23a0a536ed5a64ffee399846c467fbd4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-segments-1.log",
+      "sha256": "ce600174528c5ca69bc85dbfdfccdecd8f5b77373ebfbda95c221319a3a52f51"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-segments-2.log",
+      "sha256": "1455796ec89cf9fe5ed06f21fae42f9342f0c32253d5cfa6ed33e18f834f9138"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-turns-0.log",
+      "sha256": "6cbed535a01bd75a9bcddb74fdea334b23a0a536ed5a64ffee399846c467fbd4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-turns-1.log",
+      "sha256": "ce600174528c5ca69bc85dbfdfccdecd8f5b77373ebfbda95c221319a3a52f51"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native-turns-2.log",
+      "sha256": "1455796ec89cf9fe5ed06f21fae42f9342f0c32253d5cfa6ed33e18f834f9138"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-baseline-path-local-0.json",
+      "sha256": "5c63eb97c56072fcf9e6f7748aaaf8ca85ca8184fecaeaee08cc55c20bd8bcfb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-baseline-path-local-1.json",
+      "sha256": "a56ffb0afec32829efb960c3112408bdaeb9db357493b2c715063d20e916af7f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-baseline-path-local-2.json",
+      "sha256": "48dba02d83dcf7f160a7dea614f602517ef8b0f1056e4d48daf6a5d0d4f9cdb4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-segments-path-local-0.json",
+      "sha256": "c80289865ef4acc9bfca5edc5cd251c5af69fbaa793364bd0860039097932959"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-segments-path-local-1.json",
+      "sha256": "2fa1a3c370d70570d68f23272ba13448b2c4a2fe779f70753a2dbdcec8f2b379"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-segments-path-local-2.json",
+      "sha256": "d68249cffb861d2b8f303ec773661fd7ae6d6366649176a49d1a000edd6a8105"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-turns-path-local-0.json",
+      "sha256": "cdcaca97392554ff7c1495fef59245a9d9eb9a71d81912997eb2b796880b0694"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-turns-path-local-1.json",
+      "sha256": "2f6fdf04df29daaa14b3838d6ec74c3178ba35b1a25603932e285cbc0513c9f6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\part-turns-path-local-2.json",
+      "sha256": "8359a77ac7364eeab9216c147be2d2e095726c4654d71fbd1a3af5964c7f5a69"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\path_local_probe.c",
+      "sha256": "c067f7bb87e52169ef310f7e5e88f06ad438cb757276cd63dc175a45b23c2519"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\path_local_probe.exe",
+      "sha256": "d9761f8d6665cac5d6a0547f77531e0d5678c57f81c7b32be77c93b0c058c8b8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\prepare-final-fixture-host.log",
+      "sha256": "081a40775115ab35ad01e66a73ca6f6b8e23a26239e6a458c59aecece924b75c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\preservation.json",
+      "sha256": "c77bf4ddf9ddcea9b35c7b678eaf8c5549e2f6cd752127b7b800d77de8049500"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\rng-first-split-window.json",
+      "sha256": "32f593de0620228d94408c97ff3e4d4b0876f7db9460230212cc85c19a98133b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\rng-functional-impact.json",
+      "sha256": "dbe85e8e4a7cafaea0cb5fdf0cf217857c79337ae20834fb4d4c51678d258b83"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-aw3.log",
+      "sha256": "3457481b1487ba1427964e9355455e7739647886cf62349931b82b0a3e1e537a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-contact-crush.log",
+      "sha256": "a3c1ff22df7c5c8fd653304924882c104662444de1a6a3fd2e30c90b41f06248"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-contact-train.log",
+      "sha256": "025a257a668969e73434deca182329c0444614c5196a4134d93dd5fad31e21e3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-curve-tall-down.log",
+      "sha256": "6214cf2a2ccb71a51bd25b168d9bd886cbe6969f11d0ca7bd8eff1789c526c6b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-curve-up.log",
+      "sha256": "e1525baf56bc655ded13193cd5168f05d1904b05cd9eb6c7bf264eb97a2eb7b0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-fm.log",
+      "sha256": "66d912a973f9b75366cf822aa3de55f5ccfb062e6e1d086baf7b5b48790d989c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-mi.log",
+      "sha256": "53aeae35c900d55c1a7f0b11b5bda67167bdb5dd9119f6d1c57ee0298b5accdb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-repeat-failure.log",
+      "sha256": "9a82bfa27575dfa393964e152c1ad6399174bff12704e21cdaf0ef1f0b0339cd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-sc.log",
+      "sha256": "1209e7c04ab98f3c5eddd9f687e293db248cc152605f2f504bc67572e540180d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-segments-cross-north.log",
+      "sha256": "28f773d5e74d3e693338e1d49a68f3474ba0c96072311d95e6cc3b4c2400f8da"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-segments-cross-south.log",
+      "sha256": "9d68f35de6bd8a184953e7120a09b9254dad69e538de395b2a0dc55da742eeed"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-segments-default.log",
+      "sha256": "912c82b9f09ac04ca6a319d308d9463075581f754bf80277a74081cbeccaf7e7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-turns-cross-north.log",
+      "sha256": "e9dac7e622b3a58ba44a0a24e9888508072d2dd5cd6f4e61e709be060f04e80e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-turns-cross-south.log",
+      "sha256": "c8ffe0f48ca44a6477bb95de2b39702ae75bda661c64c62f69db6aad281a22d3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\scene-turns-default.log",
+      "sha256": "2fd9b8083ab1a02e2bbbd9c2c5281920c5a9b3da6b9dd27af7dbdf12998227e5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\selected-baseline-scenes.json",
+      "sha256": "5650db2afa6c5f17e79b282be5c6d9a40e2fd42a87e4847fd8b03561fdfeb1a7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\service-boundaries.json",
+      "sha256": "c0ed4fed4734d2c21803fc1c1e4218b2568b0c44855ae0454d0c98c83e1802f8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\transport-native-validation-current.json",
+      "sha256": "385e15b1e52d490b6ddbcf2c91c0b6cb65f8a980fa0d2025f1846847c4347cab"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\transport_packet_probe.c",
+      "sha256": "873e3acfa9bfdb5b151d0d3a76d4d627c4c91a137bcb774488b1f6cb7b99ffac"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\transport_packet_probe.exe",
+      "sha256": "901b00ec67e81bd8c871b1486338a5d55c127ce49ac9f2ca1874c4faf466af2b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\vcs-context.json",
+      "sha256": "4cbee37f972568c75819f9c57988d566f99f7d4625476b7163a6a45c95a3cf1a"
+    }
+  ],
+  "empty_cache_directories": [],
+  "scope": "Only ignored, inactive probe .obj, reproducible Python cache, scratch difftest EXE with retained C, and one hash-identical private save copy. No sources, accepted executable, original assets, traces, baseline or rollback deletion."
+}

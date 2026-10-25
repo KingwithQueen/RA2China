@@ -22,21 +22,42 @@ static int scaled_at_least(int32_t value,double factor,double threshold,uint16_t
 void ra2_path_find_anchor(const int32_t *directions,int32_t end,int32_t start,
     int32_t *anchor_index,Ra2PathPoint *anchor,const Ra2PathPoint offsets[8])
 {
-    Ra2PathPoint displacement={0,0},point=*anchor;int maximum=0,retreated=0;
+    /* 反扫跳过删除槽；方向8在这里仍按低三位回退，不查询特殊连接。 */
+    Ra2PathPoint reverse_delta={0,0},candidate_anchor=*anchor;int maximum_extent=0,passed_peak=0;
     for(int32_t i=end;i>=start;--i) {
         if(directions[i]==-2)continue;
-        int32_t backward=(int32_t)(((uint32_t)directions[i]-4u)&7u);
-        displacement=add(displacement,offsets[backward]);point=add(point,offsets[backward]);
-        int extent=distance(displacement);
-        if(extent>maximum) {
-            if(retreated) {
-                *anchor_index=i+1;*anchor=add(point,offsets[(backward+4)&7]);return;
+        int32_t reverse_direction=(int32_t)(((uint32_t)directions[i]-4u)&7u);
+        reverse_delta=add(reverse_delta,offsets[reverse_direction]);candidate_anchor=add(candidate_anchor,offsets[reverse_direction]);
+        int extent=distance(reverse_delta);
+        if(extent>maximum_extent) {
+            if(passed_peak) {
+                /* 先发布索引，再读取偏移并发布上一格锚点，保留原写入顺序。 */
+                *anchor_index=i+1;*anchor=add(candidate_anchor,offsets[(reverse_direction+4)&7]);return;
             }
-            maximum=extent;
-        } else retreated=1;
+            maximum_extent=extent;
+        } else passed_peak=1;
     }
-    *anchor_index=start;*anchor=point;
+    *anchor_index=start;*anchor=candidate_anchor;
 }
+static int can_shorten_run(const Ra2PathPoint *origin,int32_t direction,int32_t remaining,
+    int32_t level,double factor,uint32_t house,const Ra2LocalPathServices *v)
+{
+    int blocked=0;
+    Ra2PathPoint point=add(*origin,v->offsets[direction&7]);
+    uintptr_t cell=v->cell_at(v->context,&point);
+    while(remaining>0 && !blocked) {
+        blocked=v->passage(v->context,cell,direction,level)!=0;
+        if(!blocked)blocked=(v->cell_properties(v->context,cell).flags&0x40000u)!=0;
+        /* 缩短转弯查询候选段起点的威胁；不要换成正在推进的格点。 */
+        if(!blocked)blocked=scaled_at_least(v->threat(v->context,origin,house),factor,1.0,*v->numeric_control);
+        --remaining;
+        /* 已阻挡或刚到段尾仍探测下一格，并按通行服务之后的桥层信息更新高度。 */
+        point=add(point,v->offsets[direction&7]);cell=v->cell_at(v->context,&point);
+        level=next_level(level,v->cell_properties(v->context,cell));
+    }
+    return !blocked;
+}
+
 int32_t ra2_path_shorten_turn(int32_t *directions,const int32_t *levels,int32_t first_count,
     int32_t second_count,Ra2PathPoint *anchor,const Ra2LocalPathServices *v)
 {
@@ -51,19 +72,7 @@ int32_t ra2_path_shorten_turn(int32_t *directions,const int32_t *levels,int32_t 
     if(second_count<first_count)origin=walk(origin,directions,first_count-second_count,v);
     double factor=v->owner_factor(v->context);uint32_t house=v->owner_house(v->context);
     for(;pairs>0;--pairs,origin=add(origin,v->offsets[first&7])) {
-        int32_t remaining=pairs*2,level=levels[first_count-pairs];int blocked=0;
-        Ra2PathPoint point=add(origin,v->offsets[middle&7]);
-        uintptr_t cell=v->cell_at(v->context,&point);
-        while(remaining>0 && !blocked) {
-            blocked=v->passage(v->context,cell,middle,level)!=0;
-            if(!blocked)blocked=(v->cell_properties(v->context,cell).flags&0x40000u)!=0;
-            if(!blocked)blocked=scaled_at_least(v->threat(v->context,&origin,house),factor,1.0,*v->numeric_control);
-            --remaining;
-            /* 原版在本次已阻挡或刚到段尾时仍查询下一格并更新高度。 */
-            point=add(point,v->offsets[middle&7]);cell=v->cell_at(v->context,&point);
-            level=next_level(level,v->cell_properties(v->context,cell));
-        }
-        if(!blocked) {
+        if(can_shorten_run(&origin,middle,pairs*2,levels[first_count-pairs],factor,house,v)) {
             int32_t prefix=first_count-pairs;
             for(int32_t i=0;i<pairs*2;++i)directions[prefix+i]=middle;
             *anchor=walk(*anchor,directions,prefix,v);return prefix;
@@ -71,37 +80,59 @@ int32_t ra2_path_shorten_turn(int32_t *directions,const int32_t *levels,int32_t 
     }
     *anchor=walk(*anchor,directions,first_count,v);return first_count;
 }
+typedef struct Ra2SegmentRewritePlan {
+    int32_t first,second,first_count,second_count;
+    double factor;
+    uint32_t house;
+    int use_threat;
+} Ra2SegmentRewritePlan;
+
+static int segment_is_passable(const Ra2SegmentRewritePlan *plan,const Ra2PathPoint *anchor,
+    int32_t level,int final_segment,const Ra2LocalPathServices *v)
+{
+    int blocked=plan->first_count==0;
+    Ra2PathPoint point=*anchor;int32_t current_level=level,high_threat=0;
+    for(unsigned run=0;run<2 && !blocked;++run) {
+        int32_t direction=run?plan->second:plan->first,steps=run?plan->second_count:plan->first_count;
+        for(int32_t i=0;i<steps && !blocked;++i) {
+            point=add(point,v->offsets[direction&7]);uintptr_t cell=v->cell_at(v->context,&point);
+            if(plan->use_threat && scaled_at_least(v->threat(v->context,&point,plan->house),plan->factor,0.01,*v->numeric_control))++high_threat;
+            /* 段改写先查当前点威胁，再查通行；即使通行受阻也读取格属性并更新层高。 */
+            blocked=v->passage(v->context,cell,direction,current_level)!=0;
+            Ra2LocalPathCell properties=v->cell_properties(v->context,cell);
+            if(!blocked)blocked=(properties.flags&0x40000u)!=0 || high_threat>3 || (!(final_segment&255) && high_threat>0);
+            current_level=next_level(current_level,properties);
+        }
+    }
+    return !blocked;
+}
+
+static void publish_segment_directions(int32_t *directions,int32_t count,const Ra2SegmentRewritePlan *plan)
+{
+    /* 完整候选通过后才发布；失败候选不改方向，成功后的剩余旧槽标为删除。 */
+    int32_t written=0;
+    for(int32_t i=0;i<plan->first_count;++i)directions[written++]=plan->first;
+    for(int32_t i=0;i<plan->second_count;++i)directions[written++]=plan->second;
+    while(written<count)directions[written++]=-2;
+}
+
 int ra2_path_rewrite_segment(int32_t *directions,int32_t count,const Ra2PathPoint *anchor,
     const Ra2PathPoint *delta,int32_t level,int final_segment,const Ra2LocalPathServices *v)
 {
-    int32_t diagonal=delta->x<0?(delta->y<0?7:5):(delta->y<0?1:3);
-    int32_t straight=delta->x-delta->y>0?(delta->x+delta->y>0?2:0):(delta->x+delta->y>0?4:6);
+    Ra2SegmentRewritePlan plan;
+    plan.first=delta->x<0?(delta->y<0?7:5):(delta->y<0?1:3);
+    plan.second=delta->x-delta->y>0?(delta->x+delta->y>0?2:0):(delta->x+delta->y>0?4:6);
     int32_t x=abs(delta->x),y=abs(delta->y);
-    int32_t first_count=x<y?x:y,second_count=abs(x-y),first=diagonal,second=straight;
-    double factor=v->owner_factor(v->context);uint32_t house=v->owner_house(v->context);
-    int use_threat=factor>0.00001;
+    plan.first_count=x<y?x:y;plan.second_count=abs(x-y);
+    plan.factor=v->owner_factor(v->context);plan.house=v->owner_house(v->context);
+    plan.use_threat=plan.factor>0.00001;
     for(unsigned attempt=0;attempt<2;++attempt) {
-        int blocked=first_count==0;Ra2PathPoint point=*anchor;int32_t current_level=level,high_threat=0;
-        for(unsigned run=0;run<2 && !blocked;++run) {
-            int32_t direction=run?second:first,steps=run?second_count:first_count;
-            for(int32_t i=0;i<steps && !blocked;++i) {
-                point=add(point,v->offsets[direction&7]);uintptr_t cell=v->cell_at(v->context,&point);
-                if(use_threat && scaled_at_least(v->threat(v->context,&point,house),factor,0.01,*v->numeric_control))++high_threat;
-                blocked=v->passage(v->context,cell,direction,current_level)!=0;
-                Ra2LocalPathCell properties=v->cell_properties(v->context,cell);
-                if(!blocked)blocked=(properties.flags&0x40000u)!=0 || high_threat>3 || (!(final_segment&255) && high_threat>0);
-                current_level=next_level(current_level,properties);
-            }
+        if(segment_is_passable(&plan,anchor,level,final_segment,v)) {
+            publish_segment_directions(directions,count,&plan);return 1;
         }
-        if(!blocked) {
-            int32_t written=0;
-            for(int32_t i=0;i<first_count;++i)directions[written++]=first;
-            for(int32_t i=0;i<second_count;++i)directions[written++]=second;
-            while(written<count)directions[written++]=-2;
-            return 1;
-        }
-        int32_t temporary=first;first=second;second=temporary;
-        temporary=first_count;first_count=second_count;second_count=temporary;
+        /* 交换两段再试；下一次从原锚点/层高开始，威胁累计重新置零。 */
+        int32_t temporary=plan.first;plan.first=plan.second;plan.second=temporary;
+        temporary=plan.first_count;plan.first_count=plan.second_count;plan.second_count=temporary;
     }
     return 0;
 }
