@@ -1,3 +1,4 @@
+#include "combat_death_weapon_bridge.h"
 #include "combat_effects_bridge.h"
 #include "combat_aftermath_bridge.h"
 /* Functions named by name_lift.py */
@@ -95082,6 +95083,12 @@ L_006D7E20:
     PUSH32(esp, esi); /* 0x006D7E24: push esi */
     esi = ecx; /* 0x006D7E25: mov esi, ecx */
     PUSH32(esp, edi); /* 0x006D7E27: push edi */
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_death_weapon_selection_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_006D7EB4;
+    }
     eax = MEM32(esi); /* 0x006D7E28: mov eax, dword ptr [esi] */
     RECOMP_ICALL(MEM32(eax + 0x80)); /* 0x006D7E2A: call dword ptr [eax + 0x80] */
     RECOMP_FLAGS_IN();

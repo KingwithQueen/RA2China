@@ -332,3 +332,6 @@ set_source_files_properties(src/gameplay/combat_effects.c src/runtime/combat_eff
 
 target_sources(ra2 PRIVATE src/gameplay/combat_warhead_values.c src/runtime/combat_warhead_values_bridge.c)
 set_source_files_properties(src/gameplay/combat_warhead_values.c src/runtime/combat_warhead_values_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/combat_death_weapon.c src/runtime/combat_death_weapon_bridge.c)
+set_source_files_properties(src/gameplay/combat_death_weapon.c src/runtime/combat_death_weapon_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
