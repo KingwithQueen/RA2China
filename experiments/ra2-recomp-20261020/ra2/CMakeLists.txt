@@ -344,3 +344,6 @@ set_source_files_properties(src/gameplay/combat_building_crew.c src/runtime/comb
 
 target_sources(ra2 PRIVATE src/gameplay/combat_building_debris.c src/runtime/combat_building_debris_bridge.c)
 set_source_files_properties(src/gameplay/combat_building_debris.c src/runtime/combat_building_debris_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/combat_building_resources.c src/runtime/combat_building_resources_bridge.c)
+set_source_files_properties(src/gameplay/combat_building_resources.c src/runtime/combat_building_resources_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
