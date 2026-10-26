@@ -1,3 +1,4 @@
+#include "combat_crew_bridge.h"
 #include "combat_death_weapon_bridge.h"
 #include "combat_effects_bridge.h"
 #include "combat_aftermath_bridge.h"
@@ -78582,6 +78583,13 @@ void TechnoClass__virtual_184(void) {
 L_006D30B0:
     PUSH32(esp, edi); /* 0x006D30B0: push edi */
     edi = ecx; /* 0x006D30B1: mov edi, ecx */
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        uint32_t next=ra2_crew_type_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        if(next==0x6D30C5)goto L_006D30C5;
+        goto L_006D3149;
+    }
     eax = MEM32(edi); /* 0x006D30B3: mov eax, dword ptr [edi] */
     RECOMP_ICALL(MEM32(eax + 0x80)); /* 0x006D30B5: call dword ptr [eax + 0x80] */
     RECOMP_FLAGS_IN();

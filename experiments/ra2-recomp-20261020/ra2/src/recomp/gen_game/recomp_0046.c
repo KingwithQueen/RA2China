@@ -1,3 +1,4 @@
+#include "combat_crew_bridge.h"
 #include "combat_effects_bridge.h"
 #include "combat_aftermath_bridge.h"
 #include "combat_lifecycle_bridge.h"
@@ -30704,6 +30705,13 @@ L_006FCF1D:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_006FD0B8; /* 0x006FCF25: jne 0x6fd0b8 */
 L_006FCF2B:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        uint32_t next=ra2_crew_chance_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        if(next==0x6FCF67)goto L_006FCF67;
+        goto L_006FD0B8;
+    }
     eax = MEM32(0xA3D290); /* 0x006FCF2B: mov eax, dword ptr [0xa3d290] */
     PUSH32(esp, 0x7FFFFFFEu); /* 0x006FCF30: push 0x7ffffffe */
     PUSH32(esp, 0); /* 0x006FCF35: push 0 */
