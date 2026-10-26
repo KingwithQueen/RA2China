@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "truck",
+      "path": "evidence/combat-state-v3/fixtures/truck.MAP",
+      "map_sha256": "623e3c0dbca7a26e2a46d3f661d868b1e2417e32f2c268e7f17c3f21fbe1a255",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [],
+      "attached_tag": true,
+      "special_control": false
+    },
+    {
+      "tag": "infantry",
+      "path": "evidence/combat-state-v3/fixtures/infantry.MAP",
+      "map_sha256": "f71740d149476015a0ea40d122c6ee048dda2fadaea18adc5179dac73dc80039",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [],
+      "attached_tag": true,
+      "special_control": false
+    },
+    {
+      "tag": "special",
+      "path": "evidence/combat-state-v3/fixtures/special.MAP",
+      "map_sha256": "f71740d149476015a0ea40d122c6ee048dda2fadaea18adc5179dac73dc80039",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [],
+      "attached_tag": true,
+      "special_control": true,
+      "rules": "evidence/combat-state-v3/fixtures/rules-cyborg.ini",
+      "rules_sha256": "0679b1814854fab97b1f02ab8ab64221d0c0f2864bc276e7673e064df6b143e3"
+    },
+    {
+      "tag": "unattached",
+      "path": "evidence/combat-state-v3/fixtures/unattached.MAP",
+      "map_sha256": "fbc9742fee1c6343c83966b59320b3cd5bc94169842940458a9cbeff9b93ef01",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [],
+      "attached_tag": false,
+      "special_control": false
+    }
+  ],
+  "original_rules": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini",
+  "original_rules_sha256": "fd1e95cea0306ea78049dc81c8cd816e18c28c496872a1ff02edd50bd082062f",
+  "source_map": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v68\\fixtures\\stop-free.MAP",
+  "source_map_sha256": "720cf35ab02170144856b4dbe9c356cccdb9027feffcb999a9aa9bd1c2bfcb26",
+  "tag_event": 6,
+  "trigger_action": 0,
+  "trigger_repetition": 2,
+  "ordinary_native_map_tags": true,
+  "health_or_damage_memory_injection": false
+}

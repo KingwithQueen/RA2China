@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "result": {
+    "tag": "f-volley",
+    "frames": 901,
+    "strict": true,
+    "comparison_sha256": "d2f09d0cf700557043fd5cf0a0c56c6d2c6d71a358886c4f4defbbbd165f7412",
+    "exe_sha256": "94664a87804d5c89c0101bde5a68943b21a394919428de315fb220e8f8ddb858"
+  }
+}

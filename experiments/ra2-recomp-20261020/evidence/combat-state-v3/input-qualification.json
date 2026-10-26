@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "corrected_country": "BadGuy1",
+  "invalid_house_instance": "BadGuy1 House",
+  "initial_invalid_recipes_preserved": true,
+  "independent_invalid_command_receipt_sha256": "620b225bbed29bab0f5da4e289eeec450c7d2fa38d01b14fc5593df31aafcaf5",
+  "corrected_all_original_c_passed": true,
+  "scope": "Only trigger country field corrected; malformed-owner exceptions remain separate from accepted natural scenes."
+}

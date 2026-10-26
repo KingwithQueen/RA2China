@@ -1,3 +1,4 @@
+#include "combat_death_bridge.h"
 #include "combat_health_bridge.h"
 #include "ground_dispatch_bridge.h"
 /* Functions named by name_lift.py */
@@ -61737,6 +61738,12 @@ L_005D3E5C:
     _flag_k = FK_TEST;
     MEM32(esi + 0x6C) = eax; /* 0x005D3E65: mov dword ptr [esi + 0x6c], eax */
 L_005D3E68:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_combat_death_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        return;
+    }
     if (TEST_G(_flag_a, _flag_b)) goto L_005D3F39; /* 0x005D3E68: jg 0x5d3f39 */
 L_005D3E6E:
     edx = MEM32(esi); /* 0x005D3E6E: mov edx, dword ptr [esi] */

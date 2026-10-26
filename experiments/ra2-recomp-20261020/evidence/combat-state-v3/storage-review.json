@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "saved_bytes": 220153295319,
+  "free_before": 192437534720,
+  "free_after_storage": 412560281600,
+  "files": 25731,
+  "all_paths_and_bytes_retained": true,
+  "report": "D:\\Program\\红色警戒2\\docs\\存储占用核查与无损整理-20261026.txt",
+  "bindings": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\storage-review-v1\\plan.json",
+      "sha256": "beba357c89220a98bfc3fcfe38c9f69d59e53d05482b49b97448dd7facaa01a5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\storage-review-v1\\validation.json",
+      "sha256": "df9e3a065983d791855d788ed991d8e49b8acdb1e6dd4bcdf28dd4109152ab9d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\storage-review-v1\\postcheck.json",
+      "sha256": "42bc0e33bf63d129c58e7299e6aa78c101ce86164399cc45ad3a17f3a9f78392"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\storage-review-v1\\journal.jsonl",
+      "sha256": "06da161e0578ba7c6b64b3ab9c57fa0925c620bed8ddff6ed5e2fbd22ece8677"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\storage_review_v71.py",
+      "sha256": "911cd523adc3baceed7f2cbe4f6887f42cbe571a82677ecf86c2b901d89a2180"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\docs\\存储占用核查与无损整理-20261026.txt",
+      "sha256": "3b894446ad8f76b8d57e87c2162bbbac8527f1d41be9a3efad6c310477af3531"
+    }
+  ]
+}

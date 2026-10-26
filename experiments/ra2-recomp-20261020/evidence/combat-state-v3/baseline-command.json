@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\baseline-command\\combat-command.exe",
+      "sha256": "cf56bc58e9f73e616aea07fd0629d998e0b46967ce49e179768071c961c54c8b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\baseline-command\\combat_command.c",
+      "sha256": "0e981a530b37e02f6b466474a915f60d5faf04a47cb8f1f3f6af2e5c74d67957"
+    }
+  ],
+  "exe_sha256": "cf56bc58e9f73e616aea07fd0629d998e0b46967ce49e179768071c961c54c8b"
+}

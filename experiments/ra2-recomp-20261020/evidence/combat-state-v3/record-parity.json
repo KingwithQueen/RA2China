@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "phase": "b",
+      "mode": "original",
+      "command_sha256": "95a65a7e6c18c6f4d72697d0b4dab37b01c6c3ae107738c79cf057a6f246b739",
+      "observer_sha256": "9bf25284c7fec8dc6d399831eb2e8bf3da5bb46b1065ae40bc8f32d53ef7862a"
+    },
+    {
+      "phase": "b",
+      "mode": "generated-c",
+      "command_sha256": "95a65a7e6c18c6f4d72697d0b4dab37b01c6c3ae107738c79cf057a6f246b739",
+      "observer_sha256": "9bf25284c7fec8dc6d399831eb2e8bf3da5bb46b1065ae40bc8f32d53ef7862a"
+    },
+    {
+      "phase": "f",
+      "mode": "original",
+      "command_sha256": "95a65a7e6c18c6f4d72697d0b4dab37b01c6c3ae107738c79cf057a6f246b739",
+      "observer_sha256": "9bf25284c7fec8dc6d399831eb2e8bf3da5bb46b1065ae40bc8f32d53ef7862a"
+    },
+    {
+      "phase": "f",
+      "mode": "generated-c",
+      "command_sha256": "95a65a7e6c18c6f4d72697d0b4dab37b01c6c3ae107738c79cf057a6f246b739",
+      "observer_sha256": "9bf25284c7fec8dc6d399831eb2e8bf3da5bb46b1065ae40bc8f32d53ef7862a"
+    }
+  ],
+  "only_fixture_diagnostics_filtered": true,
+  "production_recorder_and_comparator_unchanged": true,
+  "native_observer_return_addresses_restored": true
+}

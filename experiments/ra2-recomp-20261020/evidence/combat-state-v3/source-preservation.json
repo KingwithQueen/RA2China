@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/recomp/gen_game/recomp_0029.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/gameplay/combat_death.h",
+    "ra2/src/gameplay/combat_death.c",
+    "ra2/src/runtime/combat_death_bridge.c",
+    "ra2/src/runtime/combat_death_bridge.h"
+  ],
+  "c_sources": 188,
+  "headers": 137,
+  "compile_inputs": 325,
+  "guard_sites": 37,
+  "generated_definitions": 23117,
+  "entry": "005D3E68",
+  "end": "005D4157",
+  "original_size": 751,
+  "original_statements_and_labels_retained": true,
+  "health_damage_movement_and_shared_numeric_sources_unchanged": true,
+  "internal_entries_removed": false,
+  "protected_files": 28,
+  "parent_archive_files": 392,
+  "production_recorder_comparator_and_original_rules_preserved": true
+}

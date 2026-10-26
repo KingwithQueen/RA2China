@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "default",
+      "frames": 301,
+      "strict": true,
+      "comparison_sha256": "2991a6daa425dd868ff5ac60b04c29e2429e7cf5bb6dcb243df89ad9ecda267e",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    },
+    {
+      "tag": "reg-north",
+      "frames": 501,
+      "strict": true,
+      "comparison_sha256": "1076dd67e8fe87941d4ae59647d5963bbd2909e648511f8b3dad343cb9377e61",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    },
+    {
+      "tag": "reg-south",
+      "frames": 501,
+      "strict": true,
+      "comparison_sha256": "1ede69ba1ec118ece5bb579e9b7424c0131f1f2a3160730c19f40f185e2424ed",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    },
+    {
+      "tag": "reg-train",
+      "frames": 501,
+      "strict": true,
+      "comparison_sha256": "7fe5eb77b37282b875a4cb7678e916879ad0cb730f08b43b5d2ce1d323355d54",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    },
+    {
+      "tag": "reg-crush",
+      "frames": 501,
+      "strict": true,
+      "comparison_sha256": "64eb45f4d04362c29a42a38cf71631c1f0a0ca46d748e6f448260bd49cf5ae56",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    },
+    {
+      "tag": "reg-stop",
+      "frames": 1801,
+      "strict": true,
+      "comparison_sha256": "823fab0824e5c25ccd2aeb5c2b4821d38a1821ab3a0fc8db1b602e566bc247a4",
+      "exe_sha256": "38e47f8fc04a089cc7fe68ab236315aaad3ebb13891e68461bd71a35c2d2c1d0"
+    }
+  ],
+  "production_recorder_unchanged": true
+}

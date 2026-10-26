@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "result": {
+    "passed": true,
+    "death_cases": 131072,
+    "special_recoveries": 8739,
+    "remove_callbacks": 20048,
+    "trigger_notifications": 279778,
+    "returns": [
+      17310,
+      17313,
+      16963,
+      24451,
+      39230,
+      15805
+    ],
+    "callback_order_state_stack_flags_cw_verified": true,
+    "engine_callbacks_mocked": true,
+    "actual_original_tail_and_ftol": true
+  },
+  "exe_sha256": "eb8c3556e4632ca5f35abfcfaeeb0d6f5ce3ca36c24bef40b8917f75eab82b7f",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "inputs": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\death_probe.c",
+      "sha256": "2bd5ff1a82ef1df6cca08f2893028a0db5a7d8399076782c558f3e00664db523"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_death.c",
+      "sha256": "84ae2531d2543e27070d6ed5e047cc01a5b4a436c9caa35e966e31e2befbb542"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_death.h",
+      "sha256": "ba3dff62be7aafa286fe0260b81084681e3f3b9afbb46f3efa82c368ac79f6fd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_death_bridge.c",
+      "sha256": "7c57eda4f5af213f4292324d7db5d4629ec42c77739926764ffb7f4c4402ee16"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_death_bridge.h",
+      "sha256": "ef8f424ecc32e1f6574265568ec236adc8073599c078e00dae02700d9c038849"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\compat\\x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\compat\\x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    }
+  ],
+  "real_tail_and_ftol": true,
+  "engine_callbacks_mocked": true,
+  "special_fraction": 0.25,
+  "posture_bit_is_not_lifetime_recovery_marker": true
+}

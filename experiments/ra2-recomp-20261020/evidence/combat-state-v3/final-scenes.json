@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "f-truck",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "c11bdbcff317089b56d6dcf659952264d2ab26a125541fb751333de13eb85e0e",
+      "exe_sha256": "94664a87804d5c89c0101bde5a68943b21a394919428de315fb220e8f8ddb858"
+    },
+    {
+      "tag": "f-infantry",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "3aead9ce863b02489a04ae065264fffb4087eb9ae12bcdfbbf79b2d8f3d52d79",
+      "exe_sha256": "94664a87804d5c89c0101bde5a68943b21a394919428de315fb220e8f8ddb858"
+    },
+    {
+      "tag": "f-special",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "80491d1d9e717e6f3dd2c76c18d620911d6e94712d266a19ee4d06d332bd01d2",
+      "exe_sha256": "94664a87804d5c89c0101bde5a68943b21a394919428de315fb220e8f8ddb858"
+    },
+    {
+      "tag": "f-unattached",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "f96ad55a65fff5ce7e703e347b1efc8735377c7debcb5d5e37cadd0469606dad",
+      "exe_sha256": "94664a87804d5c89c0101bde5a68943b21a394919428de315fb220e8f8ddb858"
+    }
+  ]
+}

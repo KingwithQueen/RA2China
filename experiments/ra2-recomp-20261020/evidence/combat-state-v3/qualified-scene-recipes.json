@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "truck",
+      "path": "evidence/combat-state-v3/fixtures/truck-02.MAP",
+      "map_sha256": "208f9a361986e6f29a27aabde2372b2415e9b8a9963c3255f0b4313d9ffe9bc2",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "infantry",
+      "path": "evidence/combat-state-v3/fixtures/infantry-02.MAP",
+      "map_sha256": "32f3e40ec4bedb253e3ee1109b51df70ecc86fc8af8a81877682991c21e2a8c9",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "special",
+      "path": "evidence/combat-state-v3/fixtures/special-02.MAP",
+      "map_sha256": "32f3e40ec4bedb253e3ee1109b51df70ecc86fc8af8a81877682991c21e2a8c9",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": true,
+      "rules": "evidence/combat-state-v3/fixtures/rules-cyborg.ini",
+      "rules_sha256": "0679b1814854fab97b1f02ab8ab64221d0c0f2864bc276e7673e064df6b143e3",
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "unattached",
+      "path": "evidence/combat-state-v3/fixtures/unattached-02.MAP",
+      "map_sha256": "27dc16184b7c9b1fd3c4038a43af1de1b7d206d5d61002241ce6d55f7c2314b3",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": false,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    }
+  ],
+  "calibration_excluded": true
+}

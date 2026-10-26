@@ -1,0 +1,23 @@
+项目存储占用核查与无损整理，2026-10-26
+当前项目：D:\Program\红色警戒2
+D盘整理前余量：179.22 GiB；整理后：384.23 GiB。
+本次释放：205.03 GiB（按选中文件压缩前后占用差计算），共25731个独立文件，逻辑数据437.03 GiB，存储降至231.99 GiB。
+
+占用成因
+1. 目录累加显示的约7 TiB包含大量游戏素材硬链接，同一文件被重复计入，不能当作物理占用。实际核查使用文件身份去重。
+2. 历史parts、final-source、baseline中独立EXE约301 GiB，生成C源码约70 GiB，另外有约44.5 GiB文本轨迹。它们仍承担基线、有效回退、异常和重放用途。
+3. 约54.8 GiB历史FFV1无损录像也属于独立证据，本轮保留。游戏资源已有硬链接共享，本轮没有再次复制或改成会互相覆盖的快照硬链接。
+
+处理与验证
+仅对D盘实验evidence目录中明确列出的、单一链接、至少1 MiB的程序/源码/文本证据启用NTFS透明压缩。没有删历史文件、合并版本或改写内容；原路径、文件长度、基线、回退、原版异常与录像均保留，H盘原始输入不改。
+逐文件计算压缩前后SHA-256，25731项全部相同；完整逐项收据保留在journal.jsonl。只清除本次生成、且已有原始副本的5270770字节验证样本。
+在压缩后的封存EXE运行原版/当前C固定场景0..30帧严格通过，且新测试目录的私有存档实际继承压缩、保持独立单一链接。上一批正式69/验证70只读复核再次通过。
+NTFS压缩默认已设在evidence根目录，新批次的封存与文本会继承；当前活动源码与编译目录保持原有布局。这样同时降低后续增长，而不损失可回退性。
+
+当前结论
+存在可优化的重复存储形式，尚不需要通过删除验收资料换空间。余量已提高到约384 GiB，当前不急于另备磁盘；独立录像和更长期历史仍随实际增长重新评估。
+方法依据：https://learn.microsoft.com/en-us/windows/win32/fileio/compression-state
+计划：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\storage-review-v1\plan.json
+逐项哈希与占用收据：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\storage-review-v1\journal.jsonl
+结论：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\evidence\storage-review-v1\validation.json
+复核：D:\Program\红色警戒2\experiments\ra2-recomp-20261020\storage_review_v71.py verify

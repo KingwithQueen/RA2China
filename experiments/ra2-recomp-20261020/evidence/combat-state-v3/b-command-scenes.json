@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "result": {
+    "tag": "b-truck-command",
+    "frames": 901,
+    "strict": true,
+    "comparison_sha256": "e0f2c2ffa88de222065e85538b3358126e3875f386cf71948c17d6f3783bb7e9",
+    "exe_sha256": "cf56bc58e9f73e616aea07fd0629d998e0b46967ce49e179768071c961c54c8b"
+  }
+}

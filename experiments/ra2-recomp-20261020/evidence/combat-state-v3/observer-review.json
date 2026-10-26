@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "initial_source": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\diagnostics\\observer_initial.c",
+  "initial_sha256": "734996c5a4020ca2676e6a68df86510ffabc0e9c6a663c1365fda666f335f416",
+  "failed_log": "build-observer-baseline.log",
+  "issue": "Independent observer names collided with inherited queue event hooks; naked forward declaration rejected by MSVC. Use a separate tag_event namespace and ordinary forward declaration. No executable or game candidate was produced."
+}
