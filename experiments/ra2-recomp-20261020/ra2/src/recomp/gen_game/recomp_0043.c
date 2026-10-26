@@ -1,3 +1,4 @@
+#include "combat_building_debris_bridge.h"
 #include "combat_crew_bridge.h"
 #include "combat_death_weapon_bridge.h"
 #include "combat_effects_bridge.h"
@@ -60951,6 +60952,13 @@ L_006CE2DD:
 L_006CE2E4:
     if (recomp_cond_cf(_flag_k, _flag_a, _flag_b, CC_E, _cf)) goto L_006CE6CE; /* 0x006CE2E4: je 0x6ce6ce */
 L_006CE2EA:
+    /* 只接管原版BuildingClass；其他Techno的共用死亡路径保持原实现。 */
+    if (MEM32(esi) == 0x0079CBBCu) {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_building_debris_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_006CE5D7;
+    }
     eax = MEM32(esi); /* 0x006CE2EA: mov eax, dword ptr [esi] */
 L_006CE2EC:
     ecx = esi; /* 0x006CE2EC: mov ecx, esi */
