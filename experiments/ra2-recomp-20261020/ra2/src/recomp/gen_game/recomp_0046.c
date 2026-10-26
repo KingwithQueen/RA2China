@@ -1,3 +1,4 @@
+#include "combat_effects_bridge.h"
 #include "combat_aftermath_bridge.h"
 #include "combat_lifecycle_bridge.h"
 extern unsigned ra2_ground_allied_relation_bridge(void);
@@ -30662,6 +30663,14 @@ L_006FCED1:
     RECOMP_BACKEDGE();
     if (TEST_NZ(_flag_a, _flag_b)) goto L_006FCD72; /* 0x006FCEEA: jne 0x6fcd72 */
 L_006FCEF0:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        uint32_t next=ra2_crew_eligibility_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        if(next==0x6FCF2B)goto L_006FCF2B;
+        if(next==0x6FD0B8)goto L_006FD0B8;
+        goto L_006FCF67;
+    }
     eax = MEM32(esi + 0x290); /* 0x006FCEF0: mov eax, dword ptr [esi + 0x290] */
     _flag_a = (uint32_t)((ebp | 0xFFFFFFFFu)); _flag_b = (uint32_t)((ebp | 0xFFFFFFFFu));
     ebp = ebp | 0xFFFFFFFFu; /* 0x006FCEF6: or ebp, 0xffffffff */
@@ -30714,6 +30723,12 @@ L_006FCF2B:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_006FD0B8; /* 0x006FCF61: je 0x6fd0b8 */
 L_006FCF67:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_create_death_crew_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_006FD0B8;
+    }
     /* cmp MEM32(esi + 0x290), ebp */ /* 0x006FCF67: cmp dword ptr [esi + 0x290], ebp */
     _flag_a = (uint32_t)(MEM32(esi + 0x290)); _flag_b = (uint32_t)(ebp);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
@@ -35108,6 +35123,13 @@ L_006FD3A0:
     PUSH32(esp, esi); /* 0x006FD3A3: push esi */
     esi = ecx; /* 0x006FD3A4: mov esi, ecx */
     PUSH32(esp, edi); /* 0x006FD3A6: push edi */
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        uint32_t next=ra2_death_explosion_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        if(next==0x6FD51F)goto L_006FD51F;
+        goto L_006FD466;
+    }
     eax = MEM32(esi + 0x5AC); /* 0x006FD3A7: mov eax, dword ptr [esi + 0x5ac] */
     ecx = MEM32(eax + 0x654); /* 0x006FD3AD: mov ecx, dword ptr [eax + 0x654] */
     /* test ecx, ecx */ /* 0x006FD3B3: test ecx, ecx */
@@ -35309,6 +35331,12 @@ L_006FD518:
     RECOMP_CALL(sub_00482E00); /* 0x006FD51A: call 0x482e00 */
     RECOMP_FLAGS_IN();
 L_006FD51F:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_destroy_animation_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_006FD59A;
+    }
     eax = MEM32(esi + 0x5AC); /* 0x006FD51F: mov eax, dword ptr [esi + 0x5ac] */
     ecx = MEM32(eax + 0x670); /* 0x006FD525: mov ecx, dword ptr [eax + 0x670] */
     /* test ecx, ecx */ /* 0x006FD52B: test ecx, ecx */
