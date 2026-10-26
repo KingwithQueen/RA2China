@@ -1,8 +1,0 @@
-{
-  "parent_commit": "e4937ce7f9c32b184c71a9b40838de71a8046502",
-  "config_sha256": "d91c7e6257be56360b5d25674376c62955a28194dbdd26aa874bf9e00dfd0b97",
-  "remote_refs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "parent_archive": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v58\\final-source",
-  "parent_source_files": 405,
-  "parent_source_manifest_sha256": "39062e90e6642ab31fc2f0c811a25bb40584cce0673084d58ed778fdd5dee48e"
-}

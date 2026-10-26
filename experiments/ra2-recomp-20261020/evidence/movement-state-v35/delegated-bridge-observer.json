@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "job": "bridge-observer",
-  "runner": "run_bridge_scenes_v35.py",
-  "runner_sha256": "520494cdad14f76f98cd5a1dbb007348a4851ce5b81ba2d6f17e450e38782291",
-  "completed_on_freed_bridge_lane": true,
-  "max_scene_lanes": 2,
-  "max_game_processes": 4
-}

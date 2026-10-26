@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "compiled_inputs": 288,
-  "compiled_inputs_match_index_byte_for_byte": true,
-  "staged_files_checked": 406,
-  "staged_worktree_bytes_identical": true,
-  "executable_sha256": "6853d622795908f7f15aa15421cfbf59b5682ada6339382e40a2e3bbad6a13bb",
-  "remote_actions": false
-}

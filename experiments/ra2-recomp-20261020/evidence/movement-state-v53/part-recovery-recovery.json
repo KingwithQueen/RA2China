@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "failure_budget_cases": 65536,
-  "shared_finish_cases": 65536,
-  "state_calls_abi_verified": true,
-  "cases": 131072,
-  "probe_exe_sha256": "4945311bbf22e67ee4a47c65948970f4c8d0b9de42307bd7eb935f98f2f61593",
-  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
-}

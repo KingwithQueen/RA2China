@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-recovery-probe-v53.ps1",
-  "base_recipe_sha256": "ea111fe571ee30b94c72ef4ecf8d86c58a0bb9ca590841b0b5cabd7457612fbb",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

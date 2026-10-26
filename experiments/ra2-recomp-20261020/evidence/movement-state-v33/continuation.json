@@ -1,7 +1,0 @@
-{
-  "status": "validation_complete_commit_separately_audited",
-  "validation": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v33\\validation.json",
-  "verify": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\verify_final_movement_v33.py",
-  "exe_sha256": "19bb89a2f7a69534848b40bdd474c0a44f5788a8b3bb536d8a8650285e8a2104",
-  "commit_policy": "local commit only; never push"
-}

@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-travel-probe-v38.ps1",
-  "base_recipe_sha256": "0e8f8dc7d86c1103a90db0069e57e5638c58ed4b9b7d44a896c1ce280b115528",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

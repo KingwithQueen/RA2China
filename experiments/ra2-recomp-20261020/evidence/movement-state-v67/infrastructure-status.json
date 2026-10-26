@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "new_game_setup_failures": false,
-  "accepted_scene_setups_succeeded": true,
-  "parent_status": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v66\\infrastructure-status.json",
-  "parent_status_sha256": "34aee78f4e850028242a929fb73f1de3901c2c83f89a4138e5c5b3782d5bb07c",
-  "scope": "All starts and ordinary targets checked using parent original catalogs before calibration. Parent invalid goals, stationary start and build overlap retained by hash, not rerun as current positives."
-}

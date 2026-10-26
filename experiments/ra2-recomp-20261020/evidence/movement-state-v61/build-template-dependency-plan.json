@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-template-probe-v45.ps1",
-  "base_recipe_sha256": "4921e792eb6c1e1c4799cd9b2f520abe58ed598eb4898bee4404ca583086478b",
-  "added_gameplay_sources": [
-    "..\\..\\ra2\\src\\gameplay\\ground_bridge_plane.c"
-  ],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

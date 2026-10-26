@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "job": "bridge-observer",
-  "runner": "run_bridge_scenes_v33.py",
-  "runner_sha256": "d6f647fdfe89b213379711054362c300e9011bfa5571a65868c3f67070c86377",
-  "two_lanes_max": true
-}

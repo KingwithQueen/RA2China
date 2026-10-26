@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v65\\current-explorations.json",
-  "sha256": "590cad572715a7b62d70a64a5e94e2957d1e42621a7dd0f7ef1b393dbd863280",
-  "rerun": false,
-  "scope": "All parent rejected route/map inputs and calibration/checker corrections retained without reclassifying them as successful traffic."
-}

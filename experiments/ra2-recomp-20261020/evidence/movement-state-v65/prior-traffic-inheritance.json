@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "rerun": false,
-  "parent": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\traffic-effects.json",
-  "sha256": "62163b098d14f0db0ffbc4cd7559f70b8ce33d95d11f578aa0b6feb85753f95c",
-  "scope": "Prior flat/elevated channels remain retained; current round executes per-vehicle mixed bridge/Tube routes and larger exit queues; prior traffic remains retained."
-}

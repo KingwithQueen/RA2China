@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-progress-probe-v50.ps1",
-  "base_recipe_sha256": "447d5d905670bae6cef000d7f26142c6e52824c6246d74d79b969082077b304e",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

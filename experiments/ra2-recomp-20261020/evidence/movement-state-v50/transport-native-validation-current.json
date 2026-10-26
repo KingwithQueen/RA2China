@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "native_transport_constructor_cases": 128,
-  "all_111_bytes_equal": true,
-  "source_sha256": "873e3acfa9bfdb5b151d0d3a76d4d627c4c91a137bcb774488b1f6cb7b99ffac",
-  "probe_sha256": "901b00ec67e81bd8c871b1486338a5d55c127ce49ac9f2ca1874c4faf466af2b",
-  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
-  "enter_uses_destination_field": true
-}

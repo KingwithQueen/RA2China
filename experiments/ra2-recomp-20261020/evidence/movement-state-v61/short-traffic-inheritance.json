@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "rerun": false,
-  "parent": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v60\\traffic-effects.json",
-  "sha256": "75e33f79f7c63afd35225b747db9d2b6786abc6dc521bb46cffcaf8ee5392f33",
-  "scope": "The two prior 901-frame traffic recipes remain retained; this round executes two longer 2401-frame recipes with four active command rounds."
-}

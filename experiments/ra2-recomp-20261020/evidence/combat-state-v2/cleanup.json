@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "deleted_files": 7,
-  "deleted_bytes": 3128019,
-  "protected_files": 419,
-  "protected_unchanged": true,
-  "plan_sha256": "f4f1613947be6224344ec479a3adf6ab3b2a4ec810d921b12312d0daefe8dbeb",
-  "recursive_deletion": false
-}

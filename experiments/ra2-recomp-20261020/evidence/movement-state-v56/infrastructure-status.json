@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "new_game_setup_failures": false,
-  "prior_failure_retained": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\infrastructure-failure.json",
-  "prior_failure_sha256": "c73e752ea895654356a1aefb70876c07598b17731a32210e1b795d5f03c96b38",
-  "scope": "Prior initial resource-link setup failure retained in place; current game runs use authorized local resource links."
-}

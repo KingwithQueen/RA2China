@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-obstacle-probe-v53.ps1",
-  "base_recipe_sha256": "ed2a13db49eb3d0e0b43fb871f226d4167d617718826f99c245ece884014f3f3",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

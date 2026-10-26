@@ -1,8 +1,0 @@
-{
-  "retained_attempt": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v27\\investigations\\native-build-attempt01",
-  "accepted_attempt": "Sequential final-native-gates",
-  "failure_kind": "Shared intermediate build objects",
-  "simulation_difference": false,
-  "sequential_rebuild_passed": true,
-  "final_native_groups": 93
-}

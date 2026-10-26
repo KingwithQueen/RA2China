@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "parent": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v57\\corner-boundary-inheritance.json",
-  "sha256": "bbeef3189089618d730c5cabcb562bce70e9e2b2836b6bc535143676e83b9ccd",
-  "historical_controls_rerun": false,
-  "old_map_cause_proved": false,
-  "current_cm_roundtrip_verified": false
-}

@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v64\\current-explorations.json",
-  "sha256": "ec6c7a4eefeb7217e175d46fd6b41db532b913aef4973e6511b762cdc49f7e32",
-  "rerun": false,
-  "scope": "Retain all parent long-path startup, range-setup and elevated-cardinal stall records; not counted as current positive traffic."
-}

@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "new_game_setup_failures": false,
-  "parent_status": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v56\\infrastructure-status.json",
-  "parent_status_sha256": "3341341ccb1747b2773ec76ec18365cd947e7174dde1f852fbf6541c5e28588b",
-  "scope": "Current scene setup succeeded; historical infrastructure evidence retained through the parent status chain."
-}

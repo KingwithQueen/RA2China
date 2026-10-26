@@ -1,9 +1,0 @@
-{
-  "phase": 2,
-  "passed": true,
-  "fragment_cases": 65536,
-  "live_stack_locals_verified": true,
-  "state_calls_abi_cw_verified": true,
-  "probe_exe_sha256": "b73a403d490ae3226515e4170b3405730cc638450a12d585e0903c49041875fe",
-  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
-}

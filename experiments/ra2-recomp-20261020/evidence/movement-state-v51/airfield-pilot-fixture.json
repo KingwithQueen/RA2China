@@ -1,9 +1,0 @@
-{
-  "path": "evidence/movement-state-v51/fixtures/coast-orca-airfield.MAP",
-  "sha256": "55f073ef12d449505af5b6bbb41ff58e39d8ceb59dbbbdd38fd23451d205411d",
-  "normal_airfield_and_power": true,
-  "structure_entries": [
-    "1=Player House,GAAIRC,256,135,102,0,None,1,0,1,0,0,None,None,None,0,0",
-    "2=Player House,GAPOWR,256,140,98,0,None,1,0,1,0,0,None,None,None,0,0"
-  ]
-}

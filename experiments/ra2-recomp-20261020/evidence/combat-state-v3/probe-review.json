@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "initial_source": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\diagnostics\\death_probe_initial.c",
-  "initial_sha256": "e864e30c861cff44ffe3bbad0aff796a258b8c341c912f1571a9669df7e8075e",
-  "initial_log": "death-probe-01.log",
-  "issue": "Initial mock logger used host hardware CW for both modes. Translated callbacks must record the emulator CW; the numeric result, return and final CW already matched.",
-  "production_rule_changed": false
-}

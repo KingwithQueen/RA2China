@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "parent_commit": "8767b55e64667f8b0304be5e932865e2da5c9098",
-  "parent_manifest_sha256": "20ae7fdc27a9c33c9c40e18f0db2b5e44dd32adad72113dd57731f1c10ab510a",
-  "parent_archive": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\final-source",
-  "config_sha256": "d91c7e6257be56360b5d25674376c62955a28194dbdd26aa874bf9e00dfd0b97",
-  "remote_refs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-}

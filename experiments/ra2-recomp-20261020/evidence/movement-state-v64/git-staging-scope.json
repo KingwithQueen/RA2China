@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "selected_files": 137,
-  "allowlist_verified": true,
-  "baselines_archives_traces_executables_excluded": true,
-  "remote_actions": false,
-  "resumed_after_format_audit": true,
-  "executed_checker_eof_exception_sha256": "d14f080bb4f5da1ebc94177ab019d76f53823aeb9b594986d972712b2a2cbb07"
-}

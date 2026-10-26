@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-overlap-probe-v51.ps1",
-  "base_recipe_sha256": "43b17b0f223b4417cc6cebadbf587dc0bcc0b542ec1682c9e02b757f833b44f5",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

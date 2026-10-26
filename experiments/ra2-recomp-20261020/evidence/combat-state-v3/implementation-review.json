@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "unattached_initial_core": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\diagnostics\\combat_death_before.c",
-  "initial_sha256": "f4cc02e1c758b0a82f05c91ce858931fbcff82ad41fa4d36c0ac4924973f8565",
-  "review": "Native case25 exposed the separate state!=4 guard on event0x2C. Added before any production attachment; original drafts and failed probe log retained.",
-  "invalid_candidate_promoted": false
-}

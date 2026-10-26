@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-wait-probe-v63.ps1",
-  "base_recipe_sha256": "013f6d98e69836d24014060ce6369e5184ae5d1af2bedc53791feef37d4d3540",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}

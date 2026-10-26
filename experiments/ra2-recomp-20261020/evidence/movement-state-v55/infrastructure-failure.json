@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "kind": "initial-resource-link-access",
-  "game_process_started": false,
-  "failed_recipe_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\failed-infrastructure\\b-fm-link-access",
-  "log": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\scene-b-fm.log",
-  "retry_log": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\movement-state-v55\\scene-b-fm-retry-01.log",
-  "scope": "Initial restricted hardlink setup failed before game launch; preserved separately from game-scene acceptance."
-}

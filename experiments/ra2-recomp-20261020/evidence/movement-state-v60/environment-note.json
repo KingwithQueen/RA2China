@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "game_setup_failures": false,
-  "traffic_checker_initial_read_error": "The new checker initially expected cell on execute records. Existing schema records event_frame/id/mission only. It now matches execute using event_frame and separately checks exact submitted cells.",
-  "raw_runs_preserved": true,
-  "game_rerun_for_checker_fix": false,
-  "production_inputs_changed_for_checker_fix": false,
-  "scope": "Tool field-reading correction, not a game regression or comparator relaxation."
-}

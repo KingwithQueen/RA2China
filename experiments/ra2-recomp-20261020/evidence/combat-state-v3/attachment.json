@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "entry": "005D3E68",
-  "before_sha256": "c57b43e61a3bfbf461d9ca736494b70efa7af6986b42e28580ee12b7001e61ac",
-  "after_sha256": "a3d5147adb7e586fdeec7e76db6e7791581133fdadce1811db18a58afdea70ff",
-  "original_labels_and_statements_retained": true,
-  "health_and_damage_services_unchanged": true
-}

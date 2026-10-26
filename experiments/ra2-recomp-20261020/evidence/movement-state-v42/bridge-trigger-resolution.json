@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "original_map": "evidence/movement-state-v4/SOV01T-original.MAP",
-  "original_map_setting": "[SpecialFlags] DestroyableBridges=no",
-  "native_section_pointer": "007F43F0 -> 007F43F8 SpecialFlags",
-  "native_binding": "0068B498 DestroyableBridges option bit15",
-  "recipe": "Explicit ordinary map SpecialFlags DestroyableBridges=yes on both active and control; original Nuke action95. Earlier attempts with omitted flag and inactive Player trigger kept."
-}

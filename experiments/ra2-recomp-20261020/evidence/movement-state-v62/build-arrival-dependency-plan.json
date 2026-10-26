@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "base_recipe": "build-arrival-probe-v46.ps1",
-  "base_recipe_sha256": "c50ec8a65c06f9c3ada3753a4ae0b75a02bff9f5a2dd8ebbf179cf664c8f117a",
-  "added_gameplay_sources": [],
-  "scope": "Transitive references to existing gameplay definitions only; no new production source or runtime stub edits."
-}
