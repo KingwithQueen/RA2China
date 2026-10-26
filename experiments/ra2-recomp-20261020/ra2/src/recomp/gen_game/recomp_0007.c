@@ -1,3 +1,4 @@
+#include "combat_damage_bridge.h"
 #include "ground_tube_state_bridge.h"
 #include "ground_remainder_bridge.h"
 #include "ground_dispatch_bridge.h"
@@ -63181,6 +63182,12 @@ void sub_0047E1C0(void) {
     RECOMP_ENTER(0x0047E1C0u);
 
 L_0047E1C0:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_combat_damage_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        return;
+    }
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0xCu);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
     esp = esp - 0xCu; /* 0x0047E1C0: sub esp, 0xc */

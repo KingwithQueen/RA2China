@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "traces": [
+    {
+      "tag": "b-rifle",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-rifle\\original\\state.jsonl",
+      "sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    },
+    {
+      "tag": "b-rifle",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-rifle\\generated-c\\state.jsonl",
+      "sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    },
+    {
+      "tag": "b-splash",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-splash\\original\\state.jsonl",
+      "sha256": "481f980edd6602a3aab41d4c8cd83840640aecf6a8ee1880cde649e2b250a301"
+    },
+    {
+      "tag": "b-splash",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-splash\\generated-c\\state.jsonl",
+      "sha256": "e9d968b85b01988ff364c3e6485649445c58ec91db49f3d6d46719787b80edd2"
+    },
+    {
+      "tag": "b-flat",
+      "mode": "original",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-flat\\original\\state.jsonl",
+      "sha256": "b086fe6f08b444c9d814ce6df5e3ee20358c96a3f6cd93a064cb69448c9bbb88"
+    },
+    {
+      "tag": "b-flat",
+      "mode": "generated-c",
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\b-flat\\generated-c\\state.jsonl",
+      "sha256": "e0717f299a4b46aee8b3668fa67131fb02b48ed3fb1dad547116a321c6b8e024"
+    }
+  ]
+}

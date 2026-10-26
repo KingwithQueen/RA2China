@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "exit_code": 2,
+  "warnings": [
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/flat.MAP",
+      "line": 2654,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "82ded1d111c8ce84607f56f57dacb3a291b3f06e2d677c0e26ece0b55ed2e7cf"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rifle.MAP",
+      "line": 2650,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "8664625466008ec379ba25a8df5d8b18347cfd7727ce0a54446a236beabe75f8"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 222,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 17537,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 17577,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 19647,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 19679,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "line": 23124,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; PercentAtMax override itself has no whitespace waiver)",
+      "sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/fixtures/splash.MAP",
+      "line": 2654,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "82ded1d111c8ce84607f56f57dacb3a291b3f06e2d677c0e26ece0b55ed2e7cf"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v2/native_probe_host.h",
+      "line": 79,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    }
+  ],
+  "only_exact_original_bytes_or_map_layout": true
+}

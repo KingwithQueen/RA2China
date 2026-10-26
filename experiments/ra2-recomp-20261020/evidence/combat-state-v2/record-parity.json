@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "phase": "b",
+      "mode": "original",
+      "command_trace_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005",
+      "observer_trace_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    },
+    {
+      "phase": "b",
+      "mode": "generated-c",
+      "command_trace_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005",
+      "observer_trace_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    },
+    {
+      "phase": "f",
+      "mode": "original",
+      "command_trace_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005",
+      "observer_trace_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    },
+    {
+      "phase": "f",
+      "mode": "generated-c",
+      "command_trace_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005",
+      "observer_trace_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf"
+    }
+  ],
+  "only_fixture_diagnostics_filtered": true,
+  "production_recorder_and_comparator_unchanged": true
+}

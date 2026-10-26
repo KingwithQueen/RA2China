@@ -1,0 +1,46 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "aa62b58845b2de787fdfe49880764bf0ffa02f82c3ac8e5332068c4ef8d50095"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "7fae9c0440139a56dbb2047c704f83188b5e9db64a81edc4d8229031fa13092d"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "89b6eb4a6b141f06288ec599897ccadb44ef9ff36564da6d114d939f1cee77a0"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "3fac4fc60f0527f43ae8c407ae22e57f6695df505fc3e268da7ded39fce9b41f"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "3fac4fc60f0527f43ae8c407ae22e57f6695df505fc3e268da7ded39fce9b41f"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "3fac4fc60f0527f43ae8c407ae22e57f6695df505fc3e268da7ded39fce9b41f"
+  },
+  {
+    "path": "docs/战斗与对象生命周期第二批-装甲弹头与距离伤害换算-20261026.txt",
+    "sha256": "bf6c5aa64569d1ea365aa1dcb5fd1108639259a5e2ee0c4d70a2e9a67d07a6b3"
+  },
+  {
+    "path": "交接文档-战斗与对象生命周期第二批正式验收-20261026.txt",
+    "sha256": "f6decb2e8a48bcc960c7dc59d44cb1701696ffbe78ddae4732aef20fdf1e9e71"
+  },
+  {
+    "path": "docs/当前进度与剩余内容-20261026-战斗第二批.txt",
+    "sha256": "b2034a88548e4001188cf3666f412f11716d1247817c2086d4df891deed847df"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  }
+]

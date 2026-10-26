@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\diagnostics\\damage_probe_initial.c",
+  "source_sha256": "88110fc1c152157d0882ca5fad7255e5e27c6e285741baa2fc99032dfb575407",
+  "result": {
+    "passed": true,
+    "damage_cases": 262144,
+    "zero_or_rejected": 41316,
+    "healing_cases": 66250,
+    "positive_cases": 154578,
+    "control_changed": 141772,
+    "nonzero_results": 98977,
+    "actual_original_damage_and_ftol": true,
+    "armor_slots": 11,
+    "mocked_damage_math": false,
+    "state_abi_flags_and_control_verified": true
+  },
+  "scope": "Passed initial matrix retained; final gate adds two explicit adjacent-coefficient controls and is counted once."
+}

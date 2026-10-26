@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "generated_source_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\observer-build\\damage_generated.c",
+  "generated_source_sha256": "4c84d42f712703e6af712650600b28e42a8d2a4dd81b2b3c622b124cc6881be3",
+  "only_one_definition_renamed": true,
+  "production_dispatch_unchanged": true,
+  "native_entry_and_positive_exit_sites": [
+    "0047E1C0",
+    "0047E299",
+    "0047E2A5"
+  ],
+  "scope": "Entry/result observer used only for the three new nonnegative rifle/splash scenes. Existing healing/immunity/combat regressions use the command-only host and production records; actual negative branches are separately covered by the native probe.",
+  "inherited_command_source_sha256": "0e981a530b37e02f6b466474a915f60d5faf04a47cb8f1f3f6af2e5c74d67957",
+  "initial_observer_generated_source_relocated_to_ignored_build_folder": true
+}

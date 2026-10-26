@@ -1,0 +1,4536 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "rifle",
+      "raw_strict": true,
+      "all_other_records_equal": true,
+      "initial_and_final_states_equal": true,
+      "coefficient_neighbor_inputs": [],
+      "maximum_health_difference": 0,
+      "health_difference_frame_range": null,
+      "differences": [],
+      "original_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 33,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 33,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 55,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 55,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 77,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 77,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 101,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 101,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 124,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 124,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 148,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 148,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 172,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 172,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 195,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 195,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 218,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 218,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 241,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 241,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 263,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 263,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 286,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 286,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 310,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 310,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 333,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 333,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 355,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 355,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 377,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 377,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 399,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 399,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 421,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 421,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 445,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 445,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 468,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 468,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 491,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 491,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 514,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 514,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 538,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 538,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 560,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 560,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 584,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 584,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 607,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 607,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 629,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 629,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 652,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 652,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 675,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 675,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 698,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 698,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 722,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 722,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 746,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 746,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 768,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 768,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 790,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 790,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 814,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 814,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 836,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 836,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 859,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 859,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 883,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 883,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 906,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 906,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 929,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 929,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 951,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 951,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 973,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 973,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 995,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 995,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1017,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1017,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1041,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1041,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1065,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1065,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1088,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1088,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1112,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1112,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1136,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1136,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1159,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1159,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1182,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1182,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1204,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1204,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1226,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1226,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1249,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1249,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1271,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1271,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1294,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1294,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1317,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1317,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1339,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1339,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1363,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1363,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1385,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1385,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1407,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1407,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1429,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1429,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1453,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1453,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1475,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1475,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1498,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1498,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        }
+      ],
+      "generated_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 33,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 33,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 55,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 55,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 77,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 77,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 101,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 101,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 124,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 124,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 148,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 148,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 172,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 172,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 195,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 195,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 218,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 218,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 241,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 241,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 263,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 263,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 286,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 286,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 310,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 310,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 333,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 333,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 355,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 355,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 377,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 377,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 399,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 399,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 421,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 421,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 445,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 445,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 468,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 468,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 491,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 491,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 514,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 514,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 538,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 538,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 560,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 560,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 584,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 584,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 607,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 607,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 629,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 629,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 652,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 652,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 675,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 675,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 698,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 698,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 722,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 722,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 746,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 746,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 768,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 768,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 790,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 790,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 814,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 814,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 836,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 836,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 859,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 859,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 883,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 883,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 906,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 906,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 929,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 929,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 951,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 951,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 973,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 973,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 995,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 995,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1017,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1017,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1041,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1041,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1065,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1065,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1088,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1088,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1112,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1112,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1136,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1136,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1159,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1159,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1182,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1182,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1204,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1204,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1226,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1226,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1249,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1249,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1271,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1271,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1294,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1294,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1317,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1317,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1339,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1339,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1363,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1363,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1385,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1385,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1407,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1407,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1429,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1429,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1453,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1453,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1475,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1475,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1498,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 1498,
+            "incoming": 15,
+            "distance": 0,
+            "armor": 5,
+            "warhead": "SA",
+            "spread": 0,
+            "edge": 1,
+            "verse": 0.25,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 3
+        }
+      ]
+    },
+    {
+      "tag": "splash",
+      "raw_strict": false,
+      "all_other_records_equal": true,
+      "initial_and_final_states_equal": true,
+      "coefficient_neighbor_inputs": [
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        }
+      ],
+      "maximum_health_difference": 0,
+      "health_difference_frame_range": null,
+      "differences": [
+        {
+          "kind": "fixture-damage-entry",
+          "path": ".verse",
+          "count": 4
+        }
+      ],
+      "original_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 160
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 51
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 160
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 51
+        }
+      ],
+      "generated_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 160
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 51
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 160
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 0.25,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 51
+        }
+      ]
+    },
+    {
+      "tag": "flat",
+      "raw_strict": false,
+      "all_other_records_equal": true,
+      "initial_and_final_states_equal": true,
+      "coefficient_neighbor_inputs": [
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        },
+        {
+          "original": 0.8999999999999999,
+          "generated_c": 0.9
+        }
+      ],
+      "maximum_health_difference": 1,
+      "health_difference_frame_range": [
+        208,
+        687
+      ],
+      "differences": [
+        {
+          "kind": "fixture-damage-entry",
+          "path": ".verse",
+          "count": 4
+        },
+        {
+          "kind": "fixture-damage-exit",
+          "path": ".damage",
+          "count": 4
+        },
+        {
+          "kind": "state",
+          "path": ".objects[1].health",
+          "count": 480
+        },
+        {
+          "kind": "state",
+          "path": ".objects[3].health",
+          "count": 480
+        },
+        {
+          "kind": "fixture-health-entry",
+          "path": ".health",
+          "count": 2
+        }
+      ],
+      "original_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 179
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 179
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 179
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.8999999999999999,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 179
+        }
+      ],
+      "generated_damage": [
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 180
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 207,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 180
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 37,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 180
+        },
+        {
+          "input": {
+            "kind": "fixture-damage-entry",
+            "frame": 687,
+            "incoming": 200,
+            "distance": 244,
+            "armor": 3,
+            "warhead": "V3WH",
+            "spread": 1,
+            "edge": 1,
+            "verse": 0.9,
+            "maximum": 10000,
+            "control": 3647
+          },
+          "result": 180
+        }
+      ]
+    }
+  ],
+  "exe_sha256": "9eb6b85c7e70dcb28b2a6b3e4972f9ac22efbb76e867fb5bbae43f6538adaf89",
+  "numeric_input_difference_root_cause_fully_proved": false,
+  "native_same_input_conversion_verified": true,
+  "scope": "Unchanged parent already loads adjacent double coefficients for V3WH. Default splash effects match; PercentAtMax=1 control differs by 1 HP between hits, with identical final state and casualty timing. Freeze full per-mode traces; retain raw failures and comparator. This is not a rule-parser fix or a complete visual-equivalence claim."
+}

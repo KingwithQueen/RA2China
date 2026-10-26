@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "entry": "0047E1C0",
+  "before_sha256": "88d7050959f5debe115ef172721eb7f06682b9ca725cdb50962fdb2c1a547b14",
+  "after_sha256": "8df337cbbe644688f11ad5359ab3ca43d4c1b008f129e7e2f83a7f4378fdbea6",
+  "original_statements_and_labels_retained": true,
+  "original_health_and_death_services_unchanged": true,
+  "shared_compatibility_files_unchanged": true
+}

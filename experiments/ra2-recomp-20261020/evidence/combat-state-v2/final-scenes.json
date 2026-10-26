@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "f-rifle",
+      "frames": 1501,
+      "strict": true,
+      "comparison_sha256": "ba0559ef229cc2426cf805a7b22c0f00a80e7e27d43b8a2ba59c3b066c2ba19f",
+      "exe_sha256": "6cfc2df3db4703c97818a892064218c7f4f804d5a90c60079aa8236173f0a0d7"
+    },
+    {
+      "tag": "f-splash",
+      "frames": 1501,
+      "strict": false,
+      "comparison_sha256": "c343508b1d581570ce031eadb98ed4be01c1e89703b792bed8c3f6b1ffb01395",
+      "exe_sha256": "6cfc2df3db4703c97818a892064218c7f4f804d5a90c60079aa8236173f0a0d7"
+    },
+    {
+      "tag": "f-flat",
+      "frames": 1501,
+      "strict": false,
+      "comparison_sha256": "825279ae48126a43b15f727d7a5d313c028c37ada2b2ac779ae216b17d7aa789",
+      "exe_sha256": "6cfc2df3db4703c97818a892064218c7f4f804d5a90c60079aa8236173f0a0d7"
+    }
+  ]
+}

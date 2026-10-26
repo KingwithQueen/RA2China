@@ -1,0 +1,322 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "rifle",
+      "units": [
+        [
+          "BadGuy1 House",
+          "MTNK",
+          256,
+          85,
+          112
+        ]
+      ],
+      "infantry": [
+        [
+          "Player House",
+          "E1",
+          256,
+          80,
+          112
+        ]
+      ],
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        85,
+        112
+      ],
+      "kind": "default-SA-versus-heavy",
+      "path": "evidence/combat-state-v2/fixtures/rifle.MAP",
+      "map_sha256": "8664625466008ec379ba25a8df5d8b18347cfd7727ce0a54446a236beabe75f8",
+      "orders": [
+        "5:1023311:1:1023310:0"
+      ],
+      "last": 1500,
+      "points": [
+        {
+          "cell": [
+            85,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            80,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        }
+      ],
+      "attacker_id": 1023311,
+      "target_id": 1023310
+    },
+    {
+      "tag": "splash",
+      "units": [
+        [
+          "Player House",
+          "V3",
+          256,
+          80,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          86,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          86,
+          113
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          87,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          87,
+          113
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          88,
+          112
+        ]
+      ],
+      "infantry": [],
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "kind": "default-V3WH-multiple-distances",
+      "path": "evidence/combat-state-v2/fixtures/splash.MAP",
+      "map_sha256": "82ded1d111c8ce84607f56f57dacb3a291b3f06e2d677c0e26ece0b55ed2e7cf",
+      "orders": [
+        "5:1023310:1:1023312:0"
+      ],
+      "last": 1500,
+      "points": [
+        {
+          "cell": [
+            80,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            86,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            86,
+            113
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            87,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            87,
+            113
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            88,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        }
+      ],
+      "attacker_id": 1023310,
+      "target_id": 1023312
+    },
+    {
+      "tag": "flat",
+      "units": [
+        [
+          "Player House",
+          "V3",
+          256,
+          80,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          86,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          86,
+          113
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          87,
+          112
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          87,
+          113
+        ],
+        [
+          "BadGuy1 House",
+          "TRUCKA",
+          256,
+          88,
+          112
+        ]
+      ],
+      "infantry": [],
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "kind": "explicit-PercentAtMax-one-control",
+      "rules": "evidence/combat-state-v2/fixtures/rules-flat.ini",
+      "rules_sha256": "0841e354d68615fbc388fe4fcef4e68da880a0654693ed5bd6bd8ee4431a3b48",
+      "path": "evidence/combat-state-v2/fixtures/flat.MAP",
+      "map_sha256": "82ded1d111c8ce84607f56f57dacb3a291b3f06e2d677c0e26ece0b55ed2e7cf",
+      "orders": [
+        "5:1023310:1:1023312:0"
+      ],
+      "last": 1500,
+      "points": [
+        {
+          "cell": [
+            80,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            86,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            86,
+            113
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            87,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            87,
+            113
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        },
+        {
+          "cell": [
+            88,
+            112
+          ],
+          "land": 7,
+          "level": 4,
+          "overlay": -1,
+          "bridge": 0
+        }
+      ],
+      "attacker_id": 1023310,
+      "target_id": 1023312
+    }
+  ],
+  "calibration_excluded": true
+}

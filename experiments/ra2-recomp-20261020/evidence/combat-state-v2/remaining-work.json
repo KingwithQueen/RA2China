@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "next": "005D3E68 onward: death, special infantry, notification/events",
+  "subsequent": [
+    "Full weapons/projectiles and object lifecycle",
+    "Production, economy, AI, campaigns and user lifecycle/experience acceptance"
+  ],
+  "numeric_input_precision_boundary_preserved": true,
+  "rule_parser_rewritten": false,
+  "movement_scope_closed_inherited": true,
+  "complete_combat_rewrite": false,
+  "full_original_equivalence_verified": false,
+  "bug_for_bug_required": false
+}

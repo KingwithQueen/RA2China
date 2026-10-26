@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "result": {
+    "tag": "f-rifle-command",
+    "frames": 1501,
+    "strict": true,
+    "comparison_sha256": "6ae5a8ed00c155c1ac055bc3e77688903508ed6b25077c678c9c1b7a0b1cba12",
+    "exe_sha256": "50f3c7e45af3a3f839d64b2cd11202cfa97903632d820cadbb31bdde67bf45f2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\baseline-observer\\combat-observer.exe",
+      "sha256": "337b335895409f66ca3ebf4ee55250d509bc962d891c5e96da422f18f2140075"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\baseline-observer\\combat_observer.c",
+      "sha256": "5239a097adaf73c899631f4e9a41055d621f11079d67e930939f86fba4e0c1aa"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\baseline-observer\\damage_generated.c",
+      "sha256": "4587ab3dcc80d0b0b2c3918d34112523cfa583c429ac3bd842a62c6e0efb11bd"
+    }
+  ],
+  "exe_sha256": "337b335895409f66ca3ebf4ee55250d509bc962d891c5e96da422f18f2140075"
+}
