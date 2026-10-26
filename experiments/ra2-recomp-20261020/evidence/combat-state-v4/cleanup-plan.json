@@ -1,0 +1,1963 @@
+{
+  "passed": true,
+  "workspace": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020",
+  "authorized_by_current_user": true,
+  "candidates": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_command.obj",
+      "sha256": "3bb9052c2ca932cad216bf048f0770f80501bf1414a610d905369c63e4f7cdc7",
+      "bytes": 52306,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_lifecycle.obj",
+      "sha256": "59c6a25e163f829f1fb47832c415980f8b387612383516d404effcb293bc21ce",
+      "bytes": 2775,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_lifecycle_bridge.obj",
+      "sha256": "6761847ed931429fc9ca1c681ceefa9ff759c9bde1c7d46a2b74e7ebe7c296e5",
+      "bytes": 14297,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_observer.obj",
+      "sha256": "0e397888a8bbef7154a22eb67777e381209627f387f4facb2a3b0d00e62024a9",
+      "bytes": 60908,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\death_generated.obj",
+      "sha256": "ee4e0b0a32f8c82509641ebef7d7be97172ac3d7fc20946708a661e6778e00c3",
+      "bytes": 2596263,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe.obj",
+      "sha256": "917dedce2710169119c9ad54af1e398f23981c765e393c9679bb47bc501d7a2d",
+      "bytes": 33319,
+      "kind": "native-observer-intermediate"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe_initial_frame.obj",
+      "sha256": "5ccc7dbcd583cca99114f0e28c567d6b27a5fddaf9c9dbc0fadf315f249538fa",
+      "bytes": 33196,
+      "kind": "native-observer-intermediate"
+    }
+  ],
+  "protected": [
+    {
+      "path": "D:\\Program\\红色警戒2\\build\\ra2battle.exe",
+      "sha256": "05d7221ffacdddb2a300aee2c51b61d1fa1d269a5336a08e0c68b023f51bdd27"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\docs\\寻路机制改进验收补充-20261025.txt",
+      "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\docs\\项目目标与验收边界-20261024.txt",
+      "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\accepted-baseline-contract.json",
+      "sha256": "bff3e3c40e6398d67895ab0206f5d21a8741507a0ffde5432b6243f4596b706e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\accepted-baseline-scenes.json",
+      "sha256": "ece28d14898f62168cb8b9d91915a6118fad81af0ed5068f56e7e29605bb9154"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\accepted-scene-recipes.json",
+      "sha256": "32fe6f7c7a86b3e66686bf5e4553ae900b554923bf7acac5137ad6da8abfeeb5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\alias-evidence-inheritance.json",
+      "sha256": "37f56ffe7380e6ecba439991b141dfb3e8da1212aeea7e834912dcfe510e91c7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\art-input.json",
+      "sha256": "1a23c16e86a4efd4136acc2f9e94bd8077bd4d48220b9cfcc4149579a0dcb806"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\art-qualification.json",
+      "sha256": "6e391f736c94f5cd7d57af5aa3283af6230853115399d091797f247893b5a6fe"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\attachment.json",
+      "sha256": "8bb357425f8d7d3ddf08e22261c8810428cf704fb8f16fb9f59838bdfaba9b1d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\b-command-scenes.json",
+      "sha256": "03d5e00f9df0066779e8b9872558a69a7d3927206e683c46ef8c1d9afa476e8f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-accepted-contract.json",
+      "sha256": "4774ec1792cab4ecf7d658dc8883bc95df466d0d334bf065cba49560d708bd01"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-accepted.json",
+      "sha256": "1bd0413cf8fd4fa7d700fce8ec2960aa450283a0503b8a8740f1dd8909f30fff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-command.json",
+      "sha256": "9b62839ce5c5e6971defda9d557f99a1ee9180d0448134809c4b57003f9767d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-contract.json",
+      "sha256": "912661e6bd5b59380d24c681aed745a78d4988f240433a14283c9ad56ddc19d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-finalization.json",
+      "sha256": "741bcb0a45610c34e17750825865ab93cabb52ab85c321689a39a59f1d5523d5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-observer.json",
+      "sha256": "d507ce073f47c4a7e1b4c77a7d383b7bc6c19e2a149508dffab25df1daecfd3b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-review.json",
+      "sha256": "2c3f3e0689297e80bb8cd9ae5d27402a1a6d7103c9cd8403342a35da545187c5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\baseline-scenes.json",
+      "sha256": "08a3ab8ba8647aba03ad5a60b392f4457a4aeb9868bdb980d25ceca13cd1727e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-command-baseline.log",
+      "sha256": "75bbd00373130c8d73ae134e142f6378ce840243b9f71033bd36ff0dd83ac976"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-command-final.log",
+      "sha256": "75bbd00373130c8d73ae134e142f6378ce840243b9f71033bd36ff0dd83ac976"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-observer-baseline.log",
+      "sha256": "7943e6df5aafd0cd3640f2ace9ca79b09f444cfa9b5cc6c8195eaabe9f82d5f2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-observer-final.log",
+      "sha256": "7943e6df5aafd0cd3640f2ace9ca79b09f444cfa9b5cc6c8195eaabe9f82d5f2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-01.log",
+      "sha256": "dbd607f7b75768927bfb6bc08b89baa719ca255b54b946fd5da3e1b3703e5054"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-02.log",
+      "sha256": "6ca73b3812f03ca15be54f9ca5427aa76fa965caad875ed2c74b02d78c669185"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-03.log",
+      "sha256": "dbd607f7b75768927bfb6bc08b89baa719ca255b54b946fd5da3e1b3703e5054"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-04.log",
+      "sha256": "dbd607f7b75768927bfb6bc08b89baa719ca255b54b946fd5da3e1b3703e5054"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-05.log",
+      "sha256": "dbd607f7b75768927bfb6bc08b89baa719ca255b54b946fd5da3e1b3703e5054"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-probe-initial-frame.log",
+      "sha256": "ddc4a69fb43150160117b147a40449a4cf5e21b67ff08d1a97b312a49ee96d0e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\build-production.log",
+      "sha256": "e3ce533d511819902e32b581b5b093ac4de085a2223887250613418472ce6aad"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat-command.exe",
+      "sha256": "23906fca46f5c187f29ea9a8c6b9f0b15f72e8e591c630060309eb6fc1c5028e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat-command.map",
+      "sha256": "e85f5a570fd946ff7e4233d1830b9440d6f9eeae726946fc24546c026acb4967"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat-observer.exe",
+      "sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat-observer.map",
+      "sha256": "f51fde7f7b89c46bfdce6c8056c1d13e9fdee90ee2556b8ef6f7f37d226eba46"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat-regressions.json",
+      "sha256": "cff768e8af143dd0c700735d5b57e4cea8eef470102ddc3e21ca97ee23dc1100"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_command.c",
+      "sha256": "0e981a530b37e02f6b466474a915f60d5faf04a47cb8f1f3f6af2e5c74d67957"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\combat_observer.c",
+      "sha256": "73c4b53a1e6d03bbff752b659829251d481a771d7ddb745ea078d6f964cf3c22"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\command-build-arguments.json",
+      "sha256": "9c49a0127690108c65a9d81905fd25acf0c196cb6bc2b20a655c5a2ad2ce7c4e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\community-current-use.json",
+      "sha256": "54bc83223552bc876126f2bb582e73b4bf168928ea7c7d35f8d0c72436f29a77"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\community-reference-review.json",
+      "sha256": "30428c305b24856510dd910f73c3511666b6e6942961b4b4ee569ef37c67d765"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\electric-exception-preservation.json",
+      "sha256": "f85a73776abc481d0073a5d184377a17f5de761f6e30d8babe1b420db10e541e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\evidence-rollup.json",
+      "sha256": "72c3ccbb6b1064c9ab432845273854fa8adc19dc8d3c13e19810c805dd91abb4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\f-command-scenes.json",
+      "sha256": "4cd5f21b9a6ffa37349b92ee70c9f7c5fb52c7cd7b284768c10c9d610baa7acd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\final-scenes.json",
+      "sha256": "1ae27887f4908a1085843b5b7d1591a63c4677bb218056de62884dbb05a67bce"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-art-baseline.json",
+      "sha256": "39738e79427743e5d9f5e7d0a11715f9af9ca24864bf03277496144cd4296637"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-art-final.json",
+      "sha256": "921cbe4a9a8e43c98cfb3b3908d147e18cb60b5844bb8260f55c2f02c3a37bdd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-prism-baseline.json",
+      "sha256": "353763b8abe4b633fddf3d45ea931ff3affaa5fe9887fc03ac4bf250b143c2c2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-prism-final.json",
+      "sha256": "c04653d423cc5af3edf79ba5b5b55deb7f28087b61622fd27682116f561d6d15"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-queue-baseline.json",
+      "sha256": "b9cf7c8e5eb5a85ae748b37f05a68ef339f269877a5f19413b06bb3486a2bf76"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\functional-queue-final.json",
+      "sha256": "2da9fa6a23887b1b1bfc193e9fd21a160dde44a9de3676c512a71801792424c5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\implementation-review.json",
+      "sha256": "b61b14b3b0fb1cc26405aa466140ada4459f126c3d2e1a947bee1967723389e8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle-layout.json",
+      "sha256": "541cd2ce9665bb9f591a140084ddeb383f0d0664554e8c260ac45e22d115a274"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe.c",
+      "sha256": "9e650bf14c30fb0da0cc6eb64d1fae62118a70b74bf05d087ba2387f6beef780"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe.exe",
+      "sha256": "dbbaa07f711d09a833a0f52c5a8cc6cf090d498a58655b031440b02599f256e9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe_initial_frame.c",
+      "sha256": "46f964a0273657a319f8b9ff218c233949f45cdbb14178cef3368d62a4bbf4f4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe_initial_frame.exe",
+      "sha256": "d5bd07265389678a06e57317d85e43c4d3db96ef00489c29ab08883002189b99"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\movement-regressions.json",
+      "sha256": "f793a93b4ae8380bbccdc0a8591014c8c0d0d07ce5f8c8906c9ddd37014e1d00"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\native-initial-frame.json",
+      "sha256": "4d39901b53656321bc21f759c24889644f4eeb1b05c86a2b2c86f067df28bd4f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\native-validation.json",
+      "sha256": "8af7f73f940d082e4daca725c3a6394d511e8278ec1ae8101437ff6a17dbc86d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\natural-effects.json",
+      "sha256": "902e73df354ab87af2f91feae1ab060bc484782a14a3f364cbe70fc4905aa8d5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\observer-build-arguments.json",
+      "sha256": "a09e7c4823683e1946ea1c9345fbfa4a205f403b84fc4e0c0d3b4b06e6112023"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\prism-baseline.json",
+      "sha256": "3de3fda1c2a5ae12abefc62df03d485a76bd61cffd5206ce18131ed12557fe95"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\prism-scene.json",
+      "sha256": "52ba79e2f635f2ef55ce0e0e58c883112682866daaba9c0ddc33de7c256fa923"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-01.log",
+      "sha256": "14812571699532f4b340f619fa3d188e6277bc02d201367f8f43154abc4009f1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-03.log",
+      "sha256": "71f41f0e4a107e74eeb98ced697e1cd4ce8004d530c0d601255d17957790ac89"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-04.log",
+      "sha256": "c28cfc07de8c44d0da9e7814d1e829fd11489bb44a6ec87fbbac232c5d233969"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-05.log",
+      "sha256": "b2dd13ba0409af10aecd9dacf32c0ed07626a8a588596d679f153bdf7c4cf8f9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-initial-frame.log",
+      "sha256": "7f8e63f4a52cd1a8b1969b98baf56bf58cf787c26db34a4c1b7dd20c123b86e6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\probe-review.json",
+      "sha256": "3fa5f6086645f3d48bcc5c6c3e819b897a42aa4c13c9b6e83c68e5cef1e76a81"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\protected-inputs.json",
+      "sha256": "f7811ec036c9155d9f309980211c97ca4129f297564b311152d20dd09d81c823"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\qualified-final-scene-recipes.json",
+      "sha256": "c1dd19fd967918ca9da891b2485c2bc0d40d8a111b0bd5473067055048270605"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\qualified-scene-recipes.json",
+      "sha256": "0b7b422fcb26a74cce6834ba89b088bc4565e91da86d313993e01e177c2720a6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\record-parity.json",
+      "sha256": "3cd039a3ca7ea242c15d800dc142feca8d97967f459f92661f6b47e525d40e93"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-command.log",
+      "sha256": "335206fc115cd2211584c83d76658588240133bebdb839bcbc1cb0dea4522c35"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-delayed-art.log",
+      "sha256": "5ce0dfdb53b289061d91b3a19d3d358b937bf0337b1b27a02fe4b0c4c7468723"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-delayed-prism.log",
+      "sha256": "a146fbe70d0eb65caf2d0a2cadeb50df413c6c89b51c24e8451e256357679aca"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-delayed.log",
+      "sha256": "8e8dd8253c28ef951734935261e646af588ecabb1064432090dfbf3b88884686"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-electric.log",
+      "sha256": "f186d17c78fef64d36b3d9df3bd704f146b6d957e9fbcf14040f00bc8cbf9ff4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-infantry.log",
+      "sha256": "c0b05cf60793e3ae48810f6395b4e03fd9745a3ba004417cfd910ff4c347bb7b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-nothuman.log",
+      "sha256": "531ebfa023dfe58142cb5a4c29816afeb696a8242024293d0f19c63775e70043"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-queue.log",
+      "sha256": "c47ee229697d595ca84a3d88fe8542ff9bb13ee63677e464a435494618c60964"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-special.log",
+      "sha256": "071b9126a383064316678ed58a02733b7e761aa59f32009d3a82c180362f8147"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-truck.log",
+      "sha256": "d48df901f60a1127330cbbdf4b0f69f3a6ad6e6342543fb5e1a951c7acd951a8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-unattached.log",
+      "sha256": "9f7650d3d631fb4f0734cf2d976e39986d7a192f499fa6f5c66dc0bf87a3da23"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-b-volley.log",
+      "sha256": "83467e6b6f30cb9c1b37aff46e9cd2640fae364eeaa028565c18cf5fc41d99e3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-default.log",
+      "sha256": "106f09f65fb3d593121f2681f16ca6ccd5bfa3954cb63eda54f0ecefa72b25ff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-command.log",
+      "sha256": "ae17869aa99f1fa794d8fc104dc6c87576d030ee5906682d17d4a4631e0f4750"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-delayed-art.log",
+      "sha256": "1a2ff98bfc614c136c126debe00b7f37ff100d71ef9bc272b28e5107e04b8af4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-delayed-prism.log",
+      "sha256": "7c47808514d10b8979a4b66c1135ec3f51984d094fedbb6a0414d9455286b6b8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-electric-diagnostic.log",
+      "sha256": "62241772b1161c5a60937c69ba0afc80e27e26ba0233862ec527c0f8a289c690"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-infantry.log",
+      "sha256": "1ba8c5d1513330d2b80e56e3af4a9d99c8d928772f49db06d9b4fb1ee6f2c81a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-nothuman.log",
+      "sha256": "ec32d34c06672e119bc1c9f02eb3cf96c6b9129cf21d0ef7a2ff7c31312aa097"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-queue.log",
+      "sha256": "d29aeeb1cf18eef894fe8b975a77efa9a99df05ef4d05fb707f3a9b5ac59c7d4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-special.log",
+      "sha256": "53517ce8ad7582583665844267565acd822d25b662f614a008b22b500dce607e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-truck.log",
+      "sha256": "e27b67dca05c5ac585294c6a1b0a5218eb6010d3bef978ec0dfc8b0e46a4965d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-unattached.log",
+      "sha256": "033677373f40fb29b58efce34fb2571e8d88e754516e0a609a465d67d087edcc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-f-volley.log",
+      "sha256": "69f081d88ac5a94355aa1bccaf139e821b205ffc65aca305edd99417097a92b2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-delayed-art.log",
+      "sha256": "d3b6bf5f51c5d79235cf329b3ff153fe9246cef1d3c63e706ecd2f7546ba5141"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-delayed-prism.log",
+      "sha256": "88ef0f85c4092087692dd309eb8825d81b23cffa75ac523eb4293dfd3afc45cd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-delayed.log",
+      "sha256": "36538b2c0818d916789e661cc3f70b10d41a432ec0d1b1da11482e5de24e9aa7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-electric.log",
+      "sha256": "c0a89269e55b95ed7204a458d5daacfe90502cfb5f00cbac45c6221ea9a0420b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-infantry.log",
+      "sha256": "7bd11dbc7a38c2e182cb89127b39cb0ad428bf4f7f05b8de596cb026fd4c48e1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-nothuman.log",
+      "sha256": "094c1a9585e3fefaa4340249bf2e182d35ed00afbdf71cf2348bf641d0985903"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-queue.log",
+      "sha256": "cdb6f13c77cc4a92045ee3dd7917722054ab88fdb10e3b1a86e59c87e2cc9151"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-special.log",
+      "sha256": "55767c7c5af0a652dee748cc32a055269bef7a841c6fd8181e4ed08364b1dc7b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-truck.log",
+      "sha256": "466e7360d111b2c1e3024dece4e7ba1c6f9ebc4bfa07d5bfdab00c3fb70ba15d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-unattached.log",
+      "sha256": "bd4edec89a16cc13da646b861ca4605c26377d5b114f201e4d8a06e00c31224d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-id-volley.log",
+      "sha256": "d619c2a9f4918038b2e081b84d8ca1729958d1f3b585c26a907f0877b62a1691"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-cap.log",
+      "sha256": "34d8af7a7436db48aeb5c3ab6161aba106ceaa73282b27343c3dc33eb78f6772"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-flat.log",
+      "sha256": "525e60e91d6ab08d13bcbe6f28beae88628e87a5bc22a8647fd9689deaceda12"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-immune.log",
+      "sha256": "c4b2b5ba0e30b403310335ad4815b37e2353436fc4d7f30e31db74a5189bb694"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-infantry.log",
+      "sha256": "4b978bcbef7e971f62eeb363a245d044ad7f9fa25b7117496f1d03f5de6692f2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-repair.log",
+      "sha256": "7127d4c7f7eb75d090943223c79632aa1df6e3eef7939f1a43e5e0631afde6ce"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-rifle.log",
+      "sha256": "cfff2abd5ec247e5d078e63e5dc38d3bc5df703be0d6088db8815d60b647c1d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-splash.log",
+      "sha256": "086a144f1bd1d056e874eb0ad497fe46abe1dd790e3517da65ed206d9ef2b393"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-old-tank.log",
+      "sha256": "5907966d63601da6a6cdedce734796ee11cfc4ea3f1146bdf1a62bc4c6956a44"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-pending.json",
+      "sha256": "421b913299e508fbee08831333bc63f3197274a2156282b72016566c2c64a26e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-reg-crush.log",
+      "sha256": "c77cde6e8183ec813aa5f3f9b3d743254069007b1bc81f1dd7dc277f4a1928d0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-reg-north.log",
+      "sha256": "209683c200bfd68e0ebff83221d4aeeda4bc574651a7ce78bf1848d54de52677"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-reg-south.log",
+      "sha256": "ff977d927c8ef6494637ead93f7e4dd9d682b6a444598cf5d74985d9dd75ad78"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-reg-stop.log",
+      "sha256": "489b21cd208c5ecbbd304ce6a6f4640e46496c4cfe70534e341f216b8010d6f8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\scene-reg-train.log",
+      "sha256": "fce56669e2766084b17aa1e469dd846e559676f33a08d8e96e41b5577204b86a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\source-preservation.json",
+      "sha256": "ba1abdae824f7d0691a40b1581eb9f83e3eec2f4721c8ca5ccaac118b2e183f7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\vcs-context.json",
+      "sha256": "455f40dd4fbff8a84d77b5584016b7fa710143d1020dde1c671821cfb7a35ec0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\native32\\native32.c",
+      "sha256": "3aa341a934ee3f77a3e2456f4efeacb70c367d33aa1085694d24c28882be19db"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\crash_report.h",
+      "sha256": "2d4ec9ce50291605212c36d9e06e83a2cbe667a591eca8df9d04aa38abfb802e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\image_loader.c",
+      "sha256": "eeb51ea6b51def7df02dd69b55f28201071d36bd0cfde6dda113471b2374498c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\image_loader.h",
+      "sha256": "c041ddc4ed0e2be120b41d981afab93d7188d40eb220035c72187a63cb43475b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\recomp_trace.c",
+      "sha256": "2f6305b061fa7706ff282c357b27d0af2d14b035ced273cb91500a23db50bf89"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\recomp_trace.h",
+      "sha256": "59ab96b00d79f572cbadb7ef41844a7651fc3d77ade05bed510201a4695916a2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\pcrecomp\\runtime\\recomp32\\recomp_types.h",
+      "sha256": "cd2f536e3fd1ccaa6c566e54157555a1b9f7990fbb2b7887d1ffeba431a0e8b9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\game\\game.exe",
+      "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\game\\SAVE0029.SAV",
+      "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\compat\\x87_arithmetic.c",
+      "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\compat\\x87_arithmetic.h",
+      "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_damage.c",
+      "sha256": "4f9283849beba98f44b21d15ff8f084c7740e15ba39f55a822ade8bb1b0111a3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_damage.h",
+      "sha256": "4e867d28e7ca522ee47ebb163dd26e0e141d1a0854f28ea82b93f8430353d6c1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_death.c",
+      "sha256": "84ae2531d2543e27070d6ed5e047cc01a5b4a436c9caa35e966e31e2befbb542"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_death.h",
+      "sha256": "ba3dff62be7aafa286fe0260b81084681e3f3b9afbb46f3efa82c368ac79f6fd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_health.c",
+      "sha256": "7bac46d089261e406e250af842bc842c1ca50f5ccdac1d7c3e2514ed4735d018"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_health.h",
+      "sha256": "c89c0e6299e4903ac666dd677c13be5f23180944206574f3fcf2aead20accd70"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.c",
+      "sha256": "7cf880c449bd433bbde9e79b91248cc7cc80767bafb5aebd2e5eb094400b314c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.h",
+      "sha256": "08256409a0e29695d7374abe622091e649a9407db606a65d168fb7468a28ab3d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_advance.c",
+      "sha256": "34408cb61ed182991a76c2bf5dd3f7c12c386f03c6e086f8b0c41f2e845aaa30"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_advance.h",
+      "sha256": "532a22d7a44b996d309ea1cb2c9083b9c612b7e8b2fb7d123426037fbffd5a84"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_allied.c",
+      "sha256": "d195ec3788049bea0a5861916b216e5e47d54cd01cd4d1cd3c8a84e47ca2aab7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_allied.h",
+      "sha256": "c9ef44f37bbdde8788211b95c09c9074c4555fe2ef258cfa7be317881952c01e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_allied_relation.h",
+      "sha256": "24530f44594b9b46728de0647f8621711cf04d65bc58a814b2dc377ca937320d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_arrival.c",
+      "sha256": "db8ddbef1e6c1b298b753375b35004fafa77cc3910cb3a686e8f63081e1d643a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_arrival.h",
+      "sha256": "9c9469d911f6435c717f88265470af0913ac61c0ab590f828fdcf7f639196bc8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_barrier.c",
+      "sha256": "2f6a65bdccd80f46835931b36aa48922137c539604a4036151b289dd05e33d2c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_barrier.h",
+      "sha256": "eb4f381a76da2cdfafdc0d97a3ddd8df9cf9990f2d829f7d14e8449b12fc7712"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_bridge_plane.c",
+      "sha256": "6b9b97052002b0cfb7ec3372f5d53eac1ead0a97d20a7410fd71500b57ab74e7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_bridge_plane.h",
+      "sha256": "0c15ffbb569a944ac51a3cf69521c6980f23aca4dd3dccb84944403642b74bef"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_building_flags.h",
+      "sha256": "542543a304f273c04fece50ce6f2761e1e5a5d5994088e33f06f69c39a7756cb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_cell_placement.c",
+      "sha256": "98ce8a7c45aa3a42f48dd2d5f1105df4ec4379ae278227e79d43432045add9ff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_cell_placement.h",
+      "sha256": "ee18dd870b05d1981e817a626cb432fcbb279ff40dea8476ee6d6390ac080e44"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_cell_services.c",
+      "sha256": "9300347a301721c4bcfab8f71bca3c39c86e5983ebe8b7e5d4a090da9f4e458d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_cell_services.h",
+      "sha256": "583b5a38fde58deb9fed94f69402ac09df51ed0d6e1fa9b3a1df8514832d5940"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_collision.c",
+      "sha256": "2d35a6e2e5f89dea16527f7a002461b987f0d60b26261055a0d6e328aef135e6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_collision.h",
+      "sha256": "7cdae1249df6a0c4b784788019a5510b4355c405a94d8de096217c51ad3c9147"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_completion.c",
+      "sha256": "4edfb9d480fc802804083c8726be2b2b606d69cf183b889ba21e49d4b2a1a200"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_completion.h",
+      "sha256": "b44b48fb5b84325eb40e89cbf6fcabb51bc54fd23cfa5b6fac929e38d5357926"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_connection_numeric.c",
+      "sha256": "88cc49c41a2b4e2ac48456f0ad1e02b3f1e7679a1c0dca3439cdb474e98026b3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_connection_numeric.h",
+      "sha256": "a840e280e9cd244dbc8a51374bec4777e63fa63f18ae28388689d868e5934680"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_connection_trig.h",
+      "sha256": "f3cd1b3f3c1b0af13ed5f1da5e70475076b5133e49f1818e9bf31d0322186b3c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_continuation.c",
+      "sha256": "ae899e58c488c778ba0f893298f8d544c734821b67645b9ad3dd60ec7a8717ea"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_continuation.h",
+      "sha256": "11705e97b21655700e7b0cf1b31fa0035a9f685ac988ffd2abe9596c07ea874f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_drive.c",
+      "sha256": "21da08d355c3d2e7befded3aeb83d903f060b993502a8e992c18f7e5463aa76b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_drive.h",
+      "sha256": "acf1dfb34592db8ca7842bd0873592f10b0ab9cdd9167643e6e0566e2d96f26b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_enemy_contact.h",
+      "sha256": "9d5b8c224f7da804001199264e7c584f8e8d78f67b03126510847c56cec8b721"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_enemy_kind.h",
+      "sha256": "c5bc813d02a963d0b4d4f87decb746f0e1702e3c21389d7fc9fa8cddb6f0d34b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_entry.c",
+      "sha256": "64d57f2c8469085dae7bd70d481ae12990b837c8d5efb3b5b2ebb6c50874e79b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_entry.h",
+      "sha256": "61d6976877f9a39ec21be97cab465eb3403ff82a5b08836618945997d026622a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_exit_policy.c",
+      "sha256": "23773be6a17eff5bae8d75dc15b56995b971b55932abf596f0a4bac3322ac563"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_exit_policy.h",
+      "sha256": "7d7d4b6386db8f5881cf0cf29f1fc3c55443ddb98a558a13069e56e8560dd4d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_failure.c",
+      "sha256": "f2631b39471db410c4f394af5a52dbb0ca8e452a68193053a0b812724282d06e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_failure.h",
+      "sha256": "32d171ea0773be406dff4a5e8de6d5f648df6111ed110a6d7b97da491e9ea19b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_failure_transition.c",
+      "sha256": "dff0cde82136e13a0506c7a28398eeb814c54b947a67761cab57c17a6e6a01ec"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_failure_transition.h",
+      "sha256": "cdfc66bc50b04b1916d8b67792c190dbfc0f216977d29a5ad6862dc0cd8036ce"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_followup.c",
+      "sha256": "18a354aed48dc2084e1454f4444e76d6140cf2aee0373f8d50746ebc3979d60f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_followup.h",
+      "sha256": "aad752240c843fc22826f515f3713eb9e256787e8cc66046aaa8581affced899"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_handoff.c",
+      "sha256": "7087546be99bf3dc633bba846a16e9a9d22dfeb1287dfacc363627d9be53c931"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_handoff.h",
+      "sha256": "49e24ad0c7aafb739456932e90acabfe1d2cc025d91d69e02761a39bb9805a95"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_internal_next.c",
+      "sha256": "a18baba8cae4b8d22733e376164ea4ba258bd7bfa38768c853716fd5c4ffab43"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_internal_next.h",
+      "sha256": "a79ac13d188dd8bd912a86dcffce7727064abfafe01424af527de08f016ee9af"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_interpolation.c",
+      "sha256": "e0cac378b08ba8e2b678d41695d3d1dda64d996cce5d97ec99331f142aa17d49"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_interpolation.h",
+      "sha256": "9e3d5266039886c85e98076a406a68ee564e182eb5afab6eb158a8dd0ab63e5a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_landing.c",
+      "sha256": "001f3f195607c561b4a755c4294ff9223e7f9b5effbffbca807a633291f55353"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_landing.h",
+      "sha256": "0c3c38b4ee5499e84342d1c6821652d7a58f8a916733ee74604b86f16f6a2aff"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_moving_tail.h",
+      "sha256": "2e1deed04e21ee37ce8fcd09814113a1468154329293ad87652aebe1809ba48e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_object_chain.c",
+      "sha256": "1c2477bfb421ad3cc1dc778cf6d4f46f31591f41e7eff92e7464f769ba663c76"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_object_chain.h",
+      "sha256": "8e7447dfe7ea8760685e445b7a21baf88eb98ee42783039d2b2bc827f33a8ffe"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_object_kind.h",
+      "sha256": "513f24a8ecf75461c0f73d22a4166fbaffcd68bf0d118f90b123006914af69e8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_object_services.c",
+      "sha256": "dee5ef3dc95161e31c1b82d89b2de21a4dc67377768d51de256e2cab21392297"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_object_services.h",
+      "sha256": "a60eac696ad18774c9a40accf819a657425970dbf0bdc52bf664fad10a778e55"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_objects.c",
+      "sha256": "dfeda867073baf37f72ca44a38deb21e626ca5e52245038c23fac9064de48795"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_objects.h",
+      "sha256": "d47b5d5f5072dc5f69a80b1e6166211c6ee61113323109ad6d99a909496944c5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_obstacle.c",
+      "sha256": "fee82e7d1d68309bc5182955837c6101bc83d41fc4bec0159d9948df2da402c2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_obstacle.h",
+      "sha256": "9a20541ef75590ebf59bc644bc27b5dbc4af80f4e74246110d5f7f0c792693b1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_outcome_policy.c",
+      "sha256": "71c914bb605ad9ca1412aec06aa4fd26381a046e51c15995774347b455312b12"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_outcome_policy.h",
+      "sha256": "1972d6bbdb57037576e3183c3985e630feb11185ff2d6a4f157fe994e9e39f33"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_owner_boundary.c",
+      "sha256": "9da4dcd1a174780a65512849f0de1084caa7389af616ad64c6663aeca7863f38"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_owner_boundary.h",
+      "sha256": "6fbbe1cd5498d0a4a0a908d8c927e6cc222152595497d9cf204863e1514ef08b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage.c",
+      "sha256": "b6f25c47cfa8eecf8e354118ada0e4488f1b13ecc87642c5ef36598e0b485f5a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage.h",
+      "sha256": "737faddfee77e9de8e77e5a7b8550fa145e0834fa51093e780f4cc78c73c2100"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_entry.c",
+      "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_entry.h",
+      "sha256": "19c822a81038d87a1976b59341fbd6b9f67b5d42ddd484a65ca54767cba7dcc8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_finish.c",
+      "sha256": "61b3928c78cb723ebb39b534bf4919b6230eecf1eacbf7bcb361ee38e4d35183"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_finish.h",
+      "sha256": "21dd094d566215bb43bab0584d6a25d73a18ec7433b649ed69c1ae74d79e1a79"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_neighbor.c",
+      "sha256": "570950b91bb32214072b43d6c9b8b229621690510ef15b2cce28b5be9be3a256"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_passage_neighbor.h",
+      "sha256": "00a75ee8ce78e4bf9916d3f51fd23b5d2f6faf042898ba1ac4cd04a2d3b89fa9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path.c",
+      "sha256": "045c0ee92d424a4c51df7c0fb56349f4bb0634a9f24a472c301482dca6625933"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path.h",
+      "sha256": "ab40420b8104c46fce37ae0f41045fadc0a0fa88d6eb9a729c180d8f2ee8b402"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_cache.c",
+      "sha256": "cd54085ab82abcf2a713a2cc2c85771b82dd5b9d8e0da08023d6fe5e68eb3db3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_cache.h",
+      "sha256": "16af39197e2654a4728ba8415f56b28b8040a096d35b8a578de4c2ae56d07682"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_completion.c",
+      "sha256": "b1309560df04ce87e3705d8f888a1c2a63f0fae3fcc0fc2ef754ce1251c7fde3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_completion.h",
+      "sha256": "b02ff2e36c735993ccdcb0a5b4c9328ff6cac42df0e59b1c0f5c6ac2fdfb5176"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_cost.c",
+      "sha256": "9e43a922e6245ddd49a532163d45fadc447c4dd94288f121328849d01a172908"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_cost.h",
+      "sha256": "00effd16a0a2efb6dbd74a767ae23f9fc841fa9b2ace00d02a65e4dcee99565f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_distance.c",
+      "sha256": "f46d2bdfefc5b4c393ae16c24dd8929b8f50d80d9de1fd0e495de3f5744c318d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_distance.h",
+      "sha256": "3c07cfcac2e50fea4a8a638c90e83802eda92bbe718b76f2bd1fd5899c644e51"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_heap.c",
+      "sha256": "ed74d26057321dfb0e015acf7efe69b43954a0fe77d640542ebd188767219e18"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_heap.h",
+      "sha256": "73e462c20c614c7a6e15cd217b62f24b6d78390a60c182d48b49bd7653efc6e7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_local.c",
+      "sha256": "6117ad8d3e341b78a6fa72d39b0f2ef52a476ba42012786599492d017aff66f1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_local.h",
+      "sha256": "774fa7303c8a3cd0392cd00f92960beca586392ad141c28afcf189b0e190141b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_nodes.c",
+      "sha256": "ba3db837836d44a95218940b0e4386141583e29feac421b87c088e444c3cb29f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_nodes.h",
+      "sha256": "553f2b03db11c5c0e8ea02c0cb3ee154c0c0905eee971c978703f72eb560d7d8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_optimize.c",
+      "sha256": "2d97b88371981080bd359c6c2b64449f0f25a28874833f7542c33048e2fc6768"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_optimize.h",
+      "sha256": "80aab426e840c936f06fb14cd3c48d9eb426c3253486db1684c57cf7b45b0d01"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_prepare.c",
+      "sha256": "3442a83b7ebc94216b0f09059e944338d7b0067ffd9067724c286acf15ade334"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_prepare.h",
+      "sha256": "699eb212d86af69bf2fa730fe2a0762bb8963cc9d3dbb382f48e22ebc4e229ba"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_rebuild.c",
+      "sha256": "85f459a0fdee8e2575c44fc03e761f8d9fda7fa862ee5f26f9f7ba3b1b991bbb"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_rebuild.h",
+      "sha256": "95cec6ad9dc4702700d621db98e607717a7527919e5dcc181cb19927b41f356a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_search.c",
+      "sha256": "dda72070d5da6a8a8ac37c37509bbeaf892039b020ea9c8620b9840d111afd5d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_path_search.h",
+      "sha256": "ba660301bd8bed48f569e9b10a9b48080a4d686d328fc337c76f6db19e5d7713"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare.c",
+      "sha256": "6a62b4f623e19bf3cc67e769627d880d8a3b91b4a753e0757d580b20f7bd6874"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare.h",
+      "sha256": "39a682467238d87bfc98d6986b45a6e68a24166f115b3c2b98aa9ce30b27f412"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_cycle.c",
+      "sha256": "3abc1d0f48b8c6a53d9d62359f35abefb0d329e5da6a1103714aaca6c1ca41ec"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_cycle.h",
+      "sha256": "3a9d479a87a1fb6d37506b1c6b3e35c989178d74bb09e3837513c14d72f99442"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_exit.c",
+      "sha256": "482cb46f1e176829d97df3fe83784c1422fc3e76bb63f387730d84a6a3a477e4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_exit.h",
+      "sha256": "99851914594ecd50c56d185a6e79183abd97f31672de09efa21a6c1b5925d41f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_internal.c",
+      "sha256": "eba42a6ab83103a8000b745741d93fe80c1fabef12f67771b11380d5eee55668"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_internal.h",
+      "sha256": "955f398187502683eeabe32ad48b49dc5ea2de059ac85b9eace01ae9d8bdd9de"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_shared.c",
+      "sha256": "4b4726e75ec8d7988b37858dc7a2d7a7313812fcb28a4ebc1c0ede92cde7f030"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_prepare_shared.h",
+      "sha256": "572e1fce269688c038ee4b0da7deb7e64e5fe209150d795483b6c4c8b45b1096"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_reaction.c",
+      "sha256": "4ad6a24a12db2290b2ec4e597ce844a9317d47e3f9a971732aafa767e1416995"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_reaction.h",
+      "sha256": "2c67f68d37ab3f249a90167a89346064e9e039cee80dea014673f863db33dbfc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_rebuild_result.c",
+      "sha256": "74167a37f0bc18e64f25bf536f092e05c0fe703b55e450667a693284b1db4f12"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_rebuild_result.h",
+      "sha256": "02324efebd1ba488554a2f07e9a7d7b43e60bcb6ad02138274f6c21583d2171e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_recovery.c",
+      "sha256": "37282da4286f7d6d2d6f169f2adb778659380194858e9ce09320551cf739929f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_recovery.h",
+      "sha256": "800135f67a375ad830b06ba0a77b3bc0ee4bbee696ee67e263d85006cd0747b0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_region_route.c",
+      "sha256": "ccd429e6aea6ca1477ee203f367ca3aa8f2a779638bf56ca5677570a8f188411"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_region_route.h",
+      "sha256": "3c502a9a25dc03128c4d831a25ee175e335f91746c3e70d4f53bb06036834139"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_region_search.c",
+      "sha256": "82ab52b8e3a57c952159043193f23537063270fdf501afa9a5fad732685113ea"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_region_search.h",
+      "sha256": "78cc9c844c13fe0cc32fcaf85d29a0f80509dfd22bf3ef89f8886962e40f6f0a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_return_plan.c",
+      "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_return_plan.h",
+      "sha256": "c8dca091773955136c64315006bbb905ee7cb2040f9c1b17767d6c62b99a7f83"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_sampling.c",
+      "sha256": "efd5822e7b1f49632e7e7d14625a41082fb4ac65a91113758888f66b718ea338"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_sampling.h",
+      "sha256": "9c34263ea52ad740d4ed3bfeb4c5b49395ccbfb8dc7fd72d0c1803a9ca524b84"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_sampling_shared.c",
+      "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_sampling_shared.h",
+      "sha256": "6394efba5d2f05ab5ce4ca00850cbc5f4555a9f6aaf6d95d98079d7859b81c64"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_segment.c",
+      "sha256": "92eed38cbb1c0f996dfb3130a0393889ed05f9240b567ba0b2f1b3ba8215fb3d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_segment.h",
+      "sha256": "dd2b7a6b9defaea601d15108fa81505362ce7130b283f070a9271550e5dce302"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_segment_admission.c",
+      "sha256": "f8a40df0ee67e71b5b26e533fb24fd5abfd7621f10da6cbeaaee6053519a464f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_segment_admission.h",
+      "sha256": "c1c76dcaf8aff51581dd64d7c6e1ffebab8f61565cd2a827bbecda9fda2eed12"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_slope.c",
+      "sha256": "36db1b29604bc2491d439ff76f3ad4a285547a7e37e2ee49906775517a4562ad"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_slope.h",
+      "sha256": "31922372d60b0499f7c71be35c1d098e30a7a6b01f11b585a4f41e7ab3f1c71d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_special.c",
+      "sha256": "da77a4b28b8db73f05e11c72e0e9aeba83faa1e93638a4a3204bcdb0e39bc7d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_special.h",
+      "sha256": "6aced55f3736ef8c6dcd4206ff5a150509e3b8ec073539ca4cf1eccc6dc6769c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_surface_class.c",
+      "sha256": "58a3efba27027b4f462fcad7ac63e336e3316b5d75e6d94fbea517ac11ae0b67"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_surface_class.h",
+      "sha256": "fee1f9361a97ed20541cc24ff729f6039d3eb61e000b096f144fb1032679cada"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template.c",
+      "sha256": "b4a263cbfff24a2bcee14871c75573a94c5c33bf7a1ac6acf2717aeca4c8b753"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template.h",
+      "sha256": "b59e4bc39d09dfc2bb99f945a1b705ee0c2ad938c58ffc4f48d3b0f120b8672b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_entry.c",
+      "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_entry.h",
+      "sha256": "8347d8c313a8f31dd2f286246658da4a844e97e14947a89b4b4bb41c389d3701"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_next.c",
+      "sha256": "d0eec5cb39ea55eb7321e5c89c97a0dab43111b844b48f4f0c8c313109cc159a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_next.h",
+      "sha256": "f7aad6ba0f677f7b6976d9c3ea89f746eed9bd2d3b644ecd0078339364598c00"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_table.h",
+      "sha256": "dbd4375479ac741b8faa60ea21a709a800fb6dcf252692976d0bc5641a286479"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_transition.c",
+      "sha256": "4a41a37f73b078c6c42dfef965010760152502c1ba7db928f4d4557c535107d1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_template_transition.h",
+      "sha256": "5631b1026b8f88a4e549a71278dad827091bee9deabe6eea8cd23e589234b811"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_terrain.c",
+      "sha256": "3dc07b246dcb4bfd0cdae6540328d4e68fdf563eaf233063ff5ec945abb30bed"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_terrain.h",
+      "sha256": "648a2259da344576af75528eb30c9d91830ed2ddec74c468848f7cb79c28e2f8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_transition_rules.c",
+      "sha256": "13980d712eb11c1254c005f3e5b247e95619c4b46b982b87a52420abbe853a5d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_transition_rules.h",
+      "sha256": "4ae791de670300f1428bf03aec140c9608100978c84abeeca1c36d1c45431cb5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_progress.c",
+      "sha256": "4479de0be5b809fd25be702316168db2a9e37d60b48e532c6244a6134ea238cd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_progress.h",
+      "sha256": "91ebd7418aeb08514c9592df02ad803deef4aa519c934033b98382ae0aac78f6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_state.c",
+      "sha256": "67e6c7f4e2318846921b082c212c14353452ca3e2b3a3dfd56463614d2d44e55"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_state.h",
+      "sha256": "ec1de9ed28a27371a2fda8befa73b9e4c52f0e18a3c39235902c509163512ca7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_travel.c",
+      "sha256": "a29b563d5fc22715258c1e068a4dfa53068711ecd63658c13de3c4b8391334bd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_tube_travel.h",
+      "sha256": "8d478fab7ab4acb6361d13f5f841bbf650f1797cf7f63c6f02bb463a20d34893"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_turn.c",
+      "sha256": "fc1ac8d92326dae7fee04e38799af57eea127ca810ed53e07ccf23eef41dba8e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_turn.h",
+      "sha256": "65f3fedb9f6401ccfa6d325ed07ee9f77789c9d05d06815ac5b1e1f12085f65a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_wait.c",
+      "sha256": "b9577515ece90f5c388b5edfe6518105cebe616eaa054b28dee883f1a4589660"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\ground_wait.h",
+      "sha256": "4c7fe32fb666d71f8d91b820e2eedaa641d0db1d4a80e7872e6a7699b63065a6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\unit_movement.c",
+      "sha256": "1065aa87eff9f7d922cda5697ee779d19bb9bfd472588950267e46eb2687a190"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\unit_movement.h",
+      "sha256": "b10b2b9e4511f55bdf3bef67f26648596c89c333c0b512dae55470012067abc7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\walk_movement.c",
+      "sha256": "60702206f115b60ab7dde73e1dc0cd598fe5f8bf3a141e52736a742f8f266990"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\walk_movement.h",
+      "sha256": "56a63491dc810cdbf5ea8ba16364265ca085b08a9ae789b32e11934c0bfb93c9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\linux\\mods.h",
+      "sha256": "841da073ae5dde167810a698c5659b13acbc1503c250b2f3e095d88593bb47d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0000.c",
+      "sha256": "2c3ea35482347187079cef89c51b994507cc5827c67ad4d80ffd6cb4ec404471"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0001.c",
+      "sha256": "10404e0f33efae28e5051a25281e2c760f0aef9fffe3dd03ad992e82359188fd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0002.c",
+      "sha256": "3ec4ccbc8a136f0737e889714ed357c044fccfd6169ce54501bb0438ec2340a3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0003.c",
+      "sha256": "b9a53dafa0f19b804ac9e9437b3be4f3021c1793f32dd1a593bfc6ce46f2858c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0004.c",
+      "sha256": "77729f5f5b13f91afab49130dd20291cd03daf930524af33570c5ddc4d30a9e3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0005.c",
+      "sha256": "d30e7558e5d68b174ac9fb49e512cd83b9759b7d171c323361031ce6fbb815e1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0006.c",
+      "sha256": "af885367698b45c283e0078571e62446738c779c214482a02ab5f5b3fe2ace23"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0007.c",
+      "sha256": "8df337cbbe644688f11ad5359ab3ca43d4c1b008f129e7e2f83a7f4378fdbea6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0008.c",
+      "sha256": "9e8bce5acc39de0bfd84e8a780fc45a74f6ad29cacf86642b0e955db4b4fe472"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0009.c",
+      "sha256": "25a0e08be5933ed909ecd248c64c193b95207c9f5174d96faa7f35b0e29ed41d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0010.c",
+      "sha256": "1645ea8308ac8aefd84703b353b5d034a24910e06587edd781e7f4f106bdc355"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0011.c",
+      "sha256": "b09baed811bfca284d5dba2e1cfde1fd1fccf3d69b3a32cf4b1f3cd958653b01"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0012.c",
+      "sha256": "91e0dbf6e208192d7acc661c07306bcb764e7e563ece2029329998175aed1c54"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0013.c",
+      "sha256": "9c32b739635b2257fe774a5baa5623b770a5a60559e4737f9a92ffe9ee9c9957"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0014.c",
+      "sha256": "45a3f6f3d3ceca80f6a4a234e63d967ec313b723dc070d5fae5da7aaa5dced8e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0015.c",
+      "sha256": "5dea79eff19a08c3852fd88ef1a3267818d34aeed3c2485595978d1b6c5eddc4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0016.c",
+      "sha256": "97733b553ffe0d9602ca60cabb686cf5595a5eeb50fbfdeb6821ed7159eac640"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0017.c",
+      "sha256": "d91b7117a95ca9df9136d2287fbc27a3a86587df34b0ac9a8e815ceb6134c350"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0018.c",
+      "sha256": "089329c03856b62618d1afb9fda6317b7b91e415287337c6e5711ee15c95999b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0019.c",
+      "sha256": "dee6b3e7519558d4f0e485a638fb4c59aaf69a17a8c98b1f6c6b8b0bbdb873a4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0020.c",
+      "sha256": "b3d98d1ca21a7e12a17f701a8cc02a8dc5af799f539bd1cdcec52c34ce0792b6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0021.c",
+      "sha256": "d640b4939e329bcde0b96b2f68cf9f8b80fb11ead047bcb95d8a6c36c20a5a9a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0022.c",
+      "sha256": "70fac15ebe324f65da1ab0fb015c742f852cb3a255736f6645d6e0de9efa8068"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0023.c",
+      "sha256": "8e0a0cac5a892da1dadf069d78110dcfdd512a1e7553f2eebfff29d71b2a29f1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0024.c",
+      "sha256": "23acd862d6b7955974ed9321c3e7b8b433fc7d60a6ae1e2572657b218dcfc17c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0025.c",
+      "sha256": "0b10b11833804622b87fc05578fe87b7bce162fe2bacce3119d2e74473644e77"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0026.c",
+      "sha256": "53046a8312d92a6e5dfebe7f2daa39a38119d5eba69a46d7b0ef3beb3c392b6e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0027.c",
+      "sha256": "b0c6e04032eab322eb0b801f00390bb3e2c83180b624b14f0cbd76867e5b76f5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0028.c",
+      "sha256": "bf4a00016f0e69ba215e9d74f325fd3526240b18160cfd0530e2b4b50850d0aa"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0029.c",
+      "sha256": "e15d6d36992036b76c8a918f60f416c3f42e4cc63630976b3d68ff1c98c8fd70"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0030.c",
+      "sha256": "596f2cc5e408965645765cd642e17a470b17976ae95184cb04645b4bdf9db460"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0031.c",
+      "sha256": "9fd8998733d2c3024aaa441e367907a5379b21c5650898d4bd2db184cea2b2b8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0032.c",
+      "sha256": "6b80628fbb1f6bdd5a2f5d583199b3b6328171e820c1cdccc38622d9ba33231b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0033.c",
+      "sha256": "66a36a6cab5dc8b2c0dd49e73bd66d36271ea4b22eab7412b0f7acc224cc812b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0034.c",
+      "sha256": "82b6d5e7854513cf29aa65a88e67c55a6ef421ac9ef3c5d0fd51437693c1f995"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0035.c",
+      "sha256": "75e975f76a1d34336490012f3212cba52c306a895bf6d926266f6abd15d57687"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0036.c",
+      "sha256": "09c0600c7b0713a49a60e8d32f1b35889f4c3a1ae3154feb0239cd4170c0a5b4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0037.c",
+      "sha256": "b4711546faf185dcd077a9978f7c9f93b87621d44f3c5bab9ac92b00c3c2d45f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0038.c",
+      "sha256": "0b22d346db39d2fa2c56acd6d4be842c3eb1c20a83a5aeab6532f59b038b9fbd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0039.c",
+      "sha256": "fdf3a533629e5f4de6b2500809e90048135c15a813a156080fc6de54befb43ef"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0040.c",
+      "sha256": "4df8a8697cbba898c1f7249ee1ed023472432414e03dfb8a21a9922a45504c35"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0041.c",
+      "sha256": "280c4f12a8e52df8ed8736a5224f493b88f9524dc4df35e35038436d50c19b62"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0042.c",
+      "sha256": "8757d36ba67442a56044b4f74c2facc4770edbbe382853fe89804437a2f8e5df"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0043.c",
+      "sha256": "f51ccbd55a71cfb736c559c2f5695057aa81c9e5b09dbee9f57fdd978f3204a6"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0044.c",
+      "sha256": "e6316481fecc25c486a98d8d3253869cf10ae08e5209955e373adb255dfe4eb2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0045.c",
+      "sha256": "7a1e1787c412597d70746d4d51140b3897d1f68e88cecce5a96fa10c4ceb9a26"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0046.c",
+      "sha256": "d4901bdb7f90dbb6511181cd9509e2a29ff7ca60dde0a2791c8ee5f7abfbf520"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0047.c",
+      "sha256": "0e8f502668a0c10f9c5ab0c4694d9c807260c1c421ef6ff32c8877f536b7bb83"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0048.c",
+      "sha256": "0c7d6b74cfcd72dcdbbedcd104d232ee60b0c2f032c1ad3a575719d6770e0f66"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0049.c",
+      "sha256": "54b0a4c01309976e92a14651aec8f5bf2c9f1ab60a78275bb7ba321dc7ce3766"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0050.c",
+      "sha256": "b64041f5e3aa9ecbd523c784bdea9c63f4f1d27a29d25b6780b3015e518f733b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0051.c",
+      "sha256": "e587c5934fd36a4d81f350e30b22ab23fb95d190eabed48be4c5356e74a2de23"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0052.c",
+      "sha256": "525fe096d1d947e99fd047c2bebcf28c5e0546bcef1929fc6bb2d0ca7048f173"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0053.c",
+      "sha256": "2a9c7e1512eba997488872709834f6b1b7cdb38f27ca7d8fc01bc11f338d2a6a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0054.c",
+      "sha256": "e62877aed9b98e8506e2504bece99806a4592853b77a62af406cf99b7670ac20"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0055.c",
+      "sha256": "9564bc2f82c4e715fe5a306559e2ecc167a70c0913ad58ee40d475ef00ac6a20"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0056.c",
+      "sha256": "64a4b22ee89fb3ec3c3acb6053bdfdfd937b9a4d73f539cfdb41fb0c5bf5875f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_0057.c",
+      "sha256": "344c8e1c1edb5bc76181e8fcea6ff60b1cb6d84ef7d155574c46c26d6ec019d8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_dispatch.c",
+      "sha256": "cbcb6bd2a943f232c9cca048bf97fca26139497487d2a920f82c76f10dabb811"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_funcs.h",
+      "sha256": "cc9c34509b0775698aa53c775e7773a1cabdea7cf697a145b2cac570c05aed79"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\recomp\\gen_game\\recomp_target.h",
+      "sha256": "d162aa20e04d68ab17abbc1b5447d21171696ee8fb0ae51fc77b15147d844487"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_damage_bridge.c",
+      "sha256": "10b02df654fc14ca7df98728416bf8bf4ef8509df09c73bdc930cba62a939fd2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_damage_bridge.h",
+      "sha256": "4a9b0f9d3a445d78cca83459f051b6d2d55216e8d698b36fc7d7e35f3460c727"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_death_bridge.c",
+      "sha256": "7c57eda4f5af213f4292324d7db5d4629ec42c77739926764ffb7f4c4402ee16"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_death_bridge.h",
+      "sha256": "ef8f424ecc32e1f6574265568ec236adc8073599c078e00dae02700d9c038849"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_health_bridge.c",
+      "sha256": "203f8bbc6cfe7cb12c9642f776ac4b34a1fe45052add97494a463279d6dbbbcc"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_health_bridge.h",
+      "sha256": "a9bd5cb2f812627dc4309956d02982c6cda78dc4b6731ce106e1d3c8e865cb2b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.c",
+      "sha256": "ca5f1e367f8c42611fbe335e0386c4162cd409166a0ee3a88cad0731c1fdb7f3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.h",
+      "sha256": "1a1c347b45873a2e8abf0e10075246c7be9f74fd109ac6cdd9090a9e8079696b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_advance_bridge.c",
+      "sha256": "e7f37fb7c3230734b8c9ee04b90c87868ee4103dfca536b0b0264ee5adbafaf4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_advance_bridge.h",
+      "sha256": "9ec9e3f85680e0a97009b0797d7eaf8ba6abbbcfd63c45a7c0281d9d925b283a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_allied_bridge.c",
+      "sha256": "e2dba1bc3392981f87bc4233dd0cde9fe920de5041428f00fb8a6b999e53d70c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_allied_bridge.h",
+      "sha256": "a6d7072b4fe865bb3f42fbf8d804861c5f4391d0fabd092d0263cdbaf59bb92b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_arrival_bridge.c",
+      "sha256": "8e1fdf025f114eed98eba1deb4cd875f9067a9099e5f21e62100ef9e58405bed"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_arrival_bridge.h",
+      "sha256": "cec1d444b2cee16fc619b6f99deaf4b30286243a159155b4b029d76a79a97eb0"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_barrier_bridge.c",
+      "sha256": "49325f95eac988cd1f3d5e23a5a57f5d122374713bd60d5e81a284bfba463426"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_barrier_bridge.h",
+      "sha256": "c75da5bdbb80e9ba5cb7cf34227841cbeb1021f56c42443e774804f2e11a6316"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_collision_bridge.c",
+      "sha256": "10e8a37536b2ccdd3e8612c2b875a9aadb3391a6c5960ec3acd3ee5555fc3165"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_collision_bridge.h",
+      "sha256": "00bf1b90fda76eb3b414ee7e93ef8a06b1c04a143e0e3596e3a760e29d4ebed7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_completion_bridge.c",
+      "sha256": "843c03dddec431dcc99d4ec5d88e433f886c4038e540a7fe0102e51e388182a7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_completion_bridge.h",
+      "sha256": "9a373e61f1fa6108fe8dd4a2a8fb8f74cecf9d2ac8ff91027e17097346732826"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_connection_numeric_bridge.c",
+      "sha256": "cf26ac39e6f4ce87628abdf4801f458c1cc409c2837d6166dce0c28cafeda155"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_connection_numeric_bridge.h",
+      "sha256": "69e78747001512adf7c6229fe722179edf0355984223a6739838e9767382ef3e"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_continuation_bridge.c",
+      "sha256": "cb274ad9e747b01148d7c653374cad613e097fb84062cab31c3b75cc9ff766e7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_continuation_bridge.h",
+      "sha256": "5385b454b01c90c95e5e6e8cb94506d194d57143e547bb6642c8461bebe6d114"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_dispatch_bridge.c",
+      "sha256": "e1c1f45ad91d2745b85b91b7d188adc347abc24e410446467c3659e1376a3e26"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_dispatch_bridge.h",
+      "sha256": "ab80764f11576469c0eee85d81d01ea5bbf1caa988674fa01402e3aed3243849"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_drive_bridge.c",
+      "sha256": "bf5ed35d1c1c9d46d70113b4f380b862423c875c606addcf51ab34df4871d995"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_drive_bridge.h",
+      "sha256": "927ce51ad9cc3d62b019a529d9a8482f550688c406fb4a654802e28931c89ebe"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_entry_bridge.c",
+      "sha256": "192b271e5f5d167577822e5a75d479ca0ed1454af01ee03f82f89b950931ad46"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_entry_bridge.h",
+      "sha256": "77e4dda10a3da04ac13181510495788f7a775a2d23d8bfc7caa59665baabf7bd"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_followup_bridge.c",
+      "sha256": "8cc26af13f6d93f944badff191a3657eff63a6077c96bb4a3c44406994c7aaca"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_followup_bridge.h",
+      "sha256": "43d8fb59b7f2d596040b0a81edac9c1b4776f2b2d9ea3fda2102838463486170"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_internal_bridge.c",
+      "sha256": "703422ed25a0c7db0e058612843926492e8e55b50b8e71a87130782a02a6b801"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_internal_bridge.h",
+      "sha256": "bd1aa996e5117566678d61f596a2888ff35f62d746888dd0dfc2935809bc9935"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_joint_bridge.c",
+      "sha256": "94c908dc478155f48f18662ee3d8ece0bf448dd614cfc2c57118ec515646d541"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_joint_bridge.h",
+      "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_map_bounds_bridge.c",
+      "sha256": "4bc0cc8051c0d9cf9f8ce854a510413f6f9a34a0bbf4a896f790e460ced982ce"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_objects_bridge.c",
+      "sha256": "fd86b609c50456334b90b7e46141ecc5122c59f5fb3c586107746cd08d585216"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_objects_bridge.h",
+      "sha256": "b997a4f2fab454127c7852a44719cca5fc238d7c13a9bdff809549d00c61f2aa"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_overlap_bridge.c",
+      "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_overlap_bridge.h",
+      "sha256": "e47a3ba48ed5b00c0b2b992a045811167cc96b4ee00ac385db693b097196321a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_bridge.c",
+      "sha256": "cfde0382a8a3120a9ff27a48e7f753d8ce7ee585fec2f9bb8d236a02a4dc69ec"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_bridge.h",
+      "sha256": "51b57255b02dc969a7da08d52cf9bebba751673d979965851d3db6dbae146d40"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_distance_bridge.c",
+      "sha256": "5f1dd7dc952124afb4ce97f64e71f9b8548a94ccda729f74e8f64af5b1628fad"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_distance_bridge.h",
+      "sha256": "28d738124cec7f28d33747a6436fa3a510af0985c47a2eeb5003d199419984d8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_heap_bridge.c",
+      "sha256": "4128ca53677e9bc8793cbd1910230c91576f782caaa2c77f628f608ff446a0e3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_heap_bridge.h",
+      "sha256": "97c5bd22bf4852c6520cda48c7ba8d728e8deae409cfe169711b38b1dce4bf1b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_lifecycle_bridge.c",
+      "sha256": "949eba8bb7a880a5b67eec9d8ec44f9350195f6cfda17126192ae557090b8285"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_lifecycle_bridge.h",
+      "sha256": "71281f25567a4419c629e77ed58df27a5875a498acf714450a319f4acafe590a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_local_bridge.c",
+      "sha256": "78939d0f998038beaea8a0ab4d590f6ade5f1ed8ba3d654e6450bf97ba59390f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_local_bridge.h",
+      "sha256": "f23ab059c83fa4e3d1ed2a5e0a94d8b66b5a05e3543f94f7e13759239f89f0e1"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_nodes_bridge.c",
+      "sha256": "0978fbdffe5b189300b2adf2a31792dfeca7569d8a15c04ee639260fc4cdd705"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_nodes_bridge.h",
+      "sha256": "767699dd06520e584fabcf79c1bcf19e4c18a681c0cc8a2f7b12ac28c4a3ae6f"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_routing_bridge.c",
+      "sha256": "a6e3f6719d38550deaf774930f8c4e859c5ee2a88dfc6db988f393f28629d7d2"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_routing_bridge.h",
+      "sha256": "e497f2b75473a679a04b1cc7d49f714195859ef1e77481d31bc84bb44c689f60"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_search_bridge.c",
+      "sha256": "6cbfe8f6735eaac3ad181027403e40b17dd0a0b5f46807ce762019e3fe622465"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_path_search_bridge.h",
+      "sha256": "53ef6fc903c15aa28e9f4ea99125774cfded724775440d3a35b6e768b70bb52b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_prepare_bridge.c",
+      "sha256": "686335da73835962326cc457860358fdc87193932e8190895045f7109aeb4697"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_prepare_bridge.h",
+      "sha256": "dbb27124bf72cf3d3b4d5606b5d08685cd42c2f7d321092c9e76f02271effa5b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_progress_bridge.c",
+      "sha256": "89d5cad5b0e9455b715d23bb06bbd626de9f11e586d5fcf3c37c4fd612489313"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_progress_bridge.h",
+      "sha256": "0cc9bced624d8347d29d786eb28b245d98664013742c927ca3f71f05bbabe0f3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_recovery_bridge.c",
+      "sha256": "d62c2a2716ad68572588b1534681d62a726689edbbb9c20343bd9fc77f1ca331"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_recovery_bridge.h",
+      "sha256": "0debacf7aceb5c30a0ca708bd6ddb3697b8db8f89b04e5939d0425dfe94a3349"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_remainder_bridge.c",
+      "sha256": "f48658d0cac1051f973a207f390d7d3f7cc9ff016074d7301614f000b24af6c7"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_remainder_bridge.h",
+      "sha256": "5ca4bc13df7031dad04d8dd6d0488f503d82f7220c4f9fb80c32b528606cec86"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_services_bridge.c",
+      "sha256": "370cbba4c6ee03b7b4ac49d0bc65ff552fcf52c98733810e7ac9959b5050e258"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_services_bridge.h",
+      "sha256": "fc32a853deb549c170fc62ff69513161f4273871d125286e3a4e361c274a51d3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_travel_bridge.c",
+      "sha256": "79cf06485df03c8462cf97b14696a7cca7888cd27a0ac8f2adb7087eeba66cca"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_travel_bridge.h",
+      "sha256": "c81910ed441d1fa4f1358a5569df18bcbe2027e2ebd5138dea5dc6ce819d992c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_tube_state_bridge.c",
+      "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\ground_tube_state_bridge.h",
+      "sha256": "f434ba1975b4157035a9920018bf93c56db3083b60f52dfe32e4bf8d2f30ee6a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\hdvox.c",
+      "sha256": "ca50917e4e9f43dd33253f82d1c30c04141a463c5e8c1500e8cdef0ded9d0887"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\hdvox.h",
+      "sha256": "59156bc9bb71465f487f35bb5505c5e2d04713c0795d704e9bd96e3ad9bb65a8"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\host.c",
+      "sha256": "d0307a47a3f3e9ddbd4c9b41e266d748b0cda68d51e4297186f243372c3f4fc9"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\input.c",
+      "sha256": "3c8a7512cf4f430ce324e29e0bab6b1bb12d4d0fe8e8742625b9c719e5b39a1d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\input.h",
+      "sha256": "560e5df1468722f81197207084296543c1cb206cef89b448eb317789df443189"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\mods.c",
+      "sha256": "fe83d244377eab54a88112fc991cc24defd4857abdc3c9ef5e30d77401877017"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\mods.h",
+      "sha256": "60179b6746b1942f169c8ba5d1c42fd3ce1983c8d0fa3b185908bbed0d69b836"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\movement_bridge.c",
+      "sha256": "6f4e2fd54cc689dcc8466d6dfba4a60ad89a3ef643551a94524a08bded69c284"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\movement_bridge.h",
+      "sha256": "62c6c641000535f0aa826c88ca3b9236e475d5de2823454a621678c917ecfdfe"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\movement_fixture.c",
+      "sha256": "172e498125fa3948b16474510a149f44c729a6de010cfc8162e5a2871e1cc3e3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\movement_fixture.h",
+      "sha256": "de7b366d38238fb7803c060899c833ce9dad4582a51a78b6e8fedde213ddaef5"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\oracle.c",
+      "sha256": "a33fa16da76488d8bd2498ec22d64675a591f9e48e5eb4418ca2f4bad1550dee"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\oracle.h",
+      "sha256": "0e551fecfdb4866bcac400ec6d4038172af9358f201d0bf4a3b6e1049f04a967"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\present.c",
+      "sha256": "3061a2f768f685430faf85d33d1d1e0848dccc9bc8604d54d78187a0294a958b"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\present.h",
+      "sha256": "7207ffb3a6b69d4879dc6fbc8ae754091e85ab6718ec5cdb848c90b0812f7858"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\queuefive.c",
+      "sha256": "1bf076c92134460a1082208ceb57c3cd1a851002d9317d03ef8942e181639140"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\recovery_checks.c",
+      "sha256": "c608af38ab5b1781f11f1148c0b228091bc1d97a602ab5d4d25014188c83afaa"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\state_trace.c",
+      "sha256": "477f071ef17c39d8a12c3eb60ba25a7255a6abbafc4640ac89e7b357a70c1dd4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\state_trace.h",
+      "sha256": "2dffed966e24cce756a07d756452f396b351cfde78251ed70a71c3ec0c98be1a"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\walk_movement_bridge.c",
+      "sha256": "b61bff2a7bfa0e68f25b3fd0299730b67581696a745ebac8d4b2b929c7d5e38c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\walk_movement_bridge.h",
+      "sha256": "f01ce32192c4f6c871e8c7c611cc088b19c8153a2bfb5393ef633d038ad9e016"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\x87_precision.c",
+      "sha256": "654af647c9d889d6cad8266eddeab526df43945c8a26ba74df316fabcd81d393"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\x87_precision.h",
+      "sha256": "fe985b5abda5084307b5c196236a9ea304cc16f11156b1305ae43c825e62a587"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\run_fixture_comparison.py",
+      "sha256": "aadfc98e492be4073c7a7afa27b846f4fa08b6fd977f7cbbf89545f757ed8a1e"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\BINKW32.DLL",
+      "sha256": "1fd7ef7873c8a3be7e2f127b306d0d24d7d88e20cf9188894eff87b5af0d495f"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Blowfish.dll",
+      "sha256": "68e4896b1fc0e5828162fbefe1bfb2cc7a1dd4ac34957b5b0194550e36fe7992"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Blowfish.tlb",
+      "sha256": "43f4c25c740281d405895917ab8024db742e87cbb35adf30707afff271eecbaa"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Conquer.dat",
+      "sha256": "386d33eb344a58cc18013490f08e7da38197331669c97d433e0fd9105b27284b"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ddraw.dll",
+      "sha256": "85e0f7d530dfda134793a57cb3e76b0287dcc96892ee57162dd68f47283b03a9"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ddraw.ini",
+      "sha256": "8dae827ba24fbb2107cebd7da42e5c780b10d37fd4e974db2f6e90e6d6402522"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\game.exe",
+      "sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\LANGUAGE.MIX",
+      "sha256": "870c3bcc596e8690c55077a4c651f88d0dbc35f2a786c6c4891df8ffdb9ce192"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MAPS01.MIX",
+      "sha256": "b9093c9ef7efc1d24c6259196fbe90c8b78a15d0af27c93c12e1c755e5196d74"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MAPS02.MIX",
+      "sha256": "8ff61284f726a67760563c7a278c9034ff44baa5ca86a6790eddeb273301b11f"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MOVIES01.MIX",
+      "sha256": "1121c4899b4f978bf9dbabbfc1776be09253b2d576e1182a8067ec3ad5c9d7fc"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\movies02.mix",
+      "sha256": "e0e13c34b1b8299b9198317ac7276c4ad7790cd8996ec06ab25489f25e838643"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\MULTI.MIX",
+      "sha256": "c040bcede176677d0faba2f868be6d527ffa2d47e0fff2e048025c0aea629cfc"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.exe",
+      "sha256": "596ac84633bcc898ea5a7d55ccf5360f1d89cfb9266db1f18ec1fabec51a0d73"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\RA2.INI",
+      "sha256": "442b7ea80728ec4eeee4f1f0429f0ba142cb68139314f8ec5acf76b5610fa4f5"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.lcf",
+      "sha256": "22856c6865ca4f6947ff84051c6977e97d3a0dafd6ae5c52c71f4e55fddc6ece"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\ra2.mix",
+      "sha256": "896a8b64f9f1bb8ad5e0bc64fc0b8ea8c84112494761ea1a43478d10c5ef9914"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\Ra2.tlb",
+      "sha256": "8025e99820aa1d01a8acc0dbbdcfe83663a9102349fc87cd12d7839ee9d2faf4"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\SAVE0029.SAV",
+      "sha256": "8a2e04fb4412aa5e51b6ffeacc5cb9fe265682d880966d39c1826dc810768b3b"
+    },
+    {
+      "path": "H:\\开发\\运行版本\\原版1.006\\THEME.MIX",
+      "sha256": "30027e29599d1c382ef4ca0bdc41590656c79715a46d7c4c68ae5ddfaed1fd4c"
+    }
+  ],
+  "empty_cache_directories": [],
+  "files": 7,
+  "bytes": 2793064,
+  "scope": "Only ignored root probe/observer .obj and reproducible Python cache; no originals, accepted executables, baseline, rollback, anomalous inputs, source or traces."
+}

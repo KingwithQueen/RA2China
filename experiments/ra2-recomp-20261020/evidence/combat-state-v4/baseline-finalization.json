@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "canonical_recipes": "qualified-final-scene-recipes.json",
+  "accepted_scenes": 9,
+  "new_scenes": 4,
+  "strict_scenes": 6,
+  "bounded_functional_scenes": 3,
+  "superseded_preliminary": "accepted-scene-recipes.json",
+  "rules_only_deathframes_excluded": true,
+  "electric": {
+    "accepted": false,
+    "preserved": true,
+    "target_destructor_same_frame": 211,
+    "first_difference": {
+      "frame": 98,
+      "path": "state.rng.indices[0]",
+      "original": 153,
+      "generated_c": 154
+    },
+    "reason": "Pre-existing electric attack RNG/ancillary cleanup divergence in unmodified parent; outside current handoff/removal extraction. Preserve and rerun per mode as diagnostic; do not count as accepted natural equivalence."
+  }
+}

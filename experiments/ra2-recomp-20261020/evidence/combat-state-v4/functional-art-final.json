@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "tag": "f-delayed-art",
+  "strict_raw_comparison": false,
+  "attacker_id": 1023310,
+  "differing_records": 865,
+  "first": {
+    "row": 477,
+    "kind": "fixture-death-result",
+    "frame": 336,
+    "id": 1023310,
+    "original": 295,
+    "generated_c": 294
+  },
+  "last": {
+    "row": 1368,
+    "kind": "state",
+    "frame": 1200,
+    "id": 1023310,
+    "original": 295,
+    "generated_c": 294
+  },
+  "all_other_fields_rng_lifecycle_targets_equal": true,
+  "maximum_health_difference": 1,
+  "source": "Observed before current service attachment in unchanged parent C.",
+  "raw_comparator_relaxed": false
+}

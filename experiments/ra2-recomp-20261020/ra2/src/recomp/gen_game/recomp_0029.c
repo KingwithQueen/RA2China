@@ -1,3 +1,4 @@
+#include "combat_lifecycle_bridge.h"
 #include "combat_death_bridge.h"
 #include "combat_health_bridge.h"
 #include "ground_dispatch_bridge.h"
@@ -64377,6 +64378,12 @@ void WaveClass__virtual_60(void) {
     RECOMP_ENTER(0x005D4E90u);
 
 L_005D4E90:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_object_uninit_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        return;
+    }
     PUSH32(esp, esi); /* 0x005D4E90: push esi */
     esi = ecx; /* 0x005D4E91: mov esi, ecx */
     ecx = MEM32(esi + 0x38); /* 0x005D4E93: mov ecx, dword ptr [esi + 0x38] */

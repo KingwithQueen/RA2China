@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "result": {
+    "passed": true,
+    "lifecycle_cases": 229376,
+    "fragments": 7,
+    "per_fragment": 32768,
+    "callbacks": 1163457,
+    "destructors": 56442,
+    "growth_callbacks": 28863,
+    "actual_original_fragments": true,
+    "engine_callbacks_mocked": true,
+    "queue_state_order_stack_flags_nonvolatile_verified": true
+  },
+  "exe_sha256": "dbbaa07f711d09a833a0f52c5a8cc6cf090d498a58655b031440b02599f256e9",
+  "original_sha256": "fe67fdac5073530a79baec14c4e072b5e7e4c0c462cee9659870c5330e9e6e3e",
+  "inputs": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe.c",
+      "sha256": "9e650bf14c30fb0da0cc6eb64d1fae62118a70b74bf05d087ba2387f6beef780"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.c",
+      "sha256": "7cf880c449bd433bbde9e79b91248cc7cc80767bafb5aebd2e5eb094400b314c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.h",
+      "sha256": "08256409a0e29695d7374abe622091e649a9407db606a65d168fb7468a28ab3d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.c",
+      "sha256": "ca5f1e367f8c42611fbe335e0386c4162cd409166a0ee3a88cad0731c1fdb7f3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.h",
+      "sha256": "1a1c347b45873a2e8abf0e10075246c7be9f74fd109ac6cdd9090a9e8079696b"
+    }
+  ],
+  "actual_original_fragments": true,
+  "engine_callbacks_mocked": true,
+  "typeid_and_destructor_callbacks_mocked": true
+}

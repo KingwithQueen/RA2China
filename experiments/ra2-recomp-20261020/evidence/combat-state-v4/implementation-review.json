@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "initial_source": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\diagnostics\\lifecycle_bridge_before.c",
+  "initial_sha256": "b00bcc6ff565a1d9af5d3551429e2932a28ce4733f2cee60868ff11ab1ade50e",
+  "caught_by_native_case": "drain 2",
+  "issue": "Erase shift must copy through the new count inclusive: it is the final occupied source slot before removal. Corrected the adapter boundary before main attachment.",
+  "retained_failed_logs": [
+    "probe-03.log",
+    "probe-04.log"
+  ]
+}

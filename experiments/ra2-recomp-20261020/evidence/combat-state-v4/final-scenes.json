@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "f-nothuman",
+      "frames": 1201,
+      "strict": true,
+      "comparison_sha256": "7b72c661ae35d69513ed4519a3a813b85394862fbc834465b733e42335d59dca",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-delayed-prism",
+      "frames": 1201,
+      "strict": false,
+      "comparison_sha256": "26cb02d709cd58fc807ff02d2aa3e7a8da645b5d3a9a89a19bb48f393eb97e1a",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-delayed-art",
+      "frames": 1201,
+      "strict": false,
+      "comparison_sha256": "658c15661b7604ca3956dd24816285a734924e5f59ed803f36fd11569c7c7496",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-queue",
+      "frames": 1201,
+      "strict": false,
+      "comparison_sha256": "3906401164429a97eb91f82039a9d2d75a04821f44546d3fe20906098d2f39bc",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-truck",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "0ccad0730bbf7ad19fc1ccef64b1dc5d6b627019b271b6afe1223ba1048d610c",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-infantry",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "6005f462234d3dd56d8ac3c46f080d8130ba875097b3bd80eb83d5ac44bbf516",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-special",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "871ed9b6932cc09ea3980c1def769e63aafabd15c7191c866fe8f5ad9f22d823",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-unattached",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "6996792f72861093a1b541df8ebdfd369a7d668040211d867883765ce64a2c0a",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    },
+    {
+      "tag": "f-volley",
+      "frames": 901,
+      "strict": true,
+      "comparison_sha256": "58b2e03d856a190c09b666f15e7db09c9b8924bffa963b33d6398fde0f409e54",
+      "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+    }
+  ]
+}

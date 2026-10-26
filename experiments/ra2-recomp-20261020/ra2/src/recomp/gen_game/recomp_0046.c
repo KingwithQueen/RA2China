@@ -1,3 +1,4 @@
+#include "combat_lifecycle_bridge.h"
 extern unsigned ra2_ground_allied_relation_bridge(void);
 extern unsigned ra2_ground_moving_tail_bridge(void);
 #include "ground_overlap_bridge.h"
@@ -30067,6 +30068,15 @@ L_006FCA59:
     ecx = esi; /* 0x006FCA77: mov ecx, esi */
     RECOMP_CALL(FootClass__virtual_86); /* 0x006FCA79: call 0x4c6000 */
     RECOMP_FLAGS_IN();
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        uint32_t next=ra2_unit_death_handoff_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        if(!next)return;
+        if(next==0x6FD1DB)goto L_006FD1DB;
+        if(next==0x6FCD44)goto L_006FCD44;
+        goto L_006FCADA;
+    }
     ebx = eax; /* 0x006FCA7E: mov ebx, eax */
     /* cmp ebx, 5 */ /* 0x006FCA80: cmp ebx, 5 */
     _flag_a = (uint32_t)(ebx); _flag_b = (uint32_t)(5);
@@ -30970,6 +30980,12 @@ L_006FD170:
     RECOMP_CALL(sub_0054E580); /* 0x006FD178: call 0x54e580 */
     RECOMP_FLAGS_IN();
 L_006FD17D:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_unit_death_finish_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        return;
+    }
     edx = MEM32(esi + 0x5AC); /* 0x006FD17D: mov edx, dword ptr [esi + 0x5ac] */
     SET_LO8(eax, MEM8(edx + 0xB45)); /* 0x006FD183: mov al, byte ptr [edx + 0xb45] */
     /* test LO8(eax), LO8(eax) */ /* 0x006FD189: test al, al */

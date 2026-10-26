@@ -1,0 +1,324 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "delayed",
+      "path": "evidence/combat-state-v4/fixtures/delayed.MAP",
+      "map_sha256": "208f9a361986e6f29a27aabde2372b2415e9b8a9963c3255f0b4313d9ffe9bc2",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "attack_pairs": [
+        [
+          [
+            80,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ]
+      ],
+      "last": 1200,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "new_scene": true,
+      "rules": "evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "rules_sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374",
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "nothuman",
+      "path": "evidence/combat-state-v4/fixtures/nothuman.MAP",
+      "map_sha256": "d77b91039ab41197a485dc8acb4d84512aabeee2df70c58da54e2d032231bd76",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "attack_pairs": [
+        [
+          [
+            80,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ]
+      ],
+      "last": 1200,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "new_scene": true,
+      "rules": "evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "rules_sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a",
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "electric",
+      "path": "evidence/combat-state-v4/fixtures/electric.MAP",
+      "map_sha256": "f7c18e463998f195cdd405005dae8244e1294d07555b3c4388e6143d6a5f9e1e",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "attack_pairs": [
+        [
+          [
+            80,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ]
+      ],
+      "last": 1200,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "new_scene": true,
+      "attacker_id": 1023310,
+      "target_id": 1023311
+    },
+    {
+      "tag": "queue",
+      "path": "evidence/combat-state-v4/fixtures/queue.MAP",
+      "map_sha256": "28a36e8322bbf666344088f6f708ef9c45230effe2b39e12f5c4e2a48395e052",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "attack_pairs": [
+        [
+          [
+            80,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ],
+        [
+          [
+            80,
+            113
+          ],
+          [
+            86,
+            113
+          ]
+        ],
+        [
+          [
+            81,
+            112
+          ],
+          [
+            87,
+            112
+          ]
+        ],
+        [
+          [
+            81,
+            113
+          ],
+          [
+            87,
+            113
+          ]
+        ]
+      ],
+      "last": 1200,
+      "orders": [
+        "5:1023310:1:1023314:0",
+        "5:1023311:1:1023315:0",
+        "5:1023312:1:1023316:0",
+        "5:1023313:1:1023317:0"
+      ],
+      "new_scene": true,
+      "attacker_id": 1023310,
+      "target_id": 1023314
+    },
+    {
+      "tag": "truck",
+      "path": "evidence/combat-state-v3/fixtures/truck-02.MAP",
+      "map_sha256": "208f9a361986e6f29a27aabde2372b2415e9b8a9963c3255f0b4313d9ffe9bc2",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311,
+      "new_scene": false
+    },
+    {
+      "tag": "infantry",
+      "path": "evidence/combat-state-v3/fixtures/infantry-02.MAP",
+      "map_sha256": "32f3e40ec4bedb253e3ee1109b51df70ecc86fc8af8a81877682991c21e2a8c9",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311,
+      "new_scene": false
+    },
+    {
+      "tag": "special",
+      "path": "evidence/combat-state-v3/fixtures/special-02.MAP",
+      "map_sha256": "32f3e40ec4bedb253e3ee1109b51df70ecc86fc8af8a81877682991c21e2a8c9",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": true,
+      "special_control": true,
+      "rules": "evidence/combat-state-v3/fixtures/rules-cyborg.ini",
+      "rules_sha256": "0679b1814854fab97b1f02ab8ab64221d0c0f2864bc276e7673e064df6b143e3",
+      "attacker_id": 1023310,
+      "target_id": 1023311,
+      "new_scene": false
+    },
+    {
+      "tag": "unattached",
+      "path": "evidence/combat-state-v3/fixtures/unattached-02.MAP",
+      "map_sha256": "27dc16184b7c9b1fd3c4038a43af1de1b7d206d5d61002241ce6d55f7c2314b3",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023311:0"
+      ],
+      "attached_tag": false,
+      "special_control": false,
+      "attacker_id": 1023310,
+      "target_id": 1023311,
+      "new_scene": false
+    },
+    {
+      "tag": "volley",
+      "path": "evidence/combat-state-v3/fixtures/volley.MAP",
+      "map_sha256": "8aa3db2d858a78268a8aaadb76655bce6c749ba9efd05643c7cbff536641672f",
+      "attacker_cell": [
+        80,
+        112
+      ],
+      "target_cell": [
+        86,
+        112
+      ],
+      "last": 900,
+      "orders": [
+        "5:1023310:1:1023313:0",
+        "5:1023311:1:1023313:0",
+        "5:1023312:1:1023313:0"
+      ],
+      "attached_tag": true,
+      "special_control": true,
+      "rules": "evidence/combat-state-v3/fixtures/rules-cyborg.ini",
+      "rules_sha256": "0679b1814854fab97b1f02ab8ab64221d0c0f2864bc276e7673e064df6b143e3",
+      "attacker_id": 1023310,
+      "target_id": 1023313,
+      "actor_ids": [
+        1023310,
+        1023311,
+        1023312
+      ],
+      "new_scene": false,
+      "attack_pairs": [
+        [
+          [
+            80,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ],
+        [
+          [
+            80,
+            113
+          ],
+          [
+            86,
+            112
+          ]
+        ],
+        [
+          [
+            81,
+            112
+          ],
+          [
+            86,
+            112
+          ]
+        ]
+      ]
+    }
+  ],
+  "calibration_excluded": true
+}

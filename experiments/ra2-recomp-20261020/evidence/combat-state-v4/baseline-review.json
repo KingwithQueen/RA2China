@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "tag": "nothuman",
+      "new_scene": true,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x4ffb70": 8,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x509810": 1
+      },
+      "maximum_delete_queue": 1,
+      "first_death_frame": 491,
+      "original_sha256": "cb612a7a3b851a25de1b6cffde3eee40b61daf685d7a94add489608577697e45"
+    },
+    {
+      "tag": "delayed-prism",
+      "new_scene": true,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x6fca30": 3,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x70a330": 1
+      },
+      "maximum_delete_queue": 4,
+      "first_death_frame": 223,
+      "original_sha256": "c1b0be846695cf5e18dd68ccf305a47e3ab99f44a76a768dd7707c387f99c49e"
+    },
+    {
+      "tag": "delayed-art",
+      "new_scene": true,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x6fca30": 5,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x70a330": 1
+      },
+      "maximum_delete_queue": 2,
+      "first_death_frame": 283,
+      "original_sha256": "a8a147d626658ce05d29a6d87043b61cae6f2f7a124d71573d6a5ef9278b5d08"
+    },
+    {
+      "tag": "queue",
+      "new_scene": true,
+      "targets": [
+        1023314,
+        1023315,
+        1023316,
+        1023317
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x6fca30": 20,
+        "0x4cce40": 4,
+        "0x5d4e90": 4,
+        "0x70a330": 4
+      },
+      "maximum_delete_queue": 3,
+      "first_death_frame": 157,
+      "original_sha256": "b618edd37a5c61d6905963f37b0fcc632475f39bac89a4e878a082be3129a01f"
+    },
+    {
+      "tag": "truck",
+      "new_scene": false,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x6fca30": 5,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x70a330": 1
+      },
+      "maximum_delete_queue": 2,
+      "first_death_frame": 283,
+      "original_sha256": "428939ffcf0163f854baea30727d820f0f4d13c02abb29bfc9559ed9e8afe0d7"
+    },
+    {
+      "tag": "infantry",
+      "new_scene": false,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x4ffb70": 8,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x509810": 1
+      },
+      "maximum_delete_queue": 2,
+      "first_death_frame": 476,
+      "original_sha256": "3da3e834077a0fa98a0a5ba09c737311f7c284b79a573c2bc006de58c74eee4d"
+    },
+    {
+      "tag": "special",
+      "new_scene": false,
+      "targets": [
+        1023311
+      ],
+      "remaining": [
+        1023311
+      ],
+      "lifecycle_counts": {
+        "0x4ffb70": 14
+      },
+      "maximum_delete_queue": 1,
+      "first_death_frame": -1,
+      "original_sha256": "eef23f77ad3926e10b03f26a4ce96eb554b5e2cf4fbc5668fc3649719f99bd2e"
+    },
+    {
+      "tag": "unattached",
+      "new_scene": false,
+      "targets": [
+        1023311
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x4ffb70": 8,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x509810": 1
+      },
+      "maximum_delete_queue": 2,
+      "first_death_frame": 476,
+      "original_sha256": "72ad628d879f72aa5a09ac54083f3e8dfb4983af6efc24b15b6d97090fadf56d"
+    },
+    {
+      "tag": "volley",
+      "new_scene": false,
+      "targets": [
+        1023313
+      ],
+      "remaining": [],
+      "lifecycle_counts": {
+        "0x4ffb70": 15,
+        "0x4cce40": 1,
+        "0x5d4e90": 1,
+        "0x509810": 1
+      },
+      "maximum_delete_queue": 2,
+      "first_death_frame": 300,
+      "original_sha256": "2a22d08b3395debd4e49ac0048ed4483cd58170b739070fcac2f0ead433ab673"
+    }
+  ],
+  "new_scene_count": 4,
+  "inherited_scenes": 5,
+  "strict_original_c_scenes": 6,
+  "bounded_functional_original_c_scenes": 3,
+  "ordinary_attacks_and_map_rules": true,
+  "health_path_lifetime_or_queue_memory_injection": false,
+  "scope": "Derived handoff, deferred death, electric/nonhuman infantry and queued destruction in finite natural attacks; whole derived death effects and destructors remain delegated."
+}

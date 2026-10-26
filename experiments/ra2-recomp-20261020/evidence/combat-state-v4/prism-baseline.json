@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "result": {
+    "tag": "b-delayed-prism",
+    "frames": 1201,
+    "strict": false,
+    "comparison_sha256": "5dc6b53f4cf757d65f0d5256e4144f3c4a9d12e4d7d06b740b70457065b7f0b3",
+    "exe_sha256": "1a8125bbe5a246c0892bfc608e0da9bd00e56990a727737c86053636a87f2171"
+  }
+}

@@ -320,3 +320,6 @@ set_source_files_properties(src/gameplay/combat_damage.c src/runtime/combat_dama
 
 target_sources(ra2 PRIVATE src/gameplay/combat_death.c src/runtime/combat_death_bridge.c)
 set_source_files_properties(src/gameplay/combat_death.c src/runtime/combat_death_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/combat_lifecycle.c src/runtime/combat_lifecycle_bridge.c)
+set_source_files_properties(src/gameplay/combat_lifecycle.c src/runtime/combat_lifecycle_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

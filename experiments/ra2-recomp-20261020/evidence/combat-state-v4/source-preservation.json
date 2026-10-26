@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/recomp/gen_game/recomp_0045.c",
+    "ra2/src/recomp/gen_game/recomp_0046.c",
+    "ra2/src/recomp/gen_game/recomp_0012.c",
+    "ra2/src/recomp/gen_game/recomp_0017.c",
+    "ra2/src/recomp/gen_game/recomp_0029.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/runtime/combat_lifecycle_bridge.h",
+    "ra2/src/gameplay/combat_lifecycle.h",
+    "ra2/src/runtime/combat_lifecycle_bridge.c",
+    "ra2/src/gameplay/combat_lifecycle.c"
+  ],
+  "c_sources": 190,
+  "headers": 139,
+  "compile_inputs": 329,
+  "guard_sites": 37,
+  "generated_definitions": 23117,
+  "attachment_labels": [
+    "L_006FCA7E:",
+    "L_006FD17D:",
+    "L_004FFBD6:",
+    "L_004FFF61:",
+    "L_004CCE40:",
+    "L_005D4E90:",
+    "L_006ECF10:"
+  ],
+  "original_statements_and_labels_retained": true,
+  "health_damage_shared_death_movement_numeric_and_recorder_sources_unchanged": true,
+  "internal_entries_removed": false,
+  "protected_files": 28,
+  "parent_archive_files": 413
+}

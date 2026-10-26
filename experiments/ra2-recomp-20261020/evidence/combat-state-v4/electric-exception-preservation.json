@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "accepted_natural_equivalence": false,
+  "result": {
+    "tag": "f-electric-diagnostic",
+    "frames": 1201,
+    "strict": false,
+    "comparison_sha256": "d19012559de4b5f17b820472bb9bec1c3d42831f33d5befed743ceaed5d297fc",
+    "exe_sha256": "2c02f44d7ed6898b9e928702719261ffc362f1dec117f763f8397e4680f1125d"
+  },
+  "complete_per_mode_before_after": [
+    {
+      "mode": "original",
+      "baseline_sha256": "f505b9bab4615dfa1daeee5c200b3a5ccc7e48236273870471ecbe16ef5ffd17",
+      "final_sha256": "f505b9bab4615dfa1daeee5c200b3a5ccc7e48236273870471ecbe16ef5ffd17"
+    },
+    {
+      "mode": "generated-c",
+      "baseline_sha256": "b25e9acf62b56b965e2689c8ce94a148f034c41d6bfb36d9bb4dc61588be5f58",
+      "final_sha256": "b25e9acf62b56b965e2689c8ce94a148f034c41d6bfb36d9bb4dc61588be5f58"
+    }
+  ],
+  "parent_rng_and_timing_gap_preserved": true,
+  "raw_comparator_relaxed": false
+}

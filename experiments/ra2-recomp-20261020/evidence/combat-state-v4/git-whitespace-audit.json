@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "exit_code": 2,
+  "warnings": [
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/art-deathframes-long.ini",
+      "line": 1292,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a8c098946aed882b7532b992ec1d5c79a1fe085c3108048a40addadaa8966cb2"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/art-deathframes-long.ini",
+      "line": 14721,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a8c098946aed882b7532b992ec1d5c79a1fe085c3108048a40addadaa8966cb2"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/art-deathframes.ini",
+      "line": 1290,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "0766f0782f62b6435275956e84b6fac463315a06daf35e884aa770585c44a21b"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/art-deathframes.ini",
+      "line": 14719,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "0766f0782f62b6435275956e84b6fac463315a06daf35e884aa770585c44a21b"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/delayed-prism.MAP",
+      "line": 2666,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "004ef360b54a5a6258c2eaecab0f1e24fd551f3c6aca5a6e893a7a22fde9de73"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/delayed.MAP",
+      "line": 2666,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "208f9a361986e6f29a27aabde2372b2415e9b8a9963c3255f0b4313d9ffe9bc2"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/electric.MAP",
+      "line": 2666,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "f7c18e463998f195cdd405005dae8244e1294d07555b3c4388e6143d6a5f9e1e"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/nothuman.MAP",
+      "line": 2666,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "d77b91039ab41197a485dc8acb4d84512aabeee2df70c58da54e2d032231bd76"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/queue.MAP",
+      "line": 2672,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "Original map EOF layout retained",
+      "sha256": "28a36e8322bbf666344088f6f708ef9c45230effe2b39e12f5c4e2a48395e052"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 222,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 17538,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 17578,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 19648,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 19680,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-deathframes.ini",
+      "line": 23125,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "d72d4f20a32227b0c986673b00512c44be5de08067d69b6f902d2b8d01a41374"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 222,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 17539,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 17579,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 19649,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 19681,
+      "reason": "trailing whitespace.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/fixtures/rules-nothuman.ini",
+      "line": 23126,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "H:\\开发\\研究资料\\提取\\原版\\ra2.mix_files\\local.mix_files\\rules.ini (same original rule line; changed lifecycle control lines themselves have no whitespace waiver)",
+      "sha256": "a6bdb799ef3de8e0378778964ff3eae162aeb8e2cc66932381a2858f2b39f77a"
+    },
+    {
+      "path": "experiments/ra2-recomp-20261020/evidence/combat-state-v4/native_probe_host.h",
+      "line": 79,
+      "reason": "new blank line at EOF.",
+      "inherited_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    }
+  ],
+  "only_exact_original_bytes_or_map_layout": true
+}

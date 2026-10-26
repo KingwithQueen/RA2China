@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "result": {
+    "tag": "f-command",
+    "frames": 1201,
+    "strict": true,
+    "comparison_sha256": "eb9bdb7ce9e1915f82ccdeaa8485671dd70ca6902a0df47761252eaa1ed4efa4",
+    "exe_sha256": "23906fca46f5c187f29ea9a8c6b9f0b15f72e8e591c630060309eb6fc1c5028e"
+  }
+}

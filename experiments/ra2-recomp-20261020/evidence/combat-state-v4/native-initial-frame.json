@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "result": {
+    "passed": true,
+    "lifecycle_cases": 2730,
+    "fragments": 1,
+    "per_fragment": 2730,
+    "callbacks": 2730,
+    "destructors": 0,
+    "growth_callbacks": 0,
+    "actual_original_fragments": true,
+    "engine_callbacks_mocked": true,
+    "queue_state_order_stack_flags_nonvolatile_verified": true
+  },
+  "exe_sha256": "d5bd07265389678a06e57317d85e43c4d3db96ef00489c29ab08883002189b99",
+  "inputs": [
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\lifecycle_probe_initial_frame.c",
+      "sha256": "46f964a0273657a319f8b9ff218c233949f45cdbb14178cef3368d62a4bbf4f4"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\native_probe_host.h",
+      "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.c",
+      "sha256": "7cf880c449bd433bbde9e79b91248cc7cc80767bafb5aebd2e5eb094400b314c"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\gameplay\\combat_lifecycle.h",
+      "sha256": "08256409a0e29695d7374abe622091e649a9407db606a65d168fb7468a28ab3d"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.c",
+      "sha256": "ca5f1e367f8c42611fbe335e0386c4162cd409166a0ee3a88cad0731c1fdb7f3"
+    },
+    {
+      "path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\ra2\\src\\runtime\\combat_lifecycle_bridge.h",
+      "sha256": "1a1c347b45873a2e8abf0e10075246c7be9f74fd109ac6cdd9090a9e8079696b"
+    }
+  ],
+  "distinct_new_cases": 2730,
+  "entry": "006FCA7E",
+  "reason": "Main n%6 state selection correlates state4 with n%2=0, leaving initial death-frame unset path to natural coverage. Add n=10+12k, state4, positive death frames and unset death-frame: these owner input tuples do not occur in the main Unit gate.",
+  "main_cases_counted_again": false,
+  "total_unique_cases": 232106,
+  "native_programs": 2,
+  "unique_fragments": 7,
+  "actual_original_fragment": true,
+  "engine_callbacks_mocked": true
+}

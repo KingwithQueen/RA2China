@@ -1,0 +1,286 @@
+{
+  "passed": true,
+  "complete_pre_post_traces": [
+    {
+      "tag": "nothuman",
+      "mode": "original",
+      "sha256": "cb612a7a3b851a25de1b6cffde3eee40b61daf685d7a94add489608577697e45"
+    },
+    {
+      "tag": "nothuman",
+      "mode": "generated-c",
+      "sha256": "cb612a7a3b851a25de1b6cffde3eee40b61daf685d7a94add489608577697e45"
+    },
+    {
+      "tag": "delayed-prism",
+      "mode": "original",
+      "sha256": "c1b0be846695cf5e18dd68ccf305a47e3ab99f44a76a768dd7707c387f99c49e"
+    },
+    {
+      "tag": "delayed-prism",
+      "mode": "generated-c",
+      "sha256": "736c64b2b39264e26817526f8669ce2f5da7aab346756613c5f3ea6cc6586877"
+    },
+    {
+      "tag": "delayed-art",
+      "mode": "original",
+      "sha256": "a8a147d626658ce05d29a6d87043b61cae6f2f7a124d71573d6a5ef9278b5d08"
+    },
+    {
+      "tag": "delayed-art",
+      "mode": "generated-c",
+      "sha256": "244a322e225cba1b52979b79c1f48a4a601b66f9a283a227c6d26c7a16b86030"
+    },
+    {
+      "tag": "queue",
+      "mode": "original",
+      "sha256": "b618edd37a5c61d6905963f37b0fcc632475f39bac89a4e878a082be3129a01f"
+    },
+    {
+      "tag": "queue",
+      "mode": "generated-c",
+      "sha256": "0c622f869d24bde93e86c140ce53865f343ed9509642657322fa464ab0d67c3f"
+    },
+    {
+      "tag": "truck",
+      "mode": "original",
+      "sha256": "428939ffcf0163f854baea30727d820f0f4d13c02abb29bfc9559ed9e8afe0d7"
+    },
+    {
+      "tag": "truck",
+      "mode": "generated-c",
+      "sha256": "428939ffcf0163f854baea30727d820f0f4d13c02abb29bfc9559ed9e8afe0d7"
+    },
+    {
+      "tag": "infantry",
+      "mode": "original",
+      "sha256": "3da3e834077a0fa98a0a5ba09c737311f7c284b79a573c2bc006de58c74eee4d"
+    },
+    {
+      "tag": "infantry",
+      "mode": "generated-c",
+      "sha256": "3da3e834077a0fa98a0a5ba09c737311f7c284b79a573c2bc006de58c74eee4d"
+    },
+    {
+      "tag": "special",
+      "mode": "original",
+      "sha256": "eef23f77ad3926e10b03f26a4ce96eb554b5e2cf4fbc5668fc3649719f99bd2e"
+    },
+    {
+      "tag": "special",
+      "mode": "generated-c",
+      "sha256": "eef23f77ad3926e10b03f26a4ce96eb554b5e2cf4fbc5668fc3649719f99bd2e"
+    },
+    {
+      "tag": "unattached",
+      "mode": "original",
+      "sha256": "72ad628d879f72aa5a09ac54083f3e8dfb4983af6efc24b15b6d97090fadf56d"
+    },
+    {
+      "tag": "unattached",
+      "mode": "generated-c",
+      "sha256": "72ad628d879f72aa5a09ac54083f3e8dfb4983af6efc24b15b6d97090fadf56d"
+    },
+    {
+      "tag": "volley",
+      "mode": "original",
+      "sha256": "2a22d08b3395debd4e49ac0048ed4483cd58170b739070fcac2f0ead433ab673"
+    },
+    {
+      "tag": "volley",
+      "mode": "generated-c",
+      "sha256": "2a22d08b3395debd4e49ac0048ed4483cd58170b739070fcac2f0ead433ab673"
+    }
+  ],
+  "inherited_combat_traces": [
+    {
+      "tag": "old-tank",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-tank\\original\\state.jsonl",
+      "parent_sha256": "455f7dd776515f85f0d19751ae2a85a8c13db074fb59c49f427ffe8d3f6208c5",
+      "current_sha256": "e5acf9aec7992dc12068621bb95d99680a825ccfba1f04468e8aea680695e34b"
+    },
+    {
+      "tag": "old-tank",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-tank\\generated-c\\state.jsonl",
+      "parent_sha256": "455f7dd776515f85f0d19751ae2a85a8c13db074fb59c49f427ffe8d3f6208c5",
+      "current_sha256": "e5acf9aec7992dc12068621bb95d99680a825ccfba1f04468e8aea680695e34b"
+    },
+    {
+      "tag": "old-infantry",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-infantry\\original\\state.jsonl",
+      "parent_sha256": "96664cb0f2221805c704c34665701d08d4e30d06cf6f0bc67c0e1508b2a28e2c",
+      "current_sha256": "29d24807f338478db08ae9ec779386b8ef7fd55209bf5dd614502843d69e1946"
+    },
+    {
+      "tag": "old-infantry",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-infantry\\generated-c\\state.jsonl",
+      "parent_sha256": "96664cb0f2221805c704c34665701d08d4e30d06cf6f0bc67c0e1508b2a28e2c",
+      "current_sha256": "29d24807f338478db08ae9ec779386b8ef7fd55209bf5dd614502843d69e1946"
+    },
+    {
+      "tag": "old-repair",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-repair\\original\\state.jsonl",
+      "parent_sha256": "b91d6204f8afbaed7714856e31fb76e20c39ed367bd6e7ad1bdb1d73220f19ac",
+      "current_sha256": "f03b87aecdd8c077f7ef3a789dc4d62141deeea2d10f4a1ad4c8555580967586"
+    },
+    {
+      "tag": "old-repair",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-repair\\generated-c\\state.jsonl",
+      "parent_sha256": "797887373eb8a88f7cbdde6cc32f101ce2ff3f1f238fead2dcd1e3e6c2afc709",
+      "current_sha256": "c28ba94393f225dd13bca493f579438076789d520a043e2873afac9da16fdbef"
+    },
+    {
+      "tag": "old-immune",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-immune\\original\\state.jsonl",
+      "parent_sha256": "e676951c8ef287696f48f28eed6b4c3b9c5bdcc9bed4c0a3155472a25ba8e225",
+      "current_sha256": "c0ceb94d5102e9b840fddad20bf58457d646c79bbafcebb35567046816331190"
+    },
+    {
+      "tag": "old-immune",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-immune\\generated-c\\state.jsonl",
+      "parent_sha256": "e676951c8ef287696f48f28eed6b4c3b9c5bdcc9bed4c0a3155472a25ba8e225",
+      "current_sha256": "c0ceb94d5102e9b840fddad20bf58457d646c79bbafcebb35567046816331190"
+    },
+    {
+      "tag": "old-cap",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-cap\\original\\state.jsonl",
+      "parent_sha256": "1d2132b3afe49b8c8f188b20b109afcc1171e9cef5f5777d8eecea8037b46f75",
+      "current_sha256": "7dfcfdf80f22139997293b0b3cde60ebe35154a4a37b35a4722db7d97fc93572"
+    },
+    {
+      "tag": "old-cap",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\runs\\f-cap\\generated-c\\state.jsonl",
+      "parent_sha256": "e277398022ac99e89bf6f2595b993e5c2abdf2cda8f99f43ae3d7e4d4905c13b",
+      "current_sha256": "c54b05a02b863a7ff2776330aa17a2b464cc84fdf91c5c6c38bf7a53e667abbe"
+    },
+    {
+      "tag": "old-rifle",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-rifle\\original\\state.jsonl",
+      "parent_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf",
+      "current_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005"
+    },
+    {
+      "tag": "old-rifle",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-rifle\\generated-c\\state.jsonl",
+      "parent_sha256": "27d511860193d462ca2dcef5a84220e4b377057b48591d5e99818ba1f7f5fcbf",
+      "current_sha256": "46a0a0bc86b0178f01d44aaf122d1c3d16b604fd2be28fd99fddc7aceebae005"
+    },
+    {
+      "tag": "old-splash",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-splash\\original\\state.jsonl",
+      "parent_sha256": "481f980edd6602a3aab41d4c8cd83840640aecf6a8ee1880cde649e2b250a301",
+      "current_sha256": "5800d90d665f7d7d65de94fb6ce445afbdc5405e799e4c58f1bf1f1f3c6d1255"
+    },
+    {
+      "tag": "old-splash",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-splash\\generated-c\\state.jsonl",
+      "parent_sha256": "e9d968b85b01988ff364c3e6485649445c58ec91db49f3d6d46719787b80edd2",
+      "current_sha256": "5800d90d665f7d7d65de94fb6ce445afbdc5405e799e4c58f1bf1f1f3c6d1255"
+    },
+    {
+      "tag": "old-flat",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-flat\\original\\state.jsonl",
+      "parent_sha256": "b086fe6f08b444c9d814ce6df5e3ee20358c96a3f6cd93a064cb69448c9bbb88",
+      "current_sha256": "313d3e86f109b54477a7e5cb2865cf6a97e25b2303f71190b2ec00147d896b2d"
+    },
+    {
+      "tag": "old-flat",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v2\\runs\\f-flat\\generated-c\\state.jsonl",
+      "parent_sha256": "e0717f299a4b46aee8b3668fa67131fb02b48ed3fb1dad547116a321c6b8e024",
+      "current_sha256": "b0fb1311121b657216eeb614252b36f136824904b872525b09a5bd0c037214c3"
+    }
+  ],
+  "movement_parent_parity": [
+    {
+      "tag": "default",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\default\\original\\state.jsonl",
+      "sha256": "a06761998d12d5ea0357286a26ce3787fb6992ca9462e2202886a0f2910ee798"
+    },
+    {
+      "tag": "default",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\default\\generated-c\\state.jsonl",
+      "sha256": "a06761998d12d5ea0357286a26ce3787fb6992ca9462e2202886a0f2910ee798"
+    },
+    {
+      "tag": "reg-north",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-north\\original\\state.jsonl",
+      "sha256": "ddb55d1d89a0e0586e7eeaee216558c6d3b842d7fc726a8ecdbe5fbbd49f3ddb"
+    },
+    {
+      "tag": "reg-north",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-north\\generated-c\\state.jsonl",
+      "sha256": "ddb55d1d89a0e0586e7eeaee216558c6d3b842d7fc726a8ecdbe5fbbd49f3ddb"
+    },
+    {
+      "tag": "reg-south",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-south\\original\\state.jsonl",
+      "sha256": "97af6db6ce1b84534850506cecec469b857fb82d95bb22e374386a23f16d5e3a"
+    },
+    {
+      "tag": "reg-south",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-south\\generated-c\\state.jsonl",
+      "sha256": "97af6db6ce1b84534850506cecec469b857fb82d95bb22e374386a23f16d5e3a"
+    },
+    {
+      "tag": "reg-train",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-train\\original\\state.jsonl",
+      "sha256": "301eaf669948eb821da5be406429e27a22d6308609dccdcfedfbc6e15f015d79"
+    },
+    {
+      "tag": "reg-train",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-train\\generated-c\\state.jsonl",
+      "sha256": "301eaf669948eb821da5be406429e27a22d6308609dccdcfedfbc6e15f015d79"
+    },
+    {
+      "tag": "reg-crush",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-crush\\original\\state.jsonl",
+      "sha256": "e4c4d40be106a45f14ec118f2b7a4613e92baa6f4503a6af370064271ac2816e"
+    },
+    {
+      "tag": "reg-crush",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-crush\\generated-c\\state.jsonl",
+      "sha256": "e4c4d40be106a45f14ec118f2b7a4613e92baa6f4503a6af370064271ac2816e"
+    },
+    {
+      "tag": "reg-stop",
+      "mode": "original",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-stop\\original\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    },
+    {
+      "tag": "reg-stop",
+      "mode": "generated-c",
+      "parent_path": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v3\\runs\\reg-stop\\generated-c\\state.jsonl",
+      "sha256": "2cf523a2f2416022e60adfeb5dd430d53d2a4cc65792f7f636500b11874e4fb2"
+    }
+  ],
+  "raw_comparator_relaxed": false,
+  "new_scenes": 4,
+  "shared_death_parent_scenes": 5
+}

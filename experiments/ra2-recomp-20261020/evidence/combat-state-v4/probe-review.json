@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "initial_source": "D:\\Program\\\u7ea2\u8272\u8b66\u62122\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v4\\diagnostics\\lifecycle_probe_initial.c",
+  "initial_sha256": "7ecff5b10de00c7b919755f690c7c8bb90c86f9e5646856f9cb8296bbb4c139d",
+  "issue": "Observer logged the undefined ECX register as a semantic cdecl typeid receiver. It has no receiver; normalize this single diagnostic field to zero. Original argument, return, state and callback sequence stay compared.",
+  "production_change": false,
+  "tool_rebuild_issue": "One rewrite doubled CRLF; normalized probe source line endings after /WX rejected C4335. Failed build log retained."
+}

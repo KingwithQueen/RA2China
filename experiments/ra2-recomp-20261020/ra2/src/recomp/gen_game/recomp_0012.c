@@ -1,3 +1,4 @@
+#include "combat_lifecycle_bridge.h"
 #include "ground_completion_bridge.h"
 #include "unit_movement.h"
 #include "state_trace.h"
@@ -72918,6 +72919,12 @@ void AircraftClass__virtual_60(void) {
     RECOMP_ENTER(0x004CCE40u);
 
 L_004CCE40:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_foot_uninit_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        return;
+    }
     PUSH32(esp, esi); /* 0x004CCE40: push esi */
     esi = ecx; /* 0x004CCE41: mov esi, ecx */
     ecx = MEM32(esi + 0x230); /* 0x004CCE43: mov ecx, dword ptr [esi + 0x230] */
