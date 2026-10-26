@@ -1,3 +1,4 @@
+#include "combat_aftermath_bridge.h"
 #include "combat_lifecycle_bridge.h"
 extern unsigned ra2_ground_allied_relation_bridge(void);
 extern unsigned ra2_ground_moving_tail_bridge(void);
@@ -30432,6 +30433,12 @@ L_006FCD3D:
     RECOMP_CALL(sub_006FD3A0); /* 0x006FCD3F: call 0x6fd3a0 */
     RECOMP_FLAGS_IN();
 L_006FCD44:
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_carrier_release_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_006FCEF0;
+    }
     edx = MEM32(esi); /* 0x006FCD44: mov edx, dword ptr [esi] */
     PUSH32(esp, 0); /* 0x006FCD46: push 0 */
     ecx = esi; /* 0x006FCD48: mov ecx, esi */
