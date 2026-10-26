@@ -1,3 +1,4 @@
+#include "combat_building_shake_bridge.h"
 #include "combat_building_resources_bridge.h"
 #include "combat_building_crew_bridge.h"
 /* Functions named by name_lift.py */
@@ -77233,6 +77234,11 @@ L_0043E856:
     _cf = 0;
     _flag_k = FK_TEST;
 L_0043E858:
+    /* 原版归属造价、ShakeScreen整除和直接调度；后续死亡处理保持原入口。 */
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_shake_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043E885;
     ecx = MEM32(esi + 0x418); /* 0x0043E858: mov ecx, dword ptr [esi + 0x418] */
     eax = MEM32(esi + 0x1B4); /* 0x0043E85E: mov eax, dword ptr [esi + 0x1b4] */
     PUSH32(esp, eax); /* 0x0043E864: push eax */
