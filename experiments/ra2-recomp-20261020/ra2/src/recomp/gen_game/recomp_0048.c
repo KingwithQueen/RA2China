@@ -1,3 +1,4 @@
+#include "combat_warhead_values_bridge.h"
 #include "../../runtime/walk_movement_bridge.h"
 #include "movement_bridge.h"
 #include "state_trace.h"
@@ -15216,6 +15217,12 @@ L_00720B2C:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esp = esp + 4; /* 0x00720B35: add esp, 4 */
     _flag_k = FK_ADD;
+    {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        ra2_combat_warhead_percent_bridge();
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_00720B55;
+    }
     fp_push((double)(int32_t)MEM32(esp + 0x14)); /* 0x00720B38: fild dword ptr [esp + 0x14] */
     _st[0] *= *(double*)ADDR(0x79C518); /* 0x00720B3C: fmul qword ptr [0x79c518] */
     goto L_00720B4C; /* 0x00720B42: jmp 0x720b4c */
@@ -15230,6 +15237,7 @@ L_00720B4C:
     PUSH32(esp, 0x007CE9C0u); /* 0x00720B4C: push 0x7ce9c0 */
     PUSH32(esp, 0); /* 0x00720B51: push 0 */
     { double _v = fp_pop(); *(double*)ADDR(ebx) = _v; } /* 0x00720B53: fstp qword ptr [ebx] */
+L_00720B55:
     RECOMP_CALL(sub_00782EC2); /* 0x00720B55: call 0x782ec2 */
     RECOMP_FLAGS_IN();
     edi = eax; /* 0x00720B5A: mov edi, eax */
