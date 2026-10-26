@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "changed_compile_inputs": [
+    "ra2/src/recomp/gen_game/recomp_0029.c"
+  ],
+  "added_compile_inputs": [
+    "ra2/src/runtime/combat_health_bridge.c",
+    "ra2/src/gameplay/combat_health.h",
+    "ra2/src/gameplay/combat_health.c",
+    "ra2/src/runtime/combat_health_bridge.h"
+  ],
+  "c_sources": 184,
+  "headers": 133,
+  "compile_inputs": 317,
+  "guard_sites": 37,
+  "generated_definitions": 23117,
+  "original_death_tail_sha256": "a0c3657cbcaf65dd3abbc933fc987fad61389c60170945a358aa1db67351d16f",
+  "tail_and_other_generated_code_byte_identical": true,
+  "entry": "005D3D20",
+  "resume": "005D3E68",
+  "internal_function_entries_removed": false,
+  "internal_aliases_in_replaced_function": 0,
+  "protected_files": 28,
+  "parent_archive_files": 426,
+  "recorder_comparator_rules_originals_preserved": true,
+  "shared_base_service_despite_lifted_wave_rtti_name": true,
+  "armor_warhead_distance_calculation_delegated_to_original": "0047E1C0"
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "failed_probe": "health-probe-03.log",
+  "initial_probe_source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\explorations\\native-capture-before.c",
+  "initial_probe_sha256": "2025882cf00bd19c2185d6e10ea7cc2bf8098d86d6a64402856e9c10aa936022",
+  "reason": "Probe capture pushed EFLAGS on the returned guest stack and overwrote the already-popped final argument. Save flags on the host stack instead; no gameplay or comparison scope change.",
+  "production_attached": false
+}

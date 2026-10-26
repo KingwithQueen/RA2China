@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "tag": "f-tank",
+      "frames": 1501,
+      "strict": true,
+      "comparison_sha256": "c4a9024e374e6e22e9348eb60f693c2445a6abd5ed3daf389169dac45a7336e0",
+      "exe_sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+    },
+    {
+      "tag": "f-infantry",
+      "frames": 1501,
+      "strict": true,
+      "comparison_sha256": "41593dc90d855f62171c120001256be0f2eb3257da89797b1c82de2948743fc5",
+      "exe_sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+    },
+    {
+      "tag": "f-repair",
+      "frames": 1501,
+      "strict": false,
+      "comparison_sha256": "8757555a5ff5cfc1cdb4243f446202264d4f4c4f4d3f0777c318c62b4b500cf4",
+      "exe_sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+    },
+    {
+      "tag": "f-immune",
+      "frames": 1501,
+      "strict": true,
+      "comparison_sha256": "20a86001469c6d4e27b1f5d4d674a954494169470b594ff9e7bc19ec13307839",
+      "exe_sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+    },
+    {
+      "tag": "f-cap",
+      "frames": 1501,
+      "strict": false,
+      "comparison_sha256": "07b00ccadc3fd623b8b7b9cc45d2bf85dc963a2a478d1783496d179f485adcba",
+      "exe_sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+    }
+  ],
+  "strict_all": false
+}

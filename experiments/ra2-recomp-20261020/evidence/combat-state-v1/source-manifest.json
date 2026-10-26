@@ -1,0 +1,1574 @@
+[
+  {
+    "path": "analyze_combat_baseline_v69.py",
+    "sha256": "ec81b81c2ec31704da94926e4bc5321612ffc7878a99bc685b6f533310422fd9"
+  },
+  {
+    "path": "analyze_combat_v69.py",
+    "sha256": "88c21f0fa89ca005a3701aafcd9113d2afb70036493431c8ab5a2ca69b325dad"
+  },
+  {
+    "path": "audit_combat_v69.py",
+    "sha256": "d7e5f883a3231a30ba05bfe07cbef2e00982c12269aca1de72c2410afcce236c"
+  },
+  {
+    "path": "build-combat-command-v69.ps1",
+    "sha256": "3117c71e86584508df00567d82ae2fac54cc843e8991287979add1eaf37425d5"
+  },
+  {
+    "path": "build-combat-observer-v69.ps1",
+    "sha256": "4429c9b74c6e83774ca786aad97b362a690c6b9599984c93506d08b9fba88c88"
+  },
+  {
+    "path": "build-faithful.ps1",
+    "sha256": "f599e33125cd77c11ceba3e2f3ce3d9144e7a7422626763f3b7979f6818d1800"
+  },
+  {
+    "path": "build-health-probe-v69.ps1",
+    "sha256": "0b87d5b457f01b12e5aea7b307a48d5e5a4833411e177429f691ceac5847f761"
+  },
+  {
+    "path": "cleanup_combat_v69.py",
+    "sha256": "8d89c13a5e84634cccf99f028f4b72588a67d37f5257b14e7f3bce16aadb4e38"
+  },
+  {
+    "path": "combat_batch_v69.py",
+    "sha256": "e85b6b5bdcc6012e96837c2c4361bf0f337ee72aa558fbf167680702d4ee7e84"
+  },
+  {
+    "path": "combat_regressions_v69.py",
+    "sha256": "413789eb6030b978d8726863c628a67d9b65fc85bad7572c760ad6d1a81aad93"
+  },
+  {
+    "path": "combat_scenes_v69.py",
+    "sha256": "3642badb1dd8786c7ac6b36ce3387945228dba68c55fb2613045c013d60461c0"
+  },
+  {
+    "path": "combat_supplement_v69.py",
+    "sha256": "77aa2f74cff00dfc0c44f0eacc4e925d00d4add22ec4624df6ae53f0d5cd5a11"
+  },
+  {
+    "path": "commit_combat_v69.py",
+    "sha256": "bd977e5570089699239270dbb04043fbef97a6bc900302bf4c367e817b2c72ca"
+  },
+  {
+    "path": "evidence/combat-state-v1/alias-evidence-inheritance.json",
+    "sha256": "37f56ffe7380e6ecba439991b141dfb3e8da1212aeea7e834912dcfe510e91c7"
+  },
+  {
+    "path": "evidence/combat-state-v1/attachment.json",
+    "sha256": "0b6e747347b05046ba2dfdd855e07c601c3e226f5d5611ff58bbb182fd15a610"
+  },
+  {
+    "path": "evidence/combat-state-v1/b-command-scenes.json",
+    "sha256": "01f91f7c693e6ec191b6a36d4fdd12eacd1e798275169e59323fe9d14194183b"
+  },
+  {
+    "path": "evidence/combat-state-v1/baseline-command.json",
+    "sha256": "5c26020dbea5f108e170e95a1eea843be20518e3eea093e83ef4a2bf317517fe"
+  },
+  {
+    "path": "evidence/combat-state-v1/baseline-contract.json",
+    "sha256": "4cccb21672a31a5a963e2a38a813576b90be5113b86527918fc941985ed2a438"
+  },
+  {
+    "path": "evidence/combat-state-v1/baseline-effects.json",
+    "sha256": "60be171f9fdca06ae659d68fa3fe9eb829a8a92faf5fd3b70b13abf8ebdd8afb"
+  },
+  {
+    "path": "evidence/combat-state-v1/baseline-observer.json",
+    "sha256": "4bd77ec286a97dba5192b4e6be281be51d35adbc941daabba56c124de14ebcac"
+  },
+  {
+    "path": "evidence/combat-state-v1/baseline-scenes.json",
+    "sha256": "b9b9976e1c6b7a39653ddf9f79d1bdf7adb3879e56fdf8a6ac115681d823ad71"
+  },
+  {
+    "path": "evidence/combat-state-v1/cleanup-plan.json",
+    "sha256": "219cb3ce954c38ceff299b52469a17d443a00fc9b5f56e844f4f3e8c812da5ef"
+  },
+  {
+    "path": "evidence/combat-state-v1/cleanup.json",
+    "sha256": "fb1a11bcc56704be472a608a051213ee6e64cbeaf59d47ed40b9131e6123029b"
+  },
+  {
+    "path": "evidence/combat-state-v1/combat-command.exe",
+    "sha256": "3d239294aae67b4bb7a8111a1ffef84d18fec3c018b9484b0e8ab7ee98d7b8d8"
+  },
+  {
+    "path": "evidence/combat-state-v1/combat-observer.exe",
+    "sha256": "f4c1337f89bc192f50b8e772801310eece239f6f159ca353430f7bbeda6dc7cf"
+  },
+  {
+    "path": "evidence/combat-state-v1/combat_command.c",
+    "sha256": "0e981a530b37e02f6b466474a915f60d5faf04a47cb8f1f3f6af2e5c74d67957"
+  },
+  {
+    "path": "evidence/combat-state-v1/combat_observer.c",
+    "sha256": "f65f43b403c32cbb81d0e7a9d4fbe331bbe5ef561c68b5c8d66c38ed7d921622"
+  },
+  {
+    "path": "evidence/combat-state-v1/command-build-arguments.json",
+    "sha256": "72d62391d87dbd4842aa3109d3550678cf11d9c90ece0d4bd5ff28f188c63ac4"
+  },
+  {
+    "path": "evidence/combat-state-v1/community-current-use.json",
+    "sha256": "54bc83223552bc876126f2bb582e73b4bf168928ea7c7d35f8d0c72436f29a77"
+  },
+  {
+    "path": "evidence/combat-state-v1/community-reference-review.json",
+    "sha256": "30428c305b24856510dd910f73c3511666b6e6942961b4b4ee569ef37c67d765"
+  },
+  {
+    "path": "evidence/combat-state-v1/evidence-rollup.json",
+    "sha256": "61877efab9ac839ef5daff7737c9b003905a4fad5638dc9d286481c77308631f"
+  },
+  {
+    "path": "evidence/combat-state-v1/extra-baseline-contract.json",
+    "sha256": "86423041eb8c5254e532b5fb2fea29d4591e8d11ebebff188d33dd4922b8d69f"
+  },
+  {
+    "path": "evidence/combat-state-v1/extra-scene.json",
+    "sha256": "0d9c5ee31d7aedb283a93bceab8d794d9de5d3b05a23eb1b0b7023947e468428"
+  },
+  {
+    "path": "evidence/combat-state-v1/f-command-scenes.json",
+    "sha256": "4d3f8ab91128521515532fdb3e31a273698f44ffa3b97fe9dff35db2f244d7ba"
+  },
+  {
+    "path": "evidence/combat-state-v1/final-scenes.json",
+    "sha256": "ce9b7d14760973b1024d2be250b34253559587101e75a31750c12015fc3192ef"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/cap.MAP",
+    "sha256": "c1b28f85478de4eba99fc3d983a668fce0f4e6e76ba8a4dcdb16946558dc22e1"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/immune.MAP",
+    "sha256": "5b51fac1cc463e2e256d8372556fd36024c749562fd537c27a12a257b8d4c22b"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/infantry.MAP",
+    "sha256": "2db734340e887b6c699b5663636dd020e5e79dc0f68b2a59be48922cfc91eef9"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/repair.MAP",
+    "sha256": "f0f6c1180e9473a92a19668bd9c79d8b048093cfe737412e58df03e607064313"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/rules-immune.ini",
+    "sha256": "ade9c889276b9ac1c4c1770900fd0ef02f83ff8112548fd413da606dafa66b48"
+  },
+  {
+    "path": "evidence/combat-state-v1/fixtures/tank.MAP",
+    "sha256": "5b51fac1cc463e2e256d8372556fd36024c749562fd537c27a12a257b8d4c22b"
+  },
+  {
+    "path": "evidence/combat-state-v1/health_probe.c",
+    "sha256": "999eee63f38bf796032538725a05e4997994d2f3247f04ed429e23d36659610e"
+  },
+  {
+    "path": "evidence/combat-state-v1/health_probe.exe",
+    "sha256": "b3b898aa38b58ca9d47b35743b2b28e5a6a5ca07567ab804c898ab5203099113"
+  },
+  {
+    "path": "evidence/combat-state-v1/implementation-review.json",
+    "sha256": "61c97069ba1dc3d4be5bf63e65c8243d830da367a6f5cd0cb749746ed603c575"
+  },
+  {
+    "path": "evidence/combat-state-v1/native-capture-review.json",
+    "sha256": "e7fc7f3cefacb2d6ae10e0add119033544b4de80a09fd6bafb774fae3c1216e0"
+  },
+  {
+    "path": "evidence/combat-state-v1/native-validation.json",
+    "sha256": "6f18df2c470bfd60d628785953dd9dfa828fff9e592b279e3319d4ccb12f2ebe"
+  },
+  {
+    "path": "evidence/combat-state-v1/native_probe_host.h",
+    "sha256": "b1d17baae2d0eadd1223deb647a79c19e693228f938f0b8498544b3b4c592211"
+  },
+  {
+    "path": "evidence/combat-state-v1/natural-effects.json",
+    "sha256": "85dd9e727cec0e70b540584a49055887db99ada10ad58feafe8415961a08067a"
+  },
+  {
+    "path": "evidence/combat-state-v1/observer-build-arguments.json",
+    "sha256": "38e42c60bb9307c485a23a27ecc424126d6173cf9300d5ea8483f37c9c43ccf9"
+  },
+  {
+    "path": "evidence/combat-state-v1/parent-regression-parity.json",
+    "sha256": "6d394a081d4630d5599c12f371160e9c40bc171ee18902c4e3e03dd22cdadd2e"
+  },
+  {
+    "path": "evidence/combat-state-v1/protected-inputs.json",
+    "sha256": "f7811ec036c9155d9f309980211c97ca4129f297564b311152d20dd09d81c823"
+  },
+  {
+    "path": "evidence/combat-state-v1/record-parity.json",
+    "sha256": "cb68c513a1bc958bb2fba9a604ea91b66a115333adacfafc3560b19b6495745d"
+  },
+  {
+    "path": "evidence/combat-state-v1/regressions.json",
+    "sha256": "e4652c44df4db52b0c9695b45c7c9e461a3f33a0706f69e420ac44440896cbf7"
+  },
+  {
+    "path": "evidence/combat-state-v1/remaining-work.json",
+    "sha256": "026342580a95f9ae5ca6e6d293573e1adf2ee4ca027d100405d6e5380750f9cc"
+  },
+  {
+    "path": "evidence/combat-state-v1/repair-baseline-boundary.json",
+    "sha256": "2941f8029b463119f0542f7ca22c1eeab5a14117bbb7d3f5c65dded9f046fdab"
+  },
+  {
+    "path": "evidence/combat-state-v1/repair-baseline-effects.json",
+    "sha256": "0539c023ee7e01b08e166b408e6b85a00e8bd1b0384134680f6e9735a2fd0845"
+  },
+  {
+    "path": "evidence/combat-state-v1/scene-pending.json",
+    "sha256": "18bd1c40a821e859aaaf3428bf27113d85da351e5ced176175ec85e4cda25f4b"
+  },
+  {
+    "path": "evidence/combat-state-v1/scene-recipes.json",
+    "sha256": "47f7efc4b406000be0153355d4ab5d0767fee043052a3268234ba7b1f6395223"
+  },
+  {
+    "path": "evidence/combat-state-v1/source-preservation.json",
+    "sha256": "280ee75563fd41c842a6f10f422d08a9ebb02156a0bba86c8bf513ffc307e4e0"
+  },
+  {
+    "path": "evidence/combat-state-v1/vcs-context.json",
+    "sha256": "5c6e9a6fb6093ff2f9f314c7da3093bb494557b6947464a41024b390ead35799"
+  },
+  {
+    "path": "finalize_combat_v69.py",
+    "sha256": "d07f6237760ac78dd91de04dc06bf29c1ca0c4a211aeb8c6ea41b1ed1f6dc481"
+  },
+  {
+    "path": "integrate_combat_v69.py",
+    "sha256": "a76b85cfae80374e5954c3597c6378b373e10fa4bb3846b9c4dc9459f3f7d595"
+  },
+  {
+    "path": "make_combat_observer_v69.py",
+    "sha256": "1835403787381408b7d851145aac43471fd0e93ce7785647259cabe2487049ac"
+  },
+  {
+    "path": "pcrecomp/runtime/native32/native32.c",
+    "sha256": "3aa341a934ee3f77a3e2456f4efeacb70c367d33aa1085694d24c28882be19db"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/crash_report.h",
+    "sha256": "2d4ec9ce50291605212c36d9e06e83a2cbe667a591eca8df9d04aa38abfb802e"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/image_loader.c",
+    "sha256": "eeb51ea6b51def7df02dd69b55f28201071d36bd0cfde6dda113471b2374498c"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/image_loader.h",
+    "sha256": "c041ddc4ed0e2be120b41d981afab93d7188d40eb220035c72187a63cb43475b"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/recomp_trace.c",
+    "sha256": "2f6305b061fa7706ff282c357b27d0af2d14b035ced273cb91500a23db50bf89"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/recomp_trace.h",
+    "sha256": "59ab96b00d79f572cbadb7ef41844a7651fc3d77ade05bed510201a4695916a2"
+  },
+  {
+    "path": "pcrecomp/runtime/recomp32/recomp_types.h",
+    "sha256": "cd2f536e3fd1ccaa6c566e54157555a1b9f7990fbb2b7887d1ffeba431a0e8b9"
+  },
+  {
+    "path": "prepare_combat_scenes_v69.py",
+    "sha256": "c655135393ef687c8b80aae57b17f073c9df711589741d5cab148fc5d90134a1"
+  },
+  {
+    "path": "prepare_combat_v69.py",
+    "sha256": "c52c036ce14022152f3ffdd689eef13c5b60f82bac40d5ad1db2038ba5e1f0a5"
+  },
+  {
+    "path": "ra2/CMakeLists.txt",
+    "sha256": "0d465760ff9edfc604b4db71c7ee383597e03416e0ec5c1ab8fcd8cf347732ce"
+  },
+  {
+    "path": "ra2/build-original-c/ra2.exe",
+    "sha256": "9eb6b85c7e70dcb28b2a6b3e4972f9ac22efbb76e867fb5bbae43f6538adaf89"
+  },
+  {
+    "path": "ra2/build-original-c/source-content-receipt.json",
+    "sha256": "c3eb160821fe715fa7ff8fc7f79e4fd17ad7d716bfc1001e8cdcacbd52a21e54"
+  },
+  {
+    "path": "ra2/src/compat/x87_arithmetic.c",
+    "sha256": "ab5701f6276d9e15a05c5f4c5f78ded9f737e721cab371a5087f5d75fc344523"
+  },
+  {
+    "path": "ra2/src/compat/x87_arithmetic.h",
+    "sha256": "4fba44d1b077182a0c436e2a1166e3ddc7871c2c3a404a334f493670a1bd9ee5"
+  },
+  {
+    "path": "ra2/src/gameplay/combat_health.c",
+    "sha256": "7bac46d089261e406e250af842bc842c1ca50f5ccdac1d7c3e2514ed4735d018"
+  },
+  {
+    "path": "ra2/src/gameplay/combat_health.h",
+    "sha256": "c89c0e6299e4903ac666dd677c13be5f23180944206574f3fcf2aead20accd70"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_advance.c",
+    "sha256": "34408cb61ed182991a76c2bf5dd3f7c12c386f03c6e086f8b0c41f2e845aaa30"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_advance.h",
+    "sha256": "532a22d7a44b996d309ea1cb2c9083b9c612b7e8b2fb7d123426037fbffd5a84"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_allied.c",
+    "sha256": "d195ec3788049bea0a5861916b216e5e47d54cd01cd4d1cd3c8a84e47ca2aab7"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_allied.h",
+    "sha256": "c9ef44f37bbdde8788211b95c09c9074c4555fe2ef258cfa7be317881952c01e"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_allied_relation.h",
+    "sha256": "24530f44594b9b46728de0647f8621711cf04d65bc58a814b2dc377ca937320d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_arrival.c",
+    "sha256": "db8ddbef1e6c1b298b753375b35004fafa77cc3910cb3a686e8f63081e1d643a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_arrival.h",
+    "sha256": "9c9469d911f6435c717f88265470af0913ac61c0ab590f828fdcf7f639196bc8"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_barrier.c",
+    "sha256": "2f6a65bdccd80f46835931b36aa48922137c539604a4036151b289dd05e33d2c"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_barrier.h",
+    "sha256": "eb4f381a76da2cdfafdc0d97a3ddd8df9cf9990f2d829f7d14e8449b12fc7712"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_bridge_plane.c",
+    "sha256": "6b9b97052002b0cfb7ec3372f5d53eac1ead0a97d20a7410fd71500b57ab74e7"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_bridge_plane.h",
+    "sha256": "0c15ffbb569a944ac51a3cf69521c6980f23aca4dd3dccb84944403642b74bef"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_building_flags.h",
+    "sha256": "542543a304f273c04fece50ce6f2761e1e5a5d5994088e33f06f69c39a7756cb"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_cell_placement.c",
+    "sha256": "98ce8a7c45aa3a42f48dd2d5f1105df4ec4379ae278227e79d43432045add9ff"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_cell_placement.h",
+    "sha256": "ee18dd870b05d1981e817a626cb432fcbb279ff40dea8476ee6d6390ac080e44"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_cell_services.c",
+    "sha256": "9300347a301721c4bcfab8f71bca3c39c86e5983ebe8b7e5d4a090da9f4e458d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_cell_services.h",
+    "sha256": "583b5a38fde58deb9fed94f69402ac09df51ed0d6e1fa9b3a1df8514832d5940"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_collision.c",
+    "sha256": "2d35a6e2e5f89dea16527f7a002461b987f0d60b26261055a0d6e328aef135e6"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_collision.h",
+    "sha256": "7cdae1249df6a0c4b784788019a5510b4355c405a94d8de096217c51ad3c9147"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_completion.c",
+    "sha256": "4edfb9d480fc802804083c8726be2b2b606d69cf183b889ba21e49d4b2a1a200"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_completion.h",
+    "sha256": "b44b48fb5b84325eb40e89cbf6fcabb51bc54fd23cfa5b6fac929e38d5357926"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_connection_numeric.c",
+    "sha256": "88cc49c41a2b4e2ac48456f0ad1e02b3f1e7679a1c0dca3439cdb474e98026b3"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_connection_numeric.h",
+    "sha256": "a840e280e9cd244dbc8a51374bec4777e63fa63f18ae28388689d868e5934680"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_connection_trig.h",
+    "sha256": "f3cd1b3f3c1b0af13ed5f1da5e70475076b5133e49f1818e9bf31d0322186b3c"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_continuation.c",
+    "sha256": "ae899e58c488c778ba0f893298f8d544c734821b67645b9ad3dd60ec7a8717ea"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_continuation.h",
+    "sha256": "11705e97b21655700e7b0cf1b31fa0035a9f685ac988ffd2abe9596c07ea874f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_drive.c",
+    "sha256": "21da08d355c3d2e7befded3aeb83d903f060b993502a8e992c18f7e5463aa76b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_drive.h",
+    "sha256": "acf1dfb34592db8ca7842bd0873592f10b0ab9cdd9167643e6e0566e2d96f26b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_enemy_contact.h",
+    "sha256": "9d5b8c224f7da804001199264e7c584f8e8d78f67b03126510847c56cec8b721"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_enemy_kind.h",
+    "sha256": "c5bc813d02a963d0b4d4f87decb746f0e1702e3c21389d7fc9fa8cddb6f0d34b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_entry.c",
+    "sha256": "64d57f2c8469085dae7bd70d481ae12990b837c8d5efb3b5b2ebb6c50874e79b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_entry.h",
+    "sha256": "61d6976877f9a39ec21be97cab465eb3403ff82a5b08836618945997d026622a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_exit_policy.c",
+    "sha256": "23773be6a17eff5bae8d75dc15b56995b971b55932abf596f0a4bac3322ac563"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_exit_policy.h",
+    "sha256": "7d7d4b6386db8f5881cf0cf29f1fc3c55443ddb98a558a13069e56e8560dd4d2"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_failure.c",
+    "sha256": "f2631b39471db410c4f394af5a52dbb0ca8e452a68193053a0b812724282d06e"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_failure.h",
+    "sha256": "32d171ea0773be406dff4a5e8de6d5f648df6111ed110a6d7b97da491e9ea19b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_failure_transition.c",
+    "sha256": "dff0cde82136e13a0506c7a28398eeb814c54b947a67761cab57c17a6e6a01ec"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_failure_transition.h",
+    "sha256": "cdfc66bc50b04b1916d8b67792c190dbfc0f216977d29a5ad6862dc0cd8036ce"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_followup.c",
+    "sha256": "18a354aed48dc2084e1454f4444e76d6140cf2aee0373f8d50746ebc3979d60f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_followup.h",
+    "sha256": "aad752240c843fc22826f515f3713eb9e256787e8cc66046aaa8581affced899"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_handoff.c",
+    "sha256": "7087546be99bf3dc633bba846a16e9a9d22dfeb1287dfacc363627d9be53c931"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_handoff.h",
+    "sha256": "49e24ad0c7aafb739456932e90acabfe1d2cc025d91d69e02761a39bb9805a95"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_internal_next.c",
+    "sha256": "a18baba8cae4b8d22733e376164ea4ba258bd7bfa38768c853716fd5c4ffab43"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_internal_next.h",
+    "sha256": "a79ac13d188dd8bd912a86dcffce7727064abfafe01424af527de08f016ee9af"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_interpolation.c",
+    "sha256": "e0cac378b08ba8e2b678d41695d3d1dda64d996cce5d97ec99331f142aa17d49"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_interpolation.h",
+    "sha256": "9e3d5266039886c85e98076a406a68ee564e182eb5afab6eb158a8dd0ab63e5a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_landing.c",
+    "sha256": "001f3f195607c561b4a755c4294ff9223e7f9b5effbffbca807a633291f55353"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_landing.h",
+    "sha256": "0c3c38b4ee5499e84342d1c6821652d7a58f8a916733ee74604b86f16f6a2aff"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_moving_tail.h",
+    "sha256": "2e1deed04e21ee37ce8fcd09814113a1468154329293ad87652aebe1809ba48e"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_object_chain.c",
+    "sha256": "1c2477bfb421ad3cc1dc778cf6d4f46f31591f41e7eff92e7464f769ba663c76"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_object_chain.h",
+    "sha256": "8e7447dfe7ea8760685e445b7a21baf88eb98ee42783039d2b2bc827f33a8ffe"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_object_kind.h",
+    "sha256": "513f24a8ecf75461c0f73d22a4166fbaffcd68bf0d118f90b123006914af69e8"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_object_services.c",
+    "sha256": "dee5ef3dc95161e31c1b82d89b2de21a4dc67377768d51de256e2cab21392297"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_object_services.h",
+    "sha256": "a60eac696ad18774c9a40accf819a657425970dbf0bdc52bf664fad10a778e55"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_objects.c",
+    "sha256": "dfeda867073baf37f72ca44a38deb21e626ca5e52245038c23fac9064de48795"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_objects.h",
+    "sha256": "d47b5d5f5072dc5f69a80b1e6166211c6ee61113323109ad6d99a909496944c5"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_obstacle.c",
+    "sha256": "fee82e7d1d68309bc5182955837c6101bc83d41fc4bec0159d9948df2da402c2"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_obstacle.h",
+    "sha256": "9a20541ef75590ebf59bc644bc27b5dbc4af80f4e74246110d5f7f0c792693b1"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_outcome_policy.c",
+    "sha256": "71c914bb605ad9ca1412aec06aa4fd26381a046e51c15995774347b455312b12"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_outcome_policy.h",
+    "sha256": "1972d6bbdb57037576e3183c3985e630feb11185ff2d6a4f157fe994e9e39f33"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_owner_boundary.c",
+    "sha256": "9da4dcd1a174780a65512849f0de1084caa7389af616ad64c6663aeca7863f38"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_owner_boundary.h",
+    "sha256": "6fbbe1cd5498d0a4a0a908d8c927e6cc222152595497d9cf204863e1514ef08b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage.c",
+    "sha256": "b6f25c47cfa8eecf8e354118ada0e4488f1b13ecc87642c5ef36598e0b485f5a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage.h",
+    "sha256": "737faddfee77e9de8e77e5a7b8550fa145e0834fa51093e780f4cc78c73c2100"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_entry.c",
+    "sha256": "29c38e11640d64838710558f694b53c7bf4465479ea1d95ffc8967f7a21a8340"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_entry.h",
+    "sha256": "19c822a81038d87a1976b59341fbd6b9f67b5d42ddd484a65ca54767cba7dcc8"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_finish.c",
+    "sha256": "61b3928c78cb723ebb39b534bf4919b6230eecf1eacbf7bcb361ee38e4d35183"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_finish.h",
+    "sha256": "21dd094d566215bb43bab0584d6a25d73a18ec7433b649ed69c1ae74d79e1a79"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_neighbor.c",
+    "sha256": "570950b91bb32214072b43d6c9b8b229621690510ef15b2cce28b5be9be3a256"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_passage_neighbor.h",
+    "sha256": "00a75ee8ce78e4bf9916d3f51fd23b5d2f6faf042898ba1ac4cd04a2d3b89fa9"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path.c",
+    "sha256": "045c0ee92d424a4c51df7c0fb56349f4bb0634a9f24a472c301482dca6625933"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path.h",
+    "sha256": "ab40420b8104c46fce37ae0f41045fadc0a0fa88d6eb9a729c180d8f2ee8b402"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_cache.c",
+    "sha256": "cd54085ab82abcf2a713a2cc2c85771b82dd5b9d8e0da08023d6fe5e68eb3db3"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_cache.h",
+    "sha256": "16af39197e2654a4728ba8415f56b28b8040a096d35b8a578de4c2ae56d07682"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_completion.c",
+    "sha256": "b1309560df04ce87e3705d8f888a1c2a63f0fae3fcc0fc2ef754ce1251c7fde3"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_completion.h",
+    "sha256": "b02ff2e36c735993ccdcb0a5b4c9328ff6cac42df0e59b1c0f5c6ac2fdfb5176"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_cost.c",
+    "sha256": "9e43a922e6245ddd49a532163d45fadc447c4dd94288f121328849d01a172908"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_cost.h",
+    "sha256": "00effd16a0a2efb6dbd74a767ae23f9fc841fa9b2ace00d02a65e4dcee99565f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_distance.c",
+    "sha256": "f46d2bdfefc5b4c393ae16c24dd8929b8f50d80d9de1fd0e495de3f5744c318d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_distance.h",
+    "sha256": "3c07cfcac2e50fea4a8a638c90e83802eda92bbe718b76f2bd1fd5899c644e51"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_heap.c",
+    "sha256": "ed74d26057321dfb0e015acf7efe69b43954a0fe77d640542ebd188767219e18"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_heap.h",
+    "sha256": "73e462c20c614c7a6e15cd217b62f24b6d78390a60c182d48b49bd7653efc6e7"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_local.c",
+    "sha256": "6117ad8d3e341b78a6fa72d39b0f2ef52a476ba42012786599492d017aff66f1"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_local.h",
+    "sha256": "774fa7303c8a3cd0392cd00f92960beca586392ad141c28afcf189b0e190141b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_nodes.c",
+    "sha256": "ba3db837836d44a95218940b0e4386141583e29feac421b87c088e444c3cb29f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_nodes.h",
+    "sha256": "553f2b03db11c5c0e8ea02c0cb3ee154c0c0905eee971c978703f72eb560d7d8"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_optimize.c",
+    "sha256": "2d97b88371981080bd359c6c2b64449f0f25a28874833f7542c33048e2fc6768"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_optimize.h",
+    "sha256": "80aab426e840c936f06fb14cd3c48d9eb426c3253486db1684c57cf7b45b0d01"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_prepare.c",
+    "sha256": "3442a83b7ebc94216b0f09059e944338d7b0067ffd9067724c286acf15ade334"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_prepare.h",
+    "sha256": "699eb212d86af69bf2fa730fe2a0762bb8963cc9d3dbb382f48e22ebc4e229ba"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_rebuild.c",
+    "sha256": "85f459a0fdee8e2575c44fc03e761f8d9fda7fa862ee5f26f9f7ba3b1b991bbb"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_rebuild.h",
+    "sha256": "95cec6ad9dc4702700d621db98e607717a7527919e5dcc181cb19927b41f356a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_search.c",
+    "sha256": "dda72070d5da6a8a8ac37c37509bbeaf892039b020ea9c8620b9840d111afd5d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_path_search.h",
+    "sha256": "ba660301bd8bed48f569e9b10a9b48080a4d686d328fc337c76f6db19e5d7713"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare.c",
+    "sha256": "6a62b4f623e19bf3cc67e769627d880d8a3b91b4a753e0757d580b20f7bd6874"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare.h",
+    "sha256": "39a682467238d87bfc98d6986b45a6e68a24166f115b3c2b98aa9ce30b27f412"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_cycle.c",
+    "sha256": "3abc1d0f48b8c6a53d9d62359f35abefb0d329e5da6a1103714aaca6c1ca41ec"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_cycle.h",
+    "sha256": "3a9d479a87a1fb6d37506b1c6b3e35c989178d74bb09e3837513c14d72f99442"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_exit.c",
+    "sha256": "482cb46f1e176829d97df3fe83784c1422fc3e76bb63f387730d84a6a3a477e4"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_exit.h",
+    "sha256": "99851914594ecd50c56d185a6e79183abd97f31672de09efa21a6c1b5925d41f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_internal.c",
+    "sha256": "eba42a6ab83103a8000b745741d93fe80c1fabef12f67771b11380d5eee55668"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_internal.h",
+    "sha256": "955f398187502683eeabe32ad48b49dc5ea2de059ac85b9eace01ae9d8bdd9de"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_shared.c",
+    "sha256": "4b4726e75ec8d7988b37858dc7a2d7a7313812fcb28a4ebc1c0ede92cde7f030"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_prepare_shared.h",
+    "sha256": "572e1fce269688c038ee4b0da7deb7e64e5fe209150d795483b6c4c8b45b1096"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_reaction.c",
+    "sha256": "4ad6a24a12db2290b2ec4e597ce844a9317d47e3f9a971732aafa767e1416995"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_reaction.h",
+    "sha256": "2c67f68d37ab3f249a90167a89346064e9e039cee80dea014673f863db33dbfc"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_rebuild_result.c",
+    "sha256": "74167a37f0bc18e64f25bf536f092e05c0fe703b55e450667a693284b1db4f12"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_rebuild_result.h",
+    "sha256": "02324efebd1ba488554a2f07e9a7d7b43e60bcb6ad02138274f6c21583d2171e"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_recovery.c",
+    "sha256": "37282da4286f7d6d2d6f169f2adb778659380194858e9ce09320551cf739929f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_recovery.h",
+    "sha256": "800135f67a375ad830b06ba0a77b3bc0ee4bbee696ee67e263d85006cd0747b0"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_region_route.c",
+    "sha256": "ccd429e6aea6ca1477ee203f367ca3aa8f2a779638bf56ca5677570a8f188411"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_region_route.h",
+    "sha256": "3c502a9a25dc03128c4d831a25ee175e335f91746c3e70d4f53bb06036834139"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_region_search.c",
+    "sha256": "82ab52b8e3a57c952159043193f23537063270fdf501afa9a5fad732685113ea"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_region_search.h",
+    "sha256": "78cc9c844c13fe0cc32fcaf85d29a0f80509dfd22bf3ef89f8886962e40f6f0a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_return_plan.c",
+    "sha256": "ca3de7be765e5743f10901e5d9826a92b18c59cf05b9d66aa187606c0152004f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_return_plan.h",
+    "sha256": "c8dca091773955136c64315006bbb905ee7cb2040f9c1b17767d6c62b99a7f83"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_sampling.c",
+    "sha256": "efd5822e7b1f49632e7e7d14625a41082fb4ac65a91113758888f66b718ea338"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_sampling.h",
+    "sha256": "9c34263ea52ad740d4ed3bfeb4c5b49395ccbfb8dc7fd72d0c1803a9ca524b84"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_sampling_shared.c",
+    "sha256": "2c7b70ce0850c26ee64470c249f92a4dae803dc01a62ff65dd63e0224d09b4ca"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_sampling_shared.h",
+    "sha256": "6394efba5d2f05ab5ce4ca00850cbc5f4555a9f6aaf6d95d98079d7859b81c64"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_segment.c",
+    "sha256": "92eed38cbb1c0f996dfb3130a0393889ed05f9240b567ba0b2f1b3ba8215fb3d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_segment.h",
+    "sha256": "dd2b7a6b9defaea601d15108fa81505362ce7130b283f070a9271550e5dce302"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_segment_admission.c",
+    "sha256": "f8a40df0ee67e71b5b26e533fb24fd5abfd7621f10da6cbeaaee6053519a464f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_segment_admission.h",
+    "sha256": "c1c76dcaf8aff51581dd64d7c6e1ffebab8f61565cd2a827bbecda9fda2eed12"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_slope.c",
+    "sha256": "36db1b29604bc2491d439ff76f3ad4a285547a7e37e2ee49906775517a4562ad"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_slope.h",
+    "sha256": "31922372d60b0499f7c71be35c1d098e30a7a6b01f11b585a4f41e7ab3f1c71d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_special.c",
+    "sha256": "da77a4b28b8db73f05e11c72e0e9aeba83faa1e93638a4a3204bcdb0e39bc7d1"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_special.h",
+    "sha256": "6aced55f3736ef8c6dcd4206ff5a150509e3b8ec073539ca4cf1eccc6dc6769c"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_surface_class.c",
+    "sha256": "58a3efba27027b4f462fcad7ac63e336e3316b5d75e6d94fbea517ac11ae0b67"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_surface_class.h",
+    "sha256": "fee1f9361a97ed20541cc24ff729f6039d3eb61e000b096f144fb1032679cada"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template.c",
+    "sha256": "b4a263cbfff24a2bcee14871c75573a94c5c33bf7a1ac6acf2717aeca4c8b753"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template.h",
+    "sha256": "b59e4bc39d09dfc2bb99f945a1b705ee0c2ad938c58ffc4f48d3b0f120b8672b"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_entry.c",
+    "sha256": "e58218ea501dd5b4ac401bcdd797214c0a2c8a3e82c4209144fa0c77b67ebf8f"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_entry.h",
+    "sha256": "8347d8c313a8f31dd2f286246658da4a844e97e14947a89b4b4bb41c389d3701"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_next.c",
+    "sha256": "d0eec5cb39ea55eb7321e5c89c97a0dab43111b844b48f4f0c8c313109cc159a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_next.h",
+    "sha256": "f7aad6ba0f677f7b6976d9c3ea89f746eed9bd2d3b644ecd0078339364598c00"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_table.h",
+    "sha256": "dbd4375479ac741b8faa60ea21a709a800fb6dcf252692976d0bc5641a286479"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_transition.c",
+    "sha256": "4a41a37f73b078c6c42dfef965010760152502c1ba7db928f4d4557c535107d1"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_template_transition.h",
+    "sha256": "5631b1026b8f88a4e549a71278dad827091bee9deabe6eea8cd23e589234b811"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_terrain.c",
+    "sha256": "3dc07b246dcb4bfd0cdae6540328d4e68fdf563eaf233063ff5ec945abb30bed"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_terrain.h",
+    "sha256": "648a2259da344576af75528eb30c9d91830ed2ddec74c468848f7cb79c28e2f8"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_transition_rules.c",
+    "sha256": "13980d712eb11c1254c005f3e5b247e95619c4b46b982b87a52420abbe853a5d"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_transition_rules.h",
+    "sha256": "4ae791de670300f1428bf03aec140c9608100978c84abeeca1c36d1c45431cb5"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_progress.c",
+    "sha256": "4479de0be5b809fd25be702316168db2a9e37d60b48e532c6244a6134ea238cd"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_progress.h",
+    "sha256": "91ebd7418aeb08514c9592df02ad803deef4aa519c934033b98382ae0aac78f6"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_state.c",
+    "sha256": "67e6c7f4e2318846921b082c212c14353452ca3e2b3a3dfd56463614d2d44e55"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_state.h",
+    "sha256": "ec1de9ed28a27371a2fda8befa73b9e4c52f0e18a3c39235902c509163512ca7"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_travel.c",
+    "sha256": "a29b563d5fc22715258c1e068a4dfa53068711ecd63658c13de3c4b8391334bd"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_tube_travel.h",
+    "sha256": "8d478fab7ab4acb6361d13f5f841bbf650f1797cf7f63c6f02bb463a20d34893"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_turn.c",
+    "sha256": "fc1ac8d92326dae7fee04e38799af57eea127ca810ed53e07ccf23eef41dba8e"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_turn.h",
+    "sha256": "65f3fedb9f6401ccfa6d325ed07ee9f77789c9d05d06815ac5b1e1f12085f65a"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_wait.c",
+    "sha256": "b9577515ece90f5c388b5edfe6518105cebe616eaa054b28dee883f1a4589660"
+  },
+  {
+    "path": "ra2/src/gameplay/ground_wait.h",
+    "sha256": "4c7fe32fb666d71f8d91b820e2eedaa641d0db1d4a80e7872e6a7699b63065a6"
+  },
+  {
+    "path": "ra2/src/gameplay/unit_movement.c",
+    "sha256": "1065aa87eff9f7d922cda5697ee779d19bb9bfd472588950267e46eb2687a190"
+  },
+  {
+    "path": "ra2/src/gameplay/unit_movement.h",
+    "sha256": "b10b2b9e4511f55bdf3bef67f26648596c89c333c0b512dae55470012067abc7"
+  },
+  {
+    "path": "ra2/src/gameplay/walk_movement.c",
+    "sha256": "60702206f115b60ab7dde73e1dc0cd598fe5f8bf3a141e52736a742f8f266990"
+  },
+  {
+    "path": "ra2/src/gameplay/walk_movement.h",
+    "sha256": "56a63491dc810cdbf5ea8ba16364265ca085b08a9ae789b32e11934c0bfb93c9"
+  },
+  {
+    "path": "ra2/src/gameplay/阅读说明-战斗.txt",
+    "sha256": "10a9f2d3dafbd56ee60baef68598cd531d545858d83a55d8d307234be9922ebd"
+  },
+  {
+    "path": "ra2/src/linux/mods.h",
+    "sha256": "841da073ae5dde167810a698c5659b13acbc1503c250b2f3e095d88593bb47d2"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0000.c",
+    "sha256": "2c3ea35482347187079cef89c51b994507cc5827c67ad4d80ffd6cb4ec404471"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0001.c",
+    "sha256": "10404e0f33efae28e5051a25281e2c760f0aef9fffe3dd03ad992e82359188fd"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0002.c",
+    "sha256": "3ec4ccbc8a136f0737e889714ed357c044fccfd6169ce54501bb0438ec2340a3"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0003.c",
+    "sha256": "b9a53dafa0f19b804ac9e9437b3be4f3021c1793f32dd1a593bfc6ce46f2858c"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0004.c",
+    "sha256": "77729f5f5b13f91afab49130dd20291cd03daf930524af33570c5ddc4d30a9e3"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0005.c",
+    "sha256": "d30e7558e5d68b174ac9fb49e512cd83b9759b7d171c323361031ce6fbb815e1"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0006.c",
+    "sha256": "af885367698b45c283e0078571e62446738c779c214482a02ab5f5b3fe2ace23"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0007.c",
+    "sha256": "88d7050959f5debe115ef172721eb7f06682b9ca725cdb50962fdb2c1a547b14"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0008.c",
+    "sha256": "9e8bce5acc39de0bfd84e8a780fc45a74f6ad29cacf86642b0e955db4b4fe472"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0009.c",
+    "sha256": "25a0e08be5933ed909ecd248c64c193b95207c9f5174d96faa7f35b0e29ed41d"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0010.c",
+    "sha256": "1645ea8308ac8aefd84703b353b5d034a24910e06587edd781e7f4f106bdc355"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0011.c",
+    "sha256": "b09baed811bfca284d5dba2e1cfde1fd1fccf3d69b3a32cf4b1f3cd958653b01"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0012.c",
+    "sha256": "dff4f20b935b918f6c5d97194a648ea9264beccc6d44a8836149be6796e4a3d4"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0013.c",
+    "sha256": "9c32b739635b2257fe774a5baa5623b770a5a60559e4737f9a92ffe9ee9c9957"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0014.c",
+    "sha256": "45a3f6f3d3ceca80f6a4a234e63d967ec313b723dc070d5fae5da7aaa5dced8e"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0015.c",
+    "sha256": "5dea79eff19a08c3852fd88ef1a3267818d34aeed3c2485595978d1b6c5eddc4"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0016.c",
+    "sha256": "97733b553ffe0d9602ca60cabb686cf5595a5eeb50fbfdeb6821ed7159eac640"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0017.c",
+    "sha256": "8d0d65b26c1a234f0664036eab3576e9610be8e64a65bfdcc1d9f40e8fb496b6"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0018.c",
+    "sha256": "089329c03856b62618d1afb9fda6317b7b91e415287337c6e5711ee15c95999b"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0019.c",
+    "sha256": "dee6b3e7519558d4f0e485a638fb4c59aaf69a17a8c98b1f6c6b8b0bbdb873a4"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0020.c",
+    "sha256": "b3d98d1ca21a7e12a17f701a8cc02a8dc5af799f539bd1cdcec52c34ce0792b6"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0021.c",
+    "sha256": "d640b4939e329bcde0b96b2f68cf9f8b80fb11ead047bcb95d8a6c36c20a5a9a"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0022.c",
+    "sha256": "70fac15ebe324f65da1ab0fb015c742f852cb3a255736f6645d6e0de9efa8068"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0023.c",
+    "sha256": "8e0a0cac5a892da1dadf069d78110dcfdd512a1e7553f2eebfff29d71b2a29f1"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0024.c",
+    "sha256": "23acd862d6b7955974ed9321c3e7b8b433fc7d60a6ae1e2572657b218dcfc17c"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0025.c",
+    "sha256": "0b10b11833804622b87fc05578fe87b7bce162fe2bacce3119d2e74473644e77"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0026.c",
+    "sha256": "53046a8312d92a6e5dfebe7f2daa39a38119d5eba69a46d7b0ef3beb3c392b6e"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0027.c",
+    "sha256": "b0c6e04032eab322eb0b801f00390bb3e2c83180b624b14f0cbd76867e5b76f5"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0028.c",
+    "sha256": "bf4a00016f0e69ba215e9d74f325fd3526240b18160cfd0530e2b4b50850d0aa"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0029.c",
+    "sha256": "c57b43e61a3bfbf461d9ca736494b70efa7af6986b42e28580ee12b7001e61ac"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0030.c",
+    "sha256": "596f2cc5e408965645765cd642e17a470b17976ae95184cb04645b4bdf9db460"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0031.c",
+    "sha256": "9fd8998733d2c3024aaa441e367907a5379b21c5650898d4bd2db184cea2b2b8"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0032.c",
+    "sha256": "6b80628fbb1f6bdd5a2f5d583199b3b6328171e820c1cdccc38622d9ba33231b"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0033.c",
+    "sha256": "66a36a6cab5dc8b2c0dd49e73bd66d36271ea4b22eab7412b0f7acc224cc812b"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0034.c",
+    "sha256": "82b6d5e7854513cf29aa65a88e67c55a6ef421ac9ef3c5d0fd51437693c1f995"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0035.c",
+    "sha256": "75e975f76a1d34336490012f3212cba52c306a895bf6d926266f6abd15d57687"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0036.c",
+    "sha256": "09c0600c7b0713a49a60e8d32f1b35889f4c3a1ae3154feb0239cd4170c0a5b4"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0037.c",
+    "sha256": "b4711546faf185dcd077a9978f7c9f93b87621d44f3c5bab9ac92b00c3c2d45f"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0038.c",
+    "sha256": "0b22d346db39d2fa2c56acd6d4be842c3eb1c20a83a5aeab6532f59b038b9fbd"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0039.c",
+    "sha256": "fdf3a533629e5f4de6b2500809e90048135c15a813a156080fc6de54befb43ef"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0040.c",
+    "sha256": "4df8a8697cbba898c1f7249ee1ed023472432414e03dfb8a21a9922a45504c35"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0041.c",
+    "sha256": "280c4f12a8e52df8ed8736a5224f493b88f9524dc4df35e35038436d50c19b62"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0042.c",
+    "sha256": "8757d36ba67442a56044b4f74c2facc4770edbbe382853fe89804437a2f8e5df"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0043.c",
+    "sha256": "f51ccbd55a71cfb736c559c2f5695057aa81c9e5b09dbee9f57fdd978f3204a6"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0044.c",
+    "sha256": "e6316481fecc25c486a98d8d3253869cf10ae08e5209955e373adb255dfe4eb2"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0045.c",
+    "sha256": "e1ef45de2e673f24a27e2abe82781f4b33ded14add6bb734e4aa43c704725f3f"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0046.c",
+    "sha256": "8b907e81fc30a2803ddaf2ff4ef8f0f6dec9dfa8863e3d71680334de3c4db4c8"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0047.c",
+    "sha256": "0e8f502668a0c10f9c5ab0c4694d9c807260c1c421ef6ff32c8877f536b7bb83"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0048.c",
+    "sha256": "0c7d6b74cfcd72dcdbbedcd104d232ee60b0c2f032c1ad3a575719d6770e0f66"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0049.c",
+    "sha256": "54b0a4c01309976e92a14651aec8f5bf2c9f1ab60a78275bb7ba321dc7ce3766"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0050.c",
+    "sha256": "b64041f5e3aa9ecbd523c784bdea9c63f4f1d27a29d25b6780b3015e518f733b"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0051.c",
+    "sha256": "e587c5934fd36a4d81f350e30b22ab23fb95d190eabed48be4c5356e74a2de23"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0052.c",
+    "sha256": "525fe096d1d947e99fd047c2bebcf28c5e0546bcef1929fc6bb2d0ca7048f173"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0053.c",
+    "sha256": "2a9c7e1512eba997488872709834f6b1b7cdb38f27ca7d8fc01bc11f338d2a6a"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0054.c",
+    "sha256": "e62877aed9b98e8506e2504bece99806a4592853b77a62af406cf99b7670ac20"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0055.c",
+    "sha256": "9564bc2f82c4e715fe5a306559e2ecc167a70c0913ad58ee40d475ef00ac6a20"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0056.c",
+    "sha256": "64a4b22ee89fb3ec3c3acb6053bdfdfd937b9a4d73f539cfdb41fb0c5bf5875f"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_0057.c",
+    "sha256": "344c8e1c1edb5bc76181e8fcea6ff60b1cb6d84ef7d155574c46c26d6ec019d8"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_dispatch.c",
+    "sha256": "cbcb6bd2a943f232c9cca048bf97fca26139497487d2a920f82c76f10dabb811"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_funcs.h",
+    "sha256": "cc9c34509b0775698aa53c775e7773a1cabdea7cf697a145b2cac570c05aed79"
+  },
+  {
+    "path": "ra2/src/recomp/gen_game/recomp_target.h",
+    "sha256": "d162aa20e04d68ab17abbc1b5447d21171696ee8fb0ae51fc77b15147d844487"
+  },
+  {
+    "path": "ra2/src/runtime/combat_health_bridge.c",
+    "sha256": "203f8bbc6cfe7cb12c9642f776ac4b34a1fe45052add97494a463279d6dbbbcc"
+  },
+  {
+    "path": "ra2/src/runtime/combat_health_bridge.h",
+    "sha256": "a9bd5cb2f812627dc4309956d02982c6cda78dc4b6731ce106e1d3c8e865cb2b"
+  },
+  {
+    "path": "ra2/src/runtime/ground_advance_bridge.c",
+    "sha256": "e7f37fb7c3230734b8c9ee04b90c87868ee4103dfca536b0b0264ee5adbafaf4"
+  },
+  {
+    "path": "ra2/src/runtime/ground_advance_bridge.h",
+    "sha256": "9ec9e3f85680e0a97009b0797d7eaf8ba6abbbcfd63c45a7c0281d9d925b283a"
+  },
+  {
+    "path": "ra2/src/runtime/ground_allied_bridge.c",
+    "sha256": "e2dba1bc3392981f87bc4233dd0cde9fe920de5041428f00fb8a6b999e53d70c"
+  },
+  {
+    "path": "ra2/src/runtime/ground_allied_bridge.h",
+    "sha256": "a6d7072b4fe865bb3f42fbf8d804861c5f4391d0fabd092d0263cdbaf59bb92b"
+  },
+  {
+    "path": "ra2/src/runtime/ground_arrival_bridge.c",
+    "sha256": "8e1fdf025f114eed98eba1deb4cd875f9067a9099e5f21e62100ef9e58405bed"
+  },
+  {
+    "path": "ra2/src/runtime/ground_arrival_bridge.h",
+    "sha256": "cec1d444b2cee16fc619b6f99deaf4b30286243a159155b4b029d76a79a97eb0"
+  },
+  {
+    "path": "ra2/src/runtime/ground_barrier_bridge.c",
+    "sha256": "49325f95eac988cd1f3d5e23a5a57f5d122374713bd60d5e81a284bfba463426"
+  },
+  {
+    "path": "ra2/src/runtime/ground_barrier_bridge.h",
+    "sha256": "c75da5bdbb80e9ba5cb7cf34227841cbeb1021f56c42443e774804f2e11a6316"
+  },
+  {
+    "path": "ra2/src/runtime/ground_collision_bridge.c",
+    "sha256": "10e8a37536b2ccdd3e8612c2b875a9aadb3391a6c5960ec3acd3ee5555fc3165"
+  },
+  {
+    "path": "ra2/src/runtime/ground_collision_bridge.h",
+    "sha256": "00bf1b90fda76eb3b414ee7e93ef8a06b1c04a143e0e3596e3a760e29d4ebed7"
+  },
+  {
+    "path": "ra2/src/runtime/ground_completion_bridge.c",
+    "sha256": "843c03dddec431dcc99d4ec5d88e433f886c4038e540a7fe0102e51e388182a7"
+  },
+  {
+    "path": "ra2/src/runtime/ground_completion_bridge.h",
+    "sha256": "9a373e61f1fa6108fe8dd4a2a8fb8f74cecf9d2ac8ff91027e17097346732826"
+  },
+  {
+    "path": "ra2/src/runtime/ground_connection_numeric_bridge.c",
+    "sha256": "cf26ac39e6f4ce87628abdf4801f458c1cc409c2837d6166dce0c28cafeda155"
+  },
+  {
+    "path": "ra2/src/runtime/ground_connection_numeric_bridge.h",
+    "sha256": "69e78747001512adf7c6229fe722179edf0355984223a6739838e9767382ef3e"
+  },
+  {
+    "path": "ra2/src/runtime/ground_continuation_bridge.c",
+    "sha256": "cb274ad9e747b01148d7c653374cad613e097fb84062cab31c3b75cc9ff766e7"
+  },
+  {
+    "path": "ra2/src/runtime/ground_continuation_bridge.h",
+    "sha256": "5385b454b01c90c95e5e6e8cb94506d194d57143e547bb6642c8461bebe6d114"
+  },
+  {
+    "path": "ra2/src/runtime/ground_dispatch_bridge.c",
+    "sha256": "e1c1f45ad91d2745b85b91b7d188adc347abc24e410446467c3659e1376a3e26"
+  },
+  {
+    "path": "ra2/src/runtime/ground_dispatch_bridge.h",
+    "sha256": "ab80764f11576469c0eee85d81d01ea5bbf1caa988674fa01402e3aed3243849"
+  },
+  {
+    "path": "ra2/src/runtime/ground_drive_bridge.c",
+    "sha256": "bf5ed35d1c1c9d46d70113b4f380b862423c875c606addcf51ab34df4871d995"
+  },
+  {
+    "path": "ra2/src/runtime/ground_drive_bridge.h",
+    "sha256": "927ce51ad9cc3d62b019a529d9a8482f550688c406fb4a654802e28931c89ebe"
+  },
+  {
+    "path": "ra2/src/runtime/ground_entry_bridge.c",
+    "sha256": "192b271e5f5d167577822e5a75d479ca0ed1454af01ee03f82f89b950931ad46"
+  },
+  {
+    "path": "ra2/src/runtime/ground_entry_bridge.h",
+    "sha256": "77e4dda10a3da04ac13181510495788f7a775a2d23d8bfc7caa59665baabf7bd"
+  },
+  {
+    "path": "ra2/src/runtime/ground_followup_bridge.c",
+    "sha256": "8cc26af13f6d93f944badff191a3657eff63a6077c96bb4a3c44406994c7aaca"
+  },
+  {
+    "path": "ra2/src/runtime/ground_followup_bridge.h",
+    "sha256": "43d8fb59b7f2d596040b0a81edac9c1b4776f2b2d9ea3fda2102838463486170"
+  },
+  {
+    "path": "ra2/src/runtime/ground_internal_bridge.c",
+    "sha256": "703422ed25a0c7db0e058612843926492e8e55b50b8e71a87130782a02a6b801"
+  },
+  {
+    "path": "ra2/src/runtime/ground_internal_bridge.h",
+    "sha256": "bd1aa996e5117566678d61f596a2888ff35f62d746888dd0dfc2935809bc9935"
+  },
+  {
+    "path": "ra2/src/runtime/ground_joint_bridge.c",
+    "sha256": "94c908dc478155f48f18662ee3d8ece0bf448dd614cfc2c57118ec515646d541"
+  },
+  {
+    "path": "ra2/src/runtime/ground_joint_bridge.h",
+    "sha256": "d495d11235ef3a8507a8b4239efd5fa65574749e65517f91824d143abff99284"
+  },
+  {
+    "path": "ra2/src/runtime/ground_map_bounds_bridge.c",
+    "sha256": "4bc0cc8051c0d9cf9f8ce854a510413f6f9a34a0bbf4a896f790e460ced982ce"
+  },
+  {
+    "path": "ra2/src/runtime/ground_objects_bridge.c",
+    "sha256": "fd86b609c50456334b90b7e46141ecc5122c59f5fb3c586107746cd08d585216"
+  },
+  {
+    "path": "ra2/src/runtime/ground_objects_bridge.h",
+    "sha256": "b997a4f2fab454127c7852a44719cca5fc238d7c13a9bdff809549d00c61f2aa"
+  },
+  {
+    "path": "ra2/src/runtime/ground_overlap_bridge.c",
+    "sha256": "cae3c5d0f5e21f46977953b7061b0f90c81a5c765923171da1cb6327016c2b45"
+  },
+  {
+    "path": "ra2/src/runtime/ground_overlap_bridge.h",
+    "sha256": "e47a3ba48ed5b00c0b2b992a045811167cc96b4ee00ac385db693b097196321a"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_bridge.c",
+    "sha256": "cfde0382a8a3120a9ff27a48e7f753d8ce7ee585fec2f9bb8d236a02a4dc69ec"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_bridge.h",
+    "sha256": "51b57255b02dc969a7da08d52cf9bebba751673d979965851d3db6dbae146d40"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_distance_bridge.c",
+    "sha256": "5f1dd7dc952124afb4ce97f64e71f9b8548a94ccda729f74e8f64af5b1628fad"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_distance_bridge.h",
+    "sha256": "28d738124cec7f28d33747a6436fa3a510af0985c47a2eeb5003d199419984d8"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_heap_bridge.c",
+    "sha256": "4128ca53677e9bc8793cbd1910230c91576f782caaa2c77f628f608ff446a0e3"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_heap_bridge.h",
+    "sha256": "97c5bd22bf4852c6520cda48c7ba8d728e8deae409cfe169711b38b1dce4bf1b"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_lifecycle_bridge.c",
+    "sha256": "949eba8bb7a880a5b67eec9d8ec44f9350195f6cfda17126192ae557090b8285"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_lifecycle_bridge.h",
+    "sha256": "71281f25567a4419c629e77ed58df27a5875a498acf714450a319f4acafe590a"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_local_bridge.c",
+    "sha256": "78939d0f998038beaea8a0ab4d590f6ade5f1ed8ba3d654e6450bf97ba59390f"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_local_bridge.h",
+    "sha256": "f23ab059c83fa4e3d1ed2a5e0a94d8b66b5a05e3543f94f7e13759239f89f0e1"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_nodes_bridge.c",
+    "sha256": "0978fbdffe5b189300b2adf2a31792dfeca7569d8a15c04ee639260fc4cdd705"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_nodes_bridge.h",
+    "sha256": "767699dd06520e584fabcf79c1bcf19e4c18a681c0cc8a2f7b12ac28c4a3ae6f"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_routing_bridge.c",
+    "sha256": "a6e3f6719d38550deaf774930f8c4e859c5ee2a88dfc6db988f393f28629d7d2"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_routing_bridge.h",
+    "sha256": "e497f2b75473a679a04b1cc7d49f714195859ef1e77481d31bc84bb44c689f60"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_search_bridge.c",
+    "sha256": "6cbfe8f6735eaac3ad181027403e40b17dd0a0b5f46807ce762019e3fe622465"
+  },
+  {
+    "path": "ra2/src/runtime/ground_path_search_bridge.h",
+    "sha256": "53ef6fc903c15aa28e9f4ea99125774cfded724775440d3a35b6e768b70bb52b"
+  },
+  {
+    "path": "ra2/src/runtime/ground_prepare_bridge.c",
+    "sha256": "686335da73835962326cc457860358fdc87193932e8190895045f7109aeb4697"
+  },
+  {
+    "path": "ra2/src/runtime/ground_prepare_bridge.h",
+    "sha256": "dbb27124bf72cf3d3b4d5606b5d08685cd42c2f7d321092c9e76f02271effa5b"
+  },
+  {
+    "path": "ra2/src/runtime/ground_progress_bridge.c",
+    "sha256": "89d5cad5b0e9455b715d23bb06bbd626de9f11e586d5fcf3c37c4fd612489313"
+  },
+  {
+    "path": "ra2/src/runtime/ground_progress_bridge.h",
+    "sha256": "0cc9bced624d8347d29d786eb28b245d98664013742c927ca3f71f05bbabe0f3"
+  },
+  {
+    "path": "ra2/src/runtime/ground_recovery_bridge.c",
+    "sha256": "d62c2a2716ad68572588b1534681d62a726689edbbb9c20343bd9fc77f1ca331"
+  },
+  {
+    "path": "ra2/src/runtime/ground_recovery_bridge.h",
+    "sha256": "0debacf7aceb5c30a0ca708bd6ddb3697b8db8f89b04e5939d0425dfe94a3349"
+  },
+  {
+    "path": "ra2/src/runtime/ground_remainder_bridge.c",
+    "sha256": "f48658d0cac1051f973a207f390d7d3f7cc9ff016074d7301614f000b24af6c7"
+  },
+  {
+    "path": "ra2/src/runtime/ground_remainder_bridge.h",
+    "sha256": "5ca4bc13df7031dad04d8dd6d0488f503d82f7220c4f9fb80c32b528606cec86"
+  },
+  {
+    "path": "ra2/src/runtime/ground_services_bridge.c",
+    "sha256": "370cbba4c6ee03b7b4ac49d0bc65ff552fcf52c98733810e7ac9959b5050e258"
+  },
+  {
+    "path": "ra2/src/runtime/ground_services_bridge.h",
+    "sha256": "fc32a853deb549c170fc62ff69513161f4273871d125286e3a4e361c274a51d3"
+  },
+  {
+    "path": "ra2/src/runtime/ground_travel_bridge.c",
+    "sha256": "79cf06485df03c8462cf97b14696a7cca7888cd27a0ac8f2adb7087eeba66cca"
+  },
+  {
+    "path": "ra2/src/runtime/ground_travel_bridge.h",
+    "sha256": "c81910ed441d1fa4f1358a5569df18bcbe2027e2ebd5138dea5dc6ce819d992c"
+  },
+  {
+    "path": "ra2/src/runtime/ground_tube_state_bridge.c",
+    "sha256": "606ada10d04b7b5e7bf979bec382350538a5f11ad4c5658d6bae800d110dfeda"
+  },
+  {
+    "path": "ra2/src/runtime/ground_tube_state_bridge.h",
+    "sha256": "f434ba1975b4157035a9920018bf93c56db3083b60f52dfe32e4bf8d2f30ee6a"
+  },
+  {
+    "path": "ra2/src/runtime/hdvox.c",
+    "sha256": "ca50917e4e9f43dd33253f82d1c30c04141a463c5e8c1500e8cdef0ded9d0887"
+  },
+  {
+    "path": "ra2/src/runtime/hdvox.h",
+    "sha256": "59156bc9bb71465f487f35bb5505c5e2d04713c0795d704e9bd96e3ad9bb65a8"
+  },
+  {
+    "path": "ra2/src/runtime/host.c",
+    "sha256": "d0307a47a3f3e9ddbd4c9b41e266d748b0cda68d51e4297186f243372c3f4fc9"
+  },
+  {
+    "path": "ra2/src/runtime/input.c",
+    "sha256": "3c8a7512cf4f430ce324e29e0bab6b1bb12d4d0fe8e8742625b9c719e5b39a1d"
+  },
+  {
+    "path": "ra2/src/runtime/input.h",
+    "sha256": "560e5df1468722f81197207084296543c1cb206cef89b448eb317789df443189"
+  },
+  {
+    "path": "ra2/src/runtime/mods.c",
+    "sha256": "fe83d244377eab54a88112fc991cc24defd4857abdc3c9ef5e30d77401877017"
+  },
+  {
+    "path": "ra2/src/runtime/mods.h",
+    "sha256": "60179b6746b1942f169c8ba5d1c42fd3ce1983c8d0fa3b185908bbed0d69b836"
+  },
+  {
+    "path": "ra2/src/runtime/movement_bridge.c",
+    "sha256": "6f4e2fd54cc689dcc8466d6dfba4a60ad89a3ef643551a94524a08bded69c284"
+  },
+  {
+    "path": "ra2/src/runtime/movement_bridge.h",
+    "sha256": "62c6c641000535f0aa826c88ca3b9236e475d5de2823454a621678c917ecfdfe"
+  },
+  {
+    "path": "ra2/src/runtime/movement_fixture.c",
+    "sha256": "172e498125fa3948b16474510a149f44c729a6de010cfc8162e5a2871e1cc3e3"
+  },
+  {
+    "path": "ra2/src/runtime/movement_fixture.h",
+    "sha256": "de7b366d38238fb7803c060899c833ce9dad4582a51a78b6e8fedde213ddaef5"
+  },
+  {
+    "path": "ra2/src/runtime/oracle.c",
+    "sha256": "a33fa16da76488d8bd2498ec22d64675a591f9e48e5eb4418ca2f4bad1550dee"
+  },
+  {
+    "path": "ra2/src/runtime/oracle.h",
+    "sha256": "0e551fecfdb4866bcac400ec6d4038172af9358f201d0bf4a3b6e1049f04a967"
+  },
+  {
+    "path": "ra2/src/runtime/present.c",
+    "sha256": "3061a2f768f685430faf85d33d1d1e0848dccc9bc8604d54d78187a0294a958b"
+  },
+  {
+    "path": "ra2/src/runtime/present.h",
+    "sha256": "7207ffb3a6b69d4879dc6fbc8ae754091e85ab6718ec5cdb848c90b0812f7858"
+  },
+  {
+    "path": "ra2/src/runtime/queuefive.c",
+    "sha256": "1bf076c92134460a1082208ceb57c3cd1a851002d9317d03ef8942e181639140"
+  },
+  {
+    "path": "ra2/src/runtime/recovery_checks.c",
+    "sha256": "c608af38ab5b1781f11f1148c0b228091bc1d97a602ab5d4d25014188c83afaa"
+  },
+  {
+    "path": "ra2/src/runtime/state_trace.c",
+    "sha256": "477f071ef17c39d8a12c3eb60ba25a7255a6abbafc4640ac89e7b357a70c1dd4"
+  },
+  {
+    "path": "ra2/src/runtime/state_trace.h",
+    "sha256": "2dffed966e24cce756a07d756452f396b351cfde78251ed70a71c3ec0c98be1a"
+  },
+  {
+    "path": "ra2/src/runtime/walk_movement_bridge.c",
+    "sha256": "b61bff2a7bfa0e68f25b3fd0299730b67581696a745ebac8d4b2b929c7d5e38c"
+  },
+  {
+    "path": "ra2/src/runtime/walk_movement_bridge.h",
+    "sha256": "f01ce32192c4f6c871e8c7c611cc088b19c8153a2bfb5393ef633d038ad9e016"
+  },
+  {
+    "path": "ra2/src/runtime/x87_precision.c",
+    "sha256": "654af647c9d889d6cad8266eddeab526df43945c8a26ba74df316fabcd81d393"
+  },
+  {
+    "path": "ra2/src/runtime/x87_precision.h",
+    "sha256": "fe985b5abda5084307b5c196236a9ea304cc16f11156b1305ae43c825e62a587"
+  },
+  {
+    "path": "run_combat_command_v69.py",
+    "sha256": "e0dfe14b42322fc7eaa92306554f57b815f2e51c5c6e52716ebd94efc278efcd"
+  },
+  {
+    "path": "run_combat_observer_v69.py",
+    "sha256": "c0e0446138f7d81aa644efb4f958fa23b43789ef132dc344127e05fbf00052c1"
+  },
+  {
+    "path": "run_fixture_comparison.py",
+    "sha256": "aadfc98e492be4073c7a7afa27b846f4fa08b6fd977f7cbbf89545f757ed8a1e"
+  },
+  {
+    "path": "run_skirmish_v69.py",
+    "sha256": "0b0aa9ee4c635c794c2f695ec05c75a847b1a548f0b24a60f0324fd7eb1f9946"
+  },
+  {
+    "path": "run_state_comparison.py",
+    "sha256": "fb5b8dedc9074ade068742beb4b30d06c5646f49eb3b88551da842b1662e67f9"
+  },
+  {
+    "path": "summarize_combat_v69.py",
+    "sha256": "49b10af00ba0d56ab2dd90af4bcf3ebd398cddd85cf160a0fc4f9054a61ea8ee"
+  },
+  {
+    "path": "verify_combat_v69.py",
+    "sha256": "65d1ae88e7da2ce6702d7d515aa55f6ed9f70689653cc611f0ce200437d309e9"
+  }
+]

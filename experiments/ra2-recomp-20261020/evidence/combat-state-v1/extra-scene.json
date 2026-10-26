@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "fixture": {
+    "tag": "cap",
+    "units": [
+      [
+        "Player House",
+        "FV",
+        256,
+        80,
+        112
+      ],
+      [
+        "Player House",
+        "MTNK",
+        128,
+        85,
+        112
+      ]
+    ],
+    "infantry": [
+      [
+        "Player House",
+        "ENGINEER",
+        256,
+        80,
+        113
+      ]
+    ],
+    "kind": "ordinary-repair-cap",
+    "path": "evidence/combat-state-v1/fixtures/cap.MAP",
+    "map_sha256": "c1b28f85478de4eba99fc3d983a668fce0f4e6e76ba8a4dcdb16946558dc22e1",
+    "last": 1500,
+    "orders": [
+      "5:1023312:7:1023310:0",
+      "200:1023310:1:1023311:0"
+    ],
+    "source": "D:\\Program\\红色警戒2\\experiments\\ra2-recomp-20261020\\evidence\\combat-state-v1\\fixtures\\repair.MAP",
+    "source_sha256": "f0f6c1180e9473a92a19668bd9c79d8b048093cfe737412e58df03e607064313",
+    "points": [
+      {
+        "cell": [
+          80,
+          112
+        ],
+        "land": 7,
+        "level": 4,
+        "overlay": -1,
+        "bridge": 0
+      },
+      {
+        "cell": [
+          85,
+          112
+        ],
+        "land": 7,
+        "level": 4,
+        "overlay": -1,
+        "bridge": 0
+      },
+      {
+        "cell": [
+          80,
+          113
+        ],
+        "land": 7,
+        "level": 4,
+        "overlay": -1,
+        "bridge": 0
+      }
+    ],
+    "attacker_id": 1023310,
+    "target_id": 1023311,
+    "engineer_id": 1023312
+  },
+  "only_initial_health_fraction_changed": true
+}

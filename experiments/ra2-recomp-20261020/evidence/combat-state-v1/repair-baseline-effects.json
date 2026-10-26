@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "recorded_health_position_facing_and_other_objects_equal": true,
+  "commands_and_movement_audit_equal": true,
+  "raw_strict_equality": false,
+  "rng_first_difference": 260,
+  "allocation_counter_delta_range": [
+    -12,
+    26
+  ],
+  "allocation_counter_cause_fully_proved": false,
+  "repairer_mission_completion_difference": [
+    {
+      "frame": 485,
+      "id": 1023310,
+      "original": 5,
+      "generated_c": 1
+    },
+    {
+      "frame": 486,
+      "id": 1023310,
+      "original": 5,
+      "generated_c": 1
+    }
+  ],
+  "maximum_completion_delay": 2,
+  "pre_attach_executable_sha256": "7b1f38956722c737766a0521c0fda64dfb54c40b53f90b3ad3b5087099135d05",
+  "initial_non_rng_view_sha256": "2941f8029b463119f0542f7ca22c1eeab5a14117bbb7d3f5c65dded9f046fdab",
+  "scope": "Finite functional boundary frozen on unchanged parent: same healing, positions, health and commands, FV returns to Guard two frames later, RNG/ID allocation counters differ. No comparator change and no full particle/visual equivalence claim. Candidate must preserve every complete per-mode trace."
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "initial_attachment_sha256": "0b6e747347b05046ba2dfdd855e07c601c3e226f5d5611ff58bbb182fd15a610",
+  "build_attempts": [
+    "build-production.log",
+    "build-production-02.log"
+  ],
+  "initial_build_issue": "Resume instruction at 005D3E68 had no lifted basic-block label; an explicit label was added without changing any original statement.",
+  "successful_build": "build-production-02.log",
+  "invalid_executable_checkpoint_created": false,
+  "command_host_review": "Initial repeated-host source check compared LF text with Windows CRLF bytes. Check uses decoded text; source bytes and before/after runtime parity remain independently verified.",
+  "native_capture_review_sha256": "e7fc7f3cefacb2d6ae10e0add119033544b4de80a09fd6bafb774fae3c1216e0"
+}

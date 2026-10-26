@@ -1,0 +1,46 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "4a044fc117263460f948e5a224489f818f888862b97d8d6d77e75ff8320cbb92"
+  },
+  {
+    "path": "交接文档-原版逆向与C重编译-20261020.txt",
+    "sha256": "1c77a969d3b2f417176d56cc39428f75a5c9f0ee97b20a5b81cc5b2eb236f1e3"
+  },
+  {
+    "path": "交接文档-新对话继续推进-20261022.txt",
+    "sha256": "d9f600e50a1cea5f5d7aaaebc642df2a6274fe7d6baf0c64ee9e1c5947fc7bac"
+  },
+  {
+    "path": "reports/latest-recovery.json",
+    "sha256": "f3d06903642461970cafd865d431ca52b8bb20eab478e87ee3d40837c1024305"
+  },
+  {
+    "path": "reports/latest-state-comparison.json",
+    "sha256": "f3d06903642461970cafd865d431ca52b8bb20eab478e87ee3d40837c1024305"
+  },
+  {
+    "path": "reports/latest-movement-candidate.json",
+    "sha256": "f3d06903642461970cafd865d431ca52b8bb20eab478e87ee3d40837c1024305"
+  },
+  {
+    "path": "docs/战斗与对象生命周期第一批-伤害接纳与生命结算-20261026.txt",
+    "sha256": "e876eaf70194c7e558d5c400e8ee11690cc23f2843afdb1a98126e37274a7d96"
+  },
+  {
+    "path": "交接文档-战斗与对象生命周期第一批正式验收-20261026.txt",
+    "sha256": "9e143d3b734de942680a770ac2f9157fedbcc3768c57b3fec9c5688d22c25868"
+  },
+  {
+    "path": "docs/当前进度与剩余内容-20261026-战斗第一批.txt",
+    "sha256": "90bdac8d70dcd4d1caeda83282822dd15eb6a408985eb70dbbd729bb35968c93"
+  },
+  {
+    "path": "docs/项目目标与验收边界-20261024.txt",
+    "sha256": "ff57869149cd60589568669d67d90887792f56d8ae4517b325a7c42bf53d5a25"
+  },
+  {
+    "path": "docs/寻路机制改进验收补充-20261025.txt",
+    "sha256": "4a8ce4d22e645ba42adbdbfc4d6aba9e65a291623d7c40e0e7139a68c6d53eef"
+  }
+]
