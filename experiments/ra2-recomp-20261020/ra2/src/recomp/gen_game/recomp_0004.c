@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_registry_bridge.h"
 #include "combat_building_cleanup_rules_bridge.h"
 #include "combat_building_cleanup_bridge.h"
 #include "combat_building_post_bridge.h"
@@ -39766,6 +39767,10 @@ L_0043945F:
     RECOMP_CALL(BuildingClass__virtual_52); /* 0x00439461: call 0x442060 */
     RECOMP_FLAGS_IN();
 L_00439466:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_cleanup_registry_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_004394C9;
     ecx = MEM32(esi + 0x41C); /* 0x00439466: mov ecx, dword ptr [esi + 0x41c] */
     /* cmp ecx, ebp */ /* 0x0043946C: cmp ecx, ebp */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ebp);

@@ -5,6 +5,8 @@
 #include "combat_building_cleanup_bridge.h"
 #include "combat_building_cleanup_rules.h"
 #include "combat_building_cleanup_rules_bridge.h"
+#include "combat_building_cleanup_registry.h"
+#include "combat_building_cleanup_registry_bridge.h"
 
 typedef struct CleanupContext { uint32_t owner, frame; } CleanupContext;
 
@@ -165,4 +167,47 @@ void ra2_building_cleanup_rules_bridge(void)
     CleanupContext c = {g_esi, g_esp};
     Ra2BuildingCleanupRuleServices s = {&c, rules_query, rules_perform};
     ra2_cleanup_building_rules(&s);
+}
+
+static uint32_t cleanup_registry_address(uint32_t table)
+{
+    return table ? 0xAC0C80 : 0xAC0BF8;
+}
+
+static int32_t registry_query(void *opaque, Ra2BuildingRegistryQuery q, uint32_t table)
+{
+    CleanupContext *c = opaque;
+    switch (q) {
+        case RA2_BCG_HAS_MEMBER: g_ecx = MEM32(c->owner + 0x41C); return g_ecx != 0;
+        case RA2_BCG_FIND: {
+            uint32_t address = cleanup_registry_address(table);
+            /* 每次重读当前表的虚函数，并重写原guest局部参数，不能缓存上一表的状态。 */
+            g_edx = MEM32(address); g_eax = c->frame + 0x10; g_ecx = address;
+            MEM32(g_eax) = c->owner; uint32_t key = g_eax;
+            return (int32_t)call(MEM32(g_edx + 0x10), address, &key, 1, 0);
+        }
+    }
+    abort();
+}
+
+static void registry_perform(void *opaque, Ra2BuildingRegistryOperation op, uint32_t table)
+{
+    CleanupContext *c = opaque;
+    switch (op) {
+        case RA2_BCG_DELETE_MEMBER: {
+            g_edx = MEM32(g_ecx); uint32_t one = 1;
+            call(MEM32(g_edx + 0x20), g_ecx, &one, 1, 0); break;
+        }
+        case RA2_BCG_CLEAR_MEMBER: MEM32(c->owner + 0x41C) = g_ebp; break;
+        case RA2_BCG_REMOVE: {
+            uint32_t index = g_eax; call(0x454B20, cleanup_registry_address(table), &index, 1, 0); break;
+        }
+    }
+}
+
+void ra2_building_cleanup_registry_bridge(void)
+{
+    CleanupContext c = {g_esi, g_esp};
+    Ra2BuildingRegistryServices s = {&c, registry_query, registry_perform};
+    ra2_cleanup_building_registries(&s);
 }

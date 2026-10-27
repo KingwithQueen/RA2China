@@ -1,5 +1,6 @@
 #include "combat_building_cleanup.h"
 #include "combat_building_cleanup_rules.h"
+#include "combat_building_cleanup_registry.h"
 #define Q(q, index) s->query(s->context, RA2_BC_##q, index)
 #define DO(op, index) s->perform(s->context, RA2_BC_##op, index)
 
@@ -67,4 +68,14 @@ void ra2_cleanup_building_rules(const Ra2BuildingCleanupRuleServices *s)
     ra2_cleanup_building_cloak_rules(s);
     ra2_cleanup_building_super_rules(s);
     ra2_cleanup_building_owner_rules(s);
+}
+
+void ra2_cleanup_building_registries(const Ra2BuildingRegistryServices *s)
+{
+    if (s->query(s->context, RA2_BCG_HAS_MEMBER, 0)) s->perform(s->context, RA2_BCG_DELETE_MEMBER, 0);
+    /* 原槽即使最初为空，或已被删除回调替换，也在这里清零。 */
+    s->perform(s->context, RA2_BCG_CLEAR_MEMBER, 0);
+    for (uint32_t table = 0; table < 2; ++table) {
+        if (s->query(s->context, RA2_BCG_FIND, table) != -1) s->perform(s->context, RA2_BCG_REMOVE, table);
+    }
 }
