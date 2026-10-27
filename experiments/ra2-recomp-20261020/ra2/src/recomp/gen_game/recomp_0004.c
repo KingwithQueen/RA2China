@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_pairs_bridge.h"
 #include "combat_building_cleanup_registry_bridge.h"
 #include "combat_building_cleanup_rules_bridge.h"
 #include "combat_building_cleanup_bridge.h"
@@ -39820,6 +39821,10 @@ L_004394BE:
     RECOMP_CALL(sub_00454B20); /* 0x004394C4: call 0x454b20 */
     RECOMP_FLAGS_IN();
 L_004394C9:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_cleanup_pairs_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00439548;
     eax = esi + 0x4; /* 0x004394C9: lea eax, [esi + 4] */
     PUSH32(esp, eax); /* 0x004394CC: push eax */
     RECOMP_CALL(sub_0040FFC0); /* 0x004394CD: call 0x40ffc0 */

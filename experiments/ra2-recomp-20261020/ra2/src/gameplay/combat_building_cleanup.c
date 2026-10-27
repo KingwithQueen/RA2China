@@ -1,6 +1,7 @@
 #include "combat_building_cleanup.h"
 #include "combat_building_cleanup_rules.h"
 #include "combat_building_cleanup_registry.h"
+#include "combat_building_cleanup_pairs.h"
 #define Q(q, index) s->query(s->context, RA2_BC_##q, index)
 #define DO(op, index) s->perform(s->context, RA2_BC_##op, index)
 
@@ -78,4 +79,13 @@ void ra2_cleanup_building_registries(const Ra2BuildingRegistryServices *s)
     for (uint32_t table = 0; table < 2; ++table) {
         if (s->query(s->context, RA2_BCG_FIND, table) != -1) s->perform(s->context, RA2_BCG_REMOVE, table);
     }
+}
+
+void ra2_cleanup_building_pair(const Ra2BuildingPairServices *s)
+{
+    s->perform(s->context, RA2_BCP_READ_KEY);
+    if (!s->query(s->context, RA2_BCP_FIND) || !s->query(s->context, RA2_BCP_VALID_INDEX)) return;
+    s->perform(s->context, RA2_BCP_BEGIN_SHIFT);
+    while (s->query(s->context, RA2_BCP_MORE)) s->perform(s->context, RA2_BCP_SHIFT_NEXT);
+    s->perform(s->context, RA2_BCP_TRIM_LAST);
 }

@@ -7,6 +7,8 @@
 #include "combat_building_cleanup_rules_bridge.h"
 #include "combat_building_cleanup_registry.h"
 #include "combat_building_cleanup_registry_bridge.h"
+#include "combat_building_cleanup_pairs.h"
+#include "combat_building_cleanup_pairs_bridge.h"
 
 typedef struct CleanupContext { uint32_t owner, frame; } CleanupContext;
 
@@ -210,4 +212,58 @@ void ra2_building_cleanup_registry_bridge(void)
     CleanupContext c = {g_esi, g_esp};
     Ra2BuildingRegistryServices s = {&c, registry_query, registry_perform};
     ra2_cleanup_building_registries(&s);
+}
+
+typedef struct PairCleanupContext { CleanupContext base; int more; } PairCleanupContext;
+
+static int32_t pair_query(void *opaque, Ra2BuildingPairQuery q)
+{
+    PairCleanupContext *c = opaque;
+    switch (q) {
+        case RA2_BCP_FIND: {
+            MEM32(c->base.frame + 0x10) = g_eax; g_eax = c->base.frame + 0x10;
+            uint32_t key = g_eax; return call(0x41B990, 0xABFF58, &key, 1, 0) != 0;
+        }
+        case RA2_BCP_VALID_INDEX: {
+            /* 先按32位地址相减，再算术右移3位；基址在查找返回后读取。 */
+            uint32_t offset = g_eax - MEM32(0xABFF58);
+            g_eax = (offset >> 3) | ((offset & 0x80000000u) ? 0xE0000000u : 0);
+            return g_eax != UINT32_MAX;
+        }
+        case RA2_BCP_MORE: return c->more;
+    }
+    abort();
+}
+
+static void pair_perform(void *opaque, Ra2BuildingPairOperation op)
+{
+    PairCleanupContext *c = opaque;
+    switch (op) {
+        case RA2_BCP_READ_KEY: {
+            g_eax = c->base.owner + 4; uint32_t interface_pointer = g_eax;
+            call(0x40FFC0, g_ecx, &interface_pointer, 1, 0); break;
+        }
+        case RA2_BCP_BEGIN_SHIFT:
+            g_ecx = g_eax + 1; g_eax = MEM32(0xABFF5C);
+            c->more = (int32_t)g_ecx < (int32_t)g_eax; break;
+        case RA2_BCP_SHIFT_NEXT:
+            g_edx = MEM32(0xABFF58); g_eax = g_edx + g_ecx * 8; ++g_ecx;
+            g_edx = MEM32(g_eax); MEM32(g_eax - 8) = g_edx;
+            g_edx = MEM32(g_eax + 4); MEM32(g_eax - 4) = g_edx;
+            g_eax = MEM32(0xABFF5C); c->more = (int32_t)g_ecx < (int32_t)g_eax;
+            /* 与原生成循环相同：先比较，再让出；下一轮重新读取当前存储。 */
+            RECOMP_BACKEDGE(); break;
+        case RA2_BCP_TRIM_LAST:
+            g_edi = MEM32(0xABFF58); --g_eax; g_ecx = 0; MEM32(0xABFF5C) = g_eax;
+            MEM32(g_edi + g_eax * 8) = g_ecx;
+            g_eax = MEM32(0xABFF5C); g_ecx = MEM32(0xABFF58); g_edx = 0;
+            MEM32(g_ecx + g_eax * 8 + 4) = g_edx; MEM32(0xABFF68) = g_ebp; break;
+    }
+}
+
+void ra2_building_cleanup_pairs_bridge(void)
+{
+    PairCleanupContext c = {{g_esi, g_esp}, 0};
+    Ra2BuildingPairServices s = {&c, pair_query, pair_perform};
+    ra2_cleanup_building_pair(&s);
 }
