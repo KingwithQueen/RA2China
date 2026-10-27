@@ -79332,6 +79332,10 @@ L_0043EBA0:
     _flag_k = FK_NARROW(FK_TEST, 24);
     if (TEST_Z(_flag_a, _flag_b)) goto L_0043EDE4; /* 0x0043EBC4: je 0x43ede4 */
 L_0043EBCA:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_rubble_cells_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043ECD8;
     edx = MEM32(ebx); /* 0x0043EBCA: mov edx, dword ptr [ebx] */
     PUSH32(esp, 0); /* 0x0043EBCC: push 0 */
     ecx = ebx; /* 0x0043EBCE: mov ecx, ebx */
@@ -79456,6 +79460,7 @@ L_0043ECA4:
     esi = eax; /* 0x0043ECD1: mov esi, eax */
     RECOMP_CALL(sub_00474EB0); /* 0x0043ECD3: call 0x474eb0 */
     RECOMP_FLAGS_IN();
+L_0043ECD8:
     ecx = MEM32(eax + 0x8); /* 0x0043ECD8: mov ecx, dword ptr [eax + 8] */
     /* test ecx, ecx */ /* 0x0043ECDB: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -79581,6 +79586,10 @@ L_0043ED6E:
     edi = MEM32(esi + 0x8); /* 0x0043ED73: mov edi, dword ptr [esi + 8] */
     eax = MEM32(esi + 0xC); /* 0x0043ED76: mov eax, dword ptr [esi + 0xc] */
 L_0043ED79:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_rubble_invalidate_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043EDE4;
     esi = MEM32(0x839630); /* 0x0043ED79: mov esi, dword ptr [0x839630] */
     ebp = MEM32(0x839634); /* 0x0043ED7F: mov ebp, dword ptr [0x839634] */
     PUSH32(esp, 0); /* 0x0043ED85: push 0 */
@@ -79627,7 +79636,7 @@ L_0043ED79:
     RECOMP_CALL(sub_006AADD0); /* 0x0043EDDF: call 0x6aadd0 */
     RECOMP_FLAGS_IN();
 L_0043EDE4:
-    /* 留废墟主体继续原接口；这里只接管后置箱子资格及生成调度。 */
+    /* 格改写与通知由前置服务完成；此处维持后置箱子调度。 */
     RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
     ra2_building_post_crate_bridge();
     RECOMP_REGS_IN(); RECOMP_FLAGS_IN();

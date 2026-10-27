@@ -25,3 +25,31 @@ void ra2_schedule_building_crate(const Ra2BuildingPostServices *s)
     /* CrateBeneathIsMoney在坐标回调后从当前类型读取。 */
     DO(PLACE_CRATE, Q(CRATE_MONEY) ? 0 : 20);
 }
+
+void ra2_rewrite_building_rubble(const Ra2BuildingPostServices *s)
+{
+    DO(RUBBLE_FOUNDATION, 0);
+    DO(RUBBLE_POSITION, 0);
+    /* 保留实时基础格列表：回调可以改变尚未读取的偏移或哨兵。 */
+    while (!Q(FOUNDATION_END)) {
+        DO(RUBBLE_CELL, 0);
+        DO(CLEAR_CELL, 0);
+        DO(PUBLISH_RUBBLE_CELL, 0);
+        DO(RECALCULATE_CELL, -1);
+        DO(REFRESH_MAP_CELL, 0);
+        DO(REFRESH_PASSABILITY, 0);
+        DO(FINISH_CELL, 0);
+    }
+    /* 锚格查找返回后才读取建筑当前类型，两个矩形接口维持原次序。 */
+    DO(RUBBLE_ANCHOR, 0);
+    DO(FIRST_RECTANGLE, 0);
+    DO(SECOND_RECTANGLE, 0);
+}
+
+void ra2_invalidate_building_rubble(const Ra2BuildingPostServices *s)
+{
+    DO(PREPARE_INVALIDATION, 0);
+    DO(INVALIDATE_RECTANGLE, 0);
+    DO(FIND_CURRENT_ANCHOR, 0);
+    DO(INVALIDATE_ANCHOR, 0);
+}
