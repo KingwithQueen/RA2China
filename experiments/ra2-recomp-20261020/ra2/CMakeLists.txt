@@ -353,3 +353,6 @@ set_source_files_properties(src/gameplay/combat_building_shake.c src/runtime/com
 
 target_sources(ra2 PRIVATE src/gameplay/combat_building_death_delay.c src/runtime/combat_building_death_delay_bridge.c)
 set_source_files_properties(src/gameplay/combat_building_death_delay.c src/runtime/combat_building_death_delay_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/combat_building_post.c src/runtime/combat_building_post_bridge.c)
+set_source_files_properties(src/gameplay/combat_building_post.c src/runtime/combat_building_post_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

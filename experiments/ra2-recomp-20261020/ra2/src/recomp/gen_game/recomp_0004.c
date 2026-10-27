@@ -1,3 +1,4 @@
+#include "combat_building_post_bridge.h"
 #include "combat_building_death_delay_bridge.h"
 #include "combat_building_shake_bridge.h"
 #include "combat_building_resources_bridge.h"
@@ -79626,6 +79627,11 @@ L_0043ED79:
     RECOMP_CALL(sub_006AADD0); /* 0x0043EDDF: call 0x6aadd0 */
     RECOMP_FLAGS_IN();
 L_0043EDE4:
+    /* 留废墟主体继续原接口；这里只接管后置箱子资格及生成调度。 */
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_post_crate_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043EE66;
     edx = MEM32(ebx + 0x418); /* 0x0043EDE4: mov edx, dword ptr [ebx + 0x418] */
     SET_LO8(eax, MEM8(edx + 0x13E8)); /* 0x0043EDEA: mov al, byte ptr [edx + 0x13e8] */
     /* test LO8(eax), LO8(eax) */ /* 0x0043EDF0: test al, al */
