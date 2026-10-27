@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_bridge.h"
 #include "combat_building_post_bridge.h"
 #include "combat_building_death_delay_bridge.h"
 #include "combat_building_shake_bridge.h"
@@ -39474,6 +39475,10 @@ void sub_00439240(void) {
     RECOMP_ENTER(0x00439240u);
 
 L_00439240:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_cleanup_prefix_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043931F;
     PUSH32(esp, ecx); /* 0x00439240: push ecx */
     PUSH32(esp, ebx); /* 0x00439241: push ebx */
     PUSH32(esp, ebp); /* 0x00439242: push ebp */

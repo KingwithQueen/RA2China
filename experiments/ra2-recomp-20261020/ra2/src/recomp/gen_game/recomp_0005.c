@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_bridge.h"
 #include "combat_building_post_bridge.h"
 #include "combat_building_crew_bridge.h"
 /* Functions named by name_lift.py */
@@ -56998,6 +56999,9 @@ void BuildingClass__deleting_destructor(void) {
     RECOMP_ENTER(0x00453CA0u);
 
 L_00453CA0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_delete_bridge();
+    return;
     PUSH32(esp, esi); /* 0x00453CA0: push esi */
     esi = ecx; /* 0x00453CA1: mov esi, ecx */
     RECOMP_CALL(sub_00439240); /* 0x00453CA3: call 0x439240 */
