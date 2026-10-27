@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_rules_bridge.h"
 #include "combat_building_cleanup_bridge.h"
 #include "combat_building_post_bridge.h"
 #include "combat_building_death_delay_bridge.h"
@@ -39588,6 +39589,10 @@ L_00439319:
     RECOMP_BACKEDGE();
     if (/* dec result */ CMP_NE(_flag_a, _flag_b)) goto L_00439309; /* 0x0043931D: jne 0x439309 */
 L_0043931F:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_cleanup_rules_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00439466;
     SET_LO8(eax, MEM8(0xA40958)); /* 0x0043931F: mov al, byte ptr [0xa40958] */
     /* test LO8(eax), LO8(eax) */ /* 0x00439324: test al, al */
     _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(LO8(eax)) << 24;
