@@ -1,3 +1,4 @@
+#include "combat_building_death_delay_bridge.h"
 #include "combat_building_shake_bridge.h"
 #include "combat_building_resources_bridge.h"
 #include "combat_building_crew_bridge.h"
@@ -77260,6 +77261,11 @@ L_0043E87E:
     RECOMP_CALL(sub_00482E00); /* 0x0043E880: call 0x482e00 */
     RECOMP_FLAGS_IN();
 L_0043E885:
+    /* 初始化死亡计时；完整更新与其他死亡效果继续原流程。 */
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_death_delay_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_0043E8F8;
     edx = MEM32(esi); /* 0x0043E885: mov edx, dword ptr [esi] */
     ecx = esi; /* 0x0043E887: mov ecx, esi */
     RECOMP_ICALL(MEM32(edx + 0x16C)); /* 0x0043E889: call dword ptr [edx + 0x16c] */
@@ -80998,6 +81004,12 @@ L_0043F219:
     RECOMP_ICALL(MEM32(edx + 0x478)); /* 0x0043F219: call dword ptr [edx + 0x478] */
     RECOMP_FLAGS_IN();
 L_0043F21F:
+    /* 只调度原UnInit与后处理，不接管析构和引用清理。 */
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    { int removed = ra2_building_death_handoff_bridge();
+      RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+      if (removed) goto L_0043F5B4;
+      goto L_0043F5AD; }
     ecx = MEM32(esi + 0x420); /* 0x0043F21F: mov ecx, dword ptr [esi + 0x420] */
 L_0043F225:
     eax = MEM32(esi + 0x428); /* 0x0043F225: mov eax, dword ptr [esi + 0x428] */
