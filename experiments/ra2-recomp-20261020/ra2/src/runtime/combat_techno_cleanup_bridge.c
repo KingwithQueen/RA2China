@@ -1,3 +1,5 @@
+#include "combat_techno_cleanup_member_registry.h"
+#include "combat_techno_cleanup_member_registry_bridge.h"
 #include "combat_techno_cleanup_registry.h"
 #include "combat_techno_cleanup_registry_bridge.h"
 #include <stdio.h>
@@ -121,4 +123,54 @@ void ra2_techno_cleanup_registry_bridge(void)
     TechnoCleanupContext c = {g_esi};
     Ra2TechnoRegistryServices s = {&c, registry_perform, registry_find, registry_remove};
     ra2_cleanup_techno_registries(&s);
+}
+
+static int32_t member_registry_has(void *opaque)
+{
+    TechnoCleanupContext *c = opaque;
+    g_ecx = MEM32(c->owner + 0x108);
+    g_flag_k = FK_CMP; g_flag_a = g_ecx; g_flag_b = g_ebx; g_flag_cf = g_ecx < g_ebx;
+    return g_ecx != g_ebx;
+}
+
+static void member_registry_cleanup(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_ecx);
+    registry_invoke(MEM32(g_eax + 0xF0), g_esp);
+}
+
+static void member_registry_clear(void *opaque)
+{
+    TechnoCleanupContext *c = opaque;
+    /* 即使回调换入新成员，也只在返回后清原槽，不追加一次虚调用。 */
+    MEM32(c->owner + 0x108) = g_ebx;
+}
+
+static int32_t member_registry_find(void *opaque)
+{
+    TechnoCleanupContext *c = opaque;
+    uint32_t stack = g_esp;
+    /* 成员回调可改变登记表；在此重新读表，并重写原保存帧中的对象临时槽。 */
+    g_edx = MEM32(0xAC0BF8); g_ecx = g_esp + 8;
+    g_esp -= 4; MEM32(g_esp) = g_ecx; g_ecx = 0xAC0BF8;
+    MEM32(g_esp + 0x0C) = c->owner;
+    registry_invoke(MEM32(g_edx + 0x10), stack);
+    g_flag_k = FK_CMP; g_flag_a = g_eax; g_flag_b = UINT32_MAX; g_flag_cf = g_eax < UINT32_MAX;
+    return (int32_t)g_eax;
+}
+
+static void member_registry_remove(void *opaque, int32_t index)
+{
+    (void)opaque; uint32_t stack = g_esp;
+    g_esp -= 4; MEM32(g_esp) = (uint32_t)index; g_ecx = 0xAC0BF8;
+    registry_invoke(0x454B20, stack);
+}
+
+void ra2_techno_cleanup_member_registry_bridge(void)
+{
+    TechnoCleanupContext c = {g_esi};
+    Ra2TechnoMemberRegistryServices s = {&c, member_registry_has, member_registry_cleanup,
+        member_registry_clear, member_registry_find, member_registry_remove};
+    ra2_cleanup_techno_member_registry(&s);
 }

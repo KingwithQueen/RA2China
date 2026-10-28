@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_member_registry_bridge.h"
 #include "combat_techno_cleanup_registry_bridge.h"
 #include "combat_techno_cleanup_bridge.h"
 #include "combat_building_debris_bridge.h"
@@ -6154,6 +6155,10 @@ L_006C2191:
     RECOMP_CALL(sub_00454B20); /* 0x006C2197: call 0x454b20 */
     RECOMP_FLAGS_IN();
 L_006C219C:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_techno_cleanup_member_registry_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_006C21DB;
     ecx = MEM32(esi + 0x108); /* 0x006C219C: mov ecx, dword ptr [esi + 0x108] */
     /* cmp ecx, ebx */ /* 0x006C21A2: cmp ecx, ebx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ebx);
