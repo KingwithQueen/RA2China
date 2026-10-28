@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_tables.h"
 #include "combat_object_cleanup.h"
 
 void ra2_cleanup_object_registry(const Ra2ObjectCleanupServices *s)
@@ -7,4 +8,12 @@ void ra2_cleanup_object_registry(const Ra2ObjectCleanupServices *s)
     if (!s->can_remove(s->context)) return;
     if (!s->shrink_has_following(s->context)) return;
     while (s->shift_next(s->context)) {}
+}
+
+void ra2_cleanup_object_tables(const Ra2ObjectTablesCleanupServices *s)
+{
+    for (uint32_t table = 0; table < 4; ++table) {
+        s->select_table(s->context, table);
+        ra2_cleanup_object_registry(&s->registry);
+    }
 }

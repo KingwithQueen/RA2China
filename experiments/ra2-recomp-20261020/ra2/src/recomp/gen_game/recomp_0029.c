@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_tables_bridge.h"
 #include "combat_object_cleanup_bridge.h"
 #include "combat_lifecycle_bridge.h"
 #include "combat_death_bridge.h"
@@ -57481,6 +57482,10 @@ L_005D2580:
     RECOMP_BACKEDGE();
     if (CMP_L(_flag_a, _flag_b)) goto L_005D2580; /* 0x005D2596: jl 0x5d2580 */
 L_005D2598:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_object_cleanup_tables_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_005D26BC;
     edx = MEM32(0xA40368); /* 0x005D2598: mov edx, dword ptr [0xa40368] */
     eax = esp + 0x4; /* 0x005D259E: lea eax, [esp + 4] */
     PUSH32(esp, eax); /* 0x005D25A2: push eax */
