@@ -1,3 +1,5 @@
+#include "combat_building_cleanup_tail.h"
+#include "combat_building_cleanup_tail_bridge.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "recomp_types.h"
@@ -266,4 +268,65 @@ void ra2_building_cleanup_pairs_bridge(void)
     PairCleanupContext c = {{g_esi, g_esp}, 0};
     Ra2BuildingPairServices s = {&c, pair_query, pair_perform};
     ra2_cleanup_building_pair(&s);
+}
+
+static uint32_t tail_member(uint32_t member)
+{
+    return member ? g_edi : g_ebp;
+}
+
+static int32_t tail_query(void *opaque, Ra2BuildingTailQuery q, uint32_t member)
+{
+    (void)opaque;
+    switch (q) {
+        case RA2_BCT_HAS_DATA: return g_eax != g_ebx;
+        case RA2_BCT_OWNS_DATA:
+            g_ecx = (g_ecx & 0xFFFFFF00u) | MEM8(tail_member(member) + 0x0D);
+            return (uint8_t)g_ecx != 0;
+    }
+    abort();
+}
+
+static void tail_perform(void *opaque, Ra2BuildingTailOperation op, uint32_t member)
+{
+    CleanupContext *c = opaque;
+    uint32_t pointer;
+    switch (op) {
+        case RA2_BCT_CLEAR_STATE:
+            MEM32(c->owner + 0x418) = g_ebp; g_ebp = c->owner + 0x53C;
+            MEM8(c->owner + 0x7D) = 0; break;
+        case RA2_BCT_CLEAR_CONTAINER:
+            if (!member) {
+                g_ecx = g_ebp; g_edx = MEM32(g_ebp); g_edi = MEM32(g_ebp + 8);
+            } else {
+                g_edx = MEM32(c->owner + 0x554); g_ebx = MEM32(c->owner + 0x55C);
+                g_edi = c->owner + 0x554; g_ecx = g_edi;
+            }
+            call(MEM32(g_edx + 0x0C), g_ecx, NULL, 0, 0); break;
+        case RA2_BCT_RESIZE_CONTAINER: {
+            /* 清理回调可改变当前虚表，但容量参数取清理前保存的值。 */
+            pointer = tail_member(member); g_eax = MEM32(pointer);
+            uint32_t args[] = {member ? g_ebx : g_edi, 0};
+            call(MEM32(g_eax + 8), pointer, args, 2, 0); break;
+        }
+        case RA2_BCT_BEGIN_RELEASE:
+            pointer = tail_member(member); g_eax = MEM32(pointer + 4);
+            if (member) g_ebx = 0;
+            MEM32(pointer) = 0x79D074; break;
+        case RA2_BCT_FREE_DATA:
+            pointer = g_eax; call(0x781D3B, g_ecx, &pointer, 1, 1);
+            /* 原接口返回后才清原成员槽；不重复释放回调换入的指针。 */
+            MEM32(tail_member(member) + 4) = g_ebx; break;
+        case RA2_BCT_END_RELEASE:
+            pointer = tail_member(member); MEM8(pointer + 0x0D) = 0; MEM32(pointer + 8) = g_ebx; break;
+        case RA2_BCT_BASE_DESTRUCTOR:
+            g_ecx = c->owner; call(0x6C20B0, c->owner, NULL, 0, 0); break;
+    }
+}
+
+void ra2_building_cleanup_tail_bridge(void)
+{
+    CleanupContext c = {g_esi, g_esp};
+    Ra2BuildingTailServices s = {&c, tail_query, tail_perform};
+    ra2_cleanup_building_tail(&s);
 }

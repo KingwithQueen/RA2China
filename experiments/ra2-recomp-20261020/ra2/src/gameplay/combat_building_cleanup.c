@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_tail.h"
 #include "combat_building_cleanup.h"
 #include "combat_building_cleanup_rules.h"
 #include "combat_building_cleanup_registry.h"
@@ -88,4 +89,21 @@ void ra2_cleanup_building_pair(const Ra2BuildingPairServices *s)
     s->perform(s->context, RA2_BCP_BEGIN_SHIFT);
     while (s->query(s->context, RA2_BCP_MORE)) s->perform(s->context, RA2_BCP_SHIFT_NEXT);
     s->perform(s->context, RA2_BCP_TRIM_LAST);
+}
+
+void ra2_cleanup_building_tail(const Ra2BuildingTailServices *s)
+{
+    s->perform(s->context, RA2_BCT_CLEAR_STATE, 0);
+    for (uint32_t member = 0; member < 2; ++member) {
+        s->perform(s->context, RA2_BCT_CLEAR_CONTAINER, member);
+        s->perform(s->context, RA2_BCT_RESIZE_CONTAINER, member);
+    }
+    for (uint32_t remaining = 2; remaining; --remaining) {
+        uint32_t member = remaining - 1;
+        s->perform(s->context, RA2_BCT_BEGIN_RELEASE, member);
+        if (s->query(s->context, RA2_BCT_HAS_DATA, member) && s->query(s->context, RA2_BCT_OWNS_DATA, member))
+            s->perform(s->context, RA2_BCT_FREE_DATA, member);
+        s->perform(s->context, RA2_BCT_END_RELEASE, member);
+    }
+    s->perform(s->context, RA2_BCT_BASE_DESTRUCTOR, 0);
 }

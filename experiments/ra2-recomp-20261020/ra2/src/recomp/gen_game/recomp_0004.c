@@ -1,3 +1,4 @@
+#include "combat_building_cleanup_tail_bridge.h"
 #include "combat_building_cleanup_pairs_bridge.h"
 #include "combat_building_cleanup_registry_bridge.h"
 #include "combat_building_cleanup_rules_bridge.h"
@@ -39898,6 +39899,10 @@ L_00439520:
     MEM32(ecx + eax * 8 + 0x4) = edx; /* 0x0043953E: mov dword ptr [ecx + eax*8 + 4], edx */
     MEM32(0xABFF68) = ebp; /* 0x00439542: mov dword ptr [0xabff68], ebp */
 L_00439548:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_building_cleanup_tail_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_004395E7;
     MEM32(esi + 0x418) = ebp; /* 0x00439548: mov dword ptr [esi + 0x418], ebp */
     ebp = esi + 0x53C; /* 0x0043954E: lea ebp, [esi + 0x53c] */
     MEM8(esi + 0x7D) = (uint8_t)(0); /* 0x00439554: mov byte ptr [esi + 0x7d], 0 */
@@ -39983,6 +39988,7 @@ L_004395D9:
     MEM32(ebp + 0x8) = ebx; /* 0x004395DF: mov dword ptr [ebp + 8], ebx */
     RECOMP_CALL(TechnoClass__destructor); /* 0x004395E2: call 0x6c20b0 */
     RECOMP_FLAGS_IN();
+L_004395E7:
     edi = POP32_VAL(esp); /* 0x004395E7: pop edi */
     esi = POP32_VAL(esp); /* 0x004395E8: pop esi */
     ebp = POP32_VAL(esp); /* 0x004395E9: pop ebp */
