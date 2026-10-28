@@ -361,3 +361,6 @@ target_sources(ra2 PRIVATE src/gameplay/combat_building_cleanup.c src/runtime/co
 set_source_files_properties(src/gameplay/combat_building_cleanup.c src/runtime/combat_building_cleanup_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
 target_sources(ra2 PRIVATE src/gameplay/combat_techno_cleanup.c src/runtime/combat_techno_cleanup_bridge.c)
 set_source_files_properties(src/gameplay/combat_techno_cleanup.c src/runtime/combat_techno_cleanup_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")
+
+target_sources(ra2 PRIVATE src/gameplay/combat_object_cleanup.c src/runtime/combat_object_cleanup_bridge.c)
+set_source_files_properties(src/gameplay/combat_object_cleanup.c src/runtime/combat_object_cleanup_bridge.c PROPERTIES COMPILE_OPTIONS "/W4;/WX;/std:c17;/utf-8")

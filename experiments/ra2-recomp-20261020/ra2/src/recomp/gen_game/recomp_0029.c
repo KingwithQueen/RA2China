@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_bridge.h"
 #include "combat_lifecycle_bridge.h"
 #include "combat_death_bridge.h"
 #include "combat_health_bridge.h"
@@ -57425,6 +57426,10 @@ void ObjectClass__destructor(void) {
     RECOMP_ENTER(0x005D2530u);
 
 L_005D2530:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_object_cleanup_registry_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_005D2598;
     PUSH32(esp, ecx); /* 0x005D2530: push ecx */
     PUSH32(esp, esi); /* 0x005D2531: push esi */
     esi = ecx; /* 0x005D2532: mov esi, ecx */
