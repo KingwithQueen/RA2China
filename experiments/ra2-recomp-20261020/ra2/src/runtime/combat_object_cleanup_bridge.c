@@ -1,3 +1,4 @@
+#include "combat_reference_prefix_bridge.h"
 #include "combat_object_cleanup_base.h"
 #include "combat_object_cleanup_base_bridge.h"
 #include "combat_object_cleanup_members.h"
@@ -289,4 +290,69 @@ static void object_base_invoke(recomp_func_t fn)
     g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR; fn();
     if (g_esp != stack) { fputs("[object base] stack imbalance\n", stderr); abort(); }
     g_cur_func = caller;
+}
+
+static void reference_prefix_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_ecx; g_eax = g_ecx;
+    g_esp -= 4; MEM32(g_esp) = g_ebp;
+    g_ecx = MEM32(0x830FB8); g_ebp = 0;
+    (void)object_compare(g_ecx, g_ebp);
+    g_esp -= 4; MEM32(g_esp) = g_esi; MEM32(g_esp + 8) = g_eax;
+}
+
+static int32_t reference_prefix_active(void *opaque)
+{
+    (void)opaque;
+    return g_ecx != g_ebp;
+}
+
+static int32_t reference_prefix_manager(void *opaque)
+{
+    (void)opaque;
+    uint32_t manager = MEM32(g_eax + 0xC);
+    (void)object_compare(manager, 0x830FAC);
+    return manager == 0x830FAC;
+}
+
+static int32_t reference_prefix_has_reference(void *opaque)
+{
+    (void)opaque;
+    g_esi = MEM32(g_eax);
+    (void)object_compare(g_esi, g_ebp);
+    return g_esi != g_ebp;
+}
+
+static int32_t reference_prefix_first_stamp(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_eax + 8); g_edx = MEM32(g_esi + 0x24);
+    (void)object_compare(g_ecx, g_edx);
+    return g_ecx == g_edx;
+}
+
+static int32_t reference_prefix_second_stamp(void *opaque)
+{
+    (void)opaque;
+    g_edx = MEM32(g_eax + 4); g_ecx = MEM32(g_esi + 0x138);
+    (void)object_compare(g_edx, g_ecx);
+    return g_edx == g_ecx;
+}
+
+static int32_t reference_prefix_is_dead(void *opaque)
+{
+    (void)opaque;
+    g_flag_a = (uint32_t)MEM8(g_esi + 0x18) << 24; g_flag_b = 1u << 24;
+    g_flag_cf = 0; g_flag_k = FK_NARROW(FK_TEST, 24);
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+uint32_t ra2_reference_prefix_bridge(uint32_t variant)
+{
+    (void)variant;
+    const Ra2ReferencePrefixServices s = {NULL, reference_prefix_begin, reference_prefix_active,
+        reference_prefix_manager, reference_prefix_has_reference, reference_prefix_first_stamp,
+        reference_prefix_second_stamp, reference_prefix_is_dead};
+    return ra2_check_reference_prefix(&s);
 }

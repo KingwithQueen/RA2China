@@ -1,3 +1,4 @@
+#include "combat_reference_prefix.h"
 #include "combat_object_cleanup_base.h"
 #include "combat_object_cleanup_members.h"
 #include "combat_object_cleanup_tables.h"
@@ -45,4 +46,16 @@ void ra2_reset_abstract_tables(const Ra2ObjectBaseCleanupServices *s)
 {
     static const uint32_t tables[] = {0x79ADD8, 0x79ADBC, 0x79ADB4, 0x79ADAC};
     for (uint32_t i = 0; i < 4; ++i) s->write_abstract_table(s->context, i * 4, tables[i]);
+}
+
+uint32_t ra2_check_reference_prefix(const Ra2ReferencePrefixServices *s)
+{
+    s->begin(s->context);
+    if (!s->active(s->context)) return RA2_REFERENCE_EARLY;
+    if (!s->manager_matches(s->context)) return RA2_REFERENCE_EARLY;
+    if (!s->has_reference(s->context)) return RA2_REFERENCE_EARLY;
+    if (!s->first_stamp_matches(s->context)) return RA2_REFERENCE_INVALID;
+    if (!s->second_stamp_matches(s->context)) return RA2_REFERENCE_INVALID;
+    if (s->is_dead(s->context)) return RA2_REFERENCE_INVALID;
+    return RA2_REFERENCE_CONTINUE;
 }
