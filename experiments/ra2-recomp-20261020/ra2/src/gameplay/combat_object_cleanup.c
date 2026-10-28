@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_base.h"
 #include "combat_object_cleanup_members.h"
 #include "combat_object_cleanup_tables.h"
 #include "combat_object_cleanup.h"
@@ -28,4 +29,20 @@ void ra2_cleanup_object_members(const Ra2ObjectMembersCleanupServices *s)
         s->clear_optional(s->context);
     }
     s->cleanup_abstract(s->context);
+}
+
+void ra2_detach_object_association(const Ra2ObjectBaseCleanupServices *s)
+{
+    uint32_t owner = s->association_owner(s->context);
+    if (owner) {
+        /* 必须先清关联对象，再清成员；两处可能重叠，不重新读取owner。 */
+        s->clear_owner_link(s->context, owner);
+        s->clear_member_link(s->context);
+    }
+}
+
+void ra2_reset_abstract_tables(const Ra2ObjectBaseCleanupServices *s)
+{
+    static const uint32_t tables[] = {0x79ADD8, 0x79ADBC, 0x79ADB4, 0x79ADAC};
+    for (uint32_t i = 0; i < 4; ++i) s->write_abstract_table(s->context, i * 4, tables[i]);
 }

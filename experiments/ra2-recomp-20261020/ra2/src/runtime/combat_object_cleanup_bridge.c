@@ -1,3 +1,5 @@
+#include "combat_object_cleanup_base.h"
+#include "combat_object_cleanup_base_bridge.h"
 #include "combat_object_cleanup_members.h"
 #include "combat_object_cleanup_members_bridge.h"
 #include "combat_object_cleanup_tables.h"
@@ -7,6 +9,8 @@
 #include "recomp_types.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+static void object_base_invoke(recomp_func_t fn);
 
 static int32_t object_compare(uint32_t left, uint32_t right)
 {
@@ -204,7 +208,7 @@ static int32_t object_members_restore_has_optional(void *opaque)
 static void object_members_cleanup_optional(void *opaque)
 {
     (void)opaque;
-    object_members_invoke(0x5394F0);
+    object_base_invoke(ra2_object_detach_association_bridge);
 }
 
 static void object_members_clear_optional(void *opaque)
@@ -218,7 +222,7 @@ static void object_members_cleanup_abstract(void *opaque)
 {
     (void)opaque;
     g_ecx = g_esi;
-    object_members_invoke(0x40FF90);
+    object_base_invoke(ra2_object_abstract_tables_bridge);
 }
 
 void ra2_object_cleanup_members_bridge(void)
@@ -227,4 +231,62 @@ void ra2_object_cleanup_members_bridge(void)
         object_members_restore_has_optional, object_members_cleanup_optional,
         object_members_clear_optional, object_members_cleanup_abstract};
     ra2_cleanup_object_members(&s);
+}
+
+static uint32_t object_association_owner(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_ecx + 4); g_edx = 0;
+    (void)object_compare(g_eax, g_edx);
+    return g_eax;
+}
+
+static void object_clear_owner_link(void *opaque, uint32_t owner)
+{
+    (void)opaque;
+    MEM32(owner + 0x94) = g_edx;
+}
+
+static void object_clear_member_link(void *opaque)
+{
+    (void)opaque;
+    MEM32(g_ecx + 4) = g_edx;
+}
+
+static void object_write_abstract_table(void *opaque, uint32_t offset, uint32_t table)
+{
+    (void)opaque;
+    MEM32(g_ecx + offset) = table;
+}
+
+static const Ra2ObjectBaseCleanupServices object_base_services = {
+    NULL, object_association_owner, object_clear_owner_link,
+    object_clear_member_link, object_write_abstract_table};
+
+void ra2_object_detach_association_bridge(void)
+{
+    g_cur_func = 0x5394F0;
+#ifdef RECOMP_TRACE
+    recomp_trace_enter(0x5394F0);
+#endif
+    ra2_detach_object_association(&object_base_services);
+    g_esp += 4;
+}
+
+void ra2_object_abstract_tables_bridge(void)
+{
+    g_cur_func = 0x40FF90;
+#ifdef RECOMP_TRACE
+    recomp_trace_enter(0x40FF90);
+#endif
+    ra2_reset_abstract_tables(&object_base_services);
+    g_esp += 4;
+}
+
+static void object_base_invoke(recomp_func_t fn)
+{
+    uint32_t stack = g_esp, caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR; fn();
+    if (g_esp != stack) { fputs("[object base] stack imbalance\n", stderr); abort(); }
+    g_cur_func = caller;
 }
