@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_registry.h"
 #include "combat_techno_cleanup.h"
 
 void ra2_cleanup_techno_prefix(const Ra2TechnoCleanupServices *s)
@@ -9,4 +10,17 @@ void ra2_cleanup_techno_prefix(const Ra2TechnoCleanupServices *s)
             s->clear_member(s->context, member);
         }
     }
+}
+
+void ra2_cleanup_techno_registries(const Ra2TechnoRegistryServices *s)
+{
+    s->perform(s->context, RA2_TCR_BEGIN);
+    s->perform(s->context, RA2_TCR_CLEAR_AUXILIARY);
+    s->perform(s->context, RA2_TCR_RELEASE_AUXILIARY);
+    s->perform(s->context, RA2_TCR_CLEAR_STATE);
+    int32_t index = s->find(s->context, 0);
+    s->perform(s->context, RA2_TCR_RESTORE_SAVED);
+    if (index != -1) s->remove(s->context, 0, index);
+    index = s->find(s->context, 1);
+    if (index != -1) s->remove(s->context, 1, index);
 }

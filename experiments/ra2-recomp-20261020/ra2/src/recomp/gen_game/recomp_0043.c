@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_registry_bridge.h"
 #include "combat_techno_cleanup_bridge.h"
 #include "combat_building_debris_bridge.h"
 #include "combat_crew_bridge.h"
@@ -6102,6 +6103,10 @@ L_006C211F:
     RECOMP_FLAGS_IN();
     MEM32(esi + 0x208) = ebx; /* 0x006C2126: mov dword ptr [esi + 0x208], ebx */
 L_006C212C:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_techno_cleanup_registry_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_006C219C;
     PUSH32(esp, edi); /* 0x006C212C: push edi */
     edi = esi + 0x3D8; /* 0x006C212D: lea edi, [esi + 0x3d8] */
     ecx = edi; /* 0x006C2133: mov ecx, edi */
