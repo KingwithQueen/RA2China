@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_base.h"
 #include "combat_techno_cleanup_containers.h"
 #include "combat_techno_cleanup_member_registry.h"
 #include "combat_techno_cleanup_registry.h"
@@ -45,4 +46,13 @@ void ra2_cleanup_techno_containers(const Ra2TechnoContainersServices *s)
         s->end(s->context, member);
     }
     s->finish_member118(s->context);
+}
+
+void ra2_cleanup_techno_base(const Ra2TechnoBaseCleanupServices *s)
+{
+    s->begin_radio(s->context);
+    if (s->has_data(s->context) && s->owns_data(s->context)) s->free_data(s->context);
+    s->reset_storage(s->context);
+    s->begin_mission(s->context);
+    s->destroy_object(s->context);
 }

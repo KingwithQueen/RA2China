@@ -1,3 +1,5 @@
+#include "combat_techno_cleanup_base.h"
+#include "combat_techno_cleanup_base_bridge.h"
 #include "combat_techno_cleanup_containers.h"
 #include "combat_techno_cleanup_containers_bridge.h"
 #include "combat_techno_cleanup_member_registry.h"
@@ -243,4 +245,67 @@ void ra2_techno_cleanup_containers_bridge(void)
     Ra2TechnoContainersServices s = {&c, containers_begin, containers_has_data, containers_owns_data,
         containers_free_data, containers_end, containers_finish_member118};
     ra2_cleanup_techno_containers(&s);
+}
+
+static void base_begin_radio(void *opaque)
+{
+    (void)opaque;
+    MEM32(g_esi) = 0x7A88E8; MEM32(g_esi + 4) = 0x7A88CC;
+    MEM32(g_esi + 8) = 0x7A88C4; MEM32(g_esi + 0x0C) = 0x7A88BC;
+    /* 原序列先读数据，再切换C8表；后续释放使用这次读取的指针。 */
+    g_eax = MEM32(g_esi + 0xCC); MEM32(g_esi + 0xC8) = 0x79A7FC;
+}
+
+static int32_t base_has_data(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_CMP; g_flag_a = g_eax; g_flag_b = g_ebx; g_flag_cf = g_eax < g_ebx;
+    return g_eax != g_ebx;
+}
+
+static int32_t base_owns_data(void *opaque)
+{
+    (void)opaque;
+    uint32_t owned = MEM8(g_esi + 0xD5);
+    g_flag_k = FK_NARROW(FK_CMP, 24); g_flag_a = owned << 24;
+    g_flag_b = (uint32_t)(uint8_t)g_ebx << 24; g_flag_cf = owned < (uint8_t)g_ebx;
+    return owned != (uint8_t)g_ebx;
+}
+
+static void base_free_data(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_eax;
+    registry_invoke(0x781D3B, g_esp);
+    g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4;
+    g_flag_cf = g_esp + 4 < g_esp; g_esp += 4;
+    /* 与原版相同，回调替换原槽后仍清槽，只释放最初传入的一次。 */
+    MEM32(g_esi + 0xCC) = g_ebx;
+}
+
+static void base_reset_storage(void *opaque)
+{
+    (void)opaque;
+    MEM8(g_esi + 0xD5) = (uint8_t)g_ebx; MEM32(g_esi + 0xD0) = g_ebx;
+}
+
+static void base_begin_mission(void *opaque)
+{
+    (void)opaque;
+    g_ecx = g_esi;
+    MEM32(g_esi) = 0x7A6200; MEM32(g_esi + 4) = 0x7A61E4;
+    MEM32(g_esi + 8) = 0x7A61DC; MEM32(g_esi + 0x0C) = 0x7A61D4;
+}
+
+static void base_destroy_object(void *opaque)
+{
+    (void)opaque;
+    registry_invoke(0x5D2530, g_esp);
+}
+
+void ra2_techno_cleanup_base_bridge(void)
+{
+    Ra2TechnoBaseCleanupServices s = {NULL, base_begin_radio, base_has_data, base_owns_data,
+        base_free_data, base_reset_storage, base_begin_mission, base_destroy_object};
+    ra2_cleanup_techno_base(&s);
 }

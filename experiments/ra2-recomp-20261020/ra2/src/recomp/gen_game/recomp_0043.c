@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_base_bridge.h"
 #include "combat_techno_cleanup_containers_bridge.h"
 #include "combat_techno_cleanup_member_registry_bridge.h"
 #include "combat_techno_cleanup_registry_bridge.h"
@@ -6210,6 +6211,10 @@ L_006C21DB:
     RECOMP_CALL(sub_00713350); /* 0x006C2214: call 0x713350 */
     RECOMP_FLAGS_IN();
 L_006C2219:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_techno_cleanup_base_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_006C228D;
     MEM32(esi) = 0x007A88E8u; /* 0x006C2219: mov dword ptr [esi], 0x7a88e8 */ /* RadioClass vtable */
     MEM32(esi + 0x4) = 0x007A88CCu; /* 0x006C221F: mov dword ptr [esi + 4], 0x7a88cc */
     MEM32(esi + 0x8) = 0x007A88C4u; /* 0x006C2226: mov dword ptr [esi + 8], 0x7a88c4 */
@@ -6246,6 +6251,7 @@ L_006C225F:
     MEM32(esi + 0xC) = 0x007A61D4u; /* 0x006C2281: mov dword ptr [esi + 0xc], 0x7a61d4 */
     RECOMP_CALL(ObjectClass__destructor); /* 0x006C2288: call 0x5d2530 */
     RECOMP_FLAGS_IN();
+L_006C228D:
     esi = POP32_VAL(esp); /* 0x006C228D: pop esi */
     ebx = POP32_VAL(esp); /* 0x006C228E: pop ebx */
     ecx = POP32_VAL(esp); /* 0x006C228F: pop ecx */
