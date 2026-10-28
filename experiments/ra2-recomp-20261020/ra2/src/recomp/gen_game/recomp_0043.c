@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_containers_bridge.h"
 #include "combat_techno_cleanup_member_registry_bridge.h"
 #include "combat_techno_cleanup_registry_bridge.h"
 #include "combat_techno_cleanup_bridge.h"
@@ -6189,6 +6190,10 @@ L_006C21D0:
     RECOMP_CALL(sub_00454B20); /* 0x006C21D6: call 0x454b20 */
     RECOMP_FLAGS_IN();
 L_006C21DB:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_techno_cleanup_containers_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_006C2219;
     ecx = esi + 0x3C0; /* 0x006C21DB: lea ecx, [esi + 0x3c0] */
     MEM32(ecx) = 0x007A179Cu; /* 0x006C21E1: mov dword ptr [ecx], 0x7a179c */ /* VectorClass@PAVAbstractClass@@ vtable */
     RECOMP_CALL(VectorClass_PAVAbstractClass__virtual_3); /* 0x006C21E7: call 0x4ce0d0 */
@@ -6204,6 +6209,7 @@ L_006C21DB:
     ecx = esi + 0x118; /* 0x006C220E: lea ecx, [esi + 0x118] */
     RECOMP_CALL(sub_00713350); /* 0x006C2214: call 0x713350 */
     RECOMP_FLAGS_IN();
+L_006C2219:
     MEM32(esi) = 0x007A88E8u; /* 0x006C2219: mov dword ptr [esi], 0x7a88e8 */ /* RadioClass vtable */
     MEM32(esi + 0x4) = 0x007A88CCu; /* 0x006C221F: mov dword ptr [esi + 4], 0x7a88cc */
     MEM32(esi + 0x8) = 0x007A88C4u; /* 0x006C2226: mov dword ptr [esi + 8], 0x7a88c4 */

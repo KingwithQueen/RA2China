@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_containers.h"
 #include "combat_techno_cleanup_member_registry.h"
 #include "combat_techno_cleanup_registry.h"
 #include "combat_techno_cleanup.h"
@@ -34,4 +35,14 @@ void ra2_cleanup_techno_member_registry(const Ra2TechnoMemberRegistryServices *s
     }
     int32_t index = s->find(s->context);
     if (index != -1) s->remove(s->context, index);
+}
+
+void ra2_cleanup_techno_containers(const Ra2TechnoContainersServices *s)
+{
+    for (uint32_t member = 0; member < 3; ++member) {
+        s->begin(s->context, member);
+        if (s->has_data(s->context) && s->owns_data(s->context)) s->free_data(s->context);
+        s->end(s->context, member);
+    }
+    s->finish_member118(s->context);
 }

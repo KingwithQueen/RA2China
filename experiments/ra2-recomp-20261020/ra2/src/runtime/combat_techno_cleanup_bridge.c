@@ -1,3 +1,5 @@
+#include "combat_techno_cleanup_containers.h"
+#include "combat_techno_cleanup_containers_bridge.h"
 #include "combat_techno_cleanup_member_registry.h"
 #include "combat_techno_cleanup_member_registry_bridge.h"
 #include "combat_techno_cleanup_registry.h"
@@ -173,4 +175,72 @@ void ra2_techno_cleanup_member_registry_bridge(void)
     Ra2TechnoMemberRegistryServices s = {&c, member_registry_has, member_registry_cleanup,
         member_registry_clear, member_registry_find, member_registry_remove};
     ra2_cleanup_techno_member_registry(&s);
+}
+
+typedef struct ContainersCleanupContext { uint32_t caller; } ContainersCleanupContext;
+static const uint32_t container_offsets[] = {0x3C0, 0x3A8, 0x390};
+
+static void containers_begin(void *opaque, uint32_t member)
+{
+    ContainersCleanupContext *c = opaque;
+    g_ecx = g_esi + container_offsets[member];
+    MEM32(g_ecx) = member == 2 ? 0x79D9D4 : 0x7A179C;
+    /* 保留原两个容器入口的保存帧和调用归属，释放回调仍遵循原cdecl接口。 */
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    c->caller = g_cur_func; g_cur_func = member == 2 ? 0x46D160 : 0x4CE0D0;
+    g_esp -= 4; MEM32(g_esp) = g_ebx; g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esi = g_ecx; g_ebx = 0;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_flag_cf = 0;
+    g_eax = MEM32(g_esi + 4);
+}
+
+static int32_t containers_has_data(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_CMP; g_flag_a = g_eax; g_flag_b = g_ebx; g_flag_cf = g_eax < g_ebx;
+    return g_eax != g_ebx;
+}
+
+static int32_t containers_owns_data(void *opaque)
+{
+    (void)opaque;
+    uint32_t owned = MEM8(g_esi + 0x0D);
+    g_flag_k = FK_NARROW(FK_CMP, 24); g_flag_a = owned << 24;
+    g_flag_b = (uint32_t)(uint8_t)g_ebx << 24; g_flag_cf = owned < (uint8_t)g_ebx;
+    return owned != (uint8_t)g_ebx;
+}
+
+static void containers_free_data(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_eax;
+    registry_invoke(0x781D3B, g_esp);
+    g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4;
+    g_flag_cf = g_esp + 4 < g_esp; g_esp += 4;
+    /* 回调换入的数据也在返回后清槽，不重复释放新指针。 */
+    MEM32(g_esi + 4) = g_ebx;
+}
+
+static void containers_end(void *opaque, uint32_t member)
+{
+    ContainersCleanupContext *c = opaque; (void)member;
+    MEM8(g_esi + 0x0D) = 0; MEM32(g_esi + 8) = g_ebx;
+    g_esi = MEM32(g_esp); g_esp += 4; g_ebx = MEM32(g_esp); g_esp += 4;
+    g_esp += 4; g_cur_func = c->caller;
+}
+
+static void containers_finish_member118(void *opaque)
+{
+    (void)opaque;
+    /* 1.006的713350只有RET；只保留this定位和空调用帧，不引入相邻函数的重置。 */
+    g_ecx = g_esi + 0x118;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR; g_esp += 4;
+}
+
+void ra2_techno_cleanup_containers_bridge(void)
+{
+    ContainersCleanupContext c = {0};
+    Ra2TechnoContainersServices s = {&c, containers_begin, containers_has_data, containers_owns_data,
+        containers_free_data, containers_end, containers_finish_member118};
+    ra2_cleanup_techno_containers(&s);
 }
