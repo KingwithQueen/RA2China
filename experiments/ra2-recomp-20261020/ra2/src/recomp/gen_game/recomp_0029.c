@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_members_bridge.h"
 #include "combat_object_cleanup_tables_bridge.h"
 #include "combat_object_cleanup_bridge.h"
 #include "combat_lifecycle_bridge.h"
@@ -57662,6 +57663,10 @@ L_005D26A4:
     RECOMP_BACKEDGE();
     if (CMP_L(_flag_a, _flag_b)) goto L_005D26A4; /* 0x005D26BA: jl 0x5d26a4 */
 L_005D26BC:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_object_cleanup_members_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_005D270D;
     PUSH32(esp, ebp); /* 0x005D26BC: push ebp */
     PUSH32(esp, edi); /* 0x005D26BD: push edi */
     edi = esi + 0x3C; /* 0x005D26BE: lea edi, [esi + 0x3c] */
@@ -57696,6 +57701,7 @@ L_005D2706:
     ecx = esi; /* 0x005D2706: mov ecx, esi */
     RECOMP_CALL(AbstractClass__constructor_or_destructor_0040FF90); /* 0x005D2708: call 0x40ff90 */
     RECOMP_FLAGS_IN();
+L_005D270D:
     esi = POP32_VAL(esp); /* 0x005D270D: pop esi */
     ecx = POP32_VAL(esp); /* 0x005D270E: pop ecx */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x005D270F: ret  */

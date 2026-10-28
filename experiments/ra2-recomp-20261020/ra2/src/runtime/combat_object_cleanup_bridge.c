@@ -1,3 +1,5 @@
+#include "combat_object_cleanup_members.h"
+#include "combat_object_cleanup_members_bridge.h"
 #include "combat_object_cleanup_tables.h"
 #include "combat_object_cleanup_tables_bridge.h"
 #include "combat_object_cleanup.h"
@@ -157,4 +159,72 @@ void ra2_object_cleanup_tables_bridge(void)
         {&c, object_tables_begin, object_tables_find, object_tables_can_remove,
         object_tables_shrink, object_tables_shift}};
     ra2_cleanup_object_tables(&s);
+}
+
+static void object_members_invoke(uint32_t target)
+{
+    uint32_t stack = g_esp, caller = g_cur_func;
+    recomp_func_t fn = recomp_lookup_manual(target);
+    if (!fn) fn = recomp_lookup(target);
+    if (!fn) fn = recomp_lookup_import(target);
+    if (!fn) { fprintf(stderr, "[object members] unresolved %08X\n", target); abort(); }
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR; fn();
+    if (g_esp != stack) { fputs("[object members] stack imbalance\n", stderr); abort(); }
+    g_cur_func = caller;
+}
+
+static void object_members_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_ebp; g_esp -= 4; MEM32(g_esp) = g_edi;
+    g_edi = g_esi + 0x3C;
+    MEM32(g_esi + 0x30) = 0; g_ecx = g_edi; MEM8(g_esi + 0x7D) = 0;
+}
+
+static void object_members_step(void *opaque, uint32_t step)
+{
+    (void)opaque;
+    /* 后续成员的地址与当前寄存器均按原调用点读取。 */
+    if (step == 1) { g_ebp = g_esi + 0x50; g_ecx = g_ebp; }
+    else if (step == 2) g_ecx = g_edi;
+    else if (step == 3) g_ecx = g_ebp;
+    object_members_invoke(step < 2 ? 0x405D50 : 0x405C10);
+}
+
+static int32_t object_members_restore_has_optional(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0x94);
+    g_edi = MEM32(g_esp); g_esp += 4;
+    g_flag_k = FK_TEST; g_flag_a = g_ecx; g_flag_b = g_ecx; g_flag_cf = 0;
+    g_ebp = MEM32(g_esp); g_esp += 4;
+    return g_ecx != 0;
+}
+
+static void object_members_cleanup_optional(void *opaque)
+{
+    (void)opaque;
+    object_members_invoke(0x5394F0);
+}
+
+static void object_members_clear_optional(void *opaque)
+{
+    (void)opaque;
+    /* 回调返回后清原槽，即使回调换入了另一成员也不追加清理。 */
+    MEM32(g_esi + 0x94) = 0;
+}
+
+static void object_members_cleanup_abstract(void *opaque)
+{
+    (void)opaque;
+    g_ecx = g_esi;
+    object_members_invoke(0x40FF90);
+}
+
+void ra2_object_cleanup_members_bridge(void)
+{
+    Ra2ObjectMembersCleanupServices s = {NULL, object_members_begin, object_members_step,
+        object_members_restore_has_optional, object_members_cleanup_optional,
+        object_members_clear_optional, object_members_cleanup_abstract};
+    ra2_cleanup_object_members(&s);
 }

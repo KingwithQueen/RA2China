@@ -1,3 +1,4 @@
+#include "combat_object_cleanup_members.h"
 #include "combat_object_cleanup_tables.h"
 #include "combat_object_cleanup.h"
 
@@ -16,4 +17,15 @@ void ra2_cleanup_object_tables(const Ra2ObjectTablesCleanupServices *s)
         s->select_table(s->context, table);
         ra2_cleanup_object_registry(&s->registry);
     }
+}
+
+void ra2_cleanup_object_members(const Ra2ObjectMembersCleanupServices *s)
+{
+    s->begin(s->context);
+    for (uint32_t step = 0; step < 4; ++step) s->member_step(s->context, step);
+    if (s->restore_and_has_optional(s->context)) {
+        s->cleanup_optional(s->context);
+        s->clear_optional(s->context);
+    }
+    s->cleanup_abstract(s->context);
 }
