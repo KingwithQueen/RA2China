@@ -1,3 +1,4 @@
+#include "combat_techno_cleanup_bridge.h"
 #include "combat_building_debris_bridge.h"
 #include "combat_crew_bridge.h"
 #include "combat_death_weapon_bridge.h"
@@ -6043,6 +6044,10 @@ L_006C20B0:
     ebx = 0; /* 0x006C20B5: xor ebx, ebx */
     _cf = 0;
     _flag_k = FK_TEST;
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_techno_cleanup_prefix_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_006C212C;
     ecx = MEM32(esi + 0x408); /* 0x006C20B7: mov ecx, dword ptr [esi + 0x408] */
     MEM32(esi) = 0x007ACB80u; /* 0x006C20BD: mov dword ptr [esi], 0x7acb80 */ /* TechnoClass vtable */
     /* cmp ecx, ebx */ /* 0x006C20C3: cmp ecx, ebx */
