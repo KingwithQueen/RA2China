@@ -1,3 +1,4 @@
+#include "combat_reference_controller_bridge.h"
 #include "combat_reference_prefix_bridge.h"
 #include "combat_object_cleanup_base.h"
 #include "combat_object_cleanup_base_bridge.h"
@@ -355,4 +356,70 @@ uint32_t ra2_reference_prefix_bridge(uint32_t variant)
         reference_prefix_manager, reference_prefix_has_reference, reference_prefix_first_stamp,
         reference_prefix_second_stamp, reference_prefix_is_dead};
     return ra2_check_reference_prefix(&s);
+}
+
+void sub_004025B0(void);
+void sub_004026F0(void);
+
+static int32_t reference_controller_present(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0xB0);
+    (void)object_compare(g_ecx, g_ebp);
+    return g_ecx != g_ebp;
+}
+
+static int32_t reference_controller_owns(void *opaque)
+{
+    (void)opaque;
+    uint32_t owner = MEM32(g_ecx + 0xC0);
+    (void)object_compare(g_esi, owner);
+    return g_esi == owner;
+}
+
+static int32_t reference_controller_needs_cancel(void *opaque)
+{
+    (void)opaque;
+    g_flag_a = (uint32_t)MEM8(g_esi + 0x18) << 24; g_flag_b = 2u << 24;
+    g_flag_cf = 0; g_flag_k = FK_NARROW(FK_TEST, 24);
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+static void reference_controller_cancel(void *opaque)
+{
+    (void)opaque;
+    object_base_invoke(sub_004025B0);
+}
+
+static void reference_controller_release(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0xB0);
+    object_base_invoke(sub_004026F0);
+}
+
+static void reference_controller_clear_field(void *opaque, uint32_t offset)
+{
+    (void)opaque;
+    /* 前一存储也可能与+B0重叠；逐项重读并保留原寄存器写入顺序。 */
+    uint32_t controller = MEM32(g_esi + 0xB0);
+    if (offset == 0xC0 || offset == 0xB8 || offset == 0x9C) g_eax = controller;
+    else if (offset == 0xBC || offset == 0x90) g_ecx = controller;
+    else g_edx = controller;
+    MEM32(controller + offset) = g_ebp;
+}
+
+static void reference_controller_clear_link(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_esp + 8);
+    MEM32(g_esi + 0xB0) = g_ebp;
+}
+
+void ra2_reference_controller_bridge(void)
+{
+    const Ra2ReferenceControllerServices s = {NULL, reference_controller_present,
+        reference_controller_owns, reference_controller_needs_cancel, reference_controller_cancel,
+        reference_controller_release, reference_controller_clear_field, reference_controller_clear_link};
+    ra2_cleanup_reference_controller(&s);
 }

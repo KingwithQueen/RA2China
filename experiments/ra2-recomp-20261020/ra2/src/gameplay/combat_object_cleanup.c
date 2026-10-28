@@ -1,3 +1,4 @@
+#include "combat_reference_controller.h"
 #include "combat_reference_prefix.h"
 #include "combat_object_cleanup_base.h"
 #include "combat_object_cleanup_members.h"
@@ -58,4 +59,15 @@ uint32_t ra2_check_reference_prefix(const Ra2ReferencePrefixServices *s)
     if (!s->second_stamp_matches(s->context)) return RA2_REFERENCE_INVALID;
     if (s->is_dead(s->context)) return RA2_REFERENCE_INVALID;
     return RA2_REFERENCE_CONTINUE;
+}
+
+void ra2_cleanup_reference_controller(const Ra2ReferenceControllerServices *s)
+{
+    if (!s->has_controller(s->context)) return;
+    if (!s->owns_reference(s->context)) return;
+    if (s->needs_cancel(s->context)) s->cancel(s->context);
+    s->release_current(s->context);
+    static const uint32_t offsets[] = {0xC0, 0xBC, 0xB4, 0xB8, 0x90, 0x98, 0x9C};
+    for (uint32_t i = 0; i < 7; ++i) s->clear_current_field(s->context, offsets[i]);
+    s->clear_reference_link(s->context);
 }
