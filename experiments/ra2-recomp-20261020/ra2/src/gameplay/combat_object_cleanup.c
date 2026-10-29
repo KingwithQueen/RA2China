@@ -1,3 +1,4 @@
+#include "combat_control_transition.h"
 #include "combat_control_set.h"
 #include "combat_control_tail.h"
 #include "combat_control_dispatch.h"
@@ -133,5 +134,17 @@ uint32_t ra2_set_control_state_and_tail(const Ra2ControlSetServices *s)
     s->begin(s->context);
     s->call_first(s->context);
     s->set_state(s->context);
+    return s->restore_and_tail(s->context);
+}
+
+uint32_t ra2_transition_control_state(const Ra2ControlTransitionServices *s)
+{
+    s->begin(s->context);
+    s->call_first(s->context);
+    if (s->needs_change(s->context)) {
+        s->clear_active(s->context);
+        s->call_change(s->context);
+        s->finish_change(s->context);
+    }
     return s->restore_and_tail(s->context);
 }

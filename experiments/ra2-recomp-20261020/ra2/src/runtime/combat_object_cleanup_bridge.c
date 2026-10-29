@@ -1,3 +1,4 @@
+#include "combat_control_transition_bridge.h"
 #include "combat_control_set_bridge.h"
 #include "combat_control_tail_bridge.h"
 #include "combat_control_dispatch_bridge.h"
@@ -776,4 +777,84 @@ uint32_t ra2_control_set_bridge(uint32_t deferred_flags[4])
     const Ra2ControlSetServices s = {&context, control_dispatch_begin, control_dispatch_first,
         control_set_state, control_set_restore_and_jump};
     return ra2_set_control_state_and_tail(&s);
+}
+
+static int32_t control_transition_needs_change(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = (uint32_t)MEM8(g_esi + 0xA4) << 24; g_flag_b = 1u << 24; g_flag_cf = 0;
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+static void control_transition_clear_active(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0xA4);
+    g_flag_k = FK_TEST; g_flag_a = g_ecx; g_flag_b = 0xFFFFFFFEu; g_flag_cf = 0;
+    g_ecx &= 0xFFFFFFFEu;
+    MEM32(g_esi + 0xA4) = g_ecx;
+}
+
+static void control_transition_call_change(void *opaque)
+{
+    ControlTailContext *c = opaque;
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    control_dispatch_invoke(&c->synced, MEM32(g_edx + 0x14));
+}
+
+static void control_transition_finish_change(void *opaque)
+{
+    (void)opaque;
+    /* 只对AL置位，保存整个EAX，并保留原8位标志宽度。 */
+    g_eax = MEM32(g_esi + 0xA4);
+    g_eax |= 4u;
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = g_flag_b = (g_eax & 0xFFu) << 24; g_flag_cf = 0;
+    MEM32(g_esi + 0xA4) = g_eax;
+}
+
+static uint32_t control_transition_restore_and_jump(void *opaque)
+{
+    ControlTailContext *c = opaque;
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    uint32_t target = MEM32(g_edx + 0x2C);
+    switch (target) {
+    case 0x00402600u: case 0x00402601u: case 0x00402603u: case 0x00402609u:
+    case 0x0040260Cu: case 0x00402613u: case 0x00402615u: case 0x0040261Bu:
+    case 0x0040261Eu: case 0x00402624u: case 0x0040262Au: case 0x0040262Cu:
+    case 0x0040262Fu: case 0x00402635u: case 0x00402637u: case 0x0040263Du:
+    case 0x00402643u: case 0x00402645u: case 0x00402646u:
+        c->deferred_flags[0] = c->synced.kind; c->deferred_flags[1] = c->synced.left;
+        c->deferred_flags[2] = c->synced.right; c->deferred_flags[3] = c->synced.carry;
+        return target;
+    default: break;
+    }
+    ControlDispatchContext live;
+    control_dispatch_sync(&live);
+    g_icall_trace[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = target;
+    g_icall_from[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = g_cur_func;
+    ++g_icall_trace_idx; ++g_icall_count;
+    control_dispatch_flags(&c->synced);
+    recomp_func_t fn = recomp_lookup_manual(target);
+    if (!fn) fn = recomp_lookup(target);
+    if (!fn) fn = recomp_lookup_import(target);
+    if (fn) {
+        control_dispatch_flags(&live);
+        fn();
+    } else if (target != RECOMP_RETADDR) {
+        fprintf(stderr, "ITAIL: unresolved VA 0x%08X from 0x%08X\n", target, g_cur_func);
+    }
+    return 0;
+}
+
+uint32_t ra2_control_transition_bridge(uint32_t deferred_flags[4])
+{
+    ControlTailContext context;
+    control_dispatch_sync(&context.synced); context.deferred_flags = deferred_flags;
+    const Ra2ControlTransitionServices s = {&context, control_dispatch_begin, control_dispatch_first,
+        control_transition_needs_change, control_transition_clear_active, control_transition_call_change,
+        control_transition_finish_change, control_transition_restore_and_jump};
+    return ra2_transition_control_state(&s);
 }
