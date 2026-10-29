@@ -1,3 +1,4 @@
+#include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
 #include "combat_control_list_link_bridge.h"
@@ -18077,6 +18078,9 @@ void sub_00407400(void) {
     RECOMP_ENTER(0x00407400u);
 
 L_00407400:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_pool_bridge(0);
+    return;
     PUSH32(esp, esi); /* 0x00407400: push esi */
     PUSH32(esp, edi); /* 0x00407401: push edi */
     edi = edx + 0x8; /* 0x00407402: lea edi, [edx + 8] */
@@ -18142,6 +18146,9 @@ void sub_00407440(void) {
     RECOMP_ENTER(0x00407440u);
 
 L_00407440:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_pool_bridge(1);
+    return;
     PUSH32(esp, ecx); /* 0x00407440: push ecx */
     RECOMP_CALL(operator_delete); /* 0x00407441: call 0x781d3b */
     RECOMP_FLAGS_IN();

@@ -1,3 +1,4 @@
+#include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
 #include "combat_control_list_link_bridge.h"
@@ -1158,4 +1159,130 @@ void ra2_control_free_list_bridge(uint32_t variant)
     }
     g_eax = cursor.value; g_ecx = cursor.current; g_edx = cursor.node;
     g_esp += 4;
+}
+
+void sub_00782017(void);
+void operator_delete(void);
+
+static void control_pool_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    g_edi = g_edx + 8u; g_esi = g_ecx;
+    /* IMUL取低32位，随后ADD按无符号回绕；不添加数量或溢出保护。 */
+    uint32_t product = g_edi * g_esi;
+    g_eax = product + 8u;
+    g_flag_k = FK_ADD; g_flag_a = product; g_flag_b = 8u;
+    g_flag_cf = (uint64_t)product + 8u > UINT32_MAX;
+    g_esp -= 4; MEM32(g_esp) = g_eax;
+}
+
+static void control_pool_allocate(void *opaque)
+{
+    ControlDispatchContext *synced = opaque;
+    object_base_invoke(sub_00782017);
+    control_dispatch_sync(synced);
+    g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4u;
+    g_flag_cf = (uint64_t)g_esp + 4u > UINT32_MAX;
+    g_esp += 4;
+}
+
+static int32_t control_pool_has_allocation(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
+    return g_eax != 0;
+}
+
+static int32_t control_pool_start_links(void *opaque)
+{
+    (void)opaque;
+    g_edx = g_esi - 1u; g_ecx = g_eax + 8u;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_edx; g_flag_cf = 0;
+    MEM32(g_eax) = g_ecx;
+    return g_edx != 0;
+}
+
+static void control_pool_begin_links(void *opaque)
+{
+    (void)opaque;
+    g_esi = g_edx;
+}
+
+static void control_pool_write_link(void *opaque)
+{
+    (void)opaque;
+    g_edx = g_edi + g_ecx;
+    g_flag_k = FK_DEC; g_flag_a = g_esi; g_flag_b = 1u;
+    /* DEC保留CF；写入与游标更新使用回调或让出后实际寄存器。 */
+    --g_esi;
+    MEM32(g_ecx) = g_edx;
+    g_ecx = g_edx;
+}
+
+static int32_t control_pool_backedge(void *opaque)
+{
+    ControlDispatchContext *synced = opaque;
+    int32_t again = g_flag_a != g_flag_b;
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        ControlDispatchContext live;
+        g_backedges = 0;
+        control_dispatch_sync(&live);
+        control_dispatch_flags(synced);
+        recomp_yield_hook();
+        control_dispatch_sync(synced);
+        control_dispatch_flags(&live);
+    }
+    return again;
+}
+
+static void control_pool_end_links(void *opaque)
+{
+    (void)opaque;
+    MEM32(g_ecx) = 0;
+}
+
+static void control_pool_finish(void *opaque)
+{
+    (void)opaque;
+    g_edi = MEM32(g_esp); g_esp += 4;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_esp += 4;
+}
+
+static void control_pool_release_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_ecx;
+}
+
+static void control_pool_release_call(void *opaque)
+{
+    (void)opaque;
+    object_base_invoke(operator_delete);
+}
+
+static void control_pool_release_finish(void *opaque)
+{
+    (void)opaque;
+    /* 原POP读取实际参数槽，不能用调用前缓存的ECX代替。 */
+    g_ecx = MEM32(g_esp); g_esp += 4;
+    g_esp += 4;
+}
+
+void ra2_control_pool_bridge(uint32_t variant)
+{
+    if (variant == 0) {
+        ControlDispatchContext synced;
+        control_dispatch_sync(&synced);
+        const Ra2ControlPoolServices s = {&synced, control_pool_begin, control_pool_allocate,
+            control_pool_has_allocation, control_pool_start_links, control_pool_begin_links,
+            control_pool_write_link, control_pool_backedge, control_pool_end_links, control_pool_finish};
+        ra2_initialize_control_pool(&s);
+    } else {
+        const Ra2ControlPoolReleaseServices s = {NULL, control_pool_release_begin,
+            control_pool_release_call, control_pool_release_finish};
+        ra2_release_control_pool(&s);
+    }
 }

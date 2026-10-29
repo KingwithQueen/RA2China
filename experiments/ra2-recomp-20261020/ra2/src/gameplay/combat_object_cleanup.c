@@ -1,3 +1,4 @@
+#include "combat_control_pool.h"
 #include "combat_control_free_list.h"
 #include "combat_control_list_end.h"
 #include "combat_control_list_link.h"
@@ -276,4 +277,25 @@ void ra2_return_control_free_node(Ra2ControlListLinkCursor *r, const Ra2ControlL
     /* 头部与表头槽可能重叠，必须先写节点next，再更新表头。 */
     s->write(s->context, r->value, r->node);
     s->write(s->context, r->current, r->value);
+}
+
+void ra2_initialize_control_pool(const Ra2ControlPoolServices *s)
+{
+    s->begin(s->context);
+    s->allocate(s->context);
+    if (s->has_allocation(s->context)) {
+        if (s->start_links(s->context)) {
+            s->begin_links(s->context);
+            do { s->write_link(s->context); } while (s->backedge_and_continue(s->context));
+        }
+        s->end_links(s->context);
+    }
+    s->finish(s->context);
+}
+
+void ra2_release_control_pool(const Ra2ControlPoolReleaseServices *s)
+{
+    s->begin(s->context);
+    s->release(s->context);
+    s->finish(s->context);
 }
