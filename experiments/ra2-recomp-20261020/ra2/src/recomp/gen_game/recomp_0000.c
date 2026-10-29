@@ -1,3 +1,4 @@
+#include "combat_reference_count_bridge.h"
 #include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
@@ -2649,6 +2650,9 @@ void sub_00401F90(void) {
     RECOMP_ENTER(0x00401F90u);
 
 L_00401F90:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_count_bridge();
+    return;
     eax = MEM32(ecx + 0xC); /* 0x00401F90: mov eax, dword ptr [ecx + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
     eax = eax - 1; /* 0x00401F93: dec eax */

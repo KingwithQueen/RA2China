@@ -1,3 +1,4 @@
+#include "combat_reference_count_bridge.h"
 #include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
@@ -531,4 +532,32 @@ void ra2_reference_exit_bridge(uint32_t variant, uint32_t clear_reference)
 {
     const Ra2ReferenceExitServices s = {NULL, reference_exit_clear_field, reference_exit_restore};
     ra2_finish_reference_cleanup(&s, clear_reference, variant);
+}
+
+static uint32_t reference_count_read(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_ecx + 0xC);
+    return g_eax;
+}
+
+static void reference_count_result(void *opaque, uint32_t value)
+{
+    (void)opaque;
+    g_eax = value;
+    g_flag_k = FK_TEST; g_flag_a = value; g_flag_b = value; g_flag_cf = 0;
+}
+
+static void reference_count_write(void *opaque, uint32_t value)
+{
+    (void)opaque;
+    MEM32(g_ecx + 0xC) = value;
+}
+
+void ra2_reference_count_bridge(void)
+{
+    const Ra2ReferenceCountServices s = {NULL, reference_count_read, reference_count_result,
+        reference_count_write};
+    ra2_decrement_reference_count(&s);
+    g_esp += 4;
 }

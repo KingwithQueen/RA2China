@@ -1,3 +1,4 @@
+#include "combat_reference_count.h"
 #include "combat_reference_exit.h"
 #include "combat_reference_list.h"
 #include "combat_reference_controller.h"
@@ -96,4 +97,12 @@ void ra2_finish_reference_cleanup(const Ra2ReferenceExitServices *s,
     s->clear_field(s->context, 8);
     if (clear_manager) s->clear_field(s->context, 0xC);
     s->restore_and_return(s->context);
+}
+
+void ra2_decrement_reference_count(const Ra2ReferenceCountServices *s)
+{
+    uint32_t result = s->read_count(s->context) - 1u;
+    s->set_result(s->context, result);
+    s->write_count(s->context, result);
+    if ((int32_t)result < 0) s->write_count(s->context, 0);
 }
