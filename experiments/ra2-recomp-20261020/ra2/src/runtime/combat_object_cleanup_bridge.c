@@ -1,3 +1,4 @@
+#include "combat_control_list_end_bridge.h"
 #include "combat_control_list_link_bridge.h"
 #include "combat_control_list_read_bridge.h"
 #include "combat_control_walk_bridge.h"
@@ -1123,5 +1124,19 @@ void ra2_control_list_link_bridge(uint32_t variant)
     else ra2_detach_control_link(&cursor, &s);
     g_eax = cursor.value; g_ecx = cursor.current; g_edx = cursor.node;
     /* 原入口已同步调用方标志；MOV-only沿用传入的完整元组，不重新计算。 */
+    g_esp += 4;
+}
+
+
+void ra2_control_list_end_bridge(uint32_t variant)
+{
+    Ra2ControlListEndCursor cursor = {g_eax, g_ecx, 0, 0, 0};
+    const Ra2ControlListEndServices s = {NULL, control_list_link_read};
+    if (variant == 0) ra2_read_control_front(&cursor, &s);
+    else ra2_read_control_back(&cursor, &s);
+    g_eax = cursor.value; g_ecx = cursor.current;
+    g_flag_k = cursor.compared ? FK_CMP : FK_TEST;
+    g_flag_a = cursor.left; g_flag_b = cursor.right;
+    g_flag_cf = cursor.compared && cursor.left < cursor.right;
     g_esp += 4;
 }

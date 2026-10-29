@@ -1,3 +1,4 @@
+#include "combat_control_list_end.h"
 #include "combat_control_list_link.h"
 #include "combat_control_list_read.h"
 #include "combat_control_walk.h"
@@ -227,4 +228,28 @@ void ra2_detach_control_link(Ra2ControlListLinkCursor *r, const Ra2ControlListLi
     s->write(s->context, r->value + 4, r->node);
     s->write(s->context, r->current, r->current);
     s->write(s->context, r->current + 4, r->current);
+}
+
+
+void ra2_read_control_front(Ra2ControlListEndCursor *r, const Ra2ControlListEndServices *s)
+{
+    /* 此入口没有空源保护，先读链，再区分空链和哨兵。 */
+    r->value = s->read(s->context, r->current);
+    r->left = r->right = r->value; r->compared = 0;
+    if (r->value) {
+        r->right = s->read(s->context, r->value + 8); r->compared = 1;
+        if (r->value == r->right) {
+            r->value = r->left = r->right = 0; r->compared = 0;
+        }
+    }
+}
+
+void ra2_read_control_back(Ra2ControlListEndCursor *r, const Ra2ControlListEndServices *s)
+{
+    r->current = s->read(s->context, r->current + 4);
+    uint32_t difference = r->current - s->read(s->context, r->current + 8);
+    uint32_t negated = 0u - difference;
+    /* NEG的借位经SBB形成全位掩码，使用无符号取负覆盖80000000。 */
+    r->left = negated ? UINT32_MAX : 0; r->right = r->current; r->compared = 0;
+    r->value = r->left & r->current;
 }
