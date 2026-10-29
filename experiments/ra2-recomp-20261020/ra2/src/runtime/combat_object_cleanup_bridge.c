@@ -1,3 +1,4 @@
+#include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
 #include "combat_control_list_link_bridge.h"
 #include "combat_control_list_read_bridge.h"
@@ -1138,5 +1139,23 @@ void ra2_control_list_end_bridge(uint32_t variant)
     g_flag_k = cursor.compared ? FK_CMP : FK_TEST;
     g_flag_a = cursor.left; g_flag_b = cursor.right;
     g_flag_cf = cursor.compared && cursor.left < cursor.right;
+    g_esp += 4;
+}
+
+
+void ra2_control_free_list_bridge(uint32_t variant)
+{
+    Ra2ControlListLinkCursor cursor = {g_eax, g_ecx, g_edx};
+    const Ra2ControlListLinkServices s = {NULL, control_list_link_read, control_list_link_write};
+    if (variant == 0) {
+        uint32_t header = ra2_take_control_free_node(&cursor, &s);
+        g_flag_k = header ? FK_ADD : FK_TEST;
+        g_flag_a = header; g_flag_b = header ? 8u : 0u;
+        g_flag_cf = header && (uint64_t)header + 8u > UINT32_MAX;
+    } else {
+        ra2_return_control_free_node(&cursor, &s);
+        /* LEA/MOV沿用入口已导入的完整标志元组。 */
+    }
+    g_eax = cursor.value; g_ecx = cursor.current; g_edx = cursor.node;
     g_esp += 4;
 }

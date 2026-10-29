@@ -1,3 +1,4 @@
+#include "combat_control_free_list.h"
 #include "combat_control_list_end.h"
 #include "combat_control_list_link.h"
 #include "combat_control_list_read.h"
@@ -252,4 +253,27 @@ void ra2_read_control_back(Ra2ControlListEndCursor *r, const Ra2ControlListEndSe
     /* NEG的借位经SBB形成全位掩码，使用无符号取负覆盖80000000。 */
     r->left = negated ? UINT32_MAX : 0; r->right = r->current; r->compared = 0;
     r->value = r->left & r->current;
+}
+
+
+uint32_t ra2_take_control_free_node(Ra2ControlListLinkCursor *r, const Ra2ControlListLinkServices *s)
+{
+    r->value = s->read(s->context, r->current);
+    uint32_t header = r->value;
+    if (header) {
+        r->node = s->read(s->context, header);
+        r->value += 8u;
+        s->write(s->context, r->current, r->node);
+    }
+    /* 返回旧头地址，供桥接保留ADD的两个操作数；空链不改临时next。 */
+    return header;
+}
+
+void ra2_return_control_free_node(Ra2ControlListLinkCursor *r, const Ra2ControlListLinkServices *s)
+{
+    r->value = r->node - 8u;
+    r->node = s->read(s->context, r->current);
+    /* 头部与表头槽可能重叠，必须先写节点next，再更新表头。 */
+    s->write(s->context, r->value, r->node);
+    s->write(s->context, r->current, r->value);
 }

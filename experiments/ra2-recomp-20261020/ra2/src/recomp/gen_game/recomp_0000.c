@@ -1,3 +1,4 @@
+#include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
 #include "combat_control_list_link_bridge.h"
 #include "combat_control_list_read_bridge.h"
@@ -18163,6 +18164,9 @@ void sub_00407450(void) {
     RECOMP_ENTER(0x00407450u);
 
 L_00407450:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_free_list_bridge(0);
+    return;
     eax = MEM32(ecx); /* 0x00407450: mov eax, dword ptr [ecx] */
     /* test eax, eax */ /* 0x00407452: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
@@ -18196,6 +18200,9 @@ void sub_00407460(void) {
     RECOMP_ENTER(0x00407460u);
 
 L_00407460:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_free_list_bridge(1);
+    return;
     eax = edx + (-0x8); /* 0x00407460: lea eax, [edx - 8] */
     edx = MEM32(ecx); /* 0x00407463: mov edx, dword ptr [ecx] */
     MEM32(eax) = edx; /* 0x00407465: mov dword ptr [eax], edx */
