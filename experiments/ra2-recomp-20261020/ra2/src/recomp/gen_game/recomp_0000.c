@@ -1,3 +1,4 @@
+#include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
@@ -1901,6 +1902,10 @@ L_00401A41:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401AEA; /* 0x00401A46: jne 0x401aea */
 L_00401A4C:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_failure_drain_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401AC0;
     ecx = esi; /* 0x00401A4C: mov ecx, esi */
     RECOMP_CALL(sub_004073A0); /* 0x00401A4E: call 0x4073a0 */
     RECOMP_FLAGS_IN();

@@ -1,3 +1,4 @@
+#include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
@@ -1506,5 +1507,58 @@ void ra2_manager_drain_bridge(void)
         manager_drain_detach_inner, manager_drain_cleanup_inner, manager_drain_return_inner,
         manager_drain_next_inner, manager_drain_backedge, manager_drain_cleanup_outer,
         manager_drain_return_outer, manager_drain_next_outer, manager_drain_restore_extra};
+    ra2_drain_manager_lists(&s);
+}
+
+static void manager_failure_drain_noop(void *opaque)
+{
+    /* 构造函数已建立保存帧，本片段不新增帧，也不提前恢复管理器。 */
+    (void)opaque;
+}
+
+static void manager_failure_drain_first_outer(void *opaque)
+{
+    /* 首次表头来自入口ESI，不能擅自改成EBX+0xC。 */
+    g_ecx = g_esi;
+    manager_drain_call(opaque, sub_004073A0);
+    g_edi = g_eax;
+}
+
+static void manager_failure_drain_first_inner(void *opaque)
+{
+    g_ebp = g_edi + 0x24u;
+    g_ecx = g_ebp;
+    manager_drain_call(opaque, sub_004073A0);
+    g_esi = g_eax;
+}
+
+static void manager_failure_drain_next_inner(void *opaque)
+{
+    g_ecx = g_ebp;
+    manager_drain_call(opaque, sub_004073A0);
+    g_esi = g_eax;
+    (void)manager_drain_has_inner(opaque);
+}
+
+static void manager_failure_drain_next_outer(void *opaque)
+{
+    /* 每轮使用回调或让出后的实际EBX重新计算外链表头。 */
+    g_ecx = g_ebx + 0xCu;
+    manager_drain_call(opaque, sub_004073A0);
+    g_edi = g_eax;
+    (void)manager_drain_has_outer(opaque);
+}
+
+void ra2_manager_failure_drain_bridge(void)
+{
+    ControlDispatchContext synced;
+    control_dispatch_sync(&synced);
+    const Ra2ManagerDrainServices s = {&synced, manager_failure_drain_noop,
+        manager_failure_drain_first_outer, manager_drain_has_outer, manager_failure_drain_noop,
+        manager_drain_outer_needs_detach, manager_drain_detach_outer,
+        manager_failure_drain_first_inner, manager_drain_has_inner, manager_drain_detach_inner,
+        manager_drain_cleanup_inner, manager_drain_return_inner, manager_failure_drain_next_inner,
+        manager_drain_backedge, manager_drain_cleanup_outer, manager_drain_return_outer,
+        manager_failure_drain_next_outer, manager_failure_drain_noop};
     ra2_drain_manager_lists(&s);
 }
