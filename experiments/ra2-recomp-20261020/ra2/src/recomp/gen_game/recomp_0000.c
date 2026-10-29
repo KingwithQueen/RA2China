@@ -1,3 +1,4 @@
+#include "combat_control_list_read_bridge.h"
 #include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
@@ -17822,6 +17823,9 @@ void sub_004072F0(void) {
     RECOMP_ENTER(0x004072F0u);
 
 L_004072F0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_list_read_bridge();
+    return;
     /* test ecx, ecx */ /* 0x004072F0: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
     _cf = 0;
@@ -17864,6 +17868,9 @@ void sub_00407310(void) {
     RECOMP_ENTER(0x00407310u);
 
 L_00407310:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_list_read_bridge();
+    return;
     /* test ecx, ecx */ /* 0x00407310: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
     _cf = 0;

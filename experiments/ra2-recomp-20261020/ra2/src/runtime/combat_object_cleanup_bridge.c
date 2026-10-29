@@ -1,3 +1,4 @@
+#include "combat_control_list_read_bridge.h"
 #include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
@@ -1047,4 +1048,54 @@ void ra2_control_walk_bridge(uint32_t variant)
         control_walk_has_current, control_walk_is_active, control_walk_type_matches,
         control_walk_change, control_walk_next, control_walk_backedge, control_walk_finish};
     ra2_walk_control_states(&s);
+}
+
+
+static int32_t control_list_read_has_source(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_ecx; g_flag_cf = 0;
+    return g_ecx != 0;
+}
+
+static void control_list_read_link(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_ecx);
+}
+
+static int32_t control_list_read_has_link(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
+    return g_eax != 0;
+}
+
+static int32_t control_list_read_is_sentinel(void *opaque)
+{
+    (void)opaque;
+    (void)object_compare(g_eax, MEM32(g_eax + 8));
+    return g_flag_a == g_flag_b;
+}
+
+static void control_list_read_clear(void *opaque)
+{
+    (void)opaque;
+    /* 原XOR EAX,EAX以零结果TEST表示，不能留下前一次CMP的标志。 */
+    g_eax = 0;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = 0; g_flag_cf = 0;
+}
+
+static void control_list_read_finish(void *opaque)
+{
+    (void)opaque;
+    g_esp += 4;
+}
+
+void ra2_control_list_read_bridge(void)
+{
+    const Ra2ControlListReadServices s = {NULL, control_list_read_has_source,
+        control_list_read_link, control_list_read_has_link, control_list_read_is_sentinel,
+        control_list_read_clear, control_list_read_finish};
+    ra2_read_control_list_link(&s);
 }

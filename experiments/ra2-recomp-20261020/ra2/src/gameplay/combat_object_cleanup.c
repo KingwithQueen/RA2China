@@ -1,3 +1,4 @@
+#include "combat_control_list_read.h"
 #include "combat_control_walk.h"
 #include "combat_control_switch.h"
 #include "combat_control_transition.h"
@@ -175,6 +176,19 @@ void ra2_walk_control_states(const Ra2ControlWalkServices *s)
             if (!s->has_current(s->context)) break;
             s->next(s->context);
         } while (s->backedge_and_continue(s->context));
+    }
+    s->finish(s->context);
+}
+
+
+void ra2_read_control_list_link(const Ra2ControlListReadServices *s)
+{
+    if (!s->has_source(s->context)) {
+        s->clear_result(s->context);
+    } else {
+        s->read_link(s->context);
+        /* 空链不读节点；普通节点返回时保留哨兵比较的标志。 */
+        if (s->has_link(s->context) && s->is_sentinel(s->context)) s->clear_result(s->context);
     }
     s->finish(s->context);
 }
