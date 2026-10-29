@@ -1,3 +1,4 @@
+#include "combat_control_set_bridge.h"
 #include "combat_control_tail_bridge.h"
 #include "combat_control_dispatch_bridge.h"
 #include "combat_reference_count_bridge.h"
@@ -722,4 +723,57 @@ uint32_t ra2_control_tail_bridge(uint32_t deferred_flags[4])
     const Ra2ControlTailServices s = {&context, control_dispatch_begin, control_dispatch_first,
         control_tail_clear, control_tail_restore_and_jump};
     return ra2_clear_control_state_and_tail(&s);
+}
+
+static void control_set_state(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0xA4);
+    g_ecx |= 0x10u;
+    /* 原OR以结果的TEST表示标志，不能复用清位AND的两操作数。 */
+    g_flag_k = FK_TEST; g_flag_a = g_ecx; g_flag_b = g_ecx; g_flag_cf = 0;
+    MEM32(g_esi + 0xA4) = g_ecx;
+}
+
+static uint32_t control_set_restore_and_jump(void *opaque)
+{
+    ControlTailContext *c = opaque;
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    uint32_t target = MEM32(g_edx + 0x2C);
+    /* 本函数内部标签先交回原_ljump，保持当前局部与旧全局标志分离。 */
+    switch (target) {
+    case 0x004026C0u: case 0x004026C1u: case 0x004026C3u: case 0x004026C9u:
+    case 0x004026CCu: case 0x004026D2u: case 0x004026D5u: case 0x004026DBu:
+    case 0x004026E1u: case 0x004026E3u: case 0x004026E4u:
+        c->deferred_flags[0] = c->synced.kind; c->deferred_flags[1] = c->synced.left;
+        c->deferred_flags[2] = c->synced.right; c->deferred_flags[3] = c->synced.carry;
+        return target;
+    default: break;
+    }
+    ControlDispatchContext live;
+    control_dispatch_sync(&live);
+    g_icall_trace[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = target;
+    g_icall_from[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = g_cur_func;
+    ++g_icall_trace_idx; ++g_icall_count;
+    control_dispatch_flags(&c->synced);
+    recomp_func_t fn = recomp_lookup_manual(target);
+    if (!fn) fn = recomp_lookup(target);
+    if (!fn) fn = recomp_lookup_import(target);
+    if (fn) {
+        control_dispatch_flags(&live);
+        fn();
+    } else if (target != RECOMP_RETADDR) {
+        fprintf(stderr, "ITAIL: unresolved VA 0x%08X from 0x%08X\n", target, g_cur_func);
+    }
+    return 0;
+}
+
+uint32_t ra2_control_set_bridge(uint32_t deferred_flags[4])
+{
+    ControlTailContext context;
+    control_dispatch_sync(&context.synced); context.deferred_flags = deferred_flags;
+    const Ra2ControlSetServices s = {&context, control_dispatch_begin, control_dispatch_first,
+        control_set_state, control_set_restore_and_jump};
+    return ra2_set_control_state_and_tail(&s);
 }

@@ -1,3 +1,4 @@
+#include "combat_control_set.h"
 #include "combat_control_tail.h"
 #include "combat_control_dispatch.h"
 #include "combat_reference_count.h"
@@ -124,5 +125,13 @@ uint32_t ra2_clear_control_state_and_tail(const Ra2ControlTailServices *s)
     s->begin(s->context);
     s->call_first(s->context);
     s->clear_state(s->context);
+    return s->restore_and_tail(s->context);
+}
+
+uint32_t ra2_set_control_state_and_tail(const Ra2ControlSetServices *s)
+{
+    s->begin(s->context);
+    s->call_first(s->context);
+    s->set_state(s->context);
     return s->restore_and_tail(s->context);
 }
