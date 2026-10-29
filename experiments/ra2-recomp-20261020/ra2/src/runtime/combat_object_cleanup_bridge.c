@@ -1,3 +1,4 @@
+#include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
@@ -1285,4 +1286,65 @@ void ra2_control_pool_bridge(uint32_t variant)
             control_pool_release_call, control_pool_release_finish};
         ra2_release_control_pool(&s);
     }
+}
+
+void sub_00407440(void);
+
+typedef struct ManagerPoolReleaseContext {
+    uint32_t variant;
+} ManagerPoolReleaseContext;
+
+static uint32_t manager_pool_base(const ManagerPoolReleaseContext *c)
+{
+    return c->variant ? g_esi : g_ebx;
+}
+
+static int32_t manager_pool_load(void *opaque, uint32_t offset)
+{
+    ManagerPoolReleaseContext *c = opaque;
+    g_ecx = MEM32(manager_pool_base(c) + offset);
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_ecx; g_flag_cf = 0;
+    return g_ecx != 0;
+}
+
+static void manager_pool_release(void *opaque)
+{
+    (void)opaque;
+    object_base_invoke(sub_00407440);
+}
+
+static void manager_pool_release_owner(void *opaque)
+{
+    ManagerPoolReleaseContext *c = opaque;
+    g_esp -= 4; MEM32(g_esp) = manager_pool_base(c);
+    object_base_invoke(operator_delete);
+    /* 保留原ADD的两个操作数；析构尾部的POP/RET不再改标志。 */
+    g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4u;
+    g_flag_cf = (uint64_t)g_esp + 4u > UINT32_MAX;
+    g_esp += 4;
+}
+
+static void manager_pool_finish(void *opaque)
+{
+    ManagerPoolReleaseContext *c = opaque;
+    if (!c->variant) {
+        g_eax = 0;
+        g_flag_k = FK_TEST; g_flag_a = g_flag_b = 0; g_flag_cf = 0;
+    }
+    /* 从回调后的实际保存槽依序恢复，两条尾段的第四个POP及RET不同。 */
+    g_edi = MEM32(g_esp); g_esp += 4;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_ebp = MEM32(g_esp); g_esp += 4;
+    if (c->variant) g_ecx = MEM32(g_esp);
+    else g_ebx = MEM32(g_esp);
+    g_esp += 4;
+    g_esp += c->variant ? 4u : 12u;
+}
+
+void ra2_manager_pool_release_bridge(uint32_t variant)
+{
+    ManagerPoolReleaseContext context = {variant};
+    const Ra2ManagerPoolReleaseServices s = {&context, manager_pool_load,
+        manager_pool_release, manager_pool_release_owner, manager_pool_finish};
+    ra2_release_manager_pools(&s);
 }

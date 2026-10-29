@@ -1,3 +1,4 @@
+#include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
 #include "combat_control_list_end_bridge.h"
@@ -1971,6 +1972,9 @@ L_00401A9D:
     RECOMP_BACKEDGE();
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401A59; /* 0x00401ABE: jne 0x401a59 */
 L_00401AC0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_pool_release_bridge(0);
+    return;
     ecx = MEM32(ebx + 0x4); /* 0x00401AC0: mov ecx, dword ptr [ebx + 4] */
     /* test ecx, ecx */ /* 0x00401AC3: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
@@ -2115,6 +2119,9 @@ L_00401B81:
     esi = MEM32(esp + 0x10); /* 0x00401B81: mov esi, dword ptr [esp + 0x10] */
     ebx = POP32_VAL(esp); /* 0x00401B85: pop ebx */
 L_00401B86:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_pool_release_bridge(1);
+    return;
     ecx = MEM32(esi + 0x4); /* 0x00401B86: mov ecx, dword ptr [esi + 4] */
     /* test ecx, ecx */ /* 0x00401B89: test ecx, ecx */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);

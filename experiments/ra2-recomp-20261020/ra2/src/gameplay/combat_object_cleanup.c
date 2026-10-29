@@ -1,3 +1,4 @@
+#include "combat_manager_pool_release.h"
 #include "combat_control_pool.h"
 #include "combat_control_free_list.h"
 #include "combat_control_list_end.h"
@@ -297,5 +298,14 @@ void ra2_release_control_pool(const Ra2ControlPoolReleaseServices *s)
 {
     s->begin(s->context);
     s->release(s->context);
+    s->finish(s->context);
+}
+
+void ra2_release_manager_pools(const Ra2ManagerPoolReleaseServices *s)
+{
+    if (s->load_pool(s->context, 4)) s->release_pool(s->context);
+    /* 第一次释放可能更换管理器或第二个池，不能提前缓存。 */
+    if (s->load_pool(s->context, 8)) s->release_pool(s->context);
+    s->release_manager(s->context);
     s->finish(s->context);
 }
