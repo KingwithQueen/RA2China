@@ -1,3 +1,4 @@
+#include "combat_control_list_link_bridge.h"
 #include "combat_control_list_read_bridge.h"
 #include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
@@ -17913,6 +17914,9 @@ void sub_00407350(void) {
     RECOMP_ENTER(0x00407350u);
 
 L_00407350:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_list_link_bridge(0);
+    return;
     eax = MEM32(ecx + 0x4); /* 0x00407350: mov eax, dword ptr [ecx + 4] */
     MEM32(edx) = ecx; /* 0x00407353: mov dword ptr [edx], ecx */
     MEM32(edx + 0x4) = eax; /* 0x00407355: mov dword ptr [edx + 4], eax */
@@ -17937,6 +17941,9 @@ void sub_00407370(void) {
     RECOMP_ENTER(0x00407370u);
 
 L_00407370:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_list_link_bridge(1);
+    return;
     MEM32(edx + 0x4) = ecx; /* 0x00407370: mov dword ptr [edx + 4], ecx */
     eax = MEM32(ecx); /* 0x00407373: mov eax, dword ptr [ecx] */
     MEM32(edx) = eax; /* 0x00407375: mov dword ptr [edx], eax */
@@ -17961,6 +17968,9 @@ void sub_00407380(void) {
     RECOMP_ENTER(0x00407380u);
 
 L_00407380:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_list_link_bridge(2);
+    return;
     eax = MEM32(ecx + 0x4); /* 0x00407380: mov eax, dword ptr [ecx + 4] */
     edx = MEM32(ecx); /* 0x00407383: mov edx, dword ptr [ecx] */
     MEM32(eax) = edx; /* 0x00407385: mov dword ptr [eax], edx */

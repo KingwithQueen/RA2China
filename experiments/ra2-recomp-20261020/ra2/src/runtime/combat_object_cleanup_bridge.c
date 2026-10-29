@@ -1,3 +1,4 @@
+#include "combat_control_list_link_bridge.h"
 #include "combat_control_list_read_bridge.h"
 #include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
@@ -1098,4 +1099,29 @@ void ra2_control_list_read_bridge(void)
         control_list_read_link, control_list_read_has_link, control_list_read_is_sentinel,
         control_list_read_clear, control_list_read_finish};
     ra2_read_control_list_link(&s);
+}
+
+
+static uint32_t control_list_link_read(void *opaque, uint32_t address)
+{
+    (void)opaque;
+    return MEM32(address);
+}
+
+static void control_list_link_write(void *opaque, uint32_t address, uint32_t value)
+{
+    (void)opaque;
+    MEM32(address) = value;
+}
+
+void ra2_control_list_link_bridge(uint32_t variant)
+{
+    Ra2ControlListLinkCursor cursor = {g_eax, g_ecx, g_edx};
+    const Ra2ControlListLinkServices s = {NULL, control_list_link_read, control_list_link_write};
+    if (variant == 0) ra2_insert_control_link_before(&cursor, &s);
+    else if (variant == 1) ra2_insert_control_link_after(&cursor, &s);
+    else ra2_detach_control_link(&cursor, &s);
+    g_eax = cursor.value; g_ecx = cursor.current; g_edx = cursor.node;
+    /* 原入口已同步调用方标志；MOV-only沿用传入的完整元组，不重新计算。 */
+    g_esp += 4;
 }

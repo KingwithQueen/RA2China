@@ -1,3 +1,4 @@
+#include "combat_control_list_link.h"
 #include "combat_control_list_read.h"
 #include "combat_control_walk.h"
 #include "combat_control_switch.h"
@@ -191,4 +192,39 @@ void ra2_read_control_list_link(const Ra2ControlListReadServices *s)
         if (s->has_link(s->context) && s->is_sentinel(s->context)) s->clear_result(s->context);
     }
     s->finish(s->context);
+}
+
+
+void ra2_insert_control_link_before(Ra2ControlListLinkCursor *r, const Ra2ControlListLinkServices *s)
+{
+    r->value = s->read(s->context, r->current + 4);
+    s->write(s->context, r->node, r->current);
+    s->write(s->context, r->node + 4, r->value);
+    s->write(s->context, r->current + 4, r->node);
+    /* 节点可能重叠，必须在前三次写入后再读取插入节点的前链。 */
+    r->current = s->read(s->context, r->node + 4);
+    s->write(s->context, r->current, r->node);
+}
+
+void ra2_insert_control_link_after(Ra2ControlListLinkCursor *r, const Ra2ControlListLinkServices *s)
+{
+    s->write(s->context, r->node + 4, r->current);
+    r->value = s->read(s->context, r->current);
+    s->write(s->context, r->node, r->value);
+    s->write(s->context, r->current, r->node);
+    r->current = s->read(s->context, r->node);
+    s->write(s->context, r->current + 4, r->node);
+}
+
+void ra2_detach_control_link(Ra2ControlListLinkCursor *r, const Ra2ControlListLinkServices *s)
+{
+    r->value = s->read(s->context, r->current + 4);
+    r->node = s->read(s->context, r->current);
+    s->write(s->context, r->value, r->node);
+    /* 修改前节点后，当前节点的两条链也可能因别名改变，不能沿用旧值。 */
+    r->value = s->read(s->context, r->current);
+    r->node = s->read(s->context, r->current + 4);
+    s->write(s->context, r->value + 4, r->node);
+    s->write(s->context, r->current, r->current);
+    s->write(s->context, r->current + 4, r->current);
 }
