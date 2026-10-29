@@ -1,3 +1,4 @@
+#include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
 #include "combat_reference_prefix_bridge.h"
@@ -14148,8 +14149,14 @@ L_00405D1C:
     MEM32(esi + 0x18) = ecx; /* 0x00405D3B: mov dword ptr [esi + 0x18], ecx */
     ebx = POP32_VAL(esp); /* 0x00405D3E: pop ebx */
 L_00405D3F:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_exit_bridge(1, 1);
+    return;
     MEM32(eax) = ebp; /* 0x00405D3F: mov dword ptr [eax], ebp */
 L_00405D41:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_exit_bridge(1, 0);
+    return;
     MEM32(eax + 0x8) = ebp; /* 0x00405D41: mov dword ptr [eax + 8], ebp */
     MEM32(eax + 0xC) = ebp; /* 0x00405D44: mov dword ptr [eax + 0xc], ebp */
     esi = POP32_VAL(esp); /* 0x00405D47: pop esi */
@@ -14329,8 +14336,14 @@ L_00405E5C:
     MEM32(esi + 0x18) = ecx; /* 0x00405E7B: mov dword ptr [esi + 0x18], ecx */
     ebx = POP32_VAL(esp); /* 0x00405E7E: pop ebx */
 L_00405E7F:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_exit_bridge(0, 1);
+    return;
     MEM32(eax) = ebp; /* 0x00405E7F: mov dword ptr [eax], ebp */
 L_00405E81:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_exit_bridge(0, 0);
+    return;
     MEM32(eax + 0x8) = ebp; /* 0x00405E81: mov dword ptr [eax + 8], ebp */
     esi = POP32_VAL(esp); /* 0x00405E84: pop esi */
     ebp = POP32_VAL(esp); /* 0x00405E85: pop ebp */

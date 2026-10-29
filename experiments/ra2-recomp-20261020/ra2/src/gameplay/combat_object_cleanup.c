@@ -1,3 +1,4 @@
+#include "combat_reference_exit.h"
 #include "combat_reference_list.h"
 #include "combat_reference_controller.h"
 #include "combat_reference_prefix.h"
@@ -86,4 +87,13 @@ void ra2_cleanup_reference_list(const Ra2ReferenceListServices *s)
     s->clear_field(s->context, 0x278);
     s->mark_dead(s->context);
     s->restore_counter(s->context);
+}
+
+void ra2_finish_reference_cleanup(const Ra2ReferenceExitServices *s,
+    uint32_t clear_reference, uint32_t clear_manager)
+{
+    if (clear_reference) s->clear_field(s->context, 0);
+    s->clear_field(s->context, 8);
+    if (clear_manager) s->clear_field(s->context, 0xC);
+    s->restore_and_return(s->context);
 }

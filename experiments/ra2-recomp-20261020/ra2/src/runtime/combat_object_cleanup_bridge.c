@@ -1,3 +1,4 @@
+#include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
 #include "combat_reference_prefix_bridge.h"
@@ -508,4 +509,26 @@ void ra2_reference_list_bridge(void)
         reference_list_clear_field, reference_list_write_state, reference_list_mark_dead,
         reference_list_restore_counter};
     ra2_cleanup_reference_list(&s);
+}
+
+static void reference_exit_clear_field(void *opaque, uint32_t offset)
+{
+    (void)opaque;
+    MEM32(g_eax + offset) = g_ebp;
+}
+
+static void reference_exit_restore(void *opaque)
+{
+    (void)opaque;
+    /* 清槽可能改写保存值；按原顺序逐项弹出，不提前缓存保存帧。 */
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_ebp = MEM32(g_esp); g_esp += 4;
+    g_ecx = MEM32(g_esp); g_esp += 4;
+    g_esp += 4;
+}
+
+void ra2_reference_exit_bridge(uint32_t variant, uint32_t clear_reference)
+{
+    const Ra2ReferenceExitServices s = {NULL, reference_exit_clear_field, reference_exit_restore};
+    ra2_finish_reference_cleanup(&s, clear_reference, variant);
 }
