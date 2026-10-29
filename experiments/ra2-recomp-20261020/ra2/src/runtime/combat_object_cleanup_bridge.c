@@ -1,3 +1,4 @@
+#include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
 #include "combat_control_set_bridge.h"
@@ -938,4 +939,112 @@ uint32_t ra2_control_switch_bridge(uint32_t deferred_flags[4])
         control_switch_needs_change, control_switch_call_change, control_switch_clear_changed,
         control_switch_activate_state, control_switch_restore_and_jump};
     return ra2_switch_control_state(&s);
+}
+
+
+void sub_004072F0(void);
+void sub_00407310(void);
+void sub_00402600(void);
+void sub_00402650(void);
+
+typedef struct ControlWalkContext {
+    ControlDispatchContext synced;
+    uint32_t variant;
+} ControlWalkContext;
+
+static void control_walk_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    g_edi = g_edx;
+    g_flag_k = FK_ADD; g_flag_a = g_ecx; g_flag_b = 0xF8u;
+    g_flag_cf = (uint64_t)g_ecx + 0xF8u > UINT32_MAX;
+    g_ecx += 0xF8u;
+}
+
+static void control_walk_first(void *opaque)
+{
+    ControlWalkContext *c = opaque;
+    object_base_invoke(sub_004072F0);
+    control_dispatch_sync(&c->synced);
+    g_esi = g_eax;
+}
+
+static int32_t control_walk_has_current(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_esi; g_flag_cf = 0;
+    return g_esi != 0;
+}
+
+static int32_t control_walk_is_active(void *opaque)
+{
+    ControlWalkContext *c = opaque;
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = (uint32_t)MEM8(g_esi + 0xA4) << 24;
+    g_flag_b = (c->variant ? 4u : 1u) << 24; g_flag_cf = 0;
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+static int32_t control_walk_type_matches(void *opaque)
+{
+    (void)opaque;
+    (void)object_compare(g_edi, UINT32_MAX);
+    if (g_edi == UINT32_MAX) return 1;
+    (void)object_compare(MEM32(g_esi + 0xC), g_edi);
+    return g_flag_a == g_flag_b;
+}
+
+static void control_walk_change(void *opaque)
+{
+    ControlWalkContext *c = opaque;
+    g_ecx = g_esi;
+    object_base_invoke(c->variant ? sub_00402650 : sub_00402600);
+    control_dispatch_sync(&c->synced);
+}
+
+static void control_walk_next(void *opaque)
+{
+    ControlWalkContext *c = opaque;
+    g_ecx = g_esi;
+    object_base_invoke(sub_00407310);
+    control_dispatch_sync(&c->synced);
+    g_esi = g_eax;
+    (void)control_walk_has_current(opaque);
+}
+
+static int32_t control_walk_backedge(void *opaque)
+{
+    ControlWalkContext *c = opaque;
+    /* 让出仅同步通用寄存器。分支使用让出前的局部TEST，钩子读取上次同步的全局标志。 */
+    int32_t again = (g_flag_a & g_flag_b) != 0;
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        ControlDispatchContext live;
+        g_backedges = 0;
+        control_dispatch_sync(&live);
+        control_dispatch_flags(&c->synced);
+        recomp_yield_hook();
+        control_dispatch_sync(&c->synced);
+        control_dispatch_flags(&live);
+    }
+    return again;
+}
+
+static void control_walk_finish(void *opaque)
+{
+    (void)opaque;
+    g_edi = MEM32(g_esp); g_esp += 4;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_esp += 4;
+}
+
+void ra2_control_walk_bridge(uint32_t variant)
+{
+    ControlWalkContext context;
+    control_dispatch_sync(&context.synced); context.variant = variant;
+    const Ra2ControlWalkServices s = {&context, control_walk_begin, control_walk_first,
+        control_walk_has_current, control_walk_is_active, control_walk_type_matches,
+        control_walk_change, control_walk_next, control_walk_backedge, control_walk_finish};
+    ra2_walk_control_states(&s);
 }

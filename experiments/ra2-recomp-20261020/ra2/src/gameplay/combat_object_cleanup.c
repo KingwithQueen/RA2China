@@ -1,3 +1,4 @@
+#include "combat_control_walk.h"
 #include "combat_control_switch.h"
 #include "combat_control_transition.h"
 #include "combat_control_set.h"
@@ -160,4 +161,20 @@ uint32_t ra2_switch_control_state(const Ra2ControlSwitchServices *s)
         s->activate_state(s->context);
     }
     return s->restore_and_tail(s->context);
+}
+
+
+void ra2_walk_control_states(const Ra2ControlWalkServices *s)
+{
+    s->begin(s->context);
+    s->first(s->context);
+    if (s->has_current(s->context)) {
+        do {
+            if (s->is_active(s->context) && s->type_matches(s->context)) s->change(s->context);
+            /* 回调可能改动当前寄存器，原流程在取下一项前再检查一次。 */
+            if (!s->has_current(s->context)) break;
+            s->next(s->context);
+        } while (s->backedge_and_continue(s->context));
+    }
+    s->finish(s->context);
 }

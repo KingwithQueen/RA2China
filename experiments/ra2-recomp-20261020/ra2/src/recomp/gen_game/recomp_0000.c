@@ -1,3 +1,4 @@
+#include "combat_control_walk_bridge.h"
 #include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
 #include "combat_control_set_bridge.h"
@@ -5897,6 +5898,9 @@ void sub_00403770(void) {
     RECOMP_ENTER(0x00403770u);
 
 L_00403770:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_walk_bridge(0);
+    return;
     PUSH32(esp, esi); /* 0x00403770: push esi */
     PUSH32(esp, edi); /* 0x00403771: push edi */
     edi = edx; /* 0x00403772: mov edi, edx */
@@ -5972,6 +5976,9 @@ void sub_004037C0(void) {
     RECOMP_ENTER(0x004037C0u);
 
 L_004037C0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_walk_bridge(1);
+    return;
     PUSH32(esp, esi); /* 0x004037C0: push esi */
     PUSH32(esp, edi); /* 0x004037C1: push edi */
     edi = edx; /* 0x004037C2: mov edi, edx */
