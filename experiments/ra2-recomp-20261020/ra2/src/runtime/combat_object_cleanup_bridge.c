@@ -1,3 +1,4 @@
+#include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
 #include "combat_control_set_bridge.h"
 #include "combat_control_tail_bridge.h"
@@ -857,4 +858,84 @@ uint32_t ra2_control_transition_bridge(uint32_t deferred_flags[4])
         control_transition_needs_change, control_transition_clear_active, control_transition_call_change,
         control_transition_finish_change, control_transition_restore_and_jump};
     return ra2_transition_control_state(&s);
+}
+
+static int32_t control_switch_needs_change(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = (uint32_t)MEM8(g_esi + 0xA4) << 24; g_flag_b = 4u << 24; g_flag_cf = 0;
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+static void control_switch_call_change(void *opaque)
+{
+    ControlTailContext *c = opaque;
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    control_dispatch_invoke(&c->synced, MEM32(g_edx + 0x18));
+}
+
+static void control_switch_clear_changed(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_esi + 0xA4);
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = (g_eax & 0xFFu) << 24; g_flag_b = 0xFBu << 24; g_flag_cf = 0;
+    g_eax &= 0xFFFFFFFBu;
+    MEM32(g_esi + 0xA4) = g_eax;
+}
+
+static void control_switch_activate_state(void *opaque)
+{
+    (void)opaque;
+    /* 再次读取完整状态，以ECX写回；不将置位后的值覆盖EAX。 */
+    g_ecx = MEM32(g_esi + 0xA4);
+    g_ecx |= 1u;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_ecx; g_flag_cf = 0;
+    MEM32(g_esi + 0xA4) = g_ecx;
+}
+
+static uint32_t control_switch_restore_and_jump(void *opaque)
+{
+    ControlTailContext *c = opaque;
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    uint32_t target = MEM32(g_edx + 0x2C);
+    switch (target) {
+    case 0x00402650u: case 0x00402651u: case 0x00402653u: case 0x00402659u:
+    case 0x0040265Cu: case 0x00402663u: case 0x00402665u: case 0x0040266Bu:
+    case 0x0040266Du: case 0x00402670u: case 0x00402676u: case 0x00402678u:
+    case 0x0040267Eu: case 0x00402684u: case 0x00402687u: case 0x0040268Du:
+    case 0x00402693u: case 0x00402695u: case 0x00402696u:
+        c->deferred_flags[0] = c->synced.kind; c->deferred_flags[1] = c->synced.left;
+        c->deferred_flags[2] = c->synced.right; c->deferred_flags[3] = c->synced.carry;
+        return target;
+    default: break;
+    }
+    ControlDispatchContext live;
+    control_dispatch_sync(&live);
+    g_icall_trace[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = target;
+    g_icall_from[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = g_cur_func;
+    ++g_icall_trace_idx; ++g_icall_count;
+    control_dispatch_flags(&c->synced);
+    recomp_func_t fn = recomp_lookup_manual(target);
+    if (!fn) fn = recomp_lookup(target);
+    if (!fn) fn = recomp_lookup_import(target);
+    if (fn) {
+        control_dispatch_flags(&live);
+        fn();
+    } else if (target != RECOMP_RETADDR) {
+        fprintf(stderr, "ITAIL: unresolved VA 0x%08X from 0x%08X\n", target, g_cur_func);
+    }
+    return 0;
+}
+
+uint32_t ra2_control_switch_bridge(uint32_t deferred_flags[4])
+{
+    ControlTailContext context;
+    control_dispatch_sync(&context.synced); context.deferred_flags = deferred_flags;
+    const Ra2ControlSwitchServices s = {&context, control_dispatch_begin, control_dispatch_first,
+        control_switch_needs_change, control_switch_call_change, control_switch_clear_changed,
+        control_switch_activate_state, control_switch_restore_and_jump};
+    return ra2_switch_control_state(&s);
 }

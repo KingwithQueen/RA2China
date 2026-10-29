@@ -1,3 +1,4 @@
+#include "combat_control_switch_bridge.h"
 #include "combat_control_transition_bridge.h"
 #include "combat_control_set_bridge.h"
 #include "combat_control_tail_bridge.h"
@@ -3643,8 +3644,19 @@ void sub_00402650(void) {
     uint32_t _itail_tgt = 0;
     RECOMP_REGS_LOCALS
     RECOMP_ENTER(0x00402650u);
+    uint32_t control_switch_delegated = 0, control_switch_synced[4];
 
 L_00402650:
+    if (!control_switch_delegated) {
+        RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+        _itail_tgt = ra2_control_switch_bridge(control_switch_synced);
+        if (!_itail_tgt) return;
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        g_flag_k = control_switch_synced[0]; g_flag_a = control_switch_synced[1];
+        g_flag_b = control_switch_synced[2]; g_flag_cf = control_switch_synced[3];
+        control_switch_delegated = 1;
+        goto _ljump;
+    }
     PUSH32(esp, esi); /* 0x00402650: push esi */
 L_00402651:
     esi = ecx; /* 0x00402651: mov esi, ecx */
