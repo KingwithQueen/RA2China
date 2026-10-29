@@ -1,3 +1,4 @@
+#include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
@@ -2035,6 +2036,10 @@ void sub_00401B00(void) {
     RECOMP_ENTER(0x00401B00u);
 
 L_00401B00:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_drain_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401B86;
     PUSH32(esp, ecx); /* 0x00401B00: push ecx */
     PUSH32(esp, ebp); /* 0x00401B01: push ebp */
     PUSH32(esp, esi); /* 0x00401B02: push esi */

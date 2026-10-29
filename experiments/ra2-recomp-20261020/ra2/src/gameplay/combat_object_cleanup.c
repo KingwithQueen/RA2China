@@ -1,3 +1,4 @@
+#include "combat_manager_drain.h"
 #include "combat_manager_pool_release.h"
 #include "combat_control_pool.h"
 #include "combat_control_free_list.h"
@@ -308,4 +309,29 @@ void ra2_release_manager_pools(const Ra2ManagerPoolReleaseServices *s)
     if (s->load_pool(s->context, 8)) s->release_pool(s->context);
     s->release_manager(s->context);
     s->finish(s->context);
+}
+
+void ra2_drain_manager_lists(const Ra2ManagerDrainServices *s)
+{
+    s->begin(s->context);
+    s->first_outer(s->context);
+    if (s->has_outer(s->context)) {
+        s->save_extra(s->context);
+        do {
+            if (s->outer_needs_detach(s->context)) s->detach_outer(s->context);
+            s->first_inner(s->context);
+            if (s->has_inner(s->context)) {
+                do {
+                    s->detach_inner(s->context);
+                    s->cleanup_inner(s->context);
+                    s->return_inner(s->context);
+                    s->next_inner(s->context);
+                } while (s->backedge_and_continue(s->context));
+            }
+            s->cleanup_outer(s->context);
+            s->return_outer(s->context);
+            s->next_outer(s->context);
+        } while (s->backedge_and_continue(s->context));
+        s->restore_extra(s->context);
+    }
 }

@@ -1,3 +1,4 @@
+#include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
 #include "combat_control_pool_bridge.h"
 #include "combat_control_free_list_bridge.h"
@@ -1347,4 +1348,163 @@ void ra2_manager_pool_release_bridge(uint32_t variant)
     const Ra2ManagerPoolReleaseServices s = {&context, manager_pool_load,
         manager_pool_release, manager_pool_release_owner, manager_pool_finish};
     ra2_release_manager_pools(&s);
+}
+
+void sub_004073A0(void);
+void sub_00407380(void);
+void sub_00408520(void);
+void sub_00408450(void);
+void sub_00407460(void);
+
+static void manager_drain_call(void *opaque, recomp_func_t function)
+{
+    ControlDispatchContext *synced = opaque;
+    object_base_invoke(function);
+    control_dispatch_sync(synced);
+}
+
+static void manager_drain_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_ecx;
+    g_esp -= 4; MEM32(g_esp) = g_ebp;
+    g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esi = g_ecx;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    MEM32(g_esp + 0xC) = g_esi;
+    g_ebp = g_esi + 0xCu;
+}
+
+static void manager_drain_first_outer(void *opaque)
+{
+    g_ecx = g_ebp;
+    manager_drain_call(opaque, sub_004073A0);
+    g_edi = g_eax;
+}
+
+static int32_t manager_drain_has_outer(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_edi; g_flag_cf = 0;
+    return g_edi != 0;
+}
+
+static void manager_drain_save_extra(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_ebx;
+}
+
+static int32_t manager_drain_outer_needs_detach(void *opaque)
+{
+    (void)opaque;
+    (void)object_compare(MEM32(g_edi + 4), g_edi);
+    return g_flag_a != g_flag_b;
+}
+
+static void manager_drain_detach_outer(void *opaque)
+{
+    g_ecx = g_edi;
+    manager_drain_call(opaque, sub_00407380);
+}
+
+static void manager_drain_first_inner(void *opaque)
+{
+    g_ebx = g_edi + 0x24u;
+    g_ecx = g_ebx;
+    manager_drain_call(opaque, sub_004073A0);
+    g_esi = g_eax;
+}
+
+static int32_t manager_drain_has_inner(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_esi; g_flag_cf = 0;
+    return g_esi != 0;
+}
+
+static void manager_drain_detach_inner(void *opaque)
+{
+    g_ecx = g_esi;
+    manager_drain_call(opaque, sub_00407380);
+}
+
+static void manager_drain_cleanup_inner(void *opaque)
+{
+    g_ecx = g_esi;
+    manager_drain_call(opaque, sub_00408520);
+}
+
+static void manager_drain_return_inner(void *opaque)
+{
+    /* 清理回调可能改变当前节点和owner，按原序重新读取。 */
+    g_eax = MEM32(g_edi + 0x3C);
+    g_edx = g_esi;
+    g_ecx = MEM32(g_eax + 4);
+    manager_drain_call(opaque, sub_00407460);
+}
+
+static void manager_drain_next_inner(void *opaque)
+{
+    g_ecx = g_ebx;
+    manager_drain_call(opaque, sub_004073A0);
+    g_esi = g_eax;
+    (void)manager_drain_has_inner(opaque);
+}
+
+static int32_t manager_drain_backedge(void *opaque)
+{
+    ControlDispatchContext *synced = opaque;
+    int32_t again = (g_flag_a & g_flag_b) != 0;
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        ControlDispatchContext live;
+        g_backedges = 0;
+        control_dispatch_sync(&live);
+        /* 原回边只同步寄存器；钩子读取上次调用/让出同步的全局标志。 */
+        control_dispatch_flags(synced);
+        recomp_yield_hook();
+        control_dispatch_sync(synced);
+        control_dispatch_flags(&live);
+    }
+    return again;
+}
+
+static void manager_drain_cleanup_outer(void *opaque)
+{
+    g_ecx = g_edi + 0x1Cu;
+    manager_drain_call(opaque, sub_00408450);
+}
+
+static void manager_drain_return_outer(void *opaque)
+{
+    g_ecx = MEM32(g_edi + 0x3C);
+    g_edx = g_edi;
+    g_ecx = MEM32(g_ecx + 8);
+    manager_drain_call(opaque, sub_00407460);
+}
+
+static void manager_drain_next_outer(void *opaque)
+{
+    manager_drain_first_outer(opaque);
+    (void)manager_drain_has_outer(opaque);
+}
+
+static void manager_drain_restore_extra(void *opaque)
+{
+    (void)opaque;
+    g_esi = MEM32(g_esp + 0x10);
+    g_ebx = MEM32(g_esp); g_esp += 4;
+}
+
+void ra2_manager_drain_bridge(void)
+{
+    ControlDispatchContext synced;
+    control_dispatch_sync(&synced);
+    const Ra2ManagerDrainServices s = {&synced, manager_drain_begin, manager_drain_first_outer,
+        manager_drain_has_outer, manager_drain_save_extra, manager_drain_outer_needs_detach,
+        manager_drain_detach_outer, manager_drain_first_inner, manager_drain_has_inner,
+        manager_drain_detach_inner, manager_drain_cleanup_inner, manager_drain_return_inner,
+        manager_drain_next_inner, manager_drain_backedge, manager_drain_cleanup_outer,
+        manager_drain_return_outer, manager_drain_next_outer, manager_drain_restore_extra};
+    ra2_drain_manager_lists(&s);
 }
