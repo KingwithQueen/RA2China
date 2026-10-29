@@ -1,3 +1,4 @@
+#include "combat_control_dispatch_bridge.h"
 #include "combat_reference_count_bridge.h"
 #include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
@@ -560,4 +561,106 @@ void ra2_reference_count_bridge(void)
         reference_count_write};
     ra2_decrement_reference_count(&s);
     g_esp += 4;
+}
+
+typedef struct ControlDispatchContext { uint32_t kind, left, right, carry; } ControlDispatchContext;
+
+static void control_dispatch_sync(ControlDispatchContext *c)
+{
+    c->kind = g_flag_k; c->left = g_flag_a; c->right = g_flag_b; c->carry = g_flag_cf;
+}
+
+static void control_dispatch_flags(const ControlDispatchContext *c)
+{
+    g_flag_k = c->kind; g_flag_a = c->left; g_flag_b = c->right; g_flag_cf = c->carry;
+}
+
+static void control_dispatch_invoke(ControlDispatchContext *c, uint32_t target)
+{
+    ControlDispatchContext live;
+    control_dispatch_sync(&live);
+    g_icall_trace[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = target;
+    g_icall_from[g_icall_trace_idx & (ICALL_TRACE_SIZE - 1)] = g_cur_func;
+    ++g_icall_trace_idx; ++g_icall_count;
+    /* 原ICALL在解析成功后才刷新局部标志；未解析时FLAGS_IN读旧全局状态。 */
+    control_dispatch_flags(c);
+    recomp_func_t fn = recomp_lookup_manual(target);
+    if (!fn) fn = recomp_lookup(target);
+    if (!fn) fn = recomp_lookup_import(target);
+    if (fn) {
+        uint32_t stack = g_esp, caller = g_cur_func;
+        g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+        control_dispatch_flags(&live);
+        fn();
+        if (g_esp != stack) { fputs("[control dispatch] stack imbalance\n", stderr); abort(); }
+        g_cur_func = caller;
+    } else {
+        fprintf(stderr, "ICALL: unresolved VA 0x%08X from 0x%08X\n", target, g_cur_func);
+        g_eax = 0;
+    }
+    control_dispatch_sync(c);
+}
+
+static void control_dispatch_begin(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_esi; g_esi = g_ecx;
+}
+
+static void control_dispatch_first(void *opaque)
+{
+    g_eax = MEM32(g_esi + 0xD4);
+    control_dispatch_invoke(opaque, MEM32(g_eax + 0x28));
+}
+
+static int32_t control_dispatch_needs_optional(void *opaque)
+{
+    (void)opaque;
+    g_flag_k = FK_NARROW(FK_TEST, 24);
+    g_flag_a = (uint32_t)MEM8(g_esi + 0xA4) << 24; g_flag_b = 5u << 24; g_flag_cf = 0;
+    return (g_flag_a & g_flag_b) != 0;
+}
+
+static void control_dispatch_optional(void *opaque)
+{
+    g_edx = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    control_dispatch_invoke(opaque, MEM32(g_edx + 0x10));
+}
+
+static void control_dispatch_last(void *opaque)
+{
+    g_eax = MEM32(g_esi + 0xD4); g_ecx = g_esi;
+    control_dispatch_invoke(opaque, MEM32(g_eax + 0x2C));
+}
+
+static int32_t control_dispatch_has_callback(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_esi + 0xBC);
+    g_flag_k = FK_TEST; g_flag_a = g_eax; g_flag_b = g_eax; g_flag_cf = 0;
+    return g_eax != 0;
+}
+
+static void control_dispatch_callback(void *opaque)
+{
+    g_ecx = g_esi;
+    control_dispatch_invoke(opaque, g_eax);
+}
+
+static void control_dispatch_finish(void *opaque)
+{
+    (void)opaque;
+    MEM32(g_esi + 0x168) = 0;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_esp += 4;
+}
+
+void ra2_control_dispatch_bridge(void)
+{
+    ControlDispatchContext context;
+    control_dispatch_sync(&context);
+    const Ra2ControlDispatchServices s = {&context, control_dispatch_begin, control_dispatch_first,
+        control_dispatch_needs_optional, control_dispatch_optional, control_dispatch_last,
+        control_dispatch_has_callback, control_dispatch_callback, control_dispatch_finish};
+    ra2_dispatch_control_cleanup(&s);
 }

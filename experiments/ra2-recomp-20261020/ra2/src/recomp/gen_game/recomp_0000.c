@@ -1,3 +1,4 @@
+#include "combat_control_dispatch_bridge.h"
 #include "combat_reference_count_bridge.h"
 #include "combat_reference_exit_bridge.h"
 #include "combat_reference_list_bridge.h"
@@ -3487,6 +3488,9 @@ void sub_004025B0(void) {
     RECOMP_ENTER(0x004025B0u);
 
 L_004025B0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_control_dispatch_bridge();
+    return;
     PUSH32(esp, esi); /* 0x004025B0: push esi */
     esi = ecx; /* 0x004025B1: mov esi, ecx */
     eax = MEM32(esi + 0xD4); /* 0x004025B3: mov eax, dword ptr [esi + 0xd4] */

@@ -1,3 +1,4 @@
+#include "combat_control_dispatch.h"
 #include "combat_reference_count.h"
 #include "combat_reference_exit.h"
 #include "combat_reference_list.h"
@@ -105,4 +106,14 @@ void ra2_decrement_reference_count(const Ra2ReferenceCountServices *s)
     s->set_result(s->context, result);
     s->write_count(s->context, result);
     if ((int32_t)result < 0) s->write_count(s->context, 0);
+}
+
+void ra2_dispatch_control_cleanup(const Ra2ControlDispatchServices *s)
+{
+    s->begin(s->context);
+    s->call_first(s->context);
+    if (s->needs_optional(s->context)) s->call_optional(s->context);
+    s->call_last(s->context);
+    if (s->has_callback(s->context)) s->call_callback(s->context);
+    s->finish(s->context);
 }
