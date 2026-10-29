@@ -1,3 +1,4 @@
+#include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
 #include "combat_reference_prefix_bridge.h"
 /* Functions named by name_lift.py */
@@ -14094,6 +14095,10 @@ L_00405C86:
     eax = MEM32(esp + 0x8); /* 0x00405CE5: mov eax, dword ptr [esp + 8] */
     MEM32(esi + 0xB0) = ebp; /* 0x00405CE9: mov dword ptr [esi + 0xb0], ebp */
 L_00405CEF:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_list_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00405D3F;
     ecx = MEM32(esi + 0xA8); /* 0x00405CEF: mov ecx, dword ptr [esi + 0xa8] */
     PUSH32(esp, ebx); /* 0x00405CF5: push ebx */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
@@ -14271,6 +14276,10 @@ L_00405DC6:
     eax = MEM32(esp + 0x8); /* 0x00405E25: mov eax, dword ptr [esp + 8] */
     MEM32(esi + 0xB0) = ebp; /* 0x00405E29: mov dword ptr [esi + 0xb0], ebp */
 L_00405E2F:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_reference_list_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00405E7F;
     ecx = MEM32(esi + 0xA8); /* 0x00405E2F: mov ecx, dword ptr [esi + 0xa8] */
     PUSH32(esp, ebx); /* 0x00405E35: push ebx */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);

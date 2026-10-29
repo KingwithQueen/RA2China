@@ -1,3 +1,4 @@
+#include "combat_reference_list.h"
 #include "combat_reference_controller.h"
 #include "combat_reference_prefix.h"
 #include "combat_object_cleanup_base.h"
@@ -70,4 +71,19 @@ void ra2_cleanup_reference_controller(const Ra2ReferenceControllerServices *s)
     static const uint32_t offsets[] = {0xC0, 0xBC, 0xB4, 0xB8, 0x90, 0x98, 0x9C};
     for (uint32_t i = 0; i < 7; ++i) s->clear_current_field(s->context, offsets[i]);
     s->clear_reference_link(s->context);
+}
+
+void ra2_cleanup_reference_list(const Ra2ReferenceListServices *s)
+{
+    if (s->begin_positive(s->context)) {
+        s->begin_items(s->context);
+        do { s->release_current(s->context); } while (s->clear_and_advance(s->context));
+        s->end_items(s->context);
+    }
+    s->clear_field(s->context, 0xA8);
+    s->write_state(s->context, 4);
+    s->clear_field(s->context, 0x138);
+    s->clear_field(s->context, 0x278);
+    s->mark_dead(s->context);
+    s->restore_counter(s->context);
 }

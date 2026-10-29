@@ -1,3 +1,4 @@
+#include "combat_reference_list_bridge.h"
 #include "combat_reference_controller_bridge.h"
 #include "combat_reference_prefix_bridge.h"
 #include "combat_object_cleanup_base.h"
@@ -422,4 +423,89 @@ void ra2_reference_controller_bridge(void)
         reference_controller_owns, reference_controller_needs_cancel, reference_controller_cancel,
         reference_controller_release, reference_controller_clear_field, reference_controller_clear_link};
     ra2_cleanup_reference_controller(&s);
+}
+
+void sub_00401F90(void);
+
+static int32_t reference_list_begin(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0xA8);
+    g_esp -= 4; MEM32(g_esp) = g_ebx; g_ebx = 0;
+    (void)object_compare(g_ecx, g_ebp);
+    return (int32_t)g_ecx > (int32_t)g_ebp;
+}
+
+static void reference_list_begin_items(void *opaque)
+{
+    (void)opaque;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    g_edi = g_esi + 0x28;
+}
+
+static void reference_list_release(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_edi);
+    object_base_invoke(sub_00401F90);
+}
+
+static int32_t reference_list_advance(void *opaque)
+{
+    (void)opaque;
+    uint32_t prior_kind = g_flag_k, prior_left = g_flag_a, prior_right = g_flag_b, prior_carry = g_flag_cf;
+    MEM32(g_edi) = g_ebp;
+    g_eax = MEM32(g_esi + 0xA8);
+    ++g_ebx; g_edi += 4;
+    int32_t following = object_compare(g_ebx, g_eax);
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        uint32_t left = g_flag_a, right = g_flag_b, carry = g_flag_cf;
+        /* 原backedge不刷新全局标志，分支仍使用让出前的局部CMP结果。 */
+        g_flag_k = prior_kind; g_flag_a = prior_left; g_flag_b = prior_right; g_flag_cf = prior_carry;
+        g_backedges = 0; recomp_yield_hook();
+        g_flag_k = FK_CMP; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    }
+    return following;
+}
+
+static void reference_list_end_items(void *opaque)
+{
+    (void)opaque;
+    g_eax = MEM32(g_esp + 0x10);
+    g_edi = MEM32(g_esp); g_esp += 4;
+}
+
+static void reference_list_clear_field(void *opaque, uint32_t offset)
+{
+    (void)opaque;
+    MEM32(g_esi + offset) = g_ebp;
+}
+
+static void reference_list_write_state(void *opaque, uint32_t state)
+{
+    (void)opaque;
+    MEM32(g_esi + 0x1C) = state;
+}
+
+static void reference_list_mark_dead(void *opaque)
+{
+    (void)opaque;
+    g_ecx = MEM32(g_esi + 0x18) | 1u;
+    g_flag_k = FK_TEST; g_flag_a = g_ecx; g_flag_b = g_ecx; g_flag_cf = 0;
+    MEM32(g_esi + 0x18) = g_ecx;
+}
+
+static void reference_list_restore_counter(void *opaque)
+{
+    (void)opaque;
+    g_ebx = MEM32(g_esp); g_esp += 4;
+}
+
+void ra2_reference_list_bridge(void)
+{
+    const Ra2ReferenceListServices s = {NULL, reference_list_begin, reference_list_begin_items,
+        reference_list_release, reference_list_advance, reference_list_end_items,
+        reference_list_clear_field, reference_list_write_state, reference_list_mark_dead,
+        reference_list_restore_counter};
+    ra2_cleanup_reference_list(&s);
 }
