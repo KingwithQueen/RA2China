@@ -1,0 +1,6 @@
+#ifndef RA2_COMBAT_MANAGER_CONSTRUCTOR_POOL_BRIDGE_H
+#define RA2_COMBAT_MANAGER_CONSTRUCTOR_POOL_BRIDGE_H
+
+void ra2_manager_constructor_pool_bridge(void);
+
+#endif

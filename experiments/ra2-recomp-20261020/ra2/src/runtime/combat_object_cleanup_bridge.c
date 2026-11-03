@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_pool_bridge.h"
 #include "combat_manager_constructor_prefix_bridge.h"
 #include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
@@ -1590,4 +1591,33 @@ void ra2_manager_constructor_prefix_bridge(void)
     g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4u;
     g_flag_cf = (uint64_t)g_esp + 4u > UINT32_MAX;
     g_esp += 4;
+}
+
+void sub_00407400(void);
+
+static void manager_constructor_quotient(void)
+{
+    g_esi = g_eax + 0x1Cu;
+    g_eax = g_ebp;
+    g_edx = (int32_t)g_eax < 0 ? UINT32_MAX : 0;
+    /* CDQ后的被除数等于有符号EAX，用64位除法避免宿主溢出与负数左移。 */
+    int64_t dividend = (int32_t)g_eax;
+    int32_t divisor = (int32_t)g_esi;
+    if (divisor != 0) {
+        g_eax = (uint32_t)(dividend / divisor);
+        g_edx = (uint32_t)(dividend % divisor);
+    } else {
+        /* 沿用旧生成版的零除回退；商溢出也沿用低32位，不冒充原版异常等价。 */
+        g_eax = 0; g_edx = 0;
+    }
+}
+
+void ra2_manager_constructor_pool_bridge(void)
+{
+    manager_constructor_quotient();
+    g_edx = g_esi; g_ecx = g_eax;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    sub_00407400();
+    g_cur_func = caller;
 }

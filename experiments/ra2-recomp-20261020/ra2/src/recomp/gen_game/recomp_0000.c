@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_pool_bridge.h"
 #include "combat_manager_constructor_prefix_bridge.h"
 #include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
@@ -1874,6 +1875,10 @@ L_004019E0:
     esp = esp + 4; /* 0x00401A08: add esp, 4 */
     _flag_k = FK_ADD;
 L_00401A0B:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_constructor_pool_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401A1C;
     esi = eax + 0x1C; /* 0x00401A0B: lea esi, [eax + 0x1c] */
     eax = ebp; /* 0x00401A0E: mov eax, ebp */
     edx = ((int32_t)eax < 0) ? 0xFFFFFFFFu : 0; /* 0x00401A10: cdq  */
@@ -1884,6 +1889,7 @@ L_00401A0B:
     ecx = eax; /* 0x00401A15: mov ecx, eax */
     RECOMP_CALL(sub_00407400); /* 0x00401A17: call 0x407400 */
     RECOMP_FLAGS_IN();
+L_00401A1C:
     ecx = MEM32(esp + 0x14); /* 0x00401A1C: mov ecx, dword ptr [esp + 0x14] */
     edx = 0x64u; /* 0x00401A20: mov edx, 0x64 */
     MEM32(ebx + 0x4) = eax; /* 0x00401A25: mov dword ptr [ebx + 4], eax */
