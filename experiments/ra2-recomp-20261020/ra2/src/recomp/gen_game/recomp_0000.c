@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_prefix_bridge.h"
 #include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
@@ -1844,6 +1845,10 @@ void sub_004019E0(void) {
     RECOMP_ENTER(0x004019E0u);
 
 L_004019E0:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_constructor_prefix_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401A0B;
     PUSH32(esp, ebx); /* 0x004019E0: push ebx */
     PUSH32(esp, ebp); /* 0x004019E1: push ebp */
     PUSH32(esp, esi); /* 0x004019E2: push esi */
@@ -1868,6 +1873,7 @@ L_004019E0:
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esp = esp + 4; /* 0x00401A08: add esp, 4 */
     _flag_k = FK_ADD;
+L_00401A0B:
     esi = eax + 0x1C; /* 0x00401A0B: lea esi, [eax + 0x1c] */
     eax = ebp; /* 0x00401A0E: mov eax, ebp */
     edx = ((int32_t)eax < 0) ? 0xFFFFFFFFu : 0; /* 0x00401A10: cdq  */

@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_prefix_bridge.h"
 #include "combat_manager_failure_drain_bridge.h"
 #include "combat_manager_drain_bridge.h"
 #include "combat_manager_pool_release_bridge.h"
@@ -1561,4 +1562,32 @@ void ra2_manager_failure_drain_bridge(void)
         manager_drain_backedge, manager_drain_cleanup_outer, manager_drain_return_outer,
         manager_failure_drain_next_outer, manager_failure_drain_noop};
     ra2_drain_manager_lists(&s);
+}
+
+void ra2_manager_constructor_prefix_bridge(void)
+{
+    /* 原四个保存槽属于构造函数，失败/成功尾段仍从实际栈恢复。 */
+    g_esp -= 4; MEM32(g_esp) = g_ebx;
+    g_esp -= 4; MEM32(g_esp) = g_ebp;
+    g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    g_ebp = g_edx; g_esi = g_ecx;
+    g_esp -= 4; MEM32(g_esp) = 0xE8u;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    sub_00782017();
+    g_cur_func = caller;
+
+    /* 使用分配返回后的实际寄存器；清零完成后才读取栈参数。 */
+    g_ebx = g_eax; g_ecx = 0x3Au; g_eax = 0;
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = 0; g_flag_cf = 0;
+    g_edi = g_ebx;
+    for (uint32_t i = 0; i < 0x3Au; ++i) MEM32(g_edi + i * 4u) = g_eax;
+    g_edi += 0xE8u; g_ecx = 0;
+    g_eax = MEM32(g_esp + 0x1Cu);
+    MEM32(g_ebx) = g_esi;
+    MEM32(g_ebx + 0x18u) = g_eax;
+    g_flag_k = FK_ADD; g_flag_a = g_esp; g_flag_b = 4u;
+    g_flag_cf = (uint64_t)g_esp + 4u > UINT32_MAX;
+    g_esp += 4;
 }

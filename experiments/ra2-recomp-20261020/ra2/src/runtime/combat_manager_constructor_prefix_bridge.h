@@ -1,0 +1,6 @@
+#ifndef RA2_COMBAT_MANAGER_CONSTRUCTOR_PREFIX_BRIDGE_H
+#define RA2_COMBAT_MANAGER_CONSTRUCTOR_PREFIX_BRIDGE_H
+
+void ra2_manager_constructor_prefix_bridge(void);
+
+#endif
