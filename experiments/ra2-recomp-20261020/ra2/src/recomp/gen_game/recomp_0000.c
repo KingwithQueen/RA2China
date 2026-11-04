@@ -1,3 +1,4 @@
+#include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
@@ -2334,6 +2335,15 @@ L_00401C4E:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401CEC; /* 0x00401C59: je 0x401cec */
 L_00401C5F:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPayloadFlags _manager_payload_flags;
+    int _manager_payload_nonzero = ra2_manager_payload_check_bridge(&_manager_payload_flags);
+    RECOMP_REGS_IN();
+    /* TEST只更新局部现场，公开标志仍沿用原刷新时机。 */
+    _flag_k = _manager_payload_flags.kind; _flag_a = _manager_payload_flags.left;
+    _flag_b = _manager_payload_flags.right; _cf = _manager_payload_flags.carry;
+    if (!_manager_payload_nonzero) goto L_00401C93;
+    goto L_00401C66;
     eax = MEM32(edi + 0xC); /* 0x00401C5F: mov eax, dword ptr [edi + 0xc] */
     /* test eax, eax */ /* 0x00401C62: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);

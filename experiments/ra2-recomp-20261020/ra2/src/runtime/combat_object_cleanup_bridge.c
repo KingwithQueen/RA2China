@@ -1,3 +1,4 @@
+#include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
@@ -1768,4 +1769,13 @@ int ra2_manager_forward_find_bridge(uint32_t kind, uint32_t left, uint32_t right
     /* 只回传局部TEST，保留helper或回调公开的全局元组。 */
     flags->kind = FK_TEST; flags->left = flags->right = g_edi; flags->carry = 0;
     return g_edi != 0;
+}
+
+int ra2_manager_payload_check_bridge(Ra2ManagerPayloadFlags *flags)
+{
+    /* 读取实际晚返回的节点载荷，地址运算沿用32位回绕。 */
+    g_eax = MEM32(g_edi + 0xCu);
+    /* 只回传局部TEST，原公开标志及其刷新时机保持。 */
+    flags->kind = FK_TEST; flags->left = flags->right = g_eax; flags->carry = 0;
+    return g_eax != 0;
 }
