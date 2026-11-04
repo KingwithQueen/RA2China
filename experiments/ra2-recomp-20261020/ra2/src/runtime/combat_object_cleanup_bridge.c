@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_success_check_bridge.h"
 #include "combat_manager_constructor_list_init_bridge.h"
 #include "combat_manager_constructor_second_pool_bridge.h"
 #include "combat_manager_constructor_pool_bridge.h"
@@ -1648,4 +1649,15 @@ void ra2_manager_constructor_list_init_bridge(void)
     g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
     sub_004071F0();
     g_cur_func = caller;
+}
+
+int ra2_manager_constructor_success_check_bridge(void)
+{
+    /* 首池为空时立即失败，不能预读第二池；EAX保留最后一次TEST的值。 */
+    g_eax = MEM32(g_ebx + 4u);
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
+    if (g_eax == 0) return 0;
+    g_eax = MEM32(g_ebx + 8u);
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
+    return g_eax != 0;
 }
