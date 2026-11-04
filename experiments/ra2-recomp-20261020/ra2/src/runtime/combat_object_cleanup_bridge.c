@@ -1,3 +1,4 @@
+#include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
@@ -1715,4 +1716,20 @@ int ra2_manager_first_scan_bridge(Ra2ManagerFirstScanFlags *flags)
         }
         if (!again) return 0;
     }
+}
+
+void sub_004016F0(void);
+
+int ra2_manager_base_lookup_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry)
+{
+    /* 基址可能与返回槽重叠：先读取，再压栈，最后公开局部标志。 */
+    g_ecx = MEM32(g_ebx);
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004016F0();
+    g_cur_func = caller;
+    /* 使用helper实际返回的现场，EAX保持原值，布尔结果只控制出口。 */
+    g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
+    return g_eax != 0;
 }

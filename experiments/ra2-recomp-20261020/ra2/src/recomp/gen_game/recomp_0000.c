@@ -1,3 +1,4 @@
+#include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
@@ -2277,6 +2278,13 @@ L_00401C27:
     RECOMP_BACKEDGE();
     if (CMP_NE(_flag_a, _flag_b)) goto L_00401C1B; /* 0x00401C2B: jne 0x401c1b */
 L_00401C2D:
+    RECOMP_REGS_OUT();
+    if (ra2_manager_base_lookup_bridge(_flag_k, _flag_a, _flag_b, _cf)) {
+        RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+        goto L_00401C3C;
+    }
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401ED8;
     ecx = MEM32(ebx); /* 0x00401C2D: mov ecx, dword ptr [ebx] */
     RECOMP_CALL(sub_004016F0); /* 0x00401C2F: call 0x4016f0 */
     RECOMP_FLAGS_IN();
