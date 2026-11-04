@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_list_init_bridge.h"
 #include "combat_manager_constructor_second_pool_bridge.h"
 #include "combat_manager_constructor_pool_bridge.h"
 #include "combat_manager_constructor_prefix_bridge.h"
@@ -1901,11 +1902,16 @@ L_00401A1C:
     RECOMP_CALL(sub_00407400); /* 0x00401A28: call 0x407400 */
     RECOMP_FLAGS_IN();
 L_00401A2D:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_constructor_list_init_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    goto L_00401A3A;
     esi = ebx + 0xC; /* 0x00401A2D: lea esi, [ebx + 0xc] */
     MEM32(ebx + 0x8) = eax; /* 0x00401A30: mov dword ptr [ebx + 8], eax */
     ecx = esi; /* 0x00401A33: mov ecx, esi */
     RECOMP_CALL(sub_004071F0); /* 0x00401A35: call 0x4071f0 */
     RECOMP_FLAGS_IN();
+L_00401A3A:
     eax = MEM32(ebx + 0x4); /* 0x00401A3A: mov eax, dword ptr [ebx + 4] */
     /* test eax, eax */ /* 0x00401A3D: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);

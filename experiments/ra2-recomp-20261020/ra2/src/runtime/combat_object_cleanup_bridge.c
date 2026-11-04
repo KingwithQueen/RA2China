@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_list_init_bridge.h"
 #include "combat_manager_constructor_second_pool_bridge.h"
 #include "combat_manager_constructor_pool_bridge.h"
 #include "combat_manager_constructor_prefix_bridge.h"
@@ -1632,5 +1633,19 @@ void ra2_manager_constructor_second_pool_bridge(void)
     uint32_t caller = g_cur_func;
     g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
     sub_00407400();
+    g_cur_func = caller;
+}
+
+void sub_004071F0(void);
+
+void ra2_manager_constructor_list_init_bridge(void)
+{
+    /* 使用第二池返回后的实际管理器和结果，先保存结果再初始化表头。 */
+    g_esi = g_ebx + 0x0Cu;
+    MEM32(g_ebx + 8u) = g_eax;
+    g_ecx = g_esi;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    sub_004071F0();
     g_cur_func = caller;
 }

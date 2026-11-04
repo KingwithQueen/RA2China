@@ -1,0 +1,6 @@
+#ifndef RA2_COMBAT_MANAGER_CONSTRUCTOR_LIST_INIT_BRIDGE_H
+#define RA2_COMBAT_MANAGER_CONSTRUCTOR_LIST_INIT_BRIDGE_H
+
+void ra2_manager_constructor_list_init_bridge(void);
+
+#endif
