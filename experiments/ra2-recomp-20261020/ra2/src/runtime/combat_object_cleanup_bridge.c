@@ -1,3 +1,4 @@
+#include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
 #include "combat_manager_constructor_list_init_bridge.h"
@@ -1673,4 +1674,23 @@ void ra2_manager_constructor_success_return_bridge(void)
     g_ebx = MEM32(g_esp); g_esp += 4;
     /* 沿用生成器RET8契约：仅消耗返回槽和两参数，不读取返回目标。 */
     g_esp += 12;
+}
+
+int ra2_manager_entry_frame_bridge(void)
+{
+    /* 保存写入可能覆盖管理器字段，必须先保存，再读取实际表头。 */
+    g_flag_a = g_esp; g_flag_b = 0xCu; g_flag_cf = g_esp < 0xCu;
+    g_esp -= 0xCu; g_flag_k = FK_CMP;
+    g_esp -= 4; MEM32(g_esp) = g_ebx;
+    g_esp -= 4; MEM32(g_esp) = g_ebp;
+    g_ebx = g_ecx;
+    g_esp -= 4; MEM32(g_esp) = g_esi;
+    g_esp -= 4; MEM32(g_esp) = g_edi;
+    MEM32(g_esp + 0x18u) = g_edx;
+    g_esi = MEM32(g_ebx + 0xCu);
+    g_edi = g_ebx + 0xCu;
+    g_flag_a = g_esi; g_flag_b = g_edi; g_flag_cf = g_esi < g_edi; g_flag_k = FK_CMP;
+    /* 比较先于末次保存；保存即使改写表头，也沿用刚才的比较结果。 */
+    MEM32(g_esp + 0x10u) = g_ebx;
+    return g_esi == g_edi;
 }

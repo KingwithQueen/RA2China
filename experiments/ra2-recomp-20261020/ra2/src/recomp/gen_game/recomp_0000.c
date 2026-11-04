@@ -1,3 +1,4 @@
+#include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
 #include "combat_manager_constructor_list_init_bridge.h"
@@ -2217,6 +2218,15 @@ void sub_00401C00(void) {
     RECOMP_ENTER(0x00401C00u);
 
 L_00401C00:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    uint32_t _manager_entry_flags[4] = {g_flag_k, g_flag_a, g_flag_b, g_flag_cf};
+    int _manager_entry_empty = ra2_manager_entry_frame_bridge();
+    RECOMP_REGS_IN(); RECOMP_FLAGS_IN();
+    /* 后续生成循环让出仅公开GPR，保留原全局标志的可见时机。 */
+    g_flag_k = _manager_entry_flags[0]; g_flag_a = _manager_entry_flags[1];
+    g_flag_b = _manager_entry_flags[2]; g_flag_cf = _manager_entry_flags[3];
+    if (_manager_entry_empty) goto L_00401C2D;
+    goto L_00401C1B;
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0xCu);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
     esp = esp - 0xCu; /* 0x00401C00: sub esp, 0xc */
