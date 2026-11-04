@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
 #include "combat_manager_constructor_list_init_bridge.h"
 #include "combat_manager_constructor_second_pool_bridge.h"
@@ -1660,4 +1661,16 @@ int ra2_manager_constructor_success_check_bridge(void)
     g_eax = MEM32(g_ebx + 8u);
     g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
     return g_eax != 0;
+}
+
+void ra2_manager_constructor_success_return_bridge(void)
+{
+    /* 按实际栈逐次恢复；先返回当前管理器，再恢复调用方的EBX。 */
+    g_edi = MEM32(g_esp); g_esp += 4;
+    g_esi = MEM32(g_esp); g_esp += 4;
+    g_eax = g_ebx;
+    g_ebp = MEM32(g_esp); g_esp += 4;
+    g_ebx = MEM32(g_esp); g_esp += 4;
+    /* 沿用生成器RET8契约：仅消耗返回槽和两参数，不读取返回目标。 */
+    g_esp += 12;
 }

@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
 #include "combat_manager_constructor_list_init_bridge.h"
 #include "combat_manager_constructor_second_pool_bridge.h"
@@ -2050,6 +2051,9 @@ L_00401AD8:
     ebx = POP32_VAL(esp); /* 0x00401AE6: pop ebx */
     RECOMP_FLAGS_OUT(); esp += 12; { RECOMP_REGS_OUT(); return; } /* 0x00401AE7: ret 8 */
 L_00401AEA:
+    RECOMP_REGS_OUT(); RECOMP_FLAGS_OUT();
+    ra2_manager_constructor_success_return_bridge();
+    return;
     edi = POP32_VAL(esp); /* 0x00401AEA: pop edi */
     esi = POP32_VAL(esp); /* 0x00401AEB: pop esi */
     eax = ebx; /* 0x00401AEC: mov eax, ebx */
