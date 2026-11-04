@@ -1,3 +1,4 @@
+#include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
@@ -2294,6 +2295,15 @@ L_00401C2D:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401ED8; /* 0x00401C36: je 0x401ed8 */
 L_00401C3C:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPoolTakeFlags _manager_pool_flags;
+    int _manager_pool_found = ra2_manager_pool_take_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_pool_flags);
+    RECOMP_REGS_IN();
+    /* 局部TEST单独回传，helper公开的标志保留到原调用或返回时机。 */
+    _flag_k = _manager_pool_flags.kind; _flag_a = _manager_pool_flags.left;
+    _flag_b = _manager_pool_flags.right; _cf = _manager_pool_flags.carry;
+    if (_manager_pool_found) goto L_00401D0B;
+    goto L_00401C4E;
     ecx = MEM32(ebx + 0x8); /* 0x00401C3C: mov ecx, dword ptr [ebx + 8] */
     RECOMP_CALL(sub_00407450); /* 0x00401C3F: call 0x407450 */
     RECOMP_FLAGS_IN();

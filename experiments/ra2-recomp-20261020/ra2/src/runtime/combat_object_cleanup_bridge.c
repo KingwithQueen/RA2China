@@ -1,3 +1,4 @@
+#include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
@@ -1732,4 +1733,21 @@ int ra2_manager_base_lookup_bridge(uint32_t kind, uint32_t left, uint32_t right,
     /* 使用helper实际返回的现场，EAX保持原值，布尔结果只控制出口。 */
     g_flag_k = FK_TEST; g_flag_a = g_flag_b = g_eax; g_flag_cf = 0;
     return g_eax != 0;
+}
+
+void sub_00407450(void);
+
+int ra2_manager_pool_take_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerPoolTakeFlags *flags)
+{
+    /* 池字段可能与调用返回槽重叠，先读取，再压栈并公开局部标志。 */
+    g_ecx = MEM32(g_ebx + 8u);
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_00407450();
+    g_cur_func = caller;
+    g_ebp = g_eax;
+    /* TEST只回传给生成局部现场，保留helper或回调公开的全局元组。 */
+    flags->kind = FK_TEST; flags->left = flags->right = g_ebp; flags->carry = 0;
+    return g_ebp != 0;
 }
