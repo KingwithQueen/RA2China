@@ -1,3 +1,4 @@
+#include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
@@ -1750,4 +1751,21 @@ int ra2_manager_pool_take_bridge(uint32_t kind, uint32_t left, uint32_t right, u
     /* TEST只回传给生成局部现场，保留helper或回调公开的全局元组。 */
     flags->kind = FK_TEST; flags->left = flags->right = g_ebp; flags->carry = 0;
     return g_ebp != 0;
+}
+
+void sub_004073B0(void);
+
+int ra2_manager_forward_find_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerForwardFindFlags *flags)
+{
+    /* 使用helper前实际EDI；调用压栈完成后，helper才读取节点字段。 */
+    g_ecx = g_edi;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004073B0();
+    g_cur_func = caller;
+    g_edi = g_eax;
+    /* 只回传局部TEST，保留helper或回调公开的全局元组。 */
+    flags->kind = FK_TEST; flags->left = flags->right = g_edi; flags->carry = 0;
+    return g_edi != 0;
 }

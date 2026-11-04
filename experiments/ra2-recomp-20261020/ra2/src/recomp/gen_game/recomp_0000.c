@@ -1,3 +1,4 @@
+#include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
 #include "combat_manager_base_lookup_bridge.h"
 #include "combat_manager_first_scan_bridge.h"
@@ -2314,6 +2315,15 @@ L_00401C3C:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401D0B; /* 0x00401C48: jne 0x401d0b */
 L_00401C4E:
+    RECOMP_REGS_OUT();
+    Ra2ManagerForwardFindFlags _manager_forward_flags;
+    int _manager_forward_found = ra2_manager_forward_find_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_forward_flags);
+    RECOMP_REGS_IN();
+    /* 局部TEST单独回传，保留helper公开标志直到原有刷新时机。 */
+    _flag_k = _manager_forward_flags.kind; _flag_a = _manager_forward_flags.left;
+    _flag_b = _manager_forward_flags.right; _cf = _manager_forward_flags.carry;
+    if (!_manager_forward_found) goto L_00401CEC;
+    goto L_00401C5F;
     ecx = edi; /* 0x00401C4E: mov ecx, edi */
     RECOMP_CALL(sub_004073B0); /* 0x00401C50: call 0x4073b0 */
     RECOMP_FLAGS_IN();
