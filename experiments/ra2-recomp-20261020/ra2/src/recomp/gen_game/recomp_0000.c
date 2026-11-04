@@ -1,3 +1,4 @@
+#include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
@@ -2246,6 +2247,15 @@ L_00401C00:
     MEM32(esp + 0x10) = ebx; /* 0x00401C15: mov dword ptr [esp + 0x10], ebx */
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00401C2D; /* 0x00401C19: je 0x401c2d */
 L_00401C1B:
+    RECOMP_REGS_OUT();
+    Ra2ManagerFirstScanFlags _manager_scan_flags;
+    int _manager_scan_found = ra2_manager_first_scan_bridge(&_manager_scan_flags);
+    RECOMP_REGS_IN();
+    /* 局部比较标志单独回传，不能提前覆盖回调可见的全局元组。 */
+    _flag_k = _manager_scan_flags.kind; _flag_a = _manager_scan_flags.left;
+    _flag_b = _manager_scan_flags.right; _cf = _manager_scan_flags.carry;
+    if (_manager_scan_found) goto L_00401C75;
+    goto L_00401C2D;
     /* cmp MEM32(esi + 0x14), edx */ /* 0x00401C1B: cmp dword ptr [esi + 0x14], edx */
     _flag_a = (uint32_t)(MEM32(esi + 0x14)); _flag_b = (uint32_t)(edx);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);

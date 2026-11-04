@@ -1,3 +1,4 @@
+#include "combat_manager_first_scan_bridge.h"
 #include "combat_manager_entry_frame_bridge.h"
 #include "combat_manager_constructor_success_return_bridge.h"
 #include "combat_manager_constructor_success_check_bridge.h"
@@ -1693,4 +1694,25 @@ int ra2_manager_entry_frame_bridge(void)
     /* 比较先于末次保存；保存即使改写表头，也沿用刚才的比较结果。 */
     MEM32(g_esp + 0x10u) = g_ebx;
     return g_esi == g_edi;
+}
+
+int ra2_manager_first_scan_bridge(Ra2ManagerFirstScanFlags *flags)
+{
+    for (;;) {
+        uint32_t tag = MEM32(g_esi + 0x14u);
+        flags->kind = FK_CMP; flags->left = tag; flags->right = g_edx; flags->carry = tag < g_edx;
+        if (tag == g_edx) {
+            g_eax = MEM32(g_esi + 0x18u);
+            flags->kind = FK_TEST; flags->left = flags->right = g_eax; flags->carry = 0;
+            if (g_eax != 0) return 1;
+        }
+        g_esi = MEM32(g_esi);
+        flags->kind = FK_CMP; flags->left = g_esi; flags->right = g_edi; flags->carry = g_esi < g_edi;
+        /* 先保存分支，再让出；回调可改现场和全局标志，不能改刚才的比较。 */
+        int again = g_esi != g_edi;
+        if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+            g_backedges = 0; recomp_yield_hook();
+        }
+        if (!again) return 0;
+    }
 }
