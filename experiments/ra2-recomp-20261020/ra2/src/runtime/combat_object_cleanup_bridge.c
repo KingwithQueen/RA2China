@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_second_pool_bridge.h"
 #include "combat_manager_constructor_pool_bridge.h"
 #include "combat_manager_constructor_prefix_bridge.h"
 #include "combat_manager_failure_drain_bridge.h"
@@ -1616,6 +1617,18 @@ void ra2_manager_constructor_pool_bridge(void)
 {
     manager_constructor_quotient();
     g_edx = g_esi; g_ecx = g_eax;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    sub_00407400();
+    g_cur_func = caller;
+}
+
+void ra2_manager_constructor_second_pool_bridge(void)
+{
+    /* 先读实际栈参数，再写首池结果；两个地址可能重叠。 */
+    g_ecx = MEM32(g_esp + 0x14u);
+    g_edx = 0x64u;
+    MEM32(g_ebx + 4u) = g_eax;
     uint32_t caller = g_cur_func;
     g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
     sub_00407400();
