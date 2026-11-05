@@ -1,3 +1,4 @@
+#include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
@@ -2351,6 +2352,15 @@ L_00401C5F:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401C93; /* 0x00401C64: je 0x401c93 */
 L_00401C66:
+    RECOMP_REGS_OUT();
+    Ra2ManagerForwardBackedgeFlags _manager_backedge_flags;
+    int _manager_backedge_again = ra2_manager_forward_backedge_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_backedge_flags);
+    RECOMP_REGS_IN();
+    /* 回边使用让出前的局部TEST，寄存器则采用hook后的实际现场。 */
+    _flag_k = _manager_backedge_flags.kind; _flag_a = _manager_backedge_flags.left;
+    _flag_b = _manager_backedge_flags.right; _cf = _manager_backedge_flags.carry;
+    if (_manager_backedge_again) goto L_00401C5F;
+    goto L_00401C73;
     ecx = edi; /* 0x00401C66: mov ecx, edi */
     RECOMP_CALL(sub_004073B0); /* 0x00401C68: call 0x4073b0 */
     RECOMP_FLAGS_IN();

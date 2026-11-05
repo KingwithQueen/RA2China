@@ -1,3 +1,4 @@
+#include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
 #include "combat_manager_pool_take_bridge.h"
@@ -1778,4 +1779,25 @@ int ra2_manager_payload_check_bridge(Ra2ManagerPayloadFlags *flags)
     /* 只回传局部TEST，原公开标志及其刷新时机保持。 */
     flags->kind = FK_TEST; flags->left = flags->right = g_eax; flags->carry = 0;
     return g_eax != 0;
+}
+
+void sub_004073B0(void);
+
+int ra2_manager_forward_backedge_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerForwardBackedgeFlags *flags)
+{
+    /* 先使用实际EDI，再压调用返回槽并公开传入的局部标志。 */
+    g_ecx = g_edi;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004073B0();
+    g_cur_func = caller;
+    g_edi = g_eax;
+    uint32_t tested = g_edi;
+    /* hook可改寄存器、公开标志及caller，局部TEST与谓词保持让出前的值。 */
+    flags->kind = FK_TEST; flags->left = flags->right = tested; flags->carry = 0;
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0; recomp_yield_hook();
+    }
+    return tested != 0;
 }
