@@ -1,3 +1,4 @@
+#include "combat_manager_result_branch_bridge.h"
 #include "combat_manager_second_inner_init_bridge.h"
 #include "combat_manager_inner_init_bridge.h"
 #include "combat_manager_result_init_bridge.h"
@@ -1883,4 +1884,18 @@ void ra2_manager_second_inner_init_bridge(uint32_t kind, uint32_t left, uint32_t
     /* 保留实际弹出的EDI和其余返回现场，公开元组原样交还调用方。 */
     flags->kind = g_flag_k; flags->left = g_flag_a;
     flags->right = g_flag_b; flags->carry = g_flag_cf;
+}
+
+
+int ra2_manager_result_branch_bridge(Ra2ManagerResultBranchFlags *flags)
+{
+    /* 首次写入可能改动随后读取的指针，保持实际访问顺序。 */
+    MEM32(g_ebp + 48u) = g_esi;
+    g_eax = MEM32(g_ebx);
+    g_eax = MEM32(g_eax + 284u);
+    uint32_t value = g_eax;
+    /* TEST只写调用方局部元组；最后写栈不能改变已缓存的分流条件。 */
+    flags->kind = FK_TEST; flags->left = value; flags->right = value; flags->carry = 0;
+    MEM32(g_esp + 24u) = value;
+    return value != 0;
 }
