@@ -2451,6 +2451,15 @@ L_00401CD7:
     RECOMP_CALL(sub_00407460); /* 0x00401CE7: call 0x407460 */
     RECOMP_FLAGS_IN();
 L_00401CEC:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPoolTakeFlags _manager_second_pool_flags;
+    int _manager_second_pool_found = ra2_manager_pool_take_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_second_pool_flags);
+    RECOMP_REGS_IN();
+    /* 局部TEST单独回传，helper公开的标志保留到原调用或返回时机。 */
+    _flag_k = _manager_second_pool_flags.kind; _flag_a = _manager_second_pool_flags.left;
+    _flag_b = _manager_second_pool_flags.right; _cf = _manager_second_pool_flags.carry;
+    if (_manager_second_pool_found) goto L_00401D0B;
+    goto L_00401CFA;
     ecx = MEM32(ebx + 0x8); /* 0x00401CEC: mov ecx, dword ptr [ebx + 8] */
     RECOMP_CALL(sub_00407450); /* 0x00401CEF: call 0x407450 */
     RECOMP_FLAGS_IN();
