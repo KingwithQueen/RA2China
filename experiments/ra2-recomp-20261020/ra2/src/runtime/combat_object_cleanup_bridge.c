@@ -1,3 +1,4 @@
+#include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
@@ -1824,4 +1825,24 @@ void ra2_manager_failure_return_bridge(uint32_t kind, uint32_t left, uint32_t ri
     g_flag_k = FK_ADD; g_flag_a = before_add; g_flag_b = 12u; g_flag_cf = g_esp < before_add;
     /* 保持生成RET契约：只推进返回槽，不额外读取或跳转guest返回字。 */
     g_esp += 4u;
+}
+
+
+void sub_00407200(void);
+
+void ra2_manager_result_init_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerResultInitFlags *flags)
+{
+    /* 参数与字段可能重叠，保持先读参数、再依次写字段的顺序。 */
+    g_edx = MEM32(g_esp + 24u);
+    g_ecx = g_ebp;
+    MEM32(g_ebp + 20u) = g_edx;
+    MEM32(g_ebp + 60u) = g_ebx;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_00407200();
+    g_cur_func = caller;
+    /* 原FLAGS_IN只导入实际返回元组；保持helper的寄存器和公开标志。 */
+    flags->kind = g_flag_k; flags->left = g_flag_a;
+    flags->right = g_flag_b; flags->carry = g_flag_cf;
 }

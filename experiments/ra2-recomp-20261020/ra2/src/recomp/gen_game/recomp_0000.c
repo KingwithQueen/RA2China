@@ -1,3 +1,4 @@
+#include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
@@ -2492,12 +2493,21 @@ L_00401CFA:
     _flag_k = FK_ADD;
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00401D0A: ret  */
 L_00401D0B:
+    RECOMP_REGS_OUT();
+    Ra2ManagerResultInitFlags _manager_result_flags;
+    ra2_manager_result_init_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_result_flags);
+    RECOMP_REGS_IN();
+    /* 原调用后导入helper的实际公开元组，不重新计算或规范化标志。 */
+    _flag_k = _manager_result_flags.kind; _flag_a = _manager_result_flags.left;
+    _flag_b = _manager_result_flags.right; _cf = _manager_result_flags.carry;
+    goto L_RA2_MANAGER_RESULT_DONE;
     edx = MEM32(esp + 0x18); /* 0x00401D0B: mov edx, dword ptr [esp + 0x18] */
     ecx = ebp; /* 0x00401D0F: mov ecx, ebp */
     MEM32(ebp + 0x14) = edx; /* 0x00401D11: mov dword ptr [ebp + 0x14], edx */
     MEM32(ebp + 0x3C) = ebx; /* 0x00401D14: mov dword ptr [ebp + 0x3c], ebx */
     RECOMP_CALL(sub_00407200); /* 0x00401D17: call 0x407200 */
     RECOMP_FLAGS_IN();
+L_RA2_MANAGER_RESULT_DONE:
     MEM32(ebp + 0xC) = 0; /* 0x00401D1C: mov dword ptr [ebp + 0xc], 0 */
     ecx = ebp + 0x1C; /* 0x00401D23: lea ecx, [ebp + 0x1c] */
     RECOMP_CALL(sub_00408400); /* 0x00401D26: call 0x408400 */
