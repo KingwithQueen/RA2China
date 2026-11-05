@@ -1,3 +1,4 @@
+#include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
@@ -2470,6 +2471,10 @@ L_00401CEC:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401D0B; /* 0x00401CF8: jne 0x401d0b */
 L_00401CFA:
+    RECOMP_REGS_OUT();
+    ra2_manager_failure_return_bridge(_flag_k, _flag_a, _flag_b, _cf);
+    RECOMP_REGS_IN();
+    return;
     ecx = MEM32(ebx); /* 0x00401CFA: mov ecx, dword ptr [ebx] */
     RECOMP_CALL(sub_00401910); /* 0x00401CFC: call 0x401910 */
     RECOMP_FLAGS_IN();

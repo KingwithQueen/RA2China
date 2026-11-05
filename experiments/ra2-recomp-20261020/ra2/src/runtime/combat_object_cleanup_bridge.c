@@ -1,3 +1,4 @@
+#include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
 #include "combat_manager_payload_check_bridge.h"
 #include "combat_manager_forward_find_bridge.h"
@@ -1800,4 +1801,27 @@ int ra2_manager_forward_backedge_bridge(uint32_t kind, uint32_t left, uint32_t r
         g_backedges = 0; recomp_yield_hook();
     }
     return tested != 0;
+}
+
+
+void sub_00401910(void);
+
+void ra2_manager_failure_return_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry)
+{
+    /* 先读实际管理器字段，压栈成功后才公开局部标志。 */
+    g_ecx = MEM32(g_ebx);
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_00401910();
+    g_cur_func = caller;
+    /* helper可能改写保存帧或ESP，按返回后的实际现场顺序读取。 */
+    g_eax = 0;
+    g_edi = POP32_VAL(g_esp); g_esi = POP32_VAL(g_esp);
+    g_ebp = POP32_VAL(g_esp); g_ebx = POP32_VAL(g_esp);
+    uint32_t before_add = g_esp;
+    g_esp += 12u;
+    g_flag_k = FK_ADD; g_flag_a = before_add; g_flag_b = 12u; g_flag_cf = g_esp < before_add;
+    /* 保持生成RET契约：只推进返回槽，不额外读取或跳转guest返回字。 */
+    g_esp += 4u;
 }
