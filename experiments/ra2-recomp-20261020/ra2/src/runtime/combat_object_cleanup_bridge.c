@@ -1,3 +1,4 @@
+#include "combat_manager_inner_init_bridge.h"
 #include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
@@ -1843,6 +1844,24 @@ void ra2_manager_result_init_bridge(uint32_t kind, uint32_t left, uint32_t right
     sub_00407200();
     g_cur_func = caller;
     /* 原FLAGS_IN只导入实际返回元组；保持helper的寄存器和公开标志。 */
+    flags->kind = g_flag_k; flags->left = g_flag_a;
+    flags->right = g_flag_b; flags->carry = g_flag_cf;
+}
+
+
+void sub_00408400(void);
+
+void ra2_manager_inner_init_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerInnerInitFlags *flags)
+{
+    /* 先清实际载荷，再计算内嵌对象；二者都可能与待压返回槽重叠。 */
+    MEM32(g_ebp + 12u) = 0;
+    g_ecx = g_ebp + 28u;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_00408400();
+    g_cur_func = caller;
+    /* 保留完整helper及分派尾转后的实际现场，只原样导入公开元组。 */
     flags->kind = g_flag_k; flags->left = g_flag_a;
     flags->right = g_flag_b; flags->carry = g_flag_cf;
 }

@@ -1,3 +1,4 @@
+#include "combat_manager_inner_init_bridge.h"
 #include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
 #include "combat_manager_forward_backedge_bridge.h"
@@ -2508,10 +2509,19 @@ L_00401D0B:
     RECOMP_CALL(sub_00407200); /* 0x00401D17: call 0x407200 */
     RECOMP_FLAGS_IN();
 L_RA2_MANAGER_RESULT_DONE:
+    RECOMP_REGS_OUT();
+    Ra2ManagerInnerInitFlags _manager_inner_flags;
+    ra2_manager_inner_init_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_inner_flags);
+    RECOMP_REGS_IN();
+    /* 完整helper与尾转返回的实际元组原样导入，寄存器采用其实际现场。 */
+    _flag_k = _manager_inner_flags.kind; _flag_a = _manager_inner_flags.left;
+    _flag_b = _manager_inner_flags.right; _cf = _manager_inner_flags.carry;
+    goto L_RA2_MANAGER_INNER_DONE;
     MEM32(ebp + 0xC) = 0; /* 0x00401D1C: mov dword ptr [ebp + 0xc], 0 */
     ecx = ebp + 0x1C; /* 0x00401D23: lea ecx, [ebp + 0x1c] */
     RECOMP_CALL(sub_00408400); /* 0x00401D26: call 0x408400 */
     RECOMP_FLAGS_IN();
+L_RA2_MANAGER_INNER_DONE:
     esi = ebp + 0x40; /* 0x00401D2B: lea esi, [ebp + 0x40] */
     ecx = esi; /* 0x00401D2E: mov ecx, esi */
     RECOMP_CALL(sub_004084C0); /* 0x00401D30: call 0x4084c0 */
