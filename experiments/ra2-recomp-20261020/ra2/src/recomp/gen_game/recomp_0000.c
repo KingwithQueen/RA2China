@@ -1,3 +1,4 @@
+#include "combat_manager_second_inner_init_bridge.h"
 #include "combat_manager_inner_init_bridge.h"
 #include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
@@ -2522,10 +2523,19 @@ L_RA2_MANAGER_RESULT_DONE:
     RECOMP_CALL(sub_00408400); /* 0x00401D26: call 0x408400 */
     RECOMP_FLAGS_IN();
 L_RA2_MANAGER_INNER_DONE:
+    RECOMP_REGS_OUT();
+    Ra2ManagerSecondInnerInitFlags _manager_second_inner_flags;
+    ra2_manager_second_inner_init_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_second_inner_flags);
+    RECOMP_REGS_IN();
+    /* 使用完整初始化返回的实际现场，并原样导入公开元组。 */
+    _flag_k = _manager_second_inner_flags.kind; _flag_a = _manager_second_inner_flags.left;
+    _flag_b = _manager_second_inner_flags.right; _cf = _manager_second_inner_flags.carry;
+    goto L_RA2_MANAGER_SECOND_INNER_DONE;
     esi = ebp + 0x40; /* 0x00401D2B: lea esi, [ebp + 0x40] */
     ecx = esi; /* 0x00401D2E: mov ecx, esi */
     RECOMP_CALL(sub_004084C0); /* 0x00401D30: call 0x4084c0 */
     RECOMP_FLAGS_IN();
+L_RA2_MANAGER_SECOND_INNER_DONE:
     MEM32(ebp + 0x30) = esi; /* 0x00401D35: mov dword ptr [ebp + 0x30], esi */
     eax = MEM32(ebx); /* 0x00401D38: mov eax, dword ptr [ebx] */
     eax = MEM32(eax + 0x11C); /* 0x00401D3A: mov eax, dword ptr [eax + 0x11c] */

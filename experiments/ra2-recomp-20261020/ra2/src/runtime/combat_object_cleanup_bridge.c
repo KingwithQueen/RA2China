@@ -1,3 +1,4 @@
+#include "combat_manager_second_inner_init_bridge.h"
 #include "combat_manager_inner_init_bridge.h"
 #include "combat_manager_result_init_bridge.h"
 #include "combat_manager_failure_return_bridge.h"
@@ -1862,6 +1863,24 @@ void ra2_manager_inner_init_bridge(uint32_t kind, uint32_t left, uint32_t right,
     sub_00408400();
     g_cur_func = caller;
     /* 保留完整helper及分派尾转后的实际现场，只原样导入公开元组。 */
+    flags->kind = g_flag_k; flags->left = g_flag_a;
+    flags->right = g_flag_b; flags->carry = g_flag_cf;
+}
+
+
+void sub_004084C0(void);
+
+void ra2_manager_second_inner_init_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerSecondInnerInitFlags *flags)
+{
+    /* 先设置第二内嵌区，再建立调用帧；保存槽可能被完整初始化覆盖。 */
+    g_esi = g_ebp + 64u;
+    g_ecx = g_esi;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004084C0();
+    g_cur_func = caller;
+    /* 保留实际弹出的EDI和其余返回现场，公开元组原样交还调用方。 */
     flags->kind = g_flag_k; flags->left = g_flag_a;
     flags->right = g_flag_b; flags->carry = g_flag_cf;
 }
