@@ -1,3 +1,4 @@
+#include "combat_manager_link_check_bridge.h"
 #include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
@@ -1989,4 +1990,12 @@ int ra2_manager_second_backedge_bridge(const Ra2ManagerSecondBackedgeRegisters *
         return 1;
     }
     return 0;
+}
+
+/* 先按实际缓存ESI读取一次；异常时不提前发布GPR或局部标志。 */
+int ra2_manager_link_check_bridge(uint32_t source, Ra2ManagerLinkCheckFlags *flags)
+{
+    uint32_t value = MEM32(source + 4u);
+    flags->kind = FK_CMP; flags->left = value; flags->right = source; flags->carry = (uint32_t)(value < source);
+    return value == source;
 }

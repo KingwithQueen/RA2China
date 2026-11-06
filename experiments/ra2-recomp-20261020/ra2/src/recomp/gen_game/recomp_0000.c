@@ -1,3 +1,4 @@
+#include "combat_manager_link_check_bridge.h"
 #include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
@@ -2666,6 +2667,15 @@ L_00401D9D:
     RECOMP_BACKEDGE();
     goto L_00401D85; /* 0x00401D9D: jmp 0x401d85 */
 L_00401D9F:
+    {
+        Ra2ManagerLinkCheckFlags _manager_link_check_flags;
+        int _manager_link_check_equal = ra2_manager_link_check_bridge(esi, &_manager_link_check_flags);
+        /* 只更新局部CMP；公开元组与全部GPR保持实际状态。 */
+        _flag_k = _manager_link_check_flags.kind; _flag_a = _manager_link_check_flags.left;
+        _flag_b = _manager_link_check_flags.right; _cf = _manager_link_check_flags.carry;
+        if (_manager_link_check_equal) goto L_00401DAB;
+        goto L_00401DA4;
+    }
     /* cmp MEM32(esi + 0x4), esi */ /* 0x00401D9F: cmp dword ptr [esi + 4], esi */
     _flag_a = (uint32_t)(MEM32(esi + 0x4)); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
