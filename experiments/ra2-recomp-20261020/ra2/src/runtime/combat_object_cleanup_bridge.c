@@ -1,3 +1,4 @@
+#include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
@@ -1974,4 +1975,18 @@ int ra2_manager_second_forward_bridge(uint32_t kind, uint32_t left, uint32_t rig
     g_esi = g_eax;
     flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
     return g_esi != 0;
+}
+
+/* 无条件回边保持32位递增；空hook或计数回绕均不额外重置、发布寄存器。 */
+int ra2_manager_second_backedge_bridge(const Ra2ManagerSecondBackedgeRegisters *regs)
+{
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0;
+        g_eax = regs->ax; g_ecx = regs->cx; g_edx = regs->dx; g_ebx = regs->bx;
+        g_esp = regs->sp; g_esi = regs->si; g_edi = regs->di; g_ebp = regs->bp;
+        /* 与原宏一致：不导出标志，不恢复caller，保留回调的全部实际改写。 */
+        recomp_yield_hook();
+        return 1;
+    }
+    return 0;
 }

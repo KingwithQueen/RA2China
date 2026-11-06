@@ -1,3 +1,4 @@
+#include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
@@ -2656,6 +2657,12 @@ L_00401D8C:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401E7F; /* 0x00401D97: je 0x401e7f */
 L_00401D9D:
+    const Ra2ManagerSecondBackedgeRegisters _manager_second_backedge_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+    if (ra2_manager_second_backedge_bridge(&_manager_second_backedge_regs)) {
+        /* 仅实际yield后导入GPR；局部/公开标志与实际caller各自保持。 */
+        RECOMP_REGS_IN();
+    }
+    goto L_00401D85;
     RECOMP_BACKEDGE();
     goto L_00401D85; /* 0x00401D9D: jmp 0x401d85 */
 L_00401D9F:
