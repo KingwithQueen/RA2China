@@ -1,3 +1,4 @@
+#include "combat_manager_unlink_call_bridge.h"
 #include "combat_manager_link_check_bridge.h"
 #include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
@@ -1998,4 +1999,16 @@ int ra2_manager_link_check_bridge(uint32_t source, Ra2ManagerLinkCheckFlags *fla
     uint32_t value = MEM32(source + 4u);
     flags->kind = FK_CMP; flags->left = value; flags->right = source; flags->carry = (uint32_t)(value < source);
     return value == source;
+}
+
+/* 401DA4调用：压槽失败时保留全部公开状态；链表字段由完整407380入口读取。 */
+uint32_t ra2_manager_unlink_call_bridge(const Ra2ManagerUnlinkCallRegisters *regs, uint32_t kind, uint32_t left, uint32_t right, uint32_t carry)
+{
+    uint32_t caller = g_cur_func;
+    MEM32(regs->sp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    g_eax = regs->ax; g_ecx = regs->si; g_edx = regs->dx; g_ebx = regs->bx;
+    g_esp = regs->sp; g_esi = regs->si; g_edi = regs->di; g_ebp = regs->bp;
+    sub_00407380();
+    return caller;
 }

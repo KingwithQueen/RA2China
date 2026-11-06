@@ -1,3 +1,4 @@
+#include "combat_manager_unlink_call_bridge.h"
 #include "combat_manager_link_check_bridge.h"
 #include "combat_manager_second_backedge_bridge.h"
 #include "combat_manager_second_forward_bridge.h"
@@ -2682,6 +2683,14 @@ L_00401D9F:
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00401DAB; /* 0x00401DA2: je 0x401dab */
 L_00401DA4:
+    {
+        ecx = esi; esp -= 4u;
+        const Ra2ManagerUnlinkCallRegisters _manager_unlink_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_unlink_caller = ra2_manager_unlink_call_bridge(&_manager_unlink_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 与原调用宏同序：导入实际GPR、恢复caller，再导入helper公开元组。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_unlink_caller; RECOMP_FLAGS_IN();
+        goto L_00401DAB;
+    }
     ecx = esi; /* 0x00401DA4: mov ecx, esi */
     RECOMP_CALL(sub_00407380); /* 0x00401DA6: call 0x407380 */
     RECOMP_FLAGS_IN();
