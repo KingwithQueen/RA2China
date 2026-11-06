@@ -1,3 +1,4 @@
+#include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
@@ -1926,6 +1927,22 @@ int ra2_manager_post_clamp_take_bridge(uint32_t kind, uint32_t left, uint32_t ri
     sub_00407450();
     g_cur_func = caller;
     /* 使用完整helper的实际返回现场，公开元组保持原值。 */
+    g_esi = g_eax;
+    flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
+    return g_esi != 0;
+}
+
+
+int ra2_manager_post_clamp_forward_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerPostClampForwardFlags *flags)
+{
+    /* LEA只形成实际地址，链表头由完整helper在压槽后读取。 */
+    g_ecx = g_ebx + 12u;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004073B0();
+    g_cur_func = caller;
+    /* 保留实际返回现场，公开元组不被调用方局部TEST覆盖。 */
     g_esi = g_eax;
     flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
     return g_esi != 0;

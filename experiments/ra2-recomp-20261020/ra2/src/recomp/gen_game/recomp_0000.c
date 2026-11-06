@@ -1,3 +1,4 @@
+#include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
@@ -2599,6 +2600,15 @@ L_00401D61:
     _flag_k = FK_TEST;
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401E12; /* 0x00401D6D: jne 0x401e12 */
 L_00401D73:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPostClampForwardFlags _manager_post_clamp_forward_flags;
+    int _manager_post_clamp_forward_nonzero = ra2_manager_post_clamp_forward_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_post_clamp_forward_flags);
+    RECOMP_REGS_IN();
+    /* 保留helper公开元组，局部TEST使用实际返回并写入ESI的值。 */
+    _flag_k = _manager_post_clamp_forward_flags.kind; _flag_a = _manager_post_clamp_forward_flags.left;
+    _flag_b = _manager_post_clamp_forward_flags.right; _cf = _manager_post_clamp_forward_flags.carry;
+    if (_manager_post_clamp_forward_nonzero) goto L_00401D85;
+    goto L_00401E7F;
     ecx = ebx + 0xC; /* 0x00401D73: lea ecx, [ebx + 0xc] */
     RECOMP_CALL(sub_004073B0); /* 0x00401D76: call 0x4073b0 */
     RECOMP_FLAGS_IN();
