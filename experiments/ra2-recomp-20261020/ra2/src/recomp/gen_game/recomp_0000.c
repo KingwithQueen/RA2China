@@ -1,3 +1,4 @@
+#include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
 #include "combat_manager_second_inner_init_bridge.h"
 #include "combat_manager_inner_init_bridge.h"
@@ -2560,6 +2561,14 @@ L_00401D4C:
 L_00401D4E:
     eax = MEM32(esp + 0x18); /* 0x00401D4E: mov eax, dword ptr [esp + 0x18] */
 L_00401D52:
+    RECOMP_REGS_OUT();
+    Ra2ManagerSignedClampFlags _manager_signed_clamp_flags;
+    ra2_manager_signed_clamp_bridge(&_manager_signed_clamp_flags);
+    RECOMP_REGS_IN();
+    /* 使用读取时缓存的有符号条件，仅回传局部CMP。 */
+    _flag_k = _manager_signed_clamp_flags.kind; _flag_a = _manager_signed_clamp_flags.left;
+    _flag_b = _manager_signed_clamp_flags.right; _cf = _manager_signed_clamp_flags.carry;
+    goto L_00401D61;
     ecx = MEM32(ebx + 0x18); /* 0x00401D52: mov ecx, dword ptr [ebx + 0x18] */
     /* cmp ecx, eax */ /* 0x00401D55: cmp ecx, eax */
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(eax);

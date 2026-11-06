@@ -1,3 +1,4 @@
+#include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
 #include "combat_manager_second_inner_init_bridge.h"
 #include "combat_manager_inner_init_bridge.h"
@@ -1898,4 +1899,17 @@ int ra2_manager_result_branch_bridge(Ra2ManagerResultBranchFlags *flags)
     flags->kind = FK_TEST; flags->left = value; flags->right = value; flags->carry = 0;
     MEM32(g_esp + 24u) = value;
     return value != 0;
+}
+
+
+void ra2_manager_signed_clamp_bridge(Ra2ManagerSignedClampFlags *flags)
+{
+    /* 读取实际字段并在第一次写栈前缓存有符号条件。 */
+    g_ecx = MEM32(g_ebx + 24u);
+    uint32_t left = g_ecx, right = g_eax;
+    int keep_left = CMP_LE(left, right);
+    flags->kind = FK_CMP; flags->left = left; flags->right = right; flags->carry = left < right;
+    /* 首次写入始终提交，只有原条件不成立时才执行第二次写入。 */
+    MEM32(g_esp + 20u) = left;
+    if (!keep_left) MEM32(g_esp + 20u) = right;
 }
