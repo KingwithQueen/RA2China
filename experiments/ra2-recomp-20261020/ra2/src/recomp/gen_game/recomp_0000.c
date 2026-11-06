@@ -1,3 +1,4 @@
+#include "combat_manager_inner_release_bridge.h"
 #include "combat_manager_inner_unlink_bridge.h"
 #include "combat_manager_front_result_bridge.h"
 #include "combat_manager_front_call_bridge.h"
@@ -2740,9 +2741,18 @@ L_00401DBB:
     RECOMP_CALL(sub_00407380); /* 0x00401DBD: call 0x407380 */
     RECOMP_FLAGS_IN();
 L_00401DC2:
+    {
+        ecx = edi; esp -= 4u;
+        const Ra2ManagerInnerReleaseRegisters _manager_inner_release_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_inner_release_caller = ra2_manager_inner_release_bridge(&_manager_inner_release_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 导入实际GPR、恢复caller，再导入完整helper的公开元组。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_inner_release_caller; RECOMP_FLAGS_IN();
+        goto L_00401DC9;
+    }
     ecx = edi; /* 0x00401DC2: mov ecx, edi */
     RECOMP_CALL(sub_00408520); /* 0x00401DC4: call 0x408520 */
     RECOMP_FLAGS_IN();
+L_00401DC9:
     ecx = MEM32(esi + 0x3C); /* 0x00401DC9: mov ecx, dword ptr [esi + 0x3c] */
     edx = edi; /* 0x00401DCC: mov edx, edi */
     ecx = MEM32(ecx + 0x4); /* 0x00401DCE: mov ecx, dword ptr [ecx + 4] */
