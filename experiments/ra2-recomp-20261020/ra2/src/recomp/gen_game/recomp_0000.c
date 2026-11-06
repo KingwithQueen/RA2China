@@ -1,3 +1,4 @@
+#include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
@@ -2636,6 +2637,15 @@ L_00401D85:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401D9F; /* 0x00401D8A: je 0x401d9f */
 L_00401D8C:
+    RECOMP_REGS_OUT();
+    Ra2ManagerSecondForwardFlags _manager_second_forward_flags;
+    int _manager_second_forward_nonzero = ra2_manager_second_forward_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_second_forward_flags);
+    RECOMP_REGS_IN();
+    /* 实际返回EAX写入ESI，局部TEST与完整helper公开标志分别保留。 */
+    _flag_k = _manager_second_forward_flags.kind; _flag_a = _manager_second_forward_flags.left;
+    _flag_b = _manager_second_forward_flags.right; _cf = _manager_second_forward_flags.carry;
+    if (_manager_second_forward_nonzero) goto L_00401D9D;
+    goto L_00401E7F;
     ecx = esi; /* 0x00401D8C: mov ecx, esi */
     RECOMP_CALL(sub_004073B0); /* 0x00401D8E: call 0x4073b0 */
     RECOMP_FLAGS_IN();

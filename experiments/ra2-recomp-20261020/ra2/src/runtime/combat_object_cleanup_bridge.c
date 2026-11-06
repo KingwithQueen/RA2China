@@ -1,3 +1,4 @@
+#include "combat_manager_second_forward_bridge.h"
 #include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
@@ -1957,4 +1958,20 @@ int ra2_manager_post_forward_payload_bridge(Ra2ManagerPostForwardPayloadFlags *f
     uint32_t value = g_eax;
     flags->kind = FK_TEST; flags->left = value; flags->right = value; flags->carry = 0;
     return value != 0;
+}
+
+
+int ra2_manager_second_forward_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerSecondForwardFlags *flags)
+{
+    /* 先取实际ESI，再压返回槽；链表字段仍在完整helper内读取。 */
+    g_ecx = g_esi;
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_004073B0();
+    g_cur_func = caller;
+    /* 实际EAX原值写回ESI，局部TEST不覆盖helper公开四字段。 */
+    g_esi = g_eax;
+    flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
+    return g_esi != 0;
 }
