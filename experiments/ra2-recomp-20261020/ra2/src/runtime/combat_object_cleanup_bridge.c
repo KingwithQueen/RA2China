@@ -1,3 +1,4 @@
+#include "combat_manager_inner_unlink_bridge.h"
 #include "combat_manager_front_result_bridge.h"
 #include "combat_manager_front_call_bridge.h"
 #include "combat_manager_unlink_call_bridge.h"
@@ -2033,4 +2034,17 @@ int ra2_manager_front_result_bridge(uint32_t result, Ra2ManagerFrontResultState 
     state->value = result;
     state->kind = FK_TEST; state->left = result; state->right = result; state->carry = 0;
     return result != 0;
+}
+
+
+/* 401DBB调用：先写返回槽，再公开局部TEST与实际缓存；保留完整407380入口。 */
+uint32_t ra2_manager_inner_unlink_bridge(const Ra2ManagerInnerUnlinkRegisters *regs, uint32_t kind, uint32_t left, uint32_t right, uint32_t carry)
+{
+    uint32_t caller = g_cur_func;
+    MEM32(regs->sp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    g_eax = regs->ax; g_ecx = regs->di; g_edx = regs->dx; g_ebx = regs->bx;
+    g_esp = regs->sp; g_esi = regs->si; g_edi = regs->di; g_ebp = regs->bp;
+    sub_00407380();
+    return caller;
 }

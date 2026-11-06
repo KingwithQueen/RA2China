@@ -1,3 +1,4 @@
+#include "combat_manager_inner_unlink_bridge.h"
 #include "combat_manager_front_result_bridge.h"
 #include "combat_manager_front_call_bridge.h"
 #include "combat_manager_unlink_call_bridge.h"
@@ -2727,9 +2728,18 @@ L_00401DB5:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401DE3; /* 0x00401DB9: je 0x401de3 */
 L_00401DBB:
+    {
+        ecx = edi; esp -= 4u;
+        const Ra2ManagerInnerUnlinkRegisters _manager_inner_unlink_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_inner_unlink_caller = ra2_manager_inner_unlink_bridge(&_manager_inner_unlink_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 导入实际GPR、恢复caller，再导入完整helper的公开元组。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_inner_unlink_caller; RECOMP_FLAGS_IN();
+        goto L_00401DC2;
+    }
     ecx = edi; /* 0x00401DBB: mov ecx, edi */
     RECOMP_CALL(sub_00407380); /* 0x00401DBD: call 0x407380 */
     RECOMP_FLAGS_IN();
+L_00401DC2:
     ecx = edi; /* 0x00401DC2: mov ecx, edi */
     RECOMP_CALL(sub_00408520); /* 0x00401DC4: call 0x408520 */
     RECOMP_FLAGS_IN();
