@@ -1,3 +1,4 @@
+#include "combat_manager_front_call_bridge.h"
 #include "combat_manager_unlink_call_bridge.h"
 #include "combat_manager_link_check_bridge.h"
 #include "combat_manager_second_backedge_bridge.h"
@@ -2695,10 +2696,19 @@ L_00401DA4:
     RECOMP_CALL(sub_00407380); /* 0x00401DA6: call 0x407380 */
     RECOMP_FLAGS_IN();
 L_00401DAB:
+    {
+        ebx = esi + 0x24u; ecx = ebx; esp -= 4u;
+        const Ra2ManagerFrontCallRegisters _manager_front_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_front_caller = ra2_manager_front_call_bridge(&_manager_front_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 导入实际GPR，恢复实际caller，再导入完整helper公开元组。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_front_caller; RECOMP_FLAGS_IN();
+        goto L_00401DB5;
+    }
     ebx = esi + 0x24; /* 0x00401DAB: lea ebx, [esi + 0x24] */
     ecx = ebx; /* 0x00401DAE: mov ecx, ebx */
     RECOMP_CALL(sub_004073A0); /* 0x00401DB0: call 0x4073a0 */
     RECOMP_FLAGS_IN();
+L_00401DB5:
     edi = eax; /* 0x00401DB5: mov edi, eax */
     /* test edi, edi */ /* 0x00401DB7: test edi, edi */
     _flag_a = (uint32_t)(edi); _flag_b = (uint32_t)(edi);
