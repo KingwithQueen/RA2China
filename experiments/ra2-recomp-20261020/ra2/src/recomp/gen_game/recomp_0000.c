@@ -1,3 +1,4 @@
+#include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
@@ -2619,6 +2620,15 @@ L_00401D73:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401E7F; /* 0x00401D7F: je 0x401e7f */
 L_00401D85:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPostForwardPayloadFlags _manager_post_forward_payload_flags;
+    int _manager_post_forward_payload_nonzero = ra2_manager_post_forward_payload_bridge(&_manager_post_forward_payload_flags);
+    RECOMP_REGS_IN();
+    /* 只导入局部TEST，保留完整前向helper留下的公开元组。 */
+    _flag_k = _manager_post_forward_payload_flags.kind; _flag_a = _manager_post_forward_payload_flags.left;
+    _flag_b = _manager_post_forward_payload_flags.right; _cf = _manager_post_forward_payload_flags.carry;
+    if (_manager_post_forward_payload_nonzero) goto L_00401D8C;
+    goto L_00401D9F;
     eax = MEM32(esi + 0xC); /* 0x00401D85: mov eax, dword ptr [esi + 0xc] */
     /* test eax, eax */ /* 0x00401D88: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);

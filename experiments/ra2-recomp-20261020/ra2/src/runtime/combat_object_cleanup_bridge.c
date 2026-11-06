@@ -1,3 +1,4 @@
+#include "combat_manager_post_forward_payload_bridge.h"
 #include "combat_manager_post_clamp_forward_bridge.h"
 #include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
@@ -1946,4 +1947,14 @@ int ra2_manager_post_clamp_forward_bridge(uint32_t kind, uint32_t left, uint32_t
     g_esi = g_eax;
     flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
     return g_esi != 0;
+}
+
+
+int ra2_manager_post_forward_payload_bridge(Ra2ManagerPostForwardPayloadFlags *flags)
+{
+    /* 单次读取实际载荷，后续TEST和分流只使用缓存值。 */
+    g_eax = MEM32(g_esi + 12u);
+    uint32_t value = g_eax;
+    flags->kind = FK_TEST; flags->left = value; flags->right = value; flags->carry = 0;
+    return value != 0;
 }
