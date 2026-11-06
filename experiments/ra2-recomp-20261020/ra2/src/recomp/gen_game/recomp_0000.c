@@ -1,3 +1,4 @@
+#include "combat_manager_front_result_bridge.h"
 #include "combat_manager_front_call_bridge.h"
 #include "combat_manager_unlink_call_bridge.h"
 #include "combat_manager_link_check_bridge.h"
@@ -2709,6 +2710,16 @@ L_00401DAB:
     RECOMP_CALL(sub_004073A0); /* 0x00401DB0: call 0x4073a0 */
     RECOMP_FLAGS_IN();
 L_00401DB5:
+    {
+        Ra2ManagerFrontResultState _manager_front_result;
+        int _manager_front_result_nonzero = ra2_manager_front_result_bridge(eax, &_manager_front_result);
+        edi = _manager_front_result.value;
+        /* 仅更新局部TEST，保留helper公开元组与实际返回现场。 */
+        _flag_k = _manager_front_result.kind; _flag_a = _manager_front_result.left;
+        _flag_b = _manager_front_result.right; _cf = _manager_front_result.carry;
+        if (_manager_front_result_nonzero) goto L_00401DBB;
+        goto L_00401DE3;
+    }
     edi = eax; /* 0x00401DB5: mov edi, eax */
     /* test edi, edi */ /* 0x00401DB7: test edi, edi */
     _flag_a = (uint32_t)(edi); _flag_b = (uint32_t)(edi);

@@ -1,3 +1,4 @@
+#include "combat_manager_front_result_bridge.h"
 #include "combat_manager_front_call_bridge.h"
 #include "combat_manager_unlink_call_bridge.h"
 #include "combat_manager_link_check_bridge.h"
@@ -2024,4 +2025,12 @@ uint32_t ra2_manager_front_call_bridge(const Ra2ManagerFrontCallRegisters *regs,
     g_esp = regs->sp; g_esi = regs->si; g_edi = regs->di; g_ebp = regs->bp;
     sub_004073A0();
     return caller;
+}
+
+/* 返回分流判定，同时原样复制EDI结果与局部TEST；不解引用结果。 */
+int ra2_manager_front_result_bridge(uint32_t result, Ra2ManagerFrontResultState *state)
+{
+    state->value = result;
+    state->kind = FK_TEST; state->left = result; state->right = result; state->carry = 0;
+    return result != 0;
 }
