@@ -1,3 +1,4 @@
+#include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
 #include "combat_manager_second_inner_init_bridge.h"
@@ -2579,6 +2580,15 @@ L_00401D52:
 L_00401D5D:
     MEM32(esp + 0x14) = eax; /* 0x00401D5D: mov dword ptr [esp + 0x14], eax */
 L_00401D61:
+    RECOMP_REGS_OUT();
+    Ra2ManagerPostClampTakeFlags _manager_post_clamp_take_flags;
+    int _manager_post_clamp_nonzero = ra2_manager_post_clamp_take_bridge(_flag_k, _flag_a, _flag_b, _cf, &_manager_post_clamp_take_flags);
+    RECOMP_REGS_IN();
+    /* helper公开元组保持原值，ESI采用实际返回EAX，局部TEST单独回传。 */
+    _flag_k = _manager_post_clamp_take_flags.kind; _flag_a = _manager_post_clamp_take_flags.left;
+    _flag_b = _manager_post_clamp_take_flags.right; _cf = _manager_post_clamp_take_flags.carry;
+    if (_manager_post_clamp_nonzero) goto L_00401E12;
+    goto L_00401D73;
     ecx = MEM32(ebx + 0x4); /* 0x00401D61: mov ecx, dword ptr [ebx + 4] */
     RECOMP_CALL(sub_00407450); /* 0x00401D64: call 0x407450 */
     RECOMP_FLAGS_IN();

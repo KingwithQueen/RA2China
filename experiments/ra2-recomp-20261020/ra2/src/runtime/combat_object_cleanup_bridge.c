@@ -1,3 +1,4 @@
+#include "combat_manager_post_clamp_take_bridge.h"
 #include "combat_manager_signed_clamp_bridge.h"
 #include "combat_manager_result_branch_bridge.h"
 #include "combat_manager_second_inner_init_bridge.h"
@@ -1912,4 +1913,20 @@ void ra2_manager_signed_clamp_bridge(Ra2ManagerSignedClampFlags *flags)
     /* 首次写入始终提交，只有原条件不成立时才执行第二次写入。 */
     MEM32(g_esp + 20u) = left;
     if (!keep_left) MEM32(g_esp + 20u) = right;
+}
+
+
+int ra2_manager_post_clamp_take_bridge(uint32_t kind, uint32_t left, uint32_t right, uint32_t carry, Ra2ManagerPostClampTakeFlags *flags)
+{
+    /* 先读实际池指针，再压入返回槽；保留二者重叠时的访问次序。 */
+    g_ecx = MEM32(g_ebx + 4u);
+    uint32_t caller = g_cur_func;
+    g_esp -= 4; MEM32(g_esp) = RECOMP_RETADDR;
+    g_flag_k = kind; g_flag_a = left; g_flag_b = right; g_flag_cf = carry;
+    sub_00407450();
+    g_cur_func = caller;
+    /* 使用完整helper的实际返回现场，公开元组保持原值。 */
+    g_esi = g_eax;
+    flags->kind = FK_TEST; flags->left = g_esi; flags->right = g_esi; flags->carry = 0;
+    return g_esi != 0;
 }
