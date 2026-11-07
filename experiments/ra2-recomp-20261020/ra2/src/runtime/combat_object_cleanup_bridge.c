@@ -1,3 +1,4 @@
+#include "combat_manager_take_followup_args_bridge.h"
 #include "combat_manager_take_dispatch_args_bridge.h"
 #include "combat_manager_take_dispatch_fields_bridge.h"
 #include "combat_manager_take_result_bridge.h"
@@ -2239,4 +2240,12 @@ void ra2_manager_take_dispatch_args_bridge(uint32_t data, uint32_t object, uint3
 {
     *out_data = data;
     *out_object = object;
+}
+
+
+/* 401E23..401E28: ordered register copy and uint32 LEA; both adjacent CALLs remain generated. */
+void ra2_manager_take_followup_args_bridge(uint32_t data, uint32_t base, uint32_t *out_data, uint32_t *out_object)
+{
+    *out_data = data;
+    *out_object = base + 0x1Cu;
 }
