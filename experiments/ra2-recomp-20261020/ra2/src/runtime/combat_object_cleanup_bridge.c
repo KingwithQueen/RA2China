@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_fields_bridge.h"
 #include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
@@ -2332,4 +2333,12 @@ int ra2_manager_take_repeat_backedge_bridge(const Ra2ManagerTakeRepeatRegisters 
         return 1;
     }
     return 0;
+}
+
+
+/* 401E4F..401E54: ordered reads; preceding accepted backedge and following LEA remain unchanged. */
+void ra2_manager_take_equal_fields_bridge(uint32_t frame, uint32_t base, uint32_t *first, uint32_t *second)
+{
+    *first = MEM32(frame + 0x14u);
+    *second = MEM32(base);
 }

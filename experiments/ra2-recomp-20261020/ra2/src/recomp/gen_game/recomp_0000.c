@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_fields_bridge.h"
 #include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
@@ -2973,8 +2974,13 @@ L_00401E49:
     RECOMP_BACKEDGE();
     if (/* sub result */ CMP_NE(_flag_a, _flag_b)) goto L_00401D4E; /* 0x00401E49: jne 0x401d4e */
 L_00401E4F:
+    {
+        ra2_manager_take_equal_fields_bridge(ebp, ebx, &edx, &ecx);
+        goto L_00401E54;
+    }
     edx = MEM32(ebp + 0x14); /* 0x00401E4F: mov edx, dword ptr [ebp + 0x14] */
     ecx = MEM32(ebx); /* 0x00401E52: mov ecx, dword ptr [ebx] */
+L_00401E54:
     eax = ebp + 0x40; /* 0x00401E54: lea eax, [ebp + 0x40] */
     PUSH32(esp, eax); /* 0x00401E57: push eax */
     RECOMP_CALL(sub_00401640); /* 0x00401E58: call 0x401640 */
