@@ -1,3 +1,4 @@
+#include "combat_manager_take_dispatch_fields_bridge.h"
 #include "combat_manager_take_result_bridge.h"
 #include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
@@ -2870,8 +2871,13 @@ L_00401E0A:
     RECOMP_BACKEDGE();
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401D73; /* 0x00401E0C: je 0x401d73 */
 L_00401E12:
+    {
+        ra2_manager_take_dispatch_fields_bridge(esp, esi, &edx, &edi);
+        goto L_00401E19;
+    }
     edx = MEM32(esp + 0x14); /* 0x00401E12: mov edx, dword ptr [esp + 0x14] */
     edi = esi + 0x1C; /* 0x00401E16: lea edi, [esi + 0x1c] */
+L_00401E19:
     PUSH32(esp, edx); /* 0x00401E19: push edx */
     edx = edi; /* 0x00401E1A: mov edx, edi */
     ecx = esi; /* 0x00401E1C: mov ecx, esi */

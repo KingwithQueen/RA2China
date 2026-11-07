@@ -1,3 +1,4 @@
+#include "combat_manager_take_dispatch_fields_bridge.h"
 #include "combat_manager_take_result_bridge.h"
 #include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
@@ -2221,4 +2222,12 @@ int ra2_manager_take_result_backedge_bridge(const Ra2ManagerTakeResultRegisters 
         return 1;
     }
     return 0;
+}
+
+
+/* 401E12..401E19: stack read then 32-bit LEA; following PUSH/CALL remain generated. */
+void ra2_manager_take_dispatch_fields_bridge(uint32_t stack, uint32_t value, uint32_t *data, uint32_t *target)
+{
+    *data = MEM32(stack + 0x14u);
+    *target = value + 0x1Cu;
 }
