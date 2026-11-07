@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_address_bridge.h"
 #include "combat_manager_take_equal_fields_bridge.h"
 #include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
@@ -2981,7 +2982,12 @@ L_00401E4F:
     edx = MEM32(ebp + 0x14); /* 0x00401E4F: mov edx, dword ptr [ebp + 0x14] */
     ecx = MEM32(ebx); /* 0x00401E52: mov ecx, dword ptr [ebx] */
 L_00401E54:
+    {
+        ra2_manager_take_equal_address_bridge(ebp, &eax);
+        goto L_00401E57;
+    }
     eax = ebp + 0x40; /* 0x00401E54: lea eax, [ebp + 0x40] */
+L_00401E57:
     PUSH32(esp, eax); /* 0x00401E57: push eax */
     RECOMP_CALL(sub_00401640); /* 0x00401E58: call 0x401640 */
     RECOMP_FLAGS_IN();

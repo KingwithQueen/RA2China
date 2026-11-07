@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_address_bridge.h"
 #include "combat_manager_take_equal_fields_bridge.h"
 #include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
@@ -2341,4 +2342,11 @@ void ra2_manager_take_equal_fields_bridge(uint32_t frame, uint32_t base, uint32_
 {
     *first = MEM32(frame + 0x14u);
     *second = MEM32(base);
+}
+
+
+/* 401E54..401E57: independent address calculation; preceding accepted reads and following PUSH/CALL remain unchanged. */
+void ra2_manager_take_equal_address_bridge(uint32_t base, uint32_t *result)
+{
+    *result = base + 0x40u;
 }
