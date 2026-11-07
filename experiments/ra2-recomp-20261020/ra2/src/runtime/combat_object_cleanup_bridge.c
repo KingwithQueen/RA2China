@@ -1,3 +1,4 @@
+#include "combat_manager_post_cleanup_reads_bridge.h"
 #include "combat_manager_cleanup_fields_bridge.h"
 #include "combat_manager_empty_call_bridge.h"
 #include "combat_manager_next_result_bridge.h"
@@ -2172,4 +2173,12 @@ void ra2_manager_cleanup_fields_bridge(uint32_t manager, uint32_t *value, uint32
     *value = MEM32(manager + 0x3Cu);
     *data = manager;
     *head = MEM32(*value + 0x8u);
+}
+
+
+/* 401DF8..401DFF: ordered reads only; neither adjacent call is migrated. */
+void ra2_manager_post_cleanup_reads_bridge(uint32_t stack, uint32_t *value)
+{
+    *value = MEM32(stack + 0x10u);
+    *value = MEM32(*value + 0x4u);
 }
