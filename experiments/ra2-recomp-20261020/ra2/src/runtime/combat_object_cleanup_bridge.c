@@ -1,3 +1,4 @@
+#include "combat_manager_take_result_bridge.h"
 #include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
 #include "combat_manager_cleanup_fields_bridge.h"
@@ -2190,4 +2191,34 @@ void ra2_manager_post_take_fields_bridge(uint32_t stack, uint32_t value, uint32_
 {
     *owner = MEM32(stack + 0x10u);
     *data = value;
+}
+
+
+/* 401E0A..401E12: preserve the pre-yield TEST predicate. AF is undefined by x86. */
+int ra2_manager_take_result_bridge(uint32_t value, Ra2ManagerTakeResultState *state)
+{
+    state->kind = FK_TEST;
+    state->left = value;
+    state->right = value;
+    state->carry = 0;
+    return value != 0;
+}
+
+/* Match the generated unsigned counter, null hook, and actual callback effects. */
+int ra2_manager_take_result_backedge_bridge(const Ra2ManagerTakeResultRegisters *regs)
+{
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0;
+        g_eax = regs->ax;
+        g_ecx = regs->cx;
+        g_edx = regs->dx;
+        g_ebx = regs->bx;
+        g_esp = regs->sp;
+        g_esi = regs->si;
+        g_edi = regs->di;
+        g_ebp = regs->bp;
+        recomp_yield_hook();
+        return 1;
+    }
+    return 0;
 }

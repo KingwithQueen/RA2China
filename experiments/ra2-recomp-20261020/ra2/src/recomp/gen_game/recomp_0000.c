@@ -1,3 +1,4 @@
+#include "combat_manager_take_result_bridge.h"
 #include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
 #include "combat_manager_cleanup_fields_bridge.h"
@@ -2849,6 +2850,19 @@ L_00401DFF:
     ebx = MEM32(esp + 0x10); /* 0x00401E04: mov ebx, dword ptr [esp + 0x10] */
     esi = eax; /* 0x00401E08: mov esi, eax */
 L_00401E0A:
+    {
+        Ra2ManagerTakeResultState _manager_take_result;
+        int _manager_take_result_nonzero = ra2_manager_take_result_bridge(esi, &_manager_take_result);
+        _flag_k = _manager_take_result.kind; _flag_a = _manager_take_result.left;
+        _flag_b = _manager_take_result.right; _cf = _manager_take_result.carry;
+        const Ra2ManagerTakeResultRegisters _manager_take_result_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        if (ra2_manager_take_result_backedge_bridge(&_manager_take_result_regs)) {
+            /* 只导入yield实际返回GPR，保留先前局部TEST及回调公开状态。 */
+            RECOMP_REGS_IN();
+        }
+        if (_manager_take_result_nonzero) goto L_00401E12;
+        goto L_00401D73;
+    }
     /* test esi, esi */ /* 0x00401E0A: test esi, esi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
     _cf = 0;
