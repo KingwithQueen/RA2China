@@ -1,3 +1,4 @@
+#include "combat_manager_take_compare_bridge.h"
 #include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
@@ -2265,4 +2266,15 @@ void ra2_manager_take_followup_fields_bridge(uint32_t stack, uint32_t base, uint
 void ra2_manager_take_invoke_arg_bridge(uint32_t value, uint32_t *result)
 {
     *result = value;
+}
+
+
+/* 401E3B..401E3F: CMP lazy tuple and NE predicate; AF is defined by x86. */
+int ra2_manager_take_compare_bridge(uint32_t left, uint32_t right, Ra2ManagerTakeCompareState *state)
+{
+    state->left = left;
+    state->right = right;
+    state->carry = (uint32_t)(left < right);
+    state->kind = FK_CMP;
+    return left != right;
 }

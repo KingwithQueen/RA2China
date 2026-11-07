@@ -1,3 +1,4 @@
+#include "combat_manager_take_compare_bridge.h"
 #include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
@@ -2917,6 +2918,14 @@ L_00401E33:
 L_00401E36:
     RECOMP_CALL(sub_004018C0); /* 0x00401E36: call 0x4018c0 */
     RECOMP_FLAGS_IN();
+    {
+        Ra2ManagerTakeCompareState _manager_take_compare;
+        int _manager_take_compare_ne = ra2_manager_take_compare_bridge(eax, esi, &_manager_take_compare);
+        _flag_a = _manager_take_compare.left; _flag_b = _manager_take_compare.right;
+        _cf = _manager_take_compare.carry; _flag_k = _manager_take_compare.kind;
+        if (_manager_take_compare_ne) goto L_00401E7F;
+        goto L_00401E3F;
+    }
     /* cmp eax, esi */ /* 0x00401E3B: cmp eax, esi */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(esi);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
