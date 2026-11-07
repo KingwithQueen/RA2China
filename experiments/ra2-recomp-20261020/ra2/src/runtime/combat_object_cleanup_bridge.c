@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_field_bridge.h"
 #include "combat_manager_take_compare_bridge.h"
 #include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
@@ -2277,4 +2278,11 @@ int ra2_manager_take_compare_bridge(uint32_t left, uint32_t right, Ra2ManagerTak
     state->carry = (uint32_t)(left < right);
     state->kind = FK_CMP;
     return left != right;
+}
+
+
+/* 401E3F..401E43: stack read only; preceding CMP/JNE and following SUB remain generated. */
+void ra2_manager_take_equal_field_bridge(uint32_t stack, uint32_t *value)
+{
+    *value = MEM32(stack + 0x18u);
 }

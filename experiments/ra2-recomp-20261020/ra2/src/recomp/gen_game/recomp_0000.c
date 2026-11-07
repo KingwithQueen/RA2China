@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_field_bridge.h"
 #include "combat_manager_take_compare_bridge.h"
 #include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
@@ -2932,7 +2933,12 @@ L_00401E36:
     _flag_k = FK_CMP;
     if (CMP_NE(_flag_a, _flag_b)) goto L_00401E7F; /* 0x00401E3D: jne 0x401e7f */
 L_00401E3F:
+    {
+        ra2_manager_take_equal_field_bridge(esp, &ecx);
+        goto L_00401E43;
+    }
     ecx = MEM32(esp + 0x18); /* 0x00401E3F: mov ecx, dword ptr [esp + 0x18] */
+L_00401E43:
     _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(eax);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
     ecx = ecx - eax; /* 0x00401E43: sub ecx, eax */
