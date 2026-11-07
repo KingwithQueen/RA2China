@@ -1,3 +1,4 @@
+#include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
 #include "combat_manager_cleanup_fields_bridge.h"
 #include "combat_manager_empty_call_bridge.h"
@@ -2841,8 +2842,13 @@ L_00401DF3:
 L_00401DFF:
     RECOMP_CALL(sub_00407450); /* 0x00401DFF: call 0x407450 */
     RECOMP_FLAGS_IN();
+    {
+        ra2_manager_post_take_fields_bridge(esp, eax, &ebx, &esi);
+        goto L_00401E0A;
+    }
     ebx = MEM32(esp + 0x10); /* 0x00401E04: mov ebx, dword ptr [esp + 0x10] */
     esi = eax; /* 0x00401E08: mov esi, eax */
+L_00401E0A:
     /* test esi, esi */ /* 0x00401E0A: test esi, esi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
     _cf = 0;

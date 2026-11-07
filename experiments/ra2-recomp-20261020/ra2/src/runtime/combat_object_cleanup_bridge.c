@@ -1,3 +1,4 @@
+#include "combat_manager_post_take_fields_bridge.h"
 #include "combat_manager_post_cleanup_reads_bridge.h"
 #include "combat_manager_cleanup_fields_bridge.h"
 #include "combat_manager_empty_call_bridge.h"
@@ -2181,4 +2182,12 @@ void ra2_manager_post_cleanup_reads_bridge(uint32_t stack, uint32_t *value)
 {
     *value = MEM32(stack + 0x10u);
     *value = MEM32(*value + 0x4u);
+}
+
+
+/* 401E04..401E0A: stack read then EAX copy; CALL and TEST remain generated. */
+void ra2_manager_post_take_fields_bridge(uint32_t stack, uint32_t value, uint32_t *owner, uint32_t *data)
+{
+    *owner = MEM32(stack + 0x10u);
+    *data = value;
 }
