@@ -1,3 +1,4 @@
+#include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
 #include "combat_manager_take_dispatch_args_bridge.h"
 #include "combat_manager_take_dispatch_fields_bridge.h"
@@ -2899,8 +2900,13 @@ L_00401E1E:
 L_00401E28:
     RECOMP_CALL(sub_00408420); /* 0x00401E28: call 0x408420 */
     RECOMP_FLAGS_IN();
+    {
+        ra2_manager_take_followup_fields_bridge(esp, ebx, &esi, &ecx);
+        goto L_00401E33;
+    }
     esi = MEM32(esp + 0x14); /* 0x00401E2D: mov esi, dword ptr [esp + 0x14] */
     ecx = MEM32(ebx); /* 0x00401E31: mov ecx, dword ptr [ebx] */
+L_00401E33:
     PUSH32(esp, esi); /* 0x00401E33: push esi */
     edx = edi; /* 0x00401E34: mov edx, edi */
     RECOMP_CALL(sub_004018C0); /* 0x00401E36: call 0x4018c0 */

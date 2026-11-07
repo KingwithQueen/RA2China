@@ -1,3 +1,4 @@
+#include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
 #include "combat_manager_take_dispatch_args_bridge.h"
 #include "combat_manager_take_dispatch_fields_bridge.h"
@@ -2248,4 +2249,12 @@ void ra2_manager_take_followup_args_bridge(uint32_t data, uint32_t base, uint32_
 {
     *out_data = data;
     *out_object = base + 0x1Cu;
+}
+
+
+/* 401E2D..401E33: ordered reads; preceding CALL and following PUSH remain generated. */
+void ra2_manager_take_followup_fields_bridge(uint32_t stack, uint32_t base, uint32_t *first, uint32_t *second)
+{
+    *first = MEM32(stack + 0x14u);
+    *second = MEM32(base);
 }
