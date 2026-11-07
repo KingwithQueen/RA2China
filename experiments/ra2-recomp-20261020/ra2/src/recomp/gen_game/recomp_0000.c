@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
 #include "combat_manager_take_equal_field_bridge.h"
 #include "combat_manager_take_compare_bridge.h"
@@ -2953,7 +2954,12 @@ L_00401E43:
     ecx = ecx - eax; /* 0x00401E43: sub ecx, eax */
     _flag_k = FK_CMP;
 L_00401E45:
+    {
+        ra2_manager_take_equal_store_bridge(esp, ecx);
+        goto L_00401E49;
+    }
     MEM32(esp + 0x18) = ecx; /* 0x00401E45: mov dword ptr [esp + 0x18], ecx */
+L_00401E49:
     RECOMP_BACKEDGE();
     if (/* sub result */ CMP_NE(_flag_a, _flag_b)) goto L_00401D4E; /* 0x00401E49: jne 0x401d4e */
 L_00401E4F:

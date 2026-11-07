@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
 #include "combat_manager_take_equal_field_bridge.h"
 #include "combat_manager_take_compare_bridge.h"
@@ -2297,4 +2298,11 @@ void ra2_manager_take_difference_bridge(uint32_t left, uint32_t right, Ra2Manage
     state->carry = (uint32_t)(left < right);
     state->kind = FK_CMP;
     state->value = left - right;
+}
+
+
+/* 401E45..401E49: one guest store only; existing prior C scopes unchanged, following backedge/JNE retained. */
+void ra2_manager_take_equal_store_bridge(uint32_t stack, uint32_t value)
+{
+    MEM32(stack + 0x18u) = value;
 }
