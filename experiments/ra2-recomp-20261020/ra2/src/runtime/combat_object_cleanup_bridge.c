@@ -1,3 +1,4 @@
+#include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
 #include "combat_manager_take_equal_field_bridge.h"
@@ -2305,4 +2306,30 @@ void ra2_manager_take_difference_bridge(uint32_t left, uint32_t right, Ra2Manage
 void ra2_manager_take_equal_store_bridge(uint32_t stack, uint32_t value)
 {
     MEM32(stack + 0x18u) = value;
+}
+
+
+/* 401E49..401E4F: preserve the pre-yield original lazy-operand predicate. */
+int ra2_manager_take_repeat_bridge(uint32_t left, uint32_t right)
+{
+    return left != right;
+}
+
+/* Match the generated unsigned counter, null hook, and actual callback effects. */
+int ra2_manager_take_repeat_backedge_bridge(const Ra2ManagerTakeRepeatRegisters *regs)
+{
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0;
+        g_eax = regs->ax;
+        g_ecx = regs->cx;
+        g_edx = regs->dx;
+        g_ebx = regs->bx;
+        g_esp = regs->sp;
+        g_esi = regs->si;
+        g_edi = regs->di;
+        g_ebp = regs->bp;
+        recomp_yield_hook();
+        return 1;
+    }
+    return 0;
 }

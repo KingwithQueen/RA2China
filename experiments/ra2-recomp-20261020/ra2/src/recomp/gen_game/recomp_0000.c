@@ -1,3 +1,4 @@
+#include "combat_manager_take_repeat_bridge.h"
 #include "combat_manager_take_equal_store_bridge.h"
 #include "combat_manager_take_difference_bridge.h"
 #include "combat_manager_take_equal_field_bridge.h"
@@ -2960,6 +2961,15 @@ L_00401E45:
     }
     MEM32(esp + 0x18) = ecx; /* 0x00401E45: mov dword ptr [esp + 0x18], ecx */
 L_00401E49:
+    {
+        int _manager_take_repeat_ne = ra2_manager_take_repeat_bridge(_flag_a, _flag_b);
+        const Ra2ManagerTakeRepeatRegisters _manager_take_repeat_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        if (ra2_manager_take_repeat_backedge_bridge(&_manager_take_repeat_regs)) {
+            RECOMP_REGS_IN();
+        }
+        if (_manager_take_repeat_ne) goto L_00401D4E;
+        goto L_00401E4F;
+    }
     RECOMP_BACKEDGE();
     if (/* sub result */ CMP_NE(_flag_a, _flag_b)) goto L_00401D4E; /* 0x00401E49: jne 0x401d4e */
 L_00401E4F:
