@@ -1,3 +1,4 @@
+#include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
 #include "combat_manager_take_dispatch_args_bridge.h"
@@ -2257,4 +2258,11 @@ void ra2_manager_take_followup_fields_bridge(uint32_t stack, uint32_t base, uint
 {
     *first = MEM32(stack + 0x14u);
     *second = MEM32(base);
+}
+
+
+/* 401E34..401E36: single register argument; preceding PUSH and following CALL remain generated. */
+void ra2_manager_take_invoke_arg_bridge(uint32_t value, uint32_t *result)
+{
+    *result = value;
 }

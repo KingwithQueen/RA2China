@@ -1,3 +1,4 @@
+#include "combat_manager_take_invoke_arg_bridge.h"
 #include "combat_manager_take_followup_fields_bridge.h"
 #include "combat_manager_take_followup_args_bridge.h"
 #include "combat_manager_take_dispatch_args_bridge.h"
@@ -2908,7 +2909,12 @@ L_00401E28:
     ecx = MEM32(ebx); /* 0x00401E31: mov ecx, dword ptr [ebx] */
 L_00401E33:
     PUSH32(esp, esi); /* 0x00401E33: push esi */
+    {
+        ra2_manager_take_invoke_arg_bridge(edi, &edx);
+        goto L_00401E36;
+    }
     edx = edi; /* 0x00401E34: mov edx, edi */
+L_00401E36:
     RECOMP_CALL(sub_004018C0); /* 0x00401E36: call 0x4018c0 */
     RECOMP_FLAGS_IN();
     /* cmp eax, esi */ /* 0x00401E3B: cmp eax, esi */
