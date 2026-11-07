@@ -1,3 +1,4 @@
+#include "combat_manager_take_dispatch_args_bridge.h"
 #include "combat_manager_take_dispatch_fields_bridge.h"
 #include "combat_manager_take_result_bridge.h"
 #include "combat_manager_post_take_fields_bridge.h"
@@ -2230,4 +2231,12 @@ void ra2_manager_take_dispatch_fields_bridge(uint32_t stack, uint32_t value, uin
 {
     *data = MEM32(stack + 0x14u);
     *target = value + 0x1Cu;
+}
+
+
+/* 401E1A..401E1E: ordered register arguments; preceding PUSH and following CALL remain generated. */
+void ra2_manager_take_dispatch_args_bridge(uint32_t data, uint32_t object, uint32_t *out_data, uint32_t *out_object)
+{
+    *out_data = data;
+    *out_object = object;
 }
