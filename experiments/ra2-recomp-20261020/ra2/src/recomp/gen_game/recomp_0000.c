@@ -1,3 +1,4 @@
+#include "combat_manager_inner_return_bridge.h"
 #include "combat_manager_inner_release_bridge.h"
 #include "combat_manager_inner_unlink_bridge.h"
 #include "combat_manager_front_result_bridge.h"
@@ -2753,11 +2754,23 @@ L_00401DC2:
     RECOMP_CALL(sub_00408520); /* 0x00401DC4: call 0x408520 */
     RECOMP_FLAGS_IN();
 L_00401DC9:
+    {
+        ecx = MEM32(esi + 0x3Cu);
+        edx = edi;
+        ecx = MEM32(ecx + 4u);
+        esp -= 4u;
+        const Ra2ManagerInnerReturnRegisters _manager_inner_return_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_inner_return_caller = ra2_manager_inner_return_bridge(&_manager_inner_return_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 读取及压槽完成后才公开；返回采用完整helper的实际现场。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_inner_return_caller; RECOMP_FLAGS_IN();
+        goto L_00401DD6;
+    }
     ecx = MEM32(esi + 0x3C); /* 0x00401DC9: mov ecx, dword ptr [esi + 0x3c] */
     edx = edi; /* 0x00401DCC: mov edx, edi */
     ecx = MEM32(ecx + 0x4); /* 0x00401DCE: mov ecx, dword ptr [ecx + 4] */
     RECOMP_CALL(sub_00407460); /* 0x00401DD1: call 0x407460 */
     RECOMP_FLAGS_IN();
+L_00401DD6:
     ecx = ebx; /* 0x00401DD6: mov ecx, ebx */
     RECOMP_CALL(sub_004073A0); /* 0x00401DD8: call 0x4073a0 */
     RECOMP_FLAGS_IN();
