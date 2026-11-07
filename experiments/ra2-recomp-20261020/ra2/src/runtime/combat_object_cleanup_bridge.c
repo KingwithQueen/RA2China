@@ -1,3 +1,4 @@
+#include "combat_manager_next_result_bridge.h"
 #include "combat_manager_next_front_bridge.h"
 #include "combat_manager_inner_return_bridge.h"
 #include "combat_manager_inner_release_bridge.h"
@@ -2107,4 +2108,35 @@ uint32_t ra2_manager_next_front_bridge(const Ra2ManagerNextFrontRegisters *regs,
     g_ebp = regs->bp;
     sub_004073A0();
     return caller;
+}
+
+
+/* 返回值保存yield前判定；调用者先落实局部EDI/TEST，再执行回边。 */
+int ra2_manager_next_result_bridge(uint32_t result, Ra2ManagerNextResultState *state)
+{
+    state->value = result;
+    state->kind = FK_TEST;
+    state->left = result;
+    state->right = result;
+    state->carry = 0;
+    return result != 0;
+}
+
+/* 精确保留原回边的32位计数、空hook和回调实际状态；零结果也计数。 */
+int ra2_manager_next_result_backedge_bridge(const Ra2ManagerNextResultRegisters *regs)
+{
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0;
+        g_eax = regs->ax;
+        g_ecx = regs->cx;
+        g_edx = regs->dx;
+        g_ebx = regs->bx;
+        g_esp = regs->sp;
+        g_esi = regs->si;
+        g_edi = regs->di;
+        g_ebp = regs->bp;
+        recomp_yield_hook();
+        return 1;
+    }
+    return 0;
 }

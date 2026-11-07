@@ -1,3 +1,4 @@
+#include "combat_manager_next_result_bridge.h"
 #include "combat_manager_next_front_bridge.h"
 #include "combat_manager_inner_return_bridge.h"
 #include "combat_manager_inner_release_bridge.h"
@@ -2784,6 +2785,20 @@ L_00401DD6:
     RECOMP_CALL(sub_004073A0); /* 0x00401DD8: call 0x4073a0 */
     RECOMP_FLAGS_IN();
 L_00401DDD:
+    {
+        Ra2ManagerNextResultState _manager_next_result;
+        int _manager_next_result_nonzero = ra2_manager_next_result_bridge(eax, &_manager_next_result);
+        edi = _manager_next_result.value;
+        _flag_k = _manager_next_result.kind; _flag_a = _manager_next_result.left;
+        _flag_b = _manager_next_result.right; _cf = _manager_next_result.carry;
+        const Ra2ManagerNextResultRegisters _manager_next_result_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        if (ra2_manager_next_result_backedge_bridge(&_manager_next_result_regs)) {
+            /* 只导入yield实际返回GPR，保留先前局部TEST及回调公开状态。 */
+            RECOMP_REGS_IN();
+        }
+        if (_manager_next_result_nonzero) goto L_00401DBB;
+        goto L_00401DE3;
+    }
     edi = eax; /* 0x00401DDD: mov edi, eax */
     /* test edi, edi */ /* 0x00401DDF: test edi, edi */
     _flag_a = (uint32_t)(edi); _flag_b = (uint32_t)(edi);
