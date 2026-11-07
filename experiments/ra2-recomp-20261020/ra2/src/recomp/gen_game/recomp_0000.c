@@ -1,3 +1,4 @@
+#include "combat_manager_empty_call_bridge.h"
 #include "combat_manager_next_result_bridge.h"
 #include "combat_manager_next_front_bridge.h"
 #include "combat_manager_inner_return_bridge.h"
@@ -2807,9 +2808,18 @@ L_00401DDD:
     RECOMP_BACKEDGE();
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401DBB; /* 0x00401DE1: jne 0x401dbb */
 L_00401DE3:
+    {
+        ecx = esi + 0x1Cu; esp -= 4u;
+        const Ra2ManagerEmptyCallRegisters _manager_empty_call_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_empty_call_caller = ra2_manager_empty_call_bridge(&_manager_empty_call_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 保留完整空helper调用；压槽成功后才公开，返回后导入实际现场。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_empty_call_caller; RECOMP_FLAGS_IN();
+        goto L_00401DEB;
+    }
     ecx = esi + 0x1C; /* 0x00401DE3: lea ecx, [esi + 0x1c] */
     RECOMP_CALL(sub_00408450); /* 0x00401DE6: call 0x408450 */
     RECOMP_FLAGS_IN();
+L_00401DEB:
     eax = MEM32(esi + 0x3C); /* 0x00401DEB: mov eax, dword ptr [esi + 0x3c] */
     edx = esi; /* 0x00401DEE: mov edx, esi */
     ecx = MEM32(eax + 0x8); /* 0x00401DF0: mov ecx, dword ptr [eax + 8] */
