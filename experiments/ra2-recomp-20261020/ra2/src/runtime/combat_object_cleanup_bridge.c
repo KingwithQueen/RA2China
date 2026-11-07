@@ -1,3 +1,4 @@
+#include "combat_manager_next_front_bridge.h"
 #include "combat_manager_inner_return_bridge.h"
 #include "combat_manager_inner_release_bridge.h"
 #include "combat_manager_inner_unlink_bridge.h"
@@ -2083,5 +2084,27 @@ uint32_t ra2_manager_inner_return_bridge(const Ra2ManagerInnerReturnRegisters *r
     g_edi = regs->di;
     g_ebp = regs->bp;
     sub_00407460();
+    return caller;
+}
+
+
+/* 401DD6调用：先写guest返回槽，再公开实际EBX对应的ECX与局部标志。 */
+uint32_t ra2_manager_next_front_bridge(const Ra2ManagerNextFrontRegisters *regs, uint32_t kind, uint32_t left, uint32_t right, uint32_t carry)
+{
+    uint32_t caller = g_cur_func;
+    MEM32(regs->sp) = RECOMP_RETADDR;
+    g_flag_k = kind;
+    g_flag_a = left;
+    g_flag_b = right;
+    g_flag_cf = carry;
+    g_eax = regs->ax;
+    g_ecx = regs->cx;
+    g_edx = regs->dx;
+    g_ebx = regs->bx;
+    g_esp = regs->sp;
+    g_esi = regs->si;
+    g_edi = regs->di;
+    g_ebp = regs->bp;
+    sub_004073A0();
     return caller;
 }

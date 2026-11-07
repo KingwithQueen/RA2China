@@ -1,3 +1,4 @@
+#include "combat_manager_next_front_bridge.h"
 #include "combat_manager_inner_return_bridge.h"
 #include "combat_manager_inner_release_bridge.h"
 #include "combat_manager_inner_unlink_bridge.h"
@@ -2771,9 +2772,18 @@ L_00401DC9:
     RECOMP_CALL(sub_00407460); /* 0x00401DD1: call 0x407460 */
     RECOMP_FLAGS_IN();
 L_00401DD6:
+    {
+        ecx = ebx; esp -= 4u;
+        const Ra2ManagerNextFrontRegisters _manager_next_front_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        uint32_t _manager_next_front_caller = ra2_manager_next_front_bridge(&_manager_next_front_regs, _flag_k, _flag_a, _flag_b, _cf);
+        /* 压槽成功后才公开缓存；导入完整helper的实际返回现场。 */
+        RECOMP_REGS_IN(); g_cur_func = _manager_next_front_caller; RECOMP_FLAGS_IN();
+        goto L_00401DDD;
+    }
     ecx = ebx; /* 0x00401DD6: mov ecx, ebx */
     RECOMP_CALL(sub_004073A0); /* 0x00401DD8: call 0x4073a0 */
     RECOMP_FLAGS_IN();
+L_00401DDD:
     edi = eax; /* 0x00401DDD: mov edi, eax */
     /* test edi, edi */ /* 0x00401DDF: test edi, edi */
     _flag_a = (uint32_t)(edi); _flag_b = (uint32_t)(edi);
