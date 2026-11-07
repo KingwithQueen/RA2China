@@ -1,3 +1,4 @@
+#include "combat_manager_cleanup_fields_bridge.h"
 #include "combat_manager_empty_call_bridge.h"
 #include "combat_manager_next_result_bridge.h"
 #include "combat_manager_next_front_bridge.h"
@@ -2820,9 +2821,14 @@ L_00401DE3:
     RECOMP_CALL(sub_00408450); /* 0x00401DE6: call 0x408450 */
     RECOMP_FLAGS_IN();
 L_00401DEB:
+    {
+        ra2_manager_cleanup_fields_bridge(esi, &eax, &edx, &ecx);
+        goto L_00401DF3;
+    }
     eax = MEM32(esi + 0x3C); /* 0x00401DEB: mov eax, dword ptr [esi + 0x3c] */
     edx = esi; /* 0x00401DEE: mov edx, esi */
     ecx = MEM32(eax + 0x8); /* 0x00401DF0: mov ecx, dword ptr [eax + 8] */
+L_00401DF3:
     RECOMP_CALL(sub_00407460); /* 0x00401DF3: call 0x407460 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(esp + 0x10); /* 0x00401DF8: mov ecx, dword ptr [esp + 0x10] */

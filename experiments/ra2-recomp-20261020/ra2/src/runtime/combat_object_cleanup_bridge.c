@@ -1,3 +1,4 @@
+#include "combat_manager_cleanup_fields_bridge.h"
 #include "combat_manager_empty_call_bridge.h"
 #include "combat_manager_next_result_bridge.h"
 #include "combat_manager_next_front_bridge.h"
@@ -2162,4 +2163,13 @@ uint32_t ra2_manager_empty_call_bridge(const Ra2ManagerEmptyCallRegisters *regs,
     g_ebp = regs->bp;
     sub_00408450();
     return caller;
+}
+
+
+/* 401DEB..401DF3：只接管有序字段读取，不公开状态或执行后续调用。 */
+void ra2_manager_cleanup_fields_bridge(uint32_t manager, uint32_t *value, uint32_t *data, uint32_t *head)
+{
+    *value = MEM32(manager + 0x3Cu);
+    *data = manager;
+    *head = MEM32(*value + 0x8u);
 }
