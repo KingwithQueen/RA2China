@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_followup_arg_bridge.h"
 #include "combat_manager_take_unequal_invoke_arg_bridge.h"
 #include "combat_manager_take_unequal_test_bridge.h"
 #include "combat_manager_take_unequal_result_bridge.h"
@@ -2498,6 +2499,13 @@ uint32_t ra2_manager_take_unequal_test_bridge(uint32_t value, uint32_t *kind, ui
 
 /* 401E9B..401E9D: independent register copy; following CALL and state synchronization remain generated. */
 void ra2_manager_take_unequal_invoke_arg_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
+}
+
+
+/* 401EA2..401EA4: independent register copy; following CALL and state synchronization remain generated. */
+void ra2_manager_take_unequal_followup_arg_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
 }
