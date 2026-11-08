@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_object_bridge.h"
 #include "combat_manager_take_equal_mark_bridge.h"
 #include "combat_manager_take_equal_followup_args_bridge.h"
 #include "combat_manager_take_equal_address_bridge.h"
@@ -2366,4 +2367,11 @@ void ra2_manager_take_equal_followup_args_bridge(uint32_t data, uint32_t base, u
 void ra2_manager_take_equal_mark_bridge(uint32_t base)
 {
     MEM32(base + 0x18u) = 1u;
+}
+
+
+/* 401E6E..401E70: one read only; prior accepted store unchanged and following CALL retained. */
+void ra2_manager_take_equal_object_bridge(uint32_t object, uint32_t *value)
+{
+    *value = MEM32(object);
 }
