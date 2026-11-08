@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_mark_bridge.h"
 #include "combat_manager_take_equal_followup_args_bridge.h"
 #include "combat_manager_take_equal_address_bridge.h"
 #include "combat_manager_take_equal_fields_bridge.h"
@@ -2358,4 +2359,11 @@ void ra2_manager_take_equal_followup_args_bridge(uint32_t data, uint32_t base, u
 {
     *out_data = data;
     *out_object = base + 0xCu;
+}
+
+
+/* 401E67..401E6E: one guest store only; existing prior C scopes unchanged, following read/CALL retained. */
+void ra2_manager_take_equal_mark_bridge(uint32_t base)
+{
+    MEM32(base + 0x18u) = 1u;
 }

@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_mark_bridge.h"
 #include "combat_manager_take_equal_followup_args_bridge.h"
 #include "combat_manager_take_equal_address_bridge.h"
 #include "combat_manager_take_equal_fields_bridge.h"
@@ -3001,7 +3002,12 @@ L_00401E57:
 L_00401E62:
     RECOMP_CALL(sub_00407370); /* 0x00401E62: call 0x407370 */
     RECOMP_FLAGS_IN();
+    {
+        ra2_manager_take_equal_mark_bridge(ebp);
+        goto L_00401E6E;
+    }
     MEM32(ebp + 0x18) = 1; /* 0x00401E67: mov dword ptr [ebp + 0x18], 1 */
+L_00401E6E:
     ecx = MEM32(ebx); /* 0x00401E6E: mov ecx, dword ptr [ebx] */
     RECOMP_CALL(sub_00401910); /* 0x00401E70: call 0x401910 */
     RECOMP_FLAGS_IN();
