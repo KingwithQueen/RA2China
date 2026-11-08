@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_return_value_bridge.h"
 #include "combat_manager_take_equal_object_bridge.h"
 #include "combat_manager_take_equal_mark_bridge.h"
 #include "combat_manager_take_equal_followup_args_bridge.h"
@@ -2374,4 +2375,11 @@ void ra2_manager_take_equal_mark_bridge(uint32_t base)
 void ra2_manager_take_equal_object_bridge(uint32_t object, uint32_t *value)
 {
     *value = MEM32(object);
+}
+
+
+/* 401E75..401E77: single return register copy; preceding CALL and following POPs remain generated. */
+void ra2_manager_take_equal_return_value_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
 }

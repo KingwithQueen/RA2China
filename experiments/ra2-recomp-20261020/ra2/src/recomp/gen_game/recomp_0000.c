@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_return_value_bridge.h"
 #include "combat_manager_take_equal_object_bridge.h"
 #include "combat_manager_take_equal_mark_bridge.h"
 #include "combat_manager_take_equal_followup_args_bridge.h"
@@ -3017,7 +3018,12 @@ L_00401E6E:
 L_00401E70:
     RECOMP_CALL(sub_00401910); /* 0x00401E70: call 0x401910 */
     RECOMP_FLAGS_IN();
+    {
+        ra2_manager_take_equal_return_value_bridge(ebp, &eax);
+        goto L_00401E77;
+    }
     eax = ebp; /* 0x00401E75: mov eax, ebp */
+L_00401E77:
     edi = POP32_VAL(esp); /* 0x00401E77: pop edi */
     esi = POP32_VAL(esp); /* 0x00401E78: pop esi */
     ebp = POP32_VAL(esp); /* 0x00401E79: pop ebp */
