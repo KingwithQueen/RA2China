@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_arg_bridge.h"
 #include "combat_manager_take_unequal_compare_bridge.h"
 #include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
@@ -2448,4 +2449,11 @@ int ra2_manager_take_unequal_compare_bridge(uint32_t base, Ra2ManagerTakeUnequal
     state->carry = (uint32_t)(left < base);
     state->kind = FK_CMP;
     return left == base;
+}
+
+
+/* 401E84..401E86: independent NE-path register copy; following CALL remains generated. */
+void ra2_manager_take_unequal_arg_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
 }

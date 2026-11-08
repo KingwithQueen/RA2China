@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_arg_bridge.h"
 #include "combat_manager_take_unequal_compare_bridge.h"
 #include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
@@ -3083,7 +3084,12 @@ L_00401E7F:
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00401E8B; /* 0x00401E82: je 0x401e8b */
 L_00401E84:
+    {
+        ra2_manager_take_unequal_arg_bridge(ebp, &ecx);
+        goto L_00401E86;
+    }
     ecx = ebp; /* 0x00401E84: mov ecx, ebp */
+L_00401E86:
     RECOMP_CALL(sub_00407380); /* 0x00401E86: call 0x407380 */
     RECOMP_FLAGS_IN();
 L_00401E8B:
