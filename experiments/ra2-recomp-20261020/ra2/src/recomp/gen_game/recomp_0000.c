@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_receiver_arg_bridge.h"
 #include "combat_manager_take_unequal_field_bridge.h"
 #include "combat_manager_take_unequal_followup_arg_bridge.h"
@@ -3160,7 +3161,12 @@ L_00401EAC:
     }
     edx = esi; /* 0x00401EAC: mov edx, esi */
 L_00401EAE:
+    {
+        ra2_manager_take_unequal_indirect_field_bridge(eax, &ecx);
+        goto L_00401EB1;
+    }
     ecx = MEM32(eax + 0x4); /* 0x00401EAE: mov ecx, dword ptr [eax + 4] */
+L_00401EB1:
     RECOMP_CALL(sub_00407460); /* 0x00401EB1: call 0x407460 */
     RECOMP_FLAGS_IN();
     ecx = edi; /* 0x00401EB6: mov ecx, edi */

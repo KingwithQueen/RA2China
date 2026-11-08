@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_receiver_arg_bridge.h"
 #include "combat_manager_take_unequal_field_bridge.h"
 #include "combat_manager_take_unequal_followup_arg_bridge.h"
@@ -2524,4 +2525,11 @@ void ra2_manager_take_unequal_field_bridge(uint32_t base, uint32_t *value)
 void ra2_manager_take_unequal_receiver_arg_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
+}
+
+
+/* 401EAE..401EB1: one read only; both neighboring calls and following preparation retained. */
+void ra2_manager_take_unequal_indirect_field_bridge(uint32_t base, uint32_t *value)
+{
+    *value = MEM32(base + 4u);
 }
