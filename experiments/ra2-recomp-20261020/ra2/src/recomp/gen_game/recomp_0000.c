@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_field_bridge.h"
 #include "combat_manager_take_unequal_followup_arg_bridge.h"
 #include "combat_manager_take_unequal_invoke_arg_bridge.h"
 #include "combat_manager_take_unequal_test_bridge.h"
@@ -3146,7 +3147,12 @@ L_00401E9D:
 L_00401EA4:
     RECOMP_CALL(sub_00408520); /* 0x00401EA4: call 0x408520 */
     RECOMP_FLAGS_IN();
+    {
+        ra2_manager_take_unequal_field_bridge(ebp, &eax);
+        goto L_00401EAC;
+    }
     eax = MEM32(ebp + 0x3C); /* 0x00401EA9: mov eax, dword ptr [ebp + 0x3c] */
+L_00401EAC:
     edx = esi; /* 0x00401EAC: mov edx, esi */
     ecx = MEM32(eax + 0x4); /* 0x00401EAE: mov ecx, dword ptr [eax + 4] */
     RECOMP_CALL(sub_00407460); /* 0x00401EB1: call 0x407460 */
