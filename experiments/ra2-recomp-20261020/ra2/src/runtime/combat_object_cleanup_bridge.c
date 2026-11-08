@@ -1,3 +1,4 @@
+#include "combat_manager_take_pop_ebx_bridge.h"
 #include "combat_manager_take_pop_ebp_bridge.h"
 #include "combat_manager_take_pop_esi_bridge.h"
 #include "combat_manager_take_pop_edi_bridge.h"
@@ -2408,6 +2409,15 @@ void ra2_manager_take_pop_esi_bridge(uint32_t *stack, uint32_t *value)
 
 /* 401E79..401E7A: one POP EBP only; prior accepted POP ESI and following POPs unchanged. */
 void ra2_manager_take_pop_ebp_bridge(uint32_t *stack, uint32_t *value)
+{
+    uint32_t v = MEM32(*stack);
+    *stack += 4u;
+    *value = v;
+}
+
+
+/* 401E7A..401E7B: one POP EBX only; prior accepted POP EBP and following ADD and RET unchanged. */
+void ra2_manager_take_pop_ebx_bridge(uint32_t *stack, uint32_t *value)
 {
     uint32_t v = MEM32(*stack);
     *stack += 4u;
