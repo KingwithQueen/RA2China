@@ -1,3 +1,4 @@
+#include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
 #include "combat_manager_take_pop_ebp_bridge.h"
 #include "combat_manager_take_pop_esi_bridge.h"
@@ -2422,4 +2423,16 @@ void ra2_manager_take_pop_ebx_bridge(uint32_t *stack, uint32_t *value)
     uint32_t v = MEM32(*stack);
     *stack += 4u;
     *value = v;
+}
+
+
+/* 401E7B..401E7E: ADD ESP,0xC and old-operand lazy tuple; RET remains generated. */
+void ra2_manager_take_stack_adjust_bridge(uint32_t stack, Ra2ManagerTakeStackAdjustState *state)
+{
+    uint32_t value = stack + 0xCu;
+    state->left = stack;
+    state->right = 0xCu;
+    state->carry = (uint32_t)(value < stack);
+    state->value = value;
+    state->kind = FK_ADD;
 }

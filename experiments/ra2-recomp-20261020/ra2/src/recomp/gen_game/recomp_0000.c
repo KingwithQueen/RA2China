@@ -1,3 +1,4 @@
+#include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
 #include "combat_manager_take_pop_ebp_bridge.h"
 #include "combat_manager_take_pop_esi_bridge.h"
@@ -3052,10 +3053,19 @@ L_00401E7A:
     }
     ebx = POP32_VAL(esp); /* 0x00401E7A: pop ebx */
 L_00401E7B:
+    {
+        Ra2ManagerTakeStackAdjustState _manager_take_stack_adjust;
+        ra2_manager_take_stack_adjust_bridge(esp, &_manager_take_stack_adjust);
+        _flag_a = _manager_take_stack_adjust.left; _flag_b = _manager_take_stack_adjust.right;
+        _cf = _manager_take_stack_adjust.carry;
+        esp = _manager_take_stack_adjust.value; _flag_k = _manager_take_stack_adjust.kind;
+        goto L_00401E7E;
+    }
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0xCu);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esp = esp + 0xCu; /* 0x00401E7B: add esp, 0xc */
     _flag_k = FK_ADD;
+L_00401E7E:
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00401E7E: ret  */
 L_00401E7F:
     /* cmp MEM32(ebp + 0x4), ebp */ /* 0x00401E7F: cmp dword ptr [ebp + 4], ebp */
