@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_compare_bridge.h"
 #include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
 #include "combat_manager_take_pop_ebp_bridge.h"
@@ -3068,6 +3069,14 @@ L_00401E7B:
 L_00401E7E:
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00401E7E: ret  */
 L_00401E7F:
+    {
+        Ra2ManagerTakeUnequalCompareState _manager_take_unequal_compare;
+        int _manager_take_unequal_compare_eq = ra2_manager_take_unequal_compare_bridge(ebp, &_manager_take_unequal_compare);
+        _flag_a = _manager_take_unequal_compare.left; _flag_b = _manager_take_unequal_compare.right;
+        _cf = _manager_take_unequal_compare.carry; _flag_k = _manager_take_unequal_compare.kind;
+        if (_manager_take_unequal_compare_eq) goto L_00401E8B;
+        goto L_00401E84;
+    }
     /* cmp MEM32(ebp + 0x4), ebp */ /* 0x00401E7F: cmp dword ptr [ebp + 4], ebp */
     _flag_a = (uint32_t)(MEM32(ebp + 0x4)); _flag_b = (uint32_t)(ebp);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);

@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_compare_bridge.h"
 #include "combat_manager_take_stack_adjust_bridge.h"
 #include "combat_manager_take_pop_ebx_bridge.h"
 #include "combat_manager_take_pop_ebp_bridge.h"
@@ -2435,4 +2436,16 @@ void ra2_manager_take_stack_adjust_bridge(uint32_t stack, Ra2ManagerTakeStackAdj
     state->carry = (uint32_t)(value < stack);
     state->value = value;
     state->kind = FK_ADD;
+}
+
+
+/* 401E7F..401E84: ordered read, CMP lazy tuple and EQ predicate; AF is defined by x86. */
+int ra2_manager_take_unequal_compare_bridge(uint32_t base, Ra2ManagerTakeUnequalCompareState *state)
+{
+    uint32_t left = MEM32(base + 0x4u);
+    state->left = left;
+    state->right = base;
+    state->carry = (uint32_t)(left < base);
+    state->kind = FK_CMP;
+    return left == base;
 }
