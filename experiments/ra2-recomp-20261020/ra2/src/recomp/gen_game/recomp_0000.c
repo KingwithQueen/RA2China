@@ -1,3 +1,4 @@
+#include "combat_manager_take_pop_edi_bridge.h"
 #include "combat_manager_take_equal_return_value_bridge.h"
 #include "combat_manager_take_equal_object_bridge.h"
 #include "combat_manager_take_equal_mark_bridge.h"
@@ -3024,7 +3025,12 @@ L_00401E70:
     }
     eax = ebp; /* 0x00401E75: mov eax, ebp */
 L_00401E77:
+    {
+        ra2_manager_take_pop_edi_bridge(&esp, &edi);
+        goto L_00401E78;
+    }
     edi = POP32_VAL(esp); /* 0x00401E77: pop edi */
+L_00401E78:
     esi = POP32_VAL(esp); /* 0x00401E78: pop esi */
     ebp = POP32_VAL(esp); /* 0x00401E79: pop ebp */
     ebx = POP32_VAL(esp); /* 0x00401E7A: pop ebx */
