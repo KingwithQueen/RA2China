@@ -1,3 +1,4 @@
+#include "combat_manager_take_pop_ebp_bridge.h"
 #include "combat_manager_take_pop_esi_bridge.h"
 #include "combat_manager_take_pop_edi_bridge.h"
 #include "combat_manager_take_equal_return_value_bridge.h"
@@ -3038,7 +3039,12 @@ L_00401E78:
     }
     esi = POP32_VAL(esp); /* 0x00401E78: pop esi */
 L_00401E79:
+    {
+        ra2_manager_take_pop_ebp_bridge(&esp, &ebp);
+        goto L_00401E7A;
+    }
     ebp = POP32_VAL(esp); /* 0x00401E79: pop ebp */
+L_00401E7A:
     ebx = POP32_VAL(esp); /* 0x00401E7A: pop ebx */
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0xCu);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
