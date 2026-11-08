@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_call_arg_bridge.h"
 #include "combat_manager_take_unequal_address_bridge.h"
 #include "combat_manager_take_unequal_arg_bridge.h"
 #include "combat_manager_take_unequal_compare_bridge.h"
@@ -3100,7 +3101,12 @@ L_00401E8B:
     }
     edi = ebp + 0x24; /* 0x00401E8B: lea edi, [ebp + 0x24] */
 L_00401E8E:
+    {
+        ra2_manager_take_unequal_call_arg_bridge(edi, &ecx);
+        goto L_00401E90;
+    }
     ecx = edi; /* 0x00401E8E: mov ecx, edi */
+L_00401E90:
     RECOMP_CALL(sub_004073A0); /* 0x00401E90: call 0x4073a0 */
     RECOMP_FLAGS_IN();
     esi = eax; /* 0x00401E95: mov esi, eax */

@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_call_arg_bridge.h"
 #include "combat_manager_take_unequal_address_bridge.h"
 #include "combat_manager_take_unequal_arg_bridge.h"
 #include "combat_manager_take_unequal_compare_bridge.h"
@@ -2464,4 +2465,11 @@ void ra2_manager_take_unequal_arg_bridge(uint32_t value, uint32_t *output)
 void ra2_manager_take_unequal_address_bridge(uint32_t value, uint32_t *output)
 {
     *output = value + 0x24u;
+}
+
+
+/* 401E8E..401E90: independent register copy; following CALL remains generated. */
+void ra2_manager_take_unequal_call_arg_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
 }
