@@ -1,3 +1,4 @@
+#include "combat_manager_take_pop_esi_bridge.h"
 #include "combat_manager_take_pop_edi_bridge.h"
 #include "combat_manager_take_equal_return_value_bridge.h"
 #include "combat_manager_take_equal_object_bridge.h"
@@ -2388,6 +2389,15 @@ void ra2_manager_take_equal_return_value_bridge(uint32_t value, uint32_t *output
 
 /* 401E77..401E78: one POP EDI only; prior accepted return value and following POPs unchanged. */
 void ra2_manager_take_pop_edi_bridge(uint32_t *stack, uint32_t *value)
+{
+    uint32_t v = MEM32(*stack);
+    *stack += 4u;
+    *value = v;
+}
+
+
+/* 401E78..401E79: one POP ESI only; prior accepted POP EDI and following POPs unchanged. */
+void ra2_manager_take_pop_esi_bridge(uint32_t *stack, uint32_t *value)
 {
     uint32_t v = MEM32(*stack);
     *stack += 4u;
