@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_invoke_arg_bridge.h"
 #include "combat_manager_take_unequal_test_bridge.h"
 #include "combat_manager_take_unequal_result_bridge.h"
 #include "combat_manager_take_unequal_call_arg_bridge.h"
@@ -3128,7 +3129,12 @@ L_00401E97:
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_00401EC3; /* 0x00401E99: je 0x401ec3 */
 L_00401E9B:
+    {
+        ra2_manager_take_unequal_invoke_arg_bridge(esi, &ecx);
+        goto L_00401E9D;
+    }
     ecx = esi; /* 0x00401E9B: mov ecx, esi */
+L_00401E9D:
     RECOMP_CALL(sub_00407380); /* 0x00401E9D: call 0x407380 */
     RECOMP_FLAGS_IN();
     ecx = esi; /* 0x00401EA2: mov ecx, esi */
