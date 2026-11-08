@@ -1,3 +1,4 @@
+#include "combat_manager_take_equal_followup_args_bridge.h"
 #include "combat_manager_take_equal_address_bridge.h"
 #include "combat_manager_take_equal_fields_bridge.h"
 #include "combat_manager_take_repeat_bridge.h"
@@ -2349,4 +2350,12 @@ void ra2_manager_take_equal_fields_bridge(uint32_t frame, uint32_t base, uint32_
 void ra2_manager_take_equal_address_bridge(uint32_t base, uint32_t *result)
 {
     *result = base + 0x40u;
+}
+
+
+/* 401E5D..401E62: ordered register copy and uint32 LEA; both adjacent CALLs remain generated. */
+void ra2_manager_take_equal_followup_args_bridge(uint32_t data, uint32_t base, uint32_t *out_data, uint32_t *out_object)
+{
+    *out_data = data;
+    *out_object = base + 0xCu;
 }
