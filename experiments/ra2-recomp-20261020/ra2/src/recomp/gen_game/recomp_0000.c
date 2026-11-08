@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_test_bridge.h"
 #include "combat_manager_take_unequal_result_bridge.h"
 #include "combat_manager_take_unequal_call_arg_bridge.h"
 #include "combat_manager_take_unequal_address_bridge.h"
@@ -3116,6 +3117,11 @@ L_00401E90:
     }
     esi = eax; /* 0x00401E95: mov esi, eax */
 L_00401E97:
+    {
+        uint32_t _manager_take_unequal_test_eq = ra2_manager_take_unequal_test_bridge(esi, &_flag_k, &_flag_a, &_flag_b, &_cf);
+        if (_manager_take_unequal_test_eq) goto L_00401EC3;
+        goto L_00401E9B;
+    }
     /* test esi, esi */ /* 0x00401E97: test esi, esi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
     _cf = 0;

@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_test_bridge.h"
 #include "combat_manager_take_unequal_result_bridge.h"
 #include "combat_manager_take_unequal_call_arg_bridge.h"
 #include "combat_manager_take_unequal_address_bridge.h"
@@ -2480,4 +2481,15 @@ void ra2_manager_take_unequal_call_arg_bridge(uint32_t value, uint32_t *output)
 void ra2_manager_take_unequal_result_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
+}
+
+
+/* 401E97..401E9B: exact lazy TEST tuple and EQ predicate; native AF is undefined. */
+uint32_t ra2_manager_take_unequal_test_bridge(uint32_t value, uint32_t *kind, uint32_t *left, uint32_t *right, uint32_t *carry)
+{
+    *left = value;
+    *right = value;
+    *carry = 0u;
+    *kind = FK_TEST;
+    return (uint32_t)(value == 0u);
 }
