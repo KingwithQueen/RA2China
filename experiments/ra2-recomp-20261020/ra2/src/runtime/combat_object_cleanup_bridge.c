@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_receiver_arg_bridge.h"
 #include "combat_manager_take_unequal_field_bridge.h"
 #include "combat_manager_take_unequal_followup_arg_bridge.h"
 #include "combat_manager_take_unequal_invoke_arg_bridge.h"
@@ -2516,4 +2517,11 @@ void ra2_manager_take_unequal_followup_arg_bridge(uint32_t value, uint32_t *outp
 void ra2_manager_take_unequal_field_bridge(uint32_t base, uint32_t *value)
 {
     *value = MEM32(base + 0x3Cu);
+}
+
+
+/* 401EAC..401EAE: independent register copy; following CALL and state synchronization remain generated. */
+void ra2_manager_take_unequal_receiver_arg_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
 }
