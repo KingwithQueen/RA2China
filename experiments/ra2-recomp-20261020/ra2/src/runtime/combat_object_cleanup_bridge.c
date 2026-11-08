@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_address_bridge.h"
 #include "combat_manager_take_unequal_arg_bridge.h"
 #include "combat_manager_take_unequal_compare_bridge.h"
 #include "combat_manager_take_stack_adjust_bridge.h"
@@ -2456,4 +2457,11 @@ int ra2_manager_take_unequal_compare_bridge(uint32_t base, Ra2ManagerTakeUnequal
 void ra2_manager_take_unequal_arg_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
+}
+
+
+/* 401E8B..401E8E: independent LEA; following MOV and CALL remain generated. */
+void ra2_manager_take_unequal_address_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value + 0x24u;
 }
