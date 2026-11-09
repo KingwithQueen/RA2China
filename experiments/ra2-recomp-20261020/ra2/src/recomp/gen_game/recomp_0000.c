@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_pop_edi_bridge.h"
 #include "combat_manager_take_unequal_final_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_afterloop_arg_bridge.h"
 #include "combat_manager_take_unequal_afterloop_field_bridge.h"
@@ -3239,7 +3240,12 @@ L_00401ED3:
     RECOMP_CALL(sub_00407460); /* 0x00401ED3: call 0x407460 */
     RECOMP_FLAGS_IN();
 L_00401ED8:
+    {
+        ra2_manager_take_unequal_final_pop_edi_bridge(&esp, &edi);
+        goto L_00401ED9;
+    }
     edi = POP32_VAL(esp); /* 0x00401ED8: pop edi */
+L_00401ED9:
     esi = POP32_VAL(esp); /* 0x00401ED9: pop esi */
     ebp = POP32_VAL(esp); /* 0x00401EDA: pop ebp */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
