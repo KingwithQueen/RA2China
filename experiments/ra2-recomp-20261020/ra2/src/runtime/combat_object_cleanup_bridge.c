@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_backedge_bridge.h"
 #include "combat_manager_take_unequal_postcall_result_bridge.h"
 #include "combat_manager_take_unequal_postcall_arg_bridge.h"
 #include "combat_manager_take_unequal_indirect_field_bridge.h"
@@ -2548,4 +2549,34 @@ void ra2_manager_take_unequal_postcall_arg_bridge(uint32_t value, uint32_t *outp
 void ra2_manager_take_unequal_postcall_result_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
+}
+
+
+/* 401EBF..401EC3: preserve the pre-yield TEST predicate. AF is undefined by x86. */
+int ra2_manager_take_unequal_backedge_bridge(uint32_t value, Ra2ManagerTakeUnequalBackedgeState *state)
+{
+    state->kind = FK_TEST;
+    state->left = value;
+    state->right = value;
+    state->carry = 0;
+    return value != 0;
+}
+
+/* Match the generated unsigned counter, null hook, and actual callback effects. */
+int ra2_manager_take_unequal_backedge_backedge_bridge(const Ra2ManagerTakeUnequalBackedgeRegisters *regs)
+{
+    if (++g_backedges >= RECOMP_YIELD_EVERY && recomp_yield_hook) {
+        g_backedges = 0;
+        g_eax = regs->ax;
+        g_ecx = regs->cx;
+        g_edx = regs->dx;
+        g_ebx = regs->bx;
+        g_esp = regs->sp;
+        g_esi = regs->si;
+        g_edi = regs->di;
+        g_ebp = regs->bp;
+        recomp_yield_hook();
+        return 1;
+    }
+    return 0;
 }

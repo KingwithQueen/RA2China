@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_backedge_bridge.h"
 #include "combat_manager_take_unequal_postcall_result_bridge.h"
 #include "combat_manager_take_unequal_postcall_arg_bridge.h"
 #include "combat_manager_take_unequal_indirect_field_bridge.h"
@@ -3185,6 +3186,19 @@ L_00401EB8:
     }
     esi = eax; /* 0x00401EBD: mov esi, eax */
 L_00401EBF:
+    {
+        Ra2ManagerTakeUnequalBackedgeState _manager_take_unequal_backedge;
+        int _manager_take_unequal_backedge_nonzero = ra2_manager_take_unequal_backedge_bridge(esi, &_manager_take_unequal_backedge);
+        _flag_k = _manager_take_unequal_backedge.kind; _flag_a = _manager_take_unequal_backedge.left;
+        _flag_b = _manager_take_unequal_backedge.right; _cf = _manager_take_unequal_backedge.carry;
+        const Ra2ManagerTakeUnequalBackedgeRegisters _manager_take_unequal_backedge_regs = {eax, ecx, edx, ebx, esp, esi, edi, ebp};
+        if (ra2_manager_take_unequal_backedge_backedge_bridge(&_manager_take_unequal_backedge_regs)) {
+            /* 只导入yield实际返回GPR，保留先前局部TEST及回调公开状态。 */
+            RECOMP_REGS_IN();
+        }
+        if (_manager_take_unequal_backedge_nonzero) goto L_00401E9B;
+        goto L_00401EC3;
+    }
     /* test esi, esi */ /* 0x00401EBF: test esi, esi */
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(esi);
     _cf = 0;
