@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_postcall_result_bridge.h"
 #include "combat_manager_take_unequal_postcall_arg_bridge.h"
 #include "combat_manager_take_unequal_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_receiver_arg_bridge.h"
@@ -2538,6 +2539,13 @@ void ra2_manager_take_unequal_indirect_field_bridge(uint32_t base, uint32_t *val
 
 /* 401EB6..401EB8: independent register copy; following CALL and state synchronization remain generated. */
 void ra2_manager_take_unequal_postcall_arg_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value;
+}
+
+
+/* 401EBD..401EBF: independent register copy; following TEST flags preparation and backedge remain generated. */
+void ra2_manager_take_unequal_postcall_result_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
 }
