@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_afterloop_address_bridge.h"
 #include "combat_manager_take_unequal_backedge_bridge.h"
 #include "combat_manager_take_unequal_postcall_result_bridge.h"
 #include "combat_manager_take_unequal_postcall_arg_bridge.h"
@@ -3206,7 +3207,12 @@ L_00401EBF:
     RECOMP_BACKEDGE();
     if (TEST_NZ(_flag_a, _flag_b)) goto L_00401E9B; /* 0x00401EC1: jne 0x401e9b */
 L_00401EC3:
+    {
+        ra2_manager_take_unequal_afterloop_address_bridge(ebp, &ecx);
+        goto L_00401EC6;
+    }
     ecx = ebp + 0x1C; /* 0x00401EC3: lea ecx, [ebp + 0x1c] */
+L_00401EC6:
     RECOMP_CALL(sub_00408450); /* 0x00401EC6: call 0x408450 */
     RECOMP_FLAGS_IN();
     ecx = MEM32(ebp + 0x3C); /* 0x00401ECB: mov ecx, dword ptr [ebp + 0x3c] */

@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_afterloop_address_bridge.h"
 #include "combat_manager_take_unequal_backedge_bridge.h"
 #include "combat_manager_take_unequal_postcall_result_bridge.h"
 #include "combat_manager_take_unequal_postcall_arg_bridge.h"
@@ -2579,4 +2580,11 @@ int ra2_manager_take_unequal_backedge_backedge_bridge(const Ra2ManagerTakeUnequa
         return 1;
     }
     return 0;
+}
+
+
+/* 401EC3..401EC6: independent LEA; following CALL remain generated. */
+void ra2_manager_take_unequal_afterloop_address_bridge(uint32_t value, uint32_t *output)
+{
+    *output = value + 0x1Cu;
 }
