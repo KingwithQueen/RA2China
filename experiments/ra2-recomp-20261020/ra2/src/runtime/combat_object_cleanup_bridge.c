@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_afterloop_arg_bridge.h"
 #include "combat_manager_take_unequal_afterloop_field_bridge.h"
 #include "combat_manager_take_unequal_afterloop_address_bridge.h"
@@ -2603,4 +2604,11 @@ void ra2_manager_take_unequal_afterloop_field_bridge(uint32_t base, uint32_t *va
 void ra2_manager_take_unequal_afterloop_arg_bridge(uint32_t value, uint32_t *output)
 {
     *output = value;
+}
+
+
+/* 401ED0..401ED3: independent ordered read; following CALL and state synchronization remain generated. */
+void ra2_manager_take_unequal_final_indirect_field_bridge(uint32_t base, uint32_t *output)
+{
+    *output = MEM32(base + 0x8u);
 }
