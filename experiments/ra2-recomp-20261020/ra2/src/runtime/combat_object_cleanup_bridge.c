@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_afterloop_field_bridge.h"
 #include "combat_manager_take_unequal_afterloop_address_bridge.h"
 #include "combat_manager_take_unequal_backedge_bridge.h"
 #include "combat_manager_take_unequal_postcall_result_bridge.h"
@@ -2587,4 +2588,11 @@ int ra2_manager_take_unequal_backedge_backedge_bridge(const Ra2ManagerTakeUnequa
 void ra2_manager_take_unequal_afterloop_address_bridge(uint32_t value, uint32_t *output)
 {
     *output = value + 0x1Cu;
+}
+
+
+/* 401ECB..401ECE: one read only; both neighboring calls and following preparation retained. */
+void ra2_manager_take_unequal_afterloop_field_bridge(uint32_t base, uint32_t *value)
+{
+    *value = MEM32(base + 0x3Cu);
 }
