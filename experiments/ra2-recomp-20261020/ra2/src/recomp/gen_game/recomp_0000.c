@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_pop_ebp_bridge.h"
 #include "combat_manager_take_unequal_final_pop_esi_bridge.h"
 #include "combat_manager_take_unequal_final_pop_edi_bridge.h"
 #include "combat_manager_take_unequal_final_indirect_field_bridge.h"
@@ -3253,7 +3254,12 @@ L_00401ED9:
     }
     esi = POP32_VAL(esp); /* 0x00401ED9: pop esi */
 L_00401EDA:
+    {
+        ra2_manager_take_unequal_final_pop_ebp_bridge(&esp, &ebp);
+        goto L_00401EDB;
+    }
     ebp = POP32_VAL(esp); /* 0x00401EDA: pop ebp */
+L_00401EDB:
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x00401EDB: xor eax, eax */
     _cf = 0;
