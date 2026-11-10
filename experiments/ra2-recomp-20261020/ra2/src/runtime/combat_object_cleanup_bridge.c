@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_pop_esi_bridge.h"
 #include "combat_manager_take_unequal_final_pop_edi_bridge.h"
 #include "combat_manager_take_unequal_final_indirect_field_bridge.h"
 #include "combat_manager_take_unequal_afterloop_arg_bridge.h"
@@ -2617,6 +2618,15 @@ void ra2_manager_take_unequal_final_indirect_field_bridge(uint32_t base, uint32_
 
 /* 401ED8..401ED9: independent POP EDI; prior CALL and later POP/ADD/RET remain generated. */
 void ra2_manager_take_unequal_final_pop_edi_bridge(uint32_t *stack, uint32_t *output)
+{
+    uint32_t value = MEM32(*stack);
+    *stack += 4u;
+    *output = value;
+}
+
+
+/* 401ED9..401EDA 独立执行 POP ESI。读取失败时保留原 ESP 和 ESI。 */
+void ra2_manager_take_unequal_final_pop_esi_bridge(uint32_t *stack, uint32_t *output)
 {
     uint32_t value = MEM32(*stack);
     *stack += 4u;
