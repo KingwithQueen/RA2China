@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_zero_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebp_bridge.h"
 #include "combat_manager_take_unequal_final_pop_esi_bridge.h"
 #include "combat_manager_take_unequal_final_pop_edi_bridge.h"
@@ -2641,4 +2642,15 @@ void ra2_manager_take_unequal_final_pop_ebp_bridge(uint32_t *stack, uint32_t *ou
     uint32_t value = MEM32(*stack);
     *stack += 4u;
     *output = value;
+}
+
+
+/* 401EDB..401EDD: XOR EAX,EAX。保留原生成代码写入次序；原生AF未定义。 */
+void ra2_manager_take_unequal_final_zero_bridge(uint32_t *output, uint32_t *kind, uint32_t *left, uint32_t *right, uint32_t *carry)
+{
+    *left = 0u;
+    *right = 0u;
+    *output = 0u;
+    *carry = 0u;
+    *kind = FK_TEST;
 }
