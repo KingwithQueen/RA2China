@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
 #include "combat_manager_take_unequal_final_zero_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebp_bridge.h"
@@ -2663,4 +2664,17 @@ void ra2_manager_take_unequal_final_pop_ebx_bridge(uint32_t *stack, uint32_t *ou
     uint32_t value = MEM32(*stack);
     *stack += 4u;
     *output = value;
+}
+
+
+/* 401EDE..401EE1: ADD ESP,0xC。无guest访存；32位加法允许回绕。 */
+void ra2_manager_take_unequal_final_stack_adjust_bridge(uint32_t *stack, uint32_t *kind, uint32_t *left, uint32_t *right, uint32_t *carry)
+{
+    uint32_t old = *stack;
+    uint32_t value = old + 12u;
+    *left = old;
+    *right = 12u;
+    *carry = (uint32_t)(value < old);
+    *stack = value;
+    *kind = FK_ADD;
 }
