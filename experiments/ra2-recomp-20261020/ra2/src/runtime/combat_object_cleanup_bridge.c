@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_initial_fields_bridge.h"
 #include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
@@ -2692,4 +2693,19 @@ void ra2_manager_reference_increment_bridge(uint32_t receiver, volatile uint32_t
     *value = old + 1u;
     *kind = FK_INC;
     MEM32(receiver + 12u) = *value;
+}
+
+
+/* 40206C..402080: XOR EBP, ordered A8/A4 zero stores, then LEA ECX.
+ * The following CALL remains generated. No public-state synchronization. */
+void ra2_manager_constructor_initial_fields_bridge(uint32_t owner, volatile uint32_t *base, volatile uint32_t *member, volatile uint32_t *kind, volatile uint32_t *left, volatile uint32_t *right, volatile uint32_t *carry)
+{
+    *left = 0u;
+    *right = 0u;
+    *base = 0u;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(owner + 0xA8u) = *base;
+    MEM32(owner + 0xA4u) = *base;
+    *member = owner + 0xD8u;
 }

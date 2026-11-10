@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_initial_fields_bridge.h"
 #include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
@@ -3506,6 +3507,11 @@ L_00402040:
     ecx = ebx; /* 0x00402065: mov ecx, ebx */
     RECOMP_CALL(sub_00407200); /* 0x00402067: call 0x407200 */
     RECOMP_FLAGS_IN();
+L_0040206C:
+    {
+        ra2_manager_constructor_initial_fields_bridge(ebx, &ebp, &ecx, &_flag_k, &_flag_a, &_flag_b, &_cf);
+        goto L_00402080;
+    }
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     ebp = 0; /* 0x0040206C: xor ebp, ebp */
     _cf = 0;
@@ -3513,6 +3519,7 @@ L_00402040:
     MEM32(ebx + 0xA8) = ebp; /* 0x0040206E: mov dword ptr [ebx + 0xa8], ebp */
     MEM32(ebx + 0xA4) = ebp; /* 0x00402074: mov dword ptr [ebx + 0xa4], ebp */
     ecx = ebx + 0xD8; /* 0x0040207A: lea ecx, [ebx + 0xd8] */
+L_00402080:
     RECOMP_CALL(sub_00401000); /* 0x00402080: call 0x401000 */
     RECOMP_FLAGS_IN();
     MEM32(ebx + 0x15C) = 0x004022C0u; /* 0x00402085: mov dword ptr [ebx + 0x15c], 0x4022c0 */
