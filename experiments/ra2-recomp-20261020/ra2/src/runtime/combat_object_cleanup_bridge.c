@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
 #include "combat_manager_take_unequal_final_zero_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebp_bridge.h"
 #include "combat_manager_take_unequal_final_pop_esi_bridge.h"
@@ -2653,4 +2654,13 @@ void ra2_manager_take_unequal_final_zero_bridge(uint32_t *output, uint32_t *kind
     *output = 0u;
     *carry = 0u;
     *kind = FK_TEST;
+}
+
+
+/* 401EDD..401EDE 独立执行 POP EBX。读取失败时保留原 ESP 和 EBX。 */
+void ra2_manager_take_unequal_final_pop_ebx_bridge(uint32_t *stack, uint32_t *output)
+{
+    uint32_t value = MEM32(*stack);
+    *stack += 4u;
+    *output = value;
 }

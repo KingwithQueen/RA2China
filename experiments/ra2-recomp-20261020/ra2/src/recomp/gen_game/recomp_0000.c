@@ -1,3 +1,4 @@
+#include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
 #include "combat_manager_take_unequal_final_zero_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebp_bridge.h"
 #include "combat_manager_take_unequal_final_pop_esi_bridge.h"
@@ -3270,7 +3271,12 @@ L_00401EDB:
     _cf = 0;
     _flag_k = FK_TEST;
 L_00401EDD:
+    {
+        ra2_manager_take_unequal_final_pop_ebx_bridge(&esp, &ebx);
+        goto L_00401EDE;
+    }
     ebx = POP32_VAL(esp); /* 0x00401EDD: pop ebx */
+L_00401EDE:
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(0xCu);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esp = esp + 0xCu; /* 0x00401EDE: add esp, 0xc */
