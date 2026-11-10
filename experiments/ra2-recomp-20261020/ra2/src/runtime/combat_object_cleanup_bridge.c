@@ -1,3 +1,4 @@
+#include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
 #include "combat_manager_take_unequal_final_zero_bridge.h"
@@ -2677,4 +2678,18 @@ void ra2_manager_take_unequal_final_stack_adjust_bridge(uint32_t *stack, uint32_
     *carry = (uint32_t)(value < old);
     *stack = value;
     *kind = FK_ADD;
+}
+
+
+/* 401F80..401F87: read reference count, INC EAX, write count; RET excluded.
+ * Raw carry is untouched. Do not publish the cached tuple to public globals. */
+void ra2_manager_reference_increment_bridge(uint32_t receiver, volatile uint32_t *value, volatile uint32_t *kind, volatile uint32_t *left, volatile uint32_t *right)
+{
+    uint32_t old = MEM32(receiver + 12u);
+    *value = old;
+    *left = old;
+    *right = 1u;
+    *value = old + 1u;
+    *kind = FK_INC;
+    MEM32(receiver + 12u) = *value;
 }

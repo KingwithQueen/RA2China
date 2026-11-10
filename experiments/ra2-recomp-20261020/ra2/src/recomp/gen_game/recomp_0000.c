@@ -1,3 +1,4 @@
+#include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
 #include "combat_manager_take_unequal_final_pop_ebx_bridge.h"
 #include "combat_manager_take_unequal_final_zero_bridge.h"
@@ -3305,11 +3306,16 @@ void sub_00401F80(void) {
     RECOMP_ENTER(0x00401F80u);
 
 L_00401F80:
+    {
+        ra2_manager_reference_increment_bridge(ecx, &eax, &_flag_k, &_flag_a, &_flag_b);
+        goto L_00401F87;
+    }
     eax = MEM32(ecx + 0xC); /* 0x00401F80: mov eax, dword ptr [ecx + 0xc] */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
     eax = eax + 1; /* 0x00401F83: inc eax */
     _flag_k = FK_INC;
     MEM32(ecx + 0xC) = eax; /* 0x00401F84: mov dword ptr [ecx + 0xc], eax */
+L_00401F87:
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00401F87: ret  */
     RECOMP_REGS_OUT();
 }
