@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_receiver_address_bridge.h"
 #include "combat_manager_constructor_global_load_bridge.h"
 #include "combat_manager_constructor_tail_fields_bridge.h"
 #include "combat_manager_constructor_count_field_bridge.h"
@@ -3566,7 +3567,12 @@ L_004020DA:
     }
     eax = MEM32(0x830B50); /* 0x004020DA: mov eax, dword ptr [0x830b50] */
 L_004020DF:
+    {
+        ecx = ra2_manager_constructor_receiver_address_bridge(ebx);
+        goto L_004020E2;
+    }
     ecx = ebx + 0x10; /* 0x004020DF: lea ecx, [ebx + 0x10] */
+L_004020E2:
     MEM32(ebx + 0x94) = eax; /* 0x004020E2: mov dword ptr [ebx + 0x94], eax */
     MEM32(ebx + 0x90) = ebp; /* 0x004020E8: mov dword ptr [ebx + 0x90], ebp */
     MEM32(ebx + 0x98) = ebp; /* 0x004020EE: mov dword ptr [ebx + 0x98], ebp */

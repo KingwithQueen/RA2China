@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_receiver_address_bridge.h"
 #include "combat_manager_constructor_global_load_bridge.h"
 #include "combat_manager_constructor_tail_fields_bridge.h"
 #include "combat_manager_constructor_count_field_bridge.h"
@@ -2761,4 +2762,12 @@ void ra2_manager_constructor_tail_fields_bridge(uint32_t owner, uint32_t value)
 uint32_t ra2_manager_constructor_global_load_bridge(void)
 {
     return MEM32(0x830B50u);
+}
+
+
+/* 4020DF..4020E2：只计算 EBX + 0x10 的32位回绕结果。
+ * 返回值供调用者更新缓存 ECX；不读取或写入 guest 内存和公开状态。 */
+uint32_t ra2_manager_constructor_receiver_address_bridge(uint32_t base)
+{
+    return base + 0x10u;
 }
