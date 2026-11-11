@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_value_fields_bridge.h"
 #include "combat_manager_constructor_callback_fields_bridge.h"
 #include "combat_manager_constructor_initial_fields_bridge.h"
 #include "combat_manager_reference_increment_bridge.h"
@@ -3532,11 +3533,16 @@ L_00402085:
     MEM32(ebx + 0x160) = 0x00402330u; /* 0x0040208F: mov dword ptr [ebx + 0x160], 0x402330 */
     MEM32(ebx + 0x164) = 0x004023F0u; /* 0x00402099: mov dword ptr [ebx + 0x164], 0x4023f0 */
 L_004020A3:
+    {
+        ra2_manager_constructor_value_fields_bridge(ebx, ebp);
+        goto L_004020C1;
+    }
     MEM32(ebx + 0xB0) = ebp; /* 0x004020A3: mov dword ptr [ebx + 0xb0], ebp */
     MEM32(ebx + 0xB4) = ebp; /* 0x004020A9: mov dword ptr [ebx + 0xb4], ebp */
     MEM32(ebx + 0xB8) = ebp; /* 0x004020AF: mov dword ptr [ebx + 0xb8], ebp */
     MEM32(ebx + 0xBC) = ebp; /* 0x004020B5: mov dword ptr [ebx + 0xbc], ebp */
     MEM32(ebx + 0xC0) = ebp; /* 0x004020BB: mov dword ptr [ebx + 0xc0], ebp */
+L_004020C1:
     MEM32(ebx + 0xC) = 1; /* 0x004020C1: mov dword ptr [ebx + 0xc], 1 */
     MEM32(ebx + 0xA8) = ebp; /* 0x004020C8: mov dword ptr [ebx + 0xa8], ebp */
     MEM32(ebx + 0xA4) = ebp; /* 0x004020CE: mov dword ptr [ebx + 0xa4], ebp */
