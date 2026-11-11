@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_tail_fields_bridge.h"
 #include "combat_manager_constructor_count_field_bridge.h"
 #include "combat_manager_constructor_value_fields_bridge.h"
 #include "combat_manager_constructor_callback_fields_bridge.h"
@@ -2741,4 +2742,14 @@ void ra2_manager_constructor_value_fields_bridge(uint32_t owner, uint32_t value)
 void ra2_manager_constructor_count_field_bridge(uint32_t owner)
 {
     MEM32(owner + 0xCu) = 1u;
+}
+
+
+/* 4020C8..4020DA: three descending ordered stores of actual cached EBP.
+ * Preserve all registers, flags, public state and following generated code. */
+void ra2_manager_constructor_tail_fields_bridge(uint32_t owner, uint32_t value)
+{
+    MEM32(owner + 0xA8u) = value;
+    MEM32(owner + 0xA4u) = value;
+    MEM32(owner + 0xA0u) = value;
 }
