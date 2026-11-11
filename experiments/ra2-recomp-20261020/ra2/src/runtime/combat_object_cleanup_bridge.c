@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_global_field_bridge.h"
 #include "combat_manager_constructor_receiver_address_bridge.h"
 #include "combat_manager_constructor_global_load_bridge.h"
 #include "combat_manager_constructor_tail_fields_bridge.h"
@@ -2770,4 +2771,12 @@ uint32_t ra2_manager_constructor_global_load_bridge(void)
 uint32_t ra2_manager_constructor_receiver_address_bridge(uint32_t base)
 {
     return base + 0x10u;
+}
+
+
+/* 4020E2..4020E8: one ordered store of the actual cached EAX value.
+ * No global reload; preserve registers, flags, public state and following code. */
+void ra2_manager_constructor_global_field_bridge(uint32_t base, uint32_t value)
+{
+    MEM32(base + 0x94u) = value;
 }
