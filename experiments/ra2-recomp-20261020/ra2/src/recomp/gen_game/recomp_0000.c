@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_count_field_bridge.h"
 #include "combat_manager_constructor_value_fields_bridge.h"
 #include "combat_manager_constructor_callback_fields_bridge.h"
 #include "combat_manager_constructor_initial_fields_bridge.h"
@@ -3543,7 +3544,12 @@ L_004020A3:
     MEM32(ebx + 0xBC) = ebp; /* 0x004020B5: mov dword ptr [ebx + 0xbc], ebp */
     MEM32(ebx + 0xC0) = ebp; /* 0x004020BB: mov dword ptr [ebx + 0xc0], ebp */
 L_004020C1:
+    {
+        ra2_manager_constructor_count_field_bridge(ebx);
+        goto L_004020C8;
+    }
     MEM32(ebx + 0xC) = 1; /* 0x004020C1: mov dword ptr [ebx + 0xc], 1 */
+L_004020C8:
     MEM32(ebx + 0xA8) = ebp; /* 0x004020C8: mov dword ptr [ebx + 0xa8], ebp */
     MEM32(ebx + 0xA4) = ebp; /* 0x004020CE: mov dword ptr [ebx + 0xa4], ebp */
     MEM32(ebx + 0xA0) = ebp; /* 0x004020D4: mov dword ptr [ebx + 0xa0], ebp */

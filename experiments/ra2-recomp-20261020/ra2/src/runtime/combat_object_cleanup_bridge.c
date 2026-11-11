@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_count_field_bridge.h"
 #include "combat_manager_constructor_value_fields_bridge.h"
 #include "combat_manager_constructor_callback_fields_bridge.h"
 #include "combat_manager_constructor_initial_fields_bridge.h"
@@ -2732,4 +2733,12 @@ void ra2_manager_constructor_value_fields_bridge(uint32_t owner, uint32_t value)
     MEM32(owner + 0xB8u) = value;
     MEM32(owner + 0xBCu) = value;
     MEM32(owner + 0xC0u) = value;
+}
+
+
+/* 4020C1..4020C8: one ordered constant-one count store.
+ * Preserve all registers, flags, public state and following generated code. */
+void ra2_manager_constructor_count_field_bridge(uint32_t owner)
+{
+    MEM32(owner + 0xCu) = 1u;
 }
