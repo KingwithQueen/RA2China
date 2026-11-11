@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_callback_fields_bridge.h"
 #include "combat_manager_constructor_initial_fields_bridge.h"
 #include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
@@ -2708,4 +2709,14 @@ void ra2_manager_constructor_initial_fields_bridge(uint32_t owner, volatile uint
     MEM32(owner + 0xA8u) = *base;
     MEM32(owner + 0xA4u) = *base;
     *member = owner + 0xD8u;
+}
+
+
+/* 402085..4020A3: three ordered callback address stores.
+ * Preserve all registers, flags, public state and following generated code. */
+void ra2_manager_constructor_callback_fields_bridge(uint32_t owner)
+{
+    MEM32(owner + 0x15Cu) = 0x004022C0u;
+    MEM32(owner + 0x160u) = 0x00402330u;
+    MEM32(owner + 0x164u) = 0x004023F0u;
 }

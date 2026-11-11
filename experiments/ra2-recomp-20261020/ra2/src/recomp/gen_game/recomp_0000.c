@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_callback_fields_bridge.h"
 #include "combat_manager_constructor_initial_fields_bridge.h"
 #include "combat_manager_reference_increment_bridge.h"
 #include "combat_manager_take_unequal_final_stack_adjust_bridge.h"
@@ -3522,9 +3523,15 @@ L_0040206C:
 L_00402080:
     RECOMP_CALL(sub_00401000); /* 0x00402080: call 0x401000 */
     RECOMP_FLAGS_IN();
+L_00402085:
+    {
+        ra2_manager_constructor_callback_fields_bridge(ebx);
+        goto L_004020A3;
+    }
     MEM32(ebx + 0x15C) = 0x004022C0u; /* 0x00402085: mov dword ptr [ebx + 0x15c], 0x4022c0 */
     MEM32(ebx + 0x160) = 0x00402330u; /* 0x0040208F: mov dword ptr [ebx + 0x160], 0x402330 */
     MEM32(ebx + 0x164) = 0x004023F0u; /* 0x00402099: mov dword ptr [ebx + 0x164], 0x4023f0 */
+L_004020A3:
     MEM32(ebx + 0xB0) = ebp; /* 0x004020A3: mov dword ptr [ebx + 0xb0], ebp */
     MEM32(ebx + 0xB4) = ebp; /* 0x004020A9: mov dword ptr [ebx + 0xb4], ebp */
     MEM32(ebx + 0xB8) = ebp; /* 0x004020AF: mov dword ptr [ebx + 0xb8], ebp */
