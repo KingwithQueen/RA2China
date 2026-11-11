@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_global_load_bridge.h"
 #include "combat_manager_constructor_tail_fields_bridge.h"
 #include "combat_manager_constructor_count_field_bridge.h"
 #include "combat_manager_constructor_value_fields_bridge.h"
@@ -2752,4 +2753,12 @@ void ra2_manager_constructor_tail_fields_bridge(uint32_t owner, uint32_t value)
     MEM32(owner + 0xA8u) = value;
     MEM32(owner + 0xA4u) = value;
     MEM32(owner + 0xA0u) = value;
+}
+
+
+/* 4020DA..4020DF：仅执行一次 volatile guest 全局读取。
+ * 返回值供调用者更新缓存 EAX；不改变其他寄存器、标志或公开状态。 */
+uint32_t ra2_manager_constructor_global_load_bridge(void)
+{
+    return MEM32(0x830B50u);
 }

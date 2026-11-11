@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_global_load_bridge.h"
 #include "combat_manager_constructor_tail_fields_bridge.h"
 #include "combat_manager_constructor_count_field_bridge.h"
 #include "combat_manager_constructor_value_fields_bridge.h"
@@ -3559,7 +3560,12 @@ L_004020C8:
     MEM32(ebx + 0xA4) = ebp; /* 0x004020CE: mov dword ptr [ebx + 0xa4], ebp */
     MEM32(ebx + 0xA0) = ebp; /* 0x004020D4: mov dword ptr [ebx + 0xa0], ebp */
 L_004020DA:
+    {
+        eax = ra2_manager_constructor_global_load_bridge();
+        goto L_004020DF;
+    }
     eax = MEM32(0x830B50); /* 0x004020DA: mov eax, dword ptr [0x830b50] */
+L_004020DF:
     ecx = ebx + 0x10; /* 0x004020DF: lea ecx, [ebx + 0x10] */
     MEM32(ebx + 0x94) = eax; /* 0x004020E2: mov dword ptr [ebx + 0x94], eax */
     MEM32(ebx + 0x90) = ebp; /* 0x004020E8: mov dword ptr [ebx + 0x90], ebp */
