@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_field9c_bridge.h"
 #include "combat_manager_constructor_field98_bridge.h"
 #include "combat_manager_constructor_owner_field_bridge.h"
 #include "combat_manager_constructor_global_field_bridge.h"
@@ -2797,4 +2798,12 @@ void ra2_manager_constructor_owner_field_bridge(uint32_t base, uint32_t value)
 void ra2_manager_constructor_field98_bridge(uint32_t base, uint32_t value)
 {
     MEM32(base + 0x98u) = value;
+}
+
+
+/* 4020F4..4020FA: one ordered store of the actual cached EBP value.
+ * No global reload; preserve registers, flags, public state and following code. */
+void ra2_manager_constructor_field9c_bridge(uint32_t base, uint32_t value)
+{
+    MEM32(base + 0x9Cu) = value;
 }
