@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_field168_bridge.h"
 #include "combat_manager_constructor_field9c_bridge.h"
 #include "combat_manager_constructor_field98_bridge.h"
 #include "combat_manager_constructor_owner_field_bridge.h"
@@ -3604,7 +3605,13 @@ L_004020FA:
     RECOMP_CALL(sub_00401000); /* 0x004020FA: call 0x401000 */
     RECOMP_FLAGS_IN();
     edx = MEM32(esp + 0x10); /* 0x004020FF: mov edx, dword ptr [esp + 0x10] */
+L_00402103:
+    {
+        ra2_manager_constructor_field168_bridge(ebx, ebp);
+        goto L_00402109;
+    }
     MEM32(ebx + 0x168) = ebp; /* 0x00402103: mov dword ptr [ebx + 0x168], ebp */
+L_00402109:
     MEM32(ebx + 0xAC) = esi; /* 0x00402109: mov dword ptr [ebx + 0xac], esi */
     ecx = MEM32(esi + 0x1D0); /* 0x0040210F: mov ecx, dword ptr [esi + 0x1d0] */
     MEM32(ebx + 0xD4) = ecx; /* 0x00402115: mov dword ptr [ebx + 0xd4], ecx */
