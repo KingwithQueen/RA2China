@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_postcall_test_bridge.h"
 #include "combat_manager_constructor_callbacktarget4_bridge.h"
 #include "combat_manager_constructor_receiver1d0_bridge.h"
 #include "combat_manager_constructor_postcopy_fields_bridge.h"
@@ -3677,9 +3678,7 @@ L_0040213D:
     RECOMP_ICALL(ra2_manager_constructor_callbacktarget4_bridge(eax)); /* 0x0040213F: call dword ptr [eax + 4] */
     RECOMP_FLAGS_IN();
     /* test eax, eax */ /* 0x00402142: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
+    ra2_manager_constructor_postcall_test_bridge(eax, &_flag_a, &_flag_b, &_cf, &_flag_k);
     if (TEST_Z(_flag_a, _flag_b)) goto L_00402166; /* 0x00402144: je 0x402166 */
 L_00402146:
     /* cmp ebx, ebp */ /* 0x00402146: cmp ebx, ebp */

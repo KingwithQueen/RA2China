@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_postcall_test_bridge.h"
 #include "combat_manager_constructor_callbacktarget4_bridge.h"
 #include "combat_manager_constructor_receiver1d0_bridge.h"
 #include "combat_manager_constructor_postcopy_fields_bridge.h"
@@ -2883,4 +2884,15 @@ uint32_t ra2_manager_constructor_receiver1d0_bridge(uint32_t receiver)
 uint32_t ra2_manager_constructor_callbacktarget4_bridge(uint32_t receiver)
 {
     return MEM32(receiver + 4u);
+}
+
+
+/* 402142..402144: update only the local lazy TEST tuple after callback flag reload. */
+void ra2_manager_constructor_postcall_test_bridge(uint32_t result_eax, uint32_t *flag_a,
+                                                 uint32_t *flag_b, uint32_t *carry, uint32_t *kind)
+{
+    *flag_a = result_eax;
+    *flag_b = result_eax;
+    *carry = 0u;
+    *kind = FK_TEST;
 }
