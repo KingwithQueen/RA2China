@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_stack_reconcile_bridge.h"
 #include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
 #include "combat_manager_constructor_postcall_route_bridge.h"
@@ -3693,10 +3694,7 @@ L_0040214A:
     ra2_manager_constructor_cleanup_arg_push_bridge(&esp, ebx); /* 0x00402155: push ebx */
     RECOMP_CALL(operator_delete); /* 0x00402156: call 0x781d3b */
     RECOMP_FLAGS_IN();
-    _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(4);
-    _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
-    esp = esp + 4; /* 0x0040215B: add esp, 4 */
-    _flag_k = FK_ADD;
+    ra2_manager_constructor_stack_reconcile_bridge(&esp, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x0040215B: add esp, 4 */
 L_0040215E:
     edi = POP32_VAL(esp); /* 0x0040215E: pop edi */
     esi = POP32_VAL(esp); /* 0x0040215F: pop esi */

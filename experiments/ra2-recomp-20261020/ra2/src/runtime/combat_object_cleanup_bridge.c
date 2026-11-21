@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_stack_reconcile_bridge.h"
 #include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
 #include "combat_manager_constructor_postcall_route_bridge.h"
@@ -2930,4 +2931,18 @@ void ra2_manager_constructor_cleanup_arg_push_bridge(volatile uint32_t *cached_e
     uint32_t next_esp = *cached_esp - 4u;
     *cached_esp = next_esp;
     MEM32(next_esp) = cached_ebx;
+}
+
+
+/* 40215B: only caller-local ESP and lazy ADD fields, not POP or dispatch. */
+void ra2_manager_constructor_stack_reconcile_bridge(volatile uint32_t *cached_esp,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t before = *cached_esp;
+    uint32_t after = before + 4u;
+    *lhs = before;
+    *rhs = 4u;
+    *carry = (uint32_t)(after < before);
+    *cached_esp = after;
+    *kind = FK_ADD;
 }
