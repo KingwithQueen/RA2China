@@ -3898,7 +3898,7 @@ L_0040233E:
 L_00402349:
     ra2_manager_countdown_a8_dec_store_bridge(esi, &eax, &_flag_a, &_flag_b, &_flag_k); /* 0x00402349..00402356: third independent read, DEC preserving carry, then write. */
 L_00402356:
-    edi = MEM32(esi + 0x168); /* 0x00402356: mov edi, dword ptr [esi + 0x168] */
+    edi = ra2_manager_countdown_read_candidate168_bridge(esi); /* 0x00402356..0040235C: read the pre-call candidate. */
     /* test edi, edi */ /* 0x0040235C: test edi, edi */
     _flag_a = (uint32_t)(edi); _flag_b = (uint32_t)(edi);
     _cf = 0;
@@ -3912,7 +3912,7 @@ L_00402360:
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
     _cf = 0;
     _flag_k = FK_TEST;
-    MEM32(esi + 0x16C) = eax; /* 0x00402369: mov dword ptr [esi + 0x16c], eax */
+    ra2_manager_followup_descriptor_publish_bridge(esi, eax); /* 0x00402369..0040236F: publish the current return word, including zero. */
     if (TEST_Z(_flag_a, _flag_b)) goto L_00402391; /* 0x0040236F: je 0x402391 */
 L_00402371:
     ecx = MEM32(eax + 0xC); /* 0x00402371: mov ecx, dword ptr [eax + 0xc] */

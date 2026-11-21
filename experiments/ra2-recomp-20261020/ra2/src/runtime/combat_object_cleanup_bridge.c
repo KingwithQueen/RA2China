@@ -3090,3 +3090,10 @@ void ra2_manager_countdown_a8_dec_store_bridge(uint32_t cached_esi,
     *kind = FK_DEC;
     MEM32(cached_esi + 0xA8u) = next;
 }
+
+
+/* 402356: independent candidate read before the original lookup call. */
+uint32_t ra2_manager_countdown_read_candidate168_bridge(uint32_t pre_cached_esi)
+{
+    return MEM32(pre_cached_esi + 0x168u);
+}
