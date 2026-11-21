@@ -3828,9 +3828,7 @@ L_004022D0:
     RECOMP_FLAGS_IN();
     if (ra2_manager_followup_callback_cmp_bridge(eax, edi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402327; /* 0x004022D2..004022D6: compare both current post-call caches. */
 L_004022D6:
-    MEM32(esi + 0x174) = edi; /* 0x004022D6: mov dword ptr [esi + 0x174], edi */
-    MEM32(esi + 0x178) = edi; /* 0x004022DC: mov dword ptr [esi + 0x178], edi */
-    MEM32(esi + 0x170) = edi; /* 0x004022E2: mov dword ptr [esi + 0x170], edi */
+    ra2_manager_followup_callback_ordered_stores_bridge(esi, edi); /* 0x004022D6..004022E8: +0x174, +0x178, +0x170 in that order. */
     edi = POP32_VAL(esp); /* 0x004022E8: pop edi */
     esi = POP32_VAL(esp); /* 0x004022E9: pop esi */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x004022EA: ret  */

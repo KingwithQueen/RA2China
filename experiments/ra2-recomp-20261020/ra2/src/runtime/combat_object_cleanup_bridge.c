@@ -3025,3 +3025,13 @@ int ra2_manager_followup_callback_cmp_bridge(uint32_t lhs, uint32_t rhs,
     *kind = FK_CMP;
     return CMP_EQ(lhs, rhs);
 }
+
+
+/* 4022D6..4022E8: original unequal route, current cached ESI and EDI. */
+void ra2_manager_followup_callback_ordered_stores_bridge(uint32_t cached_esi,
+    uint32_t cached_edi)
+{
+    MEM32(cached_esi + 0x174u) = cached_edi;
+    MEM32(cached_esi + 0x178u) = cached_edi;
+    MEM32(cached_esi + 0x170u) = cached_edi;
+}
