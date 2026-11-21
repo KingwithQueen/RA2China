@@ -2977,16 +2977,25 @@ int ra2_manager_neighbor_field90_gate_bridge(uint32_t cached_esi, volatile uint3
 }
 
 
-/* Independent +94/+98/+9C gates; caller keeps original calls and reloads. */
-int ra2_manager_neighbor_optional_tail_gate_bridge(uint32_t cached_esi, uint32_t field_offset,
+/* Independent optional gates; caller keeps original calls and reloads. */
+int ra2_manager_neighbor_optional_tail_gate_bridge(uint32_t cached_base, uint32_t field_offset,
     volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs,
     volatile uint32_t *carry, volatile uint32_t *kind)
 {
-    uint32_t field = MEM32(cached_esi + field_offset);
+    uint32_t field = MEM32(cached_base + field_offset);
     *cached_edx = field;
     *lhs = field;
     *rhs = field;
     *carry = 0u;
     *kind = FK_TEST;
     return TEST_Z(field, field);
+}
+
+
+/* 40229B..4022A0: local inputs only, before original direct call. */
+void ra2_manager_neighbor_ebp_tail_call_inputs_bridge(uint32_t pre_ebp, uint32_t pre_edi,
+    volatile uint32_t *cached_edx, volatile uint32_t *cached_ecx)
+{
+    *cached_edx = pre_ebp + 0x68u;
+    *cached_ecx = pre_edi;
 }

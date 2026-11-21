@@ -3781,16 +3781,11 @@ L_00402294:
     RECOMP_CALL(sub_004010C0); /* 0x00402296: call 0x4010c0 */
     RECOMP_FLAGS_IN();
 L_0040229B:
-    edx = ebp + 0x68; /* 0x0040229B: lea edx, [ebp + 0x68] */
-    ecx = edi; /* 0x0040229E: mov ecx, edi */
+    ra2_manager_neighbor_ebp_tail_call_inputs_bridge(ebp, edi, &edx, &ecx); /* 0x0040229B..004022A0: only the call inputs. */
     RECOMP_CALL(sub_004010C0); /* 0x004022A0: call 0x4010c0 */
     RECOMP_FLAGS_IN();
-    edx = MEM32(ebp + 0xE8); /* 0x004022A5: mov edx, dword ptr [ebp + 0xe8] */
-    /* test edx, edx */ /* 0x004022AB: test edx, edx */
-    _flag_a = (uint32_t)(edx); _flag_b = (uint32_t)(edx);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_004022B6; /* 0x004022AD: je 0x4022b6 */
+    /* 0x004022A5: use the post-call cached EBP, not the earlier +0x68 base. */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(ebp, 0xE8u, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_004022B6; /* 0x004022AD: je 0x4022b6 */
 L_004022AF:
     ecx = edi; /* 0x004022AF: mov ecx, edi */
     RECOMP_CALL(sub_004010C0); /* 0x004022B1: call 0x4010c0 */
