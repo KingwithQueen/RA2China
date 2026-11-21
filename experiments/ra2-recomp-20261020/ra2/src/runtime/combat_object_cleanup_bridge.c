@@ -2999,3 +2999,10 @@ void ra2_manager_neighbor_ebp_tail_call_inputs_bridge(uint32_t pre_ebp, uint32_t
     *cached_edx = pre_ebp + 0x68u;
     *cached_ecx = pre_edi;
 }
+
+
+/* 40225D..402263: volatile dword call operand, independent of the earlier gate. */
+uint32_t ra2_manager_neighbor_reload_field90_bridge(uint32_t post_cached_esi)
+{
+    return MEM32(post_cached_esi + 0x90u);
+}

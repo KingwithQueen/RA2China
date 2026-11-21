@@ -3750,13 +3750,13 @@ L_00402220:
     ecx = ebx; /* 0x00402245: mov ecx, ebx */
     RECOMP_CALL(sub_00401170); /* 0x00402247: call 0x401170 */
     RECOMP_FLAGS_IN();
-    /* 0x0040224C..00402256: read optional field once and decide the existing zero route. */
-    if (ra2_manager_neighbor_field90_gate_bridge(esi, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402268; /* 0x00402254: je 0x402268 */
+    /* 0x0040224C..00402256: first +0x90 read and zero gate, not the later call operand. */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0x90u, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402268; /* 0x00402254: je 0x402268 */
 L_00402256:
     ecx = edi; /* 0x00402256: mov ecx, edi */
     RECOMP_CALL(sub_004010C0); /* 0x00402258: call 0x4010c0 */
     RECOMP_FLAGS_IN();
-    ecx = MEM32(esi + 0x90); /* 0x0040225D: mov ecx, dword ptr [esi + 0x90] */
+    ecx = ra2_manager_neighbor_reload_field90_bridge(esi); /* 0x0040225D..00402263: reread +0x90 with the post-call cached ESI. */
     RECOMP_CALL(sub_00401170); /* 0x00402263: call 0x401170 */
     RECOMP_FLAGS_IN();
 L_00402268:
