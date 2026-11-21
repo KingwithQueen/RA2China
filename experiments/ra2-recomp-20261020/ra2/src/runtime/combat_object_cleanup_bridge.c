@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_fieldac_bridge.h"
 #include "combat_manager_constructor_field168_bridge.h"
 #include "combat_manager_constructor_field9c_bridge.h"
 #include "combat_manager_constructor_field98_bridge.h"
@@ -2815,4 +2816,12 @@ void ra2_manager_constructor_field9c_bridge(uint32_t base, uint32_t value)
 void ra2_manager_constructor_field168_bridge(uint32_t base, uint32_t value)
 {
     MEM32(base + 0x168u) = value;
+}
+
+
+/* 402109..40210F: only store the actual cached ESI through the wrapped 32-bit address.
+ * No global reload; guest registers, emulated flags and neighboring operations stay unchanged. */
+void ra2_manager_constructor_fieldac_bridge(uint32_t base, uint32_t value)
+{
+    MEM32(base + 0xACu) = value;
 }
