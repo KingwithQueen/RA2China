@@ -3968,15 +3968,15 @@ L_004023F0:
 L_004023F1:
     esi = ecx; /* 0x004023F1: mov esi, ecx */
 L_004023F3:
-    MEM32(esi + 0x168) = 0; /* 0x004023F3: mov dword ptr [esi + 0x168], 0 */
+    ra2_manager_reset_store_bridge(esi, 0x168u, 0u); /* 0x004023F3..004023FD: preserve the independent labeled dword store. */
 L_004023FD:
     eax = MEM32(esi + 0xA4); /* 0x004023FD: mov eax, dword ptr [esi + 0xa4] */
 L_00402403:
     eax = ra2_manager_reset_status_mask_bridge(eax, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402403..00402405: low-byte status mask and exact narrow TEST state. */
 L_00402405:
-    MEM32(esi + 0xA4) = eax; /* 0x00402405: mov dword ptr [esi + 0xa4], eax */
+    ra2_manager_reset_store_bridge(esi, 0xA4u, eax); /* 0x00402405..0040240B: preserve the independent labeled dword store. */
 L_0040240B:
-    MEM32(esi + 0xA8) = 0; /* 0x0040240B: mov dword ptr [esi + 0xa8], 0 */
+    ra2_manager_reset_store_bridge(esi, 0xA8u, 0u); /* 0x0040240B..00402415: preserve the independent labeled dword store. */
 L_00402415:
     ecx = esi + 0x10; /* 0x00402415: lea ecx, [esi + 0x10] */
 L_00402418:

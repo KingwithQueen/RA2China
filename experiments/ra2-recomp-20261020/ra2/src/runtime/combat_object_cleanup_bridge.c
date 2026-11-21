@@ -3123,3 +3123,9 @@ uint32_t ra2_manager_reset_status_mask_bridge(uint32_t value,
     *kind = FK_NARROW(FK_TEST, 24);
     return value & 0xFFFFFFFAu;
 }
+
+/* Distinct original reset entries retain their individual dword writes. */
+void ra2_manager_reset_store_bridge(uint32_t receiver, uint32_t field_offset, uint32_t value)
+{
+    MEM32(receiver + field_offset) = value;
+}

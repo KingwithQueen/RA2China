@@ -16,4 +16,7 @@ uint32_t ra2_manager_countdown_read_candidate168_bridge(uint32_t pre_cached_esi)
 /* Reset status AL mask only; the caller preserves all jump-entry labels and stores. */
 uint32_t ra2_manager_reset_status_mask_bridge(uint32_t value,
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* The original reset labels own address/value choice, ordering and all flags. */
+void ra2_manager_reset_store_bridge(uint32_t receiver, uint32_t field_offset, uint32_t value);
 #endif
