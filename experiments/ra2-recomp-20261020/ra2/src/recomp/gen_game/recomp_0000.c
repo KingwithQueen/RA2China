@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
 #include "combat_manager_constructor_fieldac_bridge.h"
@@ -3633,10 +3634,19 @@ L_00402115:
     }
     MEM32(ebx + 0xD4) = ecx; /* 0x00402115: mov dword ptr [ebx + 0xd4], ecx */
 L_0040211B:
+    {
+        const ra2_manager_constructor_esiadd44_result add44 = ra2_manager_constructor_esiadd44_bridge(esi);
+        _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(0x44u);
+        _cf = add44.carry;
+        esi = add44.value;
+        _flag_k = FK_ADD;
+        goto L_0040211E;
+    }
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(0x44u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esi = esi + 0x44u; /* 0x0040211B: add esi, 0x44 */
     _flag_k = FK_ADD;
+L_0040211E:
     edi = ebx + 0x17C; /* 0x0040211E: lea edi, [ebx + 0x17c] */
     ecx = 8; /* 0x00402124: mov ecx, 8 */
     { uint32_t _b = ecx * 4u; /* 0x00402129: rep movsd dword ptr es:[edi], dword ptr [esi] */ recomp_rep_movs(edi, esi, ecx, 4u, _df); if (_df > 0) { esi += _b; edi += _b; } else { esi -= _b; edi -= _b; } ecx = 0; }

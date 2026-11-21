@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
 #include "combat_manager_constructor_fieldac_bridge.h"
@@ -2840,4 +2841,13 @@ uint32_t ra2_manager_constructor_field1d0_bridge(uint32_t source)
 void ra2_manager_constructor_fieldd4_bridge(uint32_t base, uint32_t value)
 {
     MEM32(base + 0xD4u) = value;
+}
+
+
+/* 40211B..40211E: pure ADD result/carry; caller retains the original lazy flag tuple. */
+ra2_manager_constructor_esiadd44_result ra2_manager_constructor_esiadd44_bridge(uint32_t source)
+{
+    const uint32_t value = source + 0x44u;
+    const ra2_manager_constructor_esiadd44_result out = {value, (uint32_t)(value < source)};
+    return out;
 }
