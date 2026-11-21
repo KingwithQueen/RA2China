@@ -3842,12 +3842,9 @@ L_004022F5:
     ra2_manager_followup_descriptor_publish_bridge(esi, eax); /* 0x004022FC..00402302: publish the returned word even on the equal route. */
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00402321; /* 0x00402302: je 0x402321 */
 L_00402304:
-    ecx = MEM32(eax + 0xC); /* 0x00402304: mov ecx, dword ptr [eax + 0xc] */
+    ecx = ra2_manager_followup_descriptor_c_bridge(eax); /* 0x00402304..00402307: +0xC read must precede the original POP. */
     edi = POP32_VAL(esp); /* 0x00402307: pop edi */
-    MEM32(esi + 0x170) = ecx; /* 0x00402308: mov dword ptr [esi + 0x170], ecx */
-    eax = MEM32(eax + 0x10); /* 0x0040230E: mov eax, dword ptr [eax + 0x10] */
-    MEM32(esi + 0x174) = eax; /* 0x00402311: mov dword ptr [esi + 0x174], eax */
-    MEM32(esi + 0x178) = eax; /* 0x00402317: mov dword ptr [esi + 0x178], eax */
+    ra2_manager_followup_descriptor_project_after_pop_bridge(esi, &eax, ecx); /* 0x00402308..0040231D: original write/read/write/write order. */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x0040231D: xor eax, eax */
     _cf = 0;

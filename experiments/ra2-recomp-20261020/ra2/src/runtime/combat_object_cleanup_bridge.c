@@ -3049,3 +3049,21 @@ void ra2_manager_followup_descriptor_publish_bridge(uint32_t post_cached_esi,
 {
     MEM32(post_cached_esi + 0x16Cu) = post_cached_eax;
 }
+
+
+/* 402304: snapshot the descriptor +0xC field before the original POP. */
+uint32_t ra2_manager_followup_descriptor_c_bridge(uint32_t descriptor_eax)
+{
+    return MEM32(descriptor_eax + 0xCu);
+}
+
+/* 402308..40231D: the first store can alias the later descriptor load. */
+void ra2_manager_followup_descriptor_project_after_pop_bridge(uint32_t cached_esi,
+    volatile uint32_t *cached_eax, uint32_t pre_ecx)
+{
+    MEM32(cached_esi + 0x170u) = pre_ecx;
+    uint32_t value = MEM32(*cached_eax + 0x10u);
+    *cached_eax = value;
+    MEM32(cached_esi + 0x174u) = value;
+    MEM32(cached_esi + 0x178u) = value;
+}
