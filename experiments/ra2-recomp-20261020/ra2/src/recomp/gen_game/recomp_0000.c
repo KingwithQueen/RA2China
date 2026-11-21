@@ -4091,19 +4091,10 @@ void sub_004024A0(void) {
 L_004024A0:
     PUSH32(esp, esi); /* 0x004024A0: push esi */
     esi = ecx; /* 0x004024A1: mov esi, ecx */
-    /* test MEM8(esi + 0xA4), 8 */ /* 0x004024A3: test byte ptr [esi + 0xa4], 8 */
-    _flag_a = (uint32_t)(MEM8(esi + 0xA4)) << 24; _flag_b = (uint32_t)(8) << 24;
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 24);
-    if (TEST_Z(_flag_a, _flag_b)) goto L_00402543; /* 0x004024AA: je 0x402543 */
+    if (ra2_manager_active_status_deactivation_gate_bridge(esi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402543; /* 0x004024A3..004024B0: one status byte, narrow bit-3 test. */
 L_004024B0:
     PUSH32(esp, edi); /* 0x004024B0: push edi */
-    eax = MEM32(esi + 0xA4); /* 0x004024B1: mov eax, dword ptr [esi + 0xa4] */
-    _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(0xF7u) << 24;
-    SET_LO8(eax, LO8(eax) & 0xF7u); /* 0x004024B7: and al, 0xf7 */
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 24);
-    MEM32(esi + 0xA4) = eax; /* 0x004024B9: mov dword ptr [esi + 0xa4], eax */
+    ra2_manager_active_status_clear_bit_bridge(esi, &eax, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x004024B1..004024BF: fresh dword after PUSH EDI; clear bit 3 and write back. */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     edi = 0; /* 0x004024BF: xor edi, edi */
     _cf = 0;

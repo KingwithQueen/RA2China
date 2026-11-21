@@ -3154,3 +3154,30 @@ int ra2_manager_status_byte_optional_gate_bridge(uint32_t cached_esi,
     *kind = FK_NARROW(FK_TEST, 24);
     return (status & 5u) == 0;
 }
+
+/* 4024A3: status bit 3 gate; original branch and guest stack stay in the caller. */
+int ra2_manager_active_status_deactivation_gate_bridge(uint32_t cached_esi,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t status = (uint32_t)MEM8(cached_esi + 0xA4u);
+    *lhs = status << 24;
+    *rhs = 8u << 24;
+    *carry = 0u;
+    *kind = FK_NARROW(FK_TEST, 24);
+    return (status & 8u) == 0;
+}
+
+/* 4024B1: after the original PUSH EDI, load and store the whole dword. */
+void ra2_manager_active_status_clear_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t status = MEM32(cached_esi + 0xA4u);
+    *cached_eax = status;
+    *lhs = (status & 0xFFu) << 24;
+    *rhs = 0xF7u << 24;
+    uint32_t updated = status & ~8u;
+    *cached_eax = updated;
+    *carry = 0u;
+    *kind = FK_NARROW(FK_TEST, 24);
+    MEM32(cached_esi + 0xA4u) = updated;
+}

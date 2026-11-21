@@ -27,4 +27,10 @@ void ra2_manager_active_status_bit_bridge(uint32_t cached_esi, volatile uint32_t
 /* Status-bit callback gate; local narrow flags only, no callback or guest store. */
 int ra2_manager_status_byte_optional_gate_bridge(uint32_t cached_esi,
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Status bit-3 deactivation entry and taken dword transition; no stack or callback. */
+int ra2_manager_active_status_deactivation_gate_bridge(uint32_t cached_esi,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+void ra2_manager_active_status_clear_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif
