@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_postcall_route_bridge.h"
 #include "combat_manager_constructor_postcall_test_bridge.h"
 #include "combat_manager_constructor_callbacktarget4_bridge.h"
 #include "combat_manager_constructor_receiver1d0_bridge.h"
@@ -2895,4 +2896,16 @@ void ra2_manager_constructor_postcall_test_bridge(uint32_t result_eax, uint32_t 
     *flag_b = result_eax;
     *carry = 0u;
     *kind = FK_TEST;
+}
+
+
+/* 402146..40214A: CMP flags and equality before either existing cleanup route. */
+int ra2_manager_constructor_postcall_route_bridge(uint32_t cached_ebx, uint32_t cached_ebp,
+                                                  uint32_t *flag_a, uint32_t *flag_b, uint32_t *carry, uint32_t *kind)
+{
+    *flag_a = cached_ebx;
+    *flag_b = cached_ebp;
+    *carry = (uint32_t)CMP_B(cached_ebx, cached_ebp);
+    *kind = FK_CMP;
+    return CMP_EQ(cached_ebx, cached_ebp);
 }
