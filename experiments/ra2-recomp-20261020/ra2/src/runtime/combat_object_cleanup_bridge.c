@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_postcopy_fields_bridge.h"
 #include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
@@ -2858,4 +2859,12 @@ ra2_manager_constructor_esiadd44_result ra2_manager_constructor_esiadd44_bridge(
 uint32_t ra2_manager_constructor_lea17c_bridge(uint32_t base)
 {
     return base + 0x17Cu;
+}
+
+
+/* 40212B..402137: two separate ordered volatile writes of cached EBP. */
+void ra2_manager_constructor_postcopy_fields_bridge(uint32_t base, uint32_t value)
+{
+    MEM32(base + 0x19Cu) = value;
+    MEM32(base + 0x1A0u) = value;
 }

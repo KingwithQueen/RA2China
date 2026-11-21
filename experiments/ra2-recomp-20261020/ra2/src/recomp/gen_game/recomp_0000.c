@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_postcopy_fields_bridge.h"
 #include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
@@ -3656,8 +3657,14 @@ L_0040211E:
 L_00402124:
     ecx = 8; /* 0x00402124: mov ecx, 8 */
     { uint32_t _b = ecx * 4u; /* 0x00402129: rep movsd dword ptr es:[edi], dword ptr [esi] */ recomp_rep_movs(edi, esi, ecx, 4u, _df); if (_df > 0) { esi += _b; edi += _b; } else { esi -= _b; edi -= _b; } ecx = 0; }
+L_0040212B:
+    {
+        ra2_manager_constructor_postcopy_fields_bridge(ebx, ebp);
+        goto L_00402137;
+    }
     MEM32(ebx + 0x19C) = ebp; /* 0x0040212B: mov dword ptr [ebx + 0x19c], ebp */
     MEM32(ebx + 0x1A0) = ebp; /* 0x00402131: mov dword ptr [ebx + 0x1a0], ebp */
+L_00402137:
     eax = MEM32(edx + 0x1D0); /* 0x00402137: mov eax, dword ptr [edx + 0x1d0] */
     ecx = ebx; /* 0x0040213D: mov ecx, ebx */
     RECOMP_ICALL(MEM32(eax + 0x4)); /* 0x0040213F: call dword ptr [eax + 4] */
