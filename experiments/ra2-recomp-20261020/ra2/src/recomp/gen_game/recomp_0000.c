@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
 #include "combat_manager_constructor_postcall_route_bridge.h"
 #include "combat_manager_constructor_postcall_test_bridge.h"
 #include "combat_manager_constructor_callbacktarget4_bridge.h"
@@ -3685,9 +3686,8 @@ L_00402146:
     /* cmp ebx, ebp */ /* 0x00402146: cmp ebx, ebp */
     if (ra2_manager_constructor_postcall_route_bridge(ebx, ebp, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_0040215E; /* 0x00402148: je 0x40215e */
 L_0040214A:
-    edx = MEM32(ebx + 0xD4); /* 0x0040214A: mov edx, dword ptr [ebx + 0xd4] */
-    ecx = ebx; /* 0x00402150: mov ecx, ebx */
-    RECOMP_ICALL(MEM32(edx + 0x8)); /* 0x00402152: call dword ptr [edx + 8] */
+    /* 0x0040214A..00402152: prepare EDX, ECX and the dependent CALL operand in order. */
+    RECOMP_ICALL(ra2_manager_constructor_unequal_dispatch_prep_bridge(ebx, &edx, &ecx)); /* 0x00402152: call dword ptr [edx + 8] */
     RECOMP_FLAGS_IN();
     PUSH32(esp, ebx); /* 0x00402155: push ebx */
     RECOMP_CALL(operator_delete); /* 0x00402156: call 0x781d3b */
