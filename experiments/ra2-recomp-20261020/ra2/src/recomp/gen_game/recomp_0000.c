@@ -3925,23 +3925,15 @@ L_00402391:
 L_004023B0:
     MEM32(esi + 0x168) = 0; /* 0x004023B0: mov dword ptr [esi + 0x168], 0 */
 L_004023BA:
-    eax = MEM32(esi + 0xB4); /* 0x004023BA: mov eax, dword ptr [esi + 0xb4] */
-    /* test eax, eax */ /* 0x004023C0: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_004023C8; /* 0x004023C2: je 0x4023c8 */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0xB4u, &eax,
+        &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_004023C8; /* 0x004023BA..004023C4: fresh EAX/TEST gate. */
 L_004023C4:
     ecx = esi; /* 0x004023C4: mov ecx, esi */
     RECOMP_ICALL(eax); /* 0x004023C6: call eax */
     RECOMP_FLAGS_IN();
 L_004023C8:
-    eax = MEM32(esi + 0x168); /* 0x004023C8: mov eax, dword ptr [esi + 0x168] */
-    /* test eax, eax */ /* 0x004023CE: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_004023DD; /* 0x004023D0: je 0x4023dd */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0x168u, &eax,
+        &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_004023DD; /* 0x004023C8..004023D2: fresh EAX/TEST gate. */
 L_004023D2:
     eax = MEM32(esi + 0xD4); /* 0x004023D2: mov eax, dword ptr [esi + 0xd4] */
     ecx = esi; /* 0x004023D8: mov ecx, esi */
