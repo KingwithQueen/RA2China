@@ -1,3 +1,4 @@
+#include "combat_manager_neighbor_first_call_state_bridge.h"
 #include "combat_manager_constructor_stack_reconcile_bridge.h"
 #include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
@@ -2945,4 +2946,16 @@ void ra2_manager_constructor_stack_reconcile_bridge(volatile uint32_t *cached_es
     *carry = (uint32_t)(after < before);
     *cached_esp = after;
     *kind = FK_ADD;
+}
+
+
+/* 402226..402234 in sub_00402220: prepare its first call inputs, not the call itself. */
+void ra2_manager_neighbor_first_call_state_bridge(uint32_t cached_esi,
+    volatile uint32_t *cached_ebp, volatile uint32_t *cached_edi, volatile uint32_t *cached_ecx)
+{
+    uint32_t snapshot = MEM32(cached_esi + 0xACu);
+    *cached_ebp = snapshot;
+    uint32_t receiver = cached_esi + 0xD8u;
+    *cached_edi = receiver;
+    *cached_ecx = receiver;
 }

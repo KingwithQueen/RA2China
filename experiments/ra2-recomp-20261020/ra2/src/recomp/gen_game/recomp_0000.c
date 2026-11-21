@@ -1,3 +1,4 @@
+#include "combat_manager_neighbor_first_call_state_bridge.h"
 #include "combat_manager_constructor_stack_reconcile_bridge.h"
 #include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
@@ -3736,9 +3737,7 @@ L_00402220:
     PUSH32(esp, esi); /* 0x00402222: push esi */
     esi = ecx; /* 0x00402223: mov esi, ecx */
     PUSH32(esp, edi); /* 0x00402225: push edi */
-    ebp = MEM32(esi + 0xAC); /* 0x00402226: mov ebp, dword ptr [esi + 0xac] */
-    edi = esi + 0xD8; /* 0x0040222C: lea edi, [esi + 0xd8] */
-    ecx = edi; /* 0x00402232: mov ecx, edi */
+    ra2_manager_neighbor_first_call_state_bridge(esi, &ebp, &edi, &ecx); /* 0x00402226..00402234: prepare local EBP, EDI, ECX without invoking the call. */
     RECOMP_CALL(sub_00401000); /* 0x00402234: call 0x401000 */
     RECOMP_FLAGS_IN();
     ebx = esi + 0x10; /* 0x00402239: lea ebx, [esi + 0x10] */
