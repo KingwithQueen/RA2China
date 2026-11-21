@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_field1d0_bridge.h"
 #include "combat_manager_constructor_fieldac_bridge.h"
 #include "combat_manager_constructor_field168_bridge.h"
 #include "combat_manager_constructor_field9c_bridge.h"
@@ -2824,4 +2825,11 @@ void ra2_manager_constructor_field168_bridge(uint32_t base, uint32_t value)
 void ra2_manager_constructor_fieldac_bridge(uint32_t base, uint32_t value)
 {
     MEM32(base + 0xACu) = value;
+}
+
+
+/* 40210F..402115: read one dword relative to cached ESI; no guest write. */
+uint32_t ra2_manager_constructor_field1d0_bridge(uint32_t source)
+{
+    return MEM32(source + 0x1D0u);
 }
