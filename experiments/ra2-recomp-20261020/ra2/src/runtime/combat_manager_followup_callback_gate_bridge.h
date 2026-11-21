@@ -12,4 +12,9 @@ int ra2_manager_followup_callback_cmp_bridge(uint32_t lhs, uint32_t rhs,
 /* Ordered unequal-path guest stores only; flags and original epilogue are caller-owned. */
 void ra2_manager_followup_callback_ordered_stores_bridge(uint32_t cached_esi,
     uint32_t cached_edi);
+
+/* A descriptor read before the call and unconditional returned-word update after it. */
+uint32_t ra2_manager_followup_descriptor_read_bridge(uint32_t pre_cached_esi);
+void ra2_manager_followup_descriptor_publish_bridge(uint32_t post_cached_esi,
+    uint32_t post_cached_eax);
 #endif

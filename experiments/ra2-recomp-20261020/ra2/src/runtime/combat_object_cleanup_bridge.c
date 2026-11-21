@@ -3035,3 +3035,17 @@ void ra2_manager_followup_callback_ordered_stores_bridge(uint32_t cached_esi,
     MEM32(cached_esi + 0x178u) = cached_edi;
     MEM32(cached_esi + 0x170u) = cached_edi;
 }
+
+
+/* 4022EB: pre-call +0x16C snapshot; the generated caller owns the CMP and call. */
+uint32_t ra2_manager_followup_descriptor_read_bridge(uint32_t pre_cached_esi)
+{
+    return MEM32(pre_cached_esi + 0x16Cu);
+}
+
+/* 4022FC: independently post-call cached base and returned value. */
+void ra2_manager_followup_descriptor_publish_bridge(uint32_t post_cached_esi,
+    uint32_t post_cached_eax)
+{
+    MEM32(post_cached_esi + 0x16Cu) = post_cached_eax;
+}

@@ -3833,20 +3833,13 @@ L_004022D6:
     esi = POP32_VAL(esp); /* 0x004022E9: pop esi */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x004022EA: ret  */
 L_004022EB:
-    ecx = MEM32(esi + 0x16C); /* 0x004022EB: mov ecx, dword ptr [esi + 0x16c] */
-    /* cmp ecx, edi */ /* 0x004022F1: cmp ecx, edi */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(edi);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_EQ(_flag_a, _flag_b)) goto L_00402321; /* 0x004022F3: je 0x402321 */
+    ecx = ra2_manager_followup_descriptor_read_bridge(esi); /* 0x004022EB..004022F1: load the +0x16C call operand. */
+    if (ra2_manager_followup_callback_cmp_bridge(ecx, edi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402321; /* 0x004022F1..004022F5: CMP and existing equal route. */
 L_004022F5:
     RECOMP_CALL(sub_004073A0); /* 0x004022F5: call 0x4073a0 */
     RECOMP_FLAGS_IN();
-    /* cmp eax, edi */ /* 0x004022FA: cmp eax, edi */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(edi);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    MEM32(esi + 0x16C) = eax; /* 0x004022FC: mov dword ptr [esi + 0x16c], eax */
+    (void)ra2_manager_followup_callback_cmp_bridge(eax, edi, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x004022FA..004022FC: compare before publication. */
+    ra2_manager_followup_descriptor_publish_bridge(esi, eax); /* 0x004022FC..00402302: publish the returned word even on the equal route. */
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00402321; /* 0x00402302: je 0x402321 */
 L_00402304:
     ecx = MEM32(eax + 0xC); /* 0x00402304: mov ecx, dword ptr [eax + 0xc] */
