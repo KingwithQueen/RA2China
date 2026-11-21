@@ -1,3 +1,4 @@
+#include "combat_manager_followup_callback_gate_bridge.h"
 #include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
 #include "combat_manager_neighbor_first_call_state_bridge.h"
@@ -3005,4 +3006,22 @@ void ra2_manager_neighbor_ebp_tail_call_inputs_bridge(uint32_t pre_ebp, uint32_t
 uint32_t ra2_manager_neighbor_reload_field90_bridge(uint32_t post_cached_esi)
 {
     return MEM32(post_cached_esi + 0x90u);
+}
+
+
+/* 4022C6: snapshot the call operand; never invoke it here. */
+uint32_t ra2_manager_followup_callback_input_bridge(uint32_t cached_esi)
+{
+    return MEM32(cached_esi + 0xB0u);
+}
+
+/* 4022CC/4022D2: callers pass distinct cached inputs freshly at each CMP. */
+int ra2_manager_followup_callback_cmp_bridge(uint32_t lhs, uint32_t rhs,
+    uint32_t *flag_a, uint32_t *flag_b, uint32_t *carry, uint32_t *kind)
+{
+    *flag_a = lhs;
+    *flag_b = rhs;
+    *carry = (uint32_t)CMP_B(lhs, rhs);
+    *kind = FK_CMP;
+    return CMP_EQ(lhs, rhs);
 }

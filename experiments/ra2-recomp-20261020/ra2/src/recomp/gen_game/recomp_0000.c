@@ -1,3 +1,4 @@
+#include "combat_manager_followup_callback_gate_bridge.h"
 #include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
 #include "combat_manager_neighbor_first_call_state_bridge.h"
@@ -3820,20 +3821,12 @@ L_004022C0:
     edi = 0; /* 0x004022C4: xor edi, edi */
     _cf = 0;
     _flag_k = FK_TEST;
-    eax = MEM32(esi + 0xB0); /* 0x004022C6: mov eax, dword ptr [esi + 0xb0] */
-    /* cmp eax, edi */ /* 0x004022CC: cmp eax, edi */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(edi);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_EQ(_flag_a, _flag_b)) goto L_004022EB; /* 0x004022CE: je 0x4022eb */
+    eax = ra2_manager_followup_callback_input_bridge(esi); /* 0x004022C6..004022CC: one +0xB0 read. */
+    if (ra2_manager_followup_callback_cmp_bridge(eax, edi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_004022EB; /* 0x004022CC..004022D0: cmp/jump before the existing call. */
 L_004022D0:
     RECOMP_ICALL(eax); /* 0x004022D0: call eax */
     RECOMP_FLAGS_IN();
-    /* cmp eax, edi */ /* 0x004022D2: cmp eax, edi */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(edi);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    if (CMP_EQ(_flag_a, _flag_b)) goto L_00402327; /* 0x004022D4: je 0x402327 */
+    if (ra2_manager_followup_callback_cmp_bridge(eax, edi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402327; /* 0x004022D2..004022D6: compare both current post-call caches. */
 L_004022D6:
     MEM32(esi + 0x174) = edi; /* 0x004022D6: mov dword ptr [esi + 0x174], edi */
     MEM32(esi + 0x178) = edi; /* 0x004022DC: mov dword ptr [esi + 0x178], edi */
