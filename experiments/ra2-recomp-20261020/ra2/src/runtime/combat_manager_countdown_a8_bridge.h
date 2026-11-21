@@ -23,4 +23,8 @@ void ra2_manager_reset_store_bridge(uint32_t receiver, uint32_t field_offset, ui
 /* One post-callback status read and write; flags/ECX are distinct local outputs. */
 void ra2_manager_active_status_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_ecx,
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Status-bit callback gate; local narrow flags only, no callback or guest store. */
+int ra2_manager_status_byte_optional_gate_bridge(uint32_t cached_esi,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif

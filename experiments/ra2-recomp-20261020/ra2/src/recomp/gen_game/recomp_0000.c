@@ -4051,11 +4051,7 @@ L_00402440:
     MEM32(esi + 0xC) = edx; /* 0x00402449: mov dword ptr [esi + 0xc], edx */
     RECOMP_ICALL(MEM32(eax + 0x28)); /* 0x0040244C: call dword ptr [eax + 0x28] */
     RECOMP_FLAGS_IN();
-    /* test MEM8(esi + 0xA4), 5 */ /* 0x0040244F: test byte ptr [esi + 0xa4], 5 */
-    _flag_a = (uint32_t)(MEM8(esi + 0xA4)) << 24; _flag_b = (uint32_t)(5) << 24;
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 24);
-    if (TEST_Z(_flag_a, _flag_b)) goto L_00402463; /* 0x00402456: je 0x402463 */
+    if (ra2_manager_status_byte_optional_gate_bridge(esi, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402463; /* 0x0040244F..00402458: one status byte, narrow mask-5 TEST. */
 L_00402458:
     edx = MEM32(esi + 0xD4); /* 0x00402458: mov edx, dword ptr [esi + 0xd4] */
     ecx = esi; /* 0x0040245E: mov ecx, esi */
@@ -4066,12 +4062,7 @@ L_00402463:
     ecx = esi; /* 0x00402469: mov ecx, esi */
     RECOMP_ICALL(MEM32(eax + 0x2C)); /* 0x0040246B: call dword ptr [eax + 0x2c] */
     RECOMP_FLAGS_IN();
-    eax = MEM32(esi + 0xBC); /* 0x0040246E: mov eax, dword ptr [esi + 0xbc] */
-    /* test eax, eax */ /* 0x00402474: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0040247C; /* 0x00402476: je 0x40247c */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0xBCu, &eax, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_0040247C; /* 0x0040246E..00402478: fresh EAX/full-width TEST gate. */
 L_00402478:
     ecx = esi; /* 0x00402478: mov ecx, esi */
     RECOMP_ICALL(eax); /* 0x0040247A: call eax */

@@ -3142,3 +3142,15 @@ void ra2_manager_active_status_bit_bridge(uint32_t cached_esi, volatile uint32_t
     *kind = FK_TEST;
     MEM32(cached_esi + 0xA4u) = updated;
 }
+
+/* 40244F: exactly one byte; caller retains the actual callback and original branch. */
+int ra2_manager_status_byte_optional_gate_bridge(uint32_t cached_esi,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t status = (uint32_t)MEM8(cached_esi + 0xA4u);
+    *lhs = status << 24;
+    *rhs = 5u << 24;
+    *carry = 0u;
+    *kind = FK_NARROW(FK_TEST, 24);
+    return (status & 5u) == 0;
+}
