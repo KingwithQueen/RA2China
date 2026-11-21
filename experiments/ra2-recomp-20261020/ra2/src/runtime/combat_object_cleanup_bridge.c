@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_receiver1d0_bridge.h"
 #include "combat_manager_constructor_postcopy_fields_bridge.h"
 #include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
@@ -2867,4 +2868,11 @@ void ra2_manager_constructor_postcopy_fields_bridge(uint32_t base, uint32_t valu
 {
     MEM32(base + 0x19Cu) = value;
     MEM32(base + 0x1A0u) = value;
+}
+
+
+/* 402137..40213D: read only the cached EDX receiver field; no dispatch. */
+uint32_t ra2_manager_constructor_receiver1d0_bridge(uint32_t receiver)
+{
+    return MEM32(receiver + 0x1D0u);
 }

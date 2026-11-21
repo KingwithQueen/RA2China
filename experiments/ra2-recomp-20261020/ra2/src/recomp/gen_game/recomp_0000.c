@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_receiver1d0_bridge.h"
 #include "combat_manager_constructor_postcopy_fields_bridge.h"
 #include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
@@ -3665,7 +3666,12 @@ L_0040212B:
     MEM32(ebx + 0x19C) = ebp; /* 0x0040212B: mov dword ptr [ebx + 0x19c], ebp */
     MEM32(ebx + 0x1A0) = ebp; /* 0x00402131: mov dword ptr [ebx + 0x1a0], ebp */
 L_00402137:
+    {
+        eax = ra2_manager_constructor_receiver1d0_bridge(edx);
+        goto L_0040213D;
+    }
     eax = MEM32(edx + 0x1D0); /* 0x00402137: mov eax, dword ptr [edx + 0x1d0] */
+L_0040213D:
     ecx = ebx; /* 0x0040213D: mov ecx, ebx */
     RECOMP_ICALL(MEM32(eax + 0x4)); /* 0x0040213F: call dword ptr [eax + 4] */
     RECOMP_FLAGS_IN();

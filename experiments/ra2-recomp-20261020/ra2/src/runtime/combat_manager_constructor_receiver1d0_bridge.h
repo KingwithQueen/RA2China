@@ -1,0 +1,6 @@
+#ifndef RA2_COMBAT_MANAGER_CONSTRUCTOR_RECEIVER1D0_BRIDGE_H
+#define RA2_COMBAT_MANAGER_CONSTRUCTOR_RECEIVER1D0_BRIDGE_H
+#include <stdint.h>
+
+uint32_t ra2_manager_constructor_receiver1d0_bridge(uint32_t receiver);
+#endif
