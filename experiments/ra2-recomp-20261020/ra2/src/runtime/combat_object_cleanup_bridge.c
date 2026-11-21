@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_callbacktarget4_bridge.h"
 #include "combat_manager_constructor_receiver1d0_bridge.h"
 #include "combat_manager_constructor_postcopy_fields_bridge.h"
 #include "combat_manager_constructor_lea17c_bridge.h"
@@ -2875,4 +2876,11 @@ void ra2_manager_constructor_postcopy_fields_bridge(uint32_t base, uint32_t valu
 uint32_t ra2_manager_constructor_receiver1d0_bridge(uint32_t receiver)
 {
     return MEM32(receiver + 0x1D0u);
+}
+
+
+/* 40213F FF 50 04: fetch the CALL operand only; dispatch stays at the call site. */
+uint32_t ra2_manager_constructor_callbacktarget4_bridge(uint32_t receiver)
+{
+    return MEM32(receiver + 4u);
 }
