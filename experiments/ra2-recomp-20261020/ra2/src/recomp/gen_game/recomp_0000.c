@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
 #include "combat_manager_constructor_postcall_route_bridge.h"
 #include "combat_manager_constructor_postcall_test_bridge.h"
@@ -3689,7 +3690,7 @@ L_0040214A:
     /* 0x0040214A..00402152: prepare EDX, ECX and the dependent CALL operand in order. */
     RECOMP_ICALL(ra2_manager_constructor_unequal_dispatch_prep_bridge(ebx, &edx, &ecx)); /* 0x00402152: call dword ptr [edx + 8] */
     RECOMP_FLAGS_IN();
-    PUSH32(esp, ebx); /* 0x00402155: push ebx */
+    ra2_manager_constructor_cleanup_arg_push_bridge(&esp, ebx); /* 0x00402155: push ebx */
     RECOMP_CALL(operator_delete); /* 0x00402156: call 0x781d3b */
     RECOMP_FLAGS_IN();
     _flag_a = (uint32_t)(esp); _flag_b = (uint32_t)(4);

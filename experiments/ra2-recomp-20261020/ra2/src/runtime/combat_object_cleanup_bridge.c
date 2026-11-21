@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_cleanup_arg_push_bridge.h"
 #include "combat_manager_constructor_unequal_dispatch_prep_bridge.h"
 #include "combat_manager_constructor_postcall_route_bridge.h"
 #include "combat_manager_constructor_postcall_test_bridge.h"
@@ -2920,4 +2921,13 @@ uint32_t ra2_manager_constructor_unequal_dispatch_prep_bridge(uint32_t cached_eb
     *cached_edx = table;
     *cached_ecx = cached_ebx;
     return MEM32(table + 8u);
+}
+
+
+/* 402155: publish cached ESP before the one cleanup argument store; no dispatch. */
+void ra2_manager_constructor_cleanup_arg_push_bridge(volatile uint32_t *cached_esp, uint32_t cached_ebx)
+{
+    uint32_t next_esp = *cached_esp - 4u;
+    *cached_esp = next_esp;
+    MEM32(next_esp) = cached_ebx;
 }
