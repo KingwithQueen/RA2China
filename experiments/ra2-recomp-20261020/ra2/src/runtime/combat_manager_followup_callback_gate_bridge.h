@@ -18,8 +18,9 @@ uint32_t ra2_manager_followup_descriptor_read_bridge(uint32_t pre_cached_esi);
 void ra2_manager_followup_descriptor_publish_bridge(uint32_t post_cached_esi,
     uint32_t post_cached_eax);
 
-/* Caller keeps the original POP between this read and the ordered projection. */
+/* Capture a descriptor field separately from its ordered projection.
+ * The 402304 caller keeps its original POP between the operations. */
 uint32_t ra2_manager_followup_descriptor_c_bridge(uint32_t descriptor_eax);
-void ra2_manager_followup_descriptor_project_after_pop_bridge(uint32_t cached_esi,
+void ra2_manager_followup_descriptor_project_bridge(uint32_t cached_esi,
     volatile uint32_t *cached_eax, uint32_t pre_ecx);
 #endif

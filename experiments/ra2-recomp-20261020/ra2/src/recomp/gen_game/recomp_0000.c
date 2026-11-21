@@ -3845,7 +3845,7 @@ L_004022F5:
 L_00402304:
     ecx = ra2_manager_followup_descriptor_c_bridge(eax); /* 0x00402304..00402307: +0xC read must precede the original POP. */
     edi = POP32_VAL(esp); /* 0x00402307: pop edi */
-    ra2_manager_followup_descriptor_project_after_pop_bridge(esi, &eax, ecx); /* 0x00402308..0040231D: original write/read/write/write order. */
+    ra2_manager_followup_descriptor_project_bridge(esi, &eax, ecx); /* 0x00402308..0040231D: original write/read/write/write order. */
     _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
     eax = 0; /* 0x0040231D: xor eax, eax */
     _cf = 0;
@@ -3915,11 +3915,8 @@ L_00402360:
     ra2_manager_followup_descriptor_publish_bridge(esi, eax); /* 0x00402369..0040236F: publish the current return word, including zero. */
     if (TEST_Z(_flag_a, _flag_b)) goto L_00402391; /* 0x0040236F: je 0x402391 */
 L_00402371:
-    ecx = MEM32(eax + 0xC); /* 0x00402371: mov ecx, dword ptr [eax + 0xc] */
-    MEM32(esi + 0x170) = ecx; /* 0x00402374: mov dword ptr [esi + 0x170], ecx */
-    eax = MEM32(eax + 0x10); /* 0x0040237A: mov eax, dword ptr [eax + 0x10] */
-    MEM32(esi + 0x174) = eax; /* 0x0040237D: mov dword ptr [esi + 0x174], eax */
-    MEM32(esi + 0x178) = eax; /* 0x00402383: mov dword ptr [esi + 0x178], eax */
+    ecx = ra2_manager_followup_descriptor_c_bridge(eax); /* 0x00402371..00402374: read the nonzero descriptor +0xC field. */
+    ra2_manager_followup_descriptor_project_bridge(esi, &eax, ecx); /* 0x00402374..00402389: preserve write/read/write/write order. */
     MEM32(edi) = 0; /* 0x00402389: mov dword ptr [edi], 0 */
     goto L_004023BA; /* 0x0040238F: jmp 0x4023ba */
 L_00402391:
