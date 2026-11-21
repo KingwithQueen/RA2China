@@ -1,3 +1,4 @@
+#include "combat_manager_countdown_a8_bridge.h"
 #include "combat_manager_followup_callback_gate_bridge.h"
 #include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
@@ -3881,25 +3882,21 @@ L_00402330:
     PUSH32(esp, esi); /* 0x00402330: push esi */
     esi = ecx; /* 0x00402331: mov esi, ecx */
     PUSH32(esp, edi); /* 0x00402333: push edi */
-    eax = MEM32(esi + 0xA8); /* 0x00402334: mov eax, dword ptr [esi + 0xa8] */
+    eax = ra2_manager_countdown_a8_read_bridge(esi); /* 0x00402334..0040233A: first volatile zero-gate read. */
     /* test eax, eax */ /* 0x0040233A: test eax, eax */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
     _cf = 0;
     _flag_k = FK_TEST;
     if (TEST_Z(_flag_a, _flag_b)) goto L_004023B0; /* 0x0040233C: je 0x4023b0 */
 L_0040233E:
-    eax = MEM32(esi + 0xA8); /* 0x0040233E: mov eax, dword ptr [esi + 0xa8] */
+    eax = ra2_manager_countdown_a8_read_bridge(esi); /* 0x0040233E..00402344: fresh sentinel-gate read. */
     /* cmp eax, 0xFFFFFFFFu */ /* 0x00402344: cmp eax, -1 */
     _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(0xFFFFFFFFu);
     _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
     _flag_k = FK_CMP;
     if (CMP_EQ(_flag_a, _flag_b)) goto L_00402356; /* 0x00402347: je 0x402356 */
 L_00402349:
-    eax = MEM32(esi + 0xA8); /* 0x00402349: mov eax, dword ptr [esi + 0xa8] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x0040234F: dec eax */
-    _flag_k = FK_DEC;
-    MEM32(esi + 0xA8) = eax; /* 0x00402350: mov dword ptr [esi + 0xa8], eax */
+    ra2_manager_countdown_a8_dec_store_bridge(esi, &eax, &_flag_a, &_flag_b, &_flag_k); /* 0x00402349..00402356: third independent read, DEC preserving carry, then write. */
 L_00402356:
     edi = MEM32(esi + 0x168); /* 0x00402356: mov edi, dword ptr [esi + 0x168] */
     /* test edi, edi */ /* 0x0040235C: test edi, edi */

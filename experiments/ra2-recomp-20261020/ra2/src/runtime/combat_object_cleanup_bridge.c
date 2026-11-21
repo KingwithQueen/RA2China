@@ -1,3 +1,4 @@
+#include "combat_manager_countdown_a8_bridge.h"
 #include "combat_manager_followup_callback_gate_bridge.h"
 #include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
@@ -3066,4 +3067,26 @@ void ra2_manager_followup_descriptor_project_after_pop_bridge(uint32_t cached_es
     *cached_eax = value;
     MEM32(cached_esi + 0x174u) = value;
     MEM32(cached_esi + 0x178u) = value;
+}
+
+
+/* 402334 / 40233E: callers issue separate volatile reads. */
+uint32_t ra2_manager_countdown_a8_read_bridge(uint32_t cached_esi)
+{
+    return MEM32(cached_esi + 0xA8u);
+}
+
+/* 402349..402356: read again, leave the prior CMP carry untouched, then commit the result. */
+void ra2_manager_countdown_a8_dec_store_bridge(uint32_t cached_esi,
+    volatile uint32_t *cached_eax, volatile uint32_t *lhs,
+    volatile uint32_t *rhs, volatile uint32_t *kind)
+{
+    uint32_t current = MEM32(cached_esi + 0xA8u);
+    *cached_eax = current;
+    *lhs = current;
+    *rhs = 1u;
+    uint32_t next = current - 1u;
+    *cached_eax = next;
+    *kind = FK_DEC;
+    MEM32(cached_esi + 0xA8u) = next;
 }
