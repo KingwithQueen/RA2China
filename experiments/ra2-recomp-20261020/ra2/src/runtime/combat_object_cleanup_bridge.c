@@ -1,3 +1,4 @@
+#include "combat_manager_neighbor_field90_gate_bridge.h"
 #include "combat_manager_neighbor_first_call_state_bridge.h"
 #include "combat_manager_constructor_stack_reconcile_bridge.h"
 #include "combat_manager_constructor_cleanup_arg_push_bridge.h"
@@ -2958,4 +2959,18 @@ void ra2_manager_neighbor_first_call_state_bridge(uint32_t cached_esi,
     uint32_t receiver = cached_esi + 0xD8u;
     *cached_edi = receiver;
     *cached_ecx = receiver;
+}
+
+
+/* 40224C..402256: optional +0x90 probe, local TEST flags and unchanged zero decision. */
+int ra2_manager_neighbor_field90_gate_bridge(uint32_t cached_esi, volatile uint32_t *cached_edx,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t field = MEM32(cached_esi + 0x90u);
+    *cached_edx = field;
+    *lhs = field;
+    *rhs = field;
+    *carry = 0u;
+    *kind = FK_TEST;
+    return TEST_Z(field, field);
 }
