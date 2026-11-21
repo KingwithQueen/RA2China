@@ -3112,3 +3112,14 @@ void ra2_manager_countdown_fallback_project_bridge(uint32_t cached_esi,
     MEM32(cached_esi + 0x174u) = tail;
     MEM32(cached_esi + 0x178u) = tail;
 }
+
+/* 402403: the independent jump entry consumes current EAX, not memory. */
+uint32_t ra2_manager_reset_status_mask_bridge(uint32_t value,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    *lhs = (uint32_t)LO8(value) << 24;
+    *rhs = 0xFAu << 24;
+    *carry = 0u;
+    *kind = FK_NARROW(FK_TEST, 24);
+    return value & 0xFFFFFFFAu;
+}

@@ -3972,10 +3972,7 @@ L_004023F3:
 L_004023FD:
     eax = MEM32(esi + 0xA4); /* 0x004023FD: mov eax, dword ptr [esi + 0xa4] */
 L_00402403:
-    _flag_a = (uint32_t)(LO8(eax)) << 24; _flag_b = (uint32_t)(0xFAu) << 24;
-    SET_LO8(eax, LO8(eax) & 0xFAu); /* 0x00402403: and al, 0xfa */
-    _cf = 0;
-    _flag_k = FK_NARROW(FK_TEST, 24);
+    eax = ra2_manager_reset_status_mask_bridge(eax, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402403..00402405: low-byte status mask and exact narrow TEST state. */
 L_00402405:
     MEM32(esi + 0xA4) = eax; /* 0x00402405: mov dword ptr [esi + 0xa4], eax */
 L_0040240B:
