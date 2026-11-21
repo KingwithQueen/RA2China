@@ -1,3 +1,4 @@
+#include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
 #include "combat_manager_neighbor_first_call_state_bridge.h"
 #include "combat_manager_constructor_stack_reconcile_bridge.h"
@@ -3759,34 +3760,22 @@ L_00402256:
     RECOMP_CALL(sub_00401170); /* 0x00402263: call 0x401170 */
     RECOMP_FLAGS_IN();
 L_00402268:
-    edx = MEM32(esi + 0x94); /* 0x00402268: mov edx, dword ptr [esi + 0x94] */
-    /* test edx, edx */ /* 0x0040226E: test edx, edx */
-    _flag_a = (uint32_t)(edx); _flag_b = (uint32_t)(edx);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_00402279; /* 0x00402270: je 0x402279 */
+    /* 0x00402268: independent optional field +0x94 gate. */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0x94u, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_00402279; /* 0x00402270: je 0x402279 */
 L_00402272:
     ecx = edi; /* 0x00402272: mov ecx, edi */
     RECOMP_CALL(sub_004010C0); /* 0x00402274: call 0x4010c0 */
     RECOMP_FLAGS_IN();
 L_00402279:
-    edx = MEM32(esi + 0x98); /* 0x00402279: mov edx, dword ptr [esi + 0x98] */
-    /* test edx, edx */ /* 0x0040227F: test edx, edx */
-    _flag_a = (uint32_t)(edx); _flag_b = (uint32_t)(edx);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0040228A; /* 0x00402281: je 0x40228a */
+    /* 0x00402279: independent optional field +0x98 gate. */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0x98u, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_0040228A; /* 0x00402281: je 0x40228a */
 L_00402283:
     ecx = edi; /* 0x00402283: mov ecx, edi */
     RECOMP_CALL(sub_004010C0); /* 0x00402285: call 0x4010c0 */
     RECOMP_FLAGS_IN();
 L_0040228A:
-    edx = MEM32(esi + 0x9C); /* 0x0040228A: mov edx, dword ptr [esi + 0x9c] */
-    /* test edx, edx */ /* 0x00402290: test edx, edx */
-    _flag_a = (uint32_t)(edx); _flag_b = (uint32_t)(edx);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    if (TEST_Z(_flag_a, _flag_b)) goto L_0040229B; /* 0x00402292: je 0x40229b */
+    /* 0x0040228A: independent optional field +0x9C gate. */
+    if (ra2_manager_neighbor_optional_tail_gate_bridge(esi, 0x9Cu, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k)) goto L_0040229B; /* 0x00402292: je 0x40229b */
 L_00402294:
     ecx = edi; /* 0x00402294: mov ecx, edi */
     RECOMP_CALL(sub_004010C0); /* 0x00402296: call 0x4010c0 */

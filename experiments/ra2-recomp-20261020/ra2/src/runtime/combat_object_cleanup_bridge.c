@@ -1,3 +1,4 @@
+#include "combat_manager_neighbor_optional_tail_gate_bridge.h"
 #include "combat_manager_neighbor_field90_gate_bridge.h"
 #include "combat_manager_neighbor_first_call_state_bridge.h"
 #include "combat_manager_constructor_stack_reconcile_bridge.h"
@@ -2967,6 +2968,21 @@ int ra2_manager_neighbor_field90_gate_bridge(uint32_t cached_esi, volatile uint3
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
 {
     uint32_t field = MEM32(cached_esi + 0x90u);
+    *cached_edx = field;
+    *lhs = field;
+    *rhs = field;
+    *carry = 0u;
+    *kind = FK_TEST;
+    return TEST_Z(field, field);
+}
+
+
+/* Independent +94/+98/+9C gates; caller keeps original calls and reloads. */
+int ra2_manager_neighbor_optional_tail_gate_bridge(uint32_t cached_esi, uint32_t field_offset,
+    volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs,
+    volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t field = MEM32(cached_esi + field_offset);
     *cached_edx = field;
     *lhs = field;
     *rhs = field;
