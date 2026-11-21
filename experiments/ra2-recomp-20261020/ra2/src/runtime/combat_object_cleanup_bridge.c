@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
 #include "combat_manager_constructor_fieldac_bridge.h"
 #include "combat_manager_constructor_field168_bridge.h"
@@ -2832,4 +2833,11 @@ void ra2_manager_constructor_fieldac_bridge(uint32_t base, uint32_t value)
 uint32_t ra2_manager_constructor_field1d0_bridge(uint32_t source)
 {
     return MEM32(source + 0x1D0u);
+}
+
+
+/* 402115..40211B: store cached ECX through the wrapped 32-bit D4 field. */
+void ra2_manager_constructor_fieldd4_bridge(uint32_t base, uint32_t value)
+{
+    MEM32(base + 0xD4u) = value;
 }

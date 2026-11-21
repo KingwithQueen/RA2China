@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
 #include "combat_manager_constructor_fieldac_bridge.h"
 #include "combat_manager_constructor_field168_bridge.h"
@@ -3626,7 +3627,12 @@ L_0040210F:
     }
     ecx = MEM32(esi + 0x1D0); /* 0x0040210F: mov ecx, dword ptr [esi + 0x1d0] */
 L_00402115:
+    {
+        ra2_manager_constructor_fieldd4_bridge(ebx, ecx);
+        goto L_0040211B;
+    }
     MEM32(ebx + 0xD4) = ecx; /* 0x00402115: mov dword ptr [ebx + 0xd4], ecx */
+L_0040211B:
     _flag_a = (uint32_t)(esi); _flag_b = (uint32_t)(0x44u);
     _cf = (uint32_t)((uint32_t)(_flag_a + _flag_b) < (uint32_t)_flag_a);
     esi = esi + 0x44u; /* 0x0040211B: add esi, 0x44 */
