@@ -3920,12 +3920,7 @@ L_00402371:
     MEM32(edi) = 0; /* 0x00402389: mov dword ptr [edi], 0 */
     goto L_004023BA; /* 0x0040238F: jmp 0x4023ba */
 L_00402391:
-    eax = MEM32(esi + 0x168); /* 0x00402391: mov eax, dword ptr [esi + 0x168] */
-    edx = MEM32(eax); /* 0x00402397: mov edx, dword ptr [eax] */
-    MEM32(esi + 0x170) = edx; /* 0x00402399: mov dword ptr [esi + 0x170], edx */
-    eax = MEM32(eax + 0x4); /* 0x0040239F: mov eax, dword ptr [eax + 4] */
-    MEM32(esi + 0x174) = eax; /* 0x004023A2: mov dword ptr [esi + 0x174], eax */
-    MEM32(esi + 0x178) = eax; /* 0x004023A8: mov dword ptr [esi + 0x178], eax */
+    ra2_manager_countdown_fallback_project_bridge(esi, &eax, &edx); /* 0x00402391..004023AE: fresh candidate reread and ordered fallback projection. */
     goto L_004023BA; /* 0x004023AE: jmp 0x4023ba */
 L_004023B0:
     MEM32(esi + 0x168) = 0; /* 0x004023B0: mov dword ptr [esi + 0x168], 0 */

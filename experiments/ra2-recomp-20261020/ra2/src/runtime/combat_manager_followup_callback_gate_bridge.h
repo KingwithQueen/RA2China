@@ -23,4 +23,8 @@ void ra2_manager_followup_descriptor_publish_bridge(uint32_t post_cached_esi,
 uint32_t ra2_manager_followup_descriptor_c_bridge(uint32_t descriptor_eax);
 void ra2_manager_followup_descriptor_project_bridge(uint32_t cached_esi,
     volatile uint32_t *cached_eax, uint32_t pre_ecx);
+
+/* Distinct null-result fallback; guest accesses are ordered and cache slots are distinct. */
+void ra2_manager_countdown_fallback_project_bridge(uint32_t cached_esi,
+    volatile uint32_t *cached_eax, volatile uint32_t *cached_edx);
 #endif

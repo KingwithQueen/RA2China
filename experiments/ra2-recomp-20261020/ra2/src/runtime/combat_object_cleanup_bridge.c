@@ -3097,3 +3097,18 @@ uint32_t ra2_manager_countdown_read_candidate168_bridge(uint32_t pre_cached_esi)
 {
     return MEM32(pre_cached_esi + 0x168u);
 }
+
+/* 402391..4023AE: null-return fallback. Cache slots are distinct from guest memory. */
+void ra2_manager_countdown_fallback_project_bridge(uint32_t cached_esi,
+    volatile uint32_t *cached_eax, volatile uint32_t *cached_edx)
+{
+    uint32_t descriptor = MEM32(cached_esi + 0x168u);
+    *cached_eax = descriptor;
+    uint32_t leading = MEM32(descriptor);
+    *cached_edx = leading;
+    MEM32(cached_esi + 0x170u) = leading;
+    uint32_t tail = MEM32(descriptor + 4u);
+    *cached_eax = tail;
+    MEM32(cached_esi + 0x174u) = tail;
+    MEM32(cached_esi + 0x178u) = tail;
+}
