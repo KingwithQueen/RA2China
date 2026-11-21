@@ -4099,9 +4099,7 @@ L_004024B0:
     edi = 0; /* 0x004024BF: xor edi, edi */
     _cf = 0;
     _flag_k = FK_TEST;
-    MEM32(esi + 0x15C) = 0x004022C0u; /* 0x004024C1: mov dword ptr [esi + 0x15c], 0x4022c0 */
-    MEM32(esi + 0x160) = 0x00402330u; /* 0x004024CB: mov dword ptr [esi + 0x160], 0x402330 */
-    MEM32(esi + 0x164) = 0x004023F0u; /* 0x004024D5: mov dword ptr [esi + 0x164], 0x4023f0 */
+    ra2_manager_default_deactivation_routes_bridge(esi); /* 0x004024C1..004024DF: restore the three default dword routes in original order. */
     MEM32(esi + 0xB0) = edi; /* 0x004024DF: mov dword ptr [esi + 0xb0], edi */
     MEM32(esi + 0xB4) = edi; /* 0x004024E5: mov dword ptr [esi + 0xb4], edi */
     MEM32(esi + 0xB8) = edi; /* 0x004024EB: mov dword ptr [esi + 0xb8], edi */

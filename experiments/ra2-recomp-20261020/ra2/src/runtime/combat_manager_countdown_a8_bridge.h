@@ -33,4 +33,7 @@ int ra2_manager_active_status_deactivation_gate_bridge(uint32_t cached_esi,
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 void ra2_manager_active_status_clear_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax,
     volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Ordered dword default route publication, no calls or flag edits. */
+void ra2_manager_default_deactivation_routes_bridge(uint32_t cached_esi);
 #endif

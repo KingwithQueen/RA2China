@@ -3181,3 +3181,11 @@ void ra2_manager_active_status_clear_bit_bridge(uint32_t cached_esi, volatile ui
     *kind = FK_NARROW(FK_TEST, 24);
     MEM32(cached_esi + 0xA4u) = updated;
 }
+
+/* 4024C1: publish default route fields, never execute an address stored here. */
+void ra2_manager_default_deactivation_routes_bridge(uint32_t cached_esi)
+{
+    MEM32(cached_esi + 0x15Cu) = 0x004022C0u;
+    MEM32(cached_esi + 0x160u) = 0x00402330u;
+    MEM32(cached_esi + 0x164u) = 0x004023F0u;
+}
