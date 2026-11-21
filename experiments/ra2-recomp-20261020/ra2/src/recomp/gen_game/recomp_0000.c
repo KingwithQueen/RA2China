@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
@@ -3647,7 +3648,12 @@ L_0040211B:
     esi = esi + 0x44u; /* 0x0040211B: add esi, 0x44 */
     _flag_k = FK_ADD;
 L_0040211E:
+    {
+        edi = ra2_manager_constructor_lea17c_bridge(ebx);
+        goto L_00402124;
+    }
     edi = ebx + 0x17C; /* 0x0040211E: lea edi, [ebx + 0x17c] */
+L_00402124:
     ecx = 8; /* 0x00402124: mov ecx, 8 */
     { uint32_t _b = ecx * 4u; /* 0x00402129: rep movsd dword ptr es:[edi], dword ptr [esi] */ recomp_rep_movs(edi, esi, ecx, 4u, _df); if (_df > 0) { esi += _b; edi += _b; } else { esi -= _b; edi -= _b; } ecx = 0; }
     MEM32(ebx + 0x19C) = ebp; /* 0x0040212B: mov dword ptr [ebx + 0x19c], ebp */

@@ -1,3 +1,4 @@
+#include "combat_manager_constructor_lea17c_bridge.h"
 #include "combat_manager_constructor_esiadd44_bridge.h"
 #include "combat_manager_constructor_fieldd4_bridge.h"
 #include "combat_manager_constructor_field1d0_bridge.h"
@@ -2850,4 +2851,11 @@ ra2_manager_constructor_esiadd44_result ra2_manager_constructor_esiadd44_bridge(
     const uint32_t value = source + 0x44u;
     const ra2_manager_constructor_esiadd44_result out = {value, (uint32_t)(value < source)};
     return out;
+}
+
+
+/* 40211E..402124: 32-bit address calculation only; no guest access or flags. */
+uint32_t ra2_manager_constructor_lea17c_bridge(uint32_t base)
+{
+    return base + 0x17Cu;
 }
