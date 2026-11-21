@@ -4077,13 +4077,8 @@ L_00402478:
     RECOMP_ICALL(eax); /* 0x0040247A: call eax */
     RECOMP_FLAGS_IN();
 L_0040247C:
-    MEM32(esi + 0x168) = 0; /* 0x0040247C: mov dword ptr [esi + 0x168], 0 */
-    ecx = MEM32(esi + 0xA4); /* 0x00402486: mov ecx, dword ptr [esi + 0xa4] */
-    _flag_a = (uint32_t)((ecx | 8)); _flag_b = (uint32_t)((ecx | 8));
-    ecx = ecx | 8; /* 0x0040248C: or ecx, 8 */
-    _cf = 0;
-    _flag_k = FK_TEST;
-    MEM32(esi + 0xA4) = ecx; /* 0x0040248F: mov dword ptr [esi + 0xa4], ecx */
+    ra2_manager_reset_store_bridge(esi, 0x168u, 0u); /* 0x0040247C..00402486: clear the active candidate first. */
+    ra2_manager_active_status_bit_bridge(esi, &ecx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402486..00402495: set status bit 3 and publish the TEST tuple. */
     esi = POP32_VAL(esp); /* 0x00402495: pop esi */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00402496: ret  */
     RECOMP_REGS_OUT();

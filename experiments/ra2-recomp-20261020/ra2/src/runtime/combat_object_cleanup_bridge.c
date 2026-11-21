@@ -3129,3 +3129,16 @@ void ra2_manager_reset_store_bridge(uint32_t receiver, uint32_t field_offset, ui
 {
     MEM32(receiver + field_offset) = value;
 }
+
+/* 402486..402495: use current receiver state, without invoking a callback. */
+void ra2_manager_active_status_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_ecx,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t updated = MEM32(cached_esi + 0xA4u) | 8u;
+    *lhs = updated;
+    *rhs = updated;
+    *cached_ecx = updated;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(cached_esi + 0xA4u) = updated;
+}

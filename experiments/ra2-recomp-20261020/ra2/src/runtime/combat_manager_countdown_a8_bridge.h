@@ -19,4 +19,8 @@ uint32_t ra2_manager_reset_status_mask_bridge(uint32_t value,
 
 /* The original reset labels own address/value choice, ordering and all flags. */
 void ra2_manager_reset_store_bridge(uint32_t receiver, uint32_t field_offset, uint32_t value);
+
+/* One post-callback status read and write; flags/ECX are distinct local outputs. */
+void ra2_manager_active_status_bit_bridge(uint32_t cached_esi, volatile uint32_t *cached_ecx,
+    volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif
