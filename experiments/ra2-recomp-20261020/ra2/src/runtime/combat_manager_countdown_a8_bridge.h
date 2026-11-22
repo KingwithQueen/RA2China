@@ -48,4 +48,7 @@ void ra2_manager_deactivation_tail_state_stores_bridge(uint32_t cached_esi, uint
 
 /* One post-callback state store; no reads or calls. */
 void ra2_manager_deactivation_postcallback_state_store_bridge(uint32_t cached_esi, uint32_t cached_edi);
+
+/* Success-path descriptor projection; no callback or control-flow ownership. */
+void ra2_manager_descriptor_success_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx);
 #endif

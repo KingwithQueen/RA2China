@@ -3223,3 +3223,16 @@ void ra2_manager_deactivation_postcallback_state_store_bridge(uint32_t cached_es
 {
     MEM32(cached_esi + 0x168u) = cached_edi;
 }
+
+/* 4027B1: preserve ordered descriptor reads, cached outputs and destination fields. */
+void ra2_manager_descriptor_success_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx)
+{
+    uint32_t descriptor = *cached_eax;
+    uint32_t first = MEM32(descriptor + 0x0Cu);
+    *cached_ecx = first;
+    MEM32(cached_esi + 0x170u) = first;
+    uint32_t second = MEM32(descriptor + 0x10u);
+    *cached_eax = second;
+    MEM32(cached_esi + 0x174u) = second;
+    MEM32(cached_esi + 0x178u) = second;
+}

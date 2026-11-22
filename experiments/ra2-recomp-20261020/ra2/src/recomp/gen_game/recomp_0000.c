@@ -4738,11 +4738,7 @@ L_004027A0:
     MEM32(esi + 0x16C) = eax; /* 0x004027A9: mov dword ptr [esi + 0x16c], eax */
     if (TEST_Z(_flag_a, _flag_b)) goto L_004027D2; /* 0x004027AF: je 0x4027d2 */
 L_004027B1:
-    ecx = MEM32(eax + 0xC); /* 0x004027B1: mov ecx, dword ptr [eax + 0xc] */
-    MEM32(esi + 0x170) = ecx; /* 0x004027B4: mov dword ptr [esi + 0x170], ecx */
-    eax = MEM32(eax + 0x10); /* 0x004027BA: mov eax, dword ptr [eax + 0x10] */
-    MEM32(esi + 0x174) = eax; /* 0x004027BD: mov dword ptr [esi + 0x174], eax */
-    MEM32(esi + 0x178) = eax; /* 0x004027C3: mov dword ptr [esi + 0x178], eax */
+    ra2_manager_descriptor_success_projection_bridge(esi, &eax, &ecx); /* 0x004027B1..004027C9: preserve the success projection and fresh second read. */
     MEM32(edi) = 0; /* 0x004027C9: mov dword ptr [edi], 0 */
     edi = POP32_VAL(esp); /* 0x004027CF: pop edi */
     esi = POP32_VAL(esp); /* 0x004027D0: pop esi */
