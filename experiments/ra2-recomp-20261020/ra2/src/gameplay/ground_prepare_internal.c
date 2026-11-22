@@ -1,10 +1,11 @@
 #include "ground_prepare_internal.h"
+#include "ground_cell_coordinates.h"
 
 uint32_t ra2_ground_prepare_destination_cell(Ra2WorldPoint destination)
 {
-    uint32_t x = (uint16_t)(destination.x / 256);
-    uint32_t y = (uint16_t)(destination.y / 256);
-    return x | (y << 16);
+    uint16_t x = (uint16_t)(destination.x / 256);
+    uint16_t y = (uint16_t)(destination.y / 256);
+    return ra2_ground_pack_cell_components(x, y);
 }
 uint32_t ra2_ground_prepare_rebuild_internal(Ra2WorldPoint destination, unsigned retry,
     const Ra2PrepareInternalServices *s)

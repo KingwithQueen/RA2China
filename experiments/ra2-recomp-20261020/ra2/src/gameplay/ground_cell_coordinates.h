@@ -7,3 +7,9 @@ static inline int ra2_ground_same_map_cell(Ra2WorldPoint left, Ra2WorldPoint rig
     return (uint16_t)(left.x / 256) == (uint16_t)(right.x / 256)
         && (uint16_t)(left.y / 256) == (uint16_t)(right.y / 256);
 }
+
+/* Preserve the original packed cell layout: X in the low half, Y in the high half. */
+static inline uint32_t ra2_ground_pack_cell_components(uint16_t x, uint16_t y)
+{
+    return (uint32_t)x | ((uint32_t)y << 16);
+}
