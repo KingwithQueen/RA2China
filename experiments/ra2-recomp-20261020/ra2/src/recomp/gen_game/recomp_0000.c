@@ -5309,15 +5309,7 @@ L_00402CE7:
     PUSH32(esp, ecx); /* 0x00402E00: push ecx */
     RECOMP_CALL(sub_007820C0); /* 0x00402E01: call 0x7820c0 */
     RECOMP_FLAGS_IN();
-    MEM32(ebx + 0x130) = eax; /* 0x00402E06: mov dword ptr [ebx + 0x130], eax */
-    MEM32(ebx + 0x134) = edx; /* 0x00402E0C: mov dword ptr [ebx + 0x134], edx */
-    eax = 0xA5u; /* 0x00402E12: mov eax, 0xa5 */
-    MEM32(ebx + 0x118) = eax; /* 0x00402E17: mov dword ptr [ebx + 0x118], eax */
-    MEM32(ebx + 0x11C) = ebp; /* 0x00402E1D: mov dword ptr [ebx + 0x11c], ebp */
-    MEM32(ebx + 0x130) = eax; /* 0x00402E23: mov dword ptr [ebx + 0x130], eax */
-    MEM32(ebx + 0x134) = ebp; /* 0x00402E29: mov dword ptr [ebx + 0x134], ebp */
-    esi = ebx + 0x170; /* 0x00402E2F: lea esi, [ebx + 0x170] */
-    ecx = esi; /* 0x00402E35: mov ecx, esi */
+    ra2_manager_child_postcall_pair_publication_bridge(ebx, ebp, eax, edx, &eax, &esi, &ecx); /* 0x00402E06..00402E37: preserve both post-call stores before defaults and receiver prep. */
     RECOMP_CALL(sub_00403820); /* 0x00402E37: call 0x403820 */
     RECOMP_FLAGS_IN();
     ecx = esi; /* 0x00402E3C: mov ecx, esi */

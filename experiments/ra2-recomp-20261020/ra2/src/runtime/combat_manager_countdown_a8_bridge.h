@@ -84,4 +84,7 @@ void ra2_manager_child_link_publication_bridge(uint32_t cached_ebx, uint32_t cac
 
 /* Ordered child defaults and readback. Guest pointer, flags, stack and calls are outside this leaf. */
 void ra2_manager_child_constructor_defaults_bridge(uint32_t cached_ebx, uint32_t cached_ebp, volatile uint32_t *cached_edi, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx);
+
+/* Post-call pair, overwrite and receiver; guest stack, flags and calls stay outside. */
+void ra2_manager_child_postcall_pair_publication_bridge(uint32_t cached_ebx, uint32_t cached_ebp, uint32_t first_eax, uint32_t first_edx, volatile uint32_t *cached_eax, volatile uint32_t *cached_esi, volatile uint32_t *cached_ecx);
 #endif

@@ -3446,3 +3446,19 @@ void ra2_manager_child_constructor_defaults_bridge(uint32_t cached_ebx, uint32_t
     *cached_ecx = MEM32(cached_ebx + 0x110);
     *cached_edx = MEM32(cached_ebx + 0x114);
 }
+
+/* 402E06: keep the first result pair, overwrite pair and receiver in original order. */
+void ra2_manager_child_postcall_pair_publication_bridge(uint32_t cached_ebx, uint32_t cached_ebp, uint32_t first_eax, uint32_t first_edx, volatile uint32_t *cached_eax, volatile uint32_t *cached_esi, volatile uint32_t *cached_ecx)
+{
+    MEM32(cached_ebx + 0x130u) = first_eax;
+    MEM32(cached_ebx + 0x134u) = first_edx;
+    uint32_t pair_low_default = 0xA5u;
+    *cached_eax = pair_low_default;
+    MEM32(cached_ebx + 0x118u) = pair_low_default;
+    MEM32(cached_ebx + 0x11Cu) = cached_ebp;
+    MEM32(cached_ebx + 0x130u) = pair_low_default;
+    MEM32(cached_ebx + 0x134u) = cached_ebp;
+    uint32_t callee_receiver = cached_ebx + 0x170u;
+    *cached_esi = callee_receiver;
+    *cached_ecx = callee_receiver;
+}
