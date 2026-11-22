@@ -1,12 +1,5 @@
 #include "ground_sampling.h"
 #include "ground_sampling_shared.h"
-static void choose_table(int32_t selector, unsigned alternate, Ra2SamplingChoice *choice,
-    const Ra2SamplingServices *s, Ra2SamplingTemplate *selected)
-{
-    *selected=s->template_at(s->context,selector);
-    choice->table=alternate?selected->alternate:selected->normal;
-    s->select_table(s->context,choice->table);
-}
 Ra2SamplingPhase ra2_ground_choose_full_sample(int32_t progress, int32_t direction,
     int32_t selector, unsigned alternate, Ra2SamplingChoice *choice, const Ra2SamplingServices *s)
 {
@@ -23,9 +16,7 @@ Ra2SamplingPhase ra2_ground_choose_remainder(int32_t progress, int32_t selector,
     unsigned alternate, int32_t index, Ra2SamplingChoice *choice, const Ra2SamplingServices *s)
 {
     if(progress<=0 || selector<=-1)return RA2_SAMPLING_DONE;
-    Ra2SamplingTemplate selected;
-    choose_table(selector,alternate,choice,s,&selected);
-    choice->sample=s->sample_at(s->context,index);
-    if(!choice->sample.x && !choice->sample.y && index)return RA2_SAMPLING_DONE;
-    return RA2_SAMPLING_INTERPOLATE;
+    Ra2SamplingTemplate selected=s->template_at(s->context,selector);
+    int32_t table=ra2_ground_template_index(selected,alternate);
+    return ra2_ground_choose_selected_remainder(table,index,0,choice,s);
 }
