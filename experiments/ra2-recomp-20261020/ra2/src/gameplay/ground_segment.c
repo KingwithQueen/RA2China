@@ -1,5 +1,6 @@
 #include "ground_template_transition.h"
 #include "ground_segment.h"
+#include "ground_transition_rules.h"
 
 typedef struct SegmentGateContext
 {
@@ -26,7 +27,7 @@ static void resolve_segment_surface(unsigned direction,Ra2SegmentPreparation *ou
 {
     output->candidate = services->candidate_point(context, direction);
     Ra2CellSurface current = services->current_surface(context);
-    output->reference_level = current.level + (services->query(context, RA2_SEGMENT_OWNER_BRIDGE_FLAG) ? 4 : 0);
+    output->reference_level = ra2_ground_layer_reference(current.level, services->query(context, RA2_SEGMENT_OWNER_BRIDGE_FLAG) != 0);
     /* 原版在两次地图查询之间重新读位置并构造相邻点；世界服务可能更新对象，不能合并查询。 */
     Ra2WorldPoint next_position = services->candidate_point(context, direction);
     Ra2CellSurface next = services->surface_at(context, next_position);

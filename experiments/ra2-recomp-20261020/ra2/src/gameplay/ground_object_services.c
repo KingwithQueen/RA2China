@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_object_services.h"
+#include "ground_transition_rules.h"
 static uintptr_t scan(int upper, int32_t kind, const Ra2ObjectScanServices *s)
 {
     if(!s->enabled(s->context))return 0;
@@ -27,7 +28,7 @@ uintptr_t ra2_ground_cell_connection(int16_t index, int32_t count, const uint32_
 int32_t ra2_ground_surface_level(const Ra2HeightServices *s)
 {
     int32_t level=s->cell_level(s->context);
-    return level+(s->bridge_layer(s->context)?4:0);
+    return ra2_ground_layer_reference(level,s->bridge_layer(s->context));
 }
 static int32_t subtract(int32_t a, int32_t b)
 {uint32_t bits=(uint32_t)a-(uint32_t)b;int32_t value;memcpy(&value,&bits,4);return value;}
