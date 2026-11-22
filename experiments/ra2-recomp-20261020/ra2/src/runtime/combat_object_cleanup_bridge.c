@@ -3328,3 +3328,22 @@ void ra2_manager_ready_counter_receiver_bridge(uint32_t cached_eax, volatile uin
     *cached_edx = current;
     *cached_ecx = current + 0x0Cu;
 }
+
+/* 4029F0: use the fresh post-callback root and preserve DEC/CMP publications. */
+void ra2_manager_postcallback_counter_decrement_compare_bridge(uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t receiver = MEM32(0x7CC968u);
+    *cached_ecx = receiver;
+    uint32_t current = MEM32(receiver + 0x18u);
+    *cached_eax = current;
+    *lhs = current;
+    *rhs = 1u;
+    uint32_t next = current - 1u;
+    *cached_eax = next;
+    *kind = FK_DEC;
+    *lhs = next;
+    *rhs = cached_ebp;
+    *carry = (uint32_t)CMP_B(next, cached_ebp);
+    *kind = FK_CMP;
+    MEM32(receiver + 0x18u) = next;
+}

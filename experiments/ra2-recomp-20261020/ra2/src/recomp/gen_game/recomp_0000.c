@@ -4928,16 +4928,7 @@ L_004029D0:
     ecx = esi; /* 0x004029E9: mov ecx, esi */
     RECOMP_CALL(sub_00407380); /* 0x004029EB: call 0x407380 */
     RECOMP_FLAGS_IN();
-    ecx = MEM32(0x7CC968); /* 0x004029F0: mov ecx, dword ptr [0x7cc968] */
-    eax = MEM32(ecx + 0x18); /* 0x004029F6: mov eax, dword ptr [ecx + 0x18] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x004029F9: dec eax */
-    _flag_k = FK_DEC;
-    /* cmp eax, ebp */ /* 0x004029FA: cmp eax, ebp */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(ebp);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    MEM32(ecx + 0x18) = eax; /* 0x004029FC: mov dword ptr [ecx + 0x18], eax */
+    ra2_manager_postcallback_counter_decrement_compare_bridge(ebp, &eax, &ecx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x004029F0..004029FF: preserve ordered DEC then CMP and the counter store. */
     if (CMP_GE(_flag_a, _flag_b)) goto L_00402A0A; /* 0x004029FF: jge 0x402a0a */
 L_00402A01:
     edx = MEM32(0x7CC968); /* 0x00402A01: mov edx, dword ptr [0x7cc968] */

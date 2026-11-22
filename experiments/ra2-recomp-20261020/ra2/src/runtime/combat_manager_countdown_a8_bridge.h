@@ -69,4 +69,7 @@ void ra2_manager_global_ready_publication_bridge(volatile uint32_t *cached_eax, 
 
 /* Ordered counter increment and data-only callback receiver preparation. */
 void ra2_manager_ready_counter_receiver_bridge(uint32_t cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
+
+/* Post-callback DEC/CMP data; signed branch and clamp remain in the caller. */
+void ra2_manager_postcallback_counter_decrement_compare_bridge(uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif
