@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include "ground_obstacle.h"
 #include "ground_failure_transition.h"
+#include "ground_handoff.h"
 
 
 
@@ -37,7 +38,7 @@ static void notify_allied_blocker(const Ra2ObstacleServices *services, void *con
         position = services->position(context, 0);
         int32_t height = services->query(context, RA2_OBSTACLE_HEIGHT_PER_LEVEL);
         int32_t level = services->query(context, RA2_OBSTACLE_CELL_LEVEL);
-        bridge_layer = ra2_ground_axis_distance(position.z / height,level) > 2;
+        bridge_layer = ra2_ground_upper_layer_at_height(level, position.z, height);
     }
     services->notify_blocker(context, bridge_layer);
 }
