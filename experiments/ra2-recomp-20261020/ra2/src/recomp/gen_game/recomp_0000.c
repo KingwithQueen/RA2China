@@ -4863,11 +4863,7 @@ L_00402940:
     ra2_manager_global_publication_bridge(&ecx, &edx); /* 0x00402958..00402974: keep the fresh global load after the zero store. */
     RECOMP_CALL(sub_00401000); /* 0x00402974: call 0x401000 */
     RECOMP_FLAGS_IN();
-    MEM32(0x830B4C) = 1; /* 0x00402979: mov dword ptr [0x830b4c], 1 */
-    _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
-    eax = 0; /* 0x00402983: xor eax, eax */
-    _cf = 0;
-    _flag_k = FK_TEST;
+    ra2_manager_global_ready_publication_bridge(&eax, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402979..00402985: publish ready, then original XOR state. */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00402985: ret  */
     RECOMP_REGS_OUT();
 }

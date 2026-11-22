@@ -63,4 +63,7 @@ void ra2_manager_linked_counter_decrement_test_bridge(uint32_t cached_esi, volat
 
 /* Global publication with an intervening zero store and a fresh pointer load. */
 void ra2_manager_global_publication_bridge(volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx);
+
+/* Publish ready and the original XOR state; return stays with the caller. */
+void ra2_manager_global_ready_publication_bridge(volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif

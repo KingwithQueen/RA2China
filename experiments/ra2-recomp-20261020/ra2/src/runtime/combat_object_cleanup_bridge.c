@@ -3301,3 +3301,14 @@ void ra2_manager_global_publication_bridge(volatile uint32_t *cached_ecx, volati
     *cached_ecx = published;
     MEM32(0x830B50u) = published;
 }
+
+/* 402979: publish the ready marker before the cached XOR outputs. */
+void ra2_manager_global_ready_publication_bridge(volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    MEM32(0x830B4Cu) = 1u;
+    *lhs = 0u;
+    *rhs = 0u;
+    *cached_eax = 0u;
+    *carry = 0u;
+    *kind = FK_TEST;
+}
