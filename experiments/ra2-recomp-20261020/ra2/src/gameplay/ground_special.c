@@ -4,14 +4,6 @@
 #include "ground_handoff.h"
 #include "ground_failure_transition.h"
 
-static int32_t absolute_difference(int32_t left, int32_t right)
-{
-    uint32_t bits = (uint32_t)left - (uint32_t)right;
-    if (bits & UINT32_C(0x80000000)) bits = 0u - bits;
-    int32_t result;
-    memcpy(&result, &bits, sizeof(result));
-    return result;
-}
 
 
 static int stop_navigation(const Ra2SpecialServices *services)
@@ -45,11 +37,11 @@ Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state,
     }
     int32_t distance = services->query(context, RA2_SPECIAL_DISTANCE_TO_TARGET);
     int32_t close_enough = services->query(context, RA2_SPECIAL_CLOSE_ENOUGH);
-    if (distance < close_enough)
+    if (ra2_ground_within_stop_distance(distance, close_enough))
     {
         Ra2WorldPoint position = services->raw_position(context);
         int32_t height = services->query(context, RA2_SPECIAL_HEIGHT_PER_LEVEL);
-        if (absolute_difference(state->destination.z, position.z) < (int32_t)((uint32_t)height * 2u)
+        if (ra2_ground_within_stop_height(state->destination.z, position.z, height)
             && services->query(context, RA2_SPECIAL_CURRENT_LAND) != 10)
         {
             ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
