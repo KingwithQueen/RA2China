@@ -13,7 +13,7 @@ Ra2PathSampleOutcome ra2_ground_consume_path_sample(Ra2PathCursor *cursor, Ra2Pa
 {
     /* 使用无符号运算保留原版 32 位回绕语义，避免极值时 C 的有符号溢出。 */
     cursor->remaining_progress = signed_bits((uint32_t)cursor->remaining_progress - 7u);
-    if (sample.x == 0 && sample.y == 0 && cursor->sample_index != 0)
+    if (ra2_ground_sample_matches_marker(sample, 0) && cursor->sample_index != 0)
     {
         return RA2_PATH_SAMPLE_REACHES_END;
     }

@@ -24,7 +24,7 @@ Ra2SamplingPhase ra2_ground_choose_selected_remainder(int32_t table, int32_t ind
     choice->table = table;
     s->select_table(s->context, table);
     choice->sample = s->sample_at(s->context, index);
-    if (choice->sample.x == end_sentinel && choice->sample.y == end_sentinel && index != end_sentinel)
+    if (ra2_ground_sample_matches_marker(choice->sample, end_sentinel) && index != end_sentinel)
         return RA2_SAMPLING_DONE;
     return RA2_SAMPLING_INTERPOLATE;
 }

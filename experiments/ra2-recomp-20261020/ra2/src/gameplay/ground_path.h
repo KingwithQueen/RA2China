@@ -8,6 +8,12 @@ typedef struct Ra2PathSample
     int32_t direction;
 } Ra2PathSample;
 
+/* Match only the planar marker; the caller checks its sample index. */
+static inline int ra2_ground_sample_matches_marker(Ra2PathSample sample, int32_t marker)
+{
+    return sample.x == marker && sample.y == marker;
+}
+
 typedef struct Ra2PathCursor
 {
     int32_t sample_index;
