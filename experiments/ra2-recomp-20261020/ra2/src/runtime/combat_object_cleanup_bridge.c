@@ -3271,3 +3271,20 @@ void ra2_manager_linked_counter_adjustment_bridge(uint32_t cached_esi, volatile 
     *kind = FK_INC;
     MEM32(cached_esi + 0x104u) = higher;
 }
+
+/* 4028E0: preserve post-callback DEC, then TEST's flag publication. */
+void ra2_manager_linked_counter_decrement_test_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind, volatile uint32_t *carry)
+{
+    uint32_t old = MEM32(cached_esi + 0x104u);
+    *cached_eax = old;
+    *lhs = old;
+    *rhs = 1u;
+    uint32_t next = old - 1u;
+    *cached_eax = next;
+    *kind = FK_DEC;
+    *lhs = next;
+    *rhs = next;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(cached_esi + 0x104u) = next;
+}

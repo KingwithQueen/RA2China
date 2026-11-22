@@ -57,4 +57,7 @@ void ra2_manager_descriptor_fallback_projection_bridge(uint32_t cached_esi, vola
 
 /* Paired DEC/INC reference counters; raw carry and callbacks stay in the caller. */
 void ra2_manager_linked_counter_adjustment_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
+
+/* Post-callback counter DEC/TEST; signed branch and clamp stay at their original sites. */
+void ra2_manager_linked_counter_decrement_test_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind, volatile uint32_t *carry);
 #endif

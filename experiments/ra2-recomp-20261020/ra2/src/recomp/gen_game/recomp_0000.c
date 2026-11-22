@@ -4828,15 +4828,7 @@ L_004028B0:
     ecx = edi; /* 0x004028D9: mov ecx, edi */
     RECOMP_CALL(sub_00407380); /* 0x004028DB: call 0x407380 */
     RECOMP_FLAGS_IN();
-    eax = MEM32(esi + 0x104); /* 0x004028E0: mov eax, dword ptr [esi + 0x104] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x004028E6: dec eax */
-    _flag_k = FK_DEC;
-    /* test eax, eax */ /* 0x004028E7: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    MEM32(esi + 0x104) = eax; /* 0x004028E9: mov dword ptr [esi + 0x104], eax */
+    ra2_manager_linked_counter_decrement_test_bridge(esi, &eax, &_flag_a, &_flag_b, &_flag_k, &_cf); /* 0x004028E0..004028EF: preserve DEC, then TEST and the single counter store. */
     if (TEST_NS(_flag_a, _flag_b)) goto L_004028FB; /* 0x004028EF: jge 0x4028fb */
 L_004028F1:
     MEM32(esi + 0x104) = 0; /* 0x004028F1: mov dword ptr [esi + 0x104], 0 */
