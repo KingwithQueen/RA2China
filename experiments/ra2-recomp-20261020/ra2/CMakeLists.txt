@@ -83,6 +83,18 @@ if(NOT MSVC)
   message(FATAL_ERROR "runtime/native32 is MSVC x86 inline assembly")
 endif()
 
+# Optional compile-only checks; never linked into the game or built by all.
+option(RA2_ENABLE_STATIC_CONTRACTS "Enable the opt-in C17 value contracts" OFF)
+if(RA2_ENABLE_STATIC_CONTRACTS)
+  # Configure with -DRA2_ENABLE_STATIC_CONTRACTS=ON and build ra2_static_contracts.
+  add_library(ra2_static_contracts OBJECT
+    tools/ground_movement_static_contract.c
+    tools/crew_percent_static_contract.c)
+  set_property(TARGET ra2_static_contracts PROPERTY EXCLUDE_FROM_ALL TRUE)
+  target_include_directories(ra2_static_contracts PRIVATE src/gameplay)
+  target_compile_options(ra2_static_contracts PRIVATE /W4 /WX /std:c17 /utf-8)
+endif()
+
 add_executable(ra2
   src/runtime/host.c
   src/runtime/recovery_checks.c
