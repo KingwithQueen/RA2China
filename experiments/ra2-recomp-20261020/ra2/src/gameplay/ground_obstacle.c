@@ -2,6 +2,7 @@
 #include "ground_obstacle.h"
 #include "ground_failure_transition.h"
 #include "ground_handoff.h"
+#include "ground_cell_coordinates.h"
 
 
 
@@ -80,7 +81,8 @@ Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2Wor
         return RA2_PREPARE_RETURN_FALSE;
     }
     Ra2WorldPoint position = services->position(context, 1);
-    Ra2GroundCell cell = { (int16_t)(position.x / 256), (int16_t)(position.y / 256) };
+    Ra2GroundCell cell = { (int16_t)ra2_ground_world_cell_quotient(position.x),
+        (int16_t)ra2_ground_world_cell_quotient(position.y) };
     cell = services->neighbor(context, cell, (uint32_t)direction & 7u);
     if (services->inside_map(context, cell))
     {

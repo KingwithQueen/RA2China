@@ -1,4 +1,5 @@
 #include "ground_cell_services.h"
+#include "ground_cell_coordinates.h"
 #include <string.h>
 static int32_t index_of(int32_t x, int32_t y)
 {
@@ -14,7 +15,8 @@ static uintptr_t lookup(const Ra2CellGrid *g, int32_t x, int32_t y, int32_t coun
     return g->fallback;
 }
 uintptr_t ra2_cell_at_world(const Ra2CellGrid *g, Ra2WorldPoint p)
-{ return lookup(g, p.x / 256, p.y / 256, g->count); }
+{ return lookup(g, ra2_ground_world_cell_quotient(p.x),
+    ra2_ground_world_cell_quotient(p.y), g->count); }
 uintptr_t ra2_cell_at_point(const Ra2CellGrid *g, Ra2ServiceCell p)
 { return lookup(g, p.x, p.y, 262144); }
 int ra2_cell_slot_present(const uint32_t *cells, Ra2ServiceCell p)

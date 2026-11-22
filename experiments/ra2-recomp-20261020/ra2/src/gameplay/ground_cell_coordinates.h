@@ -10,8 +10,8 @@ static inline int32_t ra2_ground_world_cell_quotient(int32_t coordinate)
 /* Original X/Y cell projection: truncate toward zero, then narrow; ignore altitude. */
 static inline int ra2_ground_same_map_cell(Ra2WorldPoint left, Ra2WorldPoint right)
 {
-    return (uint16_t)(left.x / 256) == (uint16_t)(right.x / 256)
-        && (uint16_t)(left.y / 256) == (uint16_t)(right.y / 256);
+    return (uint16_t)ra2_ground_world_cell_quotient(left.x) == (uint16_t)ra2_ground_world_cell_quotient(right.x)
+        && (uint16_t)ra2_ground_world_cell_quotient(left.y) == (uint16_t)ra2_ground_world_cell_quotient(right.y);
 }
 
 /* Preserve the original packed cell layout: X in the low half, Y in the high half. */
