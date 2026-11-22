@@ -2,12 +2,12 @@
 #include "ground_path_search.h"
 #include "ground_path_cache.h"
 #include "ground_path_cost.h"
+#include "ground_failure_transition.h"
 
 static uint32_t level_difference(int32_t a,int32_t b)
 {
     /* 与原版 SUB/CDQ/XOR/SUB 相同，避免有符号溢出。有效高度差远小于 INT32_MAX。 */
-    uint32_t delta=(uint32_t)a-(uint32_t)b;
-    return delta&0x80000000u?0u-delta:delta;
+    return (uint32_t)ra2_ground_axis_distance(a,b);
 }
 int ra2_path_region_allows(uint32_t stamp,uint32_t generation,unsigned lower,unsigned connection,unsigned restrict_regions)
 {return stamp==generation || !lower || connection || !restrict_regions;}
