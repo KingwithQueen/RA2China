@@ -3250,3 +3250,24 @@ void ra2_manager_descriptor_fallback_projection_bridge(uint32_t cached_esi, vola
     MEM32(cached_esi + 0x174u) = second;
     MEM32(cached_esi + 0x178u) = second;
 }
+
+/* 4028BF: paired reference counters in original order; preserve raw carry. */
+void ra2_manager_linked_counter_adjustment_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind)
+{
+    uint32_t first = MEM32(cached_esi + 0xF0u);
+    *cached_eax = first;
+    *lhs = first;
+    *rhs = 1u;
+    uint32_t lower = first - 1u;
+    *cached_eax = lower;
+    *kind = FK_DEC;
+    MEM32(cached_esi + 0xF0u) = lower;
+    uint32_t second = MEM32(cached_esi + 0x104u);
+    *cached_eax = second;
+    *lhs = second;
+    *rhs = 1u;
+    uint32_t higher = second + 1u;
+    *cached_eax = higher;
+    *kind = FK_INC;
+    MEM32(cached_esi + 0x104u) = higher;
+}

@@ -54,4 +54,7 @@ void ra2_manager_descriptor_success_projection_bridge(uint32_t cached_esi, volat
 
 /* Fallback descriptor projection; no callback or control-flow ownership. */
 void ra2_manager_descriptor_fallback_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_edx);
+
+/* Paired DEC/INC reference counters; raw carry and callbacks stay in the caller. */
+void ra2_manager_linked_counter_adjustment_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
 #endif

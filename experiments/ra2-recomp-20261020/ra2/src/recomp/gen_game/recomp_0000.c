@@ -4824,16 +4824,7 @@ L_004028B0:
     esi = MEM32(edi + 0xAC); /* 0x004028B4: mov esi, dword ptr [edi + 0xac] */
     RECOMP_CALL(sub_00407380); /* 0x004028BA: call 0x407380 */
     RECOMP_FLAGS_IN();
-    eax = MEM32(esi + 0xF0); /* 0x004028BF: mov eax, dword ptr [esi + 0xf0] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x004028C5: dec eax */
-    _flag_k = FK_DEC;
-    MEM32(esi + 0xF0) = eax; /* 0x004028C6: mov dword ptr [esi + 0xf0], eax */
-    eax = MEM32(esi + 0x104); /* 0x004028CC: mov eax, dword ptr [esi + 0x104] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax + 1; /* 0x004028D2: inc eax */
-    _flag_k = FK_INC;
-    MEM32(esi + 0x104) = eax; /* 0x004028D3: mov dword ptr [esi + 0x104], eax */
+    ra2_manager_linked_counter_adjustment_bridge(esi, &eax, &_flag_a, &_flag_b, &_flag_k); /* 0x004028BF..004028D9: preserve ordered DEC/INC and lazy flags without writing carry. */
     ecx = edi; /* 0x004028D9: mov ecx, edi */
     RECOMP_CALL(sub_00407380); /* 0x004028DB: call 0x407380 */
     RECOMP_FLAGS_IN();
