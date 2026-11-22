@@ -1,10 +1,11 @@
 #include "ground_segment_admission.h"
+#include "ground_world_point.h"
 
 Ra2SegmentAdmission ra2_ground_admit_segment(Ra2WorldPoint *end, unsigned *driving,
     Ra2WorldPoint invalid, Ra2WorldPoint candidate, const Ra2SegmentAdmissionServices *s)
 {
     void *c=s->context;
-    if(candidate.x==invalid.x && candidate.y==invalid.y && candidate.z==invalid.z)
+    if(ra2_ground_same_world_point(candidate,invalid))
         return RA2_SEGMENT_NO_CANDIDATE;
     *end=candidate; *driving=1;
     if(s->accepts_owner(c,candidate) && !s->owner_restricted(c))

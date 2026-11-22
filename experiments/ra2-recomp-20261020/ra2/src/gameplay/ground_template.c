@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_template.h"
+#include "ground_world_point.h"
 #include "ground_segment_admission.h"
 #include "ground_template_table.h"
 
@@ -39,10 +40,6 @@ Ra2TemplateSelection ra2_ground_template_table(int32_t direction, int32_t next_d
     return result;
 }
 
-static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
-{
-    return left.x==right.x && left.y==right.y && left.z==right.z;
-}
 
 static int32_t consume_direction_queue(Ra2SegmentCommitState *state,int skip_shift,
     int32_t terminal_direction)
@@ -64,7 +61,7 @@ static void prepare_segment_publication(Ra2SegmentCommitState *state,Ra2WorldPoi
     state->sound_pending=0;
     state->sample_index=0;
     /* 已经无效的旧段不附带改写driving；保留原状态与放行服务的交接。 */
-    if(!same_position(state->movement.segment_end,invalid)) {
+    if(!ra2_ground_same_world_point(state->movement.segment_end,invalid)) {
         state->movement.segment_end=invalid;
         state->movement.driving=0;
     }

@@ -1,13 +1,10 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_prepare.h"
+#include "ground_world_point.h"
 #include "gameplay_frame_counter.h"
 #include "ground_failure_transition.h"
 
-static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
-{
-    return left.x == right.x && left.y == right.y && left.z == right.z;
-}
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -59,7 +56,7 @@ Ra2PreparePhase ra2_ground_prepare_entry(Ra2GroundPrepareState *state, Ra2WorldP
         }
         return RA2_PREPARE_RETURN_FALSE;
     }
-    if (same_position(state->destination, invalid_position))
+    if (ra2_ground_same_world_point(state->destination, invalid_position))
     {
         return RA2_PREPARE_RETURN_FALSE;
     }
@@ -107,7 +104,7 @@ static Ra2PreparePhase finish_failed_rebuild(Ra2GroundPrepareState *state,
         services->stop_navigation(services->context, 0);
         return RA2_PREPARE_RETURN_FALSE;
     }
-    if (same_position(state->destination, invalid_position))
+    if (ra2_ground_same_world_point(state->destination, invalid_position))
     {
         return RA2_PREPARE_RETURN_FALSE;
     }

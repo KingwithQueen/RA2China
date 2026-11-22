@@ -1,11 +1,8 @@
 #include "ground_drive.h"
+#include "ground_world_point.h"
 #include "ground_failure_transition.h"
 #include "ground_owner_boundary.h"
 
-static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
-{
-    return left.x == right.x && left.y == right.y && left.z == right.z;
-}
 
 static int32_t query(const Ra2DriveServices *services, Ra2DriveQuery value)
 {
@@ -58,7 +55,7 @@ static int resume_exhausted_segment(Ra2GroundDriveState *state,const Ra2DriveSer
     {
         Ra2WorldPoint position;
         services->target_position(services->context, &position);
-        if (!same_position(position, state->destination))
+        if (!ra2_ground_same_world_point(position, state->destination))
         {
             services->set_destination(services->context, position);
         }
@@ -75,7 +72,7 @@ static int stop_if_already_arrived(Ra2GroundDriveState *state,Ra2WorldPoint inva
         return 1;
     }
     if (query(services, RA2_DRIVE_CURRENT_MISSION) == 5 && !state->driving
-        && !same_position(state->destination, invalid_position) && query(services, RA2_DRIVE_POSITION_IS_DESTINATION))
+        && !ra2_ground_same_world_point(state->destination, invalid_position) && query(services, RA2_DRIVE_POSITION_IS_DESTINATION))
     {
         services->stop_navigation(services->context);
         return 1;
