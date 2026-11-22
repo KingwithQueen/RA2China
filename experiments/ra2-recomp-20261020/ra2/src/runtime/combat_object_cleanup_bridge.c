@@ -3462,3 +3462,27 @@ void ra2_manager_child_postcall_pair_publication_bridge(uint32_t cached_ebx, uin
     *cached_esi = callee_receiver;
     *cached_ecx = callee_receiver;
 }
+
+/* 402F29: clear the indexed child before the fresh owner load and DEC/TEST data. */
+void ra2_manager_child_unlink_counter_test_bridge(uint32_t cached_edi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t index = MEM32(cached_edi + 0x1Cu);
+    *cached_eax = index;
+    uint32_t owner = MEM32(cached_edi + 0x18u);
+    *cached_ecx = owner;
+    MEM32(owner + index * 4u + 0x1Cu) = 0u;
+    uint32_t refreshed = MEM32(cached_edi + 0x18u);
+    *cached_eax = refreshed;
+    uint32_t old_count = MEM32(refreshed + 0x10u);
+    *cached_ecx = old_count;
+    *lhs = old_count;
+    *rhs = 1u;
+    uint32_t count = old_count - 1u;
+    *cached_ecx = count;
+    *kind = FK_DEC;
+    *lhs = count;
+    *rhs = count;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(refreshed + 0x10u) = count;
+}

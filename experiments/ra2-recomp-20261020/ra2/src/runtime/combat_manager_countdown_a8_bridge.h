@@ -87,4 +87,7 @@ void ra2_manager_child_constructor_defaults_bridge(uint32_t cached_ebx, uint32_t
 
 /* Post-call pair, overwrite and receiver; guest stack, flags and calls stay outside. */
 void ra2_manager_child_postcall_pair_publication_bridge(uint32_t cached_ebx, uint32_t cached_ebp, uint32_t first_eax, uint32_t first_edx, volatile uint32_t *cached_eax, volatile uint32_t *cached_esi, volatile uint32_t *cached_ecx);
+
+/* Child unlink data only: preserve aliased owner reload and leave the signed clamp outside. */
+void ra2_manager_child_unlink_counter_test_bridge(uint32_t cached_edi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif

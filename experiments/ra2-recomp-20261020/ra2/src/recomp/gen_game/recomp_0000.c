@@ -5483,19 +5483,7 @@ L_00402F1E:
     edx = MEM32(eax + 0xC); /* 0x00402F23: mov edx, dword ptr [eax + 0xc] */
     RECOMP_ICALL(MEM32(edx + 0x20)); /* 0x00402F26: call dword ptr [edx + 0x20] */
     RECOMP_FLAGS_IN();
-    eax = MEM32(edi + 0x1C); /* 0x00402F29: mov eax, dword ptr [edi + 0x1c] */
-    ecx = MEM32(edi + 0x18); /* 0x00402F2C: mov ecx, dword ptr [edi + 0x18] */
-    MEM32(ecx + eax * 4 + 0x1C) = 0; /* 0x00402F2F: mov dword ptr [ecx + eax*4 + 0x1c], 0 */
-    eax = MEM32(edi + 0x18); /* 0x00402F37: mov eax, dword ptr [edi + 0x18] */
-    ecx = MEM32(eax + 0x10); /* 0x00402F3A: mov ecx, dword ptr [eax + 0x10] */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
-    ecx = ecx - 1; /* 0x00402F3D: dec ecx */
-    _flag_k = FK_DEC;
-    /* test ecx, ecx */ /* 0x00402F3E: test ecx, ecx */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ecx);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    MEM32(eax + 0x10) = ecx; /* 0x00402F40: mov dword ptr [eax + 0x10], ecx */
+    ra2_manager_child_unlink_counter_test_bridge(edi, &eax, &ecx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402F29..00402F43: clear slot, reload owner and preserve DEC/TEST. */
     if (TEST_NS(_flag_a, _flag_b)) goto L_00402F4F; /* 0x00402F43: jge 0x402f4f */
 L_00402F45:
     edx = MEM32(edi + 0x18); /* 0x00402F45: mov edx, dword ptr [edi + 0x18] */
