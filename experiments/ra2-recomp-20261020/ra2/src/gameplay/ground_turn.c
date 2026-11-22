@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_turn.h"
+#include "ground_handoff.h"
 #include "ground_failure_transition.h"
 #include "ground_template_transition.h"
 
@@ -123,7 +124,7 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
             Ra2WorldPoint position = services->raw_position(context);
             int32_t height = services->query(context, RA2_TURN_HEIGHT_PER_LEVEL);
             int32_t level = services->query(context, RA2_TURN_CELL_LEVEL);
-            bridge_layer = absolute_difference(position.z/height,level)>2;
+            bridge_layer = ra2_ground_upper_layer_at_height(level, position.z, height);
         }
         services->notify_cell(context, bridge_layer);
         return discard_candidate(state, invalid, passage, allow_recursive, services);

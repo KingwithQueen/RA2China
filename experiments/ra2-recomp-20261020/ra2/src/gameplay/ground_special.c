@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_special.h"
+#include "ground_handoff.h"
 #include "ground_failure_transition.h"
 
 static int32_t absolute_difference(int32_t left, int32_t right)
@@ -62,7 +63,7 @@ Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state,
         Ra2WorldPoint position = services->raw_position(context);
         int32_t height = services->query(context, RA2_SPECIAL_HEIGHT_PER_LEVEL);
         int32_t level = services->query(context, RA2_SPECIAL_CELL_LEVEL);
-        bridge_layer = absolute_difference(position.z / height, level) > 2;
+        bridge_layer = ra2_ground_upper_layer_at_height(level, position.z, height);
     }
     services->notify_cell(context, bridge_layer);
     return RA2_SPECIAL_CLEAR_SEGMENT;

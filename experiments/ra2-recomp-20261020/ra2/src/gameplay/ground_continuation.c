@@ -1,16 +1,11 @@
 #include <string.h>
 #include "ground_continuation.h"
+#include "ground_handoff.h"
 #include "ground_failure_transition.h"
 #include "ground_segment_admission.h"
 
 static int32_t signed_bits(uint32_t bits)
 { int32_t result; memcpy(&result,&bits,4); return result; }
-static int32_t absolute_difference(int32_t a,int32_t b)
-{
-    uint32_t bits=(uint32_t)a-(uint32_t)b;
-    if(bits&UINT32_C(0x80000000)) bits=0u-bits;
-    return signed_bits(bits);
-}
 /* 接续服务按实时上下文读取候选，不能改成 Prepare 的按值位置参数。
    接受服务可能移除 owner 或改写状态；成功后仍按原顺序恢复速度、弹出方向。 */
 static int continuation_accept(void *context,Ra2WorldPoint candidate)
@@ -97,7 +92,7 @@ int ra2_ground_continue_turn(Ra2ContinuationState *state,Ra2WorldPoint invalid,
             Ra2WorldPoint raw=s->raw_position(c);
             int32_t level=s->query(c,RA2_CONTINUATION_CELL_LEVEL);
             int32_t height=s->query(c,RA2_CONTINUATION_HEIGHT_PER_LEVEL);
-            bridge_layer=absolute_difference(raw.z/height,level)>2;
+            bridge_layer = ra2_ground_upper_layer_at_height(level, raw.z, height);
         }
         s->notify_segment_cell(c,bridge_layer);
     }
