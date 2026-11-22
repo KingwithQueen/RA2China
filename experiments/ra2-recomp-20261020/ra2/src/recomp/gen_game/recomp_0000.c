@@ -4860,11 +4860,7 @@ L_00402940:
     ecx = eax + 0xC; /* 0x00402950: lea ecx, [eax + 0xc] */
     RECOMP_CALL(sub_004071F0); /* 0x00402953: call 0x4071f0 */
     RECOMP_FLAGS_IN();
-    ecx = MEM32(0x7CC968); /* 0x00402958: mov ecx, dword ptr [0x7cc968] */
-    MEM32(ecx + 0x18) = 0; /* 0x0040295E: mov dword ptr [ecx + 0x18], 0 */
-    edx = MEM32(0x7CC968); /* 0x00402965: mov edx, dword ptr [0x7cc968] */
-    ecx = edx + 0x20; /* 0x0040296B: lea ecx, [edx + 0x20] */
-    MEM32(0x830B50) = ecx; /* 0x0040296E: mov dword ptr [0x830b50], ecx */
+    ra2_manager_global_publication_bridge(&ecx, &edx); /* 0x00402958..00402974: keep the fresh global load after the zero store. */
     RECOMP_CALL(sub_00401000); /* 0x00402974: call 0x401000 */
     RECOMP_FLAGS_IN();
     MEM32(0x830B4C) = 1; /* 0x00402979: mov dword ptr [0x830b4c], 1 */

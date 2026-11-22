@@ -60,4 +60,7 @@ void ra2_manager_linked_counter_adjustment_bridge(uint32_t cached_esi, volatile 
 
 /* Post-callback counter DEC/TEST; signed branch and clamp stay at their original sites. */
 void ra2_manager_linked_counter_decrement_test_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind, volatile uint32_t *carry);
+
+/* Global publication with an intervening zero store and a fresh pointer load. */
+void ra2_manager_global_publication_bridge(volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx);
 #endif

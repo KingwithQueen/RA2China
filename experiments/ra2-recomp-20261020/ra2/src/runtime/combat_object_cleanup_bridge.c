@@ -3288,3 +3288,16 @@ void ra2_manager_linked_counter_decrement_test_bridge(uint32_t cached_esi, volat
     *kind = FK_TEST;
     MEM32(cached_esi + 0x104u) = next;
 }
+
+/* 402958: preserve two distinct global snapshots and the ordered publication. */
+void ra2_manager_global_publication_bridge(volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx)
+{
+    uint32_t first = MEM32(0x7CC968u);
+    *cached_ecx = first;
+    MEM32(first + 0x18u) = 0u;
+    uint32_t second = MEM32(0x7CC968u);
+    *cached_edx = second;
+    uint32_t published = second + 0x20u;
+    *cached_ecx = published;
+    MEM32(0x830B50u) = published;
+}
