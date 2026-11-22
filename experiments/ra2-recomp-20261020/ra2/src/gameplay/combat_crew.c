@@ -1,23 +1,7 @@
 #include <string.h>
 #include "combat_crew.h"
-#include "x87_arithmetic.h"
+#include "combat_real_compare.h"
 
-static unsigned top_bit(uint64_t value){unsigned n=0;while(value>>=1)++n;return n;}
-static int compare(Ra2LegacyReal a,Ra2LegacyReal b)
-{
-    if(!a.significand)a.negative=0;
-    if(!b.significand)b.negative=0;
-    if(a.negative!=b.negative)return a.negative?-1:1;
-    int magnitude;
-    if(!a.significand || !b.significand)magnitude=(a.significand!=0)-(b.significand!=0);
-    else {
-        unsigned at=top_bit(a.significand),bt=top_bit(b.significand);
-        int32_t ae=a.exponent+(int32_t)at,be=b.exponent+(int32_t)bt;
-        if(ae!=be)magnitude=(ae>be)-(ae<be);
-        else {uint64_t av=a.significand<<(63-at),bv=b.significand<<(63-bt);magnitude=(av>bv)-(av<bv);}
-    }
-    return a.negative?-magnitude:magnitude;
-}
 int ra2_crew_roll_succeeds(int32_t draw,double unit,double chance,uint16_t control)
 {
     uint64_t bits;memcpy(&bits,&chance,sizeof(bits));
@@ -25,7 +9,7 @@ int ra2_crew_roll_succeeds(int32_t draw,double unit,double chance,uint16_t contr
     if((bits&UINT64_C(0x7FF0000000000000))==UINT64_C(0x7FF0000000000000))
         return (bits&UINT64_C(0xFFFFFFFFFFFFF))!=0 || !(bits>>63);
     Ra2LegacyReal value=ra2_real_multiply(ra2_real_from_i32(draw),ra2_real_from_f64(unit),control);
-    return compare(value,ra2_real_from_f64(chance))<0;
+    return ra2_combat_compare_legacy_real(value,ra2_real_from_f64(chance))<0;
 }
 Ra2CrewSelection ra2_select_crew_type(const Ra2CrewServices *s)
 {
