@@ -1,8 +1,9 @@
 #include "ground_template_next.h"
+#include "ground_cell_coordinates.h"
 uint32_t ra2_ground_template_cell(int32_t x,int32_t y)
 {
     /* 原版有符号除256向零取整，再分别截为16位。 */
-    return (uint32_t)(uint16_t)(x/256)|((uint32_t)(uint16_t)(y/256)<<16);
+    return ra2_ground_pack_cell_components((uint16_t)(x/256),(uint16_t)(y/256));
 }
 int ra2_ground_prepare_next_template(const Ra2TemplateNextServices *s)
 {

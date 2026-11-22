@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_entry.h"
+#include "ground_cell_coordinates.h"
 #include "ground_bridge_plane.h"
 #include "ground_direction_rules.h"
 
@@ -9,7 +10,7 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
     if (state->direction==8)
     {
         if (!link.present) return RA2_ENTRY_BLOCKED;
-        uint32_t endpoint=(uint16_t)link.endpoint_x|((uint32_t)(uint16_t)link.endpoint_y<<16);
+        uint32_t endpoint=ra2_ground_pack_cell_components((uint16_t)link.endpoint_x,(uint16_t)link.endpoint_y);
         memcpy(&state->reference_level,&endpoint,4);
         return endpoint ? RA2_ENTRY_CLEAR : RA2_ENTRY_BLOCKED;
     }
