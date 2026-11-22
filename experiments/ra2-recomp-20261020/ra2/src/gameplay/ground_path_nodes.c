@@ -1,4 +1,6 @@
 #include "ground_path_nodes.h"
+#include "ground_bridge_plane.h"
+#include "ground_transition_rules.h"
 #include "ground_path_cost.h"
 #include <stddef.h>
 #include <string.h>
@@ -14,10 +16,12 @@ static void initialize_node_state(Ra2SearchNode *node,Ra2PathLink *link,
         link->surface_level=input->cell_level;
         if(input->cell_has_bridge) {
             if(input->parent_cell_has_bridge) {
-                if(link->parent->surface_level==input->parent_cell_level+4)link->surface_level+=4;
+                if(ra2_ground_bridge_height_matches(link->parent->surface_level,input->parent_cell_level))
+                    link->surface_level=ra2_ground_layer_reference(link->surface_level,1);
             } else {
                 int32_t difference=input->cell_level-link->parent->surface_level+3;
-                if(difference>=-1 && difference<=1)link->surface_level+=4;
+                if(difference>=-1 && difference<=1)
+                    link->surface_level=ra2_ground_layer_reference(link->surface_level,1);
             }
         }
         node->accumulated_cost=ra2_ground_accumulate_path_cost(input->parent->accumulated_cost,input->step_cost,control);
