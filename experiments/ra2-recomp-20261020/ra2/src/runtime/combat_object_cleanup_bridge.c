@@ -3312,3 +3312,19 @@ void ra2_manager_global_ready_publication_bridge(volatile uint32_t *cached_eax, 
     *carry = 0u;
     *kind = FK_TEST;
 }
+
+/* 4029AB: preserve cached counter base, ordered increment, and fresh callback receiver. */
+void ra2_manager_ready_counter_receiver_bridge(uint32_t cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind)
+{
+    uint32_t previous = MEM32(cached_eax + 0x18u);
+    *cached_ecx = previous;
+    *lhs = previous;
+    *rhs = 1u;
+    uint32_t incremented = previous + 1u;
+    *cached_ecx = incremented;
+    *kind = FK_INC;
+    MEM32(cached_eax + 0x18u) = incremented;
+    uint32_t current = MEM32(0x7CC968u);
+    *cached_edx = current;
+    *cached_ecx = current + 0x0Cu;
+}

@@ -4902,13 +4902,7 @@ L_004029A3:
     PUSH32(esp, ebx); /* 0x004029A8: push ebx */
     PUSH32(esp, esi); /* 0x004029A9: push esi */
     PUSH32(esp, edi); /* 0x004029AA: push edi */
-    ecx = MEM32(eax + 0x18); /* 0x004029AB: mov ecx, dword ptr [eax + 0x18] */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
-    ecx = ecx + 1; /* 0x004029AE: inc ecx */
-    _flag_k = FK_INC;
-    MEM32(eax + 0x18) = ecx; /* 0x004029AF: mov dword ptr [eax + 0x18], ecx */
-    edx = MEM32(0x7CC968); /* 0x004029B2: mov edx, dword ptr [0x7cc968] */
-    ecx = edx + 0xC; /* 0x004029B8: lea ecx, [edx + 0xc] */
+    ra2_manager_ready_counter_receiver_bridge(eax, &ecx, &edx, &_flag_a, &_flag_b, &_flag_k); /* 0x004029AB..004029BB: increment, then fresh root and receiver. */
     RECOMP_CALL(sub_004072F0); /* 0x004029BB: call 0x4072f0 */
     RECOMP_FLAGS_IN();
     edi = eax; /* 0x004029C0: mov edi, eax */
