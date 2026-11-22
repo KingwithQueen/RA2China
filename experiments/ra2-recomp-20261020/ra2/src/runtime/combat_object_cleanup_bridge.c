@@ -3347,3 +3347,27 @@ void ra2_manager_postcallback_counter_decrement_compare_bridge(uint32_t cached_e
     *kind = FK_CMP;
     MEM32(receiver + 0x18u) = next;
 }
+
+/* 402A46: preserve indexed slot clear before the fresh vector/counter read. */
+void ra2_manager_child_slot_counter_cleanup_bridge(uint32_t cached_esi, uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t index = MEM32(cached_esi + 0x1Cu);
+    *cached_eax = index;
+    uint32_t vector = MEM32(cached_esi + 0x18u);
+    *cached_ecx = vector;
+    MEM32(vector + index * 4u + 0x1Cu) = cached_ebp;
+    uint32_t refreshed = MEM32(cached_esi + 0x18u);
+    *cached_eax = refreshed;
+    uint32_t current = MEM32(refreshed + 0x10u);
+    *cached_ecx = current;
+    *lhs = current;
+    *rhs = 1u;
+    uint32_t next = current - 1u;
+    *cached_ecx = next;
+    *kind = FK_DEC;
+    *lhs = next;
+    *rhs = cached_ebp;
+    *carry = (uint32_t)CMP_B(next, cached_ebp);
+    *kind = FK_CMP;
+    MEM32(refreshed + 0x10u) = next;
+}

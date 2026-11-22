@@ -4967,19 +4967,7 @@ L_00402A3B:
     edx = MEM32(eax + 0xC); /* 0x00402A40: mov edx, dword ptr [eax + 0xc] */
     RECOMP_ICALL(MEM32(edx + 0x20)); /* 0x00402A43: call dword ptr [edx + 0x20] */
     RECOMP_FLAGS_IN();
-    eax = MEM32(esi + 0x1C); /* 0x00402A46: mov eax, dword ptr [esi + 0x1c] */
-    ecx = MEM32(esi + 0x18); /* 0x00402A49: mov ecx, dword ptr [esi + 0x18] */
-    MEM32(ecx + eax * 4 + 0x1C) = ebp; /* 0x00402A4C: mov dword ptr [ecx + eax*4 + 0x1c], ebp */
-    eax = MEM32(esi + 0x18); /* 0x00402A50: mov eax, dword ptr [esi + 0x18] */
-    ecx = MEM32(eax + 0x10); /* 0x00402A53: mov ecx, dword ptr [eax + 0x10] */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
-    ecx = ecx - 1; /* 0x00402A56: dec ecx */
-    _flag_k = FK_DEC;
-    /* cmp ecx, ebp */ /* 0x00402A57: cmp ecx, ebp */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(ebp);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    MEM32(eax + 0x10) = ecx; /* 0x00402A59: mov dword ptr [eax + 0x10], ecx */
+    ra2_manager_child_slot_counter_cleanup_bridge(esi, ebp, &eax, &ecx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402A46..00402A5C: clear indexed slot, reload vector, and preserve DEC/CMP count data. */
     if (CMP_GE(_flag_a, _flag_b)) goto L_00402A64; /* 0x00402A5C: jge 0x402a64 */
 L_00402A5E:
     edx = MEM32(esi + 0x18); /* 0x00402A5E: mov edx, dword ptr [esi + 0x18] */

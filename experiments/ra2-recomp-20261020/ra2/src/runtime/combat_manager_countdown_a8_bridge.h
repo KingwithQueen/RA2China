@@ -72,4 +72,7 @@ void ra2_manager_ready_counter_receiver_bridge(uint32_t cached_eax, volatile uin
 
 /* Post-callback DEC/CMP data; signed branch and clamp remain in the caller. */
 void ra2_manager_postcallback_counter_decrement_compare_bridge(uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Ordered child-slot and counter data cleanup; callback, clamp and delete stay in the caller. */
+void ra2_manager_child_slot_counter_cleanup_bridge(uint32_t cached_esi, uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif
