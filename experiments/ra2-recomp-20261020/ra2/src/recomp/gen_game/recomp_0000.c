@@ -5604,12 +5604,7 @@ L_00403004:
     _flag_k = FK_CMP;
     if (CMP_BE(_flag_a, _flag_b)) goto L_00403018; /* 0x00403008: jbe 0x403018 */
 L_0040300A:
-    _flag_a = (uint32_t)(0); _flag_b = (uint32_t)(0);
-    ebx = 0; /* 0x0040300A: xor ebx, ebx */
-    _cf = 0;
-    _flag_k = FK_TEST;
-    MEM32(esi + 0x128) = ebx; /* 0x0040300C: mov dword ptr [esi + 0x128], ebx */
-    MEM32(esi + 0x12C) = ebx; /* 0x00403012: mov dword ptr [esi + 0x12c], ebx */
+    ra2_manager_child_high_water_reset_bridge(esi, &ebx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x0040300A..00403018: preserve conditional high-water reset and XOR data. */
 L_00403018:
     ebx = MEM32(esi + 0x128); /* 0x00403018: mov ebx, dword ptr [esi + 0x128] */
     ebp = MEM32(esi + 0x12C); /* 0x0040301E: mov ebp, dword ptr [esi + 0x12c] */

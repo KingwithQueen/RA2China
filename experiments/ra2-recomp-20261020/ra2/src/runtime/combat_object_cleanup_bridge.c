@@ -3512,3 +3512,15 @@ void ra2_manager_child_baseline_pair_publication_bridge(uint32_t cached_esi, uin
     *cached_ebx = receiver;
     *cached_ecx = receiver;
 }
+
+/* 40300A: XOR data and ordered pair reset, with route decisions left in caller. */
+void ra2_manager_child_high_water_reset_bridge(uint32_t cached_esi, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    *lhs = 0u;
+    *rhs = 0u;
+    *cached_ebx = 0u;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(cached_esi + 0x128u) = 0u;
+    MEM32(cached_esi + 0x12Cu) = 0u;
+}

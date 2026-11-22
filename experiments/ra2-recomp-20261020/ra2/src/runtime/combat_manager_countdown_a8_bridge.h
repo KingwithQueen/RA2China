@@ -96,4 +96,7 @@ void ra2_manager_child_measurement_publication_bridge(uint32_t cached_esi, uint3
 
 /* Common baseline pair and receiver; preserve the original comparisons, high-water pair and stack. */
 void ra2_manager_child_baseline_pair_publication_bridge(uint32_t cached_esi, uint32_t value_low, uint32_t value_high, volatile uint32_t *cached_ebx, volatile uint32_t *cached_ecx);
+
+/* Threshold-selected pair reset data only; comparisons and fresh loads stay outside. */
+void ra2_manager_child_high_water_reset_bridge(uint32_t cached_esi, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif
