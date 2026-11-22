@@ -1,6 +1,6 @@
 #include <string.h>
 #include "ground_slope.h"
-#include "x87_arithmetic.h"
+#include "x87_real_order.h"
 
 void ra2_ground_initialize_slopes(Ra2SlopeCache *c, int32_t height, uint16_t control)
 {
@@ -41,28 +41,6 @@ void ra2_ground_initialize_slopes(Ra2SlopeCache *c, int32_t height, uint16_t con
     }
 }
 
-static unsigned top_bit(uint64_t value)
-{ unsigned n = 0; while (value >>= 1) ++n; return n; }
-
-/* 比较扩展精度的确切值；先落成double再比较会改变靠近坡顶的分支。 */
-static int compare(Ra2LegacyReal a, Ra2LegacyReal b)
-{
-    if (!a.significand && !b.significand) return 0;
-    if (!a.significand) return b.negative ? 1 : -1;
-    if (!b.significand) return a.negative ? -1 : 1;
-    if (a.negative != b.negative) return a.negative ? -1 : 1;
-    unsigned at = top_bit(a.significand), bt = top_bit(b.significand);
-    int32_t ae = a.exponent + (int32_t)at, be = b.exponent + (int32_t)bt;
-    int result;
-    if (ae != be) result = ae < be ? -1 : 1;
-    else
-    {
-        uint64_t av = a.significand << (63 - at), bv = b.significand << (63 - bt);
-        result = av == bv ? 0 : av < bv ? -1 : 1;
-    }
-    return a.negative ? -result : result;
-}
-
 int32_t ra2_ground_slope_height(const Ra2SlopeCache *c, int32_t height, int8_t level, uint8_t slope,
     Ra2WorldPoint position, uint16_t initial_control, uint16_t conversion_control)
 {
@@ -82,7 +60,7 @@ int32_t ra2_ground_slope_height(const Ra2SlopeCache *c, int32_t height, int8_t l
     value = ra2_real_add(value, ra2_real_from_f64(p->offset), conversion_control);
     value = ra2_real_add(value, ra2_real_from_f64(p->extra_height), conversion_control);
     Ra2LegacyReal zero = ra2_real_from_i32(0), ceiling = ra2_real_from_f64(p->ceiling);
-    if (compare(value, zero) < 0) value = zero;
-    if (compare(value, ceiling) > 0) value = ceiling;
+    if (ra2_legacy_real_compare(value, zero) < 0) value = zero;
+    if (ra2_legacy_real_compare(value, ceiling) > 0) value = ceiling;
     return ra2_real_truncate_i32(ra2_real_add(ra2_real_from_i32(rounded_base), value, conversion_control));
 }

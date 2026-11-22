@@ -1,26 +1,6 @@
 #include "ground_followup.h"
 #include "ground_rebuild_result.h"
-
-static unsigned highest_bit(uint64_t bits)
-{
-    unsigned result = 0;
-    while (bits >>= 1) ++result;
-    return result;
-}
-
-/* 有限原版数值的精确比较，不先舍入到 double；零的符号不影响相等。 */
-static int real_compare(Ra2LegacyReal left, Ra2LegacyReal right)
-{
-    if (!left.significand && !right.significand) return 0;
-    if (!left.significand) return right.negative ? 1 : -1;
-    if (!right.significand) return left.negative ? -1 : 1;
-    if (left.negative != right.negative) return left.negative ? -1 : 1;
-    unsigned lb = highest_bit(left.significand), rb = highest_bit(right.significand);
-    int32_t le = left.exponent + (int32_t)lb, re = right.exponent + (int32_t)rb;
-    uint64_t lm = left.significand << (63 - lb), rm = right.significand << (63 - rb);
-    int result = le != re ? (le > re ? 1 : -1) : (lm > rm) - (lm < rm);
-    return left.negative ? -result : result;
-}
+#include "x87_real_order.h"
 
 void ra2_ground_prepare_speed(const Ra2GroundSpeedServices *services)
 {
@@ -64,7 +44,7 @@ void ra2_ground_prepare_speed(const Ra2GroundSpeedServices *services)
     else
     {
         double current_speed = services->value(context, RA2_SPEED_CURRENT_UNIT_SPEED);
-        if (real_compare(speed, ra2_real_from_f64(current_speed)))
+        if (ra2_legacy_real_compare(speed, ra2_real_from_f64(current_speed)))
         {
             services->apply_speed(context, factor, 0);
         }
