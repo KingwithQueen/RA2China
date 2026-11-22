@@ -4988,16 +4988,7 @@ L_00402A64:
     RECOMP_BACKEDGE();
     if (CMP_NE(_flag_a, _flag_b)) goto L_004029D0; /* 0x00402A71: jne 0x4029d0 */
 L_00402A77:
-    ecx = MEM32(0x7CC968); /* 0x00402A77: mov ecx, dword ptr [0x7cc968] */
-    eax = MEM32(ecx + 0x18); /* 0x00402A7D: mov eax, dword ptr [ecx + 0x18] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x00402A80: dec eax */
-    _flag_k = FK_DEC;
-    /* cmp eax, ebp */ /* 0x00402A81: cmp eax, ebp */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(ebp);
-    _cf = (uint32_t)CMP_B(_flag_a, _flag_b);
-    _flag_k = FK_CMP;
-    MEM32(ecx + 0x18) = eax; /* 0x00402A83: mov dword ptr [ecx + 0x18], eax */
+    ra2_manager_postcallback_counter_decrement_compare_bridge(ebp, &eax, &ecx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402A77..00402A86: reuse the identical ordered DEC/CMP data projection. */
     if (CMP_GE(_flag_a, _flag_b)) goto L_00402A90; /* 0x00402A86: jge 0x402a90 */
 L_00402A88:
     eax = MEM32(0x7CC968); /* 0x00402A88: mov eax, dword ptr [0x7cc968] */
