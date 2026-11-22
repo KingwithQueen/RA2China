@@ -2,6 +2,7 @@
 #include "ground_path_prepare.h"
 #include "ground_transition_rules.h"
 #include "ground_direction_rules.h"
+#include "ground_failure_transition.h"
 
 static void exclude_cell(Ra2PathPreparation *p, const Ra2PathCell *cell, int32_t threshold)
 {
@@ -24,8 +25,7 @@ static void resolve_bridge_levels(Ra2PathPreparation *p,
     v->cell(v->context, p->start_reference, start);
     if (type.facing_seed_exclusions && start->has_bridge) {
         int32_t height = v->owner_height(v->context);
-        int32_t difference = height - *p->start_level;
-        if (difference > 2 || difference < -2)
+        if (ra2_ground_axis_distance(height, *p->start_level) > 2)
             *p->start_level = ra2_ground_layer_reference(*p->start_level, 1);
     }
 }
