@@ -9,3 +9,9 @@ static inline int ra2_ground_direction_conflicts(int32_t heading, int32_t link_h
         distance = 0u - distance;
     return distance > 2u && distance < 6u;
 }
+
+/* Opposite slot in the eight-way direction ring. */
+static inline unsigned ra2_ground_opposite_heading(int32_t heading)
+{
+    return ((uint32_t)heading - 4u) & 7u;
+}

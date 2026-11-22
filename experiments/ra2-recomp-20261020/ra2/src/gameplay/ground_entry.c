@@ -17,7 +17,7 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
     }
     if (link.present && ra2_ground_direction_conflicts(state->direction,link.direction) && state->direction!=-1)
         return RA2_ENTRY_BLOCKED;
-    int32_t opposite=(int32_t)(((uint32_t)state->direction-4u)&7u);
+    int32_t opposite=(int32_t)ra2_ground_opposite_heading(state->direction);
     Ra2CellLink neighbor=s->neighbor_link(c,opposite);
     if (neighbor.present && ra2_ground_direction_conflicts(opposite,neighbor.direction) && state->direction!=-1)
         return RA2_ENTRY_BLOCKED;

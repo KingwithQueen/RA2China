@@ -2,7 +2,7 @@
 #include "ground_direction_rules.h"
 int ra2_ground_neighbor_blocks(int32_t direction,const Ra2NeighborPassageServices *s)
 {
-    unsigned opposite=((uint32_t)direction-4u)&7u;
+    unsigned opposite=ra2_ground_opposite_heading(direction);
     uintptr_t cell=s->neighbor(s->context,opposite);
     uintptr_t object=s->obstacle(s->context,cell);
     if(!object) return 0;
