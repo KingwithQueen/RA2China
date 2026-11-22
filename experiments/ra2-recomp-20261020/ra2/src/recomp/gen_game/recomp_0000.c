@@ -5302,33 +5302,7 @@ L_00402CE7:
     RECOMP_FLAGS_IN();
     MEM32(ebx + 0x104) = ebp; /* 0x00402D47: mov dword ptr [ebx + 0x104], ebp */
     MEM32(ebx + 0x10C) = 0x00402F60u; /* 0x00402D4D: mov dword ptr [ebx + 0x10c], 0x402f60 */
-    MEM32(ebx + 0x110) = ebp; /* 0x00402D57: mov dword ptr [ebx + 0x110], ebp */
-    MEM32(ebx + 0x114) = ebp; /* 0x00402D5D: mov dword ptr [ebx + 0x114], ebp */
-    MEM32(ebx + 0x118) = ebp; /* 0x00402D63: mov dword ptr [ebx + 0x118], ebp */
-    MEM32(ebx + 0x11C) = ebp; /* 0x00402D69: mov dword ptr [ebx + 0x11c], ebp */
-    MEM32(ebx + 0x120) = ebp; /* 0x00402D6F: mov dword ptr [ebx + 0x120], ebp */
-    MEM32(ebx + 0x124) = ebp; /* 0x00402D75: mov dword ptr [ebx + 0x124], ebp */
-    MEM32(ebx + 0x128) = ebp; /* 0x00402D7B: mov dword ptr [ebx + 0x128], ebp */
-    MEM32(ebx + 0x12C) = ebp; /* 0x00402D81: mov dword ptr [ebx + 0x12c], ebp */
-    MEM32(ebx + 0x138) = ebp; /* 0x00402D87: mov dword ptr [ebx + 0x138], ebp */
-    MEM32(ebx + 0x13C) = ebp; /* 0x00402D8D: mov dword ptr [ebx + 0x13c], ebp */
-    MEM32(ebx + 0x158) = ebp; /* 0x00402D93: mov dword ptr [ebx + 0x158], ebp */
-    MEM32(ebx + 0x160) = ebp; /* 0x00402D99: mov dword ptr [ebx + 0x160], ebp */
-    MEM32(ebx + 0x150) = 0x1388u; /* 0x00402D9F: mov dword ptr [ebx + 0x150], 0x1388 */
-    MEM32(ebx + 0x154) = ebp; /* 0x00402DA9: mov dword ptr [ebx + 0x154], ebp */
-    MEM32(ebx + 0x140) = ebp; /* 0x00402DAF: mov dword ptr [ebx + 0x140], ebp */
-    MEM32(ebx + 0x144) = ebp; /* 0x00402DB5: mov dword ptr [ebx + 0x144], ebp */
-    MEM32(ebx + 0x148) = ebp; /* 0x00402DBB: mov dword ptr [ebx + 0x148], ebp */
-    MEM32(ebx + 0x14C) = ebp; /* 0x00402DC1: mov dword ptr [ebx + 0x14c], ebp */
-    MEM32(ebx + 0x164) = ebp; /* 0x00402DC7: mov dword ptr [ebx + 0x164], ebp */
-    MEM32(ebx + 0x15C) = ebp; /* 0x00402DCD: mov dword ptr [ebx + 0x15c], ebp */
-    edi = 0x21u; /* 0x00402DD3: mov edi, 0x21 */
-    MEM32(ebx + 0x110) = edi; /* 0x00402DD8: mov dword ptr [ebx + 0x110], edi */
-    MEM32(ebx + 0x114) = ebp; /* 0x00402DDE: mov dword ptr [ebx + 0x114], ebp */
-    MEM32(ebx + 0x118) = edi; /* 0x00402DE4: mov dword ptr [ebx + 0x118], edi */
-    MEM32(ebx + 0x11C) = ebp; /* 0x00402DEA: mov dword ptr [ebx + 0x11c], ebp */
-    ecx = MEM32(ebx + 0x110); /* 0x00402DF0: mov ecx, dword ptr [ebx + 0x110] */
-    edx = MEM32(ebx + 0x114); /* 0x00402DF6: mov edx, dword ptr [ebx + 0x114] */
+    ra2_manager_child_constructor_defaults_bridge(ebx, ebp, &edi, &ecx, &edx); /* 0x00402D57..00402DFC: preserve ordered child defaults and fresh argument reads. */
     PUSH32(esp, ebp); /* 0x00402DFC: push ebp */
     PUSH32(esp, 0xAu); /* 0x00402DFD: push 0xa */
     PUSH32(esp, edx); /* 0x00402DFF: push edx */

@@ -3413,3 +3413,36 @@ void ra2_manager_child_link_publication_bridge(uint32_t cached_ebx, uint32_t cac
     *cached_eax = payload;
     MEM32(cached_ebx + 0x1D0u) = payload;
 }
+
+/* 402D57: retain the original repeated volatile stores, then read back both input words. */
+void ra2_manager_child_constructor_defaults_bridge(uint32_t cached_ebx, uint32_t cached_ebp, volatile uint32_t *cached_edi, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx)
+{
+    MEM32(cached_ebx + 0x110) = cached_ebp;
+    MEM32(cached_ebx + 0x114) = cached_ebp;
+    MEM32(cached_ebx + 0x118) = cached_ebp;
+    MEM32(cached_ebx + 0x11C) = cached_ebp;
+    MEM32(cached_ebx + 0x120) = cached_ebp;
+    MEM32(cached_ebx + 0x124) = cached_ebp;
+    MEM32(cached_ebx + 0x128) = cached_ebp;
+    MEM32(cached_ebx + 0x12C) = cached_ebp;
+    MEM32(cached_ebx + 0x138) = cached_ebp;
+    MEM32(cached_ebx + 0x13C) = cached_ebp;
+    MEM32(cached_ebx + 0x158) = cached_ebp;
+    MEM32(cached_ebx + 0x160) = cached_ebp;
+    MEM32(cached_ebx + 0x150) = 0x1388u;
+    MEM32(cached_ebx + 0x154) = cached_ebp;
+    MEM32(cached_ebx + 0x140) = cached_ebp;
+    MEM32(cached_ebx + 0x144) = cached_ebp;
+    MEM32(cached_ebx + 0x148) = cached_ebp;
+    MEM32(cached_ebx + 0x14C) = cached_ebp;
+    MEM32(cached_ebx + 0x164) = cached_ebp;
+    MEM32(cached_ebx + 0x15C) = cached_ebp;
+    uint32_t default_value = 0x21u;
+    *cached_edi = default_value;
+    MEM32(cached_ebx + 0x110) = default_value;
+    MEM32(cached_ebx + 0x114) = cached_ebp;
+    MEM32(cached_ebx + 0x118) = default_value;
+    MEM32(cached_ebx + 0x11C) = cached_ebp;
+    *cached_ecx = MEM32(cached_ebx + 0x110);
+    *cached_edx = MEM32(cached_ebx + 0x114);
+}
