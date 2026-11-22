@@ -3486,3 +3486,19 @@ void ra2_manager_child_unlink_counter_test_bridge(uint32_t cached_edi, volatile 
     *kind = FK_TEST;
     MEM32(refreshed + 0x10u) = count;
 }
+
+/* 402FCB: preserve result order, raw carry and the fresh comparison word. */
+void ra2_manager_child_measurement_publication_bridge(uint32_t cached_esi, uint32_t pair_low, uint32_t pair_high, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind)
+{
+    MEM32(cached_esi + 0x120u) = pair_low;
+    MEM32(cached_esi + 0x124u) = pair_high;
+    uint32_t counter = MEM32(cached_esi + 0x158u);
+    *cached_ebx = counter;
+    *lhs = counter;
+    *rhs = 1u;
+    uint32_t next_count = counter + 1u;
+    *cached_ebx = next_count;
+    *kind = FK_INC;
+    MEM32(cached_esi + 0x158u) = next_count;
+    *cached_ebx = MEM32(cached_esi + 0x130u);
+}

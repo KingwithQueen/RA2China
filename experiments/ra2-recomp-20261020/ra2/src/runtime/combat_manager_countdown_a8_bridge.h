@@ -90,4 +90,7 @@ void ra2_manager_child_postcall_pair_publication_bridge(uint32_t cached_ebx, uin
 
 /* Child unlink data only: preserve aliased owner reload and leave the signed clamp outside. */
 void ra2_manager_child_unlink_counter_test_bridge(uint32_t cached_edi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Measurement pair, count and comparison word only; carry, guest stack and control stay outside. */
+void ra2_manager_child_measurement_publication_bridge(uint32_t cached_esi, uint32_t pair_low, uint32_t pair_high, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
 #endif

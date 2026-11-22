@@ -5586,14 +5586,7 @@ L_00402FB7:
       ecx = _sa - _sb - _sc;
       _flag_a = recomp_flags_sbb(_sa, _sb, _sc); _flag_b = 0;
       _flag_k = FK_EFLAGS; _cf = _flag_a & 1u; }
-    MEM32(esi + 0x120) = edi; /* 0x00402FCB: mov dword ptr [esi + 0x120], edi */
-    MEM32(esi + 0x124) = ecx; /* 0x00402FD1: mov dword ptr [esi + 0x124], ecx */
-    ebx = MEM32(esi + 0x158); /* 0x00402FD7: mov ebx, dword ptr [esi + 0x158] */
-    _flag_a = (uint32_t)(ebx); _flag_b = (uint32_t)(1);
-    ebx = ebx + 1; /* 0x00402FDD: inc ebx */
-    _flag_k = FK_INC;
-    MEM32(esi + 0x158) = ebx; /* 0x00402FDE: mov dword ptr [esi + 0x158], ebx */
-    ebx = MEM32(esi + 0x130); /* 0x00402FE4: mov ebx, dword ptr [esi + 0x130] */
+    ra2_manager_child_measurement_publication_bridge(esi, edi, ecx, &ebx, &_flag_a, &_flag_b, &_flag_k); /* 0x00402FCB..00402FEA: publish result pair, carry-preserving count and comparison word. */
     MEM32(esp + 0x14) = ebx; /* 0x00402FEA: mov dword ptr [esp + 0x14], ebx */
     ebp = MEM32(esi + 0x134); /* 0x00402FEE: mov ebp, dword ptr [esi + 0x134] */
     ebx = MEM32(esi + 0x128); /* 0x00402FF4: mov ebx, dword ptr [esi + 0x128] */
