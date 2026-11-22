@@ -1,5 +1,4 @@
 #include <string.h>
-#include "ground_template_entry.h"
 #include "ground_template_transition.h"
 #include "ground_cell_coordinates.h"
 #include "ground_bridge_plane.h"
@@ -18,8 +17,8 @@ Ra2TemplateCells ra2_ground_template_cells(uint32_t adjusted_x, uint32_t adjuste
     Ra2TemplateCells cells;
     cells.target_x = signed_shift_cell(adjusted_x);
     cells.target_y = signed_shift_cell(adjusted_y);
-    cells.current_x = signed_shift_cell(ra2_ground_sample_adjusted(current_x));
-    cells.current_y = signed_shift_cell(ra2_ground_sample_adjusted(current_y));
+    cells.current_x = ra2_ground_world_cell_quotient(current_x);
+    cells.current_y = ra2_ground_world_cell_quotient(current_y);
     cells.packed_target = ra2_ground_pack_cell_components((uint16_t)cells.target_x, (uint16_t)cells.target_y);
     cells.same_cell = (uint16_t)cells.target_x == (uint16_t)cells.current_x
                    && (uint16_t)cells.target_y == (uint16_t)cells.current_y;
