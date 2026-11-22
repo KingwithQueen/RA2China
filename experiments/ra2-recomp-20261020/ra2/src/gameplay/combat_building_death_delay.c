@@ -1,4 +1,5 @@
 #include "combat_building_death_delay.h"
+#include "gameplay_frame_counter.h"
 #define Q(q) s->query(s->context, RA2_BDD_##q)
 #define DO(op, value) s->perform(s->context, RA2_BDD_##op, value)
 
@@ -7,8 +8,8 @@ Ra2BuildingDeathTimer ra2_building_death_timer(uint32_t start, uint32_t duration
     Ra2BuildingDeathTimer result = {duration, 0, start != UINT32_MAX, 0, 0};
     if (result.running) {
         /* 模拟帧减法按32位环绕，比较按有符号数；不用宿主墙钟。 */
-        result.elapsed = now - start;
-        result.expired = (int32_t)result.elapsed >= (int32_t)duration;
+        result.elapsed = ra2_gameplay_elapsed_frames(now, start);
+        result.expired = ra2_gameplay_frame_deadline_reached(result.elapsed, duration);
         if (!result.expired) result.value -= result.elapsed;
     }
     result.pending = !result.expired && (int32_t)result.value > 0;

@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_prepare.h"
+#include "gameplay_frame_counter.h"
 #include "ground_failure_transition.h"
 
 static int same_position(Ra2WorldPoint left, Ra2WorldPoint right)
@@ -83,12 +84,12 @@ int ra2_ground_retry_timer_ready(Ra2PathRetryTimer timer, int32_t current_frame)
     int32_t remaining = timer.remaining_frames;
     if (timer.start_frame != -1)
     {
-        int32_t elapsed = signed_bits((uint32_t)current_frame - (uint32_t)timer.start_frame);
-        if (elapsed >= remaining)
+        uint32_t elapsed = ra2_gameplay_elapsed_frames((uint32_t)current_frame, (uint32_t)timer.start_frame);
+        if (ra2_gameplay_frame_deadline_reached(elapsed, (uint32_t)remaining))
         {
             return 1;
         }
-        remaining = signed_bits((uint32_t)remaining - (uint32_t)elapsed);
+        remaining = signed_bits((uint32_t)remaining - elapsed);
     }
     return remaining == 0;
 }
