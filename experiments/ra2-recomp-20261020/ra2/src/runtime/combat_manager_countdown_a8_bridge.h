@@ -99,4 +99,7 @@ void ra2_manager_child_baseline_pair_publication_bridge(uint32_t cached_esi, uin
 
 /* Threshold-selected pair reset data only; comparisons and fresh loads stay outside. */
 void ra2_manager_child_high_water_reset_bridge(uint32_t cached_esi, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* Post-callback root count only; callback and signed clamp/fresh reload stay in the caller. */
+void ra2_root_manager_postcallback_count_bridge(volatile uint32_t *cached_ecx, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
 #endif

@@ -3524,3 +3524,22 @@ void ra2_manager_child_high_water_reset_bridge(uint32_t cached_esi, volatile uin
     MEM32(cached_esi + 0x128u) = 0u;
     MEM32(cached_esi + 0x12Cu) = 0u;
 }
+
+/* 4033D6: obtain the current manager after callback, then publish DEC/TEST before the signed clamp. */
+void ra2_root_manager_postcallback_count_bridge(volatile uint32_t *cached_ecx, volatile uint32_t *cached_eax, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t manager = MEM32(0x007CC968u);
+    *cached_ecx = manager;
+    uint32_t counter = MEM32(manager + 0x18u);
+    *cached_eax = counter;
+    *lhs = counter;
+    *rhs = 1u;
+    uint32_t next_count = counter - 1u;
+    *cached_eax = next_count;
+    *kind = FK_DEC;
+    *lhs = next_count;
+    *rhs = next_count;
+    *carry = 0u;
+    *kind = FK_TEST;
+    MEM32(manager + 0x18u) = next_count;
+}

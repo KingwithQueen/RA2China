@@ -5906,16 +5906,7 @@ L_004033C0:
     ecx = esi; /* 0x004033CF: mov ecx, esi */
     RECOMP_CALL(sub_00407380); /* 0x004033D1: call 0x407380 */
     RECOMP_FLAGS_IN();
-    ecx = MEM32(0x7CC968); /* 0x004033D6: mov ecx, dword ptr [0x7cc968] */
-    eax = MEM32(ecx + 0x18); /* 0x004033DC: mov eax, dword ptr [ecx + 0x18] */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(1);
-    eax = eax - 1; /* 0x004033DF: dec eax */
-    _flag_k = FK_DEC;
-    /* test eax, eax */ /* 0x004033E0: test eax, eax */
-    _flag_a = (uint32_t)(eax); _flag_b = (uint32_t)(eax);
-    _cf = 0;
-    _flag_k = FK_TEST;
-    MEM32(ecx + 0x18) = eax; /* 0x004033E2: mov dword ptr [ecx + 0x18], eax */
+    ra2_root_manager_postcallback_count_bridge(&ecx, &eax, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x004033D6..004033E5: fresh root count and ordered DEC/TEST. */
     if (TEST_NS(_flag_a, _flag_b)) goto L_004033F4; /* 0x004033E5: jge 0x4033f4 */
 L_004033E7:
     edx = MEM32(0x7CC968); /* 0x004033E7: mov edx, dword ptr [0x7cc968] */
