@@ -10,6 +10,15 @@ static int32_t add(int32_t a, int32_t b)
 static int32_t subtract(int32_t a, int32_t b)
 { return signed_bits((uint32_t)a - (uint32_t)b); }
 
+/* Prefer the partial step within either endpoint cell, then apply the progress cutoff. */
+static Ra2WorldPoint choose_interpolation_position(int partial_in_endpoint_cell, int32_t progress,
+    Ra2WorldPoint current, Ra2WorldPoint partial, Ra2WorldPoint endpoint)
+{
+    if (partial_in_endpoint_cell) return partial;
+    if (progress > 3) return endpoint;
+    return current;
+}
+
 void ra2_ground_interpolate_advance(Ra2WorldPoint start, int32_t old_x, int32_t old_y,
     int32_t progress, const Ra2InterpolationServices *s)
 {
@@ -26,9 +35,8 @@ void ra2_ground_interpolate_advance(Ra2WorldPoint start, int32_t old_x, int32_t 
     uintptr_t start_cell = s->cell_at(c, start);
     uintptr_t partial_cell = s->cell_at(c, partial);
     current = s->position(c);
-    Ra2WorldPoint selected = current;
-    if (partial_cell == end_cell || partial_cell == start_cell) selected = partial;
-    else if (progress > 3) selected = endpoint;
+    Ra2WorldPoint selected = choose_interpolation_position(partial_cell == end_cell || partial_cell == start_cell,
+        progress, current, partial, endpoint);
     /* 第四次查询也必须保留；不能用前面的结果代替，世界可能已经改变。 */
     uintptr_t selected_cell = s->cell_at(c, selected);
     current = s->position(c);
