@@ -1,4 +1,5 @@
 #include "ground_sampling_shared.h"
+#include "ground_direction_rules.h"
 
 Ra2SamplingPhase ra2_ground_choose_shared_full(int32_t progress, int32_t direction,
     int32_t direction_sentinel, Ra2SamplingTemplate selected, unsigned alternate,
@@ -11,7 +12,7 @@ Ra2SamplingPhase ra2_ground_choose_shared_full(int32_t progress, int32_t directi
     choice->turning = 0;
     if (direction != direction_sentinel && direction != 8)
     {
-        unsigned facing = ((((unsigned)selected.facing >> 4) + 1u) >> 1) & 7u;
+        unsigned facing = ra2_ground_heading_octant(selected.facing);
         choice->turning = facing != (unsigned)direction;
     }
     return RA2_SAMPLING_FULL_STEP;

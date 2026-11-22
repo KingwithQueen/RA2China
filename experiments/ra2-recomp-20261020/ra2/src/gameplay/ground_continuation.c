@@ -3,6 +3,7 @@
 #include "ground_handoff.h"
 #include "ground_failure_transition.h"
 #include "ground_segment_admission.h"
+#include "ground_direction_rules.h"
 
 static int32_t signed_bits(uint32_t bits)
 { int32_t result; memcpy(&result,&bits,4); return result; }
@@ -65,7 +66,7 @@ int ra2_ground_continue_turn(Ra2ContinuationState *state,Ra2WorldPoint invalid,
     if(direction==8 || direction==-1 || !state->orientation_mismatch) return 1;
     if(state->sample_index!=s->query(c,RA2_CONTINUATION_TRANSITION_INDEX) || !state->sample_index) return 1;
     unsigned heading=(unsigned)s->query(c,RA2_CONTINUATION_TEMPLATE_HEADING)&255u;
-    unsigned facing=(((heading>>4)+1u)>>1)&7u;
+    unsigned facing=ra2_ground_heading_octant((uint8_t)heading);
     int32_t selector=signed_bits((uint32_t)direction+facing*8u);
     Ra2ContinuationTemplate selected=s->find_template(c,selector);
     if(!selected.sample_kind || !selected.entry_index) return 1;

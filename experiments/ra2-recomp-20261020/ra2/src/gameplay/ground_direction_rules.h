@@ -15,3 +15,9 @@ static inline unsigned ra2_ground_opposite_heading(int32_t heading)
 {
     return ((uint32_t)heading - 4u) & 7u;
 }
+
+/* Round a heading byte to the nearest slot, wrapping slot eight to zero. */
+static inline unsigned ra2_ground_heading_octant(uint8_t heading)
+{
+    return ((((unsigned)heading >> 4) + 1u) >> 1) & 7u;
+}
