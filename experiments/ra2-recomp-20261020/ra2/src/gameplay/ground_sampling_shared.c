@@ -5,7 +5,7 @@ Ra2SamplingPhase ra2_ground_choose_shared_full(int32_t progress, int32_t directi
     int32_t direction_sentinel, Ra2SamplingTemplate selected, unsigned alternate,
     Ra2SamplingChoice *choice, const Ra2SamplingServices *s)
 {
-    if (progress <= 7) return RA2_SAMPLING_REMAINDER;
+    if (progress <= RA2_PATH_SAMPLE_PROGRESS_QUANTUM) return RA2_SAMPLING_REMAINDER;
     choice->table = ra2_ground_template_index(selected, alternate);
     s->select_table(s->context, choice->table);
     if (direction < direction_sentinel || direction > 8) return RA2_SAMPLING_INVALID_DIRECTION;

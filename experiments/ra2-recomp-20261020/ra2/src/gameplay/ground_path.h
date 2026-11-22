@@ -20,6 +20,9 @@ typedef struct Ra2PathCursor
     int32_t remaining_progress;
 } Ra2PathCursor;
 
+/* Progress units consumed by one full ground path sample. */
+enum { RA2_PATH_SAMPLE_PROGRESS_QUANTUM = 7 };
+
 typedef enum Ra2PathSampleOutcome
 {
     RA2_PATH_SAMPLE_CONTINUES,
