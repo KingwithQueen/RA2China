@@ -118,14 +118,21 @@ static void publish_segment_directions(int32_t *directions,int32_t count,const R
     while(written<count)directions[written++]=-2;
 }
 
+/* Build the two runs from the tile delta before making any service queries. */
+static Ra2SegmentRewritePlan segment_run_geometry(Ra2PathPoint delta)
+{
+    Ra2SegmentRewritePlan plan={0};
+    plan.first=delta.x<0?(delta.y<0?7:5):(delta.y<0?1:3);
+    plan.second=delta.x-delta.y>0?(delta.x+delta.y>0?2:0):(delta.x+delta.y>0?4:6);
+    int32_t x=abs(delta.x),y=abs(delta.y);
+    plan.first_count=x<y?x:y;plan.second_count=abs(x-y);
+    return plan;
+}
+
 int ra2_path_rewrite_segment(int32_t *directions,int32_t count,const Ra2PathPoint *anchor,
     const Ra2PathPoint *delta,int32_t level,int final_segment,const Ra2LocalPathServices *v)
 {
-    Ra2SegmentRewritePlan plan;
-    plan.first=delta->x<0?(delta->y<0?7:5):(delta->y<0?1:3);
-    plan.second=delta->x-delta->y>0?(delta->x+delta->y>0?2:0):(delta->x+delta->y>0?4:6);
-    int32_t x=abs(delta->x),y=abs(delta->y);
-    plan.first_count=x<y?x:y;plan.second_count=abs(x-y);
+    Ra2SegmentRewritePlan plan=segment_run_geometry(*delta);
     plan.factor=v->owner_factor(v->context);plan.house=v->owner_house(v->context);
     plan.use_threat=plan.factor>0.00001;
     for(unsigned attempt=0;attempt<2;++attempt) {
