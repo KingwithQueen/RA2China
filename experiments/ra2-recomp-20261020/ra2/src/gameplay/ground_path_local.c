@@ -2,6 +2,7 @@
 #include "ground_bridge_plane.h"
 #include "ground_transition_rules.h"
 #include "ground_path_delta.h"
+#include "ground_direction_rules.h"
 #include "x87_arithmetic.h"
 #include <stdlib.h>
 
@@ -27,13 +28,13 @@ void ra2_path_find_anchor(const int32_t *directions,int32_t end,int32_t start,
     Ra2PathPoint reverse_delta={0,0},candidate_anchor=*anchor;int maximum_extent=0,passed_peak=0;
     for(int32_t i=end;i>=start;--i) {
         if(directions[i]==-2)continue;
-        int32_t reverse_direction=(int32_t)(((uint32_t)directions[i]-4u)&7u);
+        int32_t reverse_direction=(int32_t)ra2_ground_opposite_heading(directions[i]);
         reverse_delta=ra2_ground_path_point_add(reverse_delta,offsets[reverse_direction]);candidate_anchor=ra2_ground_path_point_add(candidate_anchor,offsets[reverse_direction]);
         int extent=ra2_ground_path_delta_span(reverse_delta);
         if(extent>maximum_extent) {
             if(passed_peak) {
                 /* 先发布索引，再读取偏移并发布上一格锚点，保留原写入顺序。 */
-                *anchor_index=i+1;*anchor=ra2_ground_path_point_add(candidate_anchor,offsets[(reverse_direction+4)&7]);return;
+                *anchor_index=i+1;*anchor=ra2_ground_path_point_add(candidate_anchor,offsets[ra2_ground_opposite_heading(reverse_direction)]);return;
             }
             maximum_extent=extent;
         } else passed_peak=1;
