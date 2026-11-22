@@ -3210,3 +3210,10 @@ void ra2_manager_deactivation_global_snapshot_stores_bridge(uint32_t cached_esi,
     MEM32(cached_esi + 0x90u) = cached_edi;
     MEM32(cached_esi + 0x94u) = cached_ecx;
 }
+
+/* 40252B: publish the current EDI to the two pre-callback state fields. */
+void ra2_manager_deactivation_tail_state_stores_bridge(uint32_t cached_esi, uint32_t cached_edi)
+{
+    MEM32(cached_esi + 0x98u) = cached_edi;
+    MEM32(cached_esi + 0x9Cu) = cached_edi;
+}

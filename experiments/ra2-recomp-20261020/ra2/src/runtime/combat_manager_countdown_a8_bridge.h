@@ -42,4 +42,7 @@ void ra2_manager_deactivation_state_reset_prefix_bridge(uint32_t cached_esi, uin
 
 /* Two ordered deactivation stores from cached registers; no guest read. */
 void ra2_manager_deactivation_global_snapshot_stores_bridge(uint32_t cached_esi, uint32_t cached_edi, uint32_t cached_ecx);
+
+/* Two ordered pre-callback state stores; no reads or calls. */
+void ra2_manager_deactivation_tail_state_stores_bridge(uint32_t cached_esi, uint32_t cached_edi);
 #endif

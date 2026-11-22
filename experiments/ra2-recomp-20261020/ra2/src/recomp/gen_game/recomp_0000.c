@@ -4104,8 +4104,7 @@ L_004024B0:
     ecx = MEM32(0x830B50); /* 0x00402516: mov ecx, dword ptr [0x830b50] */
     ra2_manager_deactivation_global_snapshot_stores_bridge(esi, edi, ecx); /* 0x0040251C..00402528: keep the two ordered deactivation stores and their cached sources. */
     ecx = esi + 0x10; /* 0x00402528: lea ecx, [esi + 0x10] */
-    MEM32(esi + 0x98) = edi; /* 0x0040252B: mov dword ptr [esi + 0x98], edi */
-    MEM32(esi + 0x9C) = edi; /* 0x00402531: mov dword ptr [esi + 0x9c], edi */
+    ra2_manager_deactivation_tail_state_stores_bridge(esi, edi); /* 0x0040252B..00402537: preserve the two ordered pre-callback state stores. */
     RECOMP_CALL(sub_00401000); /* 0x00402537: call 0x401000 */
     RECOMP_FLAGS_IN();
     MEM32(esi + 0x168) = edi; /* 0x0040253C: mov dword ptr [esi + 0x168], edi */
