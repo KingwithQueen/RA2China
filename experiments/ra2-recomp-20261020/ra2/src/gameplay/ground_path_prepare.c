@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_path_prepare.h"
+#include "ground_direction_rules.h"
 
 static void exclude_cell(Ra2PathPreparation *p, const Ra2PathCell *cell, int32_t threshold)
 {
@@ -53,9 +54,8 @@ static void seed_start_exclusions(Ra2PathPreparation *p,
         /* 原版查询九次朝向，第九次只查询而不排除邻格。角度差3..5
          * 是面向背后的三个方向，差值不先做环绕归一化。 */
         for (unsigned direction = 0; direction <= 8; ++direction) {
-            int32_t difference = (int32_t)v->facing(v->context) - (int32_t)direction;
-            if (direction == 8 || (difference >= -2 && difference <= 2)
-                || difference >= 6 || difference <= -6) continue;
+            int32_t facing = (int32_t)v->facing(v->context);
+            if (direction == 8 || !ra2_ground_direction_conflicts(facing, (int32_t)direction)) continue;
             Ra2PathCell adjacent;
             v->cell(v->context, v->adjacent(v->context, p->start_reference, direction), &adjacent);
             exclude_cell(p, &adjacent, adjacent.ground_level + 1);
