@@ -1,5 +1,12 @@
 #pragma once
 #include <stdint.h>
+
+/* The land class used by tube entrance and stop eligibility. */
+static inline int ra2_ground_is_tube_land(int32_t land)
+{
+    return land == 10;
+}
+
 int ra2_ground_is_tube_entrance(int16_t connection,int32_t count,int32_t land);
 int ra2_ground_is_tile_family(int32_t tile,int32_t first);
 typedef struct Ra2SurfaceSupportServices

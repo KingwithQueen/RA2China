@@ -3,6 +3,7 @@
 #include "ground_special.h"
 #include "ground_handoff.h"
 #include "ground_failure_transition.h"
+#include "ground_surface_class.h"
 
 
 
@@ -42,7 +43,7 @@ Ra2SpecialPhase ra2_ground_handle_special_obstacle(Ra2GroundPrepareState *state,
         Ra2WorldPoint position = services->raw_position(context);
         int32_t height = services->query(context, RA2_SPECIAL_HEIGHT_PER_LEVEL);
         if (ra2_ground_within_stop_height(state->destination.z, position.z, height)
-            && services->query(context, RA2_SPECIAL_CURRENT_LAND) != 10)
+            && !ra2_ground_is_tube_land(services->query(context, RA2_SPECIAL_CURRENT_LAND)))
         {
             ra2_ground_invalidate_segment(&state->segment_end, &state->driving, invalid_position);
             if (stop_navigation(services)) return RA2_SPECIAL_RETURN_TRUE;

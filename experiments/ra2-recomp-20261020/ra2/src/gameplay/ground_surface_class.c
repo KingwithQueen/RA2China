@@ -2,7 +2,7 @@
 
 int ra2_ground_is_tube_entrance(int16_t connection, int32_t count, int32_t land)
 {
-    return connection >= 0 && connection < count && land == 10;
+    return connection >= 0 && connection < count && ra2_ground_is_tube_land(land);
 }
 
 int ra2_ground_is_tile_family(int32_t tile, int32_t first)

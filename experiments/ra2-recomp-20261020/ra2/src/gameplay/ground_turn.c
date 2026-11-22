@@ -3,6 +3,7 @@
 #include "ground_handoff.h"
 #include "ground_failure_transition.h"
 #include "ground_template_transition.h"
+#include "ground_surface_class.h"
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -107,7 +108,7 @@ Ra2TurnPhase ra2_ground_prepare_turn(Ra2TurnState *state, Ra2WorldPoint invalid,
             Ra2WorldPoint position = services->raw_position(context);
             int32_t height = services->query(context, RA2_TURN_HEIGHT_PER_LEVEL);
             if (ra2_ground_within_stop_height(state->movement.destination.z, position.z, height)
-                && services->query(context, RA2_TURN_CURRENT_LAND)!=10)
+                && !ra2_ground_is_tube_land(services->query(context, RA2_TURN_CURRENT_LAND)))
             {
                 return stop_candidate(state, invalid, 1, passage, allow_recursive, services);
             }

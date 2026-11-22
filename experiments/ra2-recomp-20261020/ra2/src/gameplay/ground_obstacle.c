@@ -4,6 +4,7 @@
 #include "ground_handoff.h"
 #include "ground_cell_coordinates.h"
 #include "ground_collision.h"
+#include "ground_surface_class.h"
 
 
 
@@ -21,7 +22,7 @@ static int close_to_allied_blocker(Ra2GroundPrepareState *state,
         close_to_destination = ra2_ground_within_stop_height(state->destination.z,position.z,height);
         if (close_to_destination)
         {
-            close_to_destination = services->query(context, RA2_OBSTACLE_CURRENT_LAND) != 10;
+            close_to_destination = !ra2_ground_is_tube_land(services->query(context, RA2_OBSTACLE_CURRENT_LAND));
         }
     }
     else
