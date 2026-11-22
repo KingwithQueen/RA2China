@@ -1,16 +1,11 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_arrival.h"
+#include "ground_cell_coordinates.h"
 #include "ground_failure_transition.h"
 #include "ground_owner_boundary.h"
 
 
-static int same_cell(Ra2WorldPoint left, Ra2WorldPoint right)
-{
-    /* 原版先向零取整，再截取 16 位格坐标；不能用负数右移代替除法。 */
-    return (uint16_t)(left.x / 256) == (uint16_t)(right.x / 256)
-        && (uint16_t)(left.y / 256) == (uint16_t)(right.y / 256);
-}
 
 
 
@@ -45,7 +40,7 @@ static void publish_arrived_segment(Ra2GroundArrivalState *state,Ra2WorldPoint o
     Ra2WorldPoint invalid_position,const Ra2ArrivalServices *services)
 {
     /* relocate可回写状态；先落位，再废弃旧段并清选择器、采样下标。 */
-    services->relocate(services->context,!same_cell(owner_position,state->segment_end));
+    services->relocate(services->context,!ra2_ground_same_map_cell(owner_position,state->segment_end));
     ra2_ground_invalidate_segment(&state->segment_end,&state->driving,invalid_position);
     state->path_selector=-1;
     state->sample_index=0;

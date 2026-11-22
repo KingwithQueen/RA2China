@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_interpolation.h"
+#include "ground_cell_coordinates.h"
 
 static int32_t signed_bits(uint32_t bits)
 { int32_t value; memcpy(&value, &bits, sizeof(value)); return value; }
@@ -7,11 +8,6 @@ static int32_t add(int32_t a, int32_t b)
 { return signed_bits((uint32_t)a + (uint32_t)b); }
 static int32_t subtract(int32_t a, int32_t b)
 { return signed_bits((uint32_t)a - (uint32_t)b); }
-static int same_cell(Ra2WorldPoint a, Ra2WorldPoint b)
-{
-    return (uint16_t)(a.x / 256) == (uint16_t)(b.x / 256)
-        && (uint16_t)(a.y / 256) == (uint16_t)(b.y / 256);
-}
 
 void ra2_ground_interpolate_advance(Ra2WorldPoint start, int32_t old_x, int32_t old_y,
     int32_t progress, const Ra2InterpolationServices *s)
@@ -35,7 +31,7 @@ void ra2_ground_interpolate_advance(Ra2WorldPoint start, int32_t old_x, int32_t 
     /* 第四次查询也必须保留；不能用前面的结果代替，世界可能已经改变。 */
     uintptr_t selected_cell = s->cell_at(c, selected);
     current = s->position(c);
-    if (!same_cell(current, selected))
+    if (!ra2_ground_same_map_cell(current, selected))
     {
         s->leave(c);
         s->place(c, selected);
