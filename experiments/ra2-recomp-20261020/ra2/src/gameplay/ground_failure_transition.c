@@ -1,5 +1,6 @@
 #include "ground_failure_transition.h"
 #include "ground_world_point.h"
+#include "ground_level_distance.h"
 #include <string.h>
 void ra2_ground_invalidate_segment(Ra2WorldPoint *end, unsigned *driving, Ra2WorldPoint invalid)
 {
@@ -22,8 +23,7 @@ int ra2_ground_within_stop_distance(int32_t distance,int32_t close_enough)
 }
 int32_t ra2_ground_axis_distance(int32_t left,int32_t right)
 {
-    uint32_t bits=(uint32_t)left-(uint32_t)right;
-    if(bits&0x80000000u)bits=0u-bits;
+    uint32_t bits=ra2_ground_folded_axis_magnitude(left,right);
     int32_t value;memcpy(&value,&bits,sizeof(value));return value;
 }
 int ra2_ground_within_stop_height(int32_t left,int32_t right,int32_t level_height)
