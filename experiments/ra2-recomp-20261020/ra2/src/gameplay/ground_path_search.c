@@ -3,6 +3,7 @@
 #include "ground_path_cache.h"
 #include "ground_path_cost.h"
 #include "ground_failure_transition.h"
+#include "ground_collision.h"
 
 static uint32_t level_difference(int32_t a,int32_t b)
 {
@@ -94,9 +95,9 @@ Ra2PathSearchStop ra2_path_search_neighbors(Ra2PathSearch *s,const Ra2PathSearch
             if(!candidate_region_allows(s,v,&candidate))continue;
             if(cached_candidate_is_cheaper(s))continue;
             int32_t passage=v->passage(v->context,s);
-            if(s->ignore_soft_obstacles && passage<7)passage=0;
+            if(s->ignore_soft_obstacles && passage<RA2_CELL_BLOCKED)passage=RA2_CELL_CLEAR;
             score_candidate_step(s,v,passage,&current,&candidate);
-            if(passage<7) {
+            if(passage<RA2_CELL_BLOCKED) {
                 /* 通行/代价服务可能已发布该格，必须在建节点前再读一次标记。 */
                 if(ra2_path_cache_read_stamp(&s->cache,s->candidate_grid_index,s->lower_surface)==*s->cache.generation)continue;
                 publish_candidate(s,v);

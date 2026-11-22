@@ -3,6 +3,7 @@
 #include "ground_template_transition.h"
 #include "ground_cell_coordinates.h"
 #include "ground_bridge_plane.h"
+#include "ground_collision.h"
 
 static int32_t signed_shift_cell(uint32_t adjusted)
 {
@@ -27,7 +28,7 @@ Ra2TemplateCells ra2_ground_template_cells(uint32_t adjusted_x, uint32_t adjuste
 
 static int clear_type_gate(const Ra2TemplateGateServices *services, void *context)
 {
-    if (services->classification(context) >= 7) return 0;
+    if (services->classification(context) >= RA2_CELL_BLOCKED) return 0;
     if (!services->type_flag(context, 0)) return 0;
     services->clear_classification(context);
     return 1;
@@ -37,7 +38,7 @@ static void clear_overlay_gate(const Ra2TemplateGateServices *services, void *co
 {
     /* 第一阶段的类型查询可能改变分类；第二阶段必须重新读取。 */
     int32_t classification = services->classification(context);
-    if (classification != 5 && classification != 4) return;
+    if (classification != RA2_CELL_DESTROYABLE && classification != RA2_CELL_FRIENDLY_OBSTACLE) return;
     if (!services->type_flag(context, 1)) return;
     if (services->overlay(context) != 0) return;
     services->clear_classification(context);
