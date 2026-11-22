@@ -1,4 +1,5 @@
 #include "ground_terrain.h"
+#include "ground_surface_class.h"
 
 int ra2_ground_terrain_speed_is_blocked(unsigned upper_layer, uint32_t speed_factor_bits)
 {
@@ -14,7 +15,7 @@ int ra2_ground_terrain_is_blocked(const Ra2TerrainConstraint *terrain)
     {
         return 0;
     }
-    if (terrain->cell_land == 10)
+    if (ra2_ground_is_tube_land(terrain->cell_land))
     {
         if ((terrain->tile_property_2b4 == 5 || terrain->tile_property_2b4 == 4)
             && terrain->tile_property_2b8 == 3 && terrain->cell_subposition != 2)
@@ -28,7 +29,7 @@ int ra2_ground_terrain_is_blocked(const Ra2TerrainConstraint *terrain)
             return 1;
         }
     }
-    if (terrain->cell_land == terrain->required_land || terrain->cell_land == 10)
+    if (terrain->cell_land == terrain->required_land || ra2_ground_is_tube_land(terrain->cell_land))
     {
         return 0;
     }
