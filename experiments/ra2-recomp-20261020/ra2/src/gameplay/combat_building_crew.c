@@ -1,10 +1,12 @@
 #include "combat_building_crew.h"
+#include "combat_crew_percent.h"
 
 uint32_t ra2_select_building_crew(const Ra2BuildingCrewServices *s)
 {
     if (!s->query(s->context, RA2_BCQ_SPECIAL_DISABLED)) {
         int32_t draw = (int32_t)s->query(s->context, RA2_BCQ_RANDOM_100);
-        if (draw < 25 && s->query(s->context, RA2_BCQ_FACTORY_KIND) == 7)
+        if (ra2_crew_percent_roll_below(draw, RA2_BUILDING_CREW_ENGINEER_PERCENT) &&
+            s->query(s->context, RA2_BCQ_FACTORY_KIND) == 7)
             return s->query(s->context, RA2_BCQ_CURRENT_ENGINEER);
     }
     return s->query(s->context, RA2_BCQ_GENERIC_CREW);

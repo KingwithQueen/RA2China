@@ -1,6 +1,7 @@
 #include <string.h>
 #include "combat_crew.h"
 #include "combat_real_compare.h"
+#include "combat_crew_percent.h"
 
 int ra2_crew_roll_succeeds(int32_t draw,double unit,double chance,uint16_t control)
 {
@@ -20,7 +21,8 @@ Ra2CrewSelection ra2_select_crew_type(const Ra2CrewServices *s)
     result.type=s->query(s->context,kind==0?RA2_CQ_ALLIED:kind==1?RA2_CQ_SOVIET:RA2_CQ_TECHNICIAN);
     s->perform(s->context,RA2_CO_PUBLISH_SELECTION,result.type);
     if(!s->query(s->context,RA2_CQ_COUNTRY_VALID))result.type=s->query(s->context,RA2_CQ_TECHNICIAN);
-    else if((s->query(s->context,RA2_CQ_TECHNICIAN_GATE)&255) && (int32_t)s->query(s->context,RA2_CQ_RANDOM_100)<15)
+    else if((s->query(s->context,RA2_CQ_TECHNICIAN_GATE)&255) &&
+        ra2_crew_percent_roll_below((int32_t)s->query(s->context,RA2_CQ_RANDOM_100), RA2_CREW_TECHNICIAN_PERCENT))
         result.type=s->query(s->context,RA2_CQ_CURRENT_TECHNICIAN);
     return result;
 }
