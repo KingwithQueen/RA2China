@@ -1,8 +1,9 @@
 #include "ground_failure_transition.h"
+#include "ground_world_point.h"
 #include <string.h>
 void ra2_ground_invalidate_segment(Ra2WorldPoint *end, unsigned *driving, Ra2WorldPoint invalid)
 {
-    if (end->x != invalid.x || end->y != invalid.y || end->z != invalid.z)
+    if (!ra2_ground_same_world_point(*end, invalid))
     {
         *end = invalid;
         *driving = 0;
