@@ -1,5 +1,5 @@
 #include "ground_sampling.h"
-#include "ground_direction_rules.h"
+#include "ground_sampling_shared.h"
 static void choose_table(int32_t selector, unsigned alternate, Ra2SamplingChoice *choice,
     const Ra2SamplingServices *s, Ra2SamplingTemplate *selected)
 {
@@ -11,16 +11,8 @@ Ra2SamplingPhase ra2_ground_choose_full_sample(int32_t progress, int32_t directi
     int32_t selector, unsigned alternate, Ra2SamplingChoice *choice, const Ra2SamplingServices *s)
 {
     if(progress<=7)return RA2_SAMPLING_REMAINDER;
-    Ra2SamplingTemplate selected;
-    choose_table(selector,alternate,choice,s,&selected);
-    if(direction < -1 || direction > 8)return RA2_SAMPLING_INVALID_DIRECTION;
-    choice->turning=0;
-    if(direction!=-1 && direction!=8)
-    {
-        unsigned template_direction=ra2_ground_heading_octant(selected.facing);
-        choice->turning=template_direction!=(unsigned)direction;
-    }
-    return RA2_SAMPLING_FULL_STEP;
+    Ra2SamplingTemplate selected=s->template_at(s->context,selector);
+    return ra2_ground_choose_shared_full(progress,direction,-1,selected,alternate,choice,s);
 }
 Ra2SamplingPhase ra2_ground_finish_sample(int32_t *index, int32_t progress)
 {
