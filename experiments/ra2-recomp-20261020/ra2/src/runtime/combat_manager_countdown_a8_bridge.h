@@ -78,4 +78,7 @@ void ra2_manager_child_slot_counter_cleanup_bridge(uint32_t cached_esi, uint32_t
 
 /* Active descriptor and fresh receiver preparation; registration call stays in the caller. */
 void ra2_manager_registration_bit_receiver_bridge(uint32_t cached_ebx, uint32_t cached_esi, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edi, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind);
+
+/* New-child link publication; allocation, calls and branch decisions stay in the caller. */
+void ra2_manager_child_link_publication_bridge(uint32_t cached_ebx, uint32_t cached_esi, uint32_t guest_esp, uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
 #endif

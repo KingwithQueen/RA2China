@@ -5294,20 +5294,7 @@ L_00402CE7:
     ecx = ebx; /* 0x00402D08: mov ecx, ebx */
     RECOMP_CALL(sub_00407200); /* 0x00402D0A: call 0x407200 */
     RECOMP_FLAGS_IN();
-    eax = MEM32(esp + 0x10); /* 0x00402D0F: mov eax, dword ptr [esp + 0x10] */
-    MEM32(ebx + 0x18) = esi; /* 0x00402D13: mov dword ptr [ebx + 0x18], esi */
-    MEM32(ebx + 0x1C) = eax; /* 0x00402D16: mov dword ptr [ebx + 0x1c], eax */
-    MEM32(ebx + 0x10) = ebp; /* 0x00402D19: mov dword ptr [ebx + 0x10], ebp */
-    ecx = MEM32(esi + 0x10); /* 0x00402D1C: mov ecx, dword ptr [esi + 0x10] */
-    _flag_a = (uint32_t)(ecx); _flag_b = (uint32_t)(1);
-    ecx = ecx + 1; /* 0x00402D1F: inc ecx */
-    _flag_k = FK_INC;
-    MEM32(esi + 0x10) = ecx; /* 0x00402D20: mov dword ptr [esi + 0x10], ecx */
-    edx = MEM32(esp + 0x18); /* 0x00402D23: mov edx, dword ptr [esp + 0x18] */
-    MEM32(esi + eax * 4 + 0x1C) = ebx; /* 0x00402D27: mov dword ptr [esi + eax*4 + 0x1c], ebx */
-    ecx = ebx + 0xF8; /* 0x00402D2B: lea ecx, [ebx + 0xf8] */
-    eax = MEM32(edx + 0x24); /* 0x00402D31: mov eax, dword ptr [edx + 0x24] */
-    MEM32(ebx + 0x1D0) = eax; /* 0x00402D34: mov dword ptr [ebx + 0x1d0], eax */
+    ra2_manager_child_link_publication_bridge(ebx, esi, esp, ebp, &eax, &ecx, &edx, &_flag_a, &_flag_b, &_flag_k); /* 0x00402D0F..00402D3A: publish child linkage and payload in original order. */
     RECOMP_CALL(sub_004071F0); /* 0x00402D3A: call 0x4071f0 */
     RECOMP_FLAGS_IN();
     ecx = ebx + 0x68; /* 0x00402D3F: lea ecx, [ebx + 0x68] */

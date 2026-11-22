@@ -3388,3 +3388,28 @@ void ra2_manager_registration_bit_receiver_bridge(uint32_t cached_ebx, uint32_t 
     MEM32(cached_ebx + 0x0Cu) = active;
     *cached_ecx = MEM32(0x007CC968u);
 }
+
+/* 402D0F: preserve child/owner/descriptor reads and writes, including overlap. */
+void ra2_manager_child_link_publication_bridge(uint32_t cached_ebx, uint32_t cached_esi, uint32_t guest_esp, uint32_t cached_ebp, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind)
+{
+    uint32_t index = MEM32(guest_esp + 0x10u);
+    *cached_eax = index;
+    MEM32(cached_ebx + 0x18u) = cached_esi;
+    MEM32(cached_ebx + 0x1Cu) = index;
+    MEM32(cached_ebx + 0x10u) = cached_ebp;
+    uint32_t count = MEM32(cached_esi + 0x10u);
+    *cached_ecx = count;
+    *lhs = count;
+    *rhs = 1u;
+    uint32_t inc = count + 1u;
+    *cached_ecx = inc;
+    *kind = FK_INC;
+    MEM32(cached_esi + 0x10u) = inc;
+    uint32_t descriptor = MEM32(guest_esp + 0x18u);
+    *cached_edx = descriptor;
+    MEM32(cached_esi + index * 4u + 0x1Cu) = cached_ebx;
+    *cached_ecx = cached_ebx + 0xF8u;
+    uint32_t payload = MEM32(descriptor + 0x24u);
+    *cached_eax = payload;
+    MEM32(cached_ebx + 0x1D0u) = payload;
+}
