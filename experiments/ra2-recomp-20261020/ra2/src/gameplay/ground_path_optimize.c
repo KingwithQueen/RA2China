@@ -1,11 +1,11 @@
 #include "ground_path_optimize.h"
+#include "ground_path_delta.h"
 #include <stdlib.h>
 
 static Ra2PathPoint add(Ra2PathPoint a,Ra2PathPoint b)
 {return (Ra2PathPoint){(int16_t)(a.x+b.x),(int16_t)(a.y+b.y)};}
 static Ra2PathPoint subtract(Ra2PathPoint a,Ra2PathPoint b)
 {return (Ra2PathPoint){(int16_t)(a.x-b.x),(int16_t)(a.y-b.y)};}
-static int distance(Ra2PathPoint p){int x=abs(p.x),y=abs(p.y);return x>y?x:y;}
 static int nonzero(Ra2PathPoint p){return p.x!=0||p.y!=0;}
 
 typedef struct Ra2SmoothScan {
@@ -99,19 +99,19 @@ void ra2_path_postprocess(Ra2RebuiltPath *path,const Ra2PathOptimizationServices
         Ra2PathPoint next_run=add(run_delta,step),next_candidate=add(candidate_delta,step);
         if(abs(next_run.x)<max_x || abs(next_run.y)<max_y) {
             if(nonzero(checkpoint)) {
-                segment_start=checkpoint_index;candidate_delta=subtract(checkpoint,point);max_distance=distance(candidate_delta);
+                segment_start=checkpoint_index;candidate_delta=subtract(checkpoint,point);max_distance=ra2_ground_path_delta_span(candidate_delta);
             }
             checkpoint=point;checkpoint_index=index;max_x=max_y=0;run_delta=(Ra2PathPoint){0,0};
             continue; /* 同一步在重置参照点后重新检查，不能提前推进。 */
         }
         run_delta=next_run;max_x=abs(next_run.x);max_y=abs(next_run.y);point=add(point,step);
-        if(distance(next_candidate)>max_distance)max_distance=distance(next_candidate);
+        if(ra2_ground_path_delta_span(next_candidate)>max_distance)max_distance=ra2_ground_path_delta_span(next_candidate);
         else {
             rewrite_postprocess_segment(v,directions,levels,index,segment_start,point,0);
         }
         candidate_delta=next_candidate;++index;
     }
-    if(nonzero(checkpoint) && index-checkpoint_index-1>distance(subtract(point,checkpoint))) {
+    if(nonzero(checkpoint) && index-checkpoint_index-1>ra2_ground_path_delta_span(subtract(point,checkpoint))) {
         rewrite_postprocess_segment(v,directions,levels,index,checkpoint_index,point,1);
     }
     compact_postprocess_directions(path,directions,last);

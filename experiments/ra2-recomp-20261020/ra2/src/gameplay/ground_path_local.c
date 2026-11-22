@@ -1,10 +1,10 @@
 #include "ground_path_local.h"
+#include "ground_path_delta.h"
 #include "x87_arithmetic.h"
 #include <stdlib.h>
 
 static Ra2PathPoint add(Ra2PathPoint a,Ra2PathPoint b)
 {return (Ra2PathPoint){(int16_t)(a.x+b.x),(int16_t)(a.y+b.y)};}
-static int distance(Ra2PathPoint p){int x=abs(p.x),y=abs(p.y);return x>y?x:y;}
 static Ra2PathPoint advance(Ra2PathPoint point,int32_t direction,const Ra2LocalPathServices *v)
 {return direction==8?v->connection_exit(v->context,&point):add(point,v->offsets[direction]);}
 static Ra2PathPoint walk(Ra2PathPoint point,const int32_t *directions,int32_t count,const Ra2LocalPathServices *v)
@@ -28,7 +28,7 @@ void ra2_path_find_anchor(const int32_t *directions,int32_t end,int32_t start,
         if(directions[i]==-2)continue;
         int32_t reverse_direction=(int32_t)(((uint32_t)directions[i]-4u)&7u);
         reverse_delta=add(reverse_delta,offsets[reverse_direction]);candidate_anchor=add(candidate_anchor,offsets[reverse_direction]);
-        int extent=distance(reverse_delta);
+        int extent=ra2_ground_path_delta_span(reverse_delta);
         if(extent>maximum_extent) {
             if(passed_peak) {
                 /* 先发布索引，再读取偏移并发布上一格锚点，保留原写入顺序。 */
