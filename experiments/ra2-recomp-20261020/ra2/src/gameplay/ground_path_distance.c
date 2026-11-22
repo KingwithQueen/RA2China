@@ -1,9 +1,9 @@
 #include <string.h>
 #include "ground_path_distance.h"
+#include "ground_level_distance.h"
 static uint32_t coordinate_difference(int16_t a,int16_t b)
 {
-    int32_t delta=(int32_t)a-b;
-    return (uint32_t)(delta<0?-delta:delta);
+    return ra2_ground_folded_axis_magnitude((int32_t)a, (int32_t)b);
 }
 int32_t ra2_path_squared_distance(Ra2PathPoint from,Ra2PathPoint to)
 {
