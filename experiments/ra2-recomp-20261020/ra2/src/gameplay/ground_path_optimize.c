@@ -2,8 +2,6 @@
 #include "ground_path_delta.h"
 #include <stdlib.h>
 
-static Ra2PathPoint add(Ra2PathPoint a,Ra2PathPoint b)
-{return (Ra2PathPoint){(int16_t)(a.x+b.x),(int16_t)(a.y+b.y)};}
 static Ra2PathPoint subtract(Ra2PathPoint a,Ra2PathPoint b)
 {return (Ra2PathPoint){(int16_t)(a.x-b.x),(int16_t)(a.y-b.y)};}
 static int nonzero(Ra2PathPoint p){return p.x!=0||p.y!=0;}
@@ -22,7 +20,7 @@ static void finish_smooth_pair(Ra2SmoothScan *s,const Ra2PathOptimizationService
         s->first_count,s->second_count,&s->anchor);
     /* 服务可改方向、层高和锚点；返回后才重读新起点方向与偏移表。 */
     s->previous=directions[s->first_start];s->first_count=1;s->pairing=0;
-    s->point=add(s->anchor,v->offsets[s->previous&7]);
+    s->point=ra2_ground_path_point_add(s->anchor,v->offsets[s->previous&7]);
 }
 
 static void advance_smooth_scan(Ra2SmoothScan *s,const Ra2PathOptimizationServices *v,
@@ -37,7 +35,7 @@ static void advance_smooth_scan(Ra2SmoothScan *s,const Ra2PathOptimizationServic
         s->first_start=index;s->first_count=1;s->previous=(direction&1)?direction:-1;s->anchor=s->point;
     }
     /* 平滑阶段的特殊连接查询使用同一当前点；普通方向不额外归一化。 */
-    s->point=direction==8?v->connection_exit(v->context,&s->point):add(s->point,v->offsets[direction]);
+    s->point=direction==8?v->connection_exit(v->context,&s->point):ra2_ground_path_point_add(s->point,v->offsets[direction]);
 }
 
 void ra2_path_smooth(Ra2RebuiltPath *path,const Ra2PathOptimizationServices *v)
@@ -91,12 +89,12 @@ void ra2_path_postprocess(Ra2RebuiltPath *path,const Ra2PathOptimizationServices
         int32_t direction=directions[index];
         if(direction==8) {
             /* 此处原版走方向0并清空统计；与平滑阶段的特殊连接查询不同。 */
-            point=add(point,v->offsets[0]);run_delta=(Ra2PathPoint){0,0};candidate_delta=run_delta;
+            point=ra2_ground_path_point_add(point,v->offsets[0]);run_delta=(Ra2PathPoint){0,0};candidate_delta=run_delta;
             checkpoint=run_delta;max_x=max_y=max_distance=0;segment_start=checkpoint_index=++index;continue;
         }
         if(direction==-2){++index;continue;}
         Ra2PathPoint step=v->offsets[direction&7];
-        Ra2PathPoint next_run=add(run_delta,step),next_candidate=add(candidate_delta,step);
+        Ra2PathPoint next_run=ra2_ground_path_point_add(run_delta,step),next_candidate=ra2_ground_path_point_add(candidate_delta,step);
         if(abs(next_run.x)<max_x || abs(next_run.y)<max_y) {
             if(nonzero(checkpoint)) {
                 segment_start=checkpoint_index;candidate_delta=subtract(checkpoint,point);max_distance=ra2_ground_path_delta_span(candidate_delta);
@@ -104,7 +102,7 @@ void ra2_path_postprocess(Ra2RebuiltPath *path,const Ra2PathOptimizationServices
             checkpoint=point;checkpoint_index=index;max_x=max_y=0;run_delta=(Ra2PathPoint){0,0};
             continue; /* 同一步在重置参照点后重新检查，不能提前推进。 */
         }
-        run_delta=next_run;max_x=abs(next_run.x);max_y=abs(next_run.y);point=add(point,step);
+        run_delta=next_run;max_x=abs(next_run.x);max_y=abs(next_run.y);point=ra2_ground_path_point_add(point,step);
         if(ra2_ground_path_delta_span(next_candidate)>max_distance)max_distance=ra2_ground_path_delta_span(next_candidate);
         else {
             rewrite_postprocess_segment(v,directions,levels,index,segment_start,point,0);

@@ -4,10 +4,8 @@
 #include "x87_arithmetic.h"
 #include <stdlib.h>
 
-static Ra2PathPoint add(Ra2PathPoint a,Ra2PathPoint b)
-{return (Ra2PathPoint){(int16_t)(a.x+b.x),(int16_t)(a.y+b.y)};}
 static Ra2PathPoint advance(Ra2PathPoint point,int32_t direction,const Ra2LocalPathServices *v)
-{return direction==8?v->connection_exit(v->context,&point):add(point,v->offsets[direction]);}
+{return direction==8?v->connection_exit(v->context,&point):ra2_ground_path_point_add(point,v->offsets[direction]);}
 static Ra2PathPoint walk(Ra2PathPoint point,const int32_t *directions,int32_t count,const Ra2LocalPathServices *v)
 {for(int32_t i=0;i<count;++i)point=advance(point,directions[i],v);return point;}
 static int32_t next_level(int32_t previous,Ra2LocalPathCell cell)
@@ -28,12 +26,12 @@ void ra2_path_find_anchor(const int32_t *directions,int32_t end,int32_t start,
     for(int32_t i=end;i>=start;--i) {
         if(directions[i]==-2)continue;
         int32_t reverse_direction=(int32_t)(((uint32_t)directions[i]-4u)&7u);
-        reverse_delta=add(reverse_delta,offsets[reverse_direction]);candidate_anchor=add(candidate_anchor,offsets[reverse_direction]);
+        reverse_delta=ra2_ground_path_point_add(reverse_delta,offsets[reverse_direction]);candidate_anchor=ra2_ground_path_point_add(candidate_anchor,offsets[reverse_direction]);
         int extent=ra2_ground_path_delta_span(reverse_delta);
         if(extent>maximum_extent) {
             if(passed_peak) {
                 /* 先发布索引，再读取偏移并发布上一格锚点，保留原写入顺序。 */
-                *anchor_index=i+1;*anchor=add(candidate_anchor,offsets[(reverse_direction+4)&7]);return;
+                *anchor_index=i+1;*anchor=ra2_ground_path_point_add(candidate_anchor,offsets[(reverse_direction+4)&7]);return;
             }
             maximum_extent=extent;
         } else passed_peak=1;
@@ -44,7 +42,7 @@ static int can_shorten_run(const Ra2PathPoint *origin,int32_t direction,int32_t 
     int32_t level,double factor,uint32_t house,const Ra2LocalPathServices *v)
 {
     int blocked=0;
-    Ra2PathPoint point=add(*origin,v->offsets[direction&7]);
+    Ra2PathPoint point=ra2_ground_path_point_add(*origin,v->offsets[direction&7]);
     uintptr_t cell=v->cell_at(v->context,&point);
     while(remaining>0 && !blocked) {
         blocked=v->passage(v->context,cell,direction,level)!=0;
@@ -53,7 +51,7 @@ static int can_shorten_run(const Ra2PathPoint *origin,int32_t direction,int32_t 
         if(!blocked)blocked=scaled_at_least(v->threat(v->context,origin,house),factor,1.0,*v->numeric_control);
         --remaining;
         /* 已阻挡或刚到段尾仍探测下一格，并按通行服务之后的桥层信息更新高度。 */
-        point=add(point,v->offsets[direction&7]);cell=v->cell_at(v->context,&point);
+        point=ra2_ground_path_point_add(point,v->offsets[direction&7]);cell=v->cell_at(v->context,&point);
         level=next_level(level,v->cell_properties(v->context,cell));
     }
     return !blocked;
@@ -72,7 +70,7 @@ int32_t ra2_path_shorten_turn(int32_t *directions,const int32_t *levels,int32_t 
     Ra2PathPoint origin=*anchor;
     if(second_count<first_count)origin=walk(origin,directions,first_count-second_count,v);
     double factor=v->owner_factor(v->context);uint32_t house=v->owner_house(v->context);
-    for(;pairs>0;--pairs,origin=add(origin,v->offsets[first&7])) {
+    for(;pairs>0;--pairs,origin=ra2_ground_path_point_add(origin,v->offsets[first&7])) {
         if(can_shorten_run(&origin,middle,pairs*2,levels[first_count-pairs],factor,house,v)) {
             int32_t prefix=first_count-pairs;
             for(int32_t i=0;i<pairs*2;++i)directions[prefix+i]=middle;
@@ -96,7 +94,7 @@ static int segment_is_passable(const Ra2SegmentRewritePlan *plan,const Ra2PathPo
     for(unsigned run=0;run<2 && !blocked;++run) {
         int32_t direction=run?plan->second:plan->first,steps=run?plan->second_count:plan->first_count;
         for(int32_t i=0;i<steps && !blocked;++i) {
-            point=add(point,v->offsets[direction&7]);uintptr_t cell=v->cell_at(v->context,&point);
+            point=ra2_ground_path_point_add(point,v->offsets[direction&7]);uintptr_t cell=v->cell_at(v->context,&point);
             if(plan->use_threat && scaled_at_least(v->threat(v->context,&point,plan->house),plan->factor,0.01,*v->numeric_control))++high_threat;
             /* 段改写先查当前点威胁，再查通行；即使通行受阻也读取格属性并更新层高。 */
             blocked=v->passage(v->context,cell,direction,current_level)!=0;
