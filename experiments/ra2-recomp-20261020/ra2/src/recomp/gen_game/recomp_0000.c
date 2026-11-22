@@ -5148,15 +5148,7 @@ L_00402B4C:
     ebx = POP32_VAL(esp); /* 0x00402B50: pop ebx */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x00402B51: ret  */
 L_00402B52:
-    ecx = MEM32(ebx + 0xC); /* 0x00402B52: mov ecx, dword ptr [ebx + 0xc] */
-    edi = 1; /* 0x00402B55: mov edi, 1 */
-    _flag_a = (uint32_t)((ecx | edi)); _flag_b = (uint32_t)((ecx | edi));
-    ecx = ecx | edi; /* 0x00402B5A: or ecx, edi */
-    _cf = 0;
-    _flag_k = FK_TEST;
-    edx = esi; /* 0x00402B5C: mov edx, esi */
-    MEM32(ebx + 0xC) = ecx; /* 0x00402B5E: mov dword ptr [ebx + 0xc], ecx */
-    ecx = MEM32(0x7CC968); /* 0x00402B61: mov ecx, dword ptr [0x7cc968] */
+    ra2_manager_registration_bit_receiver_bridge(ebx, esi, &ecx, &edi, &edx, &_flag_a, &_flag_b, &_cf, &_flag_k); /* 0x00402B52..00402B67: mark the descriptor active, then freshly read the manager receiver. */
     RECOMP_CALL(sub_00407350); /* 0x00402B67: call 0x407350 */
     RECOMP_FLAGS_IN();
     /* test MEM8(ebx + 0x8), 2 */ /* 0x00402B6C: test byte ptr [ebx + 8], 2 */

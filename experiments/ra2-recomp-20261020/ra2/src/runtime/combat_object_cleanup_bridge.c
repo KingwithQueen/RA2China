@@ -3371,3 +3371,20 @@ void ra2_manager_child_slot_counter_cleanup_bridge(uint32_t cached_esi, uint32_t
     *kind = FK_CMP;
     MEM32(refreshed + 0x10u) = next;
 }
+
+/* 402B52: publish the active descriptor before reading the registration receiver. */
+void ra2_manager_registration_bit_receiver_bridge(uint32_t cached_ebx, uint32_t cached_esi, volatile uint32_t *cached_ecx, volatile uint32_t *cached_edi, volatile uint32_t *cached_edx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *carry, volatile uint32_t *kind)
+{
+    uint32_t descriptor = MEM32(cached_ebx + 0x0Cu);
+    *cached_ecx = descriptor;
+    *cached_edi = 1u;
+    uint32_t active = descriptor | 1u;
+    *lhs = active;
+    *rhs = active;
+    *cached_ecx = active;
+    *carry = 0u;
+    *kind = FK_TEST;
+    *cached_edx = cached_esi;
+    MEM32(cached_ebx + 0x0Cu) = active;
+    *cached_ecx = MEM32(0x007CC968u);
+}
