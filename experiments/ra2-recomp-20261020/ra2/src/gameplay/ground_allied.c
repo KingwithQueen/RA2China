@@ -1,4 +1,5 @@
 #include "ground_allied.h"
+#include "ground_passage_severity.h"
 #include "ground_allied_relation.h"
 #include "ground_moving_tail.h"
 
@@ -54,7 +55,7 @@ Ra2AlliedOutcome ra2_ground_classify_moving_tail(int32_t *passage,const Ra2Allie
         && s->query(c, RA2_ALLIED_OBJECT_KIND) != 15;
     if (!moving_passage)
         moving_passage = s->query(c, RA2_ALLIED_OBJECT_WANTS_MOVING_PASSAGE);
-    if (moving_passage && *passage < RA2_CELL_MOVING_OBSTACLE)
-        *passage = RA2_CELL_MOVING_OBSTACLE;
+    if (moving_passage)
+        ra2_ground_raise_passage_floor(passage, RA2_CELL_MOVING_OBSTACLE);
     return RA2_ALLIED_SCANNED;
 }

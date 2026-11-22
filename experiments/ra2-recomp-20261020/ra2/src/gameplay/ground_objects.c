@@ -1,4 +1,5 @@
 #include "ground_objects.h"
+#include "ground_passage_severity.h"
 #include "ground_enemy_contact.h"
 #include "ground_enemy_kind.h"
 #include "ground_object_kind.h"
@@ -45,14 +46,12 @@ Ra2ObjectPassageOutcome ra2_ground_filter_building_flags(const Ra2ObjectPassageS
         return RA2_OBJECT_SKIP;
     return RA2_OBJECT_GENERAL_COLLISION;
 }
-static void raise_passage(Ra2ObjectPassageState *state,int32_t minimum)
-{ if(state->passage<minimum) state->passage=minimum; }
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
     void *c=s->context;
     if(s->query(c,RA2_OBJECT_CLOAKED))
     {
-        raise_passage(state,RA2_CELL_CLOAKED_OBSTACLE);return RA2_OBJECT_SCANNED;
+        ra2_ground_raise_passage_floor(&state->passage,RA2_CELL_CLOAKED_OBSTACLE);return RA2_OBJECT_SCANNED;
     }
     return ra2_ground_classify_enemy_contact(state,s);
 }
@@ -81,7 +80,7 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_kind(Ra2ObjectPassageState *st
     int32_t kind=s->query(c,RA2_OBJECT_KIND);
     if(kind==6) return ra2_ground_classify_enemy_building(state,s);
     if(kind==36) return ra2_ground_classify_enemy_terrain(state,s);
-    raise_passage(state,RA2_CELL_DESTROYABLE);
+    ra2_ground_raise_passage_floor(&state->passage,RA2_CELL_DESTROYABLE);
     return RA2_OBJECT_SCANNED;
 }
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_terrain(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
@@ -91,17 +90,17 @@ Ra2ObjectPassageOutcome ra2_ground_classify_enemy_terrain(Ra2ObjectPassageState 
 Ra2ObjectPassageOutcome ra2_ground_classify_stationary_ally(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
     if(s->query(s->context,RA2_OBJECT_KIND)==6) return RA2_OBJECT_BLOCKED;
-    raise_passage(state,RA2_CELL_TEMPORARY_OBSTACLE);return RA2_OBJECT_SCANNED;
+    ra2_ground_raise_passage_floor(&state->passage,RA2_CELL_TEMPORARY_OBSTACLE);return RA2_OBJECT_SCANNED;
 }
 
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_building(Ra2ObjectPassageState *state,const Ra2ObjectPassageServices *s)
 {
     if(s->query(s->context,RA2_OBJECT_BUILDING_FLAG_1350)) return RA2_OBJECT_BLOCKED;
-    raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
+    ra2_ground_raise_passage_floor(&state->passage,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
 }
 
 Ra2ObjectPassageOutcome ra2_ground_classify_enemy_warhead(Ra2ObjectPassageState *state,unsigned flag)
 {
     if(!flag)return RA2_OBJECT_BLOCKED;
-    raise_passage(state,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
+    ra2_ground_raise_passage_floor(&state->passage,RA2_CELL_DESTROYABLE);return RA2_OBJECT_SCANNED;
 }
