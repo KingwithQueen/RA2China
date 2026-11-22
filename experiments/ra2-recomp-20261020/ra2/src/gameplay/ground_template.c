@@ -5,6 +5,7 @@
 #include "ground_segment_admission.h"
 #include "ground_template_table.h"
 #include "ground_cell_coordinates.h"
+#include "ground_direction_rules.h"
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -31,10 +32,10 @@ Ra2TemplateSelection ra2_ground_choose_template(int32_t direction, int32_t next_
 Ra2TemplateSelection ra2_ground_template_table(int32_t direction, int32_t next_direction,
     unsigned crushing, const Ra2TemplateServices *services)
 {
-    int32_t selector = signed_bits((uint32_t)next_direction + (uint32_t)direction * 8u);
+    int32_t selector = signed_bits(ra2_ground_template_selector_bits((uint32_t)direction, (uint32_t)next_direction));
     if (!services->template_byte(services->context,selector,RA2_TEMPLATE_ENTRY_TAG))
     {
-        selector = signed_bits((uint32_t)direction * 9u);
+        selector = signed_bits(ra2_ground_template_selector_bits((uint32_t)direction, (uint32_t)direction));
     }
     Ra2TemplateSelection result = { next_direction,selector,crushing,
         services->template_byte(services->context,selector,RA2_TEMPLATE_FLAGS) };

@@ -21,3 +21,9 @@ static inline unsigned ra2_ground_heading_octant(uint8_t heading)
 {
     return ((((unsigned)heading >> 4) + 1u) >> 1) & 7u;
 }
+
+/* Row-major selector for the eight direction columns. */
+static inline uint32_t ra2_ground_template_selector_bits(uint32_t row, uint32_t column)
+{
+    return column + row * 8u;
+}

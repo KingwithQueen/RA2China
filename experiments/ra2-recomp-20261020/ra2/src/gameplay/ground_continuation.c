@@ -67,7 +67,7 @@ int ra2_ground_continue_turn(Ra2ContinuationState *state,Ra2WorldPoint invalid,
     if(state->sample_index!=s->query(c,RA2_CONTINUATION_TRANSITION_INDEX) || !state->sample_index) return 1;
     unsigned heading=(unsigned)s->query(c,RA2_CONTINUATION_TEMPLATE_HEADING)&255u;
     unsigned facing=ra2_ground_heading_octant((uint8_t)heading);
-    int32_t selector=signed_bits((uint32_t)direction+facing*8u);
+    int32_t selector=signed_bits(ra2_ground_template_selector_bits(facing, (uint32_t)direction));
     Ra2ContinuationTemplate selected=s->find_template(c,selector);
     if(!selected.sample_kind || !selected.entry_index) return 1;
     uint64_t speed=s->save_speed(c);
