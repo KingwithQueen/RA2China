@@ -1,6 +1,12 @@
 #pragma once
 #include "unit_movement.h"
 
+/* Convert a world axis before caller-specific narrowing. */
+static inline int32_t ra2_ground_world_cell_quotient(int32_t coordinate)
+{
+    return coordinate / 256;
+}
+
 /* Original X/Y cell projection: truncate toward zero, then narrow; ignore altitude. */
 static inline int ra2_ground_same_map_cell(Ra2WorldPoint left, Ra2WorldPoint right)
 {

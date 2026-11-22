@@ -1,6 +1,7 @@
 #include "ground_template_transition.h"
 #include "ground_segment.h"
 #include "ground_transition_rules.h"
+#include "ground_cell_coordinates.h"
 
 typedef struct SegmentGateContext
 {
@@ -44,8 +45,8 @@ static int wait_for_segment_permission(int32_t path_head,Ra2SegmentPreparation *
     {
         return 1;
     }
-    output->cell.x = (int16_t)(output->candidate.x / 256);
-    output->cell.y = (int16_t)(output->candidate.y / 256);
+    output->cell.x = (int16_t)ra2_ground_world_cell_quotient(output->candidate.x);
+    output->cell.y = (int16_t)ra2_ground_world_cell_quotient(output->candidate.y);
     if (!services->request_gate(context, output->cell))
     {
         return 1;

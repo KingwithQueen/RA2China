@@ -4,6 +4,7 @@
 #include "ground_world_point.h"
 #include "ground_segment_admission.h"
 #include "ground_template_table.h"
+#include "ground_cell_coordinates.h"
 
 static int32_t signed_bits(uint32_t bits)
 {
@@ -56,8 +57,8 @@ static int32_t consume_direction_queue(Ra2SegmentCommitState *state,int skip_shi
 static void prepare_segment_publication(Ra2SegmentCommitState *state,Ra2WorldPoint invalid,
     Ra2WorldPoint candidate)
 {
-    state->target_cell_x=(int16_t)(candidate.x/256);
-    state->target_cell_y=(int16_t)(candidate.y/256);
+    state->target_cell_x=(int16_t)ra2_ground_world_cell_quotient(candidate.x);
+    state->target_cell_y=(int16_t)ra2_ground_world_cell_quotient(candidate.y);
     state->sound_pending=0;
     state->sample_index=0;
     /* 已经无效的旧段不附带改写driving；保留原状态与放行服务的交接。 */
