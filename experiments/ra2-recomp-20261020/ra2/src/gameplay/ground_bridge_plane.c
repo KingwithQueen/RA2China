@@ -1,7 +1,7 @@
 #include "ground_bridge_plane.h"
 
 int ra2_ground_bridge_height_matches(int32_t upper_level, int32_t lower_level)
-{ return (uint32_t)upper_level==(uint32_t)lower_level+4u; }
+{ return RA2_GROUND_BRIDGE_HEIGHT_VALUE(upper_level, lower_level); }
 
 static void enter_upper_bridge(int32_t previous,int32_t next,void *context,
     uint32_t (*flags)(void *,unsigned),void (*set_layer)(void *,unsigned))
