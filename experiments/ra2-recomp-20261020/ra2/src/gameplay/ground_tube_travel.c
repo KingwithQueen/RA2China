@@ -34,10 +34,7 @@ static float component(double angle,float scale,const float *table,int cosine,ui
 {
     int32_t quantized=ra2_real_round_i32(ra2_real_multiply(ra2_real_from_f64(angle),
         ra2_real_from_f32(scale),operation),conversion);
-    int32_t index=quantized/2%8192;
-    if(index<0)index+=8192;
-    if(cosine)index+=2048;
-    if(((uint32_t)quantized&1u)&&index<(cosine?10239:8191))++index;
+    int32_t index = ra2_ground_connection_phase_slot(quantized, cosine);
     return table[index];
 }
 static int32_t coordinate(int32_t origin,int32_t distance,float direction,int subtract,uint16_t control)

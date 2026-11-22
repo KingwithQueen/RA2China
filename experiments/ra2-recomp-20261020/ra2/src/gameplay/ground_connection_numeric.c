@@ -13,10 +13,7 @@ float ra2_ground_connection_component(double angle, float index_scale, const flo
     int32_t quantized = ra2_real_truncate_i32(ra2_real_multiply(ra2_real_from_f64(angle),
         ra2_real_from_f32(index_scale), control));
     /* 原表先按符号向零除二，再把负余数修正到一周；奇数向下一项取样。 */
-    int32_t index = quantized / 2 % 8192;
-    if (index < 0) index += 8192;
-    if (cosine) index += 2048;
-    if (((uint32_t)quantized & 1u) && index < (cosine ? 10239 : 8191)) ++index;
+    int32_t index = ra2_ground_connection_phase_slot(quantized, cosine);
     return table[index];
 }
 
