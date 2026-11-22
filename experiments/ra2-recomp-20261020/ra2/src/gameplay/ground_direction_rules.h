@@ -16,16 +16,20 @@ static inline unsigned ra2_ground_opposite_heading(int32_t heading)
     return ((uint32_t)heading - 4u) & 7u;
 }
 
+/* Integer constant expressions shared with the opt-in value contract. */
+#define RA2_GROUND_HEADING_OCTANT_BITS(heading) (((((unsigned)(heading) >> 4) + 1u) >> 1) & 7u)
+#define RA2_GROUND_TEMPLATE_SELECTOR_BITS(row, column) ((uint32_t)(column) + (uint32_t)(row) * 8u)
+
 /* Round a heading byte to the nearest slot, wrapping slot eight to zero. */
 static inline unsigned ra2_ground_heading_octant(uint8_t heading)
 {
-    return ((((unsigned)heading >> 4) + 1u) >> 1) & 7u;
+    return RA2_GROUND_HEADING_OCTANT_BITS(heading);
 }
 
 /* Row-major selector for the eight direction columns. */
 static inline uint32_t ra2_ground_template_selector_bits(uint32_t row, uint32_t column)
 {
-    return column + row * 8u;
+    return RA2_GROUND_TEMPLATE_SELECTOR_BITS(row, column);
 }
 
 /* Quarter-turn classification on the eight-way ring; callers handle sentinels. */
