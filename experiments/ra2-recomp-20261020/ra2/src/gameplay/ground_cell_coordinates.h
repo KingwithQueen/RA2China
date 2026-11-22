@@ -19,3 +19,10 @@ static inline uint32_t ra2_ground_pack_cell_components(uint16_t x, uint16_t y)
 {
     return (uint32_t)x | ((uint32_t)y << 16);
 }
+
+/* Project world X/Y before packing the two unsigned cell components. */
+static inline uint32_t ra2_ground_pack_world_cell(int32_t x, int32_t y)
+{
+    return ra2_ground_pack_cell_components((uint16_t)ra2_ground_world_cell_quotient(x),
+        (uint16_t)ra2_ground_world_cell_quotient(y));
+}

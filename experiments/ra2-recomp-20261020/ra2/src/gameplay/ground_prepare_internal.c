@@ -3,9 +3,7 @@
 
 uint32_t ra2_ground_prepare_destination_cell(Ra2WorldPoint destination)
 {
-    uint16_t x = (uint16_t)(destination.x / 256);
-    uint16_t y = (uint16_t)(destination.y / 256);
-    return ra2_ground_pack_cell_components(x, y);
+    return ra2_ground_pack_world_cell(destination.x, destination.y);
 }
 uint32_t ra2_ground_prepare_rebuild_internal(Ra2WorldPoint destination, unsigned retry,
     const Ra2PrepareInternalServices *s)
