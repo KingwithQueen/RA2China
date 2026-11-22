@@ -13,7 +13,7 @@ int32_t ra2_ground_check_height_step(int32_t from_level, int32_t to_level,
     int32_t reference, uint32_t from_flags, uint32_t to_flags,
     unsigned from_ramp, unsigned to_ramp, uint8_t *changing_layer)
 {
-    unsigned bridge=from_flags&0x100u;
+    int bridge=ra2_ground_bridge_cell_flag_present(from_flags);
     int32_t difference=signed_bits((uint32_t)(bridge?from_level:reference)-(uint32_t)to_level);
     uint32_t magnitude=difference<0?0u-(uint32_t)difference:(uint32_t)difference;
     switch(magnitude)
