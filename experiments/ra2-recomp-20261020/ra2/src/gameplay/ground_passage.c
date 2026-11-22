@@ -1,5 +1,6 @@
 #include "ground_transition_rules.h"
 #include "ground_passage.h"
+#include "ground_collision.h"
 
 int32_t ra2_ground_classify_transition(const Ra2PassageCell *to, const Ra2PassageCell *from,
     int32_t direction, int32_t *level, uint8_t *changing_layer)
@@ -8,13 +9,13 @@ int32_t ra2_ground_classify_transition(const Ra2PassageCell *to, const Ra2Passag
     {
         if (*level == -1 && (to->flags & 0x100u))
             *level = ra2_ground_layer_reference(to->level,1);
-        return 0;
+        return RA2_CELL_CLEAR;
     }
-    if (!from || !to) return 0;
+    if (!from || !to) return RA2_CELL_CLEAR;
     if (*level == -1 && (from->flags & 0x100u))
     {
         *level = ra2_ground_layer_reference(from->level,1);
-        if (!(to->flags & 0x200u)) return 7;
+        if (!(to->flags & 0x200u)) return RA2_CELL_BLOCKED;
     }
     return ra2_ground_check_height_step(from->level,to->level,*level,from->flags,to->flags,
         from->ramp,to->ramp,changing_layer);
