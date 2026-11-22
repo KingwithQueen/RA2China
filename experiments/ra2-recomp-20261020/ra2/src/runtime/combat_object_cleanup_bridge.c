@@ -3217,3 +3217,9 @@ void ra2_manager_deactivation_tail_state_stores_bridge(uint32_t cached_esi, uint
     MEM32(cached_esi + 0x98u) = cached_edi;
     MEM32(cached_esi + 0x9Cu) = cached_edi;
 }
+
+/* 40253C: write the synchronized post-callback EDI to the current receiver. */
+void ra2_manager_deactivation_postcallback_state_store_bridge(uint32_t cached_esi, uint32_t cached_edi)
+{
+    MEM32(cached_esi + 0x168u) = cached_edi;
+}

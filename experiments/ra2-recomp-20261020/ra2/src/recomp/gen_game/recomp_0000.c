@@ -4107,7 +4107,7 @@ L_004024B0:
     ra2_manager_deactivation_tail_state_stores_bridge(esi, edi); /* 0x0040252B..00402537: preserve the two ordered pre-callback state stores. */
     RECOMP_CALL(sub_00401000); /* 0x00402537: call 0x401000 */
     RECOMP_FLAGS_IN();
-    MEM32(esi + 0x168) = edi; /* 0x0040253C: mov dword ptr [esi + 0x168], edi */
+    ra2_manager_deactivation_postcallback_state_store_bridge(esi, edi); /* 0x0040253C..00402542: use the post-callback state before restoring EDI. */
     edi = POP32_VAL(esp); /* 0x00402542: pop edi */
 L_00402543:
     esi = POP32_VAL(esp); /* 0x00402543: pop esi */

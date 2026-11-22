@@ -45,4 +45,7 @@ void ra2_manager_deactivation_global_snapshot_stores_bridge(uint32_t cached_esi,
 
 /* Two ordered pre-callback state stores; no reads or calls. */
 void ra2_manager_deactivation_tail_state_stores_bridge(uint32_t cached_esi, uint32_t cached_edi);
+
+/* One post-callback state store; no reads or calls. */
+void ra2_manager_deactivation_postcallback_state_store_bridge(uint32_t cached_esi, uint32_t cached_edi);
 #endif
