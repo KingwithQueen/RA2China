@@ -1,16 +1,12 @@
 #include <string.h>
 #include "ground_completion.h"
 #include "ground_exit_policy.h"
-
-static uint32_t absolute_difference(int32_t left, int32_t right)
-{
-    uint32_t difference = (uint32_t)left - (uint32_t)right;
-    return difference & 0x80000000u ? 0u - difference : difference;
-}
+#include "ground_failure_transition.h"
 
 int32_t ra2_ground_arrival_adjustment(Ra2WorldPoint position, Ra2WorldPoint end, uint16_t control)
 {
-    uint32_t bits = absolute_difference(end.x, position.x) + absolute_difference(end.y, position.y);
+    uint32_t bits = (uint32_t)ra2_ground_axis_distance(end.x, position.x)
+        + (uint32_t)ra2_ground_axis_distance(end.y, position.y);
     int32_t distance;
     memcpy(&distance, &bits, sizeof(distance));
     return ra2_ground_arrival_progress_adjustment(distance, &ra2_original_ground_path_sampling, control);
