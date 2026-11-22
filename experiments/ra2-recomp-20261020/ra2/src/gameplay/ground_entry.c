@@ -1,14 +1,8 @@
 #include <string.h>
 #include "ground_entry.h"
 #include "ground_bridge_plane.h"
+#include "ground_direction_rules.h"
 
-static int direction_conflicts(int32_t direction, int32_t link_direction)
-{
-    uint32_t bits=(uint32_t)direction-(uint32_t)link_direction;
-    if (bits&UINT32_C(0x80000000)) bits=0u-bits;
-    int32_t distance; memcpy(&distance,&bits,4);
-    return distance>2 && distance<6;
-}
 Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, const Ra2EntryServices *s)
 {
     void *c=s->context;
@@ -19,11 +13,11 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
         memcpy(&state->reference_level,&endpoint,4);
         return endpoint ? RA2_ENTRY_CLEAR : RA2_ENTRY_BLOCKED;
     }
-    if (link.present && direction_conflicts(state->direction,link.direction) && state->direction!=-1)
+    if (link.present && ra2_ground_direction_conflicts(state->direction,link.direction) && state->direction!=-1)
         return RA2_ENTRY_BLOCKED;
     int32_t opposite=(int32_t)(((uint32_t)state->direction-4u)&7u);
     Ra2CellLink neighbor=s->neighbor_link(c,opposite);
-    if (neighbor.present && direction_conflicts(opposite,neighbor.direction) && state->direction!=-1)
+    if (neighbor.present && ra2_ground_direction_conflicts(opposite,neighbor.direction) && state->direction!=-1)
         return RA2_ENTRY_BLOCKED;
     if (s->check_placement(c,state)==7) return RA2_ENTRY_BLOCKED;
     if (state->reference_level!=-1 && s->query(c,RA2_ENTRY_HAS_BRIDGE)
