@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_interpolation.h"
+#include "ground_bridge_plane.h"
 #include "ground_cell_coordinates.h"
 
 static int32_t signed_bits(uint32_t bits)
@@ -37,7 +38,7 @@ void ra2_ground_interpolate_advance(Ra2WorldPoint start, int32_t old_x, int32_t 
         s->place(c, selected);
         Ra2InterpolationSurface from = s->surface(c, start_cell);
         Ra2InterpolationSurface to = s->surface(c, selected_cell);
-        if (to.level == subtract(from.level, 4) && to.bridge) s->set_bridge(c, 1);
+        if (ra2_ground_bridge_height_matches(from.level, to.level) && to.bridge) s->set_bridge(c, 1);
         if (!to.bridge && from.bridge) s->set_bridge(c, 0);
         s->enter(c);
     }
