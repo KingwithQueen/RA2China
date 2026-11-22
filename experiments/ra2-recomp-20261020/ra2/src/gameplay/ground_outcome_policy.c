@@ -1,10 +1,11 @@
 #include "ground_outcome_policy.h"
+#include "ground_collision.h"
 
 Ra2FailurePlan ra2_ground_failure_plan(Ra2PrepareFailureEntry entry, int may_retry,
     int32_t classification, int32_t rejected_direction)
 {
     Ra2FailurePlan plan = {0};
-    if (entry == RA2_FAILURE_CLASSIFIED_OBSTACLE && classification != 7)
+    if (entry == RA2_FAILURE_CLASSIFIED_OBSTACLE && classification != RA2_CELL_BLOCKED)
         plan.clear_pending = 1;
     else if ((entry == RA2_FAILURE_REVEALED_OBSTACLE || entry == RA2_FAILURE_CLASSIFIED_OBSTACLE) && may_retry)
     {

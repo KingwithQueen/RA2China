@@ -3,6 +3,7 @@
 #include "ground_failure_transition.h"
 #include "ground_handoff.h"
 #include "ground_cell_coordinates.h"
+#include "ground_collision.h"
 
 
 
@@ -88,11 +89,11 @@ Ra2PreparePhase ra2_ground_observe_obstacle(Ra2GroundPrepareState *state, Ra2Wor
     {
         /* 失败路径会再次取实时朝向，重建成功路径则再次读队列头；不能复用上次查询值。 */
         int passage=observe_neighbor_passage(cell,rebuilt,services,context);
-        if (passage == 3)
+        if (passage == RA2_CELL_GATE)
         {
             services->request_gate(context, cell);
         }
-        else if (passage == 6 && services->find_allied_blocker(context, cell)
+        else if (passage == RA2_CELL_TEMPORARY_OBSTACLE && services->find_allied_blocker(context, cell)
             && !services->query(context, RA2_OBSTACLE_TRAIN))
         {
             /* 友军查询和列车过滤之后才判断距离；桥层查询只在不结束目标时执行。 */

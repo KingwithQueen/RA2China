@@ -3,6 +3,7 @@
 #include "ground_cell_coordinates.h"
 #include "ground_bridge_plane.h"
 #include "ground_direction_rules.h"
+#include "ground_collision.h"
 
 Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, const Ra2EntryServices *s)
 {
@@ -20,7 +21,7 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
     Ra2CellLink neighbor=s->neighbor_link(c,opposite);
     if (neighbor.present && ra2_ground_direction_conflicts(opposite,neighbor.direction) && state->direction!=-1)
         return RA2_ENTRY_BLOCKED;
-    if (s->check_placement(c,state)==7) return RA2_ENTRY_BLOCKED;
+    if (s->check_placement(c,state)==RA2_CELL_BLOCKED) return RA2_ENTRY_BLOCKED;
     if (state->reference_level!=-1 && s->query(c,RA2_ENTRY_HAS_BRIDGE)
         && ra2_ground_bridge_height_matches(state->reference_level,s->query(c,RA2_ENTRY_CELL_LEVEL)))
     {
@@ -32,5 +33,5 @@ Ra2EntryOutcome ra2_ground_check_entry(Ra2EntryState *state, Ra2CellLink link, c
         && !s->query(c,RA2_ENTRY_OWNER_VISIBILITY_EXEMPT) && s->query(c,RA2_ENTRY_OWNER_FLAG_32D))
         return RA2_ENTRY_BLOCKED;
     state->passage=s->base_passage(c,state);
-    return state->passage==7 ? RA2_ENTRY_BLOCKED : RA2_ENTRY_CONTINUE;
+    return state->passage==RA2_CELL_BLOCKED ? RA2_ENTRY_BLOCKED : RA2_ENTRY_CONTINUE;
 }
