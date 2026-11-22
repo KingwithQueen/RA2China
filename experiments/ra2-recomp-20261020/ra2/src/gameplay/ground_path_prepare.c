@@ -1,5 +1,6 @@
 #include <string.h>
 #include "ground_path_prepare.h"
+#include "ground_transition_rules.h"
 #include "ground_direction_rules.h"
 
 static void exclude_cell(Ra2PathPreparation *p, const Ra2PathCell *cell, int32_t threshold)
@@ -14,17 +15,18 @@ static void resolve_bridge_levels(Ra2PathPreparation *p,
     /* 保留校验时的格数据；后续重复读取的返回值原来就不作分支判断。 */
     int32_t kind = v->owner_kind(v->context);
     v->cell(v->context, p->target_reference, target);
-    *p->target_level = target->ground_level + (kind != 2 && target->has_bridge ? 4 : 0);
+    *p->target_level = ra2_ground_layer_reference(target->ground_level, kind != 2 && target->has_bridge);
     kind = v->owner_kind(v->context);
     v->cell(v->context, p->start_reference, start);
-    *p->start_level = start->ground_level + (kind != 2 && v->owner_on_bridge(v->context) ? 4 : 0);
+    *p->start_level = ra2_ground_layer_reference(start->ground_level, kind != 2 && v->owner_on_bridge(v->context));
 
     Ra2PathOwnerType type = v->owner_type(v->context);
     v->cell(v->context, p->start_reference, start);
     if (type.facing_seed_exclusions && start->has_bridge) {
         int32_t height = v->owner_height(v->context);
         int32_t difference = height - *p->start_level;
-        if (difference > 2 || difference < -2) *p->start_level += 4;
+        if (difference > 2 || difference < -2)
+            *p->start_level = ra2_ground_layer_reference(*p->start_level, 1);
     }
 }
 
