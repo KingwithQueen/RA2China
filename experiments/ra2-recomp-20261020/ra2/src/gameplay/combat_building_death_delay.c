@@ -10,7 +10,7 @@ Ra2BuildingDeathTimer ra2_building_death_timer(uint32_t start, uint32_t duration
         /* 模拟帧减法按32位环绕，比较按有符号数；不用宿主墙钟。 */
         result.elapsed = ra2_gameplay_elapsed_frames(now, start);
         result.expired = ra2_gameplay_frame_deadline_reached(result.elapsed, duration);
-        if (!result.expired) result.value -= result.elapsed;
+        if (!result.expired) result.value = ra2_gameplay_countdown_residual(result.value, result.elapsed);
     }
     result.pending = !result.expired && (int32_t)result.value > 0;
     return result;

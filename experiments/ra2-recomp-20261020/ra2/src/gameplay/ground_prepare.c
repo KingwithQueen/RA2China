@@ -86,7 +86,7 @@ int ra2_ground_retry_timer_ready(Ra2PathRetryTimer timer, int32_t current_frame)
         {
             return 1;
         }
-        remaining = signed_bits((uint32_t)remaining - elapsed);
+        remaining = signed_bits(ra2_gameplay_countdown_residual((uint32_t)remaining, elapsed));
     }
     return remaining == 0;
 }
