@@ -7,6 +7,13 @@ static int32_t subtract_wrapped(int32_t left,int32_t right)
     uint32_t bits=(uint32_t)left-(uint32_t)right;
     int32_t value;memcpy(&value,&bits,sizeof(value));return value;
 }
+/* Match the legacy integer floor and leave the second comparison strict. */
+static int crosses_legacy_half_health(int32_t before,int32_t damage,int32_t maximum)
+{
+    int32_t half=maximum/2;
+    if(maximum<0 && maximum%2)--half;
+    return before>=half && subtract_wrapped(before,damage)<half;
+}
 Ra2CombatHealthStep ra2_combat_receive_health(Ra2CombatHealthState *state,
     unsigned ignore_defenses,const Ra2CombatHealthServices *s)
 {
@@ -31,12 +38,8 @@ Ra2CombatHealthStep ra2_combat_receive_health(Ra2CombatHealthState *state,
     }
     step.damage_state=1;
     if(step.original_health<=damage)s->store_damage(s->context,step.original_health);
-    else {
-        int32_t half=step.maximum_health/2;
-        if(step.maximum_health<0 && step.maximum_health%2)--half;
-        if(step.original_health>=half && subtract_wrapped(step.original_health,damage)<half)
-            step.damage_state=2;
-    }
+    else if(crosses_legacy_half_health(step.original_health,damage,step.maximum_health))
+        step.damage_state=2;
     double ratio=s->critical_ratio(s->context);
     Ra2LegacyReal threshold=ra2_real_multiply(ra2_real_from_i32(step.maximum_health),
         ra2_real_from_f64(ratio),s->operation_control(s->context));
