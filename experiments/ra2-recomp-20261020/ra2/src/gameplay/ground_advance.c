@@ -3,12 +3,13 @@
 #include "ground_template_transition.h"
 #include <string.h>
 #include "ground_advance.h"
+#include "ground_cell_coordinates.h"
 
 static Ra2AdvanceCell cell_of(Ra2WorldPoint position)
 {
     /* 原版先向零取整，再保留低 16 位，负坐标不能改成向下取整。 */
-    uint32_t packed = ra2_ground_sample_cell(position.x,position.y);
-    uint16_t x = (uint16_t)packed, y = (uint16_t)(packed >> 16);
+    uint16_t x = (uint16_t)ra2_ground_world_cell_quotient(position.x);
+    uint16_t y = (uint16_t)ra2_ground_world_cell_quotient(position.y);
     Ra2AdvanceCell cell;
     memcpy(&cell.x, &x, sizeof(x)); memcpy(&cell.y, &y, sizeof(y));
     return cell;
