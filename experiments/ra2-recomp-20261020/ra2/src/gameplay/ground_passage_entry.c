@@ -8,7 +8,7 @@ int32_t ra2_ground_classify_entry(const Ra2PassageEntryServices *s)
     int32_t level=s->level(c);
     if(level!=-1){
         Ra2PassageEntryCell cell=s->cell(c);
-        if((cell.flags&0x100u)&&ra2_ground_bridge_height_matches(level,cell.level))s->import_upper(c,cell);
+        if(ra2_ground_bridge_cell_flag_present(cell.flags)&&ra2_ground_bridge_height_matches(level,cell.level))s->import_upper(c,cell);
     }
     if(!s->special_mode(c)&&!(s->visible(c)&255u)
         &&!(s->ignores_visibility(c)&255u)&&s->requires_visibility(c))return RA2_CELL_BLOCKED;

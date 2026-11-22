@@ -11,7 +11,7 @@ static Ra2PathPoint advance(Ra2PathPoint point,int32_t direction,const Ra2LocalP
 static Ra2PathPoint walk(Ra2PathPoint point,const int32_t *directions,int32_t count,const Ra2LocalPathServices *v)
 {for(int32_t i=0;i<count;++i)point=advance(point,directions[i],v);return point;}
 static int32_t next_level(int32_t previous,Ra2LocalPathCell cell)
-{return ra2_ground_bridge_height_matches(previous,cell.ground_level) && (cell.flags&0x100u)
+{return ra2_ground_bridge_height_matches(previous,cell.ground_level) && ra2_ground_bridge_cell_flag_present(cell.flags)
     ? ra2_ground_layer_reference(cell.ground_level,1) : cell.ground_level;}
 /* 不将x87中间值先写回double，避免阈值附近被再次舍入。这里的有限值相减
  * 保留精确符号；相等（包括有符号零）必须通过“大于等于”判断。 */
