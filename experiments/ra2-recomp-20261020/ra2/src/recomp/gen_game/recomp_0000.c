@@ -5671,10 +5671,7 @@ L_00403073:
     MEM32(esi + 0x140) = edi; /* 0x00403073: mov dword ptr [esi + 0x140], edi */
     MEM32(esi + 0x144) = ecx; /* 0x00403079: mov dword ptr [esi + 0x144], ecx */
 L_0040307F:
-    MEM32(esi + 0x138) = eax; /* 0x0040307F: mov dword ptr [esi + 0x138], eax */
-    MEM32(esi + 0x13C) = edx; /* 0x00403085: mov dword ptr [esi + 0x13c], edx */
-    ebx = esi + 0x68; /* 0x0040308B: lea ebx, [esi + 0x68] */
-    ecx = ebx; /* 0x0040308E: mov ecx, ebx */
+    ra2_manager_child_baseline_pair_publication_bridge(esi, eax, edx, &ebx, &ecx); /* 0x0040307F..00403090: publish baseline pair and next receiver at the shared join. */
     MEM32(esp + 0x14) = ebx; /* 0x00403090: mov dword ptr [esp + 0x14], ebx */
     RECOMP_CALL(sub_00401080); /* 0x00403094: call 0x401080 */
     RECOMP_FLAGS_IN();

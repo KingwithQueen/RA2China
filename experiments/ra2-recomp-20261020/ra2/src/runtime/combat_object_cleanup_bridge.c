@@ -3502,3 +3502,13 @@ void ra2_manager_child_measurement_publication_bridge(uint32_t cached_esi, uint3
     MEM32(cached_esi + 0x158u) = next_count;
     *cached_ebx = MEM32(cached_esi + 0x130u);
 }
+
+/* 40307F: both branch paths publish the ordered baseline and receiver. */
+void ra2_manager_child_baseline_pair_publication_bridge(uint32_t cached_esi, uint32_t value_low, uint32_t value_high, volatile uint32_t *cached_ebx, volatile uint32_t *cached_ecx)
+{
+    MEM32(cached_esi + 0x138u) = value_low;
+    MEM32(cached_esi + 0x13Cu) = value_high;
+    uint32_t receiver = cached_esi + 0x68u;
+    *cached_ebx = receiver;
+    *cached_ecx = receiver;
+}

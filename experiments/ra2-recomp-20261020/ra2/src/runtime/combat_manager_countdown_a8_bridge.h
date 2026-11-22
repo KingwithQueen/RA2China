@@ -93,4 +93,7 @@ void ra2_manager_child_unlink_counter_test_bridge(uint32_t cached_edi, volatile 
 
 /* Measurement pair, count and comparison word only; carry, guest stack and control stay outside. */
 void ra2_manager_child_measurement_publication_bridge(uint32_t cached_esi, uint32_t pair_low, uint32_t pair_high, volatile uint32_t *cached_ebx, volatile uint32_t *lhs, volatile uint32_t *rhs, volatile uint32_t *kind);
+
+/* Common baseline pair and receiver; preserve the original comparisons, high-water pair and stack. */
+void ra2_manager_child_baseline_pair_publication_bridge(uint32_t cached_esi, uint32_t value_low, uint32_t value_high, volatile uint32_t *cached_ebx, volatile uint32_t *cached_ecx);
 #endif
