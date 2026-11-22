@@ -36,4 +36,7 @@ void ra2_manager_active_status_clear_bit_bridge(uint32_t cached_esi, volatile ui
 
 /* Ordered dword default route publication, no calls or flag edits. */
 void ra2_manager_default_deactivation_routes_bridge(uint32_t cached_esi);
+
+/* Ordered deactivation state reset prefix; no calls or flag edits. */
+void ra2_manager_deactivation_state_reset_prefix_bridge(uint32_t cached_esi, uint32_t cached_edi);
 #endif

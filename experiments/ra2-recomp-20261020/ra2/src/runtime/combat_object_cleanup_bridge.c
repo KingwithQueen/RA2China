@@ -3189,3 +3189,17 @@ void ra2_manager_default_deactivation_routes_bridge(uint32_t cached_esi)
     MEM32(cached_esi + 0x160u) = 0x00402330u;
     MEM32(cached_esi + 0x164u) = 0x004023F0u;
 }
+
+/* 4024DF: ordered deactivation state reset prefix; preserve the current EDI value. */
+void ra2_manager_deactivation_state_reset_prefix_bridge(uint32_t cached_esi, uint32_t cached_edi)
+{
+    MEM32(cached_esi + 0xB0u) = cached_edi;
+    MEM32(cached_esi + 0xB4u) = cached_edi;
+    MEM32(cached_esi + 0xB8u) = cached_edi;
+    MEM32(cached_esi + 0xBCu) = cached_edi;
+    MEM32(cached_esi + 0xC0u) = cached_edi;
+    MEM32(cached_esi + 0x0Cu) = 1u;
+    MEM32(cached_esi + 0xA8u) = cached_edi;
+    MEM32(cached_esi + 0xA4u) = cached_edi;
+    MEM32(cached_esi + 0xA0u) = cached_edi;
+}

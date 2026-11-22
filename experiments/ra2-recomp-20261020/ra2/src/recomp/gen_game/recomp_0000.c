@@ -4100,15 +4100,7 @@ L_004024B0:
     _cf = 0;
     _flag_k = FK_TEST;
     ra2_manager_default_deactivation_routes_bridge(esi); /* 0x004024C1..004024DF: restore the three default dword routes in original order. */
-    MEM32(esi + 0xB0) = edi; /* 0x004024DF: mov dword ptr [esi + 0xb0], edi */
-    MEM32(esi + 0xB4) = edi; /* 0x004024E5: mov dword ptr [esi + 0xb4], edi */
-    MEM32(esi + 0xB8) = edi; /* 0x004024EB: mov dword ptr [esi + 0xb8], edi */
-    MEM32(esi + 0xBC) = edi; /* 0x004024F1: mov dword ptr [esi + 0xbc], edi */
-    MEM32(esi + 0xC0) = edi; /* 0x004024F7: mov dword ptr [esi + 0xc0], edi */
-    MEM32(esi + 0xC) = 1; /* 0x004024FD: mov dword ptr [esi + 0xc], 1 */
-    MEM32(esi + 0xA8) = edi; /* 0x00402504: mov dword ptr [esi + 0xa8], edi */
-    MEM32(esi + 0xA4) = edi; /* 0x0040250A: mov dword ptr [esi + 0xa4], edi */
-    MEM32(esi + 0xA0) = edi; /* 0x00402510: mov dword ptr [esi + 0xa0], edi */
+    ra2_manager_deactivation_state_reset_prefix_bridge(esi, edi); /* 0x004024DF..00402516: preserve nine ordered deactivation state dword stores. */
     ecx = MEM32(0x830B50); /* 0x00402516: mov ecx, dword ptr [0x830b50] */
     MEM32(esi + 0x90) = edi; /* 0x0040251C: mov dword ptr [esi + 0x90], edi */
     MEM32(esi + 0x94) = ecx; /* 0x00402522: mov dword ptr [esi + 0x94], ecx */
