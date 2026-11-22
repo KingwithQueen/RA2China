@@ -51,4 +51,7 @@ void ra2_manager_deactivation_postcallback_state_store_bridge(uint32_t cached_es
 
 /* Success-path descriptor projection; no callback or control-flow ownership. */
 void ra2_manager_descriptor_success_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_ecx);
+
+/* Fallback descriptor projection; no callback or control-flow ownership. */
+void ra2_manager_descriptor_fallback_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_edx);
 #endif

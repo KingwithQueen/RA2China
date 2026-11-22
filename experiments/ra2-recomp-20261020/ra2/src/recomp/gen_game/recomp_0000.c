@@ -4744,12 +4744,7 @@ L_004027B1:
     esi = POP32_VAL(esp); /* 0x004027D0: pop esi */
     RECOMP_FLAGS_OUT(); esp += 4; { RECOMP_REGS_OUT(); return; } /* 0x004027D1: ret  */
 L_004027D2:
-    eax = MEM32(esi + 0x168); /* 0x004027D2: mov eax, dword ptr [esi + 0x168] */
-    edx = MEM32(eax); /* 0x004027D8: mov edx, dword ptr [eax] */
-    MEM32(esi + 0x170) = edx; /* 0x004027DA: mov dword ptr [esi + 0x170], edx */
-    eax = MEM32(eax + 0x4); /* 0x004027E0: mov eax, dword ptr [eax + 4] */
-    MEM32(esi + 0x174) = eax; /* 0x004027E3: mov dword ptr [esi + 0x174], eax */
-    MEM32(esi + 0x178) = eax; /* 0x004027E9: mov dword ptr [esi + 0x178], eax */
+    ra2_manager_descriptor_fallback_projection_bridge(esi, &eax, &edx); /* 0x004027D2..004027EF: preserve the raw fallback projection and fresh second read. */
 L_004027EF:
     edi = POP32_VAL(esp); /* 0x004027EF: pop edi */
     esi = POP32_VAL(esp); /* 0x004027F0: pop esi */

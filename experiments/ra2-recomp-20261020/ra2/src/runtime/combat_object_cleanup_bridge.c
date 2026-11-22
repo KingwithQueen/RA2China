@@ -3236,3 +3236,17 @@ void ra2_manager_descriptor_success_projection_bridge(uint32_t cached_esi, volat
     MEM32(cached_esi + 0x174u) = second;
     MEM32(cached_esi + 0x178u) = second;
 }
+
+/* 4027D2: ordered fallback descriptor lookup and projection. */
+void ra2_manager_descriptor_fallback_projection_bridge(uint32_t cached_esi, volatile uint32_t *cached_eax, volatile uint32_t *cached_edx)
+{
+    uint32_t descriptor = MEM32(cached_esi + 0x168u);
+    *cached_eax = descriptor;
+    uint32_t first = MEM32(descriptor);
+    *cached_edx = first;
+    MEM32(cached_esi + 0x170u) = first;
+    uint32_t second = MEM32(descriptor + 4u);
+    *cached_eax = second;
+    MEM32(cached_esi + 0x174u) = second;
+    MEM32(cached_esi + 0x178u) = second;
+}
