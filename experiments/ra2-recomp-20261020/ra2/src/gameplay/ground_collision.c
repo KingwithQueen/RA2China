@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_collision.h"
+#include "ground_level_distance.h"
 #include "ground_outcome_policy.h"
 
 int ra2_ground_uses_bridge_occupation(unsigned has_bridge, int32_t reference_level, int32_t cell_level)
@@ -13,14 +14,7 @@ int ra2_ground_uses_bridge_occupation(unsigned has_bridge, int32_t reference_lev
     {
         return 1;
     }
-    uint32_t difference = (uint32_t)reference_level - (uint32_t)cell_level;
-    if (difference & 0x80000000u)
-    {
-        difference = 0u - difference;
-    }
-    int32_t distance;
-    memcpy(&distance, &difference, sizeof(distance));
-    return distance > 1;
+    return ra2_ground_levels_separated(reference_level, cell_level);
 }
 
 uint8_t ra2_ground_remove_self_occupation(uint8_t flags)

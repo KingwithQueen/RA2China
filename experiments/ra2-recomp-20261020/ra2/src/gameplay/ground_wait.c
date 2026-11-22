@@ -1,21 +1,11 @@
 #include <stdint.h>
 #include <string.h>
 #include "ground_wait.h"
+#include "ground_level_distance.h"
 #include "ground_failure_transition.h"
 #include "ground_prepare_exit.h"
 
 
-static int32_t level_difference(int32_t left, int32_t right)
-{
-    uint32_t bits = (uint32_t)left - (uint32_t)right;
-    if (bits & UINT32_C(0x80000000))
-    {
-        bits = 0u - bits;
-    }
-    int32_t result;
-    memcpy(&result, &bits, sizeof(result));
-    return result;
-}
 
 /* 通行后才解析可碾覆盖和层高；每次查询仍使用当时的context。 */
 static void resolve_clear_terrain(int32_t overlay,int32_t reference_level,
@@ -26,7 +16,7 @@ static void resolve_clear_terrain(int32_t overlay,int32_t reference_level,
         result->crush_overlay = 1;
     }
     int32_t level = services->query(services->context, RA2_CLEARANCE_CELL_LEVEL);
-    if (level_difference(reference_level, level) >= 2)
+    if (ra2_ground_levels_separated(reference_level, level))
     {
         result->target_level = reference_level;
         result->land = 1;
