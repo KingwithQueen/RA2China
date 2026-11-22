@@ -64,8 +64,7 @@ int32_t ra2_path_shorten_turn(int32_t *directions,const int32_t *levels,int32_t 
     int32_t second_count,Ra2PathPoint *anchor,const Ra2LocalPathServices *v)
 {
     int32_t first=directions[0],second=directions[first_count];
-    int32_t middle=(first+second)/2;
-    if(middle+1!=first && middle+1!=second)middle=0;
+    int32_t middle=ra2_ground_legacy_corner_middle(first,second);
     if(first==8 || second==8) {
         int32_t total=first_count+second_count;*anchor=walk(*anchor,directions,total,v);return total;
     }

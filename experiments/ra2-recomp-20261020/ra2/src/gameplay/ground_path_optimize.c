@@ -1,5 +1,6 @@
 #include "ground_path_optimize.h"
 #include "ground_path_delta.h"
+#include "ground_direction_rules.h"
 #include <stdlib.h>
 
 static Ra2PathPoint subtract(Ra2PathPoint a,Ra2PathPoint b)
@@ -27,9 +28,9 @@ static void advance_smooth_scan(Ra2SmoothScan *s,const Ra2PathOptimizationServic
     const int32_t *directions)
 {
     int32_t index=s->first_start+s->first_count,direction=directions[index];
-    unsigned turn=((uint32_t)direction-(uint32_t)s->previous)&7;
+    int quarter_turn=ra2_ground_is_quarter_turn(direction,s->previous);
     if(direction==s->previous)++s->first_count;
-    else if((turn==2||turn==6) && s->previous!=-1 && s->previous!=8 && direction!=8) {
+    else if(quarter_turn && s->previous!=-1 && s->previous!=8 && direction!=8) {
         s->pairing=1;s->second_direction=direction;s->second_start=index;s->second_count=1;
     } else {
         s->first_start=index;s->first_count=1;s->previous=(direction&1)?direction:-1;s->anchor=s->point;
