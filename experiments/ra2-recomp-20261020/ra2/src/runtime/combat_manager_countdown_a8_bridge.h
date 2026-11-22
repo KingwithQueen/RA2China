@@ -39,4 +39,7 @@ void ra2_manager_default_deactivation_routes_bridge(uint32_t cached_esi);
 
 /* Ordered deactivation state reset prefix; no calls or flag edits. */
 void ra2_manager_deactivation_state_reset_prefix_bridge(uint32_t cached_esi, uint32_t cached_edi);
+
+/* Two ordered deactivation stores from cached registers; no guest read. */
+void ra2_manager_deactivation_global_snapshot_stores_bridge(uint32_t cached_esi, uint32_t cached_edi, uint32_t cached_ecx);
 #endif

@@ -3203,3 +3203,10 @@ void ra2_manager_deactivation_state_reset_prefix_bridge(uint32_t cached_esi, uin
     MEM32(cached_esi + 0xA4u) = cached_edi;
     MEM32(cached_esi + 0xA0u) = cached_edi;
 }
+
+/* 40251C: publish EDI and the existing ECX snapshot; do not reload the global. */
+void ra2_manager_deactivation_global_snapshot_stores_bridge(uint32_t cached_esi, uint32_t cached_edi, uint32_t cached_ecx)
+{
+    MEM32(cached_esi + 0x90u) = cached_edi;
+    MEM32(cached_esi + 0x94u) = cached_ecx;
+}

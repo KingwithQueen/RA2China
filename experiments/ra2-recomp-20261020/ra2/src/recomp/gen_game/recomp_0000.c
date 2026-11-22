@@ -4102,8 +4102,7 @@ L_004024B0:
     ra2_manager_default_deactivation_routes_bridge(esi); /* 0x004024C1..004024DF: restore the three default dword routes in original order. */
     ra2_manager_deactivation_state_reset_prefix_bridge(esi, edi); /* 0x004024DF..00402516: preserve nine ordered deactivation state dword stores. */
     ecx = MEM32(0x830B50); /* 0x00402516: mov ecx, dword ptr [0x830b50] */
-    MEM32(esi + 0x90) = edi; /* 0x0040251C: mov dword ptr [esi + 0x90], edi */
-    MEM32(esi + 0x94) = ecx; /* 0x00402522: mov dword ptr [esi + 0x94], ecx */
+    ra2_manager_deactivation_global_snapshot_stores_bridge(esi, edi, ecx); /* 0x0040251C..00402528: keep the two ordered deactivation stores and their cached sources. */
     ecx = esi + 0x10; /* 0x00402528: lea ecx, [esi + 0x10] */
     MEM32(esi + 0x98) = edi; /* 0x0040252B: mov dword ptr [esi + 0x98], edi */
     MEM32(esi + 0x9C) = edi; /* 0x00402531: mov dword ptr [esi + 0x9c], edi */
