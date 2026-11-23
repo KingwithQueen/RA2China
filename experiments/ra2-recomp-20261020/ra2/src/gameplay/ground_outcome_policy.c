@@ -1,25 +1,28 @@
 #include "ground_outcome_policy.h"
+#include "ground_failure_policy.h"
 #include "ground_collision.h"
 
 Ra2FailurePlan ra2_ground_failure_plan(Ra2PrepareFailureEntry entry, int may_retry,
     int32_t classification, int32_t rejected_direction)
 {
-    Ra2FailurePlan plan = {0};
-    if (entry == RA2_FAILURE_CLASSIFIED_OBSTACLE && classification != RA2_CELL_BLOCKED)
-        plan.clear_pending = 1;
-    else if ((entry == RA2_FAILURE_REVEALED_OBSTACLE || entry == RA2_FAILURE_CLASSIFIED_OBSTACLE) && may_retry)
+    switch (RA2_GROUND_FAILURE_DECISION_VALUE(entry, may_retry, classification))
     {
-        plan.retry = 1;
-        plan.start_retry = entry == RA2_FAILURE_CLASSIFIED_OBSTACLE;
-        plan.path_value = plan.start_retry ? -1 : rejected_direction;
+        case RA2_FAILURE_PLAN_CLEAR_PENDING:
+            return (Ra2FailurePlan){.clear_pending = 1};
+        case RA2_FAILURE_PLAN_RETRY_REVEALED:
+            return (Ra2FailurePlan){.retry = 1,
+                .path_value = RA2_GROUND_FAILURE_RETRY_PATH_VALUE(RA2_FAILURE_PLAN_RETRY_REVEALED, rejected_direction)};
+        case RA2_FAILURE_PLAN_RETRY_CLASSIFIED:
+            return (Ra2FailurePlan){.retry = 1, .start_retry = 1,
+                .path_value = RA2_GROUND_FAILURE_RETRY_PATH_VALUE(RA2_FAILURE_PLAN_RETRY_CLASSIFIED, rejected_direction)};
+        case RA2_FAILURE_PLAN_STOP_DIRECT:
+            return (Ra2FailurePlan){.clear_segment = 1};
+        case RA2_FAILURE_PLAN_STOP_SAVED:
+            return (Ra2FailurePlan){.clear_segment = 1, .saved_segment = 1};
+        case RA2_FAILURE_PLAN_STOP_ONLY:
+            break;
     }
-    else
-    {
-        plan.clear_segment = entry != RA2_FAILURE_STOP_ONLY;
-        plan.saved_segment = entry == RA2_FAILURE_CLEAR_SAVED_SEGMENT
-            || entry == RA2_FAILURE_CLEAR_SAVED_TAIL || entry == RA2_FAILURE_CLASSIFIED_OBSTACLE;
-    }
-    return plan;
+    return (Ra2FailurePlan){0};
 }
 
 Ra2OccupationRoute ra2_ground_occupation_route(Ra2PassageFinishState state, int32_t *result)
