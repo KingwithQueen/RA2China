@@ -1,4 +1,5 @@
 #include "combat_health.h"
+#include "combat_health_threshold.h"
 #include "combat_real_compare.h"
 #include <string.h>
 
@@ -10,9 +11,8 @@ static int32_t subtract_wrapped(int32_t left,int32_t right)
 /* Match the legacy integer floor and leave the second comparison strict. */
 static int crosses_legacy_half_health(int32_t before,int32_t damage,int32_t maximum)
 {
-    int32_t half=maximum/2;
-    if(maximum<0 && maximum%2)--half;
-    return before>=half && subtract_wrapped(before,damage)<half;
+    int32_t half=RA2_HEALTH_HALF_FLOOR_VALUE(maximum);
+    return RA2_HEALTH_CROSSES_HALF_VALUE(before,subtract_wrapped(before,damage),half);
 }
 Ra2CombatHealthStep ra2_combat_receive_health(Ra2CombatHealthState *state,
     unsigned ignore_defenses,const Ra2CombatHealthServices *s)
